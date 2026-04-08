@@ -1,7 +1,5 @@
 import { useState, useRef } from 'react'
 
-
-
 function ResourceRow({ label, current, max, resetOn, onChange }) {
   const resetLabel =
     resetOn === 'short_rest' ? 'Riposo breve'
@@ -26,11 +24,16 @@ function ResourceRow({ label, current, max, resetOn, onChange }) {
     setValueForIndex(index, true)
   }
 
-  function handlePointerEnter(index) {
-    // Se stiamo trascinando, aggiorniamo il valore senza permettere il toggle  
-    if (dragging) {
-      setValueForIndex(index, false)
-    }
+  function handlePointerMove(e) {
+    if (!dragging) return
+    e.preventDefault()
+    const el = document.elementFromPoint(e.clientX, e.clientY)
+    if (!el) return
+    const btn = el.closest('.resource-dot')
+    if (!btn) return
+    const idx = Number(btn.dataset.index)
+    if (Number.isNaN(idx)) return
+    setValueForIndex(idx, false)
   }
 
   function handleClick(index) {
@@ -51,6 +54,7 @@ function ResourceRow({ label, current, max, resetOn, onChange }) {
 
       <div
         className="resource-dots"
+        onPointerMove={handlePointerMove}
         onPointerUp={() => setDragging(false)}
         onPointerLeave={() => setDragging(false)}
         onPointerCancel={() => setDragging(false)}
@@ -58,9 +62,9 @@ function ResourceRow({ label, current, max, resetOn, onChange }) {
         {Array.from({ length: max }).map((_, i) => (
         <button
           key={i}
+          data-index={i}
           className={`resource-dot ${i < current ? 'is-filled' : ''}`}
           onPointerDown={(e) => handlePointerDown(i, e)}
-          onPointerEnter={() => handlePointerEnter(i)}
           onClick={() => handleClick(i)}
           aria-label={`Imposta ${label} a ${i + 1}`}
         />
