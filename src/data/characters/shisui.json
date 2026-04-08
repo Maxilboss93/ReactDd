@@ -28,6 +28,34 @@
     "wis": 14,
     "cha": 14
   },
+    "savingThrows": {
+    "str": true,
+    "dex": true,
+    "con": true,
+    "int": false,
+    "wis": false,
+    "cha": false
+  },
+  "skills": [
+    { "id": "acrobatics", "label": "Acrobazia", "ability": "dex", "proficient": true },
+    { "id": "athletics", "label": "Atletica", "ability": "str", "proficient": false },
+    { "id": "sleight", "label": "Rapidita di Mano", "ability": "dex", "proficient": false },
+    { "id": "stealth", "label": "Furtivita", "ability": "dex", "proficient": true },
+    { "id": "arcana", "label": "Arcano", "ability": "int", "proficient": false },
+    { "id": "history", "label": "Storia", "ability": "int", "proficient": false },
+    { "id": "investigation", "label": "Investigare", "ability": "int", "proficient": false },
+    { "id": "nature", "label": "Natura", "ability": "int", "proficient": false },
+    { "id": "religion", "label": "Religione", "ability": "int", "proficient": false },
+    { "id": "animal", "label": "Addestrare Animali", "ability": "wis", "proficient": false },
+    { "id": "insight", "label": "Intuizione", "ability": "wis", "proficient": true },
+    { "id": "medicine", "label": "Medicina", "ability": "wis", "proficient": false },
+    { "id": "perception", "label": "Percezione", "ability": "wis", "proficient": true },
+    { "id": "survival", "label": "Sopravvivenza", "ability": "wis", "proficient": false },
+    { "id": "deception", "label": "Inganno", "ability": "cha", "proficient": false },
+    { "id": "intimidation", "label": "Intimidire", "ability": "cha", "proficient": false },
+    { "id": "performance", "label": "Intrattenere", "ability": "cha", "proficient": false },
+    { "id": "persuasion", "label": "Persuasione", "ability": "cha", "proficient": false }
+  ],
   "resources": [    
     { "id": "ki", "label": "Ki", "current": 5, "max": 5, "resetOn": "short_rest"},
     { "id": "fortuna", "label": "Talento: Fortuna", "current": 2, "max": 2, "resetOn": "long_rest" }

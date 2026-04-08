@@ -100,6 +100,33 @@
   background: #0f1620;
 }
 
+/* Subtabs Panoramica/Caratteristiche */
+.subtabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.subtabs__btn {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #111821;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.subtabs__btn--active {
+  color: var(--text);
+  border-color: #2b3a4c;
+  background: #121c28;
+  box-shadow: inset 0 0 0 1px #3a4a5e;
+}
+
 
 /**
  * card style
@@ -345,4 +372,74 @@
   background: #101823;
   font-size: 12px;
   color: var(--muted);
+}
+
+/* Caratteristiche espandibili */
+.ability-card {
+  display: grid;
+  gap: 8px;
+}
+
+.ability-pill {
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ability-card.is-open .ability-pill {
+  background: #121c28;
+  border-color: #2b3a4c;
+}
+
+/* Lista skill sotto la card aperta */
+.skills-list {
+  display: grid;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #0f1620;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #0c121b;
+  cursor: pointer;
+  padding: 0;
+}
+
+.skill-dot.is-on {
+  background: #59aaff;
+  border-color: #59aaff;
+  box-shadow: 0 0 6px rgba(89, 170, 255, 0.6);
+}
+
+.skill-name {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.skill-mod {
+  font-size: 13px;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.skill-row--save {
+  font-weight: 600;
+}
+
+.skills-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 6px 0;
 }

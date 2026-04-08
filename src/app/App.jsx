@@ -3,7 +3,12 @@
 import './App.css'
 import SectionCard from '../components/general/card/SectionCard.jsx'
 import shisui from '../data/characters/shisui.json'
-import ResourceRow from '../components/general/resource/ResourceRow.jsx'
+import OverviewSection from '../components/character/sections/OverviewSection.jsx'
+import HpSection from '../components/character/sections/HpSection.jsx'
+import KeyStatsSection from '../components/character/sections/KeyStatsSection.jsx'
+import AbilitiesSection from '../components/character/sections/AbilitiesSection.jsx'
+import ResourcesSection from '../components/character/sections/ResourcesSection.jsx'
+import RestSection from '../components/character/sections/RestSection.jsx'
 
 const TABS = [
   { id: 'overview', label: 'Panoramica' },
@@ -23,7 +28,11 @@ const abilities = [
 
 function App() {
   const [activeTab, setActiveTab] = useState('overview');
+  const [overviewTab, setOverviewTab] = useState('panoramica')
   const mainClass = shisui.classes[0];
+  const level = mainClass?.level ?? 1
+  const proficiencyBonus = Math.min(6, 2 + Math.floor((level - 1) / 4))
+
   /*hpCurrent deve poter cambiare → quindi useState
     hpMax è fisso (per ora) → basta una costante */
 
@@ -41,6 +50,8 @@ function App() {
   const [manualHeal, setManualHeal] = useState(0)
   const [manualDiceSpent, setManualDiceSpent] = useState(0)
   const [restResult, setRestResult] = useState('')
+  const [skills, setSkills] = useState(shisui.skills)
+  const [savingThrows, setSavingThrows] = useState(shisui.savingThrows)
 
   useEffect(() => {
     if (!restResult) return
@@ -48,7 +59,21 @@ function App() {
     return () => clearTimeout(timer)
   }, [restResult])
 
-  
+  function toggleSkillProficiency(id) {
+    setSkills((prev) =>
+      prev.map((sk) =>
+        sk.id === id ? { ...sk, proficient: !sk.proficient } : sk
+      )
+    )
+  }
+
+  function toggleSavingThrow(id) {
+    setSavingThrows((prev) => ({ ...prev, [id]: !prev[id] }))
+  }
+
+
+
+
   /**
    * Aggiorna la quantità di una risorsa specifica. 
    * @param {string} id - L'ID della risorsa da aggiornare.
@@ -156,206 +181,75 @@ function App() {
         <div className="panel_content">
           {activeTab === 'overview' && (
             <>
-              <SectionCard title="Panoramica">
-                <div className="character-block">
-                  <div className="character-name">{shisui.name}</div>
-                  <div className="character-line">
-                    {shisui.race} - {mainClass.name} Livello {mainClass.level}
-                  </div>
-                  <div className="character-line">{mainClass.subclass}</div>
-                </div>
-              </SectionCard>
+              <div className="subtabs">
+                <button
+                  className={`subtabs__btn ${overviewTab === 'panoramica' ? 'subtabs__btn--active' : ''}`}
+                  onClick={() => setOverviewTab('panoramica')}
+                >
+                  Panoramica
+                </button>
+                <button
+                  className={`subtabs__btn ${overviewTab === 'caratteristiche' ? 'subtabs__btn--active' : ''}`}
+                  onClick={() => setOverviewTab('caratteristiche')}
+                >
+                  Caratteristiche
+                </button>
+              </div>
 
-              <SectionCard title="Punti Ferita">
-                <div className="hp-row">
-                  <button
-                    className="hp-btn"
-                    onClick={() => setHpCurrent(Math.max(0, hpCurrent - 1))}
-                  >
-                    -
-                  </button>
-
-                  <div className="hp-value">
-                    {hpCurrent} / {hpMax}
-                  </div>
-
-                  <button
-                    className="hp-btn"
-                    onClick={() => setHpCurrent(Math.min(hpMax, hpCurrent + 1))}
-                  >
-                    +
-                  </button>
-                </div>
-              </SectionCard>
-
-              <SectionCard title="Statistiche Chiave">
-                <div className="stats-grid">
-                  <div className="stat-pill">
-                    <div className="stat-label">CA</div>
-                    <div className="stat-value">{shisui.combat.ac}</div>
-                  </div>
-
-                  <div className="stat-pill">
-                    <div className="stat-label">Vel.</div>
-                    <div className="stat-value">{shisui.combat.speed} mt</div>
-                  </div>
-
-                  <div className="stat-pill">
-                    <div className="stat-label">DES</div>
-                    <div className="stat-value">{dexModLabel ?? dexMod}</div>
-                  </div>
-
-                  <div className="stat-pill">
-                    <div className="stat-label">Ki</div>
-                    <div className="stat-value">
-                      {kiResource ? `${kiResource.current}/${kiResource.max}` : '—'}
-                    </div>
-                  </div>
-                </div>
-              </SectionCard>
-
-              <SectionCard title="Risorse">
-                <div className="resource-list">
-                  <ResourceRow
-                    label={`Dadi Vita (${hitDice.type})`}
-                    current={hitDice.current}
-                    max={hitDice.max}
-                    resetOn="long_rest"
-                    onChange={(value) =>
+              {overviewTab === 'panoramica' && (
+                <>
+                  <OverviewSection character={shisui} mainClass={mainClass} />
+                  <HpSection
+                    hpCurrent={hpCurrent}
+                    hpMax={hpMax}
+                    onDec={() => setHpCurrent(Math.max(0, hpCurrent - 1))}
+                    onInc={() => setHpCurrent(Math.min(hpMax, hpCurrent + 1))}
+                  />
+                  <KeyStatsSection
+                    ac={shisui.combat.ac}
+                    speed={shisui.combat.speed}
+                    dexModLabel={dexModLabel ?? dexMod}
+                    kiCurrent={kiResource ? kiResource.current : 0}
+                    kiMax={kiResource ? kiResource.max : 0}
+                  />
+                  <ResourcesSection
+                    hitDice={hitDice}
+                    onHitDiceChange={(value) =>
                       setHitDice((prev) => ({ ...prev, current: value }))
                     }
+                    resources={resources}
+                    onResourceChange={updateResource}
                   />
-                  {resources.map((res) => (
-                    <ResourceRow
-                      key={res.id}
-                      label={res.label}
-                      current={res.current}
-                      max={res.max}
-                      resetOn={res.resetOn}
-                      onChange={(value) => updateResource(res.id, value)}
-                    />
-                  ))}
-                </div>
-              </SectionCard>
-              <SectionCard title="Riposi">
-                <div className="rest-actions">
-                  <button
-                    className="rest-btn"
-                    onClick={() => setRestPanel(restPanel === 'short' ? null : 'short')}
-                  >
-                    <span className="action-icon">⏳</span>
-                    Riposo breve
-                  </button>
-                  <button
-                    className="rest-btn"
-                    onClick={() => setRestPanel(restPanel === 'long' ? null : 'long')}
-                  >
-                    <span className="action-icon">🌙</span>
-                    Riposo lungo
-                  </button>
+                  <RestSection
+                    restPanel={restPanel}
+                    setRestPanel={setRestPanel}
+                    restMethod={restMethod}
+                    setRestMethod={setRestMethod}
+                    restResult={restResult}
+                    hitDice={hitDice}
+                    shortRestDice={shortRestDice}
+                    setShortRestDice={setShortRestDice}
+                    manualHeal={manualHeal}
+                    setManualHeal={setManualHeal}
+                    manualDiceSpent={manualDiceSpent}
+                    setManualDiceSpent={setManualDiceSpent}
+                    applyShortRestRoll={applyShortRestRoll}
+                    applyShortRestManual={applyShortRestManual}
+                    applyLongRest={applyLongRest}
+                  />
+                </>
+              )}
 
-                </div>
-                {restResult && <div className="rest-result">{restResult}</div>}
-
-
-                {restPanel === 'short' && (
-                  <div className="rest-panel">
-                    <div className="rest-label">Come vuoi recuperare i PF?</div>
-                    <div className="rest-options">
-                      <button className="rest-option" onClick={() => setRestMethod('roll')}>
-                        Tira i dadi
-                      </button>
-                      <button className="rest-option" onClick={() => setRestMethod('manual')}>
-                        Inserisci manualmente
-                      </button>
-                    </div>
-
-                    <div className="rest-hint">
-                      Dadi vita: {hitDice.current}/{hitDice.max} ({hitDice.type})
-                    </div>
-
-                    {restMethod === 'roll' && (
-                      <div className="rest-form">
-                        <label className="rest-field">
-                          <span>Quanti dadi vuoi spendere?</span>
-                          <input
-                            type="number"
-                            inputMode="numeric"
-                            pattern="[0-9]*"
-                            step="1"
-                            min="1"
-                            max={hitDice.current}
-                            value={shortRestDice}
-                            onChange={(e) => {
-                              const value = Math.max(1, Math.min(Number(e.target.value) || 1, hitDice.current))
-                              setShortRestDice(value)
-                            }}
-                          />
-                        </label>
-                        {hitDice.current <= 0 && (
-                          <div className="rest-hint">Non hai dadi vita disponibili.</div>
-                        )}
-                        <button
-                          className="rest-option"
-                          onClick={applyShortRestRoll}
-                          disabled={hitDice.current <= 0}
-                        >
-                          Tira e recupera
-                        </button>
-                      </div>
-                    )}
-
-                    {restMethod === 'manual' && (
-                      <div className="rest-form">
-                        <label className="rest-field">
-                          <span>PF recuperati</span>
-                          <input
-                            type="number"
-                            inputMode="numeric"
-                            pattern="[0-9]*"
-                            step="1"
-                            min="0"
-                            value={manualHeal}
-                            onChange={(e) => setManualHeal(Number(e.target.value) || 0)}
-                          />
-                        </label>
-                        <label className="rest-field">
-                          <span>Dadi vita spesi</span>
-                          <input
-                            type="number"
-                            inputMode="numeric"
-                            pattern="[0-9]*"
-                            step="1"
-                            min="0"
-                            max={hitDice.current}
-                            value={manualDiceSpent}
-                            onChange={(e) => {
-                              const value = Math.max(0, Math.min(Number(e.target.value) || 0, hitDice.current))
-                              setManualDiceSpent(value)
-                            }}
-                          />
-                        </label>
-                        <button className="rest-option" onClick={applyShortRestManual}>
-                          Applica recupero
-                        </button>
-                      </div>
-                    )}
-                  </div>
-                )}
-
-                {restPanel === 'long' && (
-                  <div className="rest-panel">
-                    
-                    <div className="rest-label">Riposo lungo</div>
-                    <div className="rest-hint">Ripristina PF e risorse da riposo lungo.</div>
-                    <button className="rest-option" onClick={applyLongRest}>
-                      Conferma
-                    </button>
-                  </div>
-                )}
-              </SectionCard>
-              
-
+              {overviewTab === 'caratteristiche' && (
+                <AbilitiesSection
+                  abilities={abilities}
+                  skills={skills}
+                  proficiencyBonus={proficiencyBonus}
+                  onToggleSkill={toggleSkillProficiency}
+                  savingThrows={savingThrows}
+                  onToggleSavingThrow={toggleSavingThrow}
+                />
+              )}
             </>
           )}
           {activeTab === 'spells' && <SectionCard title="Incantesimi">Contenuto Incantesimi</SectionCard>}
