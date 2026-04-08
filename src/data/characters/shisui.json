@@ -17,7 +17,8 @@
       "temp": 0
     },
     "ac": 15,
-    "speed": 45
+    "speed": 15,
+    "hitDice": { "current": 3, "max": 3, "type": "d8" }
   },
   "abilities": {
     "str": 10,
@@ -28,7 +29,6 @@
     "cha": 14
   },
   "resources": [    
-    { "id": "dadiVita", "label": "Dadi Vita", "current": 3, "max": 3, "resetOn": "long_rest" },
     { "id": "ki", "label": "Ki", "current": 5, "max": 5, "resetOn": "short_rest"},
     { "id": "fortuna", "label": "Talento: Fortuna", "current": 2, "max": 2, "resetOn": "long_rest" }
   ]

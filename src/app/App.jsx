@@ -22,9 +22,16 @@ function App() {
   const dexModLabel = dexMod >= 0 ? `+${dexMod}` : `${dexMod}`
   const [resources, setResources] = useState(shisui.resources)
   const kiResource = resources.find((r) => r.id === 'ki')
+  const [hitDice, setHitDice] = useState(shisui.combat.hitDice)
+  const conMod = Math.floor((shisui.abilities.con - 10) / 2)
+  const [restPanel, setRestPanel] = useState(null) // 'short' | 'long' | null
+  const [restMethod, setRestMethod] = useState(null) // 'roll' | 'manual' | null
+  const [shortRestDice, setShortRestDice] = useState(1)
+  const [manualHeal, setManualHeal] = useState(0)
+  const [manualDiceSpent, setManualDiceSpent] = useState(0)
 
   /**
-   * Aggiorna la quantità di una risorsa specifica.
+   * Aggiorna la quantità di una risorsa specifica. 
    * @param {string} id - L'ID della risorsa da aggiornare.
    * @param {number} newValue - Il nuovo valore per la risorsa.
    */
@@ -35,6 +42,76 @@ function App() {
       )
     )
   }
+
+  function resetResources(kind) {
+    setResources((prev) =>
+      prev.map((res) => {
+        const shouldReset =
+          kind === 'short'
+            ? res.resetOn === 'short_rest'
+            : kind === 'long'
+              ? res.resetOn === 'short_rest' || res.resetOn === 'long_rest'
+              : false
+
+        return shouldReset ? { ...res, current: res.max } : res
+      })
+    )
+  }
+
+  function getDieSize(type) {
+    const size = Number(String(type || '').replace('d', ''))
+    return Number.isNaN(size) ? 8 : size
+  }
+
+  function applyShortRestRoll() {
+    if (hitDice.current <= 0) return
+
+    const diceToSpend = Math.max(1, Math.min(shortRestDice, hitDice.current))
+    const dieSize = getDieSize(hitDice.type)
+
+    let total = 0
+    for (let i = 0; i < diceToSpend; i++) {
+      const roll = Math.floor(Math.random() * dieSize) + 1
+      total += Math.max(0, roll + conMod)
+    }
+
+    setHpCurrent((prev) => Math.min(hpMax, prev + total))
+    setHitDice((prev) => ({ ...prev, current: prev.current - diceToSpend }))
+    resetResources('short')
+
+    setRestPanel(null)
+    setRestMethod(null)
+    setShortRestDice(1)
+  }
+
+  function applyShortRestManual() {
+    const heal = Math.max(0, Number(manualHeal) || 0)
+    const diceSpent = Math.max(0, Math.min(Number(manualDiceSpent) || 0, hitDice.current))
+
+    setHpCurrent((prev) => Math.min(hpMax, prev + heal))
+    setHitDice((prev) => ({ ...prev, current: prev.current - diceSpent }))
+    resetResources('short')
+
+    setRestPanel(null)
+    setRestMethod(null)
+    setManualHeal(0)
+    setManualDiceSpent(0)
+  }
+
+  function applyLongRest() {
+    setHpCurrent(hpMax)
+    resetResources('long')
+
+    setHitDice((prev) => {
+      const recover = Math.max(1, Math.floor(prev.max / 2))
+      return { ...prev, current: Math.min(prev.max, prev.current + recover) }
+    })
+
+    setRestPanel(null)
+    setRestMethod(null)
+  }
+
+
 
   /**
    * La struttura dell'app è composta da:
@@ -96,7 +173,7 @@ function App() {
 
                   <div className="stat-pill">
                     <div className="stat-label">Vel.</div>
-                    <div className="stat-value">{shisui.combat.speed} ft</div>
+                    <div className="stat-value">{shisui.combat.speed} mt</div>
                   </div>
 
                   <div className="stat-pill">
@@ -115,6 +192,15 @@ function App() {
 
               <SectionCard title="Risorse">
                 <div className="resource-list">
+                  <ResourceRow
+                    label={`Dadi Vita (${hitDice.type})`}
+                    current={hitDice.current}
+                    max={hitDice.max}
+                    resetOn="long_rest"
+                    onChange={(value) =>
+                      setHitDice((prev) => ({ ...prev, current: value }))
+                    }
+                  />
                   {resources.map((res) => (
                     <ResourceRow
                       key={res.id}
@@ -127,6 +213,112 @@ function App() {
                   ))}
                 </div>
               </SectionCard>
+              <SectionCard title="Riposi">
+                <div className="rest-actions">
+                  <button
+                    className="rest-btn"
+                    onClick={() => setRestPanel(restPanel === 'short' ? null : 'short')}
+                  >
+                    Riposo breve
+                  </button>
+                  <button
+                    className="rest-btn"
+                    onClick={() => setRestPanel(restPanel === 'long' ? null : 'long')}
+                  >
+                    Riposo lungo
+                  </button>
+                </div>
+
+                {restPanel === 'short' && (
+                  <div className="rest-panel">
+                    <div className="rest-label">Come vuoi recuperare i PF?</div>
+                    <div className="rest-options">
+                      <button className="rest-option" onClick={() => setRestMethod('roll')}>
+                        Tira i dadi
+                      </button>
+                      <button className="rest-option" onClick={() => setRestMethod('manual')}>
+                        Inserisci manualmente
+                      </button>
+                    </div>
+
+                    <div className="rest-hint">
+                      Dadi vita: {hitDice.current}/{hitDice.max} ({hitDice.type})
+                    </div>
+
+                    {restMethod === 'roll' && (
+                      <div className="rest-form">
+                        <label className="rest-field">
+                          <span>Quanti dadi vuoi spendere?</span>
+                          <input
+                            type="number"
+                            inputMode="numeric"
+                            pattern="[0-9]*"
+                            step="1"
+                            min="1"
+                            max={hitDice.current}
+                            value={shortRestDice}
+                            onChange={(e) => {
+                              const value = Math.max(1, Math.min(Number(e.target.value) || 1, hitDice.current))
+                              setShortRestDice(value)
+                            }}
+                          />
+                        </label>
+                        {hitDice.current <= 0 && (
+                          <div className="rest-hint">Non hai dadi vita disponibili.</div>
+                        )}
+                        <button
+                          className="rest-option"
+                          onClick={applyShortRestRoll}
+                          disabled={hitDice.current <= 0}
+                        >
+                          Tira e recupera
+                        </button>
+                      </div>
+                    )}
+
+                    {restMethod === 'manual' && (
+                      <div className="rest-form">
+                        <label className="rest-field">
+                          <span>PF recuperati</span>
+                          <input
+                            type="number"
+                            min="0"
+                            value={manualHeal}
+                            onChange={(e) => setManualHeal(Number(e.target.value) || 0)}
+                          />
+                        </label>
+                        <label className="rest-field">
+                          <span>Dadi vita spesi</span>
+                          <input
+                            type="number"
+                            min="0"
+                            max={hitDice.current}
+                            value={manualDiceSpent}
+                            onChange={(e) => {
+                              const value = Math.max(0, Math.min(Number(e.target.value) || 0, hitDice.current))
+                              setManualDiceSpent(value)
+                            }}
+                          />
+                        </label>
+                        <button className="rest-option" onClick={applyShortRestManual}>
+                          Applica recupero
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {restPanel === 'long' && (
+                  <div className="rest-panel">
+                    <div className="rest-label">Riposo lungo</div>
+                    <div className="rest-hint">Ripristina PF e risorse da riposo lungo.</div>
+                    <button className="rest-option" onClick={applyLongRest}>
+                      Conferma
+                    </button>
+                  </div>
+                )}
+              </SectionCard>
+
             </>
           )}
           {activeTab === 'spells' && <SectionCard title="Incantesimi">Contenuto Incantesimi</SectionCard>}

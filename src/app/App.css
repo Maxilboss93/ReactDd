@@ -244,3 +244,76 @@
   display: grid;
   gap: 12px;
 }
+
+/*Grafica riposi*/
+.rest-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.rest-btn {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #111821;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.rest-panel {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #0f1620;
+  display: grid;
+  gap: 10px;
+}
+
+.rest-label {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.rest-options {
+  display: grid;
+  gap: 8px;
+}
+
+.rest-option {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #141d28;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.rest-hint {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.rest-form {
+  display: grid;
+  gap: 10px;
+}
+
+.rest-field {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.rest-field input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #0c121b;
+  color: var(--text);
+}
