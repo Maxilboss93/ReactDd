@@ -1,0 +1,35 @@
+{
+  "id": "pg_001",
+  "name": "Shisui",
+  "race": "Tiefling",
+  "alignment": "Neutrale Buono",
+  "classes": [
+    {
+      "name": "Monaco",
+      "level": 5,
+      "subclass": "Guerriero degli Elementi"
+    }
+  ],
+  "combat": {
+    "hp": {
+      "current": 23,
+      "max": 31,
+      "temp": 0
+    },
+    "ac": 15,
+    "speed": 45
+  },
+  "abilities": {
+    "str": 10,
+    "dex": 16,
+    "con": 14,
+    "int": 8,
+    "wis": 14,
+    "cha": 14
+  },
+  "resources": [    
+    { "id": "dadiVita", "label": "Dadi Vita", "current": 3, "max": 3, "resetOn": "long_rest" },
+    { "id": "ki", "label": "Ki", "current": 5, "max": 5, "resetOn": "short_rest"},
+    { "id": "fortuna", "label": "Talento: Fortuna", "current": 2, "max": 2, "resetOn": "long_rest" }
+  ]
+}
