@@ -209,13 +209,13 @@
 
 .resource-dots {
   display: flex;
-  gap: 6px;
+  gap: 4px;
   flex-wrap: nowrap;
 }
 
 .resource-dot {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   border-radius: 999px;
   border: none;
   background: transparent;
@@ -233,7 +233,7 @@
 .resource-dot::after {
   content: '';
   position: absolute;
-  inset: 7px;
+  inset: 6px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: #0f1620;
