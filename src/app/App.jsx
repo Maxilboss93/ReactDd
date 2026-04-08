@@ -1,4 +1,5 @@
-﻿import { useState } from 'react'
+﻿import { useState, useEffect } from 'react'
+
 import './App.css'
 import SectionCard from '../components/general/card/SectionCard.jsx'
 import shisui from '../data/characters/shisui.json'
@@ -9,6 +10,16 @@ const TABS = [
   { id: 'spells', label: 'Incantesimi' },
   { id: 'details', label: 'Dettagli' },
 ]
+
+const abilities = [
+  { id: 'str', label: 'FOR', value: shisui.abilities.str },
+  { id: 'dex', label: 'DES', value: shisui.abilities.dex },
+  { id: 'con', label: 'COS', value: shisui.abilities.con },
+  { id: 'int', label: 'INT', value: shisui.abilities.int },
+  { id: 'wis', label: 'SAG', value: shisui.abilities.wis },
+  { id: 'cha', label: 'CAR', value: shisui.abilities.cha },
+]
+
 
 function App() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -29,7 +40,15 @@ function App() {
   const [shortRestDice, setShortRestDice] = useState(1)
   const [manualHeal, setManualHeal] = useState(0)
   const [manualDiceSpent, setManualDiceSpent] = useState(0)
+  const [restResult, setRestResult] = useState('')
 
+  useEffect(() => {
+    if (!restResult) return
+    const timer = setTimeout(() => setRestResult(''), 5000)
+    return () => clearTimeout(timer)
+  }, [restResult])
+
+  
   /**
    * Aggiorna la quantità di una risorsa specifica. 
    * @param {string} id - L'ID della risorsa da aggiornare.
@@ -75,6 +94,8 @@ function App() {
       total += Math.max(0, roll + conMod)
     }
 
+    setRestResult(`Recuperati +${total} PF (${diceToSpend}d${dieSize} + ${conMod} per dado)`)
+    
     setHpCurrent((prev) => Math.min(hpMax, prev + total))
     setHitDice((prev) => ({ ...prev, current: prev.current - diceToSpend }))
     resetResources('short')
@@ -92,6 +113,7 @@ function App() {
     setHitDice((prev) => ({ ...prev, current: prev.current - diceSpent }))
     resetResources('short')
 
+    setRestResult(`Recuperati +${heal} PF, spesi ${diceSpent} dadi vita`)
     setRestPanel(null)
     setRestMethod(null)
     setManualHeal(0)
@@ -101,12 +123,14 @@ function App() {
   function applyLongRest() {
     setHpCurrent(hpMax)
     resetResources('long')
+    const recover = Math.max(1, Math.floor(hitDice.max / 2))
 
-    setHitDice((prev) => {
-      const recover = Math.max(1, Math.floor(prev.max / 2))
-      return { ...prev, current: Math.min(prev.max, prev.current + recover) }
-    })
+    setHitDice((prev) => ({
+      ...prev,
+      current: Math.min(prev.max, prev.current + recover),
+    }))
 
+    setRestResult(`Riposo lungo: PF al massimo, recuperi ${recover} dadi vita`)
     setRestPanel(null)
     setRestMethod(null)
   }
@@ -219,15 +243,20 @@ function App() {
                     className="rest-btn"
                     onClick={() => setRestPanel(restPanel === 'short' ? null : 'short')}
                   >
+                    <span className="action-icon">⏳</span>
                     Riposo breve
                   </button>
                   <button
                     className="rest-btn"
                     onClick={() => setRestPanel(restPanel === 'long' ? null : 'long')}
                   >
+                    <span className="action-icon">🌙</span>
                     Riposo lungo
                   </button>
+
                 </div>
+                {restResult && <div className="rest-result">{restResult}</div>}
+
 
                 {restPanel === 'short' && (
                   <div className="rest-panel">
@@ -282,6 +311,9 @@ function App() {
                           <span>PF recuperati</span>
                           <input
                             type="number"
+                            inputMode="numeric"
+                            pattern="[0-9]*"
+                            step="1"
                             min="0"
                             value={manualHeal}
                             onChange={(e) => setManualHeal(Number(e.target.value) || 0)}
@@ -291,6 +323,9 @@ function App() {
                           <span>Dadi vita spesi</span>
                           <input
                             type="number"
+                            inputMode="numeric"
+                            pattern="[0-9]*"
+                            step="1"
                             min="0"
                             max={hitDice.current}
                             value={manualDiceSpent}
@@ -310,6 +345,7 @@ function App() {
 
                 {restPanel === 'long' && (
                   <div className="rest-panel">
+                    
                     <div className="rest-label">Riposo lungo</div>
                     <div className="rest-hint">Ripristina PF e risorse da riposo lungo.</div>
                     <button className="rest-option" onClick={applyLongRest}>
@@ -318,6 +354,7 @@ function App() {
                   </div>
                 )}
               </SectionCard>
+              
 
             </>
           )}
