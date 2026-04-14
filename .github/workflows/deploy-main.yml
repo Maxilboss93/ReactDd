@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 20
           cache: npm
@@ -25,24 +25,20 @@ jobs:
       - name: Build app
         run: npm run build
 
-      - name: Start SSH agent and load key
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_KEY }}
-          ssh-passphrase: ${{ secrets.SSH_PASSPHRASE }}
-
-      - name: Add SiteGround to known_hosts
+      - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts
 
       - name: Test SSH connection
         run: |
-          ssh -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}" "echo SSH OK"
+          ssh -o StrictHostKeyChecking=yes -i ~/.ssh/id_ed25519 -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}" "echo SSH OK"
 
       - name: Deploy dist to SiteGround
         run: |
           rsync -avz --delete \
-            -e "ssh -p ${{ secrets.SSH_PORT }}" \
+            -e "ssh -i ~/.ssh/id_ed25519 -p ${{ secrets.SSH_PORT }}" \
             ./dist/ \
             ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_TARGET_DIR }}/
