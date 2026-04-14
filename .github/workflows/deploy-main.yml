@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  deploy-prod:
     runs-on: ubuntu-latest
 
     steps:
@@ -36,9 +36,9 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=yes -i ~/.ssh/id_ed25519 -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}" "echo SSH OK"
 
-      - name: Deploy dist to SiteGround
+      - name: Deploy dist to production subdomain
         run: |
           rsync -avz --delete \
             -e "ssh -i ~/.ssh/id_ed25519 -p ${{ secrets.SSH_PORT }}" \
             ./dist/ \
-            ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_TARGET_DIR }}/
+            ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_TARGET_DIR_PROD }}/
