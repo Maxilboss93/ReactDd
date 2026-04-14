@@ -36,7 +36,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=yes -i ~/.ssh/id_ed25519 -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}" "echo SSH OK"
 
-            - name: Debug remote paths
+      - name: Debug remote paths
         run: |
           ssh -o StrictHostKeyChecking=yes -i ~/.ssh/id_ed25519 -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}" "
             echo 'PWD:'
