@@ -2,9 +2,12 @@
 import ReactDOM from 'react-dom/client'
 import App from './app/App.jsx'
 import './styles/globals.css'
+import { AuthProvider } from './components/authentication/AuthContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </React.StrictMode>,
 )
