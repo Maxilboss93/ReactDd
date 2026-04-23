@@ -1,0 +1,74 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: ["Build"]
+    types:
+      - completed
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            set -e
+
+            SITE_DIR="${{ secrets.SSH_SITE_DIR }}"
+            BUILD_DIR="$SITE_DIR/build"
+            WEB_DIR="${{ secrets.SSH_WEB_DIR }}"
+            GIT_DIR="$SITE_DIR/.git"
+            REPO_URL="https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git"
+            BRANCH="build"
+
+            mkdir -p "$SITE_DIR" "$BUILD_DIR" "$WEB_DIR"
+
+            if [ ! -d "$GIT_DIR" ]; then
+              git init "$SITE_DIR"
+            fi
+
+            git --git-dir="$GIT_DIR" config core.worktree "$BUILD_DIR"
+
+            if git --git-dir="$GIT_DIR" remote get-url origin >/dev/null 2>&1; then
+              git --git-dir="$GIT_DIR" remote set-url origin "$REPO_URL"
+            else
+              git --git-dir="$GIT_DIR" remote add origin "$REPO_URL"
+            fi
+
+            mkdir -p "$GIT_DIR/info"
+            touch "$GIT_DIR/info/exclude"
+            grep -qxF "# SiteGround" "$GIT_DIR/info/exclude" || echo "# SiteGround" >> "$GIT_DIR/info/exclude"
+            grep -qxF "/logs/" "$GIT_DIR/info/exclude" || echo "/logs/" >> "$GIT_DIR/info/exclude"
+            grep -qxF "/webstats/" "$GIT_DIR/info/exclude" || echo "/webstats/" >> "$GIT_DIR/info/exclude"
+
+            git --git-dir="$GIT_DIR" fetch origin "$BRANCH" --prune
+            git --git-dir="$GIT_DIR" --work-tree="$BUILD_DIR" reset --hard "origin/$BRANCH"
+            git --git-dir="$GIT_DIR" --work-tree="$BUILD_DIR" clean -fdx
+
+            rm -rf "$WEB_DIR/.git"
+
+            if command -v rsync >/dev/null 2>&1; then
+              rsync -av --delete --exclude='.git' "$BUILD_DIR"/ "$WEB_DIR"/
+            else
+              find "$WEB_DIR" -mindepth 1 -maxdepth 1 -exec rm -rf {} +
+              find "$BUILD_DIR" -mindepth 1 -maxdepth 1 ! -name '.git' -exec cp -a {} "$WEB_DIR"/ \;
+            fi
+
+            touch "$WEB_DIR/.nojekyll"
+
+            find "$BUILD_DIR" "$WEB_DIR" -type d -exec chmod 755 {} \;
+            find "$BUILD_DIR" "$WEB_DIR" -type f -exec chmod 644 {} \;
