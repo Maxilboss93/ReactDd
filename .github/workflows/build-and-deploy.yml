@@ -1,0 +1,109 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: build-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build app
+        env:
+          VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL }}
+        run: npm run build
+
+      - name: Add deployment files
+        run: |
+          touch dist/.nojekyll
+          cp public/.htaccess dist/.htaccess
+
+      - name: Prepare target directory
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            set -e
+
+            TARGET="${{ vars.DEPLOY_PATH }}"
+
+            if [ -z "$TARGET" ]; then
+              echo "Missing DEPLOY_PATH repository variable"
+              exit 1
+            fi
+
+            if [ "$TARGET" = "/" ]; then
+              echo "Invalid DEPLOY_PATH: root path is not allowed"
+              exit 1
+            fi
+
+            mkdir -p "$TARGET"
+
+            find "$TARGET" -mindepth 1 -maxdepth 1 ! -name ".well-known" -exec rm -rf {} \;
+
+      - name: Upload dist files
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          port: ${{ secrets.SSH_PORT }}
+          source: "dist/*"
+          target: ${{ vars.DEPLOY_PATH }}
+          strip_components: 1
+
+      - name: Upload hidden files
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          port: ${{ secrets.SSH_PORT }}
+          source: "dist/.nojekyll,dist/.htaccess"
+          target: ${{ vars.DEPLOY_PATH }}
+          strip_components: 1
+
+      - name: Fix permissions
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            set -e
+
+            TARGET="${{ vars.DEPLOY_PATH }}"
+
+            find "$TARGET" -type d -exec chmod 755 {} \;
+            find "$TARGET" -type f -exec chmod 644 {} \;
