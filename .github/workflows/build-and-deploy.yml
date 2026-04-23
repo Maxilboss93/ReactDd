@@ -3,6 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
+      - dev
       - main
   workflow_dispatch:
 
@@ -16,6 +17,9 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      DEPLOY_PATH: ${{ github.ref_name == 'main' && vars.DEPLOY_PATH_PROD || vars.DEPLOY_PATH_DEV }}
+      VITE_API_BASE_URL: ${{ github.ref_name == 'main' && vars.VITE_API_BASE_URL_PROD || vars.VITE_API_BASE_URL_DEV }}
 
     steps:
       - name: Checkout repository
@@ -33,8 +37,13 @@ jobs:
 
       - name: Build app
         env:
-          VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL }}
+          VITE_API_BASE_URL: ${{ env.VITE_API_BASE_URL }}
         run: npm run build
+
+      - name: Show deploy target
+        run: |
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Deploy path: $DEPLOY_PATH"
 
       - name: Add deployment files
         run: |
@@ -52,10 +61,10 @@ jobs:
           script: |
             set -e
 
-            TARGET="${{ vars.DEPLOY_PATH }}"
+            TARGET="$DEPLOY_PATH"
 
             if [ -z "$TARGET" ]; then
-              echo "Missing DEPLOY_PATH repository variable"
+              echo "Missing DEPLOY_PATH for branch ${{ github.ref_name }}"
               exit 1
             fi
 
@@ -77,7 +86,7 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           port: ${{ secrets.SSH_PORT }}
           source: "dist/*"
-          target: ${{ vars.DEPLOY_PATH }}
+          target: ${{ env.DEPLOY_PATH }}
           strip_components: 1
 
       - name: Upload hidden files
@@ -89,7 +98,7 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           port: ${{ secrets.SSH_PORT }}
           source: "dist/.nojekyll,dist/.htaccess"
-          target: ${{ vars.DEPLOY_PATH }}
+          target: ${{ env.DEPLOY_PATH }}
           strip_components: 1
 
       - name: Fix permissions
@@ -103,7 +112,7 @@ jobs:
           script: |
             set -e
 
-            TARGET="${{ vars.DEPLOY_PATH }}"
+            TARGET="$DEPLOY_PATH"
 
             find "$TARGET" -type d -exec chmod 755 {} \;
             find "$TARGET" -type f -exec chmod 644 {} \;

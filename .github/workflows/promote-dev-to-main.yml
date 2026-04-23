@@ -1,0 +1,57 @@
+name: Promote Dev To Main
+
+on:
+  workflow_run:
+    workflows:
+      - Build and Deploy
+    types:
+      - completed
+    branches:
+      - dev
+  workflow_dispatch:
+
+concurrency:
+  group: promote-dev-to-main
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Promote dev into main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_SLUG: ${{ github.repository }}
+        run: |
+          set -e
+
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO_SLUG}.git"
+          git fetch origin dev main
+
+          DEV_SHA="$(git rev-parse origin/dev)"
+          MAIN_SHA="$(git rev-parse origin/main)"
+
+          if [ "$DEV_SHA" = "$MAIN_SHA" ]; then
+            echo "main is already aligned with dev"
+            exit 0
+          fi
+
+          git checkout -B main origin/main
+          git merge --no-ff --no-edit origin/dev
+          git push origin main
