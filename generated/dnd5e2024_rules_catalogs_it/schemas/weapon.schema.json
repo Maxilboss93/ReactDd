@@ -1,0 +1,11 @@
+{
+  "title": "WeaponCatalogIt",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "proficiency",
+    "kind",
+    "damage"
+  ]
+}

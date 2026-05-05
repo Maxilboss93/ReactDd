@@ -1,0 +1,9 @@
+{
+  "title": "EquipmentCatalogIt",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "category"
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "meta": {
+    "source_pages_pdf": [
+      232,
+      233,
+      234
+    ]
+  },
+  "mounts": [
+    {
+      "id": "cammello",
+      "name": "Cammello",
+      "carry_capacity": "225 kg",
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          232
+        ]
+      }
+    },
+    {
+      "id": "cavallo-da-galoppo",
+      "name": "Cavallo da galoppo",
+      "carry_capacity": "240 kg",
+      "cost": "75 mo",
+      "source": {
+        "pages_pdf": [
+          232
+        ]
+      }
+    },
+    {
+      "id": "cavallo-da-guerra",
+      "name": "Cavallo da guerra",
+      "carry_capacity": "270 kg",
+      "cost": "400 mo",
+      "source": {
+        "pages_pdf": [
+          232
+        ]
+      }
+    },
+    {
+      "id": "cavallo-da-tiro",
+      "name": "Cavallo da tiro",
+      "carry_capacity": "270 kg",
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          232
+        ]
+      }
+    },
+    {
+      "id": "elefante",
+      "name": "Elefante",
+      "carry_capacity": "660 kg",
+      "cost": "200 mo",
+      "source": {
+        "pages_pdf": [
+          232
+        ]
+      }
+    },
+    {
+      "id": "mastino",
+      "name": "Mastino",
+      "carry_capacity": "97.5 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          232
+        ]
+      }
+    },
+    {
+      "id": "mulo",
+      "name": "Mulo",
+      "carry_capacity": "210 kg",
+      "cost": "8 mo",
+      "source": {
+        "pages_pdf": [
+          232
+        ]
+      }
+    },
+    {
+      "id": "pony",
+      "name": "Pony",
+      "carry_capacity": "112.5 kg",
+      "cost": "30 mo",
+      "source": {
+        "pages_pdf": [
+          232
+        ]
+      }
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "biga",
+      "name": "Biga",
+      "category": "veicolo_da_tiro",
+      "weight": "50 kg",
+      "cost": "250 mo",
+      "source": {
+        "pages_pdf": [
+          232,
+          233
+        ]
+      }
+    },
+    {
+      "id": "carretto",
+      "name": "Carretto",
+      "category": "veicolo_da_tiro",
+      "weight": "100 kg",
+      "cost": "15 mo",
+      "source": {
+        "pages_pdf": [
+          232,
+          233
+        ]
+      }
+    },
+    {
+      "id": "carro",
+      "name": "Carro",
+      "category": "veicolo_da_tiro",
+      "weight": "200 kg",
+      "cost": "35 mo",
+      "source": {
+        "pages_pdf": [
+          232,
+          233
+        ]
+      }
+    },
+    {
+      "id": "carrozza",
+      "name": "Carrozza",
+      "category": "veicolo_da_tiro",
+      "weight": "300 kg",
+      "cost": "100 mo",
+      "source": {
+        "pages_pdf": [
+          232,
+          233
+        ]
+      }
+    },
+    {
+      "id": "slitta",
+      "name": "Slitta",
+      "category": "veicolo_da_tiro",
+      "weight": "150 kg",
+      "cost": "20 mo",
+      "source": {
+        "pages_pdf": [
+          232,
+          233
+        ]
+      }
+    },
+    {
+      "id": "barca-a-remi",
+      "name": "Barca a remi",
+      "category": "imbarcazione",
+      "weight": null,
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          232,
+          233
+        ]
+      }
+    },
+    {
+      "id": "barcone",
+      "name": "Barcone",
+      "category": "imbarcazione",
+      "weight": null,
+      "cost": "3000 mo",
+      "source": {
+        "pages_pdf": [
+          232,
+          233
+        ]
+      }
+    },
+    {
+      "id": "dirigibile",
+      "name": "Dirigibile",
+      "category": "veicolo_aereo",
+      "weight": null,
+      "cost": "40000 mo",
+      "source": {
+        "pages_pdf": [
+          232,
+          233
+        ]
+      }
+    },
+    {
+      "id": "galea",
+      "name": "Galea",
+      "category": "imbarcazione",
+      "weight": null,
+      "cost": "30000 mo",
+      "source": {
+        "pages_pdf": [
+          232,
+          233
+        ]
+      }
+    },
+    {
+      "id": "nave-da-guerra",
+      "name": "Nave da guerra",
+      "category": "imbarcazione",
+      "weight": null,
+      "cost": "25000 mo",
+      "source": {
+        "pages_pdf": [
+          232,
+          233
+        ]
+      }
+    },
+    {
+      "id": "nave-lunga",
+      "name": "Nave lunga",
+      "category": "imbarcazione",
+      "weight": null,
+      "cost": "10000 mo",
+      "source": {
+        "pages_pdf": [
+          232,
+          233
+        ]
+      }
+    },
+    {
+      "id": "nave-a-vela",
+      "name": "Nave a vela",
+      "category": "imbarcazione",
+      "weight": null,
+      "cost": "10000 mo",
+      "source": {
+        "pages_pdf": [
+          232,
+          233
+        ]
+      }
+    }
+  ],
+  "services": [
+    {
+      "id": "stile-di-vita-miserabile",
+      "name": "Stile di vita miserabile",
+      "category": "lifestyle",
+      "cost": "gratis",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "stile-di-vita-squallido",
+      "name": "Stile di vita squallido",
+      "category": "lifestyle",
+      "cost": "1 ma al giorno",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "stile-di-vita-povero",
+      "name": "Stile di vita povero",
+      "category": "lifestyle",
+      "cost": "2 ma al giorno",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "stile-di-vita-modesto",
+      "name": "Stile di vita modesto",
+      "category": "lifestyle",
+      "cost": "1 mo al giorno",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "stile-di-vita-agiato",
+      "name": "Stile di vita agiato",
+      "category": "lifestyle",
+      "cost": "2 mo al giorno",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "stile-di-vita-ricco",
+      "name": "Stile di vita ricco",
+      "category": "lifestyle",
+      "cost": "4 mo al giorno",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "stile-di-vita-aristocratico",
+      "name": "Stile di vita aristocratico",
+      "category": "lifestyle",
+      "cost": "10 mo al giorno",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "gregario-abile",
+      "name": "Gregario abile",
+      "category": "hireling",
+      "cost": "2 mo al giorno",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "gregario-inesperto",
+      "name": "Gregario inesperto",
+      "category": "hireling",
+      "cost": "2 ma al giorno",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "messaggero",
+      "name": "Messaggero",
+      "category": "hireling",
+      "cost": "2 mr per 1.5 km",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "passaggio-in-nave",
+      "name": "Passaggio in nave",
+      "category": "travel",
+      "cost": "1 ma per 1.5 km",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "pedaggio-stradale-o-ingresso",
+      "name": "Pedaggio stradale o ingresso",
+      "category": "travel",
+      "cost": "1 mr",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "viaggio-in-carrozza-dentro-una-citta",
+      "name": "Viaggio in carrozza dentro una citta",
+      "category": "travel",
+      "cost": "1 mr per 1.5 km",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    },
+    {
+      "id": "viaggio-in-carrozza-tra-cittadine",
+      "name": "Viaggio in carrozza tra cittadine",
+      "category": "travel",
+      "cost": "3 mr per 1.5 km",
+      "source": {
+        "pages_pdf": [
+          233,
+          234
+        ]
+      }
+    }
+  ]
+}

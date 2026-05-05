@@ -1,0 +1,22 @@
+{
+  "title": "D&D 5e 2024 - Cataloghi regole base IT",
+  "schema_version": 1,
+  "generated_at": "2026-05-04T17:27:52",
+  "language": "it",
+  "sources": {
+    "manual_pdf": "C:\\xampp\\htdocs\\Dd\\D&D_5e24_Player's_Handbook_Manuale_del_Giocatore_CHQ_05_2025.pdf",
+    "spells_json": "C:\\xampp\\htdocs\\Dd\\dnd2024_spells_it.json"
+  },
+  "copyright_note": "Cataloghi strutturali con descrizioni brevi/parafrasate per uso nel frontend; non contiene trascrizioni estese del manuale.",
+  "counts": {
+    "feats": 75,
+    "weapons": 38,
+    "armors": 12,
+    "shields": 1,
+    "tools": 25,
+    "adventuring_gear": 82,
+    "mounts": 8,
+    "vehicles": 12,
+    "services": 14
+  }
+}

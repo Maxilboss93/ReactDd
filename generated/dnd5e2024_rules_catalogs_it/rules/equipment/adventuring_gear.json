@@ -1,0 +1,1575 @@
+{
+  "meta": {
+    "count": 82,
+    "source_pages_pdf": [
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232
+    ]
+  },
+  "items": [
+    {
+      "id": "abiti-da-viaggiatore",
+      "name": "Abiti da viaggiatore",
+      "category": "equipaggiamento_avventura",
+      "weight": "2 kg",
+      "cost": "2 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "abiti-eleganti",
+      "name": "Abiti eleganti",
+      "category": "equipaggiamento_avventura",
+      "weight": "3 kg",
+      "cost": "15 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "acciarino-e-pietra-focaia",
+      "name": "Acciarino e pietra focaia",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "5 ma",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "acido",
+      "name": "Acido",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "acqua-santa",
+      "name": "Acqua santa",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "ampolla",
+      "name": "Ampolla",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "2 mr",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "antitossina",
+      "name": "Antitossina",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "ariete-portatile",
+      "name": "Ariete portatile",
+      "category": "equipaggiamento_avventura",
+      "weight": "17.5 kg",
+      "cost": "4 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "asta",
+      "name": "Asta",
+      "category": "equipaggiamento_avventura",
+      "weight": "3.5 kg",
+      "cost": "5 mr",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "attrezzi-da-scalatore",
+      "name": "Attrezzi da scalatore",
+      "category": "equipaggiamento_avventura",
+      "weight": "6 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "barile",
+      "name": "Barile",
+      "category": "equipaggiamento_avventura",
+      "weight": "35 kg",
+      "cost": "2 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "borsa-del-guaritore",
+      "name": "Borsa del guaritore",
+      "category": "equipaggiamento_avventura",
+      "weight": "1.5 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "borsa-per-componenti",
+      "name": "Borsa per componenti",
+      "category": "equipaggiamento_avventura",
+      "weight": "1 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "borsa",
+      "name": "Borsa",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "5 ma",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "bottiglia-di-vetro",
+      "name": "Bottiglia di vetro",
+      "category": "equipaggiamento_avventura",
+      "weight": "1 kg",
+      "cost": "2 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "brocca",
+      "name": "Brocca",
+      "category": "equipaggiamento_avventura",
+      "weight": "2 kg",
+      "cost": "2 mr",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "campanella",
+      "name": "Campanella",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "candela",
+      "name": "Candela",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "1 mr",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "cannocchiale",
+      "name": "Cannocchiale",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "1000 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "carrucola-e-paranco",
+      "name": "Carrucola e paranco",
+      "category": "equipaggiamento_avventura",
+      "weight": "2.5 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "carta",
+      "name": "Carta",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "2 ma",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "catena",
+      "name": "Catena",
+      "category": "equipaggiamento_avventura",
+      "weight": "5 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "cesto",
+      "name": "Cesto",
+      "category": "equipaggiamento_avventura",
+      "weight": "1 kg",
+      "cost": "4 ma",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "coperta",
+      "name": "Coperta",
+      "category": "equipaggiamento_avventura",
+      "weight": "1.5 kg",
+      "cost": "5 ma",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "corda",
+      "name": "Corda",
+      "category": "equipaggiamento_avventura",
+      "weight": "2.5 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "costume",
+      "name": "Costume",
+      "category": "equipaggiamento_avventura",
+      "weight": "2 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "custodia-per-mappe-o-pergamene",
+      "name": "Custodia per mappe o pergamene",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "custodia-per-quadrelli-da-balestra",
+      "name": "Custodia per quadrelli da balestra",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "dotazione-da-avventuriero",
+      "name": "Dotazione da avventuriero",
+      "category": "equipaggiamento_avventura",
+      "weight": "27.5 kg",
+      "cost": "12 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "dotazione-da-diplomatico",
+      "name": "Dotazione da diplomatico",
+      "category": "equipaggiamento_avventura",
+      "weight": "19.5 kg",
+      "cost": "39 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "dotazione-da-esploratore",
+      "name": "Dotazione da esploratore",
+      "category": "equipaggiamento_avventura",
+      "weight": "27.5 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "dotazione-da-intrattenitore",
+      "name": "Dotazione da intrattenitore",
+      "category": "equipaggiamento_avventura",
+      "weight": "29 kg",
+      "cost": "40 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "dotazione-da-sacerdote",
+      "name": "Dotazione da sacerdote",
+      "category": "equipaggiamento_avventura",
+      "weight": "14 kg",
+      "cost": "33 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "dotazione-da-scassinatore",
+      "name": "Dotazione da scassinatore",
+      "category": "equipaggiamento_avventura",
+      "weight": "19 kg",
+      "cost": "16 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "dotazione-da-studioso",
+      "name": "Dotazione da studioso",
+      "category": "equipaggiamento_avventura",
+      "weight": "11 kg",
+      "cost": "40 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "faretra",
+      "name": "Faretra",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "fiala",
+      "name": "Fiala",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "fischietto-da-richiamo",
+      "name": "Fischietto da richiamo",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "5 mr",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "focus-arcano",
+      "name": "Focus arcano",
+      "category": "equipaggiamento_avventura",
+      "weight": "variabile",
+      "cost": "variabile",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "focus-druidico",
+      "name": "Focus druidico",
+      "category": "equipaggiamento_avventura",
+      "weight": "variabile",
+      "cost": "variabile",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "forziere",
+      "name": "Forziere",
+      "category": "equipaggiamento_avventura",
+      "weight": "12.5 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "fuoco-dellalchimista",
+      "name": "Fuoco dell'alchimista",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "giaciglio",
+      "name": "Giaciglio",
+      "category": "equipaggiamento_avventura",
+      "weight": "3.5 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "inchiostro",
+      "name": "Inchiostro",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "lampada",
+      "name": "Lampada",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "5 ma",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "lanterna-a-lente-sporgente",
+      "name": "Lanterna a lente sporgente",
+      "category": "equipaggiamento_avventura",
+      "weight": "1 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "lanterna-schermabile",
+      "name": "Lanterna schermabile",
+      "category": "equipaggiamento_avventura",
+      "weight": "1 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "lente-dingrandimento",
+      "name": "Lente d'ingrandimento",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "100 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "libro",
+      "name": "Libro",
+      "category": "equipaggiamento_avventura",
+      "weight": "2.5 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "manette",
+      "name": "Manette",
+      "category": "equipaggiamento_avventura",
+      "weight": "3 kg",
+      "cost": "2 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "mappa",
+      "name": "Mappa",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "munizioni",
+      "name": "Munizioni",
+      "category": "equipaggiamento_avventura",
+      "weight": "variabile",
+      "cost": "variabile",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "olio",
+      "name": "Olio",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "1 ma",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "otre",
+      "name": "Otre",
+      "category": "equipaggiamento_avventura",
+      "weight": "2.5 kg",
+      "cost": "2 ma",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "pala",
+      "name": "Pala",
+      "category": "equipaggiamento_avventura",
+      "weight": "2.5 kg",
+      "cost": "2 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "pennino",
+      "name": "Pennino",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "2 mr",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "pentola-di-ferro",
+      "name": "Pentola di ferro",
+      "category": "equipaggiamento_avventura",
+      "weight": "5 kg",
+      "cost": "2 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "pergamena",
+      "name": "Pergamena",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "1 ma",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "pergamena-magica-trucchetto",
+      "name": "Pergamena magica - trucchetto",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "30 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "pergamena-magica-livello-1",
+      "name": "Pergamena magica - livello 1",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "piede-di-porco",
+      "name": "Piede di porco",
+      "category": "equipaggiamento_avventura",
+      "weight": "2.5 kg",
+      "cost": "2 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "pozione-di-guarigione",
+      "name": "Pozione di guarigione",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.25 kg",
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "profumo",
+      "name": "Profumo",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "rampino",
+      "name": "Rampino",
+      "category": "equipaggiamento_avventura",
+      "weight": "2 kg",
+      "cost": "2 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "razioni",
+      "name": "Razioni",
+      "category": "equipaggiamento_avventura",
+      "weight": "1 kg",
+      "cost": "5 ma",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "rete",
+      "name": "Rete",
+      "category": "equipaggiamento_avventura",
+      "weight": "1.5 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "sacco",
+      "name": "Sacco",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.25 kg",
+      "cost": "1 mr",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "scala-a-pioli",
+      "name": "Scala a pioli",
+      "category": "equipaggiamento_avventura",
+      "weight": "12.5 kg",
+      "cost": "1 ma",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "secchio",
+      "name": "Secchio",
+      "category": "equipaggiamento_avventura",
+      "weight": "1 kg",
+      "cost": "5 mr",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "serratura",
+      "name": "Serratura",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "sfere-metalliche",
+      "name": "Sfere metalliche",
+      "category": "equipaggiamento_avventura",
+      "weight": "1 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "simbolo-sacro",
+      "name": "Simbolo sacro",
+      "category": "equipaggiamento_avventura",
+      "weight": "variabile",
+      "cost": "variabile",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "spago",
+      "name": "Spago",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "1 ma",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "specchio",
+      "name": "Specchio",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.25 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "spuntoni-di-ferro",
+      "name": "Spuntoni di ferro",
+      "category": "equipaggiamento_avventura",
+      "weight": "2.5 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "tagliola",
+      "name": "Tagliola",
+      "category": "equipaggiamento_avventura",
+      "weight": "12.5 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "tenda",
+      "name": "Tenda",
+      "category": "equipaggiamento_avventura",
+      "weight": "10 kg",
+      "cost": "2 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "torcia",
+      "name": "Torcia",
+      "category": "equipaggiamento_avventura",
+      "weight": "0.5 kg",
+      "cost": "1 mr",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "triboli",
+      "name": "Triboli",
+      "category": "equipaggiamento_avventura",
+      "weight": "1 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "tunica",
+      "name": "Tunica",
+      "category": "equipaggiamento_avventura",
+      "weight": "2 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "veleno-base",
+      "name": "Veleno base",
+      "category": "equipaggiamento_avventura",
+      "weight": null,
+      "cost": "100 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    },
+    {
+      "id": "zaino",
+      "name": "Zaino",
+      "category": "equipaggiamento_avventura",
+      "weight": "2.5 kg",
+      "cost": "2 mo",
+      "source": {
+        "pages_pdf": [
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232
+        ]
+      }
+    }
+  ]
+}

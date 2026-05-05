@@ -1,0 +1,10 @@
+{
+  "title": "FeatCatalogIt",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "category",
+    "prerequisites"
+  ]
+}

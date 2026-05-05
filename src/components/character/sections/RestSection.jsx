@@ -1,4 +1,11 @@
 import SectionCard from '../../general/card/SectionCard.jsx'
+import DiceRoller from '../../dice/DiceRoller.jsx'
+
+function getDieSize(type) {
+  const size = Number(String(type || '').replace('d', ''))
+
+  return Number.isNaN(size) ? 8 : size
+}
 
 function RestSection({
   restPanel,
@@ -16,7 +23,10 @@ function RestSection({
   applyShortRestRoll,
   applyShortRestManual,
   applyLongRest,
+  conMod,
 }) {
+  const hitDieSize = getDieSize(hitDice.type)
+
   return (
     <SectionCard title="Riposi">
       <div className="rest-actions">
@@ -73,13 +83,17 @@ function RestSection({
               {hitDice.current <= 0 && (
                 <div className="rest-hint">Non hai dadi vita disponibili.</div>
               )}
-              <button
-                className="rest-option"
-                onClick={applyShortRestRoll}
+
+              <DiceRoller
+                sides={hitDieSize}
+                count={shortRestDice}
+                label={`Tira ${shortRestDice}${hitDice.type}`}
+                modifier={conMod}
+                modifierMode="each"
+                minimumPerRoll={0}
                 disabled={hitDice.current <= 0}
-              >
-                Tira e recupera
-              </button>
+                onRoll={applyShortRestRoll}
+              />
             </div>
           )}
 

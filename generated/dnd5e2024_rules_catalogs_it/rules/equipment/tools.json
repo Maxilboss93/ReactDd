@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "count": 25,
+    "source_pages_pdf": [
+      223,
+      224
+    ]
+  },
+  "items": [
+    {
+      "id": "scorte-da-alchimista",
+      "name": "Scorte da alchimista",
+      "category": "artigiano",
+      "ability": "Intelligenza",
+      "weight": "4 kg",
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "scorte-da-birraio",
+      "name": "Scorte da birraio",
+      "category": "artigiano",
+      "ability": "Intelligenza",
+      "weight": "4.5 kg",
+      "cost": "20 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "scorte-da-calligrafo",
+      "name": "Scorte da calligrafo",
+      "category": "artigiano",
+      "ability": "Destrezza",
+      "weight": "2.5 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-calzolaio",
+      "name": "Strumenti da calzolaio",
+      "category": "artigiano",
+      "ability": "Destrezza",
+      "weight": "2.5 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-cartografo",
+      "name": "Strumenti da cartografo",
+      "category": "artigiano",
+      "ability": "Saggezza",
+      "weight": "3 kg",
+      "cost": "15 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-conciatore",
+      "name": "Strumenti da conciatore",
+      "category": "artigiano",
+      "ability": "Destrezza",
+      "weight": "2.5 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-fabbro",
+      "name": "Strumenti da fabbro",
+      "category": "artigiano",
+      "ability": "Forza",
+      "weight": "4 kg",
+      "cost": "20 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-falegname",
+      "name": "Strumenti da falegname",
+      "category": "artigiano",
+      "ability": "Forza",
+      "weight": "3 kg",
+      "cost": "8 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-gioielliere",
+      "name": "Strumenti da gioielliere",
+      "category": "artigiano",
+      "ability": "Intelligenza",
+      "weight": "1 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-intagliatore",
+      "name": "Strumenti da intagliatore",
+      "category": "artigiano",
+      "ability": "Destrezza",
+      "weight": "2.5 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-inventore",
+      "name": "Strumenti da inventore",
+      "category": "artigiano",
+      "ability": "Destrezza",
+      "weight": "5 kg",
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-muratore",
+      "name": "Strumenti da muratore",
+      "category": "artigiano",
+      "ability": "Forza",
+      "weight": "4 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-pittore",
+      "name": "Strumenti da pittore",
+      "category": "artigiano",
+      "ability": "Saggezza",
+      "weight": "2.5 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-soffiatore",
+      "name": "Strumenti da soffiatore",
+      "category": "artigiano",
+      "ability": "Intelligenza",
+      "weight": "2.5 kg",
+      "cost": "30 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-tessitore",
+      "name": "Strumenti da tessitore",
+      "category": "artigiano",
+      "ability": "Destrezza",
+      "weight": "2.5 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-vasaio",
+      "name": "Strumenti da vasaio",
+      "category": "artigiano",
+      "ability": "Intelligenza",
+      "weight": "1.5 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "utensili-da-cuoco",
+      "name": "Utensili da cuoco",
+      "category": "artigiano",
+      "ability": "Saggezza",
+      "weight": "4 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "arnesi-da-falsario",
+      "name": "Arnesi da falsario",
+      "category": "altro",
+      "ability": "Destrezza",
+      "weight": "2.5 kg",
+      "cost": "15 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "arnesi-da-scasso",
+      "name": "Arnesi da scasso",
+      "category": "altro",
+      "ability": "Destrezza",
+      "weight": "0.5 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "borsa-da-erborista",
+      "name": "Borsa da erborista",
+      "category": "altro",
+      "ability": "Intelligenza",
+      "weight": "1.5 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "gioco",
+      "name": "Gioco",
+      "category": "altro",
+      "ability": "Saggezza",
+      "weight": null,
+      "cost": "variabile",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "sostanze-da-avvelenatore",
+      "name": "Sostanze da avvelenatore",
+      "category": "altro",
+      "ability": "Intelligenza",
+      "weight": "1 kg",
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumenti-da-navigatore",
+      "name": "Strumenti da navigatore",
+      "category": "altro",
+      "ability": "Saggezza",
+      "weight": "1 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "strumento-musicale",
+      "name": "Strumento musicale",
+      "category": "altro",
+      "ability": "Carisma",
+      "weight": "variabile",
+      "cost": "variabile",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    },
+    {
+      "id": "trucchi-per-il-camuffamento",
+      "name": "Trucchi per il camuffamento",
+      "category": "altro",
+      "ability": "Carisma",
+      "weight": "1.5 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          223,
+          224
+        ]
+      }
+    }
+  ]
+}

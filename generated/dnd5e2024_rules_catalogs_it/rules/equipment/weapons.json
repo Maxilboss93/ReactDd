@@ -1,0 +1,837 @@
+{
+  "meta": {
+    "count": 38,
+    "source_pages_pdf": [
+      218
+    ]
+  },
+  "items": [
+    {
+      "id": "ascia",
+      "name": "Ascia",
+      "proficiency": "semplice",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d6",
+        "type": "taglienti"
+      },
+      "properties": [
+        "lancio 6/18",
+        "leggera"
+      ],
+      "mastery": "Vessazione",
+      "weight": "1 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "bastone-ferrato",
+      "name": "Bastone ferrato",
+      "proficiency": "semplice",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d6",
+        "type": "contundenti"
+      },
+      "properties": [
+        "versatile 1d8"
+      ],
+      "mastery": "Rovesciamento",
+      "weight": "2 kg",
+      "cost": "2 ma",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "falcetto",
+      "name": "Falcetto",
+      "proficiency": "semplice",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d4",
+        "type": "taglienti"
+      },
+      "properties": [
+        "leggera"
+      ],
+      "mastery": "Graffio",
+      "weight": "1 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "giavellotto",
+      "name": "Giavellotto",
+      "proficiency": "semplice",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d6",
+        "type": "perforanti"
+      },
+      "properties": [
+        "lancio 9/36"
+      ],
+      "mastery": "Lentezza",
+      "weight": "1 kg",
+      "cost": "5 ma",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "lancia",
+      "name": "Lancia",
+      "proficiency": "semplice",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d6",
+        "type": "perforanti"
+      },
+      "properties": [
+        "lancio 6/18",
+        "versatile 1d8"
+      ],
+      "mastery": "Prosciugamento",
+      "weight": "1.5 kg",
+      "cost": "1 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "martello-leggero",
+      "name": "Martello leggero",
+      "proficiency": "semplice",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d4",
+        "type": "contundenti"
+      },
+      "properties": [
+        "lancio 6/18",
+        "leggera"
+      ],
+      "mastery": "Graffio",
+      "weight": "1 kg",
+      "cost": "2 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "mazza",
+      "name": "Mazza",
+      "proficiency": "semplice",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d6",
+        "type": "contundenti"
+      },
+      "properties": [],
+      "mastery": "Prosciugamento",
+      "weight": "2 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "pugnale",
+      "name": "Pugnale",
+      "proficiency": "semplice",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d4",
+        "type": "perforanti"
+      },
+      "properties": [
+        "accurata",
+        "lancio 6/18",
+        "leggera"
+      ],
+      "mastery": "Graffio",
+      "weight": "0.5 kg",
+      "cost": "2 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "randello-pesante",
+      "name": "Randello pesante",
+      "proficiency": "semplice",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d8",
+        "type": "contundenti"
+      },
+      "properties": [
+        "due mani"
+      ],
+      "mastery": "Spinta",
+      "weight": "5 kg",
+      "cost": "2 ma",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "randello",
+      "name": "Randello",
+      "proficiency": "semplice",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d4",
+        "type": "contundenti"
+      },
+      "properties": [
+        "leggera"
+      ],
+      "mastery": "Lentezza",
+      "weight": "1 kg",
+      "cost": "1 ma",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "arco-corto",
+      "name": "Arco corto",
+      "proficiency": "semplice",
+      "kind": "distanza",
+      "damage": {
+        "dice": "1d6",
+        "type": "perforanti"
+      },
+      "properties": [
+        "due mani",
+        "munizioni 24/96 freccia"
+      ],
+      "mastery": "Vessazione",
+      "weight": "1 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "balestra-leggera",
+      "name": "Balestra leggera",
+      "proficiency": "semplice",
+      "kind": "distanza",
+      "damage": {
+        "dice": "1d8",
+        "type": "perforanti"
+      },
+      "properties": [
+        "due mani",
+        "munizioni 24/96 quadrello",
+        "ricarica"
+      ],
+      "mastery": "Lentezza",
+      "weight": "2.5 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "dardo",
+      "name": "Dardo",
+      "proficiency": "semplice",
+      "kind": "distanza",
+      "damage": {
+        "dice": "1d4",
+        "type": "perforanti"
+      },
+      "properties": [
+        "accurata",
+        "lancio 6/18"
+      ],
+      "mastery": "Vessazione",
+      "weight": "0.125 kg",
+      "cost": "5 mr",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "fionda",
+      "name": "Fionda",
+      "proficiency": "semplice",
+      "kind": "distanza",
+      "damage": {
+        "dice": "1d4",
+        "type": "contundenti"
+      },
+      "properties": [
+        "munizioni 9/36 proiettile"
+      ],
+      "mastery": "Lentezza",
+      "weight": null,
+      "cost": "1 ma",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "alabarda",
+      "name": "Alabarda",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d10",
+        "type": "taglienti"
+      },
+      "properties": [
+        "due mani",
+        "pesante",
+        "portata"
+      ],
+      "mastery": "Doppio fendente",
+      "weight": "3 kg",
+      "cost": "20 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "ascia-bipenne",
+      "name": "Ascia bipenne",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d12",
+        "type": "taglienti"
+      },
+      "properties": [
+        "due mani",
+        "pesante"
+      ],
+      "mastery": "Doppio fendente",
+      "weight": "3.5 kg",
+      "cost": "30 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "ascia-da-battaglia",
+      "name": "Ascia da battaglia",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d8",
+        "type": "taglienti"
+      },
+      "properties": [
+        "versatile 1d10"
+      ],
+      "mastery": "Rovesciamento",
+      "weight": "2 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "falcione",
+      "name": "Falcione",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d10",
+        "type": "taglienti"
+      },
+      "properties": [
+        "due mani",
+        "pesante",
+        "portata"
+      ],
+      "mastery": "Colpo di striscio",
+      "weight": "3 kg",
+      "cost": "20 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "frusta",
+      "name": "Frusta",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d4",
+        "type": "taglienti"
+      },
+      "properties": [
+        "accurata",
+        "portata"
+      ],
+      "mastery": "Lentezza",
+      "weight": "1.5 kg",
+      "cost": "2 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "lancia-da-cavaliere",
+      "name": "Lancia da cavaliere",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d10",
+        "type": "perforanti"
+      },
+      "properties": [
+        "due mani eccetto in sella",
+        "pesante",
+        "portata"
+      ],
+      "mastery": "Rovesciamento",
+      "weight": "3 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "maglio",
+      "name": "Maglio",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "2d6",
+        "type": "contundenti"
+      },
+      "properties": [
+        "due mani",
+        "pesante"
+      ],
+      "mastery": "Rovesciamento",
+      "weight": "5 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "martello-da-guerra",
+      "name": "Martello da guerra",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d8",
+        "type": "contundenti"
+      },
+      "properties": [
+        "versatile 1d10"
+      ],
+      "mastery": "Spinta",
+      "weight": "2.5 kg",
+      "cost": "15 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "mazza-chiodata",
+      "name": "Mazza chiodata",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d8",
+        "type": "perforanti"
+      },
+      "properties": [],
+      "mastery": "Prosciugamento",
+      "weight": "2 kg",
+      "cost": "15 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "mazza-frusto",
+      "name": "Mazza frusto",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d8",
+        "type": "contundenti"
+      },
+      "properties": [],
+      "mastery": "Prosciugamento",
+      "weight": "1 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "picca",
+      "name": "Picca",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d10",
+        "type": "perforanti"
+      },
+      "properties": [
+        "due mani",
+        "pesante",
+        "portata"
+      ],
+      "mastery": "Spinta",
+      "weight": "9 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "scimitarra",
+      "name": "Scimitarra",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d6",
+        "type": "taglienti"
+      },
+      "properties": [
+        "accurata",
+        "leggera"
+      ],
+      "mastery": "Graffio",
+      "weight": "1.5 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "spada-corta",
+      "name": "Spada corta",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d6",
+        "type": "perforanti"
+      },
+      "properties": [
+        "accurata",
+        "leggera"
+      ],
+      "mastery": "Vessazione",
+      "weight": "1 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "spada-lunga",
+      "name": "Spada lunga",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d8",
+        "type": "taglienti"
+      },
+      "properties": [
+        "versatile 1d10"
+      ],
+      "mastery": "Prosciugamento",
+      "weight": "1.5 kg",
+      "cost": "15 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "spadone",
+      "name": "Spadone",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "2d6",
+        "type": "taglienti"
+      },
+      "properties": [
+        "due mani",
+        "pesante"
+      ],
+      "mastery": "Colpo di striscio",
+      "weight": "3 kg",
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "stocco",
+      "name": "Stocco",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d8",
+        "type": "perforanti"
+      },
+      "properties": [
+        "accurata"
+      ],
+      "mastery": "Vessazione",
+      "weight": "1 kg",
+      "cost": "25 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "tridente",
+      "name": "Tridente",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d8",
+        "type": "perforanti"
+      },
+      "properties": [
+        "lancio 6/18",
+        "versatile 1d10"
+      ],
+      "mastery": "Rovesciamento",
+      "weight": "2 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "piccone-da-guerra",
+      "name": "Piccone da guerra",
+      "proficiency": "da guerra",
+      "kind": "mischia",
+      "damage": {
+        "dice": "1d8",
+        "type": "perforanti"
+      },
+      "properties": [
+        "versatile 1d10"
+      ],
+      "mastery": "Prosciugamento",
+      "weight": "1 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "arco-lungo",
+      "name": "Arco lungo",
+      "proficiency": "da guerra",
+      "kind": "distanza",
+      "damage": {
+        "dice": "1d8",
+        "type": "perforanti"
+      },
+      "properties": [
+        "due mani",
+        "munizioni 45/180 freccia",
+        "pesante"
+      ],
+      "mastery": "Lentezza",
+      "weight": "1 kg",
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "balestra-a-mano",
+      "name": "Balestra a mano",
+      "proficiency": "da guerra",
+      "kind": "distanza",
+      "damage": {
+        "dice": "1d6",
+        "type": "perforanti"
+      },
+      "properties": [
+        "leggera",
+        "munizioni 9/36 quadrello",
+        "ricarica"
+      ],
+      "mastery": "Vessazione",
+      "weight": "1.5 kg",
+      "cost": "75 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "balestra-pesante",
+      "name": "Balestra pesante",
+      "proficiency": "da guerra",
+      "kind": "distanza",
+      "damage": {
+        "dice": "1d10",
+        "type": "perforanti"
+      },
+      "properties": [
+        "due mani",
+        "munizioni 30/120 quadrello",
+        "pesante",
+        "ricarica"
+      ],
+      "mastery": "Spinta",
+      "weight": "9 kg",
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "cerbottana",
+      "name": "Cerbottana",
+      "proficiency": "da guerra",
+      "kind": "distanza",
+      "damage": {
+        "dice": "1",
+        "type": "perforante"
+      },
+      "properties": [
+        "munizioni 7/30 ago",
+        "ricarica"
+      ],
+      "mastery": "Vessazione",
+      "weight": "0.5 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "moschetto",
+      "name": "Moschetto",
+      "proficiency": "da guerra",
+      "kind": "distanza",
+      "damage": {
+        "dice": "1d12",
+        "type": "perforanti"
+      },
+      "properties": [
+        "due mani",
+        "munizioni 12/36 proiettile",
+        "ricarica"
+      ],
+      "mastery": "Lentezza",
+      "weight": "5 kg",
+      "cost": "500 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    },
+    {
+      "id": "pistola",
+      "name": "Pistola",
+      "proficiency": "da guerra",
+      "kind": "distanza",
+      "damage": {
+        "dice": "1d10",
+        "type": "perforanti"
+      },
+      "properties": [
+        "munizioni 9/27 proiettile",
+        "ricarica"
+      ],
+      "mastery": "Vessazione",
+      "weight": "1.5 kg",
+      "cost": "250 mo",
+      "source": {
+        "pages_pdf": [
+          218
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "count": 1,
+    "source_pages_pdf": [
+      222
+    ]
+  },
+  "items": [
+    {
+      "id": "scudo",
+      "name": "Scudo",
+      "category": "scudo",
+      "armor_class_bonus": 2,
+      "equip_action": "azione di Utilizzo",
+      "weight": "3 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          222
+        ]
+      }
+    }
+  ]
+}

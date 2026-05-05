@@ -2,21 +2,19 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
 import '../app/App.css'
-import SectionCard from '../components/general/card/SectionCard.jsx'
 import OverviewSection from '../components/character/sections/OverviewSection.jsx'
 import HpSection from '../components/character/sections/HpSection.jsx'
 import KeyStatsSection from '../components/character/sections/KeyStatsSection.jsx'
 import AbilitiesSection from '../components/character/sections/AbilitiesSection.jsx'
 import ResourcesSection from '../components/character/sections/ResourcesSection.jsx'
 import RestSection from '../components/character/sections/RestSection.jsx'
+import EquipmentSection from '../components/character/sections/EquipmentSection.jsx'
+import DetailsSection from '../components/character/sections/DetailsSection.jsx'
+import DiceTray from '../components/dice/DiceTray.jsx'
 import { fetchCharacterById } from '../services/fakeApi.js'
 import { useAuth } from '../components/authentication/AuthContext.jsx'
-
-const TABS = [
-  { id: 'overview', label: 'Panoramica' },
-  { id: 'spells', label: 'Incantesimi' },
-  { id: 'details', label: 'Dettagli' },
-]
+import PowersSection from '../components/character/sections/PowerSection.jsx'
+import { rollDice } from '../services/diceService.js'
 
 function CharacterPage() {
   const { id } = useParams()
@@ -47,16 +45,25 @@ function CharacterPage() {
   const [skills, setSkills] = useState([])
   const [savingThrows, setSavingThrows] = useState({})
   const navigate = useNavigate()
-  
+
+
+  const labelNav3 = getNavLabel(character)
+  const tabs = [
+    { id: 'overview', label: 'Panoramica' },
+    { id: 'spells', label: labelNav3 },
+    { id: 'equipment', label: 'Equip.' },
+    { id: 'details', label: 'Dettagli' },
+  ]
+
   const abilities = character
     ? [
-        { id: 'str', label: 'FOR', value: character.abilities.str },
-        { id: 'dex', label: 'DES', value: character.abilities.dex },
-        { id: 'con', label: 'COS', value: character.abilities.con },
-        { id: 'int', label: 'INT', value: character.abilities.int },
-        { id: 'wis', label: 'SAG', value: character.abilities.wis },
-        { id: 'cha', label: 'CAR', value: character.abilities.cha },
-      ]
+      { id: 'str', label: 'FOR', value: character.abilities.str },
+      { id: 'dex', label: 'DES', value: character.abilities.dex },
+      { id: 'con', label: 'COS', value: character.abilities.con },
+      { id: 'int', label: 'INT', value: character.abilities.int },
+      { id: 'wis', label: 'SAG', value: character.abilities.wis },
+      { id: 'cha', label: 'CAR', value: character.abilities.cha },
+    ]
     : []
 
   useEffect(() => {
@@ -89,6 +96,23 @@ function CharacterPage() {
     setSkills(character.skills ?? [])
     setSavingThrows(character.savingThrows ?? {})
   }, [character])
+
+  function getNavLabel(character) {
+    const hasFeatures = character?.features?.length > 0
+    const hasSpells =
+      character?.spellcasting?.slots?.length > 0 ||
+      character?.spellcasting?.spells?.length > 0
+
+    if (hasFeatures && hasSpells) {
+      return 'Capacità / Incantesimi'
+    }
+
+    if (hasSpells) {
+      return 'Incantesimi'
+    }
+
+    return 'Capacità'
+  }
 
   function toggleSkillProficiency(id) {
     setSkills((prev) =>
@@ -130,19 +154,31 @@ function CharacterPage() {
     return Number.isNaN(size) ? 8 : size
   }
 
-  function applyShortRestRoll() {
+  function applyShortRestRoll(rollResult = null) {
     if (hitDice.current <= 0) return
 
-    const diceToSpend = Math.max(1, Math.min(shortRestDice, hitDice.current))
+    const diceToSpend = rollResult
+      ? Math.max(1, Math.min(rollResult.count, hitDice.current))
+      : Math.max(1, Math.min(shortRestDice, hitDice.current))
     const dieSize = getDieSize(hitDice.type)
 
     let total = 0
-    for (let i = 0; i < diceToSpend; i++) {
-      const roll = Math.floor(Math.random() * dieSize) + 1
-      total += Math.max(0, roll + conMod)
+
+    if (rollResult) {
+      total = rollResult.total
+    } else {
+      total = rollDice({
+        sides: dieSize,
+        count: diceToSpend,
+        modifier: conMod,
+        modifierMode: 'each',
+        minimumPerRoll: 0,
+      }).total
     }
 
-    setRestResult(`Recuperati +${total} PF (${diceToSpend}d${dieSize} + ${conMod} per dado)`)
+    const rollsLabel = rollResult ? `: ${rollResult.rolls.join(', ')}` : ''
+
+    setRestResult(`Recuperati +${total} PF (${diceToSpend}d${dieSize}${rollsLabel} + ${conMod} per dado)`)
 
     setHpCurrent((prev) => Math.min(hpMax, prev + total))
     setHitDice((prev) => ({ ...prev, current: prev.current - diceToSpend }))
@@ -187,13 +223,13 @@ function CharacterPage() {
     return (
       <div className="app">
         <header className="topbar">
-        <button className="icon-btn" aria-label="Torna alle schede" onClick={() => navigate('/schede')}>
+          <button className="icon-btn" aria-label="Torna alle schede" onClick={() => navigate('/schede')}>
             &#8592;
-        </button>
-        <div className="topbar__title">Scheda Personaggio</div>
-        <button className="icon-btn icon-btn--text" onClick={() => { logout(); navigate('/login', { replace: true }) }}>
+          </button>
+          <div className="topbar__title">Scheda Personaggio</div>
+          <button className="icon-btn icon-btn--text" onClick={() => { logout(); navigate('/login', { replace: true }) }}>
             Esci
-        </button>
+          </button>
         </header>
         <main className="screen">
           <div className="panel_content">
@@ -260,6 +296,12 @@ function CharacterPage() {
                 >
                   Caratteristiche
                 </button>
+                <button
+                  className={`subtabs__btn ${overviewTab === 'dadi' ? 'subtabs__btn--active' : ''}`}
+                  onClick={() => setOverviewTab('dadi')}
+                >
+                  Dadi
+                </button>
               </div>
 
               {overviewTab === 'panoramica' && (
@@ -302,6 +344,7 @@ function CharacterPage() {
                     applyShortRestRoll={applyShortRestRoll}
                     applyShortRestManual={applyShortRestManual}
                     applyLongRest={applyLongRest}
+                    conMod={conMod}
                   />
                 </>
               )}
@@ -316,15 +359,26 @@ function CharacterPage() {
                   onToggleSavingThrow={toggleSavingThrow}
                 />
               )}
+
+              {overviewTab === 'dadi' && (
+                <DiceTray />
+              )}
             </>
           )}
-          {activeTab === 'spells' && <SectionCard title="Incantesimi">Contenuto Incantesimi</SectionCard>}
-          {activeTab === 'details' && <SectionCard title="Dettagli">Contenuto Dettagli</SectionCard>}
+          {activeTab === 'spells' && (
+            <PowersSection character={character} title={labelNav3} />
+          )}
+          {activeTab === 'equipment' && (
+            <EquipmentSection character={character} />
+          )}
+          {activeTab === 'details' && (
+            <DetailsSection character={character} />
+          )}
         </div>
       </main>
 
       <nav className="panel_nav">
-        {TABS.map(tab => (
+        {tabs.map(tab => (
           <button
             key={tab.id}
             className={`panel_nav__item ${activeTab === tab.id ? 'panel_nav__item--active' : ''}`}

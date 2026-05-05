@@ -1,0 +1,50 @@
+[
+  {
+    "id": "feats",
+    "name": "Talenti",
+    "file": "rules/feats/feats.json",
+    "count": 75
+  },
+  {
+    "id": "weapons",
+    "name": "Armi",
+    "file": "rules/equipment/weapons.json",
+    "count": 38
+  },
+  {
+    "id": "armors",
+    "name": "Armature",
+    "file": "rules/equipment/armors.json",
+    "count": 12
+  },
+  {
+    "id": "shields",
+    "name": "Scudi",
+    "file": "rules/equipment/shields.json",
+    "count": 1
+  },
+  {
+    "id": "tools",
+    "name": "Strumenti",
+    "file": "rules/equipment/tools.json",
+    "count": 25
+  },
+  {
+    "id": "adventuring_gear",
+    "name": "Equipaggiamento d'avventura",
+    "file": "rules/equipment/adventuring_gear.json",
+    "count": 82
+  },
+  {
+    "id": "mounts_vehicles_services",
+    "name": "Cavalcature, veicoli e servizi",
+    "file": "rules/equipment/mounts_vehicles_services.json",
+    "count": 34
+  },
+  {
+    "id": "spells",
+    "name": "Incantesimi",
+    "file": "rules/spells/dnd2024_spells_it.json",
+    "source": "copied"
+  }
+]

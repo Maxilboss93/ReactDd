@@ -1,0 +1,432 @@
+{
+  "id": "pg_002",
+  "name": "Imbrathil",
+  "level": 5,
+  "race": "Elfo dei boschi",
+  "background": "Viandante",
+  "alignment": "Neutrale",
+  "concept": "DPS a distanza con supporto leggero e compagna bestiale Misha",
+  "classes": [
+    {
+      "name": "Ranger",
+      "level": 5,
+      "subclass": "Signore delle Bestie"
+    }
+  ],
+  "combat": {
+    "hp": {
+      "current": 52,
+      "max": 52,
+      "temp": 0
+    },
+    "ac": 17,
+    "speed": 10.5,
+    "initiativeBonus": 4,
+    "hitDice": {
+      "current": 5,
+      "max": 5,
+      "type": "d10"
+    }
+  },
+  "abilities": {
+    "str": 10,
+    "dex": 18,
+    "con": 14,
+    "int": 8,
+    "wis": 14,
+    "cha": 10
+  },
+  "savingThrows": {
+    "str": true,
+    "dex": true,
+    "con": false,
+    "int": false,
+    "wis": false,
+    "cha": false
+  },
+  "skills": [
+    {
+      "id": "acrobatics",
+      "label": "Acrobazia",
+      "ability": "dex",
+      "proficient": false
+    },
+    {
+      "id": "athletics",
+      "label": "Atletica",
+      "ability": "str",
+      "proficient": true
+    },
+    {
+      "id": "sleight",
+      "label": "Rapidita di Mano",
+      "ability": "dex",
+      "proficient": false
+    },
+    {
+      "id": "stealth",
+      "label": "Furtivita",
+      "ability": "dex",
+      "proficient": true
+    },
+    {
+      "id": "arcana",
+      "label": "Arcano",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "history",
+      "label": "Storia",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "investigation",
+      "label": "Indagare",
+      "ability": "int",
+      "proficient": true,
+      "bonusOverride": 1
+    },
+    {
+      "id": "nature",
+      "label": "Natura",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "religion",
+      "label": "Religione",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "animal",
+      "label": "Addestrare Animali",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "insight",
+      "label": "Intuizione",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "medicine",
+      "label": "Medicina",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "perception",
+      "label": "Percezione",
+      "ability": "wis",
+      "proficient": true
+    },
+    {
+      "id": "survival",
+      "label": "Sopravvivenza",
+      "ability": "wis",
+      "proficient": true
+    },
+    {
+      "id": "deception",
+      "label": "Inganno",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "intimidation",
+      "label": "Intimidire",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "performance",
+      "label": "Intrattenere",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "persuasion",
+      "label": "Persuasione",
+      "ability": "cha",
+      "proficient": false
+    }
+  ],
+  "resources": [
+    {
+      "id": "favored_enemy",
+      "label": "Nemico Prescelto",
+      "current": 3,
+      "max": 3,
+      "resetOn": "long_rest",
+      "category": "class"
+    }
+  ],
+  "spellcasting": {
+    "ability": "wis",
+    "spellSaveDc": 13,
+    "spellAttackBonus": 5,
+    "preparedCount": 6,
+    "slots": [
+      {
+        "id": "ranger_slot_1",
+        "level": 1,
+        "label": "Slot livello 1",
+        "current": 4,
+        "max": 4,
+        "resetOn": "long_rest"
+      },
+      {
+        "id": "ranger_slot_2",
+        "level": 2,
+        "label": "Slot livello 2",
+        "current": 2,
+        "max": 2,
+        "resetOn": "long_rest"
+      }
+    ],
+    "spells": [
+      {
+        "id": "marchio-del-cacciatore",
+        "name": "Marchio del Cacciatore",
+        "level": 1,
+        "school": "Divinazione",
+        "concentration": true,
+        "prepared": true,
+        "alwaysPrepared": true
+      },
+      {
+        "id": "bacche-benefiche",
+        "name": "Bacche Benefiche",
+        "level": 1,
+        "school": "Evocazione",
+        "concentration": false,
+        "prepared": true
+      },
+      {
+        "id": "cura-ferite",
+        "name": "Cura Ferite",
+        "level": 1,
+        "school": "Abiurazione",
+        "concentration": false,
+        "prepared": true
+      },
+      {
+        "id": "passo-velato",
+        "name": "Passo Velato",
+        "level": 2,
+        "school": "Evocazione",
+        "concentration": false,
+        "prepared": true,
+        "optional": true
+      },
+      {
+        "id": "passare-senza-tracce",
+        "name": "Passare Senza Tracce",
+        "level": 2,
+        "school": "Abiurazione",
+        "concentration": true,
+        "prepared": true
+      },
+      {
+        "id": "colpo-di-zefiro",
+        "name": "Colpo di Zefiro",
+        "level": 1,
+        "school": "Trasmutazione",
+        "concentration": true,
+        "prepared": true,
+        "catalogMissing": true,
+        "notes": "Presente nelle fonti locali, ma non trovato nel catalogo incantesimi 2024 caricato."
+      }
+    ]
+  },
+  "features": [
+    {
+      "id": "ranger_spellcasting",
+      "label": "Incantesimi",
+      "level": 1,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "spellcasting",
+      "summary": "Incantesimi da ranger con Saggezza."
+    },
+    {
+      "id": "favored_enemy",
+      "label": "Nemico Prescelto",
+      "level": 1,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "resource",
+      "resourceId": "favored_enemy",
+      "summary": "Marchio del Cacciatore come fulcro dei danni."
+    },
+    {
+      "id": "weapon_mastery",
+      "label": "Padronanza d'armi",
+      "level": 1,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "combat",
+      "summary": "Padronanza su armi scelte, con focus sull'arco lungo."
+    },
+    {
+      "id": "deft_explorer",
+      "label": "Esploratore Esperto",
+      "level": 2,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "utility",
+      "summary": "Viaggi, competenze e presenza da esploratore del gruppo."
+    },
+    {
+      "id": "archery_style",
+      "label": "Stile di Combattimento: Tiro",
+      "level": 2,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "combat",
+      "summary": "+2 ai tiri per colpire con l'arco lungo, gia contato nel bonus +9."
+    },
+    {
+      "id": "primal_companion",
+      "label": "Compagno Primordiale",
+      "level": 3,
+      "source": "Signore delle Bestie",
+      "category": "subclass",
+      "kind": "companion",
+      "summary": "Misha, bestia della terra ruolata come orso, agisce nel turno di Imbrathil."
+    },
+    {
+      "id": "extra_attack",
+      "label": "Attacco Extra",
+      "level": 5,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "combat",
+      "summary": "Due attacchi con arco lungo usando l'azione Attacco."
+    },
+    {
+      "id": "second_level_spells",
+      "label": "Incantesimi di 2 livello",
+      "level": 5,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "spellcasting",
+      "summary": "Sblocca slot di 2 livello e magia tattica come Passare senza Tracce."
+    }
+  ],
+  "actions": [
+    {
+      "id": "longbow",
+      "name": "Arco Lungo",
+      "type": "attack",
+      "toHit": 9,
+      "damage": "1d8+4",
+      "notes": "Con Marchio del Cacciatore aggiunge 1d6. Attacco Extra: 2 attacchi."
+    }
+  ],
+  "companions": [
+    {
+      "id": "misha",
+      "name": "Misha",
+      "kind": "Bestia della Terra",
+      "flavor": "Orso",
+      "ac": 15,
+      "hp": {
+        "current": 30,
+        "max": 30
+      },
+      "speed": 12,
+      "attack": {
+        "name": "Colpo della Bestia",
+        "toHit": 5,
+        "damage": "1d8+5"
+      },
+      "summary": "Tank leggero: protegge caster e ranger, blocca nemici e attacca tramite bonus action."
+    }
+  ],
+  "notes": "Fonti locali: Imbrathil_Level5_con_Misha.pdf e ranger_guida.txt.",
+  "equipment": {
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0
+    },
+    "weapons": [
+      {
+        "id": "longbow",
+        "name": "Arco lungo",
+        "quantity": 1,
+        "description": "Arma principale. 1d8 perforanti.",
+        "notes": "Tiro per colpire +9 già calcolato con Destrezza, competenza e Stile Tiro."
+      },
+      {
+        "id": "arrows",
+        "name": "Frecce",
+        "quantity": 20,
+        "description": "Munizioni per arco lungo.",
+        "recoverable": true
+      },
+      {
+        "id": "shortswords",
+        "name": "Spade corte",
+        "quantity": 2,
+        "description": "Opzione da mischia indicata dalla guida.",
+        "notes": "La guida ammette anche 2 pugnali come alternativa."
+      }
+    ],
+    "armor": [
+      {
+        "id": "studded_leather",
+        "name": "Armatura di cuoio borchiato",
+        "quantity": 1,
+        "description": "Base CA 12; la scheda calcola CA 17 con Destrezza e bonus elfico indicato dalla fonte."
+      }
+    ],
+    "tools": [],
+    "adventuringGear": [
+      {
+        "id": "wanderer_kit",
+        "name": "Kit da viandante",
+        "quantity": 1,
+        "description": "Equipaggiamento base indicato nella guida ranger."
+      }
+    ],
+    "magicItems": [],
+    "consumables": [],
+    "storyItems": [
+      {
+        "id": "misha_bond",
+        "name": "Legame con Misha",
+        "quantity": 1,
+        "description": "Compagna bestiale ruolata come orso; gestita anche nel blocco companions."
+      }
+    ],
+    "notes": "Fonti: Imbrathil_Level5_con_Misha.pdf e ranger_guida.txt."
+  },
+  "details": {
+    "personalityTraits": [
+      "Ranger da retrovia: mobile, prudente, sempre in riposizionamento.",
+      "Combatte insieme a Misha per creare distanza e proteggere il gruppo."
+    ],
+    "ideals": [
+      "Sopravvivenza del party prima dell'eroismo individuale.",
+      "Preparazione, posizione e controllo del campo."
+    ],
+    "bonds": [
+      "Misha, compagna bestiale ruolata come orso.",
+      "Legame da viandante con il territorio e le piste selvagge."
+    ],
+    "flaws": [
+      "Non deve restare in mischia.",
+      "Dipende dal buon uso della bonus action tra Marchio del Cacciatore e comando a Misha."
+    ],
+    "backstoryShort": "Imbrathil è un ranger elfo dei boschi di livello 5, specializzato nel combattimento a distanza e affiancato da Misha, bestia della terra ruolata come orso.",
+    "campaignNotes": []
+  }
+}

@@ -1,0 +1,2192 @@
+{
+  "meta": {
+    "count": 75,
+    "source_pages_pdf": [
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214
+    ]
+  },
+  "items": [
+    {
+      "id": "abile",
+      "name": "Abile",
+      "category": "Origini",
+      "repeatable": true,
+      "prerequisites": [],
+      "tags": [
+        "competenza",
+        "strumenti"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Ottiene tre competenze tra abilita e strumenti.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          203
+        ]
+      }
+    },
+    {
+      "id": "aggressore-selvaggio",
+      "name": "Aggressore selvaggio",
+      "category": "Origini",
+      "repeatable": false,
+      "prerequisites": [],
+      "tags": [
+        "armi",
+        "danni"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora una volta per turno l'affidabilita dei danni con arma.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          203
+        ]
+      }
+    },
+    {
+      "id": "allerta",
+      "name": "Allerta",
+      "category": "Origini",
+      "repeatable": false,
+      "prerequisites": [],
+      "tags": [
+        "iniziativa"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora iniziativa e scambio tattico con un alleato.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          203
+        ]
+      }
+    },
+    {
+      "id": "fortunato",
+      "name": "Fortunato",
+      "category": "Origini",
+      "repeatable": false,
+      "prerequisites": [],
+      "tags": [
+        "risorsa",
+        "d20"
+      ],
+      "choices": [],
+      "effects": [
+        {
+          "type": "resource",
+          "id": "luck_points",
+          "scales_with": "proficiency_bonus",
+          "resetOn": "long_rest"
+        }
+      ],
+      "summary": "Aggiunge punti fortuna spendibili su prove con d20 e attacchi contro il personaggio.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          204
+        ]
+      }
+    },
+    {
+      "id": "guaritore",
+      "name": "Guaritore",
+      "category": "Origini",
+      "repeatable": false,
+      "prerequisites": [],
+      "tags": [
+        "cura",
+        "dadi_vita"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora l'uso della borsa del guaritore e alcune cure.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          204
+        ]
+      }
+    },
+    {
+      "id": "iniziato-alla-magia",
+      "name": "Iniziato alla magia",
+      "category": "Origini",
+      "repeatable": true,
+      "prerequisites": [],
+      "tags": [
+        "magia",
+        "incantesimi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Concede due trucchetti e un incantesimo di 1 livello da una lista scelta.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          204
+        ]
+      }
+    },
+    {
+      "id": "lavoro-manuale",
+      "name": "Lavoro manuale",
+      "category": "Origini",
+      "repeatable": false,
+      "prerequisites": [],
+      "tags": [
+        "strumenti",
+        "crafting"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Concede strumenti da artigiano, sconto e piccole fabbricazioni.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          204
+        ]
+      }
+    },
+    {
+      "id": "lottatore-da-taverna",
+      "name": "Lottatore da taverna",
+      "category": "Origini",
+      "repeatable": false,
+      "prerequisites": [],
+      "tags": [
+        "colpo_senz_armi",
+        "improvvisate"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora colpi senz'armi, armi improvvisate e spinte.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          205
+        ]
+      }
+    },
+    {
+      "id": "musicista",
+      "name": "Musicista",
+      "category": "Origini",
+      "repeatable": false,
+      "prerequisites": [],
+      "tags": [
+        "strumenti",
+        "ispirazione"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Concede strumenti musicali e Ispirazione eroica dopo riposi.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          205
+        ]
+      }
+    },
+    {
+      "id": "robusto",
+      "name": "Robusto",
+      "category": "Origini",
+      "repeatable": false,
+      "prerequisites": [],
+      "tags": [
+        "pf"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Aumenta i punti ferita massimi e continua a scalarli con i livelli.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          205
+        ]
+      }
+    },
+    {
+      "id": "abilita-impeccabile",
+      "name": "Abilita impeccabile",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "competenza",
+        "maestria",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Aumenta una caratteristica, aggiunge una competenza e una maestria.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          205
+        ]
+      }
+    },
+    {
+      "id": "adepto-elementale",
+      "name": "Adepto elementale",
+      "category": "Generale",
+      "repeatable": true,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "feature_any",
+          "ids": [
+            "incantesimi",
+            "magia_del_patto"
+          ]
+        }
+      ],
+      "tags": [
+        "magia",
+        "danno_elementale",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Potenzia un tipo di danno elementale per gli incantesimi.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          205
+        ]
+      }
+    },
+    {
+      "id": "appostato",
+      "name": "Appostato",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "ability",
+          "ability": "dex",
+          "min": 13
+        }
+      ],
+      "tags": [
+        "furtivita",
+        "vista_cieca",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora furtivita in combattimento e concede vista cieca breve.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          205
+        ]
+      }
+    },
+    {
+      "id": "atleta",
+      "name": "Atleta",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "ability_any",
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "min": 13
+        }
+      ],
+      "tags": [
+        "movimento",
+        "scalata",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Aumenta mobilita fisica, scalata e recupero da prono.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          205
+        ]
+      }
+    },
+    {
+      "id": "attore",
+      "name": "Attore",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "ability",
+          "ability": "cha",
+          "min": 13
+        }
+      ],
+      "tags": [
+        "sociale",
+        "inganno",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora impersonificazione e imitazione.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          205,
+          206
+        ]
+      }
+    },
+    {
+      "id": "aumento-dei-punteggi-di-caratteristica",
+      "name": "Aumento dei Punteggi di Caratteristica",
+      "category": "Generale",
+      "repeatable": true,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "asi"
+      ],
+      "choices": [
+        {
+          "type": "ability_score_increase",
+          "modes": [
+            {
+              "count": 1,
+              "amount": 2
+            },
+            {
+              "count": 2,
+              "amount": 1
+            }
+          ],
+          "max": 20
+        }
+      ],
+      "effects": [],
+      "summary": "Aumenta una caratteristica di 2 o due caratteristiche di 1, massimo 20.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          206
+        ]
+      }
+    },
+    {
+      "id": "bisturi-da-battaglia",
+      "name": "Bisturi da battaglia",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "armi",
+        "taglienti",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Specializzazione sui danni taglienti e controllo del bersaglio.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          206
+        ]
+      }
+    },
+    {
+      "id": "carica",
+      "name": "Carica",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "ability_any",
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "min": 13
+        }
+      ],
+      "tags": [
+        "movimento",
+        "mischia",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Potenzia scatto e impatto dopo movimento in linea retta.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          206
+        ]
+      }
+    },
+    {
+      "id": "cecchino-magico",
+      "name": "Cecchino magico",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "feature_any",
+          "ids": [
+            "incantesimi",
+            "magia_del_patto"
+          ]
+        }
+      ],
+      "tags": [
+        "magia",
+        "gittata",
+        "copertura",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora tiri per colpire con incantesimi, copertura e distanza.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          206
+        ]
+      }
+    },
+    {
+      "id": "combattente-a-due-armi",
+      "name": "Combattente a due armi",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "ability_any",
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "min": 13
+        }
+      ],
+      "tags": [
+        "armi",
+        "due_armi",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora il combattimento con due armi leggere e l'estrazione rapida.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          206
+        ]
+      }
+    },
+    {
+      "id": "combattente-in-sella",
+      "name": "Combattente in sella",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "cavalcatura",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora efficacia e difese mentre si combatte in sella.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          206
+        ]
+      }
+    },
+    {
+      "id": "competenza-nelle-armi-da-guerra",
+      "name": "Competenza nelle armi da guerra",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "armi",
+        "competenza"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Concede o amplia competenze con armi da guerra.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          202
+        ]
+      }
+    },
+    {
+      "id": "condottiero-ispiratore",
+      "name": "Condottiero ispiratore",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "ability_any",
+          "abilities": [
+            "wis",
+            "cha"
+          ],
+          "min": 13
+        }
+      ],
+      "tags": [
+        "supporto",
+        "pf_temporanei",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Ispira il gruppo dopo riposi e migliora Saggezza o Carisma.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          207
+        ]
+      }
+    },
+    {
+      "id": "contaminazione-fatata",
+      "name": "Contaminazione fatata",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "magia",
+        "fey",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Talento magico legato alla Selva Fatata.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          202
+        ]
+      }
+    },
+    {
+      "id": "contaminazione-oscura",
+      "name": "Contaminazione oscura",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "magia",
+        "ombra",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Talento magico legato a ombre e influenza occulta.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          202
+        ]
+      }
+    },
+    {
+      "id": "corazze-leggere",
+      "name": "Corazze leggere",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "armature",
+        "competenza",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora accesso o uso delle armature leggere.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          202
+        ]
+      }
+    },
+    {
+      "id": "corazze-medie",
+      "name": "Corazze medie",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "armature",
+        "competenza",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora accesso o uso delle armature medie.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          202
+        ]
+      }
+    },
+    {
+      "id": "corazze-pesanti",
+      "name": "Corazze pesanti",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "armature",
+        "competenza",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora accesso o uso delle armature pesanti.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          202
+        ]
+      }
+    },
+    {
+      "id": "cuoco",
+      "name": "Cuoco",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "strumenti",
+        "cura",
+        "riposo",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Usa utensili da cuoco per benefici durante il riposo.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          208
+        ]
+      }
+    },
+    {
+      "id": "duellante-difensivo",
+      "name": "Duellante difensivo",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "reazione",
+        "difesa",
+        "armi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Opzione difensiva reattiva in mischia.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          203
+        ]
+      }
+    },
+    {
+      "id": "esperto-di-balestre",
+      "name": "Esperto di balestre",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "balestre",
+        "armi",
+        "distanza"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora uso tattico delle balestre.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          203
+        ]
+      }
+    },
+    {
+      "id": "incantatore-da-guerra",
+      "name": "Incantatore da guerra",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "feature_any",
+          "ids": [
+            "incantesimi",
+            "magia_del_patto"
+          ]
+        }
+      ],
+      "tags": [
+        "concentrazione",
+        "magia",
+        "reazione"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora concentrazione e uso di magia in combattimento.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          208
+        ]
+      }
+    },
+    {
+      "id": "incantatore-rituale",
+      "name": "Incantatore rituale",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "feature_any",
+          "ids": [
+            "incantesimi",
+            "magia_del_patto"
+          ]
+        }
+      ],
+      "tags": [
+        "rituali",
+        "magia"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Apre accesso a incantesimi rituali e utilita magica.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          203
+        ]
+      }
+    },
+    {
+      "id": "lottatore",
+      "name": "Lottatore",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "lotta",
+        "colpo_senz_armi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora lotta, presa e controllo fisico.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          203
+        ]
+      }
+    },
+    {
+      "id": "maestria-dei-veleni",
+      "name": "Maestria dei veleni",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "veleni",
+        "crafting",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora uso, creazione e applicazione dei veleni.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          209
+        ]
+      }
+    },
+    {
+      "id": "maestro-darmi-possenti",
+      "name": "Maestro d'armi possenti",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "ability",
+          "ability": "str",
+          "min": 13
+        }
+      ],
+      "tags": [
+        "armi_pesanti",
+        "danni",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Specializzazione con armi pesanti e colpi potenti.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          209
+        ]
+      }
+    },
+    {
+      "id": "maestro-darmi",
+      "name": "Maestro d'armi",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "armi",
+        "padronanza",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Amplia competenze e padronanze con le armi.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          203
+        ]
+      }
+    },
+    {
+      "id": "maestro-degli-scudi",
+      "name": "Maestro degli scudi",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "scudi",
+        "difesa",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora uso attivo e difensivo dello scudo.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          203
+        ]
+      }
+    },
+    {
+      "id": "maestro-delle-armature-medie",
+      "name": "Maestro delle armature medie",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "proficiency",
+          "id": "armature_medie"
+        }
+      ],
+      "tags": [
+        "armature_medie",
+        "furtivita",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora mobilita e furtivita in armatura media.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          210
+        ]
+      }
+    },
+    {
+      "id": "maestro-delle-armature-pesanti",
+      "name": "Maestro delle armature pesanti",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "proficiency",
+          "id": "armature_pesanti"
+        }
+      ],
+      "tags": [
+        "armature_pesanti",
+        "difesa",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora resistenza mentre si indossano armature pesanti.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          210
+        ]
+      }
+    },
+    {
+      "id": "maestro-delle-armi-su-asta",
+      "name": "Maestro delle armi su asta",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "armi_su_asta",
+        "reazione",
+        "bonus_action",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Aggiunge attacchi e reazioni con armi ad asta o portata.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          210
+        ]
+      }
+    },
+    {
+      "id": "martello-vivente",
+      "name": "Martello vivente",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "contundenti",
+        "spinta",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Specializzazione su danni contundenti e spinte.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          210
+        ]
+      }
+    },
+    {
+      "id": "mente-acuta",
+      "name": "Mente acuta",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "ability",
+          "ability": "int",
+          "min": 13
+        }
+      ],
+      "tags": [
+        "studio",
+        "conoscenza",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora Intelligenza, conoscenze e azione Studio.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          210
+        ]
+      }
+    },
+    {
+      "id": "osservatore",
+      "name": "Osservatore",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "ability_any",
+          "abilities": [
+            "int",
+            "wis"
+          ],
+          "min": 13
+        }
+      ],
+      "tags": [
+        "percezione",
+        "ricerca",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora osservazione, ricerca e competenze percettive.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          210
+        ]
+      }
+    },
+    {
+      "id": "rapidita",
+      "name": "Rapidita",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "ability_any",
+          "abilities": [
+            "dex",
+            "con"
+          ],
+          "min": 13
+        }
+      ],
+      "tags": [
+        "movimento",
+        "difesa",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Aumenta velocita e facilita movimento tattico.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          210,
+          211
+        ]
+      }
+    },
+    {
+      "id": "resiliente",
+      "name": "Resiliente",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "tiro_salvezza",
+        "asi"
+      ],
+      "choices": [
+        {
+          "type": "ability_without_save_proficiency",
+          "increase": 1
+        }
+      ],
+      "effects": [],
+      "summary": "Aumenta una caratteristica e concede competenza nel relativo tiro salvezza.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          211
+        ]
+      }
+    },
+    {
+      "id": "sentinella",
+      "name": "Sentinella",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "ability_any",
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "min": 13
+        }
+      ],
+      "tags": [
+        "reazione",
+        "opportunita",
+        "controllo",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Blocca movimento e punisce chi ignora il personaggio.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          211
+        ]
+      }
+    },
+    {
+      "id": "sterminatore-di-maghi",
+      "name": "Sterminatore di maghi",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "anti_magia",
+        "concentrazione",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Disturba concentrazione e migliora difese mentali contro magia.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          211
+        ]
+      }
+    },
+    {
+      "id": "stile-penetrante",
+      "name": "Stile penetrante",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "perforanti",
+        "critico",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Specializzazione sui danni perforanti e critici.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          211
+        ]
+      }
+    },
+    {
+      "id": "telecinesi",
+      "name": "Telecinesi",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "magia",
+        "mano_magica",
+        "bonus_action",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Concede mano magica migliorata e spinta telecinetica.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          211
+        ]
+      }
+    },
+    {
+      "id": "telepatia",
+      "name": "Telepatia",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "telepatia",
+        "magia",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Concede comunicazione telepatica e individuazione dei pensieri.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          211,
+          212
+        ]
+      }
+    },
+    {
+      "id": "tenace",
+      "name": "Tenace",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        }
+      ],
+      "tags": [
+        "pf",
+        "dadi_vita",
+        "morte",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora sopravvivenza, tiri contro morte e uso dei Dadi Vita.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          212
+        ]
+      }
+    },
+    {
+      "id": "tiratore-scelto",
+      "name": "Tiratore scelto",
+      "category": "Generale",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 4
+        },
+        {
+          "type": "ability",
+          "ability": "dex",
+          "min": 13
+        }
+      ],
+      "tags": [
+        "armi_distanza",
+        "copertura",
+        "gittata",
+        "asi"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora attacchi a distanza con armi, copertura e gittate lunghe.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          212
+        ]
+      }
+    },
+    {
+      "id": "combattere-alla-cieca",
+      "name": "Combattere alla cieca",
+      "category": "Stile di combattimento",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "feature",
+          "id": "stile_di_combattimento"
+        }
+      ],
+      "tags": [
+        "vista_cieca"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Concede vista cieca a breve raggio.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          212
+        ]
+      }
+    },
+    {
+      "id": "combattere-con-armi-da-lancio",
+      "name": "Combattere con armi da lancio",
+      "category": "Stile di combattimento",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "feature",
+          "id": "stile_di_combattimento"
+        }
+      ],
+      "tags": [
+        "armi_da_lancio",
+        "danni"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Bonus ai danni con armi da lancio.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          212
+        ]
+      }
+    },
+    {
+      "id": "combattere-con-armi-possenti",
+      "name": "Combattere con armi possenti",
+      "category": "Stile di combattimento",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "feature",
+          "id": "stile_di_combattimento"
+        }
+      ],
+      "tags": [
+        "due_mani",
+        "danni"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Rende piu affidabili i danni con armi a due mani o versatili.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          212
+        ]
+      }
+    },
+    {
+      "id": "combattere-con-due-armi",
+      "name": "Combattere con due armi",
+      "category": "Stile di combattimento",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "feature",
+          "id": "stile_di_combattimento"
+        }
+      ],
+      "tags": [
+        "due_armi",
+        "danni"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Aggiunge modificatore ai danni dell'attacco extra con arma leggera.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          212
+        ]
+      }
+    },
+    {
+      "id": "combattere-disarmato",
+      "name": "Combattere disarmato",
+      "category": "Stile di combattimento",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "feature",
+          "id": "stile_di_combattimento"
+        }
+      ],
+      "tags": [
+        "colpo_senz_armi",
+        "lotta"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora danni senz'armi e pressione sui bersagli afferrati.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          212
+        ]
+      }
+    },
+    {
+      "id": "difesa",
+      "name": "Difesa",
+      "category": "Stile di combattimento",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "feature",
+          "id": "stile_di_combattimento"
+        }
+      ],
+      "tags": [
+        "armature",
+        "ca"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Aggiunge +1 alla CA mentre si indossa armatura.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          212
+        ]
+      }
+    },
+    {
+      "id": "duellare",
+      "name": "Duellare",
+      "category": "Stile di combattimento",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "feature",
+          "id": "stile_di_combattimento"
+        }
+      ],
+      "tags": [
+        "mischia",
+        "danni"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Bonus ai danni con arma da mischia a una mano.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          212
+        ]
+      }
+    },
+    {
+      "id": "intercettazione",
+      "name": "Intercettazione",
+      "category": "Stile di combattimento",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "feature",
+          "id": "stile_di_combattimento"
+        }
+      ],
+      "tags": [
+        "reazione",
+        "protezione"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Riduce danni subiti da una creatura vicina usando reazione.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          213
+        ]
+      }
+    },
+    {
+      "id": "protezione",
+      "name": "Protezione",
+      "category": "Stile di combattimento",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "feature",
+          "id": "stile_di_combattimento"
+        }
+      ],
+      "tags": [
+        "scudo",
+        "reazione",
+        "difesa"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Con scudo, impone svantaggio agli attacchi contro un alleato vicino.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          213
+        ]
+      }
+    },
+    {
+      "id": "tiro",
+      "name": "Tiro",
+      "category": "Stile di combattimento",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "feature",
+          "id": "stile_di_combattimento"
+        }
+      ],
+      "tags": [
+        "armi_distanza"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Aggiunge +2 ai tiri per colpire con armi a distanza.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          213
+        ]
+      }
+    },
+    {
+      "id": "dono-dellabilita",
+      "name": "Dono dell'abilita",
+      "category": "Dono epico",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 19
+        }
+      ],
+      "tags": [
+        "epico",
+        "competenze",
+        "maestria"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Dono epico orientato a competenze e maestrie.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          213
+        ]
+      }
+    },
+    {
+      "id": "dono-delle-abilita-di-combattimento",
+      "name": "Dono delle abilita di combattimento",
+      "category": "Dono epico",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 19
+        }
+      ],
+      "tags": [
+        "epico",
+        "combattimento"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Dono epico orientato all'affidabilita offensiva.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          213
+        ]
+      }
+    },
+    {
+      "id": "dono-del-fato",
+      "name": "Dono del fato",
+      "category": "Dono epico",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 19
+        }
+      ],
+      "tags": [
+        "epico",
+        "d20"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Manipola una prova con d20 con bonus o penalita.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          213
+        ]
+      }
+    },
+    {
+      "id": "dono-delloffensiva-irresistibile",
+      "name": "Dono dell'offensiva irresistibile",
+      "category": "Dono epico",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 19
+        }
+      ],
+      "tags": [
+        "epico",
+        "danni"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Ignora resistenze fisiche e aumenta l'impatto dei colpi migliori.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          213
+        ]
+      }
+    },
+    {
+      "id": "dono-del-recupero",
+      "name": "Dono del recupero",
+      "category": "Dono epico",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 19
+        }
+      ],
+      "tags": [
+        "epico",
+        "cura"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Recupero potente quando si cade a 0 PF e riserva di cura.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          213
+        ]
+      }
+    },
+    {
+      "id": "dono-della-resistenza-allenergia",
+      "name": "Dono della resistenza all'energia",
+      "category": "Dono epico",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 19
+        }
+      ],
+      "tags": [
+        "epico",
+        "resistenze"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Concede resistenze energetiche e reazione di deviazione.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          214
+        ]
+      }
+    },
+    {
+      "id": "dono-del-richiamo-degli-incantesimi",
+      "name": "Dono del richiamo degli incantesimi",
+      "category": "Dono epico",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 19
+        },
+        {
+          "type": "feature_any",
+          "ids": [
+            "incantesimi",
+            "magia_del_patto"
+          ]
+        }
+      ],
+      "tags": [
+        "epico",
+        "magia"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Permette di non consumare alcuni slot con un tiro favorevole.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          214
+        ]
+      }
+    },
+    {
+      "id": "dono-dello-spirito-notturno",
+      "name": "Dono dello spirito notturno",
+      "category": "Dono epico",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 19
+        }
+      ],
+      "tags": [
+        "epico",
+        "ombra"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Potenzia furtivita e difese in oscurita o luce fioca.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          214
+        ]
+      }
+    },
+    {
+      "id": "dono-della-tempra",
+      "name": "Dono della tempra",
+      "category": "Dono epico",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 19
+        }
+      ],
+      "tags": [
+        "epico",
+        "pf"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Aumenta molto i PF massimi e migliora le guarigioni ricevute.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          214
+        ]
+      }
+    },
+    {
+      "id": "dono-della-velocita",
+      "name": "Dono della velocita",
+      "category": "Dono epico",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 19
+        }
+      ],
+      "tags": [
+        "epico",
+        "movimento"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Migliora velocita e fuga rapida.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          214
+        ]
+      }
+    },
+    {
+      "id": "dono-del-viaggio-dimensionale",
+      "name": "Dono del viaggio dimensionale",
+      "category": "Dono epico",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 19
+        }
+      ],
+      "tags": [
+        "epico",
+        "teletrasporto"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Teletrasporto breve dopo attacco o magia.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          214
+        ]
+      }
+    },
+    {
+      "id": "dono-della-vista-pura",
+      "name": "Dono della vista pura",
+      "category": "Dono epico",
+      "repeatable": false,
+      "prerequisites": [
+        {
+          "type": "character_level",
+          "min": 19
+        }
+      ],
+      "tags": [
+        "epico",
+        "vista_pura"
+      ],
+      "choices": [],
+      "effects": [],
+      "summary": "Concede vista pura a medio raggio.",
+      "source": {
+        "manual": "Manuale del Giocatore",
+        "edition": "2024",
+        "language": "it",
+        "pages_pdf": [
+          214
+        ]
+      }
+    }
+  ]
+}

@@ -1,4 +1,6 @@
 import shisui from '../data/characters/shisui.json'
+import imbrathil from '../data/characters/imbrathil.json'
+import escanor from '../data/characters/escanor.json'
 
 const fakeUsers = [
   {
@@ -10,24 +12,10 @@ const fakeUsers = [
   },
 ]
 
-const shisuiClone = {
-  ...shisui,
-  id: 'pg_002',
-  name: 'Imbrathil',
-  race: 'Elfo dei boschi',
-  alignment: 'Neutrale',
-  classes: [
-    {
-      name: 'Ranger',
-      level: 3,
-      subclass: 'Cacciatore',
-    },
-  ],
-}
-
 const fakeCharacters = [
   { ...shisui, ownerId: 'user_demo' },
-  { ...shisuiClone, ownerId: 'user_demo' },
+  { ...imbrathil, ownerId: 'user_demo' },
+  { ...escanor, ownerId: 'user_demo' },
 ]
 
 function wait(ms) {

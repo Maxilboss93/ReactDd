@@ -1,0 +1,414 @@
+{
+  "id": "pg_003",
+  "name": "Escanor il Piccoletto",
+  "level": 1,
+  "race": "Goliath",
+  "background": "Mercante adattato a taverniere/birraio itinerante",
+  "alignment": "Neutrale Buono",
+  "concept": "Frontliner solare da portata, burst e presenza scenica",
+  "classes": [
+    {
+      "name": "Paladino",
+      "level": 1,
+      "subclass": "Giuramento di Gloria previsto al livello 3"
+    }
+  ],
+  "combat": {
+    "hp": {
+      "current": 12,
+      "max": 12,
+      "temp": 0
+    },
+    "ac": 16,
+    "speed": 10.5,
+    "initiativeBonus": -1,
+    "hitDice": {
+      "current": 1,
+      "max": 1,
+      "type": "d10"
+    }
+  },
+  "abilities": {
+    "str": 17,
+    "dex": 8,
+    "con": 14,
+    "int": 8,
+    "wis": 10,
+    "cha": 16
+  },
+  "savingThrows": {
+    "str": false,
+    "dex": false,
+    "con": false,
+    "int": false,
+    "wis": true,
+    "cha": true
+  },
+  "skills": [
+    {
+      "id": "acrobatics",
+      "label": "Acrobazia",
+      "ability": "dex",
+      "proficient": false
+    },
+    {
+      "id": "athletics",
+      "label": "Atletica",
+      "ability": "str",
+      "proficient": true
+    },
+    {
+      "id": "sleight",
+      "label": "Rapidita di Mano",
+      "ability": "dex",
+      "proficient": false
+    },
+    {
+      "id": "stealth",
+      "label": "Furtivita",
+      "ability": "dex",
+      "proficient": false,
+      "disadvantage": true
+    },
+    {
+      "id": "arcana",
+      "label": "Arcano",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "history",
+      "label": "Storia",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "investigation",
+      "label": "Indagare",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "nature",
+      "label": "Natura",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "religion",
+      "label": "Religione",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "animal",
+      "label": "Addestrare Animali",
+      "ability": "wis",
+      "proficient": true
+    },
+    {
+      "id": "insight",
+      "label": "Intuizione",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "medicine",
+      "label": "Medicina",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "perception",
+      "label": "Percezione",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "survival",
+      "label": "Sopravvivenza",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "deception",
+      "label": "Inganno",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "intimidation",
+      "label": "Intimidire",
+      "ability": "cha",
+      "proficient": true
+    },
+    {
+      "id": "performance",
+      "label": "Intrattenere",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "persuasion",
+      "label": "Persuasione",
+      "ability": "cha",
+      "proficient": true
+    }
+  ],
+  "resources": [
+    {
+      "id": "lay_on_hands",
+      "label": "Imposizione delle Mani",
+      "current": 5,
+      "max": 5,
+      "resetOn": "long_rest",
+      "category": "class"
+    },
+    {
+      "id": "burning_fire",
+      "label": "Fuoco Bruciante",
+      "current": 2,
+      "max": 2,
+      "resetOn": "long_rest",
+      "category": "species"
+    }
+  ],
+  "spellcasting": {
+    "ability": "cha",
+    "spellSaveDc": 13,
+    "spellAttackBonus": 5,
+    "preparedCount": 2,
+    "slots": [
+      {
+        "id": "paladin_slot_1",
+        "level": 1,
+        "label": "Slot livello 1",
+        "current": 2,
+        "max": 2,
+        "resetOn": "long_rest"
+      }
+    ],
+    "spells": [
+      {
+        "id": "punizione-incandescente",
+        "name": "Punizione Incandescente",
+        "level": 1,
+        "school": "Invocazione",
+        "concentration": true,
+        "prepared": true
+      },
+      {
+        "id": "duello-obbligato",
+        "name": "Duello Obbligato",
+        "level": 1,
+        "school": "Ammaliamento",
+        "concentration": true,
+        "prepared": true
+      }
+    ]
+  },
+  "features": [
+    {
+      "id": "goliath_powerful_build",
+      "label": "Costituzione robusta",
+      "level": 1,
+      "source": "Goliath",
+      "category": "species",
+      "kind": "passive",
+      "summary": "Fisico resistente e capacita di trasporto superiore."
+    },
+    {
+      "id": "burning_fire",
+      "label": "Fuoco Bruciante",
+      "level": 1,
+      "source": "Gigante del Fuoco",
+      "category": "species",
+      "kind": "resource",
+      "resourceId": "burning_fire",
+      "summary": "Aggiunge 1d10 fuoco quando colpisce e infligge danni."
+    },
+    {
+      "id": "lay_on_hands",
+      "label": "Imposizione delle Mani",
+      "level": 1,
+      "source": "Paladino",
+      "category": "class",
+      "kind": "resource",
+      "resourceId": "lay_on_hands",
+      "summary": "Riserva di 5 PF per riposo lungo, usata come azione bonus."
+    },
+    {
+      "id": "paladin_spellcasting",
+      "label": "Incantesimi",
+      "level": 1,
+      "source": "Paladino",
+      "category": "class",
+      "kind": "spellcasting",
+      "summary": "Incantesimi da paladino basati su Carisma."
+    },
+    {
+      "id": "weapon_mastery",
+      "label": "Padronanza d'armi",
+      "level": 1,
+      "source": "Paladino",
+      "category": "class",
+      "kind": "combat",
+      "summary": "Padronanza consigliata su Alabarda e Giavellotto."
+    }
+  ],
+  "actions": [
+    {
+      "id": "halberd",
+      "name": "Alabarda",
+      "type": "attack",
+      "toHit": 5,
+      "damage": "1d10+3",
+      "notes": "Pesante, portata, due mani. Padronanza: Doppio Fendente."
+    },
+    {
+      "id": "javelin",
+      "name": "Giavellotto",
+      "type": "attack",
+      "toHit": 5,
+      "damage": "1d6+3",
+      "notes": "Opzione a distanza basata su Forza."
+    }
+  ],
+  "notes": "Fonte locale: Escanor_il_Piccoletto_scheda_Lv1-3.txt.",
+  "equipment": {
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0
+    },
+    "startingBudget": {
+      "gp": 150,
+      "notes": "Opzione B del Paladino: 150 mo. Residuo dopo acquisti da confermare al tavolo."
+    },
+    "weapons": [
+      {
+        "id": "halberd",
+        "name": "Alabarda",
+        "quantity": 1,
+        "description": "Arma principale. 1d10 taglienti, pesante, portata, due mani.",
+        "notes": "Padronanza: Doppio Fendente."
+      },
+      {
+        "id": "javelins",
+        "name": "Giavellotti",
+        "quantity": 5,
+        "description": "Opzione a distanza basata su Forza.",
+        "notes": "Quantità iniziale pratica da confermare se il DM traccia i singoli giavellotti.",
+        "recoverable": true
+      }
+    ],
+    "armor": [
+      {
+        "id": "chain_mail",
+        "name": "Cotta di maglia",
+        "quantity": 1,
+        "description": "CA 16, richiede Forza 13, svantaggio a Furtività."
+      }
+    ],
+    "tools": [
+      {
+        "id": "navigators_tools",
+        "name": "Strumenti da navigatore",
+        "quantity": 1,
+        "description": "Competenza base del background Mercante."
+      },
+      {
+        "id": "brewers_supplies",
+        "name": "Scorte da birraio",
+        "quantity": 1,
+        "description": "Adattamento narrativo da taverniere/birraio itinerante.",
+        "notes": "Da confermare col DM come sostituzione o aggiunta."
+      }
+    ],
+    "adventuringGear": [
+      {
+        "id": "holy_symbol",
+        "name": "Simbolo sacro",
+        "quantity": 1
+      },
+      {
+        "id": "backpack",
+        "name": "Zaino",
+        "quantity": 1
+      },
+      {
+        "id": "bedroll",
+        "name": "Giaciglio",
+        "quantity": 1
+      },
+      {
+        "id": "waterskin",
+        "name": "Otre",
+        "quantity": 1
+      },
+      {
+        "id": "tinderbox",
+        "name": "Acciarino",
+        "quantity": 1
+      },
+      {
+        "id": "rope",
+        "name": "Corda",
+        "quantity": 1
+      },
+      {
+        "id": "traveler_clothes",
+        "name": "Abiti da viaggiatore",
+        "quantity": 1
+      }
+    ],
+    "magicItems": [],
+    "consumables": [
+      {
+        "id": "rations",
+        "name": "Razioni",
+        "quantity": 5,
+        "consumable": true
+      },
+      {
+        "id": "torches",
+        "name": "Torce",
+        "quantity": 10,
+        "consumable": true
+      }
+    ],
+    "storyItems": [],
+    "wishlist": [
+      {
+        "id": "plate_armor",
+        "name": "Armatura a piastre",
+        "description": "Obiettivo futuro di campagna: CA 18, richiede Forza 15, costosa."
+      }
+    ],
+    "notes": "Fonte: Escanor_il_Piccoletto_scheda_Lv1-3.txt."
+  },
+  "details": {
+    "personalityTraits": [
+      "Fuori dal combattimento parla con voce quasi stridula e sembra piegato dal peso della corazza.",
+      "Quando viene tirata l'iniziativa, Escanor sorge: postura, voce e presenza cambiano."
+    ],
+    "ideals": [
+      "Tornare tra i suoi come eroe amato e rispettato.",
+      "Dimostrare che il Sole Interiore vale più del giudizio della stirpe."
+    ],
+    "bonds": [
+      "La sua identità da mercante, taverniere e birraio itinerante.",
+      "Il desiderio di riscattarsi agli occhi dei Goliath."
+    ],
+    "flaws": [
+      "Iniziativa bassa.",
+      "Furtività pessima in armatura.",
+      "Tende a vivere ogni scontro come prova di gloria."
+    ],
+    "catchphrase": "Non attendo mezzogiorno. Mezzogiorno attende me.",
+    "backstoryShort": "Escanor è un Goliath considerato piccolo e inadatto dalla sua gente. Viaggia come mercante e birraio itinerante, cercando la luce che in patria nessuno vedeva in lui.",
+    "campaignNotes": []
+  }
+}

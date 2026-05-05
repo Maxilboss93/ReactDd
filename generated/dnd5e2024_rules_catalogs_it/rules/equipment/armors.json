@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "count": 12,
+    "source_pages_pdf": [
+      222
+    ]
+  },
+  "items": [
+    {
+      "id": "armatura-imbottita",
+      "name": "Armatura imbottita",
+      "category": "leggera",
+      "armor_class": "11 + mod Des",
+      "strength_requirement": null,
+      "stealth_disadvantage": true,
+      "weight": "4 kg",
+      "cost": "5 mo",
+      "source": {
+        "pages_pdf": [
+          222
+        ]
+      }
+    },
+    {
+      "id": "armatura-di-cuoio",
+      "name": "Armatura di cuoio",
+      "category": "leggera",
+      "armor_class": "11 + mod Des",
+      "strength_requirement": null,
+      "stealth_disadvantage": false,
+      "weight": "5 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          222
+        ]
+      }
+    },
+    {
+      "id": "armatura-di-cuoio-borchiato",
+      "name": "Armatura di cuoio borchiato",
+      "category": "leggera",
+      "armor_class": "12 + mod Des",
+      "strength_requirement": null,
+      "stealth_disadvantage": false,
+      "weight": "6.5 kg",
+      "cost": "45 mo",
+      "source": {
+        "pages_pdf": [
+          222
+        ]
+      }
+    },
+    {
+      "id": "armatura-di-pelle",
+      "name": "Armatura di pelle",
+      "category": "media",
+      "armor_class": "12 + mod Des max 2",
+      "strength_requirement": null,
+      "stealth_disadvantage": false,
+      "weight": "6 kg",
+      "cost": "10 mo",
+      "source": {
+        "pages_pdf": [
+          222
+        ]
+      }
+    },
+    {
+      "id": "giaco-di-maglia",
+      "name": "Giaco di maglia",
+      "category": "media",
+      "armor_class": "13 + mod Des max 2",
+      "strength_requirement": null,
+      "stealth_disadvantage": false,
+      "weight": "10 kg",
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          222
+        ]
+      }
+    },
+    {
+      "id": "corazza-a-scaglie",
+      "name": "Corazza a scaglie",
+      "category": "media",
+      "armor_class": "14 + mod Des max 2",
+      "strength_requirement": null,
+      "stealth_disadvantage": true,
+      "weight": "22.5 kg",
+      "cost": "50 mo",
+      "source": {
+        "pages_pdf": [
+          222
+        ]
+      }
+    },
+    {
+      "id": "corazza-di-piastre",
+      "name": "Corazza di piastre",
+      "category": "media",
+      "armor_class": "14 + mod Des max 2",
+      "strength_requirement": null,
+      "stealth_disadvantage": false,
+      "weight": "10 kg",
+      "cost": "400 mo",
+      "source": {
+        "pages_pdf": [
+          222
+        ]
+      }
+    },
+    {
+      "id": "mezza-armatura",
+      "name": "Mezza armatura",
+      "category": "media",
+      "armor_class": "15 + mod Des max 2",
+      "strength_requirement": null,
+      "stealth_disadvantage": true,
+      "weight": "20 kg",
+      "cost": "750 mo",
+      "source": {
+        "pages_pdf": [
+          222
+        ]
+      }
+    },
+    {
+      "id": "corazza-ad-anelli",
+      "name": "Corazza ad anelli",
+      "category": "pesante",
+      "armor_class": "14",
+      "strength_requirement": null,
+      "stealth_disadvantage": true,
+      "weight": "20 kg",
+      "cost": "30 mo",
+      "source": {
+        "pages_pdf": [
+          222
+        ]
+      }
+    },
+    {
+      "id": "cotta-di-maglia",
+      "name": "Cotta di maglia",
+      "category": "pesante",
+      "armor_class": "16",
+      "strength_requirement": "For 13",
+      "stealth_disadvantage": true,
+      "weight": "27.5 kg",
+      "cost": "75 mo",
+      "source": {
+        "pages_pdf": [
+          222
+        ]
+      }
+    },
+    {
+      "id": "corazza-a-strisce",
+      "name": "Corazza a strisce",
+      "category": "pesante",
+      "armor_class": "17",
+      "strength_requirement": "For 15",
+      "stealth_disadvantage": true,
+      "weight": "30 kg",
+      "cost": "200 mo",
+      "source": {
+        "pages_pdf": [
+          222
+        ]
+      }
+    },
+    {
+      "id": "armatura-a-piastre",
+      "name": "Armatura a piastre",
+      "category": "pesante",
+      "armor_class": "18",
+      "strength_requirement": "For 15",
+      "stealth_disadvantage": true,
+      "weight": "32.5 kg",
+      "cost": "1500 mo",
+      "source": {
+        "pages_pdf": [
+          222
+        ]
+      }
+    }
+  ]
+}

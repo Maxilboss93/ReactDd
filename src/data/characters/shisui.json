@@ -1,63 +1,546 @@
 {
   "id": "pg_001",
   "name": "Shisui",
-  "race": "Tiefling",
+  "level": 3,
+  "race": "Tiefling Infernale",
+  "background": "Viandante",
   "alignment": "Neutrale Buono",
+  "concept": "Ninja dell'Ombra, del Fuoco e della Mente",
   "classes": [
     {
       "name": "Monaco",
-      "level": 5,
+      "level": 3,
       "subclass": "Guerriero degli Elementi"
     }
   ],
   "combat": {
     "hp": {
-      "current": 23,
-      "max": 31,
+      "current": 24,
+      "max": 24,
       "temp": 0
     },
     "ac": 15,
-    "speed": 15,
-    "hitDice": { "current": 3, "max": 3, "type": "d8" }
+    "speed": 12,
+    "initiativeBonus": 3,
+    "hitDice": {
+      "current": 3,
+      "max": 3,
+      "type": "d8"
+    }
   },
   "abilities": {
-    "str": 10,
+    "str": 8,
     "dex": 16,
     "con": 14,
     "int": 8,
     "wis": 14,
-    "cha": 14
+    "cha": 13
   },
-    "savingThrows": {
+  "savingThrows": {
     "str": true,
     "dex": true,
-    "con": true,
+    "con": false,
     "int": false,
     "wis": false,
     "cha": false
   },
   "skills": [
-    { "id": "acrobatics", "label": "Acrobazia", "ability": "dex", "proficient": true },
-    { "id": "athletics", "label": "Atletica", "ability": "str", "proficient": false },
-    { "id": "sleight", "label": "Rapidita di Mano", "ability": "dex", "proficient": false },
-    { "id": "stealth", "label": "Furtivita", "ability": "dex", "proficient": true },
-    { "id": "arcana", "label": "Arcano", "ability": "int", "proficient": false },
-    { "id": "history", "label": "Storia", "ability": "int", "proficient": false },
-    { "id": "investigation", "label": "Investigare", "ability": "int", "proficient": false },
-    { "id": "nature", "label": "Natura", "ability": "int", "proficient": false },
-    { "id": "religion", "label": "Religione", "ability": "int", "proficient": false },
-    { "id": "animal", "label": "Addestrare Animali", "ability": "wis", "proficient": false },
-    { "id": "insight", "label": "Intuizione", "ability": "wis", "proficient": true },
-    { "id": "medicine", "label": "Medicina", "ability": "wis", "proficient": false },
-    { "id": "perception", "label": "Percezione", "ability": "wis", "proficient": true },
-    { "id": "survival", "label": "Sopravvivenza", "ability": "wis", "proficient": false },
-    { "id": "deception", "label": "Inganno", "ability": "cha", "proficient": false },
-    { "id": "intimidation", "label": "Intimidire", "ability": "cha", "proficient": false },
-    { "id": "performance", "label": "Intrattenere", "ability": "cha", "proficient": false },
-    { "id": "persuasion", "label": "Persuasione", "ability": "cha", "proficient": false }
+    {
+      "id": "acrobatics",
+      "label": "Acrobazia",
+      "ability": "dex",
+      "proficient": false
+    },
+    {
+      "id": "athletics",
+      "label": "Atletica",
+      "ability": "str",
+      "proficient": false
+    },
+    {
+      "id": "sleight",
+      "label": "Rapidita di Mano",
+      "ability": "dex",
+      "proficient": false
+    },
+    {
+      "id": "stealth",
+      "label": "Furtivita",
+      "ability": "dex",
+      "proficient": true
+    },
+    {
+      "id": "arcana",
+      "label": "Arcano",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "history",
+      "label": "Storia",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "investigation",
+      "label": "Investigazione",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "nature",
+      "label": "Natura",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "religion",
+      "label": "Religione",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "animal",
+      "label": "Addestrare Animali",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "insight",
+      "label": "Intuizione",
+      "ability": "wis",
+      "proficient": true
+    },
+    {
+      "id": "medicine",
+      "label": "Medicina",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "perception",
+      "label": "Percezione",
+      "ability": "wis",
+      "proficient": true
+    },
+    {
+      "id": "survival",
+      "label": "Sopravvivenza",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "deception",
+      "label": "Inganno",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "intimidation",
+      "label": "Intimidire",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "performance",
+      "label": "Intrattenere",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "persuasion",
+      "label": "Persuasione",
+      "ability": "cha",
+      "proficient": false
+    }
   ],
-  "resources": [    
-    { "id": "ki", "label": "Ki", "current": 5, "max": 5, "resetOn": "short_rest"},
-    { "id": "fortuna", "label": "Talento: Fortuna", "current": 2, "max": 2, "resetOn": "long_rest" }
-  ]
+  "resources": [
+    {
+      "id": "ki",
+      "label": "Ki",
+      "current": 3,
+      "max": 3,
+      "resetOn": "short_rest",
+      "category": "class"
+    },
+    {
+      "id": "hellish_rebuke",
+      "label": "Intimorire Infernale",
+      "current": 1,
+      "max": 1,
+      "resetOn": "long_rest",
+      "category": "species"
+    },
+    {
+      "id": "fortune",
+      "label": "Talento: Fortunato",
+      "current": 2,
+      "max": 2,
+      "resetOn": "long_rest",
+      "category": "feat"
+    }
+  ],
+  "feats": [
+    {
+      "id": "fortunato",
+      "name": "Fortunato",
+      "source": "Background",
+      "level": 1
+    }
+  ],
+  "spellcasting": {
+    "ability": "cha",
+    "spellSaveDc": 11,
+    "spellAttackBonus": 3,
+    "preparedCount": 2,
+    "slots": [],
+    "spells": [
+      {
+        "id": "dardo-di-fuoco",
+        "name": "Dardo di Fuoco",
+        "level": 0,
+        "school": "Invocazione",
+        "source": "Tiefling",
+        "concentration": false,
+        "prepared": true
+      },
+      {
+        "id": "intimorire-infernale",
+        "name": "Intimorire Infernale",
+        "level": 1,
+        "school": "Invocazione",
+        "source": "Tiefling",
+        "concentration": false,
+        "prepared": true
+      },
+      {
+        "id": "elementalismo",
+        "name": "Elementalismo",
+        "level": 0,
+        "school": "Trasmutazione",
+        "source": "Guerriero degli Elementi",
+        "concentration": false,
+        "prepared": true
+      }
+    ]
+  },
+  "features": [
+    {
+      "id": "martial_arts",
+      "label": "Arti Marziali",
+      "level": 1,
+      "source": "Monaco",
+      "category": "class",
+      "kind": "combat",
+      "summary": "Usa Destrezza con colpi senz'armi e armi da monaco; colpo senz'armi come azione bonus."
+    },
+    {
+      "id": "unarmored_defense",
+      "label": "Difesa senza armatura",
+      "level": 1,
+      "source": "Monaco",
+      "category": "class",
+      "kind": "passive",
+      "summary": "CA basata su Destrezza e Saggezza quando non usa armatura."
+    },
+    {
+      "id": "monk_focus",
+      "label": "Concentrazione da monaco",
+      "level": 2,
+      "source": "Monaco",
+      "category": "class",
+      "kind": "resource",
+      "resourceId": "ki",
+      "summary": "Alimenta Raffica di colpi, Passo del vento, Difesa paziente e tecniche speciali."
+    },
+    {
+      "id": "extraordinary_metabolism",
+      "label": "Metabolismo Straordinario",
+      "level": 2,
+      "source": "Monaco",
+      "category": "class",
+      "kind": "rest",
+      "resetOn": "long_rest",
+      "summary": "Recupero speciale legato all'iniziativa, una volta per riposo lungo."
+    },
+    {
+      "id": "unarmored_movement",
+      "label": "Movimento senza armatura",
+      "level": 2,
+      "source": "Monaco",
+      "category": "class",
+      "kind": "passive",
+      "summary": "Velocita aumentata, coerente con lo stile ninja mobile."
+    },
+    {
+      "id": "deflect_attacks",
+      "label": "Deviare Attacco",
+      "level": 3,
+      "source": "Monaco",
+      "category": "class",
+      "kind": "reaction",
+      "summary": "Riduce danni fisici subiti usando la reazione."
+    },
+    {
+      "id": "elementalism",
+      "label": "Manipolare gli elementi",
+      "level": 3,
+      "source": "Guerriero degli Elementi",
+      "category": "subclass",
+      "kind": "spellcasting",
+      "summary": "Tecnica elementale minore, utile per il tema fuoco/ombra."
+    },
+    {
+      "id": "elemental_attunement",
+      "label": "Sintonia Elementale",
+      "level": 3,
+      "source": "Guerriero degli Elementi",
+      "category": "subclass",
+      "kind": "resource",
+      "resourceId": "ki",
+      "summary": "Spende Ki per infondere energia elementale nei colpi."
+    }
+  ],
+  "powers": [
+    {
+      "id": "monk_martial_arts"
+    },
+    {
+      "id": "monk_bonus_unarmed_strike"
+    },
+    {
+      "id": "monk_unarmored_defense"
+    },
+    {
+      "id": "monk_focus"
+    },
+    {
+      "id": "monk_patient_defense"
+    },
+    {
+      "id": "monk_step_of_the_wind"
+    },
+    {
+      "id": "monk_flurry_of_blows"
+    },
+    {
+      "id": "monk_uncanny_metabolism"
+    },
+    {
+      "id": "monk_unarmored_movement"
+    },
+    {
+      "id": "monk_deflect_attacks"
+    },
+    {
+      "id": "monk_elements_elementalism"
+    },
+    {
+      "id": "monk_elements_elemental_attunement"
+    }
+  ],
+  "progressionPlan": {
+    "label": "Build futura prevista",
+    "targetLevel": 8,
+    "targetClasses": [
+      {
+        "name": "Monaco",
+        "level": 5,
+        "subclass": "Guerriero degli Elementi"
+      },
+      {
+        "name": "Stregone",
+        "level": 3,
+        "subclass": "Aberrante Psionico"
+      }
+    ],
+    "milestones": [
+      {
+        "characterLevel": 4,
+        "class": "Monaco",
+        "feature": "Aumento caratteristica o talento"
+      },
+      {
+        "characterLevel": 5,
+        "class": "Monaco",
+        "feature": "Attacco Extra, Colpo Stordente, Oscurita tiefling"
+      },
+      {
+        "characterLevel": 6,
+        "class": "Stregone",
+        "feature": "Primo livello da Stregone e trucchetti psionici"
+      },
+      {
+        "characterLevel": 8,
+        "class": "Stregone",
+        "feature": "Origine Aberrante Psionica e incantesimi di controllo mentale"
+      }
+    ],
+    "futureResources": [
+      {
+        "id": "sorcery_points",
+        "label": "Punti Stregoneria",
+        "max": 3,
+        "resetOn": "long_rest"
+      },
+      {
+        "id": "innate_sorcery",
+        "label": "Stregoneria Innata",
+        "max": 2,
+        "resetOn": "long_rest"
+      },
+      {
+        "id": "darkness",
+        "label": "Oscurita",
+        "max": 1,
+        "resetOn": "long_rest"
+      }
+    ],
+    "futureSpells": [
+      "Scheggia della Mente",
+      "Scudo",
+      "Globo Cromatico",
+      "Raggio di Infermita",
+      "Allucinazione di Forza",
+      "Sussurri Dissonanti"
+    ]
+  },
+  "notes": "Stato attuale: Shisui e giocato in campagna al livello 3. La multiclass Monaco 5 / Stregone 3 e mantenuta come piano futuro per progettare la UX.",
+  "equipment": {
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 16,
+      "pp": 0
+    },
+    "weapons": [
+      {
+        "id": "shortsword",
+        "name": "Spada corta",
+        "quantity": 1,
+        "description": "Arma da monaco usata con Destrezza.",
+        "notes": "Fonte: Scheda Shisui 2024."
+      },
+      {
+        "id": "shuriken",
+        "name": "Shuriken",
+        "quantity": 10,
+        "description": "Reskin dei dardi per lo stile ninja.",
+        "notes": "Fonte: Scheda Shisui 2024.",
+        "recoverable": true
+      },
+      {
+        "id": "dagger",
+        "name": "Pugnali",
+        "quantity": 2,
+        "description": "Equipaggiamento del background Viandante.",
+        "notes": "Utili anche come kunai narrativi.",
+        "recoverable": true
+      }
+    ],
+    "armor": [
+      {
+        "id": "monk_tunic",
+        "name": "Tunica da monaco nera",
+        "quantity": 1,
+        "description": "Abito leggero, non conta come armatura.",
+        "notes": "Compatibile con Difesa senza armatura."
+      }
+    ],
+    "tools": [
+      {
+        "id": "thieves_tools",
+        "name": "Arnesi da scasso",
+        "quantity": 1,
+        "description": "Competenza del background Viandante."
+      },
+      {
+        "id": "game_set",
+        "name": "Gioco a scelta",
+        "quantity": 1,
+        "description": "Equipaggiamento del background; scelta specifica da confermare."
+      }
+    ],
+    "adventuringGear": [
+      {
+        "id": "bedroll",
+        "name": "Giaciglio",
+        "quantity": 1
+      },
+      {
+        "id": "pouches",
+        "name": "Borse",
+        "quantity": 2
+      },
+      {
+        "id": "traveler_clothes",
+        "name": "Abiti da viaggiatore",
+        "quantity": 1
+      },
+      {
+        "id": "travel_pack",
+        "name": "Sacca da viaggio / Kit del Viandante",
+        "quantity": 1
+      },
+      {
+        "id": "silk_rope",
+        "name": "Corda",
+        "quantity": 1,
+        "description": "15 metri."
+      },
+      {
+        "id": "grappling_hook",
+        "name": "Rampino d'acciaio",
+        "quantity": 1
+      }
+    ],
+    "magicItems": [],
+    "consumables": [],
+    "storyItems": [
+      {
+        "id": "shadow_mask",
+        "name": "Maschera dell'Ombra",
+        "quantity": 1,
+        "description": "Elemento identitario dello stile ninja di Shisui."
+      },
+      {
+        "id": "clan_diary",
+        "name": "Diario criptato del clan",
+        "quantity": 1,
+        "description": "Contiene scoperte, segreti e tecniche del clan.",
+        "notes": "Legame principale del personaggio."
+      }
+    ],
+    "notes": "Fonti: Scheda Shisui 2024.pdf e Background e prefazione Shisui.pdf."
+  },
+  "details": {
+    "personalityTraits": [
+      "Silenzioso e disciplinato.",
+      "Osservatore meticoloso.",
+      "Agisce con calma e intuito.",
+      "Presenza intensa e controllata.",
+      "Adora i bambini ed è legato al fratello scomparso."
+    ],
+    "ideals": [
+      "Autocontrollo assoluto.",
+      "Protezione dei deboli.",
+      "Ricerca della verità.",
+      "Il fuoco come purificazione."
+    ],
+    "bonds": [
+      "Ultimo sopravvissuto del suo clan di Tiefling.",
+      "Custodisce il diario criptato del clan.",
+      "Il fratello Sio è scomparso e Shisui non crede sia morto.",
+      "Considera il party il nucleo di un nuovo clan."
+    ],
+    "flaws": [
+      "Si carica di troppe responsabilità.",
+      "Si fida poco.",
+      "Porta cicatrici emotive profonde.",
+      "Teme il lato oscuro dei suoi poteri."
+    ],
+    "backstoryShort": "Shisui proviene da un antico clan di Tiefling legati al fuoco e all'ombra. Dopo lo sterminio del clan e la scomparsa del fratello Sio, vaga come viandante cercando risposte e tracce della verità.",
+    "campaignNotes": []
+  }
 }
