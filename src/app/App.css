@@ -1321,10 +1321,6 @@
   padding: 12px;
 }
 
-.dice-roller__dice-pool--overlay {
-  pointer-events: none;
-}
-
 .dice-roller__die {
   justify-self: center;
   width: 54px;

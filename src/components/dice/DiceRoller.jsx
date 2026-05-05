@@ -291,30 +291,32 @@ function DiceRoller({
           className={`dice-roller__physics-box ${isPhysicsReady ? 'dice-roller__physics-box--ready' : ''}`}
         />
 
-        <div className={`dice-roller__dice-pool ${usePhysics && isPhysicsReady ? 'dice-roller__dice-pool--overlay' : ''}`}>
-          {visibleDice.map((die, index) => {
-            const isKeptRoll =
-              lastResult?.d20Mode !== 'normal' &&
-              lastResult?.keptRoll === die.value &&
-              lastResult?.rolls.indexOf(die.value) === index
+        {(!usePhysics || !isPhysicsReady) && (
+          <div className="dice-roller__dice-pool">
+            {visibleDice.map((die, index) => {
+              const isKeptRoll =
+                lastResult?.d20Mode !== 'normal' &&
+                lastResult?.keptRoll === die.value &&
+                lastResult?.rolls.indexOf(die.value) === index
 
-            return (
-              <div
-                key={`${die.id}-${visualDiceCount}`}
-                className={`dice-roller__die ${rolling ? 'dice-roller__die--rolling' : ''} ${isKeptRoll ? 'dice-roller__die--kept' : ''}`}
-                data-sides={die.sides}
-                style={{
-                  '--dice-index': index,
-                  '--roll-delay': `${index * -0.08}s`,
-                  '--roll-duration': `${0.92 + (index % 5) * 0.08}s`,
-                }}
-              >
-                <span>{die.value}</span>
-                <small>d{die.sides}</small>
-              </div>
-            )
-          })}
-        </div>
+              return (
+                <div
+                  key={`${die.id}-${visualDiceCount}`}
+                  className={`dice-roller__die ${rolling ? 'dice-roller__die--rolling' : ''} ${isKeptRoll ? 'dice-roller__die--kept' : ''}`}
+                  data-sides={die.sides}
+                  style={{
+                    '--dice-index': index,
+                    '--roll-delay': `${index * -0.08}s`,
+                    '--roll-duration': `${0.92 + (index % 5) * 0.08}s`,
+                  }}
+                >
+                  <span>{die.value}</span>
+                  <small>d{die.sides}</small>
+                </div>
+              )
+            })}
+          </div>
+        )}
       </div>
 
       {lastResult && (
