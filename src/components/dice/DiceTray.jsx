@@ -57,6 +57,7 @@ function DiceTray() {
   const [diceCounts, setDiceCounts] = useState({})
   const [modifier, setModifier] = useState(0)
   const [d20Mode, setD20Mode] = useState('normal')
+  const [isExpanded, setIsExpanded] = useState(false)
   const [history, setHistory] = useState([])
 
   const diceGroups = useMemo(() => buildDiceGroups(diceCounts), [diceCounts])
@@ -120,7 +121,19 @@ function DiceTray() {
   }
 
   return (
-    <div className="dice-tray">
+    <div className={`dice-tray ${isExpanded ? 'dice-tray--expanded' : ''}`}>
+      {isExpanded && (
+        <div className="dice-tray__expanded-bar">
+          <strong>{rollLabel}</strong>
+          <button
+            type="button"
+            onClick={() => setIsExpanded(false)}
+          >
+            Chiudi
+          </button>
+        </div>
+      )}
+
       <SectionCard title="Plancia dadi">
         <div className="dice-tray__picker">
           {DICE_OPTIONS.map((sides) => {
@@ -152,14 +165,23 @@ function DiceTray() {
 
         <div className="dice-tray__summary">
           <strong>{rollLabel}</strong>
-          <button
-            className="dice-tray__clear-pool"
-            type="button"
-            disabled={totalDice === 0}
-            onClick={clearPool}
-          >
-            Svuota
-          </button>
+          <div className="dice-tray__summary-actions">
+            <button
+              className="dice-tray__clear-pool"
+              type="button"
+              disabled={totalDice === 0}
+              onClick={clearPool}
+            >
+              Svuota
+            </button>
+            <button
+              className="dice-tray__expand"
+              type="button"
+              onClick={() => setIsExpanded(true)}
+            >
+              Tavolo grande
+            </button>
+          </div>
         </div>
 
         <label className="dice-tray__field dice-tray__field--modifier">
@@ -189,6 +211,7 @@ function DiceTray() {
         <DiceRoller
           diceGroups={canUseD20Mode ? null : diceGroups}
           sides={canUseD20Mode ? 20 : null}
+          large={isExpanded}
           count={canUseD20Mode ? 1 : totalDice}
           modifier={modifier}
           d20Mode={activeD20Mode}

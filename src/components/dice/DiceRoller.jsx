@@ -87,6 +87,7 @@ function DiceRoller({
   sides,
   diceGroups = null,
   label,
+  large = false,
   count = 1,
   modifier = 0,
   modifierMode = 'total',
@@ -251,7 +252,7 @@ function DiceRoller({
   }
 
   return (
-    <div className="dice-roller">
+    <div className={`dice-roller ${large ? 'dice-roller--large' : ''}`}>
       <div className="dice-roller__controls">
         <div className="dice-roller__meta">
           <span>Dado</span>

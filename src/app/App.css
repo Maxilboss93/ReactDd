@@ -117,20 +117,24 @@
 /* Subtabs Panoramica/Caratteristiche */
 .subtabs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
   gap: 8px;
   margin-bottom: 12px;
 }
 
 .subtabs__btn {
-  padding: 10px 12px;
+  min-width: 0;
+  min-height: 40px;
+  padding: 9px 6px;
   border-radius: 12px;
   border: 1px solid var(--border);
   background: #111821;
   color: var(--muted);
   cursor: pointer;
-  font-size: 12px;
-  letter-spacing: 0.6px;
+  font-size: clamp(10px, 2.8vw, 12px);
+  letter-spacing: 0.2px;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
   text-transform: uppercase;
 }
 
@@ -1281,7 +1285,7 @@
 
 .dice-roller__tray {
   position: relative;
-  min-height: 142px;
+  min-height: clamp(320px, 52vh, 620px);
   overflow: hidden;
   border: 1px solid #253449;
   border-radius: 8px;
@@ -1317,14 +1321,27 @@
   align-items: center;
   gap: 9px;
   width: 100%;
-  min-height: 142px;
+  min-height: clamp(320px, 52vh, 620px);
   padding: 12px;
+}
+
+.dice-roller--large {
+  min-height: 100%;
+}
+
+.dice-roller--large .dice-roller__controls {
+  gap: 6px;
+}
+
+.dice-roller--large .dice-roller__tray,
+.dice-roller--large .dice-roller__dice-pool {
+  min-height: min(68vh, 720px);
 }
 
 .dice-roller__die {
   justify-self: center;
-  width: 54px;
-  height: 54px;
+  width: 44px;
+  height: 44px;
   border: 1px solid #6f839b;
   border-radius: 12px;
   background: linear-gradient(145deg, #172638, #0b111a);
@@ -1332,8 +1349,8 @@
   display: grid;
   place-items: center;
   grid-template-rows: 1fr auto;
-  padding: 9px 6px 6px;
-  font-size: 22px;
+  padding: 7px 5px 5px;
+  font-size: 18px;
   font-weight: 800;
   box-shadow:
     0 12px 22px rgba(0, 0, 0, 0.34),
@@ -1436,11 +1453,79 @@
   gap: 12px;
 }
 
+.dice-tray--expanded {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  background: #0e131a;
+}
+
+.dice-tray--expanded > .section-card {
+  min-height: 0;
+}
+
+.dice-tray--expanded > .section-card:first-of-type {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.dice-tray--expanded > .section-card:first-of-type .section-card__body {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+}
+
+.dice-tray--expanded > .section-card:not(:first-of-type) {
+  display: none;
+}
+
+.dice-tray__expanded-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #111821;
+}
+
+.dice-tray__expanded-bar strong {
+  min-width: 0;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.dice-tray__expanded-bar button {
+  flex: 0 0 auto;
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #121c28;
+  color: var(--text);
+  cursor: pointer;
+}
+
 .dice-tray__picker {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
   gap: 8px;
   margin-bottom: 10px;
+}
+
+.dice-tray--expanded .dice-tray__picker {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 5px;
+  margin-bottom: 6px;
 }
 
 .dice-tray__picker-item {
@@ -1465,6 +1550,11 @@
   gap: 3px;
   min-height: 54px;
   padding: 7px 5px;
+}
+
+.dice-tray--expanded .dice-tray__die-button,
+.dice-tray--expanded .dice-tray__die-minus {
+  min-height: 38px;
 }
 
 .dice-tray__die-button strong {
@@ -1507,6 +1597,12 @@
   background: #101823;
 }
 
+.dice-tray__summary-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 6px;
+}
+
 .dice-tray__summary strong {
   min-width: 0;
   font-size: 13px;
@@ -1519,6 +1615,28 @@
   padding: 6px 8px;
   color: var(--muted);
   font-size: 11px;
+}
+
+.dice-tray__expand {
+  flex: 0 0 auto;
+  min-height: 30px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #121c28;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.dice-tray--expanded .dice-tray__summary,
+.dice-tray--expanded .dice-tray__field--modifier,
+.dice-tray--expanded .dice-tray__modes {
+  margin-bottom: 6px;
+}
+
+.dice-tray--expanded .dice-roller {
+  flex: 1;
 }
 
 .dice-tray__controls {
