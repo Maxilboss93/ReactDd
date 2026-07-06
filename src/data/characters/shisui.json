@@ -1,7 +1,7 @@
 {
   "id": "pg_001",
   "name": "Shisui",
-  "level": 3,
+  "level": 4,
   "race": "Tiefling Infernale",
   "background": "Viandante",
   "alignment": "Neutrale Buono",
@@ -9,22 +9,22 @@
   "classes": [
     {
       "name": "Monaco",
-      "level": 3,
+      "level": 4,
       "subclass": "Guerriero degli Elementi"
     }
   ],
   "combat": {
     "hp": {
-      "current": 24,
-      "max": 24,
+      "current": 31,
+      "max": 31,
       "temp": 0
     },
     "ac": 15,
     "speed": 12,
     "initiativeBonus": 3,
     "hitDice": {
-      "current": 3,
-      "max": 3,
+      "current": 4,
+      "max": 4,
       "type": "d8"
     }
   },
@@ -34,7 +34,7 @@
     "con": 14,
     "int": 8,
     "wis": 14,
-    "cha": 13
+    "cha": 14
   },
   "savingThrows": {
     "str": true,
@@ -158,8 +158,8 @@
     {
       "id": "ki",
       "label": "Ki",
-      "current": 3,
-      "max": 3,
+      "current": 4,
+      "max": 4,
       "resetOn": "short_rest",
       "category": "class"
     },
@@ -178,6 +178,22 @@
       "max": 2,
       "resetOn": "long_rest",
       "category": "feat"
+    },
+    {
+      "id": "dark_touched_invisibility",
+      "label": "Contaminazione Oscura: Invisibilita",
+      "current": 1,
+      "max": 1,
+      "resetOn": "long_rest",
+      "category": "feat"
+    },
+    {
+      "id": "dark_touched_color_spray",
+      "label": "Contaminazione Oscura: Spruzzo Colorato",
+      "current": 1,
+      "max": 1,
+      "resetOn": "long_rest",
+      "category": "feat"
     }
   ],
   "feats": [
@@ -186,13 +202,36 @@
       "name": "Fortunato",
       "source": "Background",
       "level": 1
+    },
+    {
+      "id": "contaminazione-oscura",
+      "name": "Contaminazione oscura",
+      "source": "Level up",
+      "level": 4,
+      "choices": {
+        "abilityIncrease": {
+          "ability": "cha",
+          "from": 13,
+          "to": 14
+        },
+        "spellcastingAbility": "cha",
+        "chosenSpell": {
+          "id": "spruzzo-colorato",
+          "name": "Spruzzo Colorato"
+        },
+        "alwaysPreparedSpell": {
+          "id": "invisibilita",
+          "name": "Invisibilita"
+        }
+      },
+      "sourceReference": "Manuale del Giocatore 2024, pag. 204"
     }
   ],
   "spellcasting": {
     "ability": "cha",
-    "spellSaveDc": 11,
-    "spellAttackBonus": 3,
-    "preparedCount": 2,
+    "spellSaveDc": 12,
+    "spellAttackBonus": 4,
+    "preparedCount": 4,
     "slots": [],
     "spells": [
       {
@@ -221,6 +260,28 @@
         "source": "Guerriero degli Elementi",
         "concentration": false,
         "prepared": true
+      },
+      {
+        "id": "invisibilita",
+        "name": "Invisibilita",
+        "level": 2,
+        "school": "Illusione",
+        "source": "Contaminazione Oscura",
+        "concentration": true,
+        "prepared": true,
+        "resourceId": "dark_touched_invisibility",
+        "notes": "Sempre preparato dal talento Contaminazione oscura; lanciabile una volta per riposo lungo senza slot usando Carisma."
+      },
+      {
+        "id": "spruzzo-colorato",
+        "name": "Spruzzo Colorato",
+        "level": 1,
+        "school": "Illusione",
+        "source": "Contaminazione Oscura",
+        "concentration": false,
+        "prepared": true,
+        "resourceId": "dark_touched_color_spray",
+        "notes": "Incantesimo scelto dal talento Contaminazione oscura; lanciabile una volta per riposo lungo senza slot usando Carisma."
       }
     ]
   },
@@ -299,6 +360,15 @@
       "kind": "resource",
       "resourceId": "ki",
       "summary": "Spende Ki per infondere energia elementale nei colpi."
+    },
+    {
+      "id": "dark_touched",
+      "label": "Contaminazione oscura",
+      "level": 4,
+      "source": "Level up",
+      "category": "feat",
+      "kind": "spellcasting",
+      "summary": "Carisma +1; Invisibilita e Spruzzo Colorato sempre preparati, lanciabili con Carisma."
     }
   ],
   "powers": [
@@ -405,7 +475,45 @@
       "Sussurri Dissonanti"
     ]
   },
-  "notes": "Stato attuale: Shisui e giocato in campagna al livello 3. La multiclass Monaco 5 / Stregone 3 e mantenuta come piano futuro per progettare la UX.",
+  "progressionHistory": [
+    {
+      "id": "level-up-4-manual-dark-touched",
+      "type": "level_up",
+      "className": "Monaco",
+      "totalLevel": {
+        "from": 3,
+        "to": 4
+      },
+      "classLevel": {
+        "className": "Monaco",
+        "from": 3,
+        "to": 4
+      },
+      "hp": {
+        "mode": "average",
+        "hitDie": "d8",
+        "baseIncrease": 5,
+        "constitutionModifier": 2,
+        "totalIncrease": 7,
+        "maxHpFrom": 24,
+        "maxHpTo": 31
+      },
+      "asiOrFeat": {
+        "mode": "feat",
+        "feat": {
+          "id": "contaminazione-oscura",
+          "name": "Contaminazione oscura",
+          "category": "Generale",
+          "summary": "Talento magico legato alla Coltre Oscura."
+        },
+        "choices": {
+          "ability": "cha",
+          "chosenSpell": "spruzzo-colorato"
+        }
+      }
+    }
+  ],
+  "notes": "Stato attuale: Shisui e giocato in campagna al livello 4. La multiclass Monaco 5 / Stregone 3 e mantenuta come piano futuro per progettare la UX.",
   "equipment": {
     "currency": {
       "cp": 0,
