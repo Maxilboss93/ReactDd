@@ -4,7 +4,7 @@ import DiceBox from '@drdreo/dice-box-threejs'
 import { rollDice, rollDicePool, rollDie } from '../../services/diceService.js'
 
 const DICE_OPTIONS = [4, 6, 8, 10, 12, 20, 100]
-const PHYSICS_ROLL_TIMEOUT_MS = 1600
+const PHYSICS_ROLL_TIMEOUT_MS = 12000
 
 function withTimeout(promise, timeoutMs) {
   let timeoutId
@@ -112,6 +112,8 @@ function DiceRoller({
   const [lastResult, setLastResult] = useState(null)
   const [selectedSides, setSelectedSides] = useState(sides ?? 20)
   const [isPhysicsReady, setIsPhysicsReady] = useState(false)
+  const [isPhysicsRolling, setIsPhysicsRolling] = useState(false)
+  const [lastPhysicsNotation, setLastPhysicsNotation] = useState(null)
   const [usePhysics, setUsePhysics] = useState(true)
   const boxElementRef = useRef(null)
   const diceBoxRef = useRef(null)
@@ -125,9 +127,12 @@ function DiceRoller({
     count,
     shouldUseD20Mode,
   })
+  const activeNotation = getDiceNotation(activeGroups)
   const visualDiceCount = activeGroups.reduce((total, group) => total + group.count, 0)
   const isDisabled = disabled || rolling || visualDiceCount <= 0
-  const shouldShowCssDice = !usePhysics || !isPhysicsReady || visualDiceCount > 0
+  const shouldShowCssDice =
+    !isPhysicsRolling &&
+    (!usePhysics || !isPhysicsReady || !lastPhysicsNotation || lastPhysicsNotation !== activeNotation)
   const visibleDice = displayRolls.length === visualDiceCount
     ? displayRolls
     : activeGroups.flatMap((group, groupIndex) =>
@@ -180,6 +185,13 @@ function DiceRoller({
     }
   }, [])
 
+  useEffect(() => {
+    if (!lastPhysicsNotation || lastPhysicsNotation === activeNotation) return
+
+    diceBoxRef.current?.clearDice?.()
+    setLastPhysicsNotation(null)
+  }, [activeNotation, lastPhysicsNotation])
+
   // Avvia l'animazione, calcola il risultato finale e lo comunica al componente padre.
   async function handleRoll() {
     if (isDisabled) return
@@ -194,6 +206,13 @@ function DiceRoller({
 
     if (usePhysics && isPhysicsReady && diceBoxRef.current) {
       try {
+        const boxRect = boxElementRef.current?.getBoundingClientRect()
+
+        if (boxRect?.width && boxRect?.height) {
+          diceBoxRef.current.setDimensions?.({ x: boxRect.width, y: boxRect.height })
+        }
+
+        setIsPhysicsRolling(true)
         const physicsResult = await withTimeout(
           diceBoxRef.current.roll(getDiceNotation(activeGroups)),
           PHYSICS_ROLL_TIMEOUT_MS
@@ -207,12 +226,16 @@ function DiceRoller({
 
         setDisplayRolls(result.dice)
         setLastResult(result)
+        setLastPhysicsNotation(activeNotation)
         setRolling(false)
+        setIsPhysicsRolling(false)
         onRoll?.(result)
         return
       } catch (error) {
         console.error('Lancio 3D non riuscito, uso fallback CSS:', error)
         setUsePhysics(false)
+        setIsPhysicsRolling(false)
+        setLastPhysicsNotation(null)
         diceBoxRef.current?.clearDice?.()
       }
     }
