@@ -84,3 +84,16 @@ export async function fetchCharacterById(userId, id) {
   await wait(300)
   return fakeCharacters.find((c) => c.ownerId === userId && c.id === id) ?? null
 }
+
+export async function createCharacter(userId, character) {
+  await wait(300)
+
+  const createdCharacter = {
+    ...character,
+    ownerId: userId,
+  }
+
+  fakeCharacters.unshift(createdCharacter)
+
+  return createdCharacter
+}

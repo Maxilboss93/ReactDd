@@ -8,7 +8,7 @@
 .ability-pill {
   background: #101823;
   border: 1px solid var(--border);
-  border-radius: 14px;
+  border-radius: var(--radius-ui);
   padding: 10px 8px;
   text-align: center;
   box-shadow: inset 0 0 0 1px #1b2a3a;

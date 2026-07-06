@@ -10,11 +10,14 @@ import ResourcesSection from '../components/character/sections/ResourcesSection.
 import RestSection from '../components/character/sections/RestSection.jsx'
 import EquipmentSection from '../components/character/sections/EquipmentSection.jsx'
 import DetailsSection from '../components/character/sections/DetailsSection.jsx'
+import ProgressionSection from '../components/character/sections/ProgressionSection.jsx'
 import DiceTray from '../components/dice/DiceTray.jsx'
 import { fetchCharacterById } from '../services/fakeApi.js'
 import { useAuth } from '../components/authentication/AuthContext.jsx'
 import PowersSection from '../components/character/sections/PowerSection.jsx'
 import { rollDice } from '../services/diceService.js'
+import AppTopbar from '../components/layout/AppTopbar.jsx'
+
 
 function CharacterPage() {
   const { id } = useParams()
@@ -34,6 +37,7 @@ function CharacterPage() {
   const dexModLabel = dexMod >= 0 ? `+${dexMod}` : `${dexMod}`
   const [resources, setResources] = useState([])
   const kiResource = resources.find((r) => r.id === 'ki')
+  const primaryResource = kiResource ?? resources[0] ?? null
   const [hitDice, setHitDice] = useState({ current: 0, max: 0, type: 'd8' })
   const conMod = Math.floor(((character?.abilities?.con ?? 10) - 10) / 2)
   const [restPanel, setRestPanel] = useState(null)
@@ -45,6 +49,7 @@ function CharacterPage() {
   const [skills, setSkills] = useState([])
   const [savingThrows, setSavingThrows] = useState({})
   const navigate = useNavigate()
+  const [menuOpen, setMenuOpen] = useState(false)
 
 
   const labelNav3 = getNavLabel(character)
@@ -53,6 +58,7 @@ function CharacterPage() {
     { id: 'spells', label: labelNav3 },
     { id: 'equipment', label: 'Equip.' },
     { id: 'details', label: 'Dettagli' },
+    { id: 'progression', label: 'Progressione' },
   ]
 
   const abilities = character
@@ -219,6 +225,26 @@ function CharacterPage() {
     setRestMethod(null)
   }
 
+  function getLiveCharacterSnapshot() {
+    if (!character) return null
+
+    return {
+      ...character,
+      combat: {
+        ...(character.combat ?? {}),
+        hp: {
+          ...(character.combat?.hp ?? {}),
+          current: hpCurrent,
+          max: hpMax,
+        },
+        hitDice,
+      },
+      resources,
+      skills,
+      savingThrows,
+    }
+  }
+
   if (loading) {
     return (
       <div className="app">
@@ -242,18 +268,11 @@ function CharacterPage() {
 
   if (!character) {
     return (
-      <div className="app">
-        <header className="topbar">
-          <div className="topbar__spacer" />
-          <div className="topbar__title">Scheda Personaggio</div>
-          <div className="topbar__spacer" />
-        </header>
-        <main className="screen">
-          <div className="panel_content">
-            <div className="list-empty">Scheda non trovata.</div>
-          </div>
-        </main>
-      </div>
+      <AppTopbar
+        title="Scheda Personaggio"
+        onBack={() => navigate('/schede')}
+        onMenuOpen={() => setMenuOpen(true)}
+      />
     )
   }
 
@@ -317,8 +336,8 @@ function CharacterPage() {
                     ac={character.combat?.ac ?? 0}
                     speed={character.combat?.speed ?? 0}
                     dexModLabel={dexModLabel ?? dexMod}
-                    kiCurrent={kiResource ? kiResource.current : 0}
-                    kiMax={kiResource ? kiResource.max : 0}
+                    primaryResource={primaryResource}
+                    proficiencyBonus={proficiencyBonus}
                   />
                   <ResourcesSection
                     hitDice={hitDice}
@@ -373,6 +392,12 @@ function CharacterPage() {
           )}
           {activeTab === 'details' && (
             <DetailsSection character={character} />
+          )}
+          {activeTab === 'progression' && (
+            <ProgressionSection
+              character={getLiveCharacterSnapshot()}
+              onCharacterChange={setCharacter}
+            />
           )}
         </div>
       </main>

@@ -1,0 +1,337 @@
+<mxfile host="app.diagrams.net" modified="2026-05-12T12:25:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="er-core" name="ER Core DB">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title-core" value="D&amp;D App DB v2 - ER generale" style="text;html=1;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="420" y="20" width="560" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="users" value="users&#xa;PK id&#xa;email, username&#xa;display_name&#xa;status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="global_roles" value="global_roles&#xa;PK id&#xa;code&#xa;name" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="60" y="270" width="190" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="user_global_roles" value="user_global_roles&#xa;PK user_id + role_id&#xa;assigned_at" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="300" y="200" width="210" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="campaigns" value="campaigns&#xa;PK id&#xa;FK owner_user_id&#xa;name, status&#xa;visibility" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="100" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_members" value="campaign_members&#xa;PK id&#xa;FK campaign_id&#xa;FK user_id&#xa;role: master/player" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="850" y="115" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="characters" value="characters&#xa;PK id&#xa;FK owner_user_id&#xa;FK species_id&#xa;FK background_id&#xa;total_level_snapshot&#xa;status: draft/active" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="330" width="230" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="campaign_characters" value="campaign_characters&#xa;PK id&#xa;FK campaign_id&#xa;FK character_id&#xa;FK player_user_id&#xa;status: active/dead/retired" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="850" y="330" width="240" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="rule_sources" value="rule_sources&#xa;PK id&#xa;code&#xa;edition&#xa;is_active" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="520" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="rule_catalog" value="Catalogo regole&#xa;classi/sottoclassi/livelli&#xa;specie/background/talenti&#xa;spell/equipment/creature&#xa;azioni/taglie/sensi&#xa;copertura/aree/riposi&#xa;armi: proprieta + maestrie&#xa;multiclass + spell slots" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="500" width="240" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="progression_events" value="character_progression_events&#xa;PK id&#xa;FK character_id&#xa;event_type&#xa;status draft/applied&#xa;from/to level&#xa;payload_json" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="560" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="choices_grants_mods" value="Motore scheda&#xa;character_choices&#xa;character_grants&#xa;character_modifiers&#xa;character_ability_bases&#xa;character_sheet_snapshots" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="560" width="250" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="runtime" value="Runtime / stato&#xa;character_current_state&#xa;character_resources&#xa;character_inventory&#xa;character_spells&#xa;active_conditions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="760" width="250" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="chat_master" value="Campagna extra&#xa;conversations/messages&#xa;campaign_scenes&#xa;encounters&#xa;combat_sessions&#xa;media_assets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="200" width="210" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_roles_1" edge="1" parent="1" source="users" target="user_global_roles" style="endArrow=block;html=1;rounded=0;strokeColor=#6c8ebf;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_roles_2" edge="1" parent="1" source="global_roles" target="user_global_roles" style="endArrow=block;html=1;rounded=0;strokeColor=#6c8ebf;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_campaigns" edge="1" parent="1" source="users" target="campaigns" style="endArrow=block;html=1;rounded=0;strokeColor=#82b366;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_campaign_members_1" edge="1" parent="1" source="campaigns" target="campaign_members" style="endArrow=block;html=1;rounded=0;strokeColor=#82b366;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_campaign_members_2" edge="1" parent="1" source="users" target="campaign_members" style="endArrow=block;html=1;rounded=0;strokeColor=#82b366;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_characters" edge="1" parent="1" source="users" target="characters" style="endArrow=block;html=1;rounded=0;strokeColor=#d6b656;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_campaign_characters_1" edge="1" parent="1" source="campaigns" target="campaign_characters" style="endArrow=block;html=1;rounded=0;strokeColor=#d6b656;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_campaign_characters_2" edge="1" parent="1" source="characters" target="campaign_characters" style="endArrow=block;html=1;rounded=0;strokeColor=#d6b656;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rule_source_catalog" edge="1" parent="1" source="rule_sources" target="rule_catalog" style="endArrow=block;html=1;rounded=0;strokeColor=#9673a6;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_catalog_characters" edge="1" parent="1" source="rule_catalog" target="characters" style="endArrow=block;html=1;rounded=0;strokeColor=#9673a6;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_char_events" edge="1" parent="1" source="characters" target="progression_events" style="endArrow=block;html=1;rounded=0;strokeColor=#b85450;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_event_engine" edge="1" parent="1" source="progression_events" target="choices_grants_mods" style="endArrow=block;html=1;rounded=0;strokeColor=#b85450;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_engine_runtime" edge="1" parent="1" source="choices_grants_mods" target="runtime" style="endArrow=block;html=1;rounded=0;strokeColor=#d79b00;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_campaign_extra" edge="1" parent="1" source="campaigns" target="chat_master" style="endArrow=block;html=1;rounded=0;strokeColor=#82b366;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="modifiers" name="ER Modificatori">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title-mods" value="Motore modificatori centralizzato" style="text;html=1;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="420" y="20" width="560" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cm_characters" value="characters&#xa;PK id&#xa;name&#xa;species_id&#xa;background_id&#xa;status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cm_ability_bases" value="character_ability_bases&#xa;PK character_id + ability_id&#xa;base_value&#xa;method&#xa;source_event_id" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="360" y="90" width="250" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="cm_abilities" value="rule_abilities&#xa;PK id&#xa;code: str/dex/con...&#xa;name" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="70" y="360" width="220" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="cm_events" value="character_progression_events&#xa;PK id&#xa;character_id&#xa;event_type&#xa;status&#xa;from/to level" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="300" width="260" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="cm_choices" value="character_choices&#xa;PK id&#xa;choice_key&#xa;choice_type&#xa;selected_type/id/ref&#xa;value_json" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="690" y="120" width="260" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="cm_grants" value="character_grants&#xa;PK id&#xa;grant_type&#xa;grant_id/ref&#xa;origin_type/id&#xa;is_active" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="690" y="320" width="260" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="cm_modifiers" value="character_modifiers&#xa;PK id&#xa;character_id&#xa;target_code&#xa;target_ref&#xa;operation&#xa;value_number/text/json&#xa;origin_type/id&#xa;duration_type&#xa;is_active&#xa;stacking_policy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="190" width="280" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="cm_targets" value="modifier_targets&#xa;PK id&#xa;code&#xa;name&#xa;value_kind&#xa;esempi: ability_score, armor_class, speed, resource_max" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="500" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="cm_templates" value="rule_modifier_templates&#xa;PK id&#xa;effect_id&#xa;target_code/ref&#xa;operation&#xa;value_formula&#xa;stacking_policy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="690" y="540" width="260" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="cm_effects" value="rule_effects&#xa;PK id&#xa;origin_type/id&#xa;category&#xa;activation&#xa;duration_type&#xa;rules_json" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="360" y="540" width="260" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="cm_view" value="v_character_ability_totals&#xa;base_value&#xa;+ active add modifiers&#xa;= total_value" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="720" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="cm_note" value="Esempio: background dà +2 SAG&#xa;target_code=ability_score&#xa;target_ref=wis&#xa;operation=add&#xa;value_number=2&#xa;origin_type=background" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="70" y="610" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cm_char_base" edge="1" parent="1" source="cm_characters" target="cm_ability_bases" style="endArrow=block;html=1;strokeColor=#d6b656;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_cm_ability_base" edge="1" parent="1" source="cm_abilities" target="cm_ability_bases" style="endArrow=block;html=1;strokeColor=#9673a6;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_cm_char_event" edge="1" parent="1" source="cm_characters" target="cm_events" style="endArrow=block;html=1;strokeColor=#b85450;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_cm_event_choices" edge="1" parent="1" source="cm_events" target="cm_choices" style="endArrow=block;html=1;strokeColor=#b85450;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_cm_event_grants" edge="1" parent="1" source="cm_events" target="cm_grants" style="endArrow=block;html=1;strokeColor=#b85450;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_cm_choice_mods" edge="1" parent="1" source="cm_choices" target="cm_modifiers" style="endArrow=block;html=1;strokeColor=#b85450;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_cm_grant_mods" edge="1" parent="1" source="cm_grants" target="cm_modifiers" style="endArrow=block;html=1;strokeColor=#b85450;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_cm_target_mods" edge="1" parent="1" source="cm_targets" target="cm_modifiers" style="endArrow=block;html=1;strokeColor=#9673a6;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_cm_effect_templates" edge="1" parent="1" source="cm_effects" target="cm_templates" style="endArrow=block;html=1;strokeColor=#9673a6;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_cm_templates_mods" edge="1" parent="1" source="cm_templates" target="cm_modifiers" style="dashed=1;endArrow=block;html=1;strokeColor=#9673a6;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_cm_mod_view" edge="1" parent="1" source="cm_modifiers" target="cm_view" style="endArrow=block;html=1;strokeColor=#82b366;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_cm_base_view" edge="1" parent="1" source="cm_ability_bases" target="cm_view" style="endArrow=block;html=1;strokeColor=#82b366;"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="actors" name="Attori e Contesti">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title-actors" value="Attori, ruoli e contesti applicativi" style="text;html=1;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="420" y="20" width="560" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_superadmin" value="SuperAdmin&#xa;gestisce sistema&#xa;cataloghi&#xa;utenti&#xa;contenuti globali" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="80" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_master" value="Master&#xa;crea campagne&#xa;gestisce party&#xa;vede/modifica schede&#xa;mappe, NPC, chat" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="120" y="360" width="80" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_player" value="Player&#xa;crea PG&#xa;gestisce schede&#xa;level up&#xa;partecipa campagne" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="120" y="620" width="80" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="ctx_system" value="Sistema / Admin&#xa;users&#xa;global_roles&#xa;rule_sources&#xa;cataloghi regole&#xa;media globali" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="110" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ctx_campaign" value="Contesto campagna&#xa;campaigns&#xa;campaign_members&#xa;campaign_characters&#xa;scenes/encounters&#xa;chat gruppo/privata" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="360" width="300" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="ctx_character" value="Contesto personaggio&#xa;characters&#xa;character_classes&#xa;progression_events&#xa;choices/grants/modifiers&#xa;snapshot scheda" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="630" width="300" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="app_home" value="Home&#xa;scelta macro:&#xa;Gestione PG&#xa;Campagne" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="850" y="120" width="220" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="app_pg" value="Gestione PG&#xa;crea&#xa;apri&#xa;duplica&#xa;elimina" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="850" y="320" width="220" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="app_sheet" value="Scheda PG&#xa;Panoramica&#xa;Capacita/Incantesimi&#xa;Equipaggiamento&#xa;Dettagli&#xa;Progressione" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="320" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="app_campaigns" value="Le mie campagne&#xa;party&#xa;schede del gruppo&#xa;mappe&#xa;chat&#xa;combattimento futuro" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="850" y="560" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e_super_system" edge="1" parent="1" source="actor_superadmin" target="ctx_system" style="endArrow=block;html=1;strokeColor=#6c8ebf;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_master_campaign" edge="1" parent="1" source="actor_master" target="ctx_campaign" style="endArrow=block;html=1;strokeColor=#82b366;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_player_character" edge="1" parent="1" source="actor_player" target="ctx_character" style="endArrow=block;html=1;strokeColor=#d6b656;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_player_campaign" edge="1" parent="1" source="actor_player" target="ctx_campaign" style="dashed=1;endArrow=block;html=1;strokeColor=#82b366;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_home_pg" edge="1" parent="1" source="app_home" target="app_pg" style="endArrow=block;html=1;strokeColor=#666666;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_home_campaigns" edge="1" parent="1" source="app_home" target="app_campaigns" style="endArrow=block;html=1;strokeColor=#666666;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_pg_sheet" edge="1" parent="1" source="app_pg" target="app_sheet" style="endArrow=block;html=1;strokeColor=#d6b656;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_ctx_pg" edge="1" parent="1" source="ctx_character" target="app_pg" style="endArrow=block;html=1;strokeColor=#d6b656;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_ctx_campaigns" edge="1" parent="1" source="ctx_campaign" target="app_campaigns" style="endArrow=block;html=1;strokeColor=#82b366;"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="flow-creation-levelup" name="Flussi Creazione e Level Up">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title-flow" value="Flussi: creazione PG livello 0 e level up" style="text;html=1;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="370" y="20" width="660" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_start" value="Gestione PG&#xa;Nuovo PG" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_draft" value="Crea characters&#xa;status=draft&#xa;total_level_snapshot=0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="310" y="115" width="220" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_base" value="Step creazione&#xa;nome/concept&#xa;specie&#xa;background&#xa;base ability scores" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="620" y="110" width="230" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_event_creation" value="character_progression_events&#xa;event_type=creation_step&#xa;status=draft/appplied" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="960" y="105" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_choices" value="Scrive scelte&#xa;character_choices&#xa;species/background/abilities" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="960" y="260" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_lv1" value="Applica Classe Lv1&#xa;character_classes&#xa;grants&#xa;modifiers&#xa;resources" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="300" width="230" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_snapshot" value="Genera snapshot scheda&#xa;character_sheet_snapshots&#xa;snapshot_type=active" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="310" y="320" width="230" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_active" value="PG attivo&#xa;Scheda consultabile" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="330" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="level_start" value="Tab Progressione&#xa;Passa di livello" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="580" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="level_preview" value="Preview&#xa;legge classe/livello&#xa;rule_class_levels&#xa;rule_class_features&#xa;rule_modifier_templates" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="320" y="555" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="level_draft" value="Draft level up&#xa;PF&#xa;ASI/talento&#xa;spell/scelte&#xa;warning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="640" y="560" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="level_apply" value="applyLevelUpDraft&#xa;transaction DB&#xa;event applied&#xa;choices/grants/modifiers&#xa;snapshot aggiornato" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="545" width="260" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="level_done" value="Scheda aggiornata&#xa;nuovo livello&#xa;totali ricalcolati" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="760" width="190" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="e_flow_1" edge="1" parent="1" source="flow_start" target="flow_draft" style="endArrow=block;html=1;strokeColor=#d6b656;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_flow_2" edge="1" parent="1" source="flow_draft" target="flow_base" style="endArrow=block;html=1;strokeColor=#d6b656;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_flow_3" edge="1" parent="1" source="flow_base" target="flow_event_creation" style="endArrow=block;html=1;strokeColor=#b85450;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_flow_4" edge="1" parent="1" source="flow_event_creation" target="flow_choices" style="endArrow=block;html=1;strokeColor=#b85450;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_flow_5" edge="1" parent="1" source="flow_choices" target="flow_lv1" style="endArrow=block;html=1;strokeColor=#b85450;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_flow_6" edge="1" parent="1" source="flow_lv1" target="flow_snapshot" style="endArrow=block;html=1;strokeColor=#82b366;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_flow_7" edge="1" parent="1" source="flow_snapshot" target="flow_active" style="endArrow=block;html=1;strokeColor=#82b366;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_level_1" edge="1" parent="1" source="level_start" target="level_preview" style="endArrow=block;html=1;strokeColor=#6c8ebf;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_level_2" edge="1" parent="1" source="level_preview" target="level_draft" style="endArrow=block;html=1;strokeColor=#6c8ebf;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_level_3" edge="1" parent="1" source="level_draft" target="level_apply" style="endArrow=block;html=1;strokeColor=#b85450;"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_level_4" edge="1" parent="1" source="level_apply" target="level_done" style="endArrow=block;html=1;strokeColor=#82b366;"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="architecture" name="Architettura Software">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title-arch" value="Architettura software proposta" style="text;html=1;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="430" y="20" width="540" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ui" value="React Frontend&#xa;Home&#xa;Gestione PG&#xa;Scheda PG&#xa;Progressione&#xa;Campagne" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="api" value="Backend API futuro&#xa;Auth&#xa;Characters API&#xa;Campaigns API&#xa;Rules API&#xa;Progression API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="150" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="domain" value="Domain Services&#xa;progressionService&#xa;modifierCalculator&#xa;sheetProjector&#xa;rulesResolver&#xa;rest/runtime services" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="790" y="140" width="270" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="db" value="MariaDB dnd_app_v2&#xa;catalogo regole&#xa;personaggi&#xa;progression events&#xa;choices/grants/modifiers&#xa;runtime state" style="cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="140" width="220" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="importers" value="Importatori cataloghi&#xa;JSON classi&#xa;JSON powers&#xa;JSON spells&#xa;JSON feats/equipment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="790" y="460" width="270" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="snapshots" value="Projection / Cache&#xa;character_sheet_snapshots&#xa;JSON scheda pronta per UI&#xa;rigenerabile dai dati fonte" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="430" y="460" width="260" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="principles" value="Principi&#xa;1. UI non contiene regole profonde&#xa;2. Draft non modifica subito il PG&#xa;3. Apply scrive evento + scelte + modificatori&#xa;4. Snapshot e cache, non fonte primaria&#xa;5. Catalogo regole separato dai dati utente" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="80" y="450" width="270" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="e_arch_1" edge="1" parent="1" source="ui" target="api" style="endArrow=block;html=1;strokeColor=#6c8ebf;" value="HTTP/JSON"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_arch_2" edge="1" parent="1" source="api" target="domain" style="endArrow=block;html=1;strokeColor=#82b366;" value="comandi/query"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_arch_3" edge="1" parent="1" source="domain" target="db" style="endArrow=block;html=1;strokeColor=#b85450;" value="transaction"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_arch_4" edge="1" parent="1" source="importers" target="db" style="endArrow=block;html=1;strokeColor=#9673a6;" value="seed catalogo"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_arch_5" edge="1" parent="1" source="domain" target="snapshots" style="endArrow=block;html=1;strokeColor=#d79b00;" value="project sheet"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_arch_6" edge="1" parent="1" source="snapshots" target="ui" style="dashed=1;endArrow=block;html=1;strokeColor=#d79b00;" value="lettura veloce"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="phb-coverage" name="Copertura Manuale PHB">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title-phb" value="Copertura regole Manuale del Giocatore 2024 nel DB v2" style="text;html=1;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="phb-core" value="Cap. 1 - Come si gioca&#xa;D20, competenza, azioni&#xa;movimento, taglia, copertura&#xa;danni, condizioni, riposi&#xa;&#xa;Tabelle DB:&#xa;rule_actions&#xa;rule_sizes&#xa;rule_movement_modes&#xa;rule_senses&#xa;rule_area_shapes&#xa;rule_cover_types&#xa;rule_damage_types&#xa;rule_conditions&#xa;rule_rest_types&#xa;rule_hazards" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="300" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="phb-creation" value="Cap. 2 - Creazione PG&#xa;classe, origini, ability scores&#xa;lingue, equipaggiamento&#xa;livello 0 / bozza&#xa;avanzamento e multiclass&#xa;&#xa;Tabelle DB:&#xa;characters&#xa;character_ability_bases&#xa;character_classes&#xa;character_progression_events&#xa;character_choices&#xa;rule_multiclass_prerequisites" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="100" width="300" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="phb-classes" value="Cap. 3 - Classi&#xa;privilegi automatici&#xa;scelte di classe/sottoclasse&#xa;risorse, ASI/talenti&#xa;padronanza armi&#xa;&#xa;Tabelle DB:&#xa;rule_classes&#xa;rule_subclasses&#xa;rule_class_features&#xa;rule_class_levels&#xa;rule_effects&#xa;rule_modifier_templates&#xa;character_grants&#xa;character_modifiers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="100" width="300" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="phb-origins" value="Cap. 4 - Origini&#xa;background&#xa;specie&#xa;talenti&#xa;strumenti/lingue&#xa;&#xa;Tabelle DB:&#xa;rule_species&#xa;rule_backgrounds&#xa;rule_feats&#xa;rule_tools&#xa;rule_languages&#xa;character_proficiencies&#xa;character_modifiers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="100" width="280" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="phb-equipment" value="Cap. 6 - Equipaggiamento&#xa;armi/armature/scudi&#xa;proprieta armi&#xa;maestrie armi&#xa;strumenti e focus&#xa;sintonia oggetti magici&#xa;&#xa;Tabelle DB:&#xa;rule_equipment&#xa;rule_weapon_properties&#xa;rule_weapon_masteries&#xa;rule_equipment_weapon_properties&#xa;rule_equipment_weapon_masteries&#xa;rule_tools&#xa;character_inventory&#xa;character_attunements" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="440" width="300" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="phb-spells" value="Cap. 7 - Incantesimi&#xa;liste per classe&#xa;slot, pact magic&#xa;preparati/conosciuti&#xa;componenti, rituali, concentrazione&#xa;aree e stat block evocati&#xa;&#xa;Tabelle DB:&#xa;rule_spells&#xa;rule_class_spell_lists&#xa;rule_spell_slot_progressions&#xa;character_spellcasting_profiles&#xa;character_spells&#xa;character_spell_slots&#xa;rule_area_shapes&#xa;rule_creatures" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="440" width="300" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="phb-creatures" value="Appendice B - Creature&#xa;stat block&#xa;taglia, tipo, CA, PF&#xa;velocita, sensi&#xa;azioni, tratti&#xa;evocazioni degli incantesimi&#xa;&#xa;Tabelle DB:&#xa;rule_creatures&#xa;rule_sizes&#xa;rule_senses&#xa;combat_participants" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="740" y="440" width="300" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="phb-runtime" value="Runtime partita&#xa;combattimento&#xa;iniziativa/turni&#xa;PF e risorse correnti&#xa;condizioni attive&#xa;reazione/azioni in futuro&#xa;&#xa;Tabelle DB:&#xa;campaign_scenes&#xa;encounters&#xa;combat_sessions&#xa;combat_participants&#xa;character_current_state&#xa;character_resources&#xa;active_conditions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="440" width="280" height="260" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

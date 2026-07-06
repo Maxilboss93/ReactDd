@@ -300,9 +300,17 @@ function buildAsiDraft(character, asiChoice) {
     warnings.push('Un ASI deve distribuire 2 punti caratteristica.')
   }
 
-  const abilityIncreases = increases.map((increase) => {
+  const increasesByAbility = increases.reduce((result, increase) => {
     const ability = increase.ability
     const amount = increase.amount ?? 0
+
+    return {
+      ...result,
+      [ability]: (result[ability] ?? 0) + amount,
+    }
+  }, {})
+
+  const abilityIncreases = Object.entries(increasesByAbility).map(([ability, amount]) => {
     const from = character.abilities?.[ability] ?? 0
     const to = from + amount
 
@@ -416,5 +424,138 @@ export function buildLevelUpDraft(character, preview, choices) {
     choices,
     readyToApply: warnings.length === 0,
     warnings,
+  }
+}
+
+function applyAutomaticResourceChanges(character, preview) {
+  const resources = character.resources ?? []
+  const resourceChanges = (preview.automaticChanges ?? []).filter((change) => {
+    return change.id?.endsWith('_max')
+  })
+
+  if (resourceChanges.length === 0) {
+    return resources
+  }
+
+  return resources.map((resource) => {
+    const change = resourceChanges.find((candidate) => {
+      return candidate.id === `${resource.id}_max`
+    })
+
+    if (!change) {
+      return resource
+    }
+
+    const nextMax = Number(change.to)
+    const previousMax = Number(change.from)
+    const increase = Number.isNaN(nextMax) || Number.isNaN(previousMax)
+      ? 0
+      : nextMax - previousMax
+
+    return {
+      ...resource,
+      current: Math.min(nextMax, (resource.current ?? 0) + Math.max(0, increase)),
+      max: nextMax,
+    }
+  })
+}
+
+function applyAsiOrFeat(character, draft) {
+  if (draft.asiOrFeat?.mode === 'asi') {
+    const nextAbilities = { ...(character.abilities ?? {}) }
+
+    ;(draft.asiOrFeat.abilityIncreases ?? []).forEach((increase) => {
+      nextAbilities[increase.ability] = increase.to
+    })
+
+    return {
+      abilities: nextAbilities,
+      feats: character.feats ?? [],
+    }
+  }
+
+  if (draft.asiOrFeat?.mode === 'feat' && draft.asiOrFeat.feat) {
+    const feats = character.feats ?? []
+    const hasFeatAlready = feats.some((feat) => {
+      return feat.id === draft.asiOrFeat.feat.id
+    })
+
+    return {
+      abilities: character.abilities ?? {},
+      feats: hasFeatAlready
+        ? feats
+        : [
+          ...feats,
+          {
+            id: draft.asiOrFeat.feat.id,
+            name: draft.asiOrFeat.feat.name,
+            source: 'Level up',
+            level: draft.preview.totalLevel.to,
+          },
+        ],
+    }
+  }
+
+  return {
+    abilities: character.abilities ?? {},
+    feats: character.feats ?? [],
+  }
+}
+
+export function applyLevelUpDraft(character, draft) {
+  if (!draft?.readyToApply) {
+    return character
+  }
+
+  const className = draft.preview.classLevel.className
+  const hpIncrease = draft.hp.totalIncrease
+  const currentHp = character.combat?.hp?.current ?? 0
+  const hitDice = character.combat?.hitDice ?? {}
+  const asiOrFeatResult = applyAsiOrFeat(character, draft)
+  const appliedAt = new Date().toISOString()
+
+  return {
+    ...character,
+    level: draft.preview.totalLevel.to,
+    classes: (character.classes ?? []).map((characterClass) => {
+      if (characterClass.name !== className) {
+        return characterClass
+      }
+
+      return {
+        ...characterClass,
+        level: draft.preview.classLevel.to,
+      }
+    }),
+    abilities: asiOrFeatResult.abilities,
+    feats: asiOrFeatResult.feats,
+    combat: {
+      ...(character.combat ?? {}),
+      hp: {
+        ...(character.combat?.hp ?? {}),
+        current: currentHp + hpIncrease,
+        max: draft.hp.maxHpTo,
+      },
+      hitDice: {
+        ...hitDice,
+        current: (hitDice.current ?? 0) + 1,
+        max: (hitDice.max ?? 0) + 1,
+        type: hitDice.type ?? draft.hp.hitDie,
+      },
+    },
+    resources: applyAutomaticResourceChanges(character, draft.preview),
+    progressionHistory: [
+      ...(character.progressionHistory ?? []),
+      {
+        id: `level-up-${draft.preview.totalLevel.to}-${appliedAt}`,
+        type: 'level_up',
+        appliedAt,
+        className,
+        totalLevel: draft.preview.totalLevel,
+        classLevel: draft.preview.classLevel,
+        hp: draft.hp,
+        asiOrFeat: draft.asiOrFeat,
+      },
+    ],
   }
 }

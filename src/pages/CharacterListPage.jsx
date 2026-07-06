@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../components/authentication/AuthContext.jsx'
+import AppTopbar from '../components/layout/AppTopbar.jsx'
 import { fetchCharacters } from '../services/fakeApi.js'
 import '../app/App.css'
 
 function CharacterListPage() {
-  const { user, logout } = useAuth()
+  const { user } = useAuth()
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
@@ -19,9 +20,6 @@ function CharacterListPage() {
       setItems(list)
       setLoading(false)
 
-      if (list.length === 1) {
-        navigate(`/scheda/${list[0].id}`, { replace: true })
-      }
     })
 
     return () => {
@@ -29,27 +27,28 @@ function CharacterListPage() {
     }
   }, [user?.id, navigate])
 
-  function handleLogout() {
-    logout()
-    navigate('/login', { replace: true })
-  }
-
   return (
     <div className="app">
-      <header className="topbar">
-        <div className="topbar__spacer" />
-        <div className="topbar__title">Le tue schede</div>
-        <button className="icon-btn icon-btn--text" onClick={handleLogout}>
-          Esci
-        </button>
-      </header>
+      <AppTopbar
+        title="Gestione PG"
+        onBack={() => navigate('/home')}
+      />
 
       <main className="screen">
         <div className="panel_content">
+          <div className="list-toolbar">
+            <button
+              className="list-btn list-btn--primary"
+              type="button"
+              onClick={() => navigate('/crea-pg')}
+            >
+              + Nuovo PG
+            </button>
+          </div>
           {loading && <div className="list-empty">Caricamento schede...</div>}
 
           {!loading && items.length === 0 && (
-            <div className="list-empty">Nessuna scheda disponibile.</div>
+            <div className="list-empty">Nessun personaggio creato.</div>
           )}
 
           {!loading && items.length > 0 && (
@@ -60,12 +59,32 @@ function CharacterListPage() {
                   <div className="list-meta">
                     {c.race} - {c.classes[0]?.name} {c.classes[0]?.level}
                   </div>
-                  <button
-                    className="list-btn"
-                    onClick={() => navigate(`/scheda/${c.id}`)}
-                  >
-                    Apri
-                  </button>
+                  <div className="list-card__actions">
+                    <button
+                      className="list-btn"
+                      type="button"
+                      onClick={() => navigate(`/scheda/${c.id}`)}
+                    >
+                      Apri
+                    </button>
+
+                    <button
+                      className="list-btn"
+                      type="button"
+                      onClick={() => alert(`Duplica ${c.name}`)}
+                    >
+                      Duplica
+                    </button>
+
+                    <button
+                      className="list-btn list-btn--danger"
+                      type="button"
+                      onClick={() => alert(`Elimina ${c.name}`)}
+                    >
+                      Elimina
+                    </button>
+                  </div>
+
                 </div>
               ))}
             </div>

@@ -1,6 +1,6 @@
 import SectionCard from '../../general/card/SectionCard.jsx'
 
-function KeyStatsSection({ ac, speed, dexModLabel, kiCurrent, kiMax }) {
+function KeyStatsSection({ ac, speed, dexModLabel, primaryResource, proficiencyBonus }) {
   return (
     <SectionCard title="Statistiche Chiave">
       <div className="stats-grid">
@@ -20,9 +20,9 @@ function KeyStatsSection({ ac, speed, dexModLabel, kiCurrent, kiMax }) {
         </div>
 
         <div className="stat-pill">
-          <div className="stat-label">Ki</div>
+          <div className="stat-label">{primaryResource?.label ?? 'Comp.'}</div>
           <div className="stat-value">
-            {kiCurrent}/{kiMax}
+            {primaryResource ? `${primaryResource.current}/${primaryResource.max}` : `+${proficiencyBonus}`}
           </div>
         </div>
       </div>

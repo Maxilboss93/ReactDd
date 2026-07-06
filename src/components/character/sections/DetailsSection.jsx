@@ -1,12 +1,6 @@
 import { useEffect, useState } from 'react'
 
 import SectionCard from '../../general/card/SectionCard.jsx'
-import DiceRoller from '../../dice/DiceRoller.jsx'
-import {
-  buildLevelUpDraft,
-  getLevelUpPreview,
-} from '../../../services/progressionService.js'
-import { getAvailableFeats } from '../../../services/featsCatalog.js'
 
 function getClassLabel(characterClass) {
   const subclass = characterClass.subclass ? ` - ${characterClass.subclass}` : ''
@@ -76,10 +70,6 @@ function formatNoteDate(value) {
   }).format(new Date(value))
 }
 
-function getHitDieSides(hitDie) {
-  return Number(String(hitDie ?? '').replace('d', ''))
-}
-
 function DetailsSection({ character }) {
   const details = character?.details ?? {}
   const storageKey = `character-notes:${character?.id ?? 'unknown'}`
@@ -88,10 +78,6 @@ function DetailsSection({ character }) {
   const [openNoteId, setOpenNoteId] = useState(null)
   const [editingNoteId, setEditingNoteId] = useState(null)
   const [loadedStorageKey, setLoadedStorageKey] = useState(null)
-  const [levelUpPreview, setLevelUpPreview] = useState(null)
-  const [hpChoice, setHpChoice] = useState({ mode: 'average' })
-  const [manualHpRoll, setManualHpRoll] = useState('')
-  const [asiOrFeatChoice, setAsiOrFeatChoice] = useState({ mode: 'feat', featId: '' })
 
   useEffect(() => {
     setSavedNotes(readSavedNotes(storageKey))
@@ -99,10 +85,6 @@ function DetailsSection({ character }) {
     setOpenNoteId(null)
     setEditingNoteId(null)
     setLoadedStorageKey(storageKey)
-    setLevelUpPreview(null)
-    setHpChoice({ mode: 'average' })
-    setManualHpRoll('')
-    setAsiOrFeatChoice({ mode: 'feat', featId: '' })
   }, [storageKey])
 
   useEffect(() => {
@@ -165,35 +147,6 @@ function DetailsSection({ character }) {
     }
   }
 
-  function startLevelUp() {
-    const className = character.classes?.[0]?.name
-
-    if (!className) return
-
-    setLevelUpPreview(getLevelUpPreview(character, className))
-  }
-
-  const asiOrFeatRequirement = levelUpPreview?.requiredChoices.find((choice) => {
-    return choice.type === 'asi_or_feat'
-  })
-  const availableFeats = asiOrFeatRequirement
-    ? getAvailableFeats(character, asiOrFeatRequirement.featChoice)
-    : []
-  const hpRequirement = levelUpPreview?.requiredChoices.find((choice) => {
-    return choice.id === 'hp_increase'
-  })
-  const hpHitDieSides = getHitDieSides(hpRequirement?.hitDie)
-  const levelUpChoices = {
-    hpIncrease:
-      hpChoice.mode === 'manual'
-        ? { mode: 'manual', rolled: Number(manualHpRoll) }
-        : { mode: 'average' },
-    asiOrFeat: asiOrFeatChoice,
-  }
-  const levelUpDraft = levelUpPreview
-    ? buildLevelUpDraft(character, levelUpPreview, levelUpChoices)
-    : null
-
   return (
     <div className="details-section">
       <SectionCard title="Identità">
@@ -230,180 +183,6 @@ function DetailsSection({ character }) {
           ))}
         </div>
 
-        {character.progressionPlan && (
-          <p className="details-text">
-            {character.progressionPlan.label}: livello bersaglio {character.progressionPlan.targetLevel}
-          </p>
-        )}
-      </SectionCard>
-
-      <SectionCard title="Progressione">
-        <div className="progression-card">
-          <div className="progression-card__summary">
-            <span>Livello attuale</span>
-            <strong>{character.level ?? 'Non indicato'}</strong>
-          </div>
-
-          <button
-            className="progression-card__start"
-            type="button"
-            onClick={startLevelUp}
-          >
-            Passa di livello
-          </button>
-
-          {levelUpPreview && (
-            <div className="progression-flow">
-              <div className="progression-block">
-                <h4>Anteprima</h4>
-                <div className="progression-change-list">
-                  {levelUpPreview.automaticChanges.map((change) => (
-                    <div key={change.id} className="progression-change">
-                      <span>{change.label}</span>
-                      <strong>{change.from}{' -> '}{change.to}</strong>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="progression-block">
-                <h4>Punti ferita</h4>
-                <div className="progression-choice-row">
-                  <button
-                    className={`progression-choice ${hpChoice.mode === 'average' ? 'progression-choice--active' : ''}`}
-                    type="button"
-                    onClick={() => setHpChoice({ mode: 'average' })}
-                  >
-                    Media fissa
-                  </button>
-                  <button
-                    className={`progression-choice ${hpChoice.mode === 'manual' ? 'progression-choice--active' : ''}`}
-                    type="button"
-                    onClick={() => setHpChoice({ mode: 'manual' })}
-                  >
-                    Tiro manuale
-                  </button>
-                </div>
-
-                {hpChoice.mode === 'manual' && (
-                  <>
-                    <DiceRoller
-                      sides={hpHitDieSides}
-                      label={`Tira ${hpRequirement?.hitDie ?? 'dado vita'}`}
-                      modifier={hpRequirement?.constitutionModifier ?? 0}
-                      onRoll={(result) => {
-                        setHpChoice({ mode: 'manual' })
-                        setManualHpRoll(String(result.rolls[0]))
-                      }}
-                    />
-
-                    <label className="progression-field">
-                      <span>Risultato dado vita</span>
-                      <input
-                        type="number"
-                        min="1"
-                        value={manualHpRoll}
-                        onChange={(event) => setManualHpRoll(event.target.value)}
-                      />
-                    </label>
-                  </>
-                )}
-              </div>
-
-              {asiOrFeatRequirement && (
-                <div className="progression-block">
-                  <h4>Aumento o talento</h4>
-                  <div className="progression-choice-row">
-                    <button
-                      className={`progression-choice ${asiOrFeatChoice.mode === 'feat' ? 'progression-choice--active' : ''}`}
-                      type="button"
-                      onClick={() => setAsiOrFeatChoice({ mode: 'feat', featId: '' })}
-                    >
-                      Talento
-                    </button>
-                    <button
-                      className={`progression-choice ${asiOrFeatChoice.mode === 'asi' ? 'progression-choice--active' : ''}`}
-                      type="button"
-                      onClick={() =>
-                        setAsiOrFeatChoice({
-                          mode: 'asi',
-                          increases: [
-                            { ability: 'dex', amount: 1 },
-                            { ability: 'wis', amount: 1 },
-                          ],
-                        })
-                      }
-                    >
-                      ASI rapido
-                    </button>
-                  </div>
-
-                  {asiOrFeatChoice.mode === 'feat' && (
-                    <label className="progression-field">
-                      <span>Talento disponibile</span>
-                      <select
-                        value={asiOrFeatChoice.featId}
-                        onChange={(event) =>
-                          setAsiOrFeatChoice({
-                            mode: 'feat',
-                            featId: event.target.value,
-                          })
-                        }
-                      >
-                        <option value="">Scegli talento</option>
-                        {availableFeats.map((feat) => (
-                          <option key={feat.id} value={feat.id}>
-                            {feat.name}
-                          </option>
-                        ))}
-                      </select>
-                    </label>
-                  )}
-                </div>
-              )}
-
-              {levelUpDraft && (
-                <div className="progression-block">
-                  <h4>Riepilogo draft</h4>
-                  <div className="progression-change-list">
-                    <div className="progression-change">
-                      <span>PF massimi</span>
-                      <strong>{levelUpDraft.hp.maxHpFrom}{' -> '}{levelUpDraft.hp.maxHpTo}</strong>
-                    </div>
-                    {levelUpDraft.asiOrFeat?.feat && (
-                      <div className="progression-change">
-                        <span>Talento</span>
-                        <strong>{levelUpDraft.asiOrFeat.feat.name}</strong>
-                      </div>
-                    )}
-                    {levelUpDraft.asiOrFeat?.abilityIncreases?.map((increase) => (
-                      <div key={increase.ability} className="progression-change">
-                        <span>{increase.ability.toUpperCase()}</span>
-                        <strong>{increase.from}{' -> '}{increase.to}</strong>
-                      </div>
-                    ))}
-                  </div>
-
-                  {levelUpDraft.warnings.length > 0 && (
-                    <div className="progression-warnings">
-                      {levelUpDraft.warnings.map((warning) => (
-                        <div key={warning}>{warning}</div>
-                      ))}
-                    </div>
-                  )}
-
-                  <button
-                    className="progression-card__confirm"
-                    type="button"
-                    disabled
-                  >
-                    Conferma level up
-                  </button>
-                </div>
-              )}
-            </div>
-          )}
-        </div>
       </SectionCard>
 
       {details.backstoryShort && (

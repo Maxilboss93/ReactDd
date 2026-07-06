@@ -1,8 +1,10 @@
 ﻿import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from '../components/authentication/AuthContext.jsx'
 import AuthPage from '../components/authentication/AuthPage.jsx'
+import CharacterCreationPage from '../pages/CharacterCreationPage.jsx'
 import CharacterListPage from '../pages/CharacterListPage.jsx'
 import CharacterPage from '../pages/CharacterPage.jsx'
+import HomePage from '../pages/HomePage.jsx'
 
 function RequireAuth({ children }) {
   const { isAuthenticated } = useAuth()
@@ -20,12 +22,21 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Navigate to={isAuthenticated ? '/schede' : '/login'} replace />}
+          element={<Navigate to={isAuthenticated ? '/home' : '/login'} replace />}
         />
 
         <Route
           path="/login"
-          element={isAuthenticated ? <Navigate to="/schede" replace /> : <AuthPage />}
+          element={isAuthenticated ? <Navigate to="/home" replace /> : <AuthPage />}
+        />
+
+        <Route
+          path="/home"
+          element={
+            <RequireAuth>
+              <HomePage />
+            </RequireAuth>
+          }
         />
 
         <Route
@@ -38,6 +49,15 @@ function App() {
         />
 
         <Route
+          path="/crea-pg"
+          element={
+            <RequireAuth>
+              <CharacterCreationPage />
+            </RequireAuth>
+          }
+        />
+
+        <Route
           path="/scheda/:id"
           element={
             <RequireAuth>
@@ -45,6 +65,7 @@ function App() {
             </RequireAuth>
           }
         />
+        
       </Routes>
     </BrowserRouter>
   )

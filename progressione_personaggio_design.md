@@ -957,3 +957,148 @@ scelte richieste
 ```
 
 Shisui serve come scenario concreto per verificare che il sistema funzioni.
+
+## Aggiornamento 2026-05-12 - navigazione e contenitori
+
+Abbiamo chiarito che la progressione non deve restare dentro `Dettagli`.
+
+La struttura desiderata ora e:
+
+```txt
+Login
+-> Home
+   -> Gestione PG
+   -> Le mie campagne
+
+Gestione PG
+-> crea nuovo PG
+-> lista PG esistenti
+-> apri PG
+-> duplica PG
+-> elimina PG
+
+Scheda PG
+-> tab interne della scheda
+   -> Panoramica
+   -> Capacita / Incantesimi
+   -> Equipaggiamento
+   -> Dettagli
+   -> Progressione
+```
+
+### Home post-login
+
+Dopo il login l'utente non deve finire direttamente dentro una scheda o dentro un menu nascosto.
+
+La prima schermata deve essere una Home semplice con scelte principali:
+
+```txt
+Gestione PG
+Le mie campagne
+```
+
+La creazione di un nuovo personaggio non sta piu direttamente in Home.
+Sta dentro `Gestione PG`, insieme a lista, duplicazione ed eliminazione.
+
+### Gestione PG
+
+`/schede` diventa concettualmente `Gestione PG`.
+
+Funzioni previste:
+
+- creare un nuovo PG;
+- vedere la lista dei PG esistenti;
+- aprire una scheda;
+- duplicare un PG per esperimenti o come base veloce;
+- eliminare un PG.
+
+Per ora duplicazione, eliminazione e creazione possono essere placeholder.
+La cosa importante e avere gia il contenitore giusto.
+
+### Progressione come tab
+
+La sezione `Progressione` e stata separata da `Dettagli`.
+
+Non e un dettaglio statico del personaggio, ma un flusso operativo.
+Deve diventare una tab interna della scheda, accanto alle altre sezioni.
+
+La tab `Progressione` gestira:
+
+- piano futuro del personaggio;
+- level up;
+- multiclass;
+- storico o draft delle scelte;
+- in futuro, ponte con la creazione del PG da livello 0.
+
+### Topbar
+
+La topbar va trattata come componente riutilizzabile.
+
+Direzione:
+
+```txt
+AppTopbar
+-> titolo centrale
+-> freccia indietro opzionale
+-> menu opzionale
+```
+
+Per ora:
+
+- Home usa topbar semplice con solo titolo;
+- Gestione PG usa topbar con ritorno a Home;
+- Scheda PG potra usare topbar con ritorno a Gestione PG;
+- hamburger/menu globale arriva dopo, quando le sezioni principali sono stabili.
+
+### Barra tab della scheda
+
+Le tab interne della scheda devono stare nella barra in basso.
+
+Dato che le voci aumentano, la barra deve poter scorrere orizzontalmente invece di comprimere i tasti.
+
+La navigazione interna alla scheda e diversa dalla navigazione globale:
+
+```txt
+Globale:
+Home, Gestione PG, Campagne
+
+Scheda:
+Panoramica, Capacita, Equipaggiamento, Dettagli, Progressione
+```
+
+### Radius e stile UI
+
+Abbiamo deciso di uniformare i bordi arrotondati:
+
+```css
+--radius-ui: 8px;
+--radius-pill: 999px;
+```
+
+Regola:
+
+- card, bottoni, input, tab e pannelli usano `--radius-ui`;
+- chip, badge e pill usano `--radius-pill`.
+
+Questo rende l'app piu coerente e meno casuale visivamente.
+
+## Prossimi temi da discutere
+
+Prima di andare avanti con `applyLevelUpDraft`, dobbiamo riallinearci sul database.
+
+Domande da affrontare:
+
+1. Il database deve salvare personaggi gia "materializzati" come JSON completo, oppure salvare scelte/progressione e derivare la scheda?
+2. La duplicazione PG crea una copia completa o una copia collegata alla scheda originale?
+3. La creazione PG parte da un'entita `draft` livello 0?
+4. Il level up deve essere salvato come storico consultabile?
+5. Le campagne devono avere relazione con utenti, PG e personaggi non giocanti?
+6. Cosa resta fake/local state e cosa deve diventare persistente subito?
+
+Decisione provvisoria:
+
+```txt
+Prima stabilire modello DB e flussi di persistenza.
+Poi progettare creazione PG livello 0.
+Poi tornare ad applyLevelUpDraft sapendo cosa deve salvare davvero.
+```
