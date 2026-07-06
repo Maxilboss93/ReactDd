@@ -618,7 +618,7 @@ function CharacterCreationPage() {
                     {Object.values(choices.backgroundIncreases ?? {}).reduce((total, amount) => total + (Number(amount) || 0), 0)}/3
                   </strong>
                   <small>
-                    Usa +2/+1 oppure +1/+1/+1.
+                    Usa +2/+1 oppure +1/+1/+1 tra quelle del background.
                   </small>
                 </div>
 
