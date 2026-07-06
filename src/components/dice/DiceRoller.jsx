@@ -4,6 +4,17 @@ import DiceBox from '@drdreo/dice-box-threejs'
 import { rollDice, rollDicePool, rollDie } from '../../services/diceService.js'
 
 const DICE_OPTIONS = [4, 6, 8, 10, 12, 20, 100]
+const PHYSICS_ROLL_TIMEOUT_MS = 1600
+
+function withTimeout(promise, timeoutMs) {
+  let timeoutId
+
+  const timeout = new Promise((_, reject) => {
+    timeoutId = setTimeout(() => reject(new Error('Timeout lancio 3D')), timeoutMs)
+  })
+
+  return Promise.race([promise, timeout]).finally(() => clearTimeout(timeoutId))
+}
 
 // Crea dadi visuali per gruppi diversi, mantenendo il tipo di dado su ogni elemento.
 function buildRandomDicePool(groups) {
@@ -116,6 +127,7 @@ function DiceRoller({
   })
   const visualDiceCount = activeGroups.reduce((total, group) => total + group.count, 0)
   const isDisabled = disabled || rolling || visualDiceCount <= 0
+  const shouldShowCssDice = !usePhysics || !isPhysicsReady || visualDiceCount > 0
   const visibleDice = displayRolls.length === visualDiceCount
     ? displayRolls
     : activeGroups.flatMap((group, groupIndex) =>
@@ -182,7 +194,10 @@ function DiceRoller({
 
     if (usePhysics && isPhysicsReady && diceBoxRef.current) {
       try {
-        const physicsResult = await diceBoxRef.current.roll(getDiceNotation(activeGroups))
+        const physicsResult = await withTimeout(
+          diceBoxRef.current.roll(getDiceNotation(activeGroups)),
+          PHYSICS_ROLL_TIMEOUT_MS
+        )
         clearInterval(animation)
         const result = normalizePhysicsResult(physicsResult, {
           activeGroups,
@@ -198,6 +213,7 @@ function DiceRoller({
       } catch (error) {
         console.error('Lancio 3D non riuscito, uso fallback CSS:', error)
         setUsePhysics(false)
+        diceBoxRef.current?.clearDice?.()
       }
     }
 
@@ -292,7 +308,7 @@ function DiceRoller({
           className={`dice-roller__physics-box ${isPhysicsReady ? 'dice-roller__physics-box--ready' : ''}`}
         />
 
-        {(!usePhysics || !isPhysicsReady) && (
+        {shouldShowCssDice && (
           <div className="dice-roller__dice-pool">
             {visibleDice.map((die, index) => {
               const isKeptRoll =
