@@ -39,6 +39,9 @@ const STANDARD_ABILITIES_BY_CLASS = {
 }
 
 const DEFAULT_BASE_ABILITIES = STANDARD_ABILITIES_BY_CLASS.guerriero
+const EMPTY_BASE_ABILITIES = Object.fromEntries(
+  Object.keys(ABILITY_LABELS).map((ability) => [ability, ''])
+)
 
 const SKILLS = [
   { id: 'acrobatics', label: 'Acrobazia', ability: 'dex' },
@@ -228,29 +231,29 @@ function getDefaultToolChoices(choice, previousToolIds = [], excludedToolIds = [
     }
   })
 
-  options.forEach((tool) => {
-    if (
-      selected.length < count &&
-      !excluded.has(tool.id) &&
-      !selected.includes(tool.id)
-    ) {
-      selected.push(tool.id)
-    }
-  })
-
   return selected
 }
 
 export function getDefaultBackgroundToolChoices(backgroundId, previousToolIds = []) {
-  const background = findById(BACKGROUND_OPTIONS, backgroundId) ?? BACKGROUND_OPTIONS[0]
+  const background = findById(BACKGROUND_OPTIONS, backgroundId)
+
+  if (!background) {
+    return []
+  }
+
   return getDefaultToolChoices(background.toolChoices, previousToolIds)
 }
 
 export function getDefaultClassToolChoices(classId, backgroundId, previousToolIds = [], backgroundToolIds = []) {
-  const characterClass = findById(CLASS_OPTIONS, classId) ?? CLASS_OPTIONS[0]
-  const background = findById(BACKGROUND_OPTIONS, backgroundId) ?? BACKGROUND_OPTIONS[0]
+  const characterClass = findById(CLASS_OPTIONS, classId)
+  const background = findById(BACKGROUND_OPTIONS, backgroundId)
+
+  if (!characterClass) {
+    return []
+  }
+
   const excludedToolIds = getAllToolIds([
-    ...(background.fixedTools ?? []),
+    ...(background?.fixedTools ?? []),
     ...backgroundToolIds,
   ])
 
@@ -258,9 +261,14 @@ export function getDefaultClassToolChoices(classId, backgroundId, previousToolId
 }
 
 export function getDefaultClassSkillChoices(classId, backgroundId, previousSkillIds = []) {
-  const characterClass = findById(CLASS_OPTIONS, classId) ?? CLASS_OPTIONS[0]
-  const background = findById(BACKGROUND_OPTIONS, backgroundId) ?? BACKGROUND_OPTIONS[0]
-  const backgroundSkills = new Set(background.skills)
+  const characterClass = findById(CLASS_OPTIONS, classId)
+
+  if (!characterClass) {
+    return []
+  }
+
+  const background = findById(BACKGROUND_OPTIONS, backgroundId)
+  const backgroundSkills = new Set(background?.skills ?? [])
   const options = characterClass.skillChoices?.options ?? []
   const count = characterClass.skillChoices?.count ?? 0
   const selected = []
@@ -276,42 +284,20 @@ export function getDefaultClassSkillChoices(classId, backgroundId, previousSkill
     }
   })
 
-  options.forEach((skillId) => {
-    if (
-      selected.length < count &&
-      !backgroundSkills.has(skillId) &&
-      !selected.includes(skillId)
-    ) {
-      selected.push(skillId)
-    }
-  })
-
   return selected
 }
 
 export function getDefaultBackgroundIncreases(classId, backgroundId, baseAbilities = null) {
-  const characterClass = findById(CLASS_OPTIONS, classId) ?? CLASS_OPTIONS[0]
-  const background = findById(BACKGROUND_OPTIONS, backgroundId) ?? BACKGROUND_OPTIONS[0]
+  const background = findById(BACKGROUND_OPTIONS, backgroundId)
+
+  if (!background) {
+    return {}
+  }
+
   const abilities = background.abilities ?? []
-  const scores = baseAbilities ?? STANDARD_ABILITIES_BY_CLASS[classId] ?? DEFAULT_BASE_ABILITIES
-  const priority = [
-    ...characterClass.savingThrows,
-    ...characterClass.primaryAbilities,
-    ...abilities
-      .filter((ability) => !characterClass.savingThrows.includes(ability) && !characterClass.primaryAbilities.includes(ability))
-      .sort((left, right) => (scores[right] ?? 0) - (scores[left] ?? 0)),
-  ]
-  const uniquePriority = priority.filter((ability, index) => {
-    return abilities.includes(ability) && priority.indexOf(ability) === index
-  })
-  const first = uniquePriority[0] ?? abilities[0]
-  const second = uniquePriority.find((ability) => ability !== first) ?? abilities.find((ability) => ability !== first)
 
   return Object.fromEntries(
-    abilities.map((ability) => [
-      ability,
-      ability === first ? 2 : ability === second ? 1 : 0,
-    ])
+    abilities.map((ability) => [ability, 0])
   )
 }
 
@@ -478,10 +464,23 @@ function applyBackgroundAbilityIncreases(baseAbilities, background, increases) {
       warnings.push(`${ABILITY_LABELS[ability] ?? ability} puo ricevere al massimo +2 dal background.`)
     }
 
-    nextAbilities[ability] = Math.min(20, (nextAbilities[ability] ?? 10) + increase)
+    const baseScore = Number(nextAbilities[ability])
+
+    if (!Number.isFinite(baseScore)) {
+      return
+    }
+
+    nextAbilities[ability] = Math.min(20, baseScore + increase)
   })
 
   return { abilities: nextAbilities, warnings }
+}
+
+function hasCompleteAbilityMap(abilities) {
+  return Object.keys(ABILITY_LABELS).every((ability) => {
+    const score = Number(abilities?.[ability])
+    return Number.isFinite(score) && score > 0
+  })
 }
 
 function buildFeatures(characterClass, species, background) {
@@ -628,19 +627,19 @@ export function getDefaultCreationChoices() {
   return {
     name: '',
     concept: '',
-    classId: 'guerriero',
-    speciesId: 'umano',
-    backgroundId: 'soldato',
-    alignment: 'Neutrale Buono',
-    abilityMethod: 'standard',
-    baseAbilities: { ...DEFAULT_BASE_ABILITIES },
+    classId: '',
+    speciesId: '',
+    backgroundId: '',
+    alignment: '',
+    abilityMethod: '',
+    baseAbilities: { ...EMPTY_BASE_ABILITIES },
     abilityRolls: [],
-    backgroundIncreases: getDefaultBackgroundIncreases('guerriero', 'soldato', DEFAULT_BASE_ABILITIES),
-    selectedClassSkills: getDefaultClassSkillChoices('guerriero', 'soldato'),
-    selectedBackgroundTools: getDefaultBackgroundToolChoices('soldato'),
-    selectedClassTools: getDefaultClassToolChoices('guerriero', 'soldato'),
-    languages: ['Comune', 'Elfico', 'Nanico'],
-    equipmentMode: 'gold',
+    backgroundIncreases: {},
+    selectedClassSkills: [],
+    selectedBackgroundTools: [],
+    selectedClassTools: [],
+    languages: [],
+    equipmentMode: '',
   }
 }
 
@@ -650,55 +649,59 @@ export function getCreationPreview(choices) {
   const background = findById(BACKGROUND_OPTIONS, choices.backgroundId)
   const warnings = []
 
-  if (!characterClass) warnings.push('Classe non valida.')
-  if (!species) warnings.push('Specie non valida.')
-  if (!background) warnings.push('Background non valido.')
+  if (!characterClass) warnings.push('Scegli una classe.')
+  if (!species) warnings.push('Scegli una specie.')
+  if (!background) warnings.push('Scegli un background.')
 
-  if (!characterClass || !species || !background) {
-    return { type: 'character_creation_preview', ready: false, warnings, steps: [] }
-  }
-
-  const baseAbilities = choices.baseAbilities ?? DEFAULT_BASE_ABILITIES
-  const abilityResult = applyBackgroundAbilityIncreases(
-    baseAbilities,
-    background,
-    choices.backgroundIncreases
-  )
-  const abilityWarnings = [
-    ...validateAbilityMethod(choices, baseAbilities),
-    ...abilityResult.warnings,
-  ]
-  const skillWarnings = validateClassSkillChoices(
-    characterClass,
-    background,
-    choices.selectedClassSkills
-  )
+  const baseAbilities = choices.baseAbilities ?? EMPTY_BASE_ABILITIES
+  const abilityResult = background
+    ? applyBackgroundAbilityIncreases(
+      baseAbilities,
+      background,
+      choices.backgroundIncreases
+    )
+    : { abilities: { ...baseAbilities }, warnings: [] }
+  const abilityWarnings = characterClass && background
+    ? [
+      ...validateAbilityMethod(choices, baseAbilities),
+      ...abilityResult.warnings,
+    ]
+    : []
+  const skillWarnings = characterClass && background
+    ? validateClassSkillChoices(
+      characterClass,
+      background,
+      choices.selectedClassSkills
+    )
+    : []
   const backgroundTools = getAllToolIds([
-    ...(background.fixedTools ?? []),
+    ...(background?.fixedTools ?? []),
     ...(choices.selectedBackgroundTools ?? []),
   ])
   const classTools = getAllToolIds([
-    ...(characterClass.fixedTools ?? []),
+    ...(characterClass?.fixedTools ?? []),
     ...(choices.selectedClassTools ?? []),
   ])
   const toolWarnings = [
     ...validateToolChoices(
       'strumento del background',
-      background.toolChoices,
+      background?.toolChoices,
       choices.selectedBackgroundTools
     ),
     ...validateToolChoices(
       'strumento della classe',
-      characterClass.toolChoices,
+      characterClass?.toolChoices,
       choices.selectedClassTools,
       backgroundTools
     ),
   ]
-  const conMod = getAbilityModifier(abilityResult.abilities.con)
-  const hpMax = getHitDieSize(characterClass.hitDie) + conMod
-  const primaryScores = characterClass.primaryAbilities.map((ability) => ({
+  const hasCompleteAbilities = hasCompleteAbilityMap(abilityResult.abilities)
+  const conMod = hasCompleteAbilities ? getAbilityModifier(abilityResult.abilities.con) : null
+  const hpMax = characterClass && conMod !== null ? getHitDieSize(characterClass.hitDie) + conMod : null
+  const dexMod = hasCompleteAbilities ? getAbilityModifier(abilityResult.abilities.dex) : null
+  const primaryScores = (characterClass?.primaryAbilities ?? []).map((ability) => ({
     ability,
-    score: abilityResult.abilities[ability],
+    score: abilityResult.abilities[ability] ?? null,
   }))
 
   return {
@@ -719,49 +722,49 @@ export function getCreationPreview(choices) {
     abilityModifiers: Object.fromEntries(
       Object.entries(abilityResult.abilities).map(([ability, score]) => [
         ability,
-        getAbilityModifier(score),
+        Number.isFinite(Number(score)) ? getAbilityModifier(Number(score)) : null,
       ])
     ),
     classSkills: {
-      count: characterClass.skillChoices.count,
-      options: characterClass.skillChoices.options,
+      count: characterClass?.skillChoices?.count ?? 0,
+      options: characterClass?.skillChoices?.options ?? [],
       selected: choices.selectedClassSkills ?? [],
-      background: background.skills,
+      background: background?.skills ?? [],
     },
     backgroundTools: {
-      fixed: background.fixedTools ?? [],
-      choice: background.toolChoices ?? null,
+      fixed: background?.fixedTools ?? [],
+      choice: background?.toolChoices ?? null,
       selected: choices.selectedBackgroundTools ?? [],
       all: backgroundTools,
-      options: getToolChoiceOptions(background.toolChoices),
+      options: getToolChoiceOptions(background?.toolChoices),
     },
     classTools: {
-      fixed: characterClass.fixedTools ?? [],
-      choice: characterClass.toolChoices ?? null,
+      fixed: characterClass?.fixedTools ?? [],
+      choice: characterClass?.toolChoices ?? null,
       selected: choices.selectedClassTools ?? [],
       all: classTools,
-      options: getToolChoiceOptions(characterClass.toolChoices),
+      options: getToolChoiceOptions(characterClass?.toolChoices),
     },
     classFit: {
       primaryScores,
-      hasStrongPrimary: primaryScores.some((item) => item.score >= 15),
-      meetsMulticlassFloor: primaryScores.every((item) => item.score >= 13),
+      hasStrongPrimary: primaryScores.some((item) => Number(item.score) >= 15),
+      meetsMulticlassFloor: primaryScores.every((item) => Number(item.score) >= 13),
     },
     derived: {
       level: 1,
       proficiencyBonus: 2,
       hpMax,
-      ac: 10 + getAbilityModifier(abilityResult.abilities.dex),
-      speed: species.speed,
-      hitDice: { current: 1, max: 1, type: characterClass.hitDie },
+      ac: dexMod === null ? null : 10 + dexMod,
+      speed: species?.speed ?? null,
+      hitDice: { current: 1, max: 1, type: characterClass?.hitDie ?? null },
     },
     grants: [
-      { label: 'Talento origine', value: background.featName },
-      { label: 'Abilita background', value: background.skills.map((skillId) => getSkillById(skillId)?.label ?? skillId).join(', ') },
-      { label: 'Abilita classe', value: (choices.selectedClassSkills ?? []).map((skillId) => getSkillById(skillId)?.label ?? skillId).join(', ') },
-      { label: 'Strumenti background', value: getToolLabels(backgroundTools).join(', ') || '-' },
-      { label: 'Strumenti classe', value: getToolLabels(classTools).join(', ') || '-' },
-      { label: 'Lingue', value: choices.languages.join(', ') },
+      { label: 'Talento origine', value: background?.featName ?? '' },
+      { label: 'Competenze background', value: (background?.skills ?? []).map((skillId) => getSkillById(skillId)?.label ?? skillId).join(', ') },
+      { label: 'Competenze classe', value: (choices.selectedClassSkills ?? []).map((skillId) => getSkillById(skillId)?.label ?? skillId).join(', ') },
+      { label: 'Strumenti background', value: getToolLabels(backgroundTools).join(', ') },
+      { label: 'Strumenti classe', value: getToolLabels(classTools).join(', ') },
+      { label: 'Lingue', value: (choices.languages ?? []).join(', ') },
     ],
   }
 }
@@ -772,6 +775,14 @@ export function buildCreationDraft(choices) {
 
   if (!choices.name?.trim()) {
     warnings.push('Inserisci il nome del personaggio.')
+  }
+
+  if (!choices.alignment) {
+    warnings.push('Scegli un allineamento.')
+  }
+
+  if (!choices.equipmentMode) {
+    warnings.push('Scegli l\'equipaggiamento iniziale.')
   }
 
   return {

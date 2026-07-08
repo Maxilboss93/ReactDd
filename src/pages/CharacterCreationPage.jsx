@@ -59,7 +59,19 @@ function toolLabel(toolLabels, id) {
 }
 
 function formatModifier(value) {
+  if (value === null || value === undefined || !Number.isFinite(Number(value))) {
+    return '-'
+  }
+
   return value >= 0 ? `+${value}` : String(value)
+}
+
+function formatSummaryNumber(value) {
+  if (value === null || value === undefined || value === '') {
+    return ''
+  }
+
+  return Number.isFinite(Number(value)) ? String(value) : ''
 }
 
 function buildAbilityMap(scores) {
@@ -77,6 +89,9 @@ function CharacterCreationPage() {
   const [saving, setSaving] = useState(false)
   const draft = buildCreationDraft(choices)
   const preview = draft.preview
+  const originSummary = [preview.species?.name, preview.background?.name]
+    .filter(Boolean)
+    .join(' / ')
 
   function updateChoice(key, value) {
     setChoices((prevChoices) => ({
@@ -156,9 +171,10 @@ function CharacterCreationPage() {
   function selectAbilityMethod(method) {
     setChoices((prevChoices) => {
       if (method === 'standard') {
-        const nextBaseAbilities = {
-          ...(catalog.standardAbilitiesByClass[prevChoices.classId] ?? catalog.standardAbilitiesByClass.guerriero),
-        }
+        const standardAbilities = catalog.standardAbilitiesByClass[prevChoices.classId]
+        const nextBaseAbilities = standardAbilities
+          ? { ...standardAbilities }
+          : prevChoices.baseAbilities
 
         return {
           ...prevChoices,
@@ -437,7 +453,9 @@ function CharacterCreationPage() {
               </SectionCard>
 
               <SectionCard title="Strumenti background">
-                {preview.backgroundTools.choice ? (
+                {!preview.background ? (
+                  <div className="list-empty">Scegli un background per vedere gli strumenti.</div>
+                ) : preview.backgroundTools.choice ? (
                   <>
                     <div className="creation-skill-choice-head">
                       <span>
@@ -485,7 +503,7 @@ function CharacterCreationPage() {
             </>
           )}
 
-          {activeStep === 'abilities' && preview.background && (
+          {activeStep === 'abilities' && preview.class && preview.background && (
             <>
               <SectionCard title="Metodo valori">
                 <div className="creation-card-grid creation-card-grid--method">
@@ -540,12 +558,16 @@ function CharacterCreationPage() {
                   </div>
                 )}
 
+                {!choices.abilityMethod && (
+                  <div className="list-empty">Scegli un metodo per generare i valori base.</div>
+                )}
+
                 {choices.abilityMethod === 'standard' && (
                   <div className="creation-locked-grid">
                     {ABILITY_ORDER.map((ability) => (
                       <div key={ability} className="creation-locked-score">
                         <span>{abilityLabel(catalog.abilities, ability)}</span>
-                        <strong>{choices.baseAbilities[ability]}</strong>
+                        <strong>{choices.baseAbilities[ability] || '-'}</strong>
                       </div>
                     ))}
                   </div>
@@ -595,7 +617,7 @@ function CharacterCreationPage() {
                       <label key={ability} className="creation-field">
                         <span>{abilityLabel(catalog.abilities, ability)}</span>
                         <select
-                          value={choices.baseAbilities[ability]}
+                          value={choices.baseAbilities[ability] ?? ''}
                           disabled={choices.abilityMethod === 'roll' && (choices.abilityRolls ?? []).length !== 6}
                           onChange={(event) => updateBaseAbility(ability, event.target.value)}
                         >
@@ -624,7 +646,7 @@ function CharacterCreationPage() {
 
                 <div className="creation-pointbuy-grid">
                   {preview.background.abilities.map((ability) => {
-                    const increase = Number(choices.backgroundIncreases[ability] ?? 0)
+                    const increase = Number(choices.backgroundIncreases?.[ability] ?? 0)
                     const totalIncrease = Object.values(choices.backgroundIncreases ?? {}).reduce((total, amount) => {
                       return total + (Number(amount) || 0)
                     }, 0)
@@ -663,13 +685,13 @@ function CharacterCreationPage() {
               <SectionCard title="Totali e competenze">
                 <div className="creation-ability-grid">
                   {ABILITY_ORDER.map((ability) => {
-                    const modifier = preview.abilityModifiers?.[ability] ?? 0
+                    const modifier = preview.abilityModifiers?.[ability]
                     const saveIsProficient = preview.class?.savingThrows.includes(ability)
 
                     return (
                       <div key={ability} className="creation-ability">
                         <span>{abilityLabel(catalog.abilities, ability)}</span>
-                        <strong>{preview.abilities[ability]}</strong>
+                        <strong>{preview.abilities[ability] || '-'}</strong>
                         <div className="creation-ability-meta">
                           <small>{formatModifier(modifier)}</small>
                           <span
@@ -711,37 +733,43 @@ function CharacterCreationPage() {
               </SectionCard>
 
               <SectionCard title="Competenze classe">
-                <div className="creation-skill-choice-head">
-                  <span>
-                    {preview.classSkills.selected.length}/{preview.classSkills.count}
-                  </span>
-                </div>
-                <div className="creation-skill-choice-grid">
-                  {preview.classSkills.options.map((skillId) => {
-                    const isBackground = preview.classSkills.background.includes(skillId)
-                    const isSelected = preview.classSkills.selected.includes(skillId)
-                    const isLocked =
-                      !isSelected &&
-                      !isBackground &&
-                      preview.classSkills.selected.length >= preview.classSkills.count
+                {!preview.class || !preview.background ? (
+                  <div className="list-empty">Scegli classe e background per vedere le competenze disponibili.</div>
+                ) : (
+                  <>
+                    <div className="creation-skill-choice-head">
+                      <span>
+                        {preview.classSkills.selected.length}/{preview.classSkills.count}
+                      </span>
+                    </div>
+                    <div className="creation-skill-choice-grid">
+                      {preview.classSkills.options.map((skillId) => {
+                        const isBackground = preview.classSkills.background.includes(skillId)
+                        const isSelected = preview.classSkills.selected.includes(skillId)
+                        const isLocked =
+                          !isSelected &&
+                          !isBackground &&
+                          preview.classSkills.selected.length >= preview.classSkills.count
 
-                    return (
-                      <button
-                        key={skillId}
-                        className={`creation-skill-choice ${isSelected ? 'is-on' : ''} ${isBackground ? 'is-background' : ''}`}
-                        type="button"
-                        disabled={isBackground || isLocked}
-                        onClick={() => toggleClassSkill(skillId)}
-                      >
-                        <span>{skillLabel(catalog.skills, skillId)}</span>
-                        <small>{isBackground ? 'Background' : isSelected ? 'Classe' : ''}</small>
-                      </button>
-                    )
-                  })}
-                </div>
+                        return (
+                          <button
+                            key={skillId}
+                            className={`creation-skill-choice ${isSelected ? 'is-on' : ''} ${isBackground ? 'is-background' : ''}`}
+                            type="button"
+                            disabled={isBackground || isLocked}
+                            onClick={() => toggleClassSkill(skillId)}
+                          >
+                            <span>{skillLabel(catalog.skills, skillId)}</span>
+                            <small>{isBackground ? 'Background' : isSelected ? 'Classe' : ''}</small>
+                          </button>
+                        )
+                      })}
+                    </div>
+                  </>
+                )}
               </SectionCard>
 
-              {(preview.classTools.choice || preview.classTools.all.length > 0) && (
+              {preview.class && (preview.classTools.choice || preview.classTools.all.length > 0) && (
                 <SectionCard title="Strumenti classe">
                   {preview.classTools.choice ? (
                     <>
@@ -822,6 +850,7 @@ function CharacterCreationPage() {
                     value={choices.alignment}
                     onChange={(event) => updateChoice('alignment', event.target.value)}
                   >
+                    <option value="">Scegli allineamento</option>
                     {catalog.alignments.map((alignment) => (
                       <option key={alignment} value={alignment}>
                         {alignment}
@@ -836,6 +865,7 @@ function CharacterCreationPage() {
                     value={choices.equipmentMode}
                     onChange={(event) => updateChoice('equipmentMode', event.target.value)}
                   >
+                    <option value="">Scegli equipaggiamento</option>
                     <option value="gold">50 mo dal background</option>
                     <option value="kit">Dotazione da dettagliare</option>
                   </select>
@@ -844,23 +874,23 @@ function CharacterCreationPage() {
             </SectionCard>
           )}
 
-          <SectionCard title="Riepilogo creazione">
+          <SectionCard title="Riepilogo creazione" className="section-card--summary">
             <div className="creation-summary">
               <div>
                 <span>Classe</span>
-                <strong>{preview.class?.name ?? '-'}</strong>
+                <strong>{preview.class?.name ?? ''}</strong>
               </div>
               <div>
                 <span>Origine</span>
-                <strong>{preview.species?.name ?? '-'} / {preview.background?.name ?? '-'}</strong>
+                <strong>{originSummary}</strong>
               </div>
               <div>
                 <span>PF</span>
-                <strong>{preview.derived?.hpMax ?? '-'}</strong>
+                <strong>{formatSummaryNumber(preview.derived?.hpMax)}</strong>
               </div>
               <div>
                 <span>CA base</span>
-                <strong>{preview.derived?.ac ?? '-'}</strong>
+                <strong>{formatSummaryNumber(preview.derived?.ac)}</strong>
               </div>
             </div>
 

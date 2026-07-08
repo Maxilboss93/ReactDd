@@ -774,6 +774,28 @@
   margin-top: 10px;
 }
 
+.section-card--summary {
+  background: #10151d;
+  border-color: #1b2735;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.015);
+}
+
+.section-card--summary .section-card__header h3 {
+  color: #7f8b99;
+}
+
+.section-card--summary .creation-summary div,
+.section-card--summary .creation-grants div {
+  border-color: #1d2a39;
+  background: #0d131b;
+  box-shadow: none;
+}
+
+.section-card--summary .creation-summary strong,
+.section-card--summary .creation-grants strong {
+  min-height: 17px;
+}
+
 .creation-confirm {
   width: 100%;
   min-height: 40px;
