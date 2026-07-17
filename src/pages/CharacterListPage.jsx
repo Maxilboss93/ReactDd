@@ -2,13 +2,15 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../components/authentication/AuthContext.jsx'
 import AppTopbar from '../components/layout/AppTopbar.jsx'
-import { fetchCharacters } from '../services/fakeApi.js'
+import { deleteCharacter, fetchCharacters } from '../services/fakeApi.js'
 import '../app/App.css'
 
 function CharacterListPage() {
   const { user } = useAuth()
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
+  const [deletingId, setDeletingId] = useState(null)
+  const [message, setMessage] = useState('')
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -26,6 +28,29 @@ function CharacterListPage() {
       active = false
     }
   }, [user?.id, navigate])
+
+  async function handleDelete(character) {
+    if (!user?.id || !character?.id) return
+
+    const confirmed = window.confirm(`Eliminare definitivamente ${character.name}?`)
+
+    if (!confirmed) {
+      return
+    }
+
+    setDeletingId(character.id)
+    setMessage('')
+
+    try {
+      await deleteCharacter(user.id, character.id)
+      setItems((currentItems) => currentItems.filter((item) => item.id !== character.id))
+      setMessage(`${character.name} eliminato.`)
+    } catch {
+      setMessage(`Non sono riuscito a eliminare ${character.name}.`)
+    } finally {
+      setDeletingId(null)
+    }
+  }
 
   return (
     <div className="app">
@@ -45,6 +70,13 @@ function CharacterListPage() {
               + Nuovo PG
             </button>
           </div>
+
+          {message && (
+            <div className="list-message" role="status">
+              {message}
+            </div>
+          )}
+
           {loading && <div className="list-empty">Caricamento schede...</div>}
 
           {!loading && items.length === 0 && (
@@ -57,7 +89,9 @@ function CharacterListPage() {
                 <div key={c.id} className="list-card">
                   <div className="list-name">{c.name}</div>
                   <div className="list-meta">
-                    {c.race} - {c.classes[0]?.name} {c.classes[0]?.level}
+                    {c.race} - {(c.classes ?? [])
+                      .map((characterClass) => `${characterClass.name} ${characterClass.level}`)
+                      .join(' / ')}
                   </div>
                   <div className="list-card__actions">
                     <button
@@ -79,9 +113,10 @@ function CharacterListPage() {
                     <button
                       className="list-btn list-btn--danger"
                       type="button"
-                      onClick={() => alert(`Elimina ${c.name}`)}
+                      disabled={deletingId === c.id}
+                      onClick={() => handleDelete(c)}
                     >
-                      Elimina
+                      {deletingId === c.id ? 'Elimino...' : 'Elimina'}
                     </button>
                   </div>
 

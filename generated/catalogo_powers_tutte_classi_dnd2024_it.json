@@ -16119,6 +16119,44 @@
       ]
     },
     {
+      "id": "warlock_succhiavita",
+      "name": "Succhiavita",
+      "source_type": "class",
+      "source": "Warlock",
+      "subsource": null,
+      "level": null,
+      "kind": "choice",
+      "action_type": "Nessuna",
+      "trigger": null,
+      "cost": {
+        "resource_id": null,
+        "amount": null,
+        "label": "nessun costo"
+      },
+      "uses": {
+        "max": null,
+        "scales_with": null,
+        "reset_on": null
+      },
+      "range": "Personale",
+      "area": null,
+      "duration": "Sempre attiva",
+      "roll": null,
+      "damage": null,
+      "save": {
+        "ability": null,
+        "dc": null,
+        "effect_on_success": null,
+        "effect_on_failure": null
+      },
+      "quick_effect": "Con Patto della Lama aggiungi danni necrotici ai colpi dell'arma del patto.",
+      "details": "Supplica occulta: selezionabile se rispetti livello e prerequisiti. Richiede Warlock 9+ e Patto della Lama.",
+      "tags": [
+        "Supplica",
+        "Magia"
+      ]
+    },
+    {
       "id": "warlock_sussurri_dalla_tomba",
       "name": "Sussurri dalla Tomba",
       "source_type": "class",
@@ -17676,6 +17714,7 @@
         "warlock_sguardo_delle_due_menti",
         "warlock_sottoclasse_del_warlock",
         "warlock_suppliche_occulte",
+        "warlock_succhiavita",
         "warlock_sussurri_dalla_tomba",
         "warlock_tutt_uno_con_le_ombre",
         "warlock_vigore_immondo",
@@ -18173,6 +18212,7 @@
         "warlock_patto_della_lama",
         "warlock_punizione_occulta",
         "warlock_sguardo_delle_due_menti",
+        "warlock_succhiavita",
         "warlock_sussurri_dalla_tomba",
         "warlock_tutt_uno_con_le_ombre",
         "warlock_vigore_immondo",
@@ -18457,6 +18497,7 @@
         "warlock_sguardo_delle_due_menti",
         "warlock_sottoclasse_del_warlock",
         "warlock_suppliche_occulte",
+        "warlock_succhiavita",
         "warlock_sussurri_dalla_tomba",
         "warlock_tutt_uno_con_le_ombre",
         "warlock_vigore_immondo",

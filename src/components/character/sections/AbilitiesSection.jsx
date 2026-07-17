@@ -62,7 +62,8 @@ function AbilitiesSection({ abilities, skills, proficiencyBonus, onToggleSkill, 
 
                   {relatedSkills.map((skill) => {
                     const base = abilityMod(abilityMap[skill.ability] ?? 10)
-                    const total = base + (skill.proficient ? proficiencyBonus : 0)
+                    const expertiseBonus = skill.expertise ? proficiencyBonus : 0
+                    const total = base + (skill.proficient ? proficiencyBonus : 0) + expertiseBonus
 
                     return (
                       <div key={skill.id} className="skill-row">
@@ -74,7 +75,9 @@ function AbilitiesSection({ abilities, skills, proficiencyBonus, onToggleSkill, 
                           }}
                           aria-label={`Competenza ${skill.label}`}
                         />
-                        <div className="skill-name">{skill.label}</div>
+                        <div className="skill-name">
+                          {skill.label}{skill.expertise ? ' (Maestria)' : ''}
+                        </div>
                         <div className="skill-mod">{formatMod(total)}</div>
                       </div>
                     )

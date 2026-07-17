@@ -84,12 +84,9 @@
   right: 0;
   bottom: 0;
   padding: 10px 12px 14px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 8px;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
   background: rgba(12,16,22,0.95);
   border-top: 1px solid var(--border);
 }
@@ -99,16 +96,17 @@
 }
 
 .panel_nav__item {
-  flex: 0 0 auto;
-  min-width: 96px;
+  min-width: 0;
   padding: 9px 6px;
   border-radius: var(--radius-ui);
   border: 1px solid var(--border);
   background: #111821;
   color: var(--muted);
   cursor: pointer;
-  font-size: 11px;
-  letter-spacing: 0.3px;
+  font-size: 10px;
+  letter-spacing: 0.1px;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
   text-transform: uppercase;
   transition: border-color 0.2s ease, color 0.2s ease;
 }
@@ -331,8 +329,22 @@
   font-size: 12px;
 }
 
+.list-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 .list-empty {
   color: var(--muted);
+  font-size: 13px;
+}
+
+.list-message {
+  padding: 9px 10px;
+  border: 1px solid #2a4a3a;
+  border-radius: var(--radius-ui);
+  background: #101c18;
+  color: #bfe8ce;
   font-size: 13px;
 }
 
@@ -449,6 +461,20 @@
 
 .creation-card-grid--method {
   grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+}
+
+.creation-level-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.creation-level-shortcuts .progression-choice {
+  padding-inline: 4px;
+}
+
+.creation-level-detail-grid {
+  display: none;
 }
 
 .creation-option {
@@ -706,6 +732,77 @@
 .creation-skill-choice:disabled:not(.is-background) {
   opacity: 0.45;
   cursor: not-allowed;
+}
+
+.feat-choice-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.feat-choice-group {
+  display: grid;
+  gap: 8px;
+}
+
+.feat-choice-group h4 {
+  margin: -4px 0 0;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.feat-choice-select-list {
+  display: grid;
+  gap: 8px;
+}
+
+.spell-choice-picker {
+  display: grid;
+  gap: 10px;
+}
+
+.spell-choice-selected {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.spell-choice-chip {
+  padding: 6px 8px;
+  border: 1px solid #2c5c86;
+  border-radius: var(--radius-pill);
+  background: #132235;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.spell-choice-level {
+  display: grid;
+  gap: 7px;
+}
+
+.spell-choice-level h5 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.spell-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(126px, 1fr));
+  gap: 8px;
+}
+
+.spell-choice-option {
+  min-height: 48px;
+}
+
+.spell-choice-option span {
+  overflow-wrap: anywhere;
 }
 
 .creation-ability,
@@ -1514,10 +1611,96 @@
   font-size: 13px;
 }
 
+.progression-card__start--secondary {
+  background: transparent;
+  color: var(--muted);
+}
+
 .progression-card__confirm:disabled {
   color: var(--muted);
   cursor: not-allowed;
   opacity: 0.55;
+}
+
+.progression-card__start:disabled {
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.progression-report {
+  display: grid;
+  gap: 8px;
+}
+
+.progression-report__item {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-ui);
+  background: #101823;
+}
+
+.progression-report__toggle {
+  width: 100%;
+  min-height: 54px;
+  padding: 10px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: left;
+}
+
+.progression-report__toggle span {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.progression-report__toggle strong {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.progression-report__toggle small,
+.progression-report__toggle b {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.progression-report__toggle b {
+  flex: 0 0 auto;
+  font-weight: 700;
+}
+
+.progression-report__body {
+  display: grid;
+  gap: 9px;
+  padding: 0 10px 10px;
+}
+
+.progression-report__stats {
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-ui);
+  background: #0c121b;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.progression-report__changes {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
 }
 
 .progression-flow {
@@ -1540,6 +1723,50 @@
   font-size: 12px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+}
+
+.progression-subchoice {
+  display: grid;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.progression-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.progression-option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
+  gap: 8px;
+}
+
+.progression-option {
+  min-height: 58px;
+  padding: 9px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-ui);
+  background: #121c28;
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  display: grid;
+  gap: 4px;
+}
+
+.progression-option strong {
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.progression-option span {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.25;
 }
 
 .progression-change-list {
@@ -1761,9 +1988,71 @@
 }
 
 @media (max-width: 420px) {
+  .screen {
+    padding-bottom: 108px;
+  }
+
+  .panel_nav {
+    gap: 6px;
+    padding-inline: 8px;
+  }
+
+  .panel_nav__item {
+    min-height: 40px;
+    padding: 7px 4px;
+    font-size: 9px;
+  }
+
+  .list-card__actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .list-card__actions .list-btn {
+    justify-self: stretch;
+    padding-inline: 6px;
+    text-align: center;
+  }
+
   .creation-pointbuy-grid,
   .creation-locked-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .progression-change {
+    display: inline-grid;
+    flex: 0 1 auto;
+    max-width: 100%;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 2px;
+    padding: 7px 8px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-ui);
+    background: #0c121b;
+  }
+
+  .progression-change-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .progression-change span,
+  .progression-change strong {
+    overflow-wrap: anywhere;
+  }
+
+  .progression-change strong {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 360px) {
+  .progression-asi-row,
+  .progression-choice-row {
+    grid-template-columns: 1fr;
   }
 }
 

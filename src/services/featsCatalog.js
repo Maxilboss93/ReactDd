@@ -1,5 +1,7 @@
 import featsCatalog from '../../generated/dnd5e2024_rules_catalogs_it/rules/feats/feats.json'
 
+const ASI_FEAT_ID = 'aumento-dei-punteggi-di-caratteristica'
+
 function getTotalLevel(character, context = {}) {
   return context.characterLevel ?? character?.level ?? (character?.classes ?? []).reduce((total, characterClass) => {
     return total + (characterClass.level ?? 0)
@@ -84,6 +86,10 @@ export function getAvailableFeats(character, featChoice) {
   }
 
   return featsCatalog.items.filter((feat) => {
+    if (feat.id === ASI_FEAT_ID) {
+      return false
+    }
+
     const isAllowedCategory =
       allowedCategories.length === 0 || allowedCategories.includes(feat.category)
 

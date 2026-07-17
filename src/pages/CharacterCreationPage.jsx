@@ -4,9 +4,16 @@ import { useNavigate } from 'react-router-dom'
 import '../app/App.css'
 import AppTopbar from '../components/layout/AppTopbar.jsx'
 import SectionCard from '../components/general/card/SectionCard.jsx'
+import FeatChoicesPanel from '../components/character/FeatChoicesPanel.jsx'
 import { useAuth } from '../components/authentication/AuthContext.jsx'
 import { rollDie } from '../services/diceService.js'
 import { createCharacter } from '../services/fakeApi.js'
+import { getAvailableFeats } from '../services/featsCatalog.js'
+import { getFeatChoiceRequirements } from '../services/featChoiceService.js'
+import {
+  getSubclassSpellcastingChoiceRequirements,
+  getWarlockInvocationSubchoiceRequirements,
+} from '../services/progressionService.js'
 import {
   applyCreationDraft,
   buildCreationDraft,
@@ -27,6 +34,59 @@ const STEPS = [
 ]
 
 const ABILITY_ORDER = ['str', 'dex', 'con', 'int', 'wis', 'cha']
+const STARTING_LEVEL_OPTIONS = Array.from({ length: 20 }, (_, index) => index + 1)
+const QUICK_STARTING_LEVELS = [1, 3, 5, 10, 15, 20]
+
+const DEFAULT_LEVEL_ASI_CHOICE = {
+  mode: 'asi',
+  increases: [
+    { ability: 'dex', amount: 1 },
+    { ability: 'wis', amount: 1 },
+  ],
+}
+
+function normalizeAsiIncreases(increases, changedIndex) {
+  const normalized = increases.map((increase) => ({
+    ...increase,
+    amount: Math.max(0, Math.min(2, Number(increase.amount) || 0)),
+  }))
+  const changed = normalized[changedIndex]
+
+  if (!changed) {
+    return normalized
+  }
+
+  if (changed.amount === 2) {
+    return normalized.map((increase, index) => ({
+      ...increase,
+      amount: index === changedIndex ? 2 : 0,
+    }))
+  }
+
+  const total = normalized.reduce((sum, increase) => sum + increase.amount, 0)
+
+  if (total > 2) {
+    return normalized.map((increase, index) => ({
+      ...increase,
+      amount: index === changedIndex ? increase.amount : Math.max(0, increase.amount - (total - 2)),
+    }))
+  }
+
+  if (total < 2 && changed.amount === 1) {
+    const emptyIndex = normalized.findIndex((increase, index) => {
+      return index !== changedIndex && increase.amount === 0
+    })
+
+    if (emptyIndex >= 0) {
+      return normalized.map((increase, index) => ({
+        ...increase,
+        amount: index === emptyIndex ? 1 : increase.amount,
+      }))
+    }
+  }
+
+  return normalized
+}
 
 const METHOD_OPTIONS = [
   {
@@ -89,7 +149,7 @@ function CharacterCreationPage() {
   const [saving, setSaving] = useState(false)
   const draft = buildCreationDraft(choices)
   const preview = draft.preview
-  const originSummary = [preview.species?.name, preview.background?.name]
+  const originSummary = [preview.speciesDisplayName ?? preview.species?.name, preview.background?.name]
     .filter(Boolean)
     .join(' / ')
 
@@ -97,6 +157,242 @@ function CharacterCreationPage() {
     setChoices((prevChoices) => ({
       ...prevChoices,
       [key]: value,
+    }))
+  }
+
+  function selectStartingLevel(startingLevel) {
+    const normalizedLevel = Math.min(20, Math.max(1, Number(startingLevel) || 1))
+
+    setChoices((prevChoices) => ({
+      ...prevChoices,
+      startingLevel: normalizedLevel,
+      levelUpChoices: {},
+    }))
+  }
+
+  function selectSpecies(speciesId) {
+    setChoices((prevChoices) => ({
+      ...prevChoices,
+      speciesId,
+      speciesChoices: {
+        ...(prevChoices.speciesChoices ?? {}),
+        [speciesId]: {},
+      },
+    }))
+  }
+
+  function updateSpeciesChoice(speciesId, patch) {
+    setChoices((prevChoices) => ({
+      ...prevChoices,
+      speciesChoices: {
+        ...(prevChoices.speciesChoices ?? {}),
+        [speciesId]: {
+          ...(prevChoices.speciesChoices?.[speciesId] ?? {}),
+          ...patch,
+        },
+      },
+    }))
+  }
+
+  function updateLevelUpChoice(level, updater) {
+    setChoices((prevChoices) => {
+      const currentLevelChoices = prevChoices.levelUpChoices?.[level] ?? {}
+
+      return {
+        ...prevChoices,
+        levelUpChoices: {
+          ...(prevChoices.levelUpChoices ?? {}),
+          [level]: updater(currentLevelChoices),
+        },
+      }
+    })
+  }
+
+  function updateOriginFeatChoice(choiceId, selected) {
+    if (!preview.background?.featId) return
+
+    setChoices((prevChoices) => ({
+      ...prevChoices,
+      featChoices: {
+        ...(prevChoices.featChoices ?? {}),
+        [preview.background.featId]: {
+          ...(prevChoices.featChoices?.[preview.background.featId] ?? {}),
+          [choiceId]: selected,
+        },
+      },
+    }))
+  }
+
+  function updateLevelOneClassChoice(choiceId, selected) {
+    setChoices((prevChoices) => ({
+      ...prevChoices,
+      levelOneClassChoices: {
+        ...(prevChoices.levelOneClassChoices ?? {}),
+        [choiceId]: selected,
+      },
+    }))
+  }
+
+  function setLevelAsiOrFeatMode(level, mode) {
+    updateLevelUpChoice(level, (levelChoices) => {
+      const currentChoice = levelChoices.asiOrFeat ?? {}
+
+      return {
+        ...levelChoices,
+        asiOrFeat: mode === 'asi'
+          ? {
+            ...DEFAULT_LEVEL_ASI_CHOICE,
+            ...(currentChoice.mode === 'asi' ? currentChoice : {}),
+          }
+          : {
+            mode: 'feat',
+            featId: currentChoice.mode === 'feat' ? currentChoice.featId ?? '' : '',
+            featChoices: currentChoice.mode === 'feat' ? currentChoice.featChoices ?? {} : {},
+          },
+      }
+    })
+  }
+
+  function selectLevelFeat(level, featId) {
+    updateLevelUpChoice(level, (levelChoices) => ({
+      ...levelChoices,
+      asiOrFeat: {
+        mode: 'feat',
+        featId,
+        featChoices: {},
+      },
+    }))
+  }
+
+  function updateLevelFeatChoice(level, choiceId, selected) {
+    updateLevelUpChoice(level, (levelChoices) => {
+      const currentChoice = levelChoices.asiOrFeat ?? { mode: 'feat', featId: '' }
+
+      return {
+        ...levelChoices,
+        asiOrFeat: {
+          ...currentChoice,
+          mode: 'feat',
+          featChoices: {
+            ...(currentChoice.featChoices ?? {}),
+            [choiceId]: selected,
+          },
+        },
+      }
+    })
+  }
+
+  function updateLevelAsiIncrease(level, index, field, value) {
+    updateLevelUpChoice(level, (levelChoices) => {
+      const currentChoice = levelChoices.asiOrFeat?.mode === 'asi'
+        ? levelChoices.asiOrFeat
+        : DEFAULT_LEVEL_ASI_CHOICE
+      const increases = currentChoice.increases.map((increase, increaseIndex) => {
+        if (increaseIndex !== index) {
+          return increase
+        }
+
+        return {
+          ...increase,
+          [field]: field === 'amount' ? Number(value) : value,
+        }
+      })
+
+      return {
+        ...levelChoices,
+        asiOrFeat: {
+          mode: 'asi',
+          increases: normalizeAsiIncreases(increases, index),
+        },
+      }
+    })
+  }
+
+  function setLevelHpMode(level, mode) {
+    updateLevelUpChoice(level, (levelChoices) => ({
+      ...levelChoices,
+      hpIncrease: mode === 'manual'
+        ? { mode: 'manual', rolled: levelChoices.hpIncrease?.rolled ?? '' }
+        : { mode: 'average' },
+    }))
+  }
+
+  function setLevelHpRoll(level, rolled) {
+    updateLevelUpChoice(level, (levelChoices) => ({
+      ...levelChoices,
+      hpIncrease: {
+        mode: 'manual',
+        rolled,
+      },
+    }))
+  }
+
+  function toggleLevelClassChoice(level, choice, optionId) {
+    updateLevelUpChoice(level, (levelChoices) => {
+      const classChoices = levelChoices.classChoices ?? {}
+      const selected = classChoices[choice.id] ?? []
+
+      if (choice.type === 'acknowledge') {
+        return {
+          ...levelChoices,
+          classChoices: {
+            ...classChoices,
+            [choice.id]: selected.includes('acknowledged') ? [] : ['acknowledged'],
+          },
+        }
+      }
+
+      if (selected.includes(optionId)) {
+        return {
+          ...levelChoices,
+          classChoices: {
+            ...classChoices,
+            [choice.id]: selected.filter((item) => item !== optionId),
+          },
+        }
+      }
+
+      if (selected.length >= choice.count) {
+        return levelChoices
+      }
+
+      return {
+        ...levelChoices,
+        classChoices: {
+          ...classChoices,
+          [choice.id]: [...selected, optionId],
+        },
+      }
+    })
+  }
+
+  function updateLevelClassChoice(level, choiceId, selected) {
+    updateLevelUpChoice(level, (levelChoices) => ({
+      ...levelChoices,
+      classChoices: {
+        ...(levelChoices.classChoices ?? {}),
+        [choiceId]: selected,
+      },
+    }))
+  }
+
+  function updateLevelSubclassSpellChoice(level, choiceId, selected) {
+    updateLevelUpChoice(level, (levelChoices) => ({
+      ...levelChoices,
+      subclassSpellChoices: {
+        ...(levelChoices.subclassSpellChoices ?? {}),
+        [choiceId]: selected,
+      },
+    }))
+  }
+
+  function updateLevelInvocationChoice(level, choiceId, selected) {
+    updateLevelUpChoice(level, (levelChoices) => ({
+      ...levelChoices,
+      invocationChoices: {
+        ...(levelChoices.invocationChoices ?? {}),
+        [choiceId]: selected,
+      },
     }))
   }
 
@@ -272,6 +568,8 @@ function CharacterCreationPage() {
           prevChoices.selectedClassTools,
           prevChoices.selectedBackgroundTools
         ),
+        levelOneClassChoices: {},
+        levelUpChoices: {},
       }
     })
   }
@@ -350,30 +648,40 @@ function CharacterCreationPage() {
   }
 
   function selectBackground(backgroundId) {
-    setChoices((prevChoices) => ({
-      ...prevChoices,
-      backgroundId,
-      backgroundIncreases: getDefaultBackgroundIncreases(
-        prevChoices.classId,
+    setChoices((prevChoices) => {
+      const backgroundFeatId = catalog.backgrounds.find((background) => {
+        return background.id === backgroundId
+      })?.featId
+
+      return {
+        ...prevChoices,
         backgroundId,
-        prevChoices.baseAbilities
-      ),
-      selectedClassSkills: getDefaultClassSkillChoices(
-        prevChoices.classId,
-        backgroundId,
-        prevChoices.selectedClassSkills
-      ),
-      selectedBackgroundTools: getDefaultBackgroundToolChoices(
-        backgroundId,
-        prevChoices.selectedBackgroundTools
-      ),
-      selectedClassTools: getDefaultClassToolChoices(
-        prevChoices.classId,
-        backgroundId,
-        prevChoices.selectedClassTools,
-        getDefaultBackgroundToolChoices(backgroundId, prevChoices.selectedBackgroundTools)
-      ),
-    }))
+        featChoices: {
+          ...(prevChoices.featChoices ?? {}),
+          ...(backgroundFeatId ? { [backgroundFeatId]: {} } : {}),
+        },
+        backgroundIncreases: getDefaultBackgroundIncreases(
+          prevChoices.classId,
+          backgroundId,
+          prevChoices.baseAbilities
+        ),
+        selectedClassSkills: getDefaultClassSkillChoices(
+          prevChoices.classId,
+          backgroundId,
+          prevChoices.selectedClassSkills
+        ),
+        selectedBackgroundTools: getDefaultBackgroundToolChoices(
+          backgroundId,
+          prevChoices.selectedBackgroundTools
+        ),
+        selectedClassTools: getDefaultClassToolChoices(
+          prevChoices.classId,
+          backgroundId,
+          prevChoices.selectedClassTools,
+          getDefaultBackgroundToolChoices(backgroundId, prevChoices.selectedBackgroundTools)
+        ),
+      }
+    })
   }
 
   async function confirmCreation() {
@@ -398,6 +706,92 @@ function CharacterCreationPage() {
 
       <main className="screen">
         <div className="panel_content">
+          <SectionCard title="Livello iniziale">
+            <div className="progression-asi-row">
+              <label className="progression-field">
+                <span>Scrivi livello</span>
+                <input
+                  type="number"
+                  min="1"
+                  max="20"
+                  step="1"
+                  value={choices.startingLevel}
+                  onChange={(event) => selectStartingLevel(event.target.value)}
+                />
+              </label>
+
+              <label className="progression-field">
+                <span>Lista livelli</span>
+                <select
+                  value={choices.startingLevel}
+                  onChange={(event) => selectStartingLevel(Number(event.target.value))}
+                >
+                  {STARTING_LEVEL_OPTIONS.map((level) => (
+                    <option key={level} value={level}>
+                      Livello {level}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+
+            <div className="creation-level-shortcuts" aria-label="Scorciatoie livello iniziale">
+              {QUICK_STARTING_LEVELS.map((level) => (
+                <button
+                  key={level}
+                  className={`progression-choice ${choices.startingLevel === level ? 'progression-choice--active' : ''}`}
+                  type="button"
+                  onClick={() => selectStartingLevel(level)}
+                >
+                  Lv {level}
+                </button>
+              ))}
+            </div>
+
+            <div className="creation-card-grid creation-card-grid--method creation-level-detail-grid">
+              <button
+                className={`creation-option ${choices.startingLevel === 1 ? 'creation-option--active' : ''}`}
+                type="button"
+                onClick={() => selectStartingLevel(1)}
+              >
+                <strong>Livello 1</strong>
+                <span>Creazione classica, poi sali in Progressione.</span>
+              </button>
+              <button
+                className={`creation-option ${choices.startingLevel === 2 ? 'creation-option--active' : ''}`}
+                type="button"
+                onClick={() => selectStartingLevel(2)}
+              >
+                <strong>Livello 2</strong>
+                <span>Passa dal level-up 1 a 2 con le scelte richieste.</span>
+              </button>
+              <button
+                className={`creation-option ${choices.startingLevel === 3 ? 'creation-option--active' : ''}`}
+                type="button"
+                onClick={() => selectStartingLevel(3)}
+              >
+                <strong>Livello 3</strong>
+                <span>Completa livello 2 e poi scegli la sottoclasse.</span>
+              </button>
+              <button
+                className={`creation-option ${choices.startingLevel === 4 ? 'creation-option--active' : ''}`}
+                type="button"
+                onClick={() => selectStartingLevel(4)}
+              >
+                <strong>Livello 4</strong>
+                <span>Attraversa sottoclasse e scelta ASI o talento.</span>
+              </button>
+              <button
+                className={`creation-option ${choices.startingLevel === 5 ? 'creation-option--active' : ''}`}
+                type="button"
+                onClick={() => selectStartingLevel(5)}
+              >
+                <strong>Livello 5</strong>
+                <span>Aggiunge i privilegi chiave e gli slot di 3°/2°.</span>
+              </button>
+            </div>
+          </SectionCard>
+
           <div className="creation-steps" aria-label="Passi creazione personaggio">
             {STEPS.map((step, index) => (
               <button
@@ -413,21 +807,67 @@ function CharacterCreationPage() {
           </div>
 
           {activeStep === 'species' && (
-            <SectionCard title="Razza / Specie">
-              <div className="creation-card-grid">
-                {catalog.species.map((species) => (
-                  <button
-                    key={species.id}
-                    className={`creation-option ${choices.speciesId === species.id ? 'creation-option--active' : ''}`}
-                    type="button"
-                    onClick={() => updateChoice('speciesId', species.id)}
-                  >
-                    <strong>{species.name}</strong>
-                    <span>{species.size}, {species.speed} m</span>
-                  </button>
-                ))}
-              </div>
-            </SectionCard>
+            <>
+              <SectionCard title="Razza / Specie">
+                <div className="creation-card-grid">
+                  {catalog.species.map((species) => (
+                    <button
+                      key={species.id}
+                      className={`creation-option ${choices.speciesId === species.id ? 'creation-option--active' : ''}`}
+                      type="button"
+                      onClick={() => selectSpecies(species.id)}
+                    >
+                      <strong>{species.name}</strong>
+                      <span>{species.size}, {species.speed} m</span>
+                    </button>
+                  ))}
+                </div>
+              </SectionCard>
+
+              {preview.speciesChoice && (
+                <SectionCard title="Scelte specie">
+                  <div className="progression-block">
+                    <h4>{preview.speciesChoice.label}</h4>
+                    <p className="progression-note">{preview.speciesChoice.summary}</p>
+
+                    <div className="creation-card-grid">
+                      {preview.speciesChoice.options.map((option) => (
+                        <button
+                          key={option.id}
+                          className={`creation-option ${preview.speciesChoice.selectedOptionId === option.id ? 'creation-option--active' : ''}`}
+                          type="button"
+                          onClick={() => updateSpeciesChoice(preview.species.id, { optionId: option.id })}
+                        >
+                          <strong>{option.label}</strong>
+                          <span>{option.summary}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {preview.speciesChoice.spellcastingAbilityChoice && preview.speciesChoice.selectedOption && (
+                    <div className="progression-block">
+                      <h4>Caratteristica magica</h4>
+                      <p className="progression-note">
+                        Usata per gli incantesimi concessi dalla specie.
+                      </p>
+                      <div className="progression-choice-row">
+                        {preview.speciesChoice.spellAbilityOptions.map((ability) => (
+                          <button
+                            key={ability}
+                            className={`progression-choice ${preview.speciesChoice.spellcastingAbility === ability ? 'progression-choice--active' : ''}`}
+                            type="button"
+                            onClick={() => updateSpeciesChoice(preview.species.id, { spellcastingAbility: ability })}
+                          >
+                            {abilityLabel(catalog.abilities, ability)}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </SectionCard>
+              )}
+            </>
           )}
 
           {activeStep === 'background' && (
@@ -500,6 +940,16 @@ function CharacterCreationPage() {
                   </div>
                 )}
               </SectionCard>
+
+              {preview.originFeat?.requirements?.length > 0 && (
+                <SectionCard title={`Scelte talento: ${preview.originFeat.feat.name}`}>
+                  <FeatChoicesPanel
+                    requirements={preview.originFeat.requirements}
+                    values={choices.featChoices?.[preview.background.featId] ?? {}}
+                    onChange={updateOriginFeatChoice}
+                  />
+                </SectionCard>
+              )}
             </>
           )}
 
@@ -820,6 +1270,16 @@ function CharacterCreationPage() {
                   )}
                 </SectionCard>
               )}
+
+              {preview.levelOneSpellChoices?.requirements?.length > 0 && (
+                <SectionCard title="Incantesimi iniziali">
+                  <FeatChoicesPanel
+                    requirements={preview.levelOneSpellChoices.requirements}
+                    values={choices.levelOneClassChoices ?? {}}
+                    onChange={updateLevelOneClassChoice}
+                  />
+                </SectionCard>
+              )}
             </>
           )}
 
@@ -874,8 +1334,313 @@ function CharacterCreationPage() {
             </SectionCard>
           )}
 
+          {choices.startingLevel > 1 && preview.ready && (
+            <SectionCard title="Passaggi di livello">
+              {draft.levelUpFlow.length === 0 ? (
+                <div className="list-empty">
+                  Completa prima origine, classe e valori per vedere le scelte di livello.
+                </div>
+              ) : (
+                <div className="progression-flow">
+                  {draft.levelUpFlow.map((step) => {
+                    const levelChoices = choices.levelUpChoices?.[step.level] ?? {}
+                    const hpChoice = levelChoices.hpIncrease ?? { mode: 'average' }
+                    const classChoices = levelChoices.classChoices ?? {}
+                    const subclassSpellChoices = levelChoices.subclassSpellChoices ?? {}
+                    const invocationChoices = levelChoices.invocationChoices ?? {}
+                    const classChoiceRequirements = step.preview.requiredChoices.filter((choice) => {
+                      return !['hp_roll_or_average', 'asi_or_feat'].includes(choice.type)
+                    })
+                    const asiOrFeatRequirement = step.preview.requiredChoices.find((choice) => {
+                      return choice.type === 'asi_or_feat'
+                    })
+                    const canChooseAsi = asiOrFeatRequirement?.allowAsi !== false
+                    const subclassChoiceRequirement = classChoiceRequirements.find((choice) => {
+                      return choice.type === 'subclass_choice'
+                    })
+                    const selectedSubclassId = subclassChoiceRequirement
+                      ? classChoices[subclassChoiceRequirement.id]?.[0]
+                      : null
+                    const selectedSubclassName = selectedSubclassId
+                      ? subclassChoiceRequirement.options?.find((option) => option.id === selectedSubclassId)?.subclassName
+                      : step.character.classes?.find((characterClass) => {
+                        return characterClass.name === step.preview.classLevel?.className
+                      })?.subclass
+                    const subclassSpellChoiceRequirements = selectedSubclassName
+                      ? getSubclassSpellcastingChoiceRequirements(
+                        step.character,
+                        step.preview.classLevel.className,
+                        selectedSubclassName,
+                        step.preview.classLevel.to
+                      )
+                      : []
+                    const selectedInvocationIds = classChoiceRequirements
+                      .filter((choice) => choice.type === 'eldritch_invocation_choice')
+                      .flatMap((choice) => classChoices[choice.id] ?? [])
+                    const invocationSubchoiceRequirements = getWarlockInvocationSubchoiceRequirements(
+                      step.character,
+                      selectedInvocationIds,
+                      step.preview.classLevel?.to ?? 1
+                    )
+                    const asiOrFeatChoice = levelChoices.asiOrFeat ?? { mode: 'feat', featId: '' }
+                    const availableFeats = asiOrFeatRequirement
+                      ? getAvailableFeats(step.character, asiOrFeatRequirement.featChoice)
+                      : []
+                    const selectedFeat = availableFeats.find((feat) => feat.id === asiOrFeatChoice.featId)
+                    const featChoiceRequirements = selectedFeat
+                      ? getFeatChoiceRequirements(selectedFeat, step.character, asiOrFeatChoice.featChoices ?? {})
+                      : []
+
+                    return (
+                      <div key={step.level} className="progression-block">
+                        <h4>Livello {step.level}</h4>
+
+                        <div className="progression-change-list">
+                          {step.preview.automaticChanges.map((change) => (
+                            <div key={change.id} className="progression-change">
+                              <span>{change.label}</span>
+                              <strong>{change.from}{' -> '}{change.to}</strong>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="progression-choice-row">
+                          <button
+                            className={`progression-choice ${hpChoice.mode !== 'manual' ? 'progression-choice--active' : ''}`}
+                            type="button"
+                            onClick={() => setLevelHpMode(step.level, 'average')}
+                          >
+                            PF medi
+                          </button>
+                          <button
+                            className={`progression-choice ${hpChoice.mode === 'manual' ? 'progression-choice--active' : ''}`}
+                            type="button"
+                            onClick={() => setLevelHpMode(step.level, 'manual')}
+                          >
+                            PF manuali
+                          </button>
+                        </div>
+
+                        {hpChoice.mode === 'manual' && (
+                          <label className="progression-field">
+                            <span>Risultato dado vita</span>
+                            <input
+                              type="number"
+                              min="1"
+                              value={hpChoice.rolled ?? ''}
+                              onChange={(event) => setLevelHpRoll(step.level, event.target.value)}
+                            />
+                          </label>
+                        )}
+
+                        {classChoiceRequirements.map((choice) => {
+                          const selected = classChoices[choice.id] ?? []
+
+                          return (
+                            <div key={choice.id} className="progression-subchoice">
+                              <h4>{choice.label}</h4>
+                              {choice.summary && (
+                                <p className="progression-note">{choice.summary}</p>
+                              )}
+
+                              {choice.type === 'spell_choice' || choice.type === 'cantrip_choice' || choice.type === 'ritual_spell_choice' ? (
+                                <FeatChoicesPanel
+                                  requirements={[choice]}
+                                  values={{ [choice.id]: selected }}
+                                  onChange={(choiceId, nextSelected) => updateLevelClassChoice(
+                                    step.level,
+                                    choiceId,
+                                    nextSelected
+                                  )}
+                                />
+                              ) : choice.type === 'acknowledge' ? (
+                                <button
+                                  className={`progression-choice ${selected.includes('acknowledged') ? 'progression-choice--active' : ''}`}
+                                  type="button"
+                                  onClick={() => toggleLevelClassChoice(step.level, choice)}
+                                >
+                                  Confermato
+                                </button>
+                              ) : (
+                                <>
+                                  <div className="creation-skill-choice-head">
+                                    <span>{selected.length}/{choice.count}</span>
+                                  </div>
+                                  <div className="creation-skill-choice-grid">
+                                    {(choice.options ?? []).map((option) => {
+                                      const isSelected = selected.includes(option.id)
+                                      const isLocked = !isSelected && selected.length >= choice.count
+
+                                      return (
+                                        <button
+                                          key={option.id}
+                                          className={`creation-skill-choice ${isSelected ? 'is-on' : ''}`}
+                                          type="button"
+                                          disabled={isLocked}
+                                          onClick={() => toggleLevelClassChoice(step.level, choice, option.id)}
+                                        >
+                                          <span>{option.label}</span>
+                                          <small>{isSelected ? 'Scelta' : ''}</small>
+                                        </button>
+                                      )
+                                    })}
+                                  </div>
+                                </>
+                              )}
+                            </div>
+                          )
+                        })}
+
+                        {subclassSpellChoiceRequirements.length > 0 && (
+                          <div className="progression-subchoice">
+                            <h4>Incantesimi della sottoclasse</h4>
+                            <FeatChoicesPanel
+                              requirements={subclassSpellChoiceRequirements}
+                              values={subclassSpellChoices}
+                              onChange={(choiceId, selected) => updateLevelSubclassSpellChoice(
+                                step.level,
+                                choiceId,
+                                selected
+                              )}
+                            />
+                          </div>
+                        )}
+
+                        {invocationSubchoiceRequirements.length > 0 && (
+                          <div className="progression-subchoice">
+                            <h4>Scelte delle suppliche</h4>
+                            <FeatChoicesPanel
+                              requirements={invocationSubchoiceRequirements}
+                              values={invocationChoices}
+                              onChange={(choiceId, selected) => updateLevelInvocationChoice(
+                                step.level,
+                                choiceId,
+                                selected
+                              )}
+                            />
+                          </div>
+                        )}
+
+                        {asiOrFeatRequirement && (
+                          <div className="progression-subchoice">
+                            <h4>{canChooseAsi ? 'Aumento o talento' : asiOrFeatRequirement.label}</h4>
+                            <div className="progression-choice-row">
+                              <button
+                                className={`progression-choice ${asiOrFeatChoice.mode === 'feat' ? 'progression-choice--active' : ''}`}
+                                type="button"
+                                onClick={() => setLevelAsiOrFeatMode(step.level, 'feat')}
+                              >
+                                Talento
+                              </button>
+                              {canChooseAsi && (
+                                <button
+                                  className={`progression-choice ${asiOrFeatChoice.mode === 'asi' ? 'progression-choice--active' : ''}`}
+                                  type="button"
+                                  onClick={() => setLevelAsiOrFeatMode(step.level, 'asi')}
+                                >
+                                  Aumento caratteristiche
+                                </button>
+                              )}
+                            </div>
+
+                            {asiOrFeatChoice.mode === 'feat' && (
+                              <>
+                                <label className="progression-field">
+                                  <span>Talento disponibile</span>
+                                  <select
+                                    value={asiOrFeatChoice.featId ?? ''}
+                                    onChange={(event) => selectLevelFeat(step.level, event.target.value)}
+                                  >
+                                    <option value="">Scegli talento</option>
+                                    {availableFeats.map((feat) => (
+                                      <option key={feat.id} value={feat.id}>
+                                        {feat.name}
+                                      </option>
+                                    ))}
+                                  </select>
+                                </label>
+
+                                {featChoiceRequirements.length > 0 && (
+                                  <FeatChoicesPanel
+                                    requirements={featChoiceRequirements}
+                                    values={asiOrFeatChoice.featChoices ?? {}}
+                                    onChange={(choiceId, selected) => updateLevelFeatChoice(
+                                      step.level,
+                                      choiceId,
+                                      selected
+                                    )}
+                                  />
+                                )}
+                              </>
+                            )}
+
+                            {asiOrFeatChoice.mode === 'asi' && (
+                              <div className="progression-asi-list">
+                                {(asiOrFeatChoice.increases ?? DEFAULT_LEVEL_ASI_CHOICE.increases).map((increase, index) => (
+                                  <div key={`creation-asi-${step.level}-${index}`} className="progression-asi-row">
+                                    <label className="progression-field">
+                                      <span>Caratteristica</span>
+                                      <select
+                                        value={increase.ability}
+                                        onChange={(event) => updateLevelAsiIncrease(
+                                          step.level,
+                                          index,
+                                          'ability',
+                                          event.target.value
+                                        )}
+                                      >
+                                        {ABILITY_ORDER.map((ability) => (
+                                          <option key={ability} value={ability}>
+                                            {abilityLabel(catalog.abilities, ability)}
+                                          </option>
+                                        ))}
+                                      </select>
+                                    </label>
+
+                                    <label className="progression-field">
+                                      <span>Punti</span>
+                                      <select
+                                        value={increase.amount}
+                                        onChange={(event) => updateLevelAsiIncrease(
+                                          step.level,
+                                          index,
+                                          'amount',
+                                          event.target.value
+                                        )}
+                                      >
+                                        <option value="0">+0</option>
+                                        <option value="1">+1</option>
+                                        <option value="2">+2</option>
+                                      </select>
+                                    </label>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        )}
+
+                        {step.draft.warnings.length > 0 && (
+                          <div className="progression-warnings">
+                            {step.draft.warnings.map((warning) => (
+                              <div key={warning}>{warning}</div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
+            </SectionCard>
+          )}
+
           <SectionCard title="Riepilogo creazione" className="section-card--summary">
             <div className="creation-summary">
+              <div>
+                <span>Livello</span>
+                <strong>{preview.derived?.level ?? ''}</strong>
+              </div>
               <div>
                 <span>Classe</span>
                 <strong>{preview.class?.name ?? ''}</strong>
@@ -919,7 +1684,7 @@ function CharacterCreationPage() {
               disabled={!draft.readyToApply || saving}
               onClick={confirmCreation}
             >
-              {saving ? 'Creazione...' : 'Crea PG livello 1'}
+              {saving ? 'Creazione...' : `Crea PG livello ${preview.derived?.level ?? choices.startingLevel}`}
             </button>
           </SectionCard>
         </div>

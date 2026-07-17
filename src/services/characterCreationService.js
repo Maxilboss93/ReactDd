@@ -1,3 +1,17 @@
+import {
+  applyLevelUpDraft,
+  applyClassSpellChoiceDraft,
+  buildClassSpellChoicesDraft,
+  buildLevelUpDraft,
+  createProgressionSnapshot,
+  getLevelUpPreview,
+} from './progressionService.js'
+import { findFeatById } from './featsCatalog.js'
+import {
+  applyFeatDraftToCharacter,
+  buildFeatChoiceDraft,
+} from './featChoiceService.js'
+
 const ABILITY_LABELS = {
   str: 'FOR',
   dex: 'DES',
@@ -23,6 +37,18 @@ const POINT_BUY_COSTS = {
 const POINT_BUY_BUDGET = 27
 const POINT_BUY_SCORES = Object.keys(POINT_BUY_COSTS).map((score) => Number(score))
 
+const CREATION_SPELL_SLOT_TABLES = {
+  full_caster: {
+    1: [{ level: 1, max: 2 }],
+  },
+  half_caster: {
+    1: [{ level: 1, max: 2 }],
+  },
+  pact_magic: {
+    1: [{ level: 1, max: 1, resetOn: 'short_rest' }],
+  },
+}
+
 const STANDARD_ABILITIES_BY_CLASS = {
   barbaro: { str: 15, dex: 13, con: 14, int: 10, wis: 12, cha: 8 },
   bardo: { str: 8, dex: 14, con: 12, int: 13, wis: 10, cha: 15 },
@@ -42,6 +68,21 @@ const DEFAULT_BASE_ABILITIES = STANDARD_ABILITIES_BY_CLASS.guerriero
 const EMPTY_BASE_ABILITIES = Object.fromEntries(
   Object.keys(ABILITY_LABELS).map((ability) => [ability, ''])
 )
+
+const LEVEL_TWO_FEATURES_BY_CLASS = {
+  barbaro: ['Attacco Irruento', 'Percezione del Pericolo'],
+  bardo: ['Factotum', 'Maestria'],
+  chierico: ['Incanalare Divinita', 'Scacciare Non Morti'],
+  druido: ['Forma Selvatica', 'Compagno Selvatico'],
+  guerriero: ["Impeto d'Azione", 'Mente Tattica'],
+  ladro: ['Azione Scaltra'],
+  mago: ['Studioso'],
+  monaco: ['Concentrazione da Monaco', 'Movimento senza armatura'],
+  paladino: ['Stile di combattimento', 'Punizione Divina'],
+  ranger: ['Esploratore Esperto', 'Stile di Combattimento'],
+  stregone: ['Fonte di Magia', 'Metamagia'],
+  warlock: ['Scaltrezza Magica'],
+}
 
 const SKILLS = [
   { id: 'acrobatics', label: 'Acrobazia', ability: 'dex' },
@@ -128,8 +169,8 @@ export const CLASS_OPTIONS = [
   { id: 'ladro', name: 'Ladro', hitDie: 'd8', primaryAbilities: ['dex'], savingThrows: ['dex', 'int'], skillChoices: { count: 4, options: ['acrobatics', 'athletics', 'deception', 'insight', 'intimidation', 'investigation', 'perception', 'persuasion', 'sleight', 'stealth'] }, fixedTools: ['thieves_tools'], featureNames: ['Maestria', 'Attacco furtivo', 'Gergo ladresco'] },
   { id: 'mago', name: 'Mago', hitDie: 'd6', primaryAbilities: ['int'], savingThrows: ['int', 'wis'], skillChoices: { count: 2, options: ['arcana', 'history', 'insight', 'investigation', 'medicine', 'nature', 'religion'] }, spellcasting: { ability: 'int', progression: 'full_caster' }, featureNames: ['Incantesimi', 'Recupero arcano'] },
   { id: 'monaco', name: 'Monaco', hitDie: 'd8', primaryAbilities: ['dex', 'wis'], savingThrows: ['str', 'dex'], skillChoices: { count: 2, options: ['acrobatics', 'athletics', 'history', 'insight', 'religion', 'stealth'] }, toolChoices: toolChoice(['artisan', 'musical'], 1), featureNames: ['Arti marziali', 'Difesa senza armatura'] },
-  { id: 'paladino', name: 'Paladino', hitDie: 'd10', primaryAbilities: ['str', 'cha'], savingThrows: ['wis', 'cha'], skillChoices: { count: 2, options: ['athletics', 'insight', 'intimidation', 'medicine', 'persuasion', 'religion'] }, featureNames: ['Imposizione delle Mani', 'Incantesimi', 'Padronanza d\'armi'] },
-  { id: 'ranger', name: 'Ranger', hitDie: 'd10', primaryAbilities: ['dex', 'wis'], savingThrows: ['str', 'dex'], skillChoices: { count: 3, options: ['animal', 'athletics', 'insight', 'investigation', 'nature', 'perception', 'stealth', 'survival'] }, featureNames: ['Nemico prescelto', 'Incantesimi', 'Padronanza d\'armi'] },
+  { id: 'paladino', name: 'Paladino', hitDie: 'd10', primaryAbilities: ['str', 'cha'], savingThrows: ['wis', 'cha'], skillChoices: { count: 2, options: ['athletics', 'insight', 'intimidation', 'medicine', 'persuasion', 'religion'] }, spellcasting: { ability: 'cha', progression: 'half_caster' }, featureNames: ['Imposizione delle Mani', 'Incantesimi', 'Padronanza d\'armi'] },
+  { id: 'ranger', name: 'Ranger', hitDie: 'd10', primaryAbilities: ['dex', 'wis'], savingThrows: ['str', 'dex'], skillChoices: { count: 3, options: ['animal', 'athletics', 'insight', 'investigation', 'nature', 'perception', 'stealth', 'survival'] }, spellcasting: { ability: 'wis', progression: 'half_caster' }, featureNames: ['Nemico prescelto', 'Incantesimi', 'Padronanza d\'armi'] },
   { id: 'stregone', name: 'Stregone', hitDie: 'd6', primaryAbilities: ['cha'], savingThrows: ['con', 'cha'], skillChoices: { count: 2, options: ['arcana', 'deception', 'intimidation', 'insight', 'persuasion', 'religion'] }, spellcasting: { ability: 'cha', progression: 'full_caster' }, featureNames: ['Incantesimi', 'Stregoneria innata'] },
   { id: 'warlock', name: 'Warlock', hitDie: 'd8', primaryAbilities: ['cha'], savingThrows: ['wis', 'cha'], skillChoices: { count: 2, options: ['arcana', 'deception', 'history', 'intimidation', 'investigation', 'nature', 'religion'] }, spellcasting: { ability: 'cha', progression: 'pact_magic' }, featureNames: ['Magia del Patto', 'Invocazioni occulte'] },
 ]
@@ -146,6 +187,204 @@ export const SPECIES_OPTIONS = [
   { id: 'tiefling', name: 'Tiefling', size: 'Media o Piccola', speed: 9, traits: ['Retaggio immondo', 'Scurovisione', 'Resistenza immonda'] },
   { id: 'umano', name: 'Umano', size: 'Media o Piccola', speed: 9, traits: ['Versatile', 'Intraprendente', 'Abile'] },
 ]
+
+const SPECIES_CHOICE_RULES = {
+  aasimar: {
+    id: 'celestial_revelation',
+    label: 'Rivelazione Celestiale',
+    summary: 'Scegli la rivelazione che si manifestera dal livello 3.',
+    unlockLevel: 3,
+    options: [
+      {
+        id: 'heavenly_wings',
+        label: 'Ali Celestiali',
+        displayName: 'dalle Ali Celestiali',
+        featureLabel: 'Rivelazione Celestiale: Ali Celestiali',
+        summary: 'Dal livello 3 puoi manifestare ali luminose e ottenere movimento in volo temporaneo.',
+      },
+      {
+        id: 'inner_radiance',
+        label: 'Radianza Interiore',
+        displayName: 'dalla Radianza Interiore',
+        featureLabel: 'Rivelazione Celestiale: Radianza Interiore',
+        summary: 'Dal livello 3 puoi emanare luce e potere radioso durante la trasformazione.',
+      },
+      {
+        id: 'necrotic_shroud',
+        label: 'Velo Necrotico',
+        displayName: 'dal Velo Necrotico',
+        featureLabel: 'Rivelazione Celestiale: Velo Necrotico',
+        summary: 'Dal livello 3 puoi manifestare energia cupa e intimorire i nemici vicini.',
+      },
+    ],
+  },
+  dragonide: {
+    id: 'draconic_ancestry',
+    label: 'Discendenza Draconica',
+    summary: 'Determina tipo di danno del soffio e resistenza.',
+    options: [
+      { id: 'black', label: 'Drago Nero', displayName: 'Nero', damageType: 'acido' },
+      { id: 'blue', label: 'Drago Blu', displayName: 'Blu', damageType: 'fulmine' },
+      { id: 'brass', label: 'Drago d\'Ottone', displayName: 'd\'Ottone', damageType: 'fuoco' },
+      { id: 'bronze', label: 'Drago di Bronzo', displayName: 'di Bronzo', damageType: 'fulmine' },
+      { id: 'copper', label: 'Drago di Rame', displayName: 'di Rame', damageType: 'acido' },
+      { id: 'gold', label: 'Drago d\'Oro', displayName: 'd\'Oro', damageType: 'fuoco' },
+      { id: 'green', label: 'Drago Verde', displayName: 'Verde', damageType: 'veleno' },
+      { id: 'red', label: 'Drago Rosso', displayName: 'Rosso', damageType: 'fuoco' },
+      { id: 'silver', label: 'Drago d\'Argento', displayName: 'd\'Argento', damageType: 'freddo' },
+      { id: 'white', label: 'Drago Bianco', displayName: 'Bianco', damageType: 'freddo' },
+    ].map((option) => ({
+      ...option,
+      featureLabel: `Discendenza Draconica: ${option.label}`,
+      summary: `Soffio e resistenza ai danni da ${option.damageType}.`,
+      action: {
+        id: `dragonborn_breath_${option.id}`,
+        name: `Soffio ${option.label}`,
+        type: 'save',
+        damage: `1d10 ${option.damageType}`,
+        notes: 'Tiro salvezza su Destrezza, CD 8 + COS + bonus competenza. Aumenta con il livello del personaggio.',
+      },
+    })),
+  },
+  elfo: {
+    id: 'elven_lineage',
+    label: 'Lignaggio Elfico',
+    summary: 'Scegli Drow, Alto Elfo o Elfo dei Boschi.',
+    spellcastingAbilityChoice: true,
+    options: [
+      {
+        id: 'drow',
+        label: 'Drow',
+        displayName: 'Drow',
+        featureLabel: 'Lignaggio Elfico: Drow',
+        summary: 'Scurovisione estesa e magia drow.',
+        spells: [
+          { id: 'luci-danzanti', name: 'Luci Danzanti', level: 0 },
+          { id: 'luminescenza', name: 'Luminescenza', level: 1, unlockLevel: 3 },
+          { id: 'oscurita', name: 'Oscurita', level: 2, unlockLevel: 5 },
+        ],
+      },
+      {
+        id: 'high',
+        label: 'Alto Elfo',
+        displayName: 'Alto',
+        featureLabel: 'Lignaggio Elfico: Alto Elfo',
+        summary: 'Magia arcana innata e trucchetto da mago sostituibile dopo il riposo lungo.',
+        spells: [
+          { id: 'prestidigitazione', name: 'Prestidigitazione', level: 0 },
+          { id: 'individuazione-del-magico', name: 'Individuazione del Magico', level: 1, unlockLevel: 3 },
+          { id: 'passo-velato', name: 'Passo Velato', level: 2, unlockLevel: 5 },
+        ],
+      },
+      {
+        id: 'wood',
+        label: 'Elfo dei Boschi',
+        displayName: 'dei Boschi',
+        featureLabel: 'Lignaggio Elfico: Elfo dei Boschi',
+        summary: 'Velocita aumentata e magia naturale.',
+        speed: 10.5,
+        spells: [
+          { id: 'artificio-druidico', name: 'Artificio Druidico', level: 0 },
+          { id: 'passo-veloce', name: 'Passo Veloce', level: 1, unlockLevel: 3 },
+          { id: 'passare-senza-tracce', name: 'Passare Senza Tracce', level: 2, unlockLevel: 5 },
+        ],
+      },
+    ],
+  },
+  gnomo: {
+    id: 'gnomish_lineage',
+    label: 'Lignaggio Gnomesco',
+    summary: 'Scegli Gnomo delle Foreste o Gnomo delle Rocce.',
+    spellcastingAbilityChoice: true,
+    options: [
+      {
+        id: 'forest',
+        label: 'Gnomo delle Foreste',
+        displayName: 'delle Foreste',
+        featureLabel: 'Lignaggio Gnomesco: Foreste',
+        summary: 'Illusione Minore e Parlare con gli Animali sempre preparato.',
+        spells: [
+          { id: 'illusione-minore', name: 'Illusione Minore', level: 0 },
+          { id: 'parlare-con-gli-animali', name: 'Parlare con gli Animali', level: 1 },
+        ],
+      },
+      {
+        id: 'rock',
+        label: 'Gnomo delle Rocce',
+        displayName: 'delle Rocce',
+        featureLabel: 'Lignaggio Gnomesco: Rocce',
+        summary: 'Riparare, Prestidigitazione e piccoli congegni magici.',
+        spells: [
+          { id: 'riparare', name: 'Riparare', level: 0 },
+          { id: 'prestidigitazione', name: 'Prestidigitazione', level: 0 },
+        ],
+      },
+    ],
+  },
+  goliath: {
+    id: 'giant_ancestry',
+    label: 'Discendenza Gigantica',
+    summary: 'Scegli il retaggio gigante che concede un beneficio usabile con il bonus competenza.',
+    resource: { id: 'giant_ancestry', label: 'Discendenza Gigantica' },
+    options: [
+      { id: 'cloud', label: 'Gigante delle Nuvole', displayName: 'delle Nuvole', featureLabel: 'Discendenza Gigantica: Nuvole', summary: 'Teletrasporto breve come beneficio della discendenza.' },
+      { id: 'fire', label: 'Gigante del Fuoco', displayName: 'del Fuoco', featureLabel: 'Discendenza Gigantica: Fuoco', summary: 'Danno da fuoco extra quando colpisci.' },
+      { id: 'frost', label: 'Gigante del Gelo', displayName: 'del Gelo', featureLabel: 'Discendenza Gigantica: Gelo', summary: 'Danno da freddo extra e rallentamento.' },
+      { id: 'hill', label: 'Gigante delle Colline', displayName: 'delle Colline', featureLabel: 'Discendenza Gigantica: Colline', summary: 'Puoi buttare prono un bersaglio idoneo quando colpisci.' },
+      { id: 'stone', label: 'Gigante delle Pietre', displayName: 'delle Pietre', featureLabel: 'Discendenza Gigantica: Pietre', summary: 'Reazione per ridurre i danni subiti.' },
+      { id: 'storm', label: 'Gigante delle Tempeste', displayName: 'delle Tempeste', featureLabel: 'Discendenza Gigantica: Tempeste', summary: 'Reazione per infliggere danni da tuono a chi ti ferisce.' },
+    ],
+  },
+  tiefling: {
+    id: 'fiendish_legacy',
+    label: 'Retaggio Immondo',
+    summary: 'Scegli Abissale, Ctonio o Infernale.',
+    spellcastingAbilityChoice: true,
+    options: [
+      {
+        id: 'abyssal',
+        label: 'Abissale',
+        displayName: 'Abissale',
+        featureLabel: 'Retaggio Abissale',
+        summary: 'Resistenza al veleno e magia abissale.',
+        damageResistance: 'veleno',
+        spells: [
+          { id: 'spruzzo-velenoso', name: 'Spruzzo Velenoso', level: 0 },
+          { id: 'raggio-di-infermita', name: 'Raggio di Infermita', level: 1, unlockLevel: 3 },
+          { id: 'blocca-persone', name: 'Blocca Persone', level: 2, unlockLevel: 5 },
+        ],
+      },
+      {
+        id: 'chthonic',
+        label: 'Ctonio',
+        displayName: 'Ctonio',
+        featureLabel: 'Retaggio Ctonio',
+        summary: 'Resistenza necrotica e magia ctonia.',
+        damageResistance: 'necrotico',
+        spells: [
+          { id: 'tocco-gelido', name: 'Tocco Gelido', level: 0 },
+          { id: 'vita-falsata', name: 'Vita Falsata', level: 1, unlockLevel: 3 },
+          { id: 'raggio-di-indebolimento', name: 'Raggio di Indebolimento', level: 2, unlockLevel: 5 },
+        ],
+      },
+      {
+        id: 'infernal',
+        label: 'Infernale',
+        displayName: 'Infernale',
+        featureLabel: 'Retaggio Infernale',
+        summary: 'Resistenza al fuoco e magia infernale.',
+        damageResistance: 'fuoco',
+        spells: [
+          { id: 'dardo-di-fuoco', name: 'Dardo di Fuoco', level: 0 },
+          { id: 'intimorire-infernale', name: 'Intimorire Infernale', level: 1, unlockLevel: 3 },
+          { id: 'oscurita', name: 'Oscurita', level: 2, unlockLevel: 5 },
+        ],
+      },
+    ],
+  },
+}
+
+const SPECIES_SPELL_ABILITY_OPTIONS = ['int', 'wis', 'cha']
 
 export const BACKGROUND_OPTIONS = [
   { id: 'accolito', name: 'Accolito', abilities: ['int', 'wis', 'cha'], featId: 'iniziato-alla-magia', featName: 'Iniziato alla Magia', skills: ['insight', 'religion'], fixedTools: ['calligrapher_supplies'] },
@@ -180,6 +419,173 @@ const ALIGNMENTS = [
 
 function findById(items, id) {
   return items.find((item) => item.id === id)
+}
+
+function getSpeciesChoiceRule(speciesId) {
+  return SPECIES_CHOICE_RULES[speciesId] ?? null
+}
+
+function getSpeciesChoiceOption(speciesId, optionId) {
+  const rule = getSpeciesChoiceRule(speciesId)
+
+  return rule?.options.find((option) => option.id === optionId) ?? null
+}
+
+function getSelectedSpeciesOption(species, choices) {
+  if (!species) {
+    return null
+  }
+
+  return getSpeciesChoiceOption(
+    species.id,
+    choices.speciesChoices?.[species.id]?.optionId
+  )
+}
+
+function getSpeciesSpellAbility(species, choices) {
+  if (!species) {
+    return null
+  }
+
+  return choices.speciesChoices?.[species.id]?.spellcastingAbility ?? null
+}
+
+function getSpeciesDisplayName(species, selectedSpeciesOption) {
+  if (!species) {
+    return ''
+  }
+
+  if (!selectedSpeciesOption?.displayName) {
+    return species.name
+  }
+
+  if (species.id === 'dragonide') {
+    return `${species.name} ${selectedSpeciesOption.displayName}`
+  }
+
+  if (species.id === 'goliath' || species.id === 'gnomo') {
+    return `${species.name} ${selectedSpeciesOption.displayName}`
+  }
+
+  return `${species.name} ${selectedSpeciesOption.displayName}`
+}
+
+function getSpeciesChoicePreview(species, choices) {
+  const rule = getSpeciesChoiceRule(species?.id)
+
+  if (!rule) {
+    return null
+  }
+
+  const selectedOption = getSelectedSpeciesOption(species, choices)
+  const spellcastingAbility = getSpeciesSpellAbility(species, choices)
+
+  return {
+    ...rule,
+    selectedOption,
+    selectedOptionId: selectedOption?.id ?? '',
+    spellcastingAbility,
+    spellAbilityOptions: SPECIES_SPELL_ABILITY_OPTIONS,
+  }
+}
+
+function validateSpeciesChoices(species, choices, startingLevel) {
+  const rule = getSpeciesChoiceRule(species?.id)
+  const warnings = []
+
+  if (!rule) {
+    return warnings
+  }
+
+  const selectedOption = getSelectedSpeciesOption(species, choices)
+
+  if (!selectedOption) {
+    warnings.push(`Scegli ${rule.label} per ${species.name}.`)
+  }
+
+  if (
+    rule.spellcastingAbilityChoice &&
+    selectedOption &&
+    !SPECIES_SPELL_ABILITY_OPTIONS.includes(getSpeciesSpellAbility(species, choices))
+  ) {
+    warnings.push(`Scegli la caratteristica da incantatore per ${rule.label}.`)
+  }
+
+  if (rule.unlockLevel && startingLevel >= rule.unlockLevel && !selectedOption) {
+    warnings.push(`Completa ${rule.label}, attiva dal livello ${rule.unlockLevel}.`)
+  }
+
+  return warnings
+}
+
+function getSpeciesChoiceFeature(species, selectedSpeciesOption, startingLevel = 1) {
+  if (!species || !selectedSpeciesOption) {
+    return null
+  }
+
+  const rule = getSpeciesChoiceRule(species.id)
+  const featureLevel = rule?.unlockLevel ?? 1
+
+  if (featureLevel > startingLevel) {
+    return null
+  }
+
+  return {
+    id: `${species.id}_${rule.id}_${selectedSpeciesOption.id}`,
+    label: selectedSpeciesOption.featureLabel ?? selectedSpeciesOption.label,
+    level: featureLevel,
+    source: species.name,
+    category: 'species',
+    kind: 'lineage',
+    summary: selectedSpeciesOption.summary,
+  }
+}
+
+function getSpeciesSpells(species, selectedSpeciesOption, spellcastingAbility, characterLevel = 1) {
+  if (!species || !selectedSpeciesOption) {
+    return []
+  }
+
+  return (selectedSpeciesOption.spells ?? [])
+    .filter((spell) => (spell.unlockLevel ?? 1) <= characterLevel)
+    .map((spell) => ({
+      id: spell.id,
+      name: spell.name,
+      level: spell.level,
+      source: getSpeciesDisplayName(species, selectedSpeciesOption),
+      ability: spellcastingAbility,
+      prepared: true,
+      speciesSpell: true,
+      unlockLevel: spell.unlockLevel ?? 1,
+    }))
+}
+
+function mergeSpells(existingSpells = [], additionalSpells = []) {
+  const byId = new Map()
+
+  ;[...existingSpells, ...additionalSpells].forEach((spell) => {
+    if (!spell?.id) return
+
+    byId.set(spell.id, {
+      ...(byId.get(spell.id) ?? {}),
+      ...spell,
+    })
+  })
+
+  return [...byId.values()]
+}
+
+function buildSpeciesActions(species, selectedSpeciesOption) {
+  if (!selectedSpeciesOption?.action) {
+    return []
+  }
+
+  return [
+    {
+      ...selectedSpeciesOption.action,
+      source: getSpeciesDisplayName(species, selectedSpeciesOption),
+    },
+  ]
 }
 
 function getAbilityModifier(score) {
@@ -483,7 +889,26 @@ function hasCompleteAbilityMap(abilities) {
   })
 }
 
-function buildFeatures(characterClass, species, background) {
+function normalizeStartingLevel(value) {
+  const level = Number(value)
+
+  if (Number.isFinite(level) && level >= 1 && level <= 20) {
+    return level
+  }
+
+  return 1
+}
+
+function getAverageHpIncrease(hitDie, constitutionModifier) {
+  return Math.floor(getHitDieSize(hitDie) / 2) + 1 + constitutionModifier
+}
+
+function buildFeatures(characterClass, species, background, startingLevel = 1, selectedSpeciesOption = null) {
+  const levelTwoFeatures = startingLevel >= 2
+    ? (LEVEL_TWO_FEATURES_BY_CLASS[characterClass.id] ?? [])
+    : []
+  const speciesChoiceFeature = getSpeciesChoiceFeature(species, selectedSpeciesOption, startingLevel)
+
   return [
     ...species.traits.map((trait) => ({
       id: `${species.id}_${trait.toLowerCase().replace(/[^a-z0-9]+/g, '_')}`,
@@ -494,6 +919,7 @@ function buildFeatures(characterClass, species, background) {
       kind: 'trait',
       summary: `Tratto di specie: ${trait}.`,
     })),
+    ...(speciesChoiceFeature ? [speciesChoiceFeature] : []),
     ...characterClass.featureNames.map((featureName) => ({
       id: `${characterClass.id}_${featureName.toLowerCase().replace(/[^a-z0-9]+/g, '_')}`,
       label: featureName,
@@ -502,6 +928,15 @@ function buildFeatures(characterClass, species, background) {
       category: 'class',
       kind: 'feature',
       summary: `Privilegio di classe di 1 livello: ${featureName}.`,
+    })),
+    ...levelTwoFeatures.map((featureName) => ({
+      id: `${characterClass.id}_${featureName.toLowerCase().replace(/[^a-z0-9]+/g, '_')}_2`,
+      label: featureName,
+      level: 2,
+      source: characterClass.name,
+      category: 'class',
+      kind: 'feature',
+      summary: `Privilegio di classe di 2 livello: ${featureName}. Alcune scelte specifiche vanno confermate in Progressione.`,
     })),
     {
       id: `background_${background.id}`,
@@ -515,7 +950,7 @@ function buildFeatures(characterClass, species, background) {
   ]
 }
 
-function buildResources(characterClass, species, background) {
+function buildResources(characterClass, species, background, startingLevel = 1, selectedSpeciesOption = null) {
   const resources = []
 
   if (background.featId === 'fortunato') {
@@ -533,20 +968,42 @@ function buildResources(characterClass, species, background) {
     resources.push({
       id: 'lay_on_hands',
       label: 'Imposizione delle Mani',
-      current: 5,
-      max: 5,
+      current: 5 * startingLevel,
+      max: 5 * startingLevel,
       resetOn: 'long_rest',
       category: 'class',
     })
   }
 
-  if (characterClass.id === 'monaco') {
+  if (characterClass.id === 'monaco' && startingLevel === 1) {
     resources.push({
       id: 'martial_arts_die',
       label: 'Dado arti marziali',
       current: 1,
       max: 1,
       resetOn: 'none',
+      category: 'class',
+    })
+  }
+
+  if (characterClass.id === 'monaco' && startingLevel >= 2) {
+    resources.push({
+      id: 'ki',
+      label: 'Ki',
+      current: 2,
+      max: 2,
+      resetOn: 'short_rest',
+      category: 'class',
+    })
+  }
+
+  if (characterClass.id === 'stregone' && startingLevel >= 2) {
+    resources.push({
+      id: 'sorcery_points',
+      label: 'Punti Stregoneria',
+      current: 2,
+      max: 2,
+      resetOn: 'long_rest',
       category: 'class',
     })
   }
@@ -562,10 +1019,21 @@ function buildResources(characterClass, species, background) {
     })
   }
 
+  if (species.id === 'goliath' && selectedSpeciesOption) {
+    resources.push({
+      id: 'giant_ancestry',
+      label: `Discendenza Gigantica: ${selectedSpeciesOption.label}`,
+      current: 2,
+      max: 2,
+      resetOn: 'long_rest',
+      category: 'species',
+    })
+  }
+
   return resources
 }
 
-function buildSpellcasting(characterClass, abilities) {
+function buildSpellcasting(characterClass, abilities, startingLevel = 1) {
   if (!characterClass.spellcasting) {
     return {
       ability: null,
@@ -579,16 +1047,29 @@ function buildSpellcasting(characterClass, abilities) {
 
   const ability = characterClass.spellcasting.ability
   const abilityMod = getAbilityModifier(abilities[ability] ?? 10)
-  const hasLevelOneSlots = characterClass.spellcasting.progression === 'full_caster'
+  const progression = characterClass.spellcasting.progression
+  const slotTable = CREATION_SPELL_SLOT_TABLES[progression] ?? {}
+  const slots = slotTable[startingLevel] ?? slotTable[1] ?? []
+  const hasPreparedSpells = progression === 'full_caster' || progression === 'half_caster'
+  const preparedCount = hasPreparedSpells
+    ? Math.max(1, abilityMod + startingLevel)
+    : progression === 'pact_magic'
+      ? 2
+      : 0
 
   return {
     ability,
     spellSaveDc: 8 + abilityMod + 2,
     spellAttackBonus: abilityMod + 2,
-    preparedCount: hasLevelOneSlots ? Math.max(1, abilityMod + 1) : 0,
-    slots: hasLevelOneSlots
-      ? [{ id: `${characterClass.id}_slot_1`, level: 1, label: 'Slot livello 1', current: 2, max: 2, resetOn: 'long_rest' }]
-      : [],
+    preparedCount,
+    slots: slots.map((slot) => ({
+      id: `${characterClass.id}_slot_${slot.level}`,
+      level: slot.level,
+      label: `Slot livello ${slot.level}`,
+      current: slot.max,
+      max: slot.max,
+      resetOn: slot.resetOn ?? 'long_rest',
+    })),
     spells: [],
   }
 }
@@ -609,6 +1090,8 @@ export function getCreationCatalog() {
   return {
     classes: CLASS_OPTIONS,
     species: SPECIES_OPTIONS,
+    speciesChoiceRules: SPECIES_CHOICE_RULES,
+    speciesSpellAbilityOptions: SPECIES_SPELL_ABILITY_OPTIONS,
     backgrounds: BACKGROUND_OPTIONS,
     skills: SKILLS,
     toolOptions: TOOL_OPTIONS,
@@ -627,6 +1110,7 @@ export function getDefaultCreationChoices() {
   return {
     name: '',
     concept: '',
+    startingLevel: 1,
     classId: '',
     speciesId: '',
     backgroundId: '',
@@ -635,10 +1119,14 @@ export function getDefaultCreationChoices() {
     baseAbilities: { ...EMPTY_BASE_ABILITIES },
     abilityRolls: [],
     backgroundIncreases: {},
+    featChoices: {},
+    levelOneClassChoices: {},
+    speciesChoices: {},
     selectedClassSkills: [],
     selectedBackgroundTools: [],
     selectedClassTools: [],
     languages: [],
+    levelUpChoices: {},
     equipmentMode: '',
   }
 }
@@ -647,12 +1135,18 @@ export function getCreationPreview(choices) {
   const characterClass = findById(CLASS_OPTIONS, choices.classId)
   const species = findById(SPECIES_OPTIONS, choices.speciesId)
   const background = findById(BACKGROUND_OPTIONS, choices.backgroundId)
+  const startingLevel = normalizeStartingLevel(choices.startingLevel)
   const warnings = []
 
   if (!characterClass) warnings.push('Scegli una classe.')
   if (!species) warnings.push('Scegli una specie.')
   if (!background) warnings.push('Scegli un background.')
 
+  const selectedSpeciesOption = getSelectedSpeciesOption(species, choices)
+  const speciesChoice = getSpeciesChoicePreview(species, choices)
+  const speciesWarnings = species
+    ? validateSpeciesChoices(species, choices, startingLevel)
+    : []
   const baseAbilities = choices.baseAbilities ?? EMPTY_BASE_ABILITIES
   const abilityResult = background
     ? applyBackgroundAbilityIncreases(
@@ -682,6 +1176,27 @@ export function getCreationPreview(choices) {
     ...(characterClass?.fixedTools ?? []),
     ...(choices.selectedClassTools ?? []),
   ])
+  const originFeat = background ? findFeatById(background.featId) : null
+  const originFeatSelectedChoices = choices.featChoices?.[background?.featId] ?? {}
+  const originFeatCharacter = characterClass && background
+    ? {
+      level: startingLevel,
+      abilities: abilityResult.abilities,
+      savingThrows: Object.fromEntries(
+        Object.keys(ABILITY_LABELS).map((ability) => [
+          ability,
+          characterClass.savingThrows.includes(ability),
+        ])
+      ),
+      skills: buildSkills(background, choices.selectedClassSkills),
+      proficiencies: {
+        tools: getToolLabels([...backgroundTools, ...classTools]),
+      },
+    }
+    : null
+  const originFeatDraft = originFeat && originFeatCharacter
+    ? buildFeatChoiceDraft(originFeatCharacter, originFeat, originFeatSelectedChoices)
+    : null
   const toolWarnings = [
     ...validateToolChoices(
       'strumento del background',
@@ -697,8 +1212,29 @@ export function getCreationPreview(choices) {
   ]
   const hasCompleteAbilities = hasCompleteAbilityMap(abilityResult.abilities)
   const conMod = hasCompleteAbilities ? getAbilityModifier(abilityResult.abilities.con) : null
-  const hpMax = characterClass && conMod !== null ? getHitDieSize(characterClass.hitDie) + conMod : null
+  const levelOneSpellCharacter = characterClass && hasCompleteAbilities
+    ? {
+      id: 'pg_creation_level_1',
+      level: 1,
+      classes: [{ name: characterClass.name, level: 1 }],
+      abilities: abilityResult.abilities,
+      spellcasting: buildSpellcasting(characterClass, abilityResult.abilities, 1),
+    }
+    : null
+  const levelOneSpellChoices = levelOneSpellCharacter
+    ? buildClassSpellChoicesDraft(
+      levelOneSpellCharacter,
+      characterClass.name,
+      1,
+      choices.levelOneClassChoices ?? {}
+    )
+    : { requirements: [], choices: [], warnings: [], readyToApply: true }
+  const levelOneHp = characterClass && conMod !== null ? getHitDieSize(characterClass.hitDie) + conMod : null
+  const hpMax = levelOneHp === null
+    ? null
+    : levelOneHp + Math.max(0, startingLevel - 1) * getAverageHpIncrease(characterClass.hitDie, conMod)
   const dexMod = hasCompleteAbilities ? getAbilityModifier(abilityResult.abilities.dex) : null
+  const speciesSpeed = selectedSpeciesOption?.speed ?? species?.speed ?? null
   const primaryScores = (characterClass?.primaryAbilities ?? []).map((ability) => ({
     ability,
     score: abilityResult.abilities[ability] ?? null,
@@ -706,13 +1242,26 @@ export function getCreationPreview(choices) {
 
   return {
     type: 'character_creation_preview',
-    ready: warnings.length === 0 && abilityWarnings.length === 0 && skillWarnings.length === 0 && toolWarnings.length === 0,
-    warnings: [...warnings, ...abilityWarnings, ...skillWarnings, ...toolWarnings],
+    ready: warnings.length === 0 && speciesWarnings.length === 0 && abilityWarnings.length === 0 && skillWarnings.length === 0 && toolWarnings.length === 0 && (originFeatDraft?.warnings ?? []).length === 0 && levelOneSpellChoices.warnings.length === 0,
+    warnings: [...warnings, ...speciesWarnings, ...abilityWarnings, ...skillWarnings, ...toolWarnings, ...(originFeatDraft?.warnings ?? []), ...levelOneSpellChoices.warnings],
     class: characterClass,
     species,
+    speciesChoice,
+    selectedSpeciesOption,
+    speciesDisplayName: getSpeciesDisplayName(species, selectedSpeciesOption),
     background,
+    originFeat: originFeat
+      ? {
+        feat: originFeat,
+        selectedChoices: originFeatSelectedChoices,
+        requirements: originFeatDraft?.requirements ?? [],
+        draft: originFeatDraft,
+      }
+      : null,
+    levelOneSpellChoices,
     baseAbilities,
     abilityMethod: choices.abilityMethod,
+    startingLevel,
     abilityMeta: {
       rollResults: choices.abilityRolls ?? [],
       pointBuySpent: getPointBuySpent(baseAbilities),
@@ -751,15 +1300,28 @@ export function getCreationPreview(choices) {
       meetsMulticlassFloor: primaryScores.every((item) => Number(item.score) >= 13),
     },
     derived: {
-      level: 1,
+      level: startingLevel,
       proficiencyBonus: 2,
       hpMax,
       ac: dexMod === null ? null : 10 + dexMod,
-      speed: species?.speed ?? null,
-      hitDice: { current: 1, max: 1, type: characterClass?.hitDie ?? null },
+      speed: speciesSpeed,
+      hitDice: {
+        current: startingLevel,
+        max: startingLevel,
+        type: characterClass?.hitDie ?? null,
+        byType: characterClass?.hitDie ? { [characterClass.hitDie]: startingLevel } : {},
+      },
     },
     grants: [
+      { label: 'Scelta specie', value: selectedSpeciesOption?.label ?? '' },
+      { label: 'Tratti specie', value: [selectedSpeciesOption?.summary, selectedSpeciesOption?.damageResistance ? `Resistenza: ${selectedSpeciesOption.damageResistance}` : ''].filter(Boolean).join(' - ') },
       { label: 'Talento origine', value: background?.featName ?? '' },
+      {
+        label: 'Scelte talento',
+        value: (originFeatDraft?.choices ?? [])
+          .flatMap((choice) => choice.labels)
+          .join(', '),
+      },
       { label: 'Competenze background', value: (background?.skills ?? []).map((skillId) => getSkillById(skillId)?.label ?? skillId).join(', ') },
       { label: 'Competenze classe', value: (choices.selectedClassSkills ?? []).map((skillId) => getSkillById(skillId)?.label ?? skillId).join(', ') },
       { label: 'Strumenti background', value: getToolLabels(backgroundTools).join(', ') },
@@ -769,50 +1331,54 @@ export function getCreationPreview(choices) {
   }
 }
 
-export function buildCreationDraft(choices) {
-  const preview = getCreationPreview(choices)
-  const warnings = [...preview.warnings]
-
-  if (!choices.name?.trim()) {
-    warnings.push('Inserisci il nome del personaggio.')
-  }
-
-  if (!choices.alignment) {
-    warnings.push('Scegli un allineamento.')
-  }
-
-  if (!choices.equipmentMode) {
-    warnings.push('Scegli l\'equipaggiamento iniziale.')
-  }
-
-  return {
-    type: 'character_creation_draft',
+function buildBaseCreationCharacter(preview, choices, id) {
+  const features = buildFeatures(preview.class, preview.species, preview.background, 1, preview.selectedSpeciesOption)
+  const resources = buildResources(preview.class, preview.species, preview.background, 1, preview.selectedSpeciesOption)
+  const spellcasting = buildSpellcasting(preview.class, preview.abilities, 1)
+  const speciesSpells = getSpeciesSpells(
+    preview.species,
+    preview.selectedSpeciesOption,
+    preview.speciesChoice?.spellcastingAbility,
+    1
+  )
+  const levelOneHp = getHitDieSize(preview.class.hitDie) + getAbilityModifier(preview.abilities.con)
+  const appliedAt = new Date().toISOString()
+  const historyEntry = {
+    id: `creation-${id}`,
+    type: 'creation',
+    appliedAt,
+    fromLevel: 0,
+    toLevel: 1,
+    className: preview.class.name,
     choices,
-    preview,
-    readyToApply: preview.ready && warnings.length === 0,
-    warnings,
-  }
-}
-
-export function applyCreationDraft(draft) {
-  if (!draft.readyToApply) {
-    return null
   }
 
-  const { preview, choices } = draft
-  const id = `pg_${Date.now()}`
-  const features = buildFeatures(preview.class, preview.species, preview.background)
-  const resources = buildResources(preview.class, preview.species, preview.background)
-  const spellcasting = buildSpellcasting(preview.class, preview.abilities)
-
-  return {
+  const character = {
     id,
-    name: choices.name.trim(),
+    name: choices.name?.trim() || 'Nuovo PG',
     level: 1,
-    race: preview.species.name,
+    race: preview.speciesDisplayName,
+    species: {
+      id: preview.species.id,
+      name: preview.species.name,
+      choice: preview.selectedSpeciesOption
+        ? {
+          ruleId: preview.speciesChoice.id,
+          ruleLabel: preview.speciesChoice.label,
+          id: preview.selectedSpeciesOption.id,
+          label: preview.selectedSpeciesOption.label,
+          displayName: preview.selectedSpeciesOption.displayName,
+          featureLabel: preview.selectedSpeciesOption.featureLabel,
+          summary: preview.selectedSpeciesOption.summary,
+          spellcastingAbility: preview.speciesChoice.spellcastingAbility,
+          unlockLevel: preview.speciesChoice.unlockLevel ?? 1,
+          spells: preview.selectedSpeciesOption.spells ?? [],
+        }
+        : null,
+    },
     background: preview.background.name,
     alignment: choices.alignment,
-    concept: choices.concept.trim(),
+    concept: choices.concept?.trim() ?? '',
     classes: [
       {
         name: preview.class.name,
@@ -821,14 +1387,19 @@ export function applyCreationDraft(draft) {
     ],
     combat: {
       hp: {
-        current: preview.derived.hpMax,
-        max: preview.derived.hpMax,
+        current: levelOneHp,
+        max: levelOneHp,
         temp: 0,
       },
       ac: preview.derived.ac,
       speed: preview.derived.speed,
       initiativeBonus: getAbilityModifier(preview.abilities.dex),
-      hitDice: preview.derived.hitDice,
+      hitDice: {
+        current: 1,
+        max: 1,
+        type: preview.class.hitDie,
+        byType: { [preview.class.hitDie]: 1 },
+      },
     },
     abilities: preview.abilities,
     savingThrows: Object.fromEntries(
@@ -839,18 +1410,14 @@ export function applyCreationDraft(draft) {
     ),
     skills: buildSkills(preview.background, choices.selectedClassSkills),
     resources,
-    feats: [
-      {
-        id: preview.background.featId,
-        name: preview.background.featName,
-        source: 'Background',
-        level: 1,
-      },
-    ],
-    spellcasting,
+    feats: [],
+    spellcasting: {
+      ...spellcasting,
+      spells: mergeSpells(spellcasting.spells, speciesSpells),
+    },
     features,
     powers: [],
-    actions: [],
+    actions: buildSpeciesActions(preview.species, preview.selectedSpeciesOption),
     equipment: {
       currency: choices.equipmentMode === 'gold'
         ? { cp: 0, sp: 0, ep: 0, gp: 50, pp: 0 }
@@ -891,16 +1458,205 @@ export function applyCreationDraft(draft) {
       campaignNotes: [],
     },
     progressionHistory: [
-      {
-        id: `creation-${id}`,
-        type: 'creation',
-        appliedAt: new Date().toISOString(),
-        fromLevel: 0,
-        toLevel: 1,
-        className: preview.class.name,
-        choices,
-      },
+      historyEntry,
     ],
     notes: 'Creato con flusso guidato livello 0 -> 1. Alcune scelte avanzate di classe, incantesimi ed equipaggiamento saranno dettagliate nei prossimi step.',
+  }
+
+  const characterWithClassSpells = applyClassSpellChoiceDraft(
+    character,
+    preview.class.name,
+    1,
+    preview.levelOneSpellChoices
+  )
+
+  const characterWithOriginFeat = preview.originFeat?.feat
+    ? applyFeatDraftToCharacter(
+      characterWithClassSpells,
+      preview.originFeat.feat,
+      preview.originFeat.draft,
+      { source: 'Background', level: 1 }
+    )
+    : {
+      ...characterWithClassSpells,
+      feats: [
+        {
+          id: preview.background.featId,
+          name: preview.background.featName,
+          source: 'Background',
+          level: 1,
+        },
+      ],
+    }
+
+  return {
+    ...characterWithOriginFeat,
+    progressionSnapshots: [
+      createProgressionSnapshot(characterWithOriginFeat, {
+        id: `snapshot-lv-1-${id}`,
+        type: 'creation',
+        label: 'Livello 1',
+        createdAt: appliedAt,
+        sourceHistoryId: historyEntry.id,
+        changes: [`Creazione come ${preview.class.name}`],
+      }),
+    ],
+  }
+}
+
+function getDefaultLevelUpChoice(levelChoices) {
+  return {
+    hpIncrease:
+      levelChoices?.hpIncrease?.mode === 'manual'
+        ? {
+          mode: 'manual',
+          rolled: Number(levelChoices.hpIncrease.rolled),
+        }
+        : { mode: 'average' },
+    classChoices: levelChoices?.classChoices ?? {},
+    subclassSpellChoices: levelChoices?.subclassSpellChoices ?? {},
+    invocationChoices: levelChoices?.invocationChoices ?? {},
+    asiOrFeat: levelChoices?.asiOrFeat ?? { mode: 'feat', featId: '' },
+  }
+}
+
+function applySpeciesProgressionChoices(character, preview) {
+  const selectedSpeciesOption = preview.selectedSpeciesOption
+
+  if (!selectedSpeciesOption) {
+    return character
+  }
+
+  const currentLevel = character.level ?? preview.startingLevel ?? 1
+  const speciesFeature = getSpeciesChoiceFeature(
+    preview.species,
+    selectedSpeciesOption,
+    currentLevel
+  )
+  const features = [...(character.features ?? [])]
+
+  if (
+    speciesFeature &&
+    !features.some((feature) => feature.id === speciesFeature.id)
+  ) {
+    features.push(speciesFeature)
+  }
+
+  const speciesSpells = getSpeciesSpells(
+    preview.species,
+    selectedSpeciesOption,
+    preview.speciesChoice?.spellcastingAbility,
+    currentLevel
+  )
+
+  return {
+    ...character,
+    features,
+    spellcasting: {
+      ...(character.spellcasting ?? {}),
+      spells: mergeSpells(character.spellcasting?.spells, speciesSpells),
+    },
+  }
+}
+
+export function getCreationLevelUpFlow(choices, basePreview = null) {
+  const preview = basePreview ?? getCreationPreview(choices)
+
+  if (!preview.ready || preview.startingLevel <= 1 || !preview.class) {
+    return []
+  }
+
+  let currentCharacter = buildBaseCreationCharacter(
+    preview,
+    choices,
+    'pg_creation_preview'
+  )
+  const flow = []
+
+  for (let level = 2; level <= preview.startingLevel; level += 1) {
+    const levelPreview = getLevelUpPreview(currentCharacter, preview.class.name)
+    const levelChoices = getDefaultLevelUpChoice(choices.levelUpChoices?.[level])
+    const levelDraft = buildLevelUpDraft(currentCharacter, levelPreview, levelChoices)
+
+    flow.push({
+      level,
+      character: currentCharacter,
+      preview: levelPreview,
+      draft: levelDraft,
+    })
+
+    if (!levelDraft.readyToApply) {
+      break
+    }
+
+    currentCharacter = applyLevelUpDraft(currentCharacter, levelDraft)
+  }
+
+  return flow
+}
+
+export function buildCreationDraft(choices) {
+  const preview = getCreationPreview(choices)
+  const levelUpFlow = getCreationLevelUpFlow(choices, preview)
+  const warnings = [...preview.warnings]
+
+  if (!choices.name?.trim()) {
+    warnings.push('Inserisci il nome del personaggio.')
+  }
+
+  if (!choices.alignment) {
+    warnings.push('Scegli un allineamento.')
+  }
+
+  if (!choices.equipmentMode) {
+    warnings.push('Scegli l\'equipaggiamento iniziale.')
+  }
+
+  if (preview.startingLevel > 1) {
+    const completedLevels = levelUpFlow.filter((step) => step.draft.readyToApply).length
+    const expectedLevels = preview.startingLevel - 1
+
+    if (completedLevels < expectedLevels) {
+      warnings.push('Completa le scelte dei passaggi di livello prima di creare il PG.')
+    }
+
+    levelUpFlow.forEach((step) => {
+      step.draft.warnings.forEach((warning) => {
+        warnings.push(`Livello ${step.level}: ${warning}`)
+      })
+    })
+  }
+
+  return {
+    type: 'character_creation_draft',
+    choices,
+    preview,
+    levelUpFlow,
+    readyToApply: preview.ready && warnings.length === 0,
+    warnings,
+  }
+}
+
+export function applyCreationDraft(draft) {
+  if (!draft.readyToApply) {
+    return null
+  }
+
+  const { preview, choices } = draft
+  const id = `pg_${Date.now()}`
+  let character = buildBaseCreationCharacter(preview, choices, id)
+
+  ;(draft.levelUpFlow ?? []).forEach((step) => {
+    character = applyLevelUpDraft(character, step.draft)
+  })
+
+  character = applySpeciesProgressionChoices(character, preview)
+
+  return {
+    ...character,
+    name: choices.name.trim(),
+    notes: preview.startingLevel > 1
+      ? `Creato con flusso guidato livello 0 -> ${preview.startingLevel}, applicando i passaggi di livello intermedi. Incantesimi ed equipaggiamento avanzato possono essere rifiniti nelle rispettive sezioni.`
+      : character.notes,
   }
 }

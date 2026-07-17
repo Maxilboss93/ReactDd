@@ -1,0 +1,410 @@
+{
+  "meta": {
+    "title": "D&D 5e 2024 - Equipaggiamento iniziale e competenze di classe",
+    "schema_version": 1,
+    "source": {
+      "manual": "Manuale del Giocatore",
+      "edition": "2024",
+      "language": "it",
+      "pages_pdf": [54, 62, 72, 82, 94, 104, 114, 126, 134, 144, 154, 168, 216, 217, 218, 222, 223, 224]
+    },
+    "notes": [
+      "Questo catalogo collega le classi ai cataloghi oggetto gia esistenti: weapons, armors, shields, tools e adventuring_gear.",
+      "Le opzioni con catalog 'choice' sono scelte che la UI deve risolvere prima di creare l'inventario.",
+      "L'opzione B delle classi e' il denaro alternativo indicato nella tabella dei tratti della classe."
+    ]
+  },
+  "equipment_rules": {
+    "currency": {
+      "base": "mo",
+      "coin_weight": "50 monete pesano circa 0.5 kg",
+      "values_in_gp": {
+        "mr": 0.01,
+        "ma": 0.1,
+        "me": 0.5,
+        "mo": 1,
+        "mp": 10
+      }
+    },
+    "armor": {
+      "categories": ["leggera", "media", "pesante", "scudi"],
+      "untrained_armor_penalty": "Se indossa armatura leggera, media o pesante senza competenza, il personaggio ha svantaggio a tutte le prove con d20 relative a Forza o Destrezza e non puo lanciare incantesimi.",
+      "shield_rule": "Il bonus CA dello scudo si ottiene solo con competenza negli scudi.",
+      "one_armor_one_shield": true,
+      "strength_requirement_penalty": "Se un'armatura indica un requisito di Forza e il personaggio non lo soddisfa, la velocita diminuisce di 3 metri.",
+      "stealth_disadvantage": "Le armature con furtivita svantaggio impongono svantaggio alle prove di Destrezza (Furtivita).",
+      "don_doff_times": {
+        "leggera": { "don": "1 minuto", "doff": "1 minuto" },
+        "media": { "don": "5 minuti", "doff": "1 minuto" },
+        "pesante": { "don": "10 minuti", "doff": "5 minuti" },
+        "scudo": { "don": "azione di Utilizzo", "doff": "azione di Utilizzo" }
+      }
+    },
+    "weapons": {
+      "categories": ["semplice", "guerra"],
+      "attack_ability_rules": {
+        "melee": "Di norma Forza; proprieta Accurata consente Forza o Destrezza.",
+        "ranged": "Di norma Destrezza.",
+        "thrown": "Usa la stessa caratteristica dell'attacco in mischia, salvo regole specifiche."
+      },
+      "proficiency_rule": "Se il personaggio ha competenza nell'arma, aggiunge il bonus di competenza al tiro per colpire.",
+      "damage_rule": "Al danno con arma si aggiunge lo stesso modificatore di caratteristica usato per il tiro per colpire, salvo eccezioni.",
+      "properties": {
+        "accurata": "Puoi usare Forza o Destrezza per attacco e danno.",
+        "due_mani": "Richiede due mani quando attacchi.",
+        "lancio": "Puo essere lanciata entro la gittata indicata.",
+        "leggera": "Permette un attacco extra con azione bonus con un'altra arma leggera dopo l'azione di Attacco.",
+        "munizioni": "Richiede munizioni; ogni attacco consuma munizioni e dopo il combattimento si recupera meta delle munizioni usate, arrotondata per difetto.",
+        "pesante": "Svantaggio se usi arma pesante da mischia con Forza inferiore a 13 o arma pesante a distanza con Destrezza inferiore a 13.",
+        "portata": "Aumenta la portata di 1.5 metri per attacchi e attacchi di opportunita.",
+        "ricarica": "Permette un solo colpo con quell'arma quando usi azione, bonus o reazione per sparare.",
+        "versatile": "Puo essere usata a una o due mani; tra parentesi indica il danno a due mani."
+      }
+    },
+    "tools": {
+      "proficiency_rule": "Con competenza in uno strumento, aggiungi il bonus di competenza alle prove con quello strumento. Se anche l'abilita usata e' competente, la prova ha vantaggio.",
+      "separate_variants": true
+    }
+  },
+  "class_equipment": {
+    "barbaro": {
+      "className": "Barbaro",
+      "armorTraining": ["leggera", "media", "scudi"],
+      "weaponTraining": [{ "type": "category", "categories": ["semplice", "guerra"] }],
+      "toolTraining": [],
+      "multiclassTraining": {
+        "armorTraining": ["scudi"],
+        "weaponTraining": [{ "type": "category", "categories": ["guerra"] }],
+        "toolTraining": []
+      },
+      "startingOptions": [
+        {
+          "id": "barbaro_a",
+          "label": "Equipaggiamento Barbaro",
+          "items": [
+            { "catalog": "weapons", "id": "ascia-bipenne", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "ascia", "quantity": 4 },
+            { "catalog": "adventuring_gear", "id": "dotazione-da-esploratore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 15 }
+          ]
+        },
+        { "id": "barbaro_b", "label": "Denaro iniziale", "currency": { "mo": 75 } }
+      ]
+    },
+    "bardo": {
+      "className": "Bardo",
+      "armorTraining": ["leggera"],
+      "weaponTraining": [{ "type": "category", "categories": ["semplice"] }],
+      "toolTraining": [{ "type": "choice", "id": "bardo_musical_instruments", "categories": ["strumento_musicale"], "count": 3 }],
+      "multiclassTraining": {
+        "armorTraining": ["leggera"],
+        "weaponTraining": [],
+        "toolTraining": [{ "type": "choice", "id": "bardo_multiclass_musical_instrument", "categories": ["strumento_musicale"], "count": 1 }],
+        "skillTraining": { "count": 1, "from": "any" }
+      },
+      "startingOptions": [
+        {
+          "id": "bardo_a",
+          "label": "Equipaggiamento Bardo",
+          "items": [
+            { "catalog": "armors", "id": "armatura-di-cuoio", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "pugnale", "quantity": 2 },
+            { "catalog": "choice", "choiceId": "bardo_starting_musical_instrument", "label": "Strumento musicale", "source": "tools", "categories": ["strumento_musicale"], "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "dotazione-da-intrattenitore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 19 }
+          ]
+        },
+        { "id": "bardo_b", "label": "Denaro iniziale", "currency": { "mo": 90 } }
+      ]
+    },
+    "chierico": {
+      "className": "Chierico",
+      "armorTraining": ["leggera", "media", "scudi"],
+      "weaponTraining": [{ "type": "category", "categories": ["semplice"] }],
+      "toolTraining": [],
+      "multiclassTraining": {
+        "armorTraining": ["leggera", "media", "scudi"],
+        "weaponTraining": [],
+        "toolTraining": []
+      },
+      "startingOptions": [
+        {
+          "id": "chierico_a",
+          "label": "Equipaggiamento Chierico",
+          "items": [
+            { "catalog": "armors", "id": "giaco-di-maglia", "quantity": 1, "equipped": true },
+            { "catalog": "shields", "id": "scudo", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "mazza", "quantity": 1, "equipped": true },
+            { "catalog": "adventuring_gear", "id": "simbolo-sacro", "quantity": 1, "variant": "a scelta" },
+            { "catalog": "adventuring_gear", "id": "dotazione-da-sacerdote", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 7 }
+          ]
+        },
+        { "id": "chierico_b", "label": "Denaro iniziale", "currency": { "mo": 110 } }
+      ]
+    },
+    "druido": {
+      "className": "Druido",
+      "armorTraining": ["leggera", "scudi"],
+      "weaponTraining": [{ "type": "category", "categories": ["semplice"] }],
+      "toolTraining": [{ "type": "fixed", "ids": ["borsa-da-erborista"] }],
+      "multiclassTraining": {
+        "armorTraining": ["leggera", "scudi"],
+        "weaponTraining": [],
+        "toolTraining": []
+      },
+      "startingOptions": [
+        {
+          "id": "druido_a",
+          "label": "Equipaggiamento Druido",
+          "items": [
+            { "catalog": "armors", "id": "armatura-di-cuoio", "quantity": 1, "equipped": true },
+            { "catalog": "shields", "id": "scudo", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "falcetto", "quantity": 1, "equipped": true },
+            { "catalog": "adventuring_gear", "id": "focus-druidico", "quantity": 1, "variant": "bastone ferrato" },
+            { "catalog": "adventuring_gear", "id": "dotazione-da-esploratore", "quantity": 1 },
+            { "catalog": "tools", "id": "borsa-da-erborista", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 9 }
+          ]
+        },
+        { "id": "druido_b", "label": "Denaro iniziale", "currency": { "mo": 50 } }
+      ]
+    },
+    "guerriero": {
+      "className": "Guerriero",
+      "armorTraining": ["leggera", "media", "pesante", "scudi"],
+      "weaponTraining": [{ "type": "category", "categories": ["semplice", "guerra"] }],
+      "toolTraining": [],
+      "multiclassTraining": {
+        "armorTraining": ["leggera", "media", "scudi"],
+        "weaponTraining": [{ "type": "category", "categories": ["guerra"] }],
+        "toolTraining": []
+      },
+      "startingOptions": [
+        {
+          "id": "guerriero_a",
+          "label": "Guerriero corazzato",
+          "items": [
+            { "catalog": "armors", "id": "cotta-di-maglia", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "spadone", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "mazza-frusto", "quantity": 1 },
+            { "catalog": "weapons", "id": "giavellotto", "quantity": 8 },
+            { "catalog": "adventuring_gear", "id": "dotazione-da-avventuriero", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 4 }
+          ]
+        },
+        {
+          "id": "guerriero_b",
+          "label": "Guerriero agile",
+          "items": [
+            { "catalog": "armors", "id": "armatura-di-cuoio-borchiato", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "scimitarra", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "spada-corta", "quantity": 1 },
+            { "catalog": "weapons", "id": "arco-lungo", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "munizioni", "quantity": 20, "variant": "frecce" },
+            { "catalog": "adventuring_gear", "id": "faretra", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "dotazione-da-avventuriero", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 11 }
+          ]
+        },
+        { "id": "guerriero_c", "label": "Denaro iniziale", "currency": { "mo": 155 } }
+      ]
+    },
+    "ladro": {
+      "className": "Ladro",
+      "armorTraining": ["leggera"],
+      "weaponTraining": [
+        { "type": "category", "categories": ["semplice"] },
+        { "type": "filtered", "category": "guerra", "propertiesAny": ["accurata", "leggera"] }
+      ],
+      "toolTraining": [{ "type": "fixed", "ids": ["arnesi-da-scasso"] }],
+      "multiclassTraining": {
+        "armorTraining": ["leggera"],
+        "weaponTraining": [],
+        "toolTraining": [{ "type": "fixed", "ids": ["arnesi-da-scasso"] }],
+        "skillTraining": { "count": 1, "from": "class_list" }
+      },
+      "startingOptions": [
+        {
+          "id": "ladro_a",
+          "label": "Equipaggiamento Ladro",
+          "items": [
+            { "catalog": "armors", "id": "armatura-di-cuoio", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "pugnale", "quantity": 2 },
+            { "catalog": "weapons", "id": "spada-corta", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "arco-corto", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "munizioni", "quantity": 20, "variant": "frecce" },
+            { "catalog": "adventuring_gear", "id": "faretra", "quantity": 1 },
+            { "catalog": "tools", "id": "arnesi-da-scasso", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "dotazione-da-scassinatore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 8 }
+          ]
+        },
+        { "id": "ladro_b", "label": "Denaro iniziale", "currency": { "mo": 100 } }
+      ]
+    },
+    "mago": {
+      "className": "Mago",
+      "armorTraining": [],
+      "weaponTraining": [{ "type": "category", "categories": ["semplice"] }],
+      "toolTraining": [],
+      "multiclassTraining": {
+        "armorTraining": [],
+        "weaponTraining": [],
+        "toolTraining": []
+      },
+      "startingOptions": [
+        {
+          "id": "mago_a",
+          "label": "Equipaggiamento Mago",
+          "items": [
+            { "catalog": "weapons", "id": "pugnale", "quantity": 2 },
+            { "catalog": "adventuring_gear", "id": "focus-arcano", "quantity": 1, "variant": "bastone ferrato" },
+            { "catalog": "adventuring_gear", "id": "tunica", "quantity": 1, "variant": "veste" },
+            { "catalog": "adventuring_gear", "id": "libro", "quantity": 1, "variant": "libro degli incantesimi" },
+            { "catalog": "adventuring_gear", "id": "dotazione-da-studioso", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 5 }
+          ]
+        },
+        { "id": "mago_b", "label": "Denaro iniziale", "currency": { "mo": 55 } }
+      ]
+    },
+    "monaco": {
+      "className": "Monaco",
+      "armorTraining": [],
+      "weaponTraining": [
+        { "type": "category", "categories": ["semplice"] },
+        { "type": "filtered", "category": "guerra", "propertiesAll": ["leggera"] }
+      ],
+      "toolTraining": [{ "type": "choice", "id": "monaco_tool", "categories": ["artigiano", "strumento_musicale"], "count": 1 }],
+      "multiclassTraining": {
+        "armorTraining": [],
+        "weaponTraining": [],
+        "toolTraining": []
+      },
+      "startingOptions": [
+        {
+          "id": "monaco_a",
+          "label": "Equipaggiamento Monaco",
+          "items": [
+            { "catalog": "weapons", "id": "lancia", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "pugnale", "quantity": 5 },
+            { "catalog": "choice", "choiceId": "monaco_starting_tool", "label": "Strumento scelto con la competenza", "source": "toolTraining", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "dotazione-da-esploratore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 11 }
+          ]
+        },
+        { "id": "monaco_b", "label": "Denaro iniziale", "currency": { "mo": 50 } }
+      ]
+    },
+    "paladino": {
+      "className": "Paladino",
+      "armorTraining": ["leggera", "media", "pesante", "scudi"],
+      "weaponTraining": [{ "type": "category", "categories": ["semplice", "guerra"] }],
+      "toolTraining": [],
+      "multiclassTraining": {
+        "armorTraining": ["leggera", "media", "scudi"],
+        "weaponTraining": [{ "type": "category", "categories": ["guerra"] }],
+        "toolTraining": []
+      },
+      "startingOptions": [
+        {
+          "id": "paladino_a",
+          "label": "Equipaggiamento Paladino",
+          "items": [
+            { "catalog": "armors", "id": "cotta-di-maglia", "quantity": 1, "equipped": true },
+            { "catalog": "shields", "id": "scudo", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "spada-lunga", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "giavellotto", "quantity": 6 },
+            { "catalog": "adventuring_gear", "id": "simbolo-sacro", "quantity": 1, "variant": "a scelta" },
+            { "catalog": "adventuring_gear", "id": "dotazione-da-sacerdote", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 9 }
+          ]
+        },
+        { "id": "paladino_b", "label": "Denaro iniziale", "currency": { "mo": 150 } }
+      ]
+    },
+    "ranger": {
+      "className": "Ranger",
+      "armorTraining": ["leggera", "media", "scudi"],
+      "weaponTraining": [{ "type": "category", "categories": ["semplice", "guerra"] }],
+      "toolTraining": [],
+      "multiclassTraining": {
+        "armorTraining": ["leggera", "media", "scudi"],
+        "weaponTraining": [{ "type": "category", "categories": ["guerra"] }],
+        "toolTraining": [],
+        "skillTraining": { "count": 1, "from": "class_list" }
+      },
+      "startingOptions": [
+        {
+          "id": "ranger_a",
+          "label": "Equipaggiamento Ranger",
+          "items": [
+            { "catalog": "armors", "id": "armatura-di-cuoio-borchiato", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "scimitarra", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "spada-corta", "quantity": 1 },
+            { "catalog": "weapons", "id": "arco-lungo", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "munizioni", "quantity": 20, "variant": "frecce" },
+            { "catalog": "adventuring_gear", "id": "faretra", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "focus-druidico", "quantity": 1, "variant": "rametto di vischio" },
+            { "catalog": "adventuring_gear", "id": "dotazione-da-esploratore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 7 }
+          ]
+        },
+        { "id": "ranger_b", "label": "Denaro iniziale", "currency": { "mo": 150 } }
+      ]
+    },
+    "stregone": {
+      "className": "Stregone",
+      "armorTraining": [],
+      "weaponTraining": [{ "type": "category", "categories": ["semplice"] }],
+      "toolTraining": [],
+      "multiclassTraining": {
+        "armorTraining": [],
+        "weaponTraining": [],
+        "toolTraining": []
+      },
+      "startingOptions": [
+        {
+          "id": "stregone_a",
+          "label": "Equipaggiamento Stregone",
+          "items": [
+            { "catalog": "weapons", "id": "lancia", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "pugnale", "quantity": 2 },
+            { "catalog": "adventuring_gear", "id": "focus-arcano", "quantity": 1, "variant": "cristallo" },
+            { "catalog": "adventuring_gear", "id": "dotazione-da-avventuriero", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 28 }
+          ]
+        },
+        { "id": "stregone_b", "label": "Denaro iniziale", "currency": { "mo": 50 } }
+      ]
+    },
+    "warlock": {
+      "className": "Warlock",
+      "armorTraining": ["leggera"],
+      "weaponTraining": [{ "type": "category", "categories": ["semplice"] }],
+      "toolTraining": [],
+      "multiclassTraining": {
+        "armorTraining": ["leggera"],
+        "weaponTraining": [],
+        "toolTraining": []
+      },
+      "startingOptions": [
+        {
+          "id": "warlock_a",
+          "label": "Equipaggiamento Warlock",
+          "items": [
+            { "catalog": "armors", "id": "armatura-di-cuoio", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "falcetto", "quantity": 1, "equipped": true },
+            { "catalog": "weapons", "id": "pugnale", "quantity": 2 },
+            { "catalog": "adventuring_gear", "id": "focus-arcano", "quantity": 1, "variant": "globo" },
+            { "catalog": "adventuring_gear", "id": "libro", "quantity": 1, "variant": "scienze occulte" },
+            { "catalog": "adventuring_gear", "id": "dotazione-da-studioso", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 15 }
+          ]
+        },
+        { "id": "warlock_b", "label": "Denaro iniziale", "currency": { "mo": 100 } }
+      ]
+    }
+  }
+}

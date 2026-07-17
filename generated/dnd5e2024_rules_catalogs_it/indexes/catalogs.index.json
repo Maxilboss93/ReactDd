@@ -42,6 +42,12 @@
     "count": 34
   },
   {
+    "id": "starting_equipment",
+    "name": "Equipaggiamento iniziale e competenze di classe",
+    "file": "rules/equipment/starting_equipment.json",
+    "count": 12
+  },
+  {
     "id": "spells",
     "name": "Incantesimi",
     "file": "rules/spells/dnd2024_spells_it.json",

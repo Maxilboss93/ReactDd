@@ -1,0 +1,810 @@
+
+--- PDF PAGE 149 ---
+LIVELLO 1 1 : RAFFICA D E L CAC C IATORE
+I danni psichici inflitti dal Colpo terribile salgono a 2d8.
+Inoltre, quando il ranger usa l'effetto Colpo terribile del
+privilegio Imboscata Terrificante, può scatenare uno dei
+seguenti effetti aggiuntivi.
+Colpo improvviso. Il ranger può effettuare un altro
+attacco con la stessa arma contro una creatura diversa
+che sia entro 1,5 metri dal bersaglio originale e a portata
+dell'arma.
+Paura di massa. Il bersaglio e ogni creatura nel raggio di
+3 metri dal bersaglio devono superare un tiro salvezza su
+Saggezza contro la CD del tiro salvezza sull'incantesimo
+del ranger. In caso di fallimento, le creature colpite sono
+spaventate fino all'inizio del turno successivo.
+LIVELLO 1 5 : S C H I VATA DELL' O M BRA
+Quando una creatura effettua un tiro per colpire contro
+il ranger, questi può utilizzare una reazione per conferire
+svantaggio all'avversario. Che l'attacco vada a segno
+o meno, il personaggio può poi teletrasportarsi fino
+a 9 metri in uno spazio libero che è in grado di vedere.
+S I G N O R E D E LLE B E ST I E
+Entra in comunione con una bestia primordiale
+Un Signore delle Bestie forma un legame mistico con un
+animale speciale, attingendo alla magia primordiale e svi­
+luppando una profonda sintonia con il mondo naturale.
+LIVE LLO 3 : C O M PAGNO PRI MORDIALE
+Il ranger evoca magicamente una bestia primordiale
+che trae forza dal suo legame con la natura. Scegli la sua
+scheda delle statistiche: Bestia della Terra, Bestia del
+Mare o Bestia del Cielo. Il personaggio determina di che
+tipo di animale si tratta, scegliendone uno consono alla
+scheda delle statistiche. A prescindere dalla bestia scelta,
+questa avrà su di sé dei segni primordiali che testimoniano
+le sue origini soprannaturali.
+Inoltre, è amichevole nei confronti del ranger e dei
+suoi compagni e obbedisce ai suoi comandi. Svanisce se
+il personaggio muore.
+La bestia in combattimento. In combattimento, la bestia
+agisce durante il turno del ranger. Può muoversi e usare le
+sue reazioni indipendentemente dal personaggio, e l'unica
+azione che può compiere è la Schivata, a meno che il ran­
+ger non usi un'azione bonus per ordinargli di effettuarne
+una descritta nella scheda delle statistiche o di altro tipo.
+Quando effettua l'azione di Attacco, il ranger può anche
+decidere di sacrificare uno dei suoi attacchi per ordinare
+alla bestia di effettuare l'azione di Colpo. Se il personaggio
+è incapacitato, la bestia agisce di sua volontà e non si
+limita all'azione di Schivata.
+Ripristinare o sostituire la bestia. Se la bestia è morta
+nell'ultima ora, come azione di Magia il ranger può toc­
+carla e consumare uno slot incantesimo. La bestia torna in
+vita dopo 1 minuto con tutti i suoi punti ferita ripristinati.
+Ogni volta che il ranger completa un riposo lungo, può
+evocare una bestia primordiale differente che comparirà
+in uno spazio libero entro 1,5 metri da sé, e sceglierne la
+scheda delle statistiche e l'aspetto. Se il personaggio pos­
+siede già una bestia garantita da questo privilegio, sparirà
+una volta apparsa quella nuova.
+.
+.
+
+--- PDF PAGE 152 ---
+ld6 Dono
+4 Quando nessuno la guard a d i retta mente, l'om bra
+del ranger i n izia a danzare.
+5 S u l l a testa del personaggio s p u ntano delle corna
+o dei palchi d i corna.
+6 La pelle e i cape l l i del ra nger cambiano colore ogni
+volta che sorge l 'alba.
+LIVE LLO 7: SCA M BIO SE DUC E NTE
+La magia della Selva Fatata protegge la mente del ranger,
+conferendogli vantaggio ai tiri salvezza eseguiti per evitare
+di essere affascinato o spaventato, o per terminare queste
+condizioni.
+In più, ogni volta che una creatura nel suo campo visivo
+entro 36 metri da lui supera un tiro salvezza per evitare di
+essere affascinata o spaventata o per porre fine a tali con­
+dizioni, il ranger può usare una reazione per costringere
+un'altra creatura nel suo campo visivo entro 36 metri da
+sé a effettuare un tiro salvezza su Saggezza contro la CD
+del tiro salvezza sull'incantesimo del ranger. Se lo fallisce,
+il bersaglio è affascinato o spaventato (a scelta del ranger)
+per 1 minuto e ripeterà il tiro salvezza alla fine di ogni suo
+turno. Se lo supera, l'effetto svanisce.
+LIVE LLO 1 1 : R I N FORZI FATATI
+Il ranger può lanciare richiama folletto senza usare una
+componente materiale. Inoltre, può anche lanciarlo una
+volta senza consumare uno slot incantesimo e recupera
+l'abilità di lanciarlo in questo modo dopo aver completato
+un riposo lungo.
+Ogni volta che lo stregone lancia l'incantesimo, può
+modificarlo in modo che non richieda concentrazione.
+Così facendo, per quel lancio la durata dell'incantesimo
+diventa di 1 minuto.
+LIVE LLO 1 5 : VIA N DANTE VE LATO
+Il ranger può lanciare passo velato senza consumare uno
+slot incantesimo. Può lanciarlo un numero di volte pari al
+valore del suo modificatore di Saggezza (minimo di una
+volta) e recuperare tutti gli utilizzi consumati quando
+completa un riposo lungo.
+Inoltre, ogni volta che il ranger lancia passo velato, può
+portare con sé una creatura consenziente nel raggio di
+1,5 metri da sé e che sia nel suo campo visivo. La creatura
+viene teletrasportata in uno spazio libero a scelta del
+personaggio entro 1,5 metri dallo spazio di destinazione
+del ranger.
+
+--- PDF PAGE 154 ---
+' .
+V&
+/ __.,,. -....... """'"
+-
+GR ATTI D E LLO S T R E G O N E C OM E P E R SONAGGIO MULTICLASSE
+Ottiene il Dado Vita dalla tabella Tratti dello stregone.
+Caratteristiche Carisma
+Ottiene i privilegi dello stregone di 1° livello elencati
+primarie
+nella tabella Privilegi dello stregone. Per determinare
+Dado Vita DG per ogni l ivel l o da stregone
+il numero di slot incantesimo disponibili, vedi le regole
+Competenze Costituzione e Carisma multiclasse nel capitolo 2. I
+I
+nei tiri salvezza
+Competenze Due a scelta tra: Arcano, I nganno, P R I V I L E GI DI C LA S S E DE LLO I
+nelle abilità I nt i m i d i re, I ntuizione, Persuasione I STRE G O N E
+•
+o Religione L o stregone ottiene i seguenti privilegi d i classe quando
+Competenza Armi semplici raggiunge i livelli specificati. Tali privilegi sono elencati
+nelle armi nella tabella Privilegi dello stregone.
+Competenza N essuno
+LIVE LLO l : INCANTE S I M I
+nelle armature
+Attingendo alla propria magia innata, l o stregone è i n
+Equipaggiamento A scelta tra A e B: (A) lancia, 2 pugnali, grado d i lanciare incantesimi. Consulta il capitolo 7 per
+iniziale focus arcano (crista l lo) , dotazione d a le regole relative al lancio degli incantesimi. Le infor-
+avventuriero e 28 mo; o (B) 50 mo mazioni sottostanti spiegano come applicare tali regole
+agli incantesimi da stregone, elencati nella relativa lista
+degli incantesimi più avanti nella descrizione della classe.
+Trucchetti. Il personaggio conosce quattro trucchetti
+LI STREGONI PADRONEGGIANO UNA MAGIA
+da stregone a scelta. Sono consigliati luce, prestidigita-
+innata che pervade ogni fibra del loro essere.
+zione, stretta folgorante e stregoneria esplosiva. Quando lo
+G Alcuni di loro non conoscono bene le origini dei
+stregone ottiene un livello, è possibile sostituire uno dei
+propri poteri, mentre altri le riconducono a determinati
+trucchetti di questo privilegio con un altro trucchetto
+eventi legati a trascorsi personali e familiari. Per ricevere
+a scelta.
+il dono che li contraddistingue, gli stregoni potrebbero
+Dopo aver raggiunto il 4° e il 10° livello da stregone,
+essere stati benedetti alla nascita da un drago o una
+il personaggio apprende un altro trucchetto a scelta,
+driade, oppure essere stati colpiti improvvisamente da
+come mostrato nella colonna Trucchetti della tabella
+un fulmine. O ancora, p otrebbero a erlo ottenuto da una
+V
+Privilegi dello stregone.
+divinità o attraverso l'esposizione alla magia di un altro
+Slot incantesimo. La tabella Privilegi dello stregone
+piano di esistenza, o dopo aver osservato per un attimo
+mostra gli slot incantesimo disponibili per i propri incan­
+i meccanismi interni che muovono la realtà. A prescindere
+tesimi di 1° livello o superiore. Tutti gli slot incantesimo
+dalle origini, il risultato è un segno indelebile sugli stre­
+consumati vengono ripristinati una volta completato un
+goni: una turbolenta magia che può essere tramandata
+riposo lungo.
+di generazione in generazione.
+Incantesimi preparati di 1° livello o superiore. Con questo
+Gli stregoni non studiano le arti arcane: il grezzo
+privilegio, lo stregone prepara una lista di incantesimi di
+e imprevedibile potere magico fa parte di loro. Ciò che
+1° livello o superiore che può lanciare. Per iniziare, sceglie
+fanno è imparare a controllarlo e incanalarlo, così che
+due incantesimi da stregone di 1° livello. Sono consigliati
+possano scoprire nuovi e strabilianti modi di scatenare
+mani brucianti e individuazione del magico.
+i loro poteri. Man mano che imparano a gestire questa
+Il numero di incantesimi nella lista aumenta man
+magia innata, entrano in maggiore sintonia con la sua
+mano che il personaggio ottiene livelli da stregone,
+origine, sviluppando dei particolari poteri con cui essa
+come mostrato nella colonna Incantesimi preparati della
+si manifesta.
+tabella Privilegi dello stregone. Ogni volta che il numero
+Gli stregoni sono rari. In alcune famiglie ne nasce uno
+cresce, lo stregone deve scegliere altri incantesimi finché
+solo per ogni generazione, ma per lo più è un talento che
+il numero sulla lista non combacia con quello mostrato
+si manifesta per puro caso. Chi è dotato di tale potere
+nella tabella Privilegi dello stregone. Gli incantesimi scelti
+magico scopre ben presto che non si può tenere nascosto.
+devono essere di un livello di cui possiede degli slot incan­
+Anzi, una magia simile desidera essere utilizzata.
+tesimo. Per esempio, nel caso di uno stregone di 3° livello,
+la sua lista di incantesimi preparati può includere sei
+D I VE NTA R E U N O STRE G O N E . . .
+incantesimi da stregone di 1° e 2° livello in qualsiasi
+C O M E P E R SONAGGIO DI 1 ° LIVELLO combinazione.
+Ottiene tutti i tratti nella tabella Tratti dello stregone. Se un altro privilegio gli fornisce incantesimi che sono
+Ottiene i privilegi dello stregone di 1° livello elencati sempre preparati, questi non contano ai fini del numero
+nella tabella Privilegi dello stregone. di incantesimi preparabili con questo privilegio. Tuttavia,
+valgono comunque come incantesimi da stregone.
+Cambiare gli incantesimi preparati. Quando completa
+un riposo lungo, lo stregone può sostituire un incantesimo
+sulla propria lista con un altro incantesimo da stregone
+di cui possiede degli slot.
+CA PITOLO 3 I C L A S S I D E I PERSONAGGI 151
+
+--- PDF PAGE 155 ---
+P R I V I L E G I D E L L O S T R E G O N E
+-Slot incantesimo per livello
+di incantesimo-
+Bonus di Punti Incantesimi
+Livello competenza Privilegi di classe stregoneria Trucchetti preparati l 2 3 4 5 6 7 8 9
++2 I ncantes i m i , 4 2 2
+Stregoneria I n n ata
+2 +2 Fonte di magia, M etamagia 2 4 4 3
+3 +2 Sottoclasse d e l l o stregon e 3 4 6 4 2
+4 +2 Aumento dei pu nteggi 4 5 7 4 3
+d i caratteristica
+5 +3 Ripristi no stregon esco 5 5 9 4 3 2
+6 +3 Privilegio d e l l a sottoclasse 6 5 1 0 4 3 3
+7 +3 Stregoneria incarnata 7 5 1 1 4 3 3
+8 +3 Aumento dei pu nteggi 8 5 1 2 4 3 3 2
+d i caratteristica
+9 +4 9 5 1 4 4 3 3 3
+1 0 +4 M etamagia 1 0 6 1 5 4 3 3 3 2
+1 1 +4 1 1 6 1 6 4 3 3 3 2
+1 2 +4 Aumento dei pu nteggi 1 2 6 1 6 4 3 3 3 2
+d i caratteristica
+1 3 +5 1 3 6 1 7 4 3 3 3 2
+1 4 +5 Privi legio della sottoclasse 1 4 6 1 7 4 3 3 3 2
+1 5 +5 1 5 6 1 8 4 3 3 3 2
+1 6 +5 Aumento dei pu nteggi 1 6 6 1 8 4 3 3 3 2
+d i ca ratteristica
+1 7 +6 M etamagia 1 7 6 1 9 4 3 3 3 2
+1 8 +6 Privi legio della sottoclasse 1 8 6 20 4 3 3 3 3
+1 9 +6 Dono epico 1 9 6 21 4 3 3 3 3 2
+20 +6 Apoteosi a rcana 20 6 22 4 3 3 3 3 2 2
+Caratteristica da Incantatore. Carisma è la caratteristica che gli consentono di creare una vasta gamma di effetti
+da incantatore per gli incantesimi da stregone. magici.
+Focus du incantatore. Uno stregone può usare un focus Uno stregone parte con 2 punti stregoneria e ne ottiene
+arcano come focus da incantatore per i suoi incantesimi altri ai livelli superiori, come indicato nella colonna Punti
+da stregone. stregoneria nella tabella Privilegi dello stregone. Non può
+avere un numero di punti stregoneria superiore al numero
+LIVE LLO l: STREGONERIA I N NATA indicato nella tabella per il suo livello. Il personaggio
+Lo stregone è stato segnato in maniera indelebile da un recupera tutti i punti stregoneria spesi quando completa
+evento del suo passato, che gli ha conferito un potere un riposo lungo.
+magico dormiente. Come azione bonus, può scatenarlo per È possibile sfruttare i punti stregoneria per alimentare
+1 minuto e ottenere i seguenti benefici per la sua durata: le opzioni sottostanti, oltre che altri privilegi che ne fanno
+uso come Metamagia.
+La CD del tiro salvezza sull'incantesimo degli incante­
+Convertire gli slot incantesimo in punti stregoneria.
+simi da stregone aumenta di 1.
+Lo stregone può consumare uno slot incantesimo per
+Lo stregone ha vantaggio ai tiri per colpire degli incan­
+ottenere un numero di punti stregoneria pari al livello
+tesimi lanciati.
+dello slot (nessuna azione richiesta).
+Il personaggio può utilizzare questo privilegio per due Creare slot incantesimo. Come azione bonus, lo stregone
+volte e recuperare tutti gli utilizzi spesi quando completa può trasformare i punti stregoneria non spesi in uno slot
+un riposo lungo. incantesimo. La tabella Creazione degli slot incantesimo
+indica il costo di creazione di uno slot di un determinato
+LIVELLO 2 : FONTE DI M AGIA
+livello, oltre che il livello da stregone minimo necessario
+Lo stregone può attingere alla fonte del potere magico per creare uno slot. Non è possibile creare slot incante­
+dentro di sé. Essa è rappresentata dai punti stregoneria, simo di livello superiore al 5°.
+152 CA PiTOLO 3 I CLASSI DEI P E R S O NAGGI
+
+--- PDF PAGE 156 ---
+Ogni slot incantesimo creato tramite questo privilegio Inoltre, mentre il privilegio Stregoneria Innata è attivo,
+svanisce quando lo stregone completa un riposo lungo. lo stregone può usare fino a due delle sue opzioni di Meta­
+magia su ogni incantesimo lanciato.
+C R E A Z I O N E D E G L I S LOT I N C A N T E S I M O
+LIVE LLO 1 9 : D ONO EPICO
+Livello slot Costo punti Liv. stregone
+Il personaggio ottiene un Dono epico (vedi capitolo 5)
+incantesimo stregoneria minimo
+o un altro talento a scelta di cui possiede i prerequisiti.
+2 2 È consigliato il Dono del viaggio dimensionale.
+2 3 3
+LIVE LLO 2 0 : APOTEO S I ARCANA
+3 s s
+Quando il privilegio Stregoneria Innata è attivo, lo stre­
+4 6 7 gone può usare un'opzione di Metamagia a ogni turno
+s 7 9 senza dover consumare punti stregoneria.
+O P Z I O N I DI M ETA M AGIA
+LIVE LLO 2 : METAMAGIA
+Poiché la magia è un'abilità innata dello stregone, quest'ul­ Per il privilegio di Metamagia dello stregone sono disponi­
+timo può alterare i suoi incantesimi secondo necessità, bili le seguenti opzioni, elencate in ordine alfabetico.
+per questo ottiene due opzioni di Metamagia dalla sezione
+INCANTE SIMO C E LATO
+Opzioni di Metamagia, che si trova più avanti nella descri­
+zione della classe. Le opzioni selezionate possono essere Costo: 1 punto stregoneria
+utilizzate per modificare temporaneamente gli incantesimi Quando lo stregone lancia un incantesimo, può spendere
+lanciati. Per fare uso di un'opzione, è necessario consu­ 1 punto stregoneria per farlo senza utilizzare componenti
+mare il costo corrispondente in punti stregoneria. verbali, somatiche o materiali, fatta eccezione per le com­
+Lo stregone può usare soltanto un'opzione di Metama­ ponenti materiali consumate dall'incantesimo o il cui
+gia su un incantesimo quando lo lancia, a meno che non costo è specificato nella sua descrizione.
+sia specificato diversamente.
+Ogni volta che il personaggio ottiene un livello da stre­ I NCANTE SIM O D I STANTE
+gone, è possibile sostituire una delle opzioni di Metamagia Costo: 1 punto stregoneria
+con una che ancora non conosce. Lo stregone ottiene due
+Quando lo stregone lancia un incantesimo che ha una
+ulteriori opzioni al 10° livello e altre due al 17° livello. gittata pari o superiore a 1,5 metri, può spendere 1 punto
+stregoneria per raddoppiarla. Se invece lancia un incante­
+LIVE LLO 3 : S OTTO C LA S S E DELLO STRE G O N E
+simo che ha una gittata a contatto, può spendere 1 punto
+Il personaggio ottiene u n a sottoclasse dello stregone
+stregoneria per aumentarla a 9 metri.
+a scelta. Dopo la descrizione di questa classe, troverai
+una spiegazione per ciascuna delle seguenti sottoclassi: I NCANTE SIMO ESTESO
+Stregoneria Aberrante, Stregoneria Meccanica, Strego­
+Costo: 1 punto stregoneria
+neria Draconica e Stregoneria della Magia Selvaggia.
+Quando lo stregone lancia un incantesimo di durata pari
+Una sottoclasse è una specializzazione che conferisce
+o superiore a 1 minuto, può spendere 1 punto stregoneria
+dei privilegi a determinati livelli da stregone. Per il resto
+per raddoppiarla fino a un massimo di 24 ore.
+della sua carriera, il personaggio ottiene tutti i privilegi
+Se l'incantesimo interessato richiede concentrazione,
+della sottoclasse pari al suo livello da stregone attuale
+il personaggio dispone di vantaggio a ogni tiro salvezza
+o a quelli inferiori.
+effettuato per mantenere la concentrazione.
+LIVELLO 4 : AU M E NTO DEI PUNTEGGI
+INCANTESIMO INTENSIFICATO
+DI CARATTERISTICA
+Il personaggio ottiene l'aumento dei punteggi di caratte­ Costo: 2 punti stregoneria
+ristica (vedi capitolo 5) o un altro talento a scelta di cui Quando lo stregone lancia un incantesimo che obbliga
+possiede i prerequisiti. Questo privilegio si ottiene nuova­ una creatura a effettuare un tiro salvezza, può spendere
+mente all'8°, al 12° e al 16° livello da stregone. 2 punti stregoneria per infliggere svantaggio a un bersa­
+glio dell'incantesimo sui tiri salvezza contro di esso.
+LIVELLO 5 : RIPRISTI NO STREGON E S C O
+Quando l o stregone completa un riposo breve, può INCANTE SIM O M I RATO
+recuperare i punti stregoneria consumati, ma non più Costo: 1 punto stregoneria
+di un numero pari a metà del proprio livello da stregone
+Se lo stregone effettua un tiro per colpire per un incante­
+(arrotondato per difetto). Dopo aver usato questo privi­
+simo e fallisce, può spendere 1 punto stregoneria per tirare
+legio, il personaggio non può riutilizzarlo prima di aver
+nuovamente il d20 e deve usare il nuovo risultato.
+completato un riposo lungo.
+Lo stregone può utilizzare Incantesimo mirato anche
+se ha già utilizzato un'opzione diversa di Metamagia
+LIVELLO 7: STREGONERIA INCARNATA
+durante il lancio dell'incantesimo.
+Se ha consumato tutti i suoi utilizzi di Stregoneria Innata,
+come azione bonus può spendere 2 punti stregoneria per
+attivarla.
+CA PITOLO 3 I C LA S S I D E I P E R SONAGGI 153
+
+--- PDF PAGE 157 ---
+INCANTE SIM O POTE NZIATO
+Costo: 1 punto stregoneria
+Quando lo stregone tira per i danni di un incantesimo,
+può spendere 1 punto stregoneria per ripetere il tiro di
+un numero massimo di dadi pari al suo modificatore di
+Carisma (minimo di uno), e deve usare i nuovi risultati.
+Lo stregone può utilizzare Incantesimo potenziato
+anche se ha già utilizzato un'opzione diversa di Metama­
+gia durante il lancio dell'incantesimo.
+INCANTE SIMO P R E C I S O
+Costo: 1 punto stregoneria
+Quando lo stregone lancia un incantesimo che obbliga
+altre creature a effettuare un tiro salvezza, può proteg­
+gere alcune di esse dalla piena forza dell'incantesimo.
+Per farlo, spende 1 punto stregoneria e sceglie un numero
+massimo di creature pari al suo modificatore di Carisma
+(minimo una creatura). Le creature scelte superano
+automaticamente i loro tiri salvezza contro l'incantesimo
+e non subiscono alcun danno se normalmente subirebbero
+la metà dei danni in caso di tiro salvezza superato.
+INCANTE SIMO RADDOPPIATO
+Costo: 1 punto stregoneria
+Quando lo stregone produce un incantesimo lanciabile
+consumando uno slot di livello superiore per colpire un
+bersaglio aggiuntivo, come charme su persone, può spen­
+dere 1 punto stregoneria per aumentarne il livello effettivo
+di 1.
+INCANTE SIM O RAPI D O
+Costo: 2 punti stregoneria
+Quando lo stregone lancia un incantesimo che ha un
+tempo di lancio di 1 azione, può spendere 2 punti stre­
+goneria per cambiarlo a 1 azione bonus per quel lancio.
+Non è possibile eseguire questa modifica se il personaggio
+ha già lanciato un incantesimo di 1° livello o superiore nel
+turno attuale, così come non si può lanciare un incante­
+simo di 1° livello o superiore in questo turno dopo aver
+modificato l'incantesimo come indicato sopra.
+I NCANTE SIM O TRASMUTATO
+Costo: 1 punto stregoneria
+Quando lo stregone lancia un incantesimo che infligge un
+tipo di danno presente nella lista seguente, può spendere
+1 punto stregoneria per cambiare il tipo di danno in un
+altro della lista: acido, freddo, fulmine, fuoco, tuono,
+veleno.
+L I STA D E GLI I NC A N T E S I M I
+D A STRE G O N E
+I n questa sezione s i trova l a lista degli incantesimi da
+stregone. Gli incantesimi sono ordinati prima per livello
+dell'incantesimo e poi in ordine alfabetico, insieme alla
+scuola di magia per ciascuna voce dell'elenco. Nella
+colonna Speciale, C significa che l'incantesimo richiede
+concentrazione, R indica che è un rituale, mentre
+M segnala la necessità di una specifica componente
+materiale.
+154 CAPITOLO 3 I C LA S S I DEI P E R S O NAGGI
+
+--- PDF PAGE 158 ---
+TR U CC H ETTI { I N C A N T E S I M I DA S T R E G O N E
+Incantesimo Scuola Speciale
+D I L I V E L LO O)
+Unto Evocazione
+Incantesimo Scuola Speciale
+Vita falsata N ecromanzia
+Amicizia Ammal iamento e
+Colpo accurato Divinazione I N C A N T E S I M I DA S T R E G O N E D I 2 ° L I V E L LO
+Dardo dif uoco I nvocazione Incantesimo Scuola Speciale
+Elementalismo Trasm utazione Aculeo mentale Divinazione e
+Fiotto acido I nvocazione Allucinazione di forza I l lusione e
+Illusione minore I l l usione Alterare se stesso Trasm utazione e
+Interdizione alle lame Abi u razione e Arma magica Trasm utazione
+Luce I nvocazione Blocca persone Ammaliamento e
+Luci danzanti I l l usione e Caratteristica potenziata Trasm utazione e
+Mano magica Evocazione Cecità/Sordità Trasm utazione
+Messaggio Trasm utazione Corona dif ollia Ammaliamento e
+Prestidigitazione Trasm utazione Folata di vento I nvocazione e
+Raggio di gelo I nvocazione Frantumare I nvocazione
+Riparare Trasm utazione Immagine speculare I l lusione
+Rombo di tuono I nvocazione Individuazione dei pensieri Divinazione e
+Scheggia della mente Ammalia m ento Ingrandire/Ridurre Trasm utazione e
+Spruzzo velenoso N ecromanzia Invisibilità I l l usione e
+Stregoneria esplosiva I nvocazione Lama infuocata I nvocazione e
+Stretta folgorante I nvocazione Levitazione Trasm utazione e
+Tocco gelido N ecromanzia Movimenti del ragno Trasm utazione e
+Nube di pugnali Evocazione e
+I N C A N T E S I M I DA S T R E G O N E D I 1 ° L I V E L L O
+Oscurità I nvocazione e
+Incantesimo Scuola Speciale
+Passo velato Evocazione
+Armatura magica A b i u razione
+Raggio rovente I nvocazione
+Caduta morbida Trasm utazione Ragnatela Evocazione e
+Camuffare se stesso I l l usione Scassinare Trasm utazione
+Charme su persone A m m a l i a mento Scurovisione Trasm utazione
+Coltello di ghiaccio Evocazione Sfera infuocata I nvocazione e
+Comprensione dei linguaggi Divinazione R Sfocatura I l l usione e
+Dardo incantato I nvocazione Soffio del drago Trasm utazione e
+Dardo stregato I nvocazione e Suggestione A m m a l iamento e
+Globo cromatico I nvocazione M Vedere invisibilità Divinazione
+Immagine silenziosa I l lusione e Vigore arcano Abiurazione
+Individuazio ne del magico Divinazione C , R
+Mani brucianti I nvocazione I N C A N T E S I M I DA S T R E G O N E DI 3° L I V E L L O
+Nube di nebbia Evocazione e I ncantesimo Scuola Speciale
+Onda tonante I nvocazione Camminare sull'acqua Trasm utazione R
+Raggio di infermità N ecromanzia Chiaroveggenza Divinazione C, M
+Ritirata rapida Trasm utazione e Controincantesimo Abi u razione
+Saltare Trasm utazione Dissolvi magie Abiurazione
+Scudi Abiurazione Forma gassosa Trasm utazione e
+Sonno Ammal iamento e Fulmine I nvocazione
+Spruzzo colorato I l l usione
+CAPITOLO 3 I CLASSI DEI P E R S ONAGGI 155
+
+--- PDF PAGE 160 ---
+S OTTOCLASSI DE L L O
+STRE G ON E
+L e sottoclassi dello stregone sono specializzazioni che
+conferiscono dei privilegi a determinati livelli da stregone,
+come specificato in ognuna di esse. In questa sezione
+vengono descritte le seguenti sottoclassi: Stregoneria
+Aberrante, Stregoneria Meccanica, Stregoneria Draconica
+e Stregoneria della Magia Selvaggia.
+ST R E G O N E R I A A B E R RA N T E
+Scatena un potere psionico soprannaturale
+Un'entità aliena è entrata in contatto con la mente dello
+stregone, donandogli un potere psionico che può usare per
+interagire con altre menti e alterare il mondo attorno a sé.
+Sfrutterà questo potere come faro di speranza per il pros­
+simo? O come fonte di terrore per coloro che verranno
+violati dal tocco della sua mente?
+Magari lo stregone è stato investito di Energia Psionica
+da un vento psichico proveniente dal Piano Astrale,
+oppure è stato esposto all'influenza mutagena del Reame
+Remoto. Altrimenti, potrebbe essergli stato impiantato un
+girino mind flayer, senza che la trasformazione arrivasse
+a compimento, per poi impadronirsi dei suoi poteri.
+A prescindere dal modo in cui l'ha ottenuto, la mente
+dello stregone ne è traboccante.
+LIVE LLO 3 : C ONVERSAZIONE TE LEPATICA
+Lo stregone può formare una connessione telepatica tra
+la sua mente e quella di un'altra creatura. Come azione
+bonus, può scegliere una creatura entro 9 metri di distanza
+da sé, con cui potrà comunicare telepaticamente finché
+i due sono a una distanza in chilometri non superiore
+al modificatore di Carisma del warlock 1,5 (minimo di
+x
+1,5 chilometri). Affinché si capiscano, i due devono parlare
+mentalmente in una lingua comprensibile a entrambi.
+La connessione telepatica dura un numero di minuti
+pari al livello da stregone e termina immediatamente se
+lo stregone è incapacitato, muore o se usa quest'abilità
+per creare una connessione con un'altra creatura.
+LIVE LLO 3 : INCANTE S I M I PSIONICI
+Quando lo stregone raggiunge un livello specificato nella
+tabella Incantesimi psionici, gli incantesimi lì elencati sono
+considerati come preparati.
+I N C A N T E S I M I PS I O N I C I
+Livello da
+stregone I ncantesimi
+3 Braccia di Hadar, calmare emozioni,
+individuazione dei pensieri, sussurri dissonanti,
+scheggia della mente
+5 Fame di Hadar, inviare
+7 Tentacoli neri di Evard, evoca aberrazione
+9 Legame telepatico di Rary, telecinesi
+•
+
+--- PDF PAGE 161 ---
+LIVE LLO 6 : D I F E SE P S I C H I C H E
+Lo stregone ottiene resistenza a i danni psichici e dispone
+di vantaggio sui tiri salvezza eseguiti per evitare di
+essere affascinato o spaventato, o per terminare queste
+condizioni.
+LIVE LLO 6 : STREGONERIA PSIONICA
+Quando il personaggio lancia un incantesimo di 1° livello
+o superiore dalla lista del suo privilegio Incantesimi
+psionici, può farlo sia normalmente, spendendo uno slot
+incantesimo, sia spendendo un numero di punti stregone­
+ria pari al livello dell'incantesimo. Se lancia l'incantesimo
+usando punti stregoneria, questo non richiede componenti
+verbali, somatiche o materiali, fatta eccezione per le com­
+ponenti materiali consumate dall'incantesimo o il cui
+costo è specificato nella sua descrizione.
+LIVE LLO 14 : RIVELAZIONE DE LLA CARNE
+Lo stregone può scatenare l'orrida verità che cela dentro
+di sé. Come azione bonus, può spendere 1 o più punti
+stregoneria per trasformare magicamente il proprio corpo
+per 10 minuti. Ogni punto stregoneria speso consente di
+ottenere uno dei seguenti benefici (a scelta), i cui effetti
+durano fino al termine della trasformazione.
+Adattamento acquatico. Lo stregone ottiene una velocità
+di nuoto pari al doppio della sua velocità base sul terreno
+e può respirare sott'acqua. Inoltre, gli crescono delle bran­
+chie sul collo o dietro le orecchie, le sue dita diventano
+palmate o sviluppano delle protuberanze mobili simili
+a ciglia.
+Movimento invertebrato. Il corpo dello stregone, assieme
+a tutto l'equipaggiamento che indossa o porta con sé,
+diventa viscido e flessibile. Può muoversi attraverso spazi
+stretti fino a 2,5 centimetri e spendere 1,5 metri di movi­
+mento per liberarsi da qualsiasi costrizione non magica
+o dall'essere afferrato.
+Vedere l'invisibile. Lo stregone può vedere tutte le crea­
+ture invisibili entro 18 metri da sé, purché non siano die­
+tro copertura totale. I suoi occhi diventano neri o mutano
+in tentacoli sensori.
+Volo scintillante. Lo stregone ottiene una velocità di
+volo pari alla sua velocità base sul terreno e può fluttuare.
+Mentre vola, la sua pelle si ricopre di muco brillante
+o splende di luce innaturale.
+LIVELLO 1 8 : I M PLOSIONE D I STORC ENTE
+Lo stregone può scatenare un'anomalia che altera lo
+spazio. Come azione di Magia, può teletrasportarsi in
+qualsiasi spazio libero che è in grado di vedere entro
+36 metri da sé. Non appena svanisce, tutte le creature
+entro 9 metri dallo spazio che ha abbandonato devono
+effettuare un tiro salvezza su Forza contro la sua CD del
+tiro salvezza sull'incantesimo. Ogni creatura che fallisce
+il tiro subisce 3dl0 danni da forza e viene spinta verso
+lo spazio abbandonato dallo stregone, terminando in
+uno spazio libero quanto più adiacente possibile a quello.
+In caso di successo, le creature interessate subiscono
+soltanto la metà di quei danni.
+Dopo aver usato questo privilegio, il personaggio non
+può riutilizzarlo prima di aver completato un riposo
+lungo; può ignorare questo limite spendendo 5 punti
+stregoneria (nessuna azione richiesta).
+
+--- PDF PAGE 162 ---
+STREGONERIA DRACONICA LIVELLO 18: SEGUACE DRACONICO
+Lo stregone può lanciare Richiama Drago senza usare una
+Lasciati inebriare dalla magia dei draghi
+componente materiale. Inoltre, può anche lanciarlo una
+La magia innata dello stregone proviene dal dono di un volta senza consumare uno slot incantesimo e recupera
+drago. Potrebbe averla ereditata da un drago antico che, l'abilità di lanciarlo in questo modo dopo aver completato
+prossimo alla morte, ha conferito il proprio potere magico un riposo lungo.
+a lui o a un suo antenato, o magari l'ha assorbito da un Ogni volta che lo stregone lancia l'incantesimo, può
+luogo pregno di energia draconica o da uno dei tesori modificarlo in modo che non richieda concentrazione.
+di queste creature. Oppure uno dei suoi antenati era Così facendo, per quel lancio la durata dell'incantesimo
+un drago. diventa di 1 minuto.
+LIVELLO 3: INCANTESIMI DRACONICI STREGONERIA DELLA MAGIA
+Quando lo stregone raggiunge un livello specificato nella SELVAGGIA
+tabella Incantesimi draconici, gli incantesimi lì elencati
+sono considerati come preparati. Scatena una magia caotica
+Le capacità magiche innate dello stregone provengono
+INCANTESIMI DRACONICI
+dalle forze dal caos che stanno alla base dell'ordine della
+Livello da creazione. Lui o un suo antenato potrebbero essere stati
+stregone Incantesimi esposti a una forma più grezza di magia, magari tramite
+un portale planare verso il Limbo o i Piani Elementali,
+3 Alterare se stesso, globo cromatico, comando,
+ffi oppure ha ricevuto la benedizione di un folletto o la
+so o del drago
+maledizione di un demone, o ancora la sua magia potrebbe
+5 Paura, volare essere una mera casualità senza una chiara origine. A pre­
+7 Occhio arcano, charme sui mostri scindere da come l'ha ottenuta, essa arde nel profondo
+dell'incantatore, in attesa di essere scatenata.
+9 Conoscenza delle leggende, evoca drago
+LIVELLO 3: IMPULSO DI MAGIA SELVAGGIA
+LIVELLO 3: RESILIENZA DRACONICA
+Gli incantesimi dello stregone possono scatenare impulsi
+La magia nel corpo dello stregone fa sì che il suo corpo improvvisi di magia incontrollata. Una volta per turno
+mostri i tratti fisici del proprio dono draconico. I punti è possibile tirare ld20 subito dopo aver lanciato un incan­
+ferita massimi del personaggio salgono di 3 e aumentano tesimo da stregone con uno slot incantesimo. Se il risul­
+di nuovo di 1 ogni volta che acquisisce un livello da tato è 20, bisogna tirare sulla tabella Impulso di magia
+stregone. selvaggia per creare un effetto magico.
+Inoltre, alcune parti del suo corpo sono ricoperte da Se tale effetto è un incantesimo, allora è troppo fuori
+scaglie di drago. Se non indossa armatura, la Classe Arma­ controllo da poter subire gli effetti della Metamagia.
+tura base corrisponde a 10 più i modificatori di Destrezza
+LIVELLO 3: ONDE DI CAOS
+e Carisma.
+Lo stregone può manipolare il caos stesso per ottenere
+LIVELLO 6: AFFINITÀ ELEMENTALE
+vantaggio sulle prove con d20 prima di tirare il dado.
+Grazie alla sua magia draconica, lo stregone ha affinità Una volta fatto, prima di poter riutilizzare questo privile­
+con un tipo di danno associato ai draghi e può sceglierne gio deve lanciare un incantesimo da stregone con uno slot
+uno fra quelli seguenti: acido, freddo, fulmine, fuoco incantesimo o completare un riposo lungo.
+o veleno. Se lancia un incantesimo da Stregone con uno slot
+Lo stregone è dotato di resistenza al tipo di danno sele­ incantesimo prima di completare un riposo lungo, tira
+zionato e, quando lancia un incantesimo di quell'elemento, automaticamente sulla tabella Impulsi di Magia Selvaggia.
+può aggiungere il proprio modificatore di Carisma a un
+LIVELLO 6: PIEGARE LA FORTUNA
+tiro per i danni per quell'incantesimo.
+Lo stregone è in grado di plasmare il fato sfruttando
+LIVELLO 14: ALI DI DRAGO
+la magia selvaggia. Subito dopo che una creatura nel
+Come azione bonus, lo stregone può far apparire delle ali suo campo visivo tira il d20 per effettuare una prova,
+draconiche sulla sua schiena per 1 ora o finché non le fa lo stregone può utilizzare una reazione e spendere 1 punto
+scomparire (nessuna azione richiesta). Per tutta la durata stregoneria per tirare ld4 e applicare il risultato come
+dell'abilità, il personaggio ha velocità di volo di 18 metri. bonus o penalità (a scelta) al risultato del d20.
+Dopo aver usato questo privilegio, il personaggio non
+LIVELLO 14: CAOS CONTROLLATO
+può riutilizzarlo prima di aver completato un riposo
+lungo; può ignorare questo limite spendendo 3 punti Lo stregone ottiene un certo controllo sui suoi impulsi
+stregoneria (nessuna azione richiesta). di magia selvaggia. Ogni volta che effettua un tiro sulla
+tabella Impulsi di magia selvaggia, può farlo due volte
+e scegliere uno dei risultati.
+CAPITOLO 3 I CLASSI DEI PERSONAGGI 159
+
+--- PDF PAGE 163 ---
+LIVELLO 1 8 : I M PULSI D OMATI
+Subito dopo che lo stregone lancia un incantesimo con uno
+slot, può creare un effetto a scelta dalla tabella Impulsi
+di magia selvaggia invece di effettuare il relativo tiro.
+È possibile scegliere un effetto qualunque, fatta eccezione
+per quello nella riga finale. Inoltre, se è previsto un tiro
+di dado, bisogna effettuarlo.
+Dopo aver usato questo privilegio, il personaggio non
+può riutilizzarlo prima di aver completato un riposo lungo.
+I M P U L S I D I M A G I A S E LVAG G I A
+ldlOO Effetto
+01 -04 Tira su q uesta tabe l l a a l l ' i nizio d i ciascu n turno
+per i l p rossimo m i n uto. Se nei tiri successivi
+ottieni q uesto stesso risu ltato, ignoralo.
+In uno spazio libero entro 18 metri dallo stre­
+gon e appare u n a creatura a m i chevole nei suoi
+confronti contro l l ata dal D M . Sco m pare dopo
+1 m i n uto. Tira l d4 per determ i n a re i l tipo d i
+creatura: c o n 1 appare u n duodrone modron; con
+2 appare un flumph; con 3 appare un monodrone
+modron; con 4 appare un unicorno. È possi bile
+con s u ltare i l Manuale dei Mostri per visual izzare
+la scheda d e l l e statistiche d e l l a creatura.
+09-1 2 Per i l prossi m o m i n uto, lo stregone ripristi na
+5 dei suoi pu nti ferita a ogn i turno.
+1 3-1 6 Per i l prossimo m i n uto, le creatu re h a n n o
+svantaggio ai t i r i salvezza contro i l prossimo
+i n ca ntesi m o lanciato d a l l o stregone che richiede
+u n tiro salvezza .
+1 7-20 Lo stregon e s u bisce un effetto della d u rata d i
+1 m i n uto, salvo d iversa mente i n d icato. Tira l d 8
+p e r d ete rm i n a re l 'effetto: c o n 1 lo stregone
+è accom pagnato d a u n a ten u e m u sica eterea
+u d i b i l e solo d a sé e d a l l e creatu re entro 1 , 5 metri
+d a l u i ; con 2 l a sua taglia a u m e nta d i una catego­
+ria; con 3 gli cresce u n a folta barba d i p i u m e che
+sva n isce solo dopo u n o starn uto, scagl iandole
+via d a l proprio viso e facendole scomparire; con
+4 urla i nvece di parlare norma l mente; con 5 appa­
+iono delle farfalle i l l u sorie che svolazzano i n aria
+entro 3 m etri d a sé; con 6 gli appare u n occhio
+sulla fronte, conferendogli vantaggio alle prove d i
+Saggezza ( Percezione) ; c o n 7 fuoriescono delle
+bolle rosa d a l l a sua bocca ogni volta che parla;
+con 8 l a s u a pelle diventa d i u n ' i ntensa ton a l ità
+di blu per 24 ore o finché l 'effetto non è rimosso
+d a un i n ca ntes i m o rimuovi maledizione.
+Per i l m i n uto successivo, tutti gli i nca ntes i m i
+c o n tempo d i lancio d i u n 'azione ottengono
+i l tempo d i lancio d i u n 'azione bonus.
+25-28 Lo stregone viene trasportato s u l Piano Astrale
+fi n o a l term i n e del suo turno successivo, per poi
+fa re ritorno n e l l o spazio che occu pava in prece­
+denza o nello spazio l i bero più vicino, se q u e l l o
+spazio è ora occu pato.
+
+--- PDF PAGE 164 ---
+ldlOO Effetto ldlOO Effetto
+29-32 Se nel m i n uto successivo lo stregon e lancia u n 49-52 Appare uno scudo spettrale che fl uttua accanto
+i ncantesi m o c h e infl igge d a n n i , non è n ecessa rio a l l o stregon e per i l m i n uto successivo, conferen­
+ti rare i dadi d i dan no, poiché sarà preso in dogli u n bonus d i +2 a l l a CA e i m m u n ità a dardo
+considerazione i l massimo risu ltato poss i b i l e incantato.
+per ciascun dado.
+53-56 Lo stregon e può effettu a re u n ' azione extra
+33-36 Per i l m i n uto successivo, l o stregon e h a resi­ d u ra nte q uesto tu rno.
+stenza a tutti i d a n n i .
+5 7-60 Lo stregon e può lanciare un i ncantesi m o
+37-40 Lo stregone d iventa u n a pianta in vaso fi n o c a s u a l e . Se l ' i ncantesi m o dovesse normalmente
+a l l ' i n izio del t u r n o successivo. M entre è i n fo r m a richiedere concentrazione, i n q uesto caso non
+d i pianta, è i ncapacitato e vul nera b i l e a tutti i t i p i conta. I noltre, l ' i ncantesi m o ha la sua d u rata
+d i dan no. P e r riacq u i stare la sua fo r m a origi nale, normale. Ti ra l d l O per determinare l ' i ncante­
+deve scendere a O pu nti ferita, così d a fa r rom­ si mo: con 1 lancia confusione; con 2 lancia palla
+pere i l vaso. di fuoco; con 3 lancia nube di nebbia; con 4 lancia
+41 -44 Per il m i n uto successivo, lo stregon e può tele­ volare (su u n a creat u ra casuale entro 18 metri
+trasportarsi fino a 6 metri com e azione bon u s d a l l o stregon e) ; con 5 lancia unto; con 6 lancia
+i n o g n i suo turno. levitazione (su d i sé) ; con 7 lancia dardo incantato
+(come i ncantesi m o di 5° l ivel lo) ; con 8 lancia
+45-48 Lo stregone e altre tre creatu re a scelta entro
+immagine speculare; con 9 lancia metamorfosi
+9 metri da sé sono i nvisi b i l i per l m i nuto.
+(su di sé) e, in caso di fallimento del tiro salvezza,
+L' i nvisi b i l ità term i n a s u l l a si ngola creatu ra i m me­
+lo stregone d iventa u n a capra (vedi append ice B);
+diatamente dopo che effettua u n tiro per col p i re,
+con 1 0 lancia vedere invisibilità.
+i n fl i gge d a n n i o lancia u n i nca ntesimo.
+
+--- PDF PAGE 165 ---
+..
+l d l OO Effetto STRE G O N E R I A M E C C A N I C A
+61 -64 Per il m i n uto success ivo, se lo stregon e tocca Incanala l ef orze cosmiche dell'ordine
+q u a l siasi oggetto non magico i n fi a m m a b i l e che Le forze cosmiche dell'ordine hanno infuso di magia lo
+non è indossato o trasportato d a u n 'altra crea­ stregone: è un potere proveniente da Mechanus o da un
+tura, questo prende fuoco s u bendo l d4 d a n n i mondo simile, ovvero piani di esistenza fondati su una
+d a fuoco. perfetta efficienza meccanica. Lo stregone (o qualche
+suo antenato) potrebbe essere rimasto coinvolto nelle
+65-68 Se lo stregon e m u o re entro l'ora successiva,
+macchinazioni dei modron, le disciplinate creature che
+viene riportato s u b ito i n vita com e per effetto
+popolano Mechanus, o magari un suo progenitore ha
+d e l l ' i ncantes i m o reincarnazione.
+preso parte alla Grande Marcia dei modron. Quali che
+69-72 Lo stregon e è spaventato fino a l term i n e del suo ne siano le origini, lo stregone ritiene il potere dell'ordine,
+turno successivo. La fo nte della pau ra è a d iscre­ così alieno per molti, un elemento fondante di un vasto
+zione del D M . e impeccabile sistema.
+73-76 Lo stregon e si teletrasporta di un massimo LIVELLO 3 : I NCANTE S I M I M E C CANICI
+d i 18 metri i n u n o spazio l i be ro che è i n grado
+Quando lo stregone raggiunge un livello specificato nella
+d i vedere. tabella Incantesimi meccanici, gli incantesimi lì elencati
+77-80 U n a creat u ra casuale entro 18 m etri d a l l o stre­ sono considerati come preparati.
+gon e è avvelenata per l d4 ore.
+I N C A N T E S I M I M ECCA N I C I
+81 -84 Per i l m i n uto successivo, lo stregon e e m a n a
+l uce i ntensa i n u n raggio d i 9 metri. Q u a l s i a s i Livello da
+creatura che term i n i i l suo turno entro 1 , 5 m etri stregone Incantesimi
+dal personaggio è accecata fino a l term i n e del 3 Aiuto, allarme, ristorare inferiore,
+proprio turno successivo. protezione dal bene e dal male
+85-88 Lo stregon e infl igge l d l O d a n n i necrotici a un 5 Dissolvi magie, protezione da/l'energia
+massimo d i tre creatu re a scelta che è i n grado 7 Libertà di movimento, evoca costrutto
+d i vedere. Dopod iché, ripristi n a una q u antità
+9 Ristorare superiore, muro di forza
+d i pu nti ferita pari a i d a n n i necrotici i n fl itti.
+La tabella Manifestazioni dell'ordine fornisce una serie
+89-92 Lo stregon e i n fl i gge 4d l 0 d a n n i d a fu l m i n e a u n
+di possibili modi, da scegliere o determinare casualmente,
+massimo d i tre creatu re a scelta c h e è i n grado
+in cui il legame con l'ordine si manifesta quando lo stre­
+d i vedere.
+gone lancia i suoi incantesimi.
+93-96 Lo stregone e tutte le creatu re entro 9 metri da
+sé d iventano vul nera b i l i a i d a n n i perforanti per M A N I F E S TA Z I O N I D E L L' O R D I N E
+i l m i n uto successivo.
+ld6 Manifestazione
+97-00 Tira l d6: con 1 i l personaggio recupera 2dl 0 pu nti
+I ngranaggi spettral i si l i brano a l l e sue spalle.
+ferita; con 2 un a l l eato a scelta entro 90 m etri
+2 Le lancette d i u n orologio si m u ovono nei
+d a l l o stregon e recu pera 2d l 0 pu nti ferita; con 3
+suoi occh i .
+lo stregon e recu pera lo slot i n cantes i m o speso
+d i l ivel l o più basso; con 4 un a l l eato a scelta 3 La sua pelle l u ccica com e ottone.
+recu pera lo slot i n ca ntesi m o s peso d i live l l o più 4 Il suo corpo si ricopre d i figure geometriche
+basso; con 5 lo stregon e recupera tutti i pu nti e fo r m u l e mate m atiche.
+stregoneria spesi; con 6 si attivano s i m u ltanea­ 5 Il suo focus d a incantatore ass u m e temporanea­
+mente tutti gli effetti della riga 1 7-20. m ente la forma d i un meccan i s m o ad orologeria
+m i n uscolo.
+6 Lo stregone e i bersagl i della sua magia sentono
+i l ronzio d i i n granaggi e i l ticchettio d i orologi.
+LIVELLO 3 : RIPRISTINO DELL' E QU I LI BRIO
+La connessione dello stregone con un piano di assoluto
+ordine gli permette di equilibrare i momenti più caotici.
+Quando una creatura nel raggio di 9 metri che lo stregone
+è in grado di vedere sta per tirare un d20 disponendo
+162 CA PITOLO 3 I C L A S S I D E I P E R SONAGGI

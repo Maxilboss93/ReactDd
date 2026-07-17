@@ -12,7 +12,7 @@ import EquipmentSection from '../components/character/sections/EquipmentSection.
 import DetailsSection from '../components/character/sections/DetailsSection.jsx'
 import ProgressionSection from '../components/character/sections/ProgressionSection.jsx'
 import DiceTray from '../components/dice/DiceTray.jsx'
-import { fetchCharacterById } from '../services/fakeApi.js'
+import { createCharacter, fetchCharacterById, updateCharacter } from '../services/fakeApi.js'
 import { useAuth } from '../components/authentication/AuthContext.jsx'
 import PowersSection from '../components/character/sections/PowerSection.jsx'
 import { rollDice } from '../services/diceService.js'
@@ -28,7 +28,9 @@ function CharacterPage() {
   const [overviewTab, setOverviewTab] = useState('panoramica')
 
   const mainClass = character?.classes?.[0] ?? null
-  const level = mainClass?.level ?? 1
+  const level = (character?.classes ?? []).reduce((total, characterClass) => {
+    return total + (characterClass.level ?? 0)
+  }, 0) || mainClass?.level || 1
   const proficiencyBonus = Math.min(6, 2 + Math.floor((level - 1) / 4))
 
   const [hpCurrent, setHpCurrent] = useState(0)
@@ -54,11 +56,11 @@ function CharacterPage() {
 
   const labelNav3 = getNavLabel(character)
   const tabs = [
-    { id: 'overview', label: 'Panoramica' },
-    { id: 'spells', label: labelNav3 },
+    { id: 'overview', label: 'Panoramica', navLabel: 'PG' },
+    { id: 'spells', label: labelNav3, navLabel: 'Poteri' },
     { id: 'equipment', label: 'Equip.' },
-    { id: 'details', label: 'Dettagli' },
-    { id: 'progression', label: 'Progressione' },
+    { id: 'details', label: 'Dettagli', navLabel: 'Dett.' },
+    { id: 'progression', label: 'Progressione', navLabel: 'Livelli' },
   ]
 
   const abilities = character
@@ -245,6 +247,28 @@ function CharacterPage() {
     }
   }
 
+  async function handleCharacterChange(updatedCharacter) {
+    setCharacter(updatedCharacter)
+
+    if (!user?.id || !updatedCharacter) {
+      return
+    }
+
+    await updateCharacter(user.id, updatedCharacter)
+  }
+
+  async function handleCharacterExtract(extractedCharacter) {
+    if (!user?.id || !extractedCharacter) {
+      return null
+    }
+
+    const createdCharacter = await createCharacter(user.id, extractedCharacter)
+
+    navigate(`/scheda/${createdCharacter.id}`)
+
+    return createdCharacter
+  }
+
   if (loading) {
     return (
       <div className="app">
@@ -396,7 +420,8 @@ function CharacterPage() {
           {activeTab === 'progression' && (
             <ProgressionSection
               character={getLiveCharacterSnapshot()}
-              onCharacterChange={setCharacter}
+              onCharacterChange={handleCharacterChange}
+              onCharacterExtract={handleCharacterExtract}
             />
           )}
         </div>
@@ -407,9 +432,10 @@ function CharacterPage() {
           <button
             key={tab.id}
             className={`panel_nav__item ${activeTab === tab.id ? 'panel_nav__item--active' : ''}`}
+            aria-label={tab.label}
             onClick={() => setActiveTab(tab.id)}
           >
-            {tab.label}
+            {tab.navLabel ?? tab.label}
           </button>
         ))}
       </nav>

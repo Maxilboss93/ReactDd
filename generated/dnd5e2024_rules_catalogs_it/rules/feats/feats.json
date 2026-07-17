@@ -28,7 +28,19 @@
         "competenza",
         "strumenti"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "skill_or_tool_proficiency_choice",
+          "id": "skilled_proficiencies",
+          "label": "Competenze da Abile",
+          "count": 3,
+          "optionSources": [
+            "skills",
+            "tools"
+          ],
+          "summary": "Scegli tre competenze tra abilita e strumenti."
+        }
+      ],
       "effects": [],
       "summary": "Ottiene tre competenze tra abilita e strumenti.",
       "source": {
@@ -144,7 +156,48 @@
         "magia",
         "incantesimi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "spell_list_choice",
+          "id": "magic_initiate_list",
+          "label": "Lista incantesimi",
+          "count": 1,
+          "lists": [
+            "chierico",
+            "druido",
+            "mago"
+          ]
+        },
+        {
+          "type": "spellcasting_ability_choice",
+          "id": "magic_initiate_ability",
+          "label": "Caratteristica da incantatore",
+          "count": 1,
+          "abilities": [
+            "int",
+            "wis",
+            "cha"
+          ]
+        },
+        {
+          "type": "spell_choice",
+          "id": "magic_initiate_cantrips",
+          "label": "Due trucchetti",
+          "count": 2,
+          "level": 0,
+          "listFromChoice": "magic_initiate_list"
+        },
+        {
+          "type": "spell_choice",
+          "id": "magic_initiate_level_1",
+          "label": "Incantesimo di 1 livello",
+          "count": 1,
+          "level": 1,
+          "listFromChoice": "magic_initiate_list",
+          "alwaysPrepared": true,
+          "freeCast": "long_rest"
+        }
+      ],
       "effects": [],
       "summary": "Concede due trucchetti e un incantesimo di 1 livello da una lista scelta.",
       "source": {
@@ -166,7 +219,17 @@
         "strumenti",
         "crafting"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "tool_proficiency_choice",
+          "id": "artisan_tools",
+          "label": "Strumenti da artigiano",
+          "count": 3,
+          "categories": [
+            "artisan"
+          ]
+        }
+      ],
       "effects": [],
       "summary": "Concede strumenti da artigiano, sconto e piccole fabbricazioni.",
       "source": {
@@ -210,7 +273,17 @@
         "strumenti",
         "ispirazione"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "tool_proficiency_choice",
+          "id": "musical_instruments",
+          "label": "Strumenti musicali",
+          "count": 3,
+          "categories": [
+            "musical"
+          ]
+        }
+      ],
       "effects": [],
       "summary": "Concede strumenti musicali e Ispirazione eroica dopo riposi.",
       "source": {
@@ -259,7 +332,38 @@
         "maestria",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 20
+        },
+        {
+          "type": "skill_proficiency_choice",
+          "id": "skill_proficiency",
+          "label": "Competenza nelle abilita",
+          "count": 1,
+          "optionSource": "skills"
+        },
+        {
+          "type": "expertise_choice",
+          "id": "expertise",
+          "label": "Maestria",
+          "count": 1,
+          "optionSource": "proficient_skills_without_expertise"
+        }
+      ],
       "effects": [],
       "summary": "Aumenta una caratteristica, aggiunge una competenza e una maestria.",
       "source": {
@@ -294,7 +398,34 @@
         "danno_elementale",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 20
+        },
+        {
+          "type": "damage_type_choice",
+          "id": "elemental_damage_type",
+          "label": "Tipo di danno elementale",
+          "count": 1,
+          "options": [
+            "acido",
+            "freddo",
+            "fulmine",
+            "fuoco",
+            "tuono"
+          ]
+        }
+      ],
       "effects": [],
       "summary": "Potenzia un tipo di danno elementale per gli incantesimi.",
       "source": {
@@ -327,7 +458,19 @@
         "vista_cieca",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora furtivita in combattimento e concede vista cieca breve.",
       "source": {
@@ -363,7 +506,20 @@
         "scalata",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Aumenta mobilita fisica, scalata e recupero da prono.",
       "source": {
@@ -396,7 +552,19 @@
         "inganno",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "cha"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora impersonificazione e imitazione.",
       "source": {
@@ -466,7 +634,20 @@
         "taglienti",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Specializzazione sui danni taglienti e controllo del bersaglio.",
       "source": {
@@ -502,7 +683,20 @@
         "mischia",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Potenzia scatto e impatto dopo movimento in linea retta.",
       "source": {
@@ -538,7 +732,21 @@
         "copertura",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora tiri per colpire con incantesimi, copertura e distanza.",
       "source": {
@@ -574,7 +782,20 @@
         "due_armi",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora il combattimento con due armi leggere e l'estrazione rapida.",
       "source": {
@@ -601,7 +822,21 @@
         "cavalcatura",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex",
+            "wis"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora efficacia e difese mentre si combatte in sella.",
       "source": {
@@ -628,7 +863,20 @@
         "armi",
         "competenza"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Concede o amplia competenze con armi da guerra.",
       "source": {
@@ -664,7 +912,20 @@
         "pf_temporanei",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "wis",
+            "cha"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Ispira il gruppo dopo riposi e migliora Saggezza o Carisma.",
       "source": {
@@ -692,7 +953,34 @@
         "fey",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 20
+        },
+        {
+          "type": "spell_choice",
+          "id": "fey_touched_spell",
+          "label": "Incantesimo fatato di 1 livello",
+          "count": 1,
+          "level": 1,
+          "schools": [
+            "Divinazione",
+            "Ammaliamento"
+          ],
+          "alwaysPrepared": true,
+          "freeCast": "long_rest"
+        }
+      ],
       "effects": [],
       "summary": "Talento magico legato alla Selva Fatata.",
       "source": {
@@ -702,7 +990,16 @@
         "pages_pdf": [
           202
         ]
-      }
+      },
+      "grantedSpells": [
+        {
+          "id": "passo-velato",
+          "name": "Passo Velato",
+          "level": 2,
+          "alwaysPrepared": true,
+          "freeCast": "long_rest"
+        }
+      ]
     },
     {
       "id": "contaminazione-oscura",
@@ -720,7 +1017,34 @@
         "ombra",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 20
+        },
+        {
+          "type": "spell_choice",
+          "id": "shadow_touched_spell",
+          "label": "Incantesimo oscuro di 1 livello",
+          "count": 1,
+          "level": 1,
+          "schools": [
+            "Illusione",
+            "Necromanzia"
+          ],
+          "alwaysPrepared": true,
+          "freeCast": "long_rest"
+        }
+      ],
       "effects": [],
       "summary": "Talento magico legato a ombre e influenza occulta.",
       "source": {
@@ -730,7 +1054,16 @@
         "pages_pdf": [
           202
         ]
-      }
+      },
+      "grantedSpells": [
+        {
+          "id": "invisibilita",
+          "name": "Invisibilita",
+          "level": 2,
+          "alwaysPrepared": true,
+          "freeCast": "long_rest"
+        }
+      ]
     },
     {
       "id": "corazze-leggere",
@@ -748,7 +1081,20 @@
         "competenza",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora accesso o uso delle armature leggere.",
       "source": {
@@ -776,7 +1122,20 @@
         "competenza",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora accesso o uso delle armature medie.",
       "source": {
@@ -804,7 +1163,20 @@
         "competenza",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "con",
+            "str"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora accesso o uso delle armature pesanti.",
       "source": {
@@ -833,7 +1205,20 @@
         "riposo",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "con",
+            "wis"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Usa utensili da cuoco per benefici durante il riposo.",
       "source": {
@@ -861,7 +1246,19 @@
         "difesa",
         "armi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Opzione difensiva reattiva in mischia.",
       "source": {
@@ -889,7 +1286,19 @@
         "armi",
         "distanza"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora uso tattico delle balestre.",
       "source": {
@@ -924,7 +1333,21 @@
         "magia",
         "reazione"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora concentrazione e uso di magia in combattimento.",
       "source": {
@@ -958,7 +1381,30 @@
         "rituali",
         "magia"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 20
+        },
+        {
+          "type": "ritual_spell_choice",
+          "id": "ritual_spells",
+          "label": "Incantesimi rituali di 1 livello",
+          "countSource": "proficiency_bonus",
+          "level": 1,
+          "ritual": true,
+          "alwaysPrepared": true
+        }
+      ],
       "effects": [],
       "summary": "Apre accesso a incantesimi rituali e utilita magica.",
       "source": {
@@ -985,7 +1431,20 @@
         "lotta",
         "colpo_senz_armi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora lotta, presa e controllo fisico.",
       "source": {
@@ -1013,7 +1472,20 @@
         "crafting",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "dex",
+            "int"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora uso, creazione e applicazione dei veleni.",
       "source": {
@@ -1046,7 +1518,19 @@
         "danni",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Specializzazione con armi pesanti e colpi potenti.",
       "source": {
@@ -1074,7 +1558,27 @@
         "padronanza",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        },
+        {
+          "type": "weapon_mastery_choice",
+          "id": "weapon_mastery",
+          "label": "Padronanza d'arma",
+          "count": 1,
+          "optionSource": "weapons"
+        }
+      ],
       "effects": [],
       "summary": "Amplia competenze e padronanze con le armi.",
       "source": {
@@ -1102,7 +1606,19 @@
         "difesa",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora uso attivo e difensivo dello scudo.",
       "source": {
@@ -1134,7 +1650,20 @@
         "furtivita",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora mobilita e furtivita in armatura media.",
       "source": {
@@ -1166,7 +1695,20 @@
         "difesa",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "con",
+            "str"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora resistenza mentre si indossano armature pesanti.",
       "source": {
@@ -1195,7 +1737,20 @@
         "bonus_action",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Aggiunge attacchi e reazioni con armi ad asta o portata.",
       "source": {
@@ -1223,7 +1778,20 @@
         "spinta",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "con"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Specializzazione su danni contundenti e spinte.",
       "source": {
@@ -1256,7 +1824,19 @@
         "conoscenza",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "int"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora Intelligenza, conoscenze e azione Studio.",
       "source": {
@@ -1292,7 +1872,20 @@
         "ricerca",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "int",
+            "wis"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora osservazione, ricerca e competenze percettive.",
       "source": {
@@ -1328,7 +1921,19 @@
         "difesa",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Aumenta velocita e facilita movimento tattico.",
       "source": {
@@ -1359,7 +1964,11 @@
       "choices": [
         {
           "type": "ability_without_save_proficiency",
-          "increase": 1
+          "id": "resilient_ability",
+          "label": "Caratteristica resiliente",
+          "count": 1,
+          "increase": 1,
+          "max": 20
         }
       ],
       "effects": [],
@@ -1398,7 +2007,20 @@
         "controllo",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Blocca movimento e punisce chi ignora il personaggio.",
       "source": {
@@ -1426,7 +2048,20 @@
         "concentrazione",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Disturba concentrazione e migliora difese mentali contro magia.",
       "source": {
@@ -1454,7 +2089,20 @@
         "critico",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Specializzazione sui danni perforanti e critici.",
       "source": {
@@ -1483,7 +2131,21 @@
         "bonus_action",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Concede mano magica migliorata e spinta telecinetica.",
       "source": {
@@ -1493,7 +2155,15 @@
         "pages_pdf": [
           211
         ]
-      }
+      },
+      "grantedSpells": [
+        {
+          "id": "mano-magica",
+          "name": "Mano Magica",
+          "level": 0,
+          "alwaysPrepared": true
+        }
+      ]
     },
     {
       "id": "telepatia",
@@ -1511,7 +2181,21 @@
         "magia",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Concede comunicazione telepatica e individuazione dei pensieri.",
       "source": {
@@ -1522,7 +2206,16 @@
           211,
           212
         ]
-      }
+      },
+      "grantedSpells": [
+        {
+          "id": "individuazione-dei-pensieri",
+          "name": "Individuazione dei Pensieri",
+          "level": 2,
+          "alwaysPrepared": true,
+          "freeCast": "long_rest"
+        }
+      ]
     },
     {
       "id": "tenace",
@@ -1541,7 +2234,19 @@
         "morte",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "con"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora sopravvivenza, tiri contro morte e uso dei Dadi Vita.",
       "source": {
@@ -1575,7 +2280,19 @@
         "gittata",
         "asi"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "dex"
+          ],
+          "max": 20
+        }
+      ],
       "effects": [],
       "summary": "Migliora attacchi a distanza con armi, copertura e gittate lunghe.",
       "source": {
@@ -1872,7 +2589,31 @@
         "competenze",
         "maestria"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento epico",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 30
+        },
+        {
+          "type": "expertise_choice",
+          "id": "epic_expertise",
+          "label": "Maestria epica",
+          "count": 1,
+          "optionSource": "skills_without_expertise"
+        }
+      ],
       "effects": [],
       "summary": "Dono epico orientato a competenze e maestrie.",
       "source": {
@@ -1899,7 +2640,24 @@
         "epico",
         "combattimento"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento epico",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 30
+        }
+      ],
       "effects": [],
       "summary": "Dono epico orientato all'affidabilita offensiva.",
       "source": {
@@ -1926,7 +2684,24 @@
         "epico",
         "d20"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento epico",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 30
+        }
+      ],
       "effects": [],
       "summary": "Manipola una prova con d20 con bonus o penalita.",
       "source": {
@@ -1953,7 +2728,20 @@
         "epico",
         "danni"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento epico",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex"
+          ],
+          "max": 30
+        }
+      ],
       "effects": [],
       "summary": "Ignora resistenze fisiche e aumenta l'impatto dei colpi migliori.",
       "source": {
@@ -1980,7 +2768,24 @@
         "epico",
         "cura"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento epico",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 30
+        }
+      ],
       "effects": [],
       "summary": "Recupero potente quando si cade a 0 PF e riserva di cura.",
       "source": {
@@ -2007,7 +2812,41 @@
         "epico",
         "resistenze"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento epico",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 30
+        },
+        {
+          "type": "damage_type_choice",
+          "id": "energy_resistances",
+          "label": "Resistenze energetiche",
+          "count": 2,
+          "options": [
+            "acido",
+            "freddo",
+            "fulmine",
+            "fuoco",
+            "necrotico",
+            "psichico",
+            "radioso",
+            "tuono",
+            "veleno"
+          ]
+        }
+      ],
       "effects": [],
       "summary": "Concede resistenze energetiche e reazione di deviazione.",
       "source": {
@@ -2041,7 +2880,21 @@
         "epico",
         "magia"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento epico",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 30
+        }
+      ],
       "effects": [],
       "summary": "Permette di non consumare alcuni slot con un tiro favorevole.",
       "source": {
@@ -2068,7 +2921,24 @@
         "epico",
         "ombra"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento epico",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 30
+        }
+      ],
       "effects": [],
       "summary": "Potenzia furtivita e difese in oscurita o luce fioca.",
       "source": {
@@ -2095,7 +2965,24 @@
         "epico",
         "pf"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento epico",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 30
+        }
+      ],
       "effects": [],
       "summary": "Aumenta molto i PF massimi e migliora le guarigioni ricevute.",
       "source": {
@@ -2122,7 +3009,24 @@
         "epico",
         "movimento"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento epico",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 30
+        }
+      ],
       "effects": [],
       "summary": "Migliora velocita e fuga rapida.",
       "source": {
@@ -2149,7 +3053,24 @@
         "epico",
         "teletrasporto"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento epico",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 30
+        }
+      ],
       "effects": [],
       "summary": "Teletrasporto breve dopo attacco o magia.",
       "source": {
@@ -2176,7 +3097,24 @@
         "epico",
         "vista_pura"
       ],
-      "choices": [],
+      "choices": [
+        {
+          "type": "ability_score_choice",
+          "id": "ability_increase",
+          "label": "Incremento epico",
+          "count": 1,
+          "amount": 1,
+          "abilities": [
+            "str",
+            "dex",
+            "con",
+            "int",
+            "wis",
+            "cha"
+          ],
+          "max": 30
+        }
+      ],
       "effects": [],
       "summary": "Concede vista pura a medio raggio.",
       "source": {

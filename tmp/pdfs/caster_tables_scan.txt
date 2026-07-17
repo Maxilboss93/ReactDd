@@ -1,0 +1,2067 @@
+
+--- PDF page 62 hits ['bardo', 'incantesimi preparati'] ---
+Caratteristiche Carisma I l bardo ottiene i seguenti privilegi d i classe quando rag­
+Dado Vita D8 per ogni l ivel l o da bardo tabella Privilegi del bardo.
+Competenze Destrezza e Carisma LIVELLO l : INCANTE S I M I
+Il bardo impara a lanciare incantesimi attraverso l e arti
+nelle abilità l lancio degli incantesimi. Le informazioni sottostanti spie­
+Competenza Armi sempl ici gano come applicare tali regole agli incantesimi da bardo,
+nelle armi elencati nella relativa lista degli incantesimi più avanti
+Trucchetti. Un bardo conosce due trucchetti a scelta
+tratti dalla lista degli incantesimi da bardo. Sono consi­
+nelle armature Ogni volta che il personaggio ottiene un livello da bardo,
+Equipaggiamento A scelta tra A e B: (A) U n ' a rmatu ra può sostituire uno dei suoi trucchetti con un altro truc-
+chetto a scelta dalla lista degli incantesimi da bardo. j
+Quando il personaggio raggiunge il 4° e il 10° livello
+da bardo, impara un altro trucchetto a scelta dalla lista
+degli incantesimi da bardo, come indicato nella colonna
+Trucchetti della tabella Privilegi del bardo.
+Slot incantesimo. La tabella Privilegi del bardo mostra
+NVOCANDO LA MAGIA ATTRAVERSO LA MUSICA, gli slot incantesimo disponibili per i propri incantesimi
+la danza, e i versi, i bardi sono esperti nell'ispirare di 1° livello o superiore. Tutti gli slot incantesimo consu­
+tramite la parola e che gli echi di queste primordiali Parole Incantesimi preparati di 1° livello o superiore. Con questo
+della Creazione riverberano e brillino ancora su ogni privilegio, il personaggio prepara una lista di incantesimi
+piano di esistenza. La magia bardica cerca di imbrigliare di 1° livello o superiore che può lanciare. Per iniziare,
+queste parole, che trascendono qualsiasi lingua. sceglie quattro incantesimi di 1° livello dalla lista degli
+Qualsiasi cosa può ispirare una nuova canzone o un incantesimi da bardo. Sono consigliati charme su persone,
+praticamente da tutto. Diventano maestri in molte atti­ Il numero di incantesimi nella lista aumenta man mano
+vità, tra cui la musica, la magia e le burle. che si ottengono livelli da bardo, come mostrato nella
+Il bardo trascorre la sua vita sulla strada in cerca di colonna Incantesimi preparati della tabella Privilegi del
+leggende e storie da raccontare, e vive della gratitudine del bardo. Ogni volta che il numero cresce, il bardo deve
+pubblico proprio come ogni altro intrattenitore. Tuttavia, scegliere altri incantesimi dalla lista degli incantesimi da
+la profondità delle sue conoscenze e la padronanza della bardo finché il numero di incantesimi sulla sua lista non
+magia lo elevano al di sopra dei suoi colleghi. combacia con quello mostrato nella tabella. Gli incantesimi
+scelti devono essere di un livello di cui possiede degli
+D I V E NTA R E UN BAR D O . . . slot incantesimo. Per esempio, nel caso di un bardo
+di 3° livello, la sua lista di incantesimi preparati può
+C OM E PER SONAGGIO DI 1° LIVELLO
+includere sei incantesimi di 1° e 2° livello in qualsiasi
+del bardo.
+Se un altro privilegio gli fornisce incantesimi che sono
+Ottiene i privilegi di 1° livello da bardo, elencati nella
+sempre preparati, questi non contano ai fini del numero
+tabella Privilegi del bardo.
+di incantesimi preparabili con questo privilegio. Tuttavia,
+valgono comunque come incantesimi da bardo.
+Cambiare gli incantesimi preparati. Quando ottiene
+Ottiene i seguenti tratti della tabella Tratti del bardo:
+un livello da bardo, il personaggio può sostituire un
+da bardo di cui possiede degli slot.
+Ottiene i privilegi di 1° livello da bardo, elencati nella
+da incantatore per gli incantesimi da bardo.
+tabella Privilegi del bardo. Per determinare il numero
+Focus da incantatore. Un bardo può usare uno stru­
+di slot incantesimo disponibili, vedi le regole multiclasse
+incantesimi da bardo.
+
+--- PDF page 63 hits ['bardo'] ---
+-Slot incantesimo per livello
+Bonus di Dado Incantesimi di incantesimo-
+Livello competenza Privilegi di classe bardico Trucchetti preparati 2 3 4 5 6 7 8 9
+2 +2 Factotu m, maestria DG 2 5 3
+3 +2 Sottoclasse del bardo DG 2 G 4 2
+4 +2 Aumento dei pu nteggi DG 3 7 4 3
+5 +3 Fonte d i i s p i razione D8 3 9 4 3 2
+7 +3 Controfasci no D8 3 1 1 4 3 3
+8 +3 Aumento dei pu nteggi D8 3 1 2 4 3 3 2
+9 +4 M aestria D8 3 1 4 4 3 3 3
+1 0 +4 Segreti magici Dl O 4 1 5 4 3 3 3 2
+1 1 +4 Dl O 4 l G 4 3 3 3 2
+1 2 +4 Aumento dei pu nteggi Dl O 4 l G 4 3 3 3 2
+1 3 +5 Dl O 4 1 7 4 3 3 3 2
+1 4 +5 Privilegio della sottoclasse Dl O 4 1 7 4 3 3 3 2
+1 5 +5 Dl 2 4 1 8 4 3 3 3 2
+1 7 +G Dl 2 4 1 9 4 3 3 3 2
+1 8 +G I s p i razione su periore Dl 2 4 20 4 3 3 3 3
+1 9 +G Dono epico Dl 2 4 21 4 3 3 3 3 2
+20 +G Parole della creazione Dl 2 4 22 4 3 3 3 3 2 2
+LIVE LLO l: ! SPIRAZIONE BARDICA LIVELLO 2 : FACTOTUM
+Un bardo può ispirare gli altri in maniera soprannaturale Il bardo può aggiungere metà del suo bonus di competenza
+il bardo può ispirare un'altra creatura entro 18 metri da competenza.
+Bardica e aggiungere il risultato al d20, trasformando Il bardo ottiene maestria (vedi il Glossario delle regole)
+Numero di utilizzi. Il bardo può conferire un dado di tenza in queste due.
+Ispirazione Bardica un numero di volte pari al valore Al livello 9, il bardo ottiene maestria in altre due compe­
+LIVELLO 3 : S OTTO C LASSE DEL BARDO
+Ai livelli superiori. Il dado di Ispirazione Bardica cambia Il personaggio ottiene una sottoclasse del bardo a scelta.
+quando si raggiungono..determinatili\relli da bardo, come Dopo la descrizione di questa classe, troverai una spie­
+del bardo. Il dado diventa un d8 al 5° livello, un dlO al della Danza, Collegio del Fascino, Collegio della Sapienza
+10° livello e un dl2 al 15° livello. e Collegio del Valore. Una sottoclasse è una specializ­
+
+--- PDF page 64 hits ['bardo', 'chierico', 'druido', 'mago', 'incantesimi preparati'] ---
+I l tuo bardo suona u n tam b u ro mentre canta le gesta
+Quando i nterpreti u n bardo, rifletti sullo sti le d i per­
+Le poesie del bardo si ispirano a momenti d i bellezza
+da bardo. Per il resto della sua carriera, il personaggio
+ottiene tutti i privilegi della sottoclasse pari al suo livello
+da bardo attuale o a quelli inferiori.
+nuovamente all'8°, al 12° e al 16° livello da bardo.
+Il bardo recupera tutti i suoi utilizzi spesi di Ispirazione
+Inoltre, può spendere uno slot incantesimo (nessuna
+Il bardo ottiene la capacità di usare note musicali o parole
+Se il bardo o una creatura entro 9 metri da sé fallisce un
+affascinato o spaventato, il bardo può usare una reazione
+LIVELLO 1 0 : SEGRETI MAGICI
+Il bardo ha attinto ai segreti provenienti da una vasta
+naggio raggiunge un livello da bardo (incluso il livello
+attuale) e il numero di incantesimi preparati nella tabella
+Privilegi da bardo aumenta, il personaggio può scegliere
+incantesimi da bardo, chierico, druido e mago. Per il per­ Il personaggio ottiene un Dono epico (vedi capitolo 5)
+sonaggio, gli incantesimi scelti contano come incantesimi o un altro talento a scelta di cui possiede i prerequisiti.
+da bardo (vedi la sezione di ciascuna classe per i rispettivi È consigliato il Dono dell'incantesimo memorizzato.
+incantesimi). Inoltre, ogni volta che sostituisce un incan­
+incantesimo di queste liste. Il bardo padroneggia due Parole della Creazione: le parole
+della vita e della morte. Pertanto, gli incantesimi parola del
+Quando il bardo tira per l'iniziativa, se ha meno di due siderati preparati. Quando lancia uno dei due incantesimi,
+utilizzi di Ispirazione Bardica, li recupera finché non il bardo può bersagliare una seconda creatura se questa
+
+--- PDF page 65 hits ['bardo'] ---
+Questa sezione presenta l a lista degli incantesimi del Sonno Ammaliamento e
+bardo. Gli incantesimi sono ordinati prima per livello
+
+--- PDF page 67 hits ['bardo'] ---
+SOTTOCLASSI DEL BARDO
+Le sottoclassi del bardo sono specializzazioni che
+conferiscono dei privilegi a determinati livelli da bardo,
+LIVELLO 3: SCARTO SMAGLI ANTE
+Virtuoso della danza. Il bardo dispone di vantaggio su
+Colpi scattanti. Quando il bardo spende un utilizzo di
+Danno bardico. Un bardo può usare Destrezza anziché
+LIVELLO 6: MOVIMENTO ISPIRATORE
+Quando un nemico che il bardo è in grado di vedere
+termina il turno a 1,5 metri da lui, il bardo può usare una
+a scelta entro 9 metri dal bardo può muoversi fino alla
+LIVELLO 6: SCARTO COORDINATO
+Quando il bardo tira per l'iniziativa, se non è incapacitato
+lo fa, tira un dado di Ispirazione Bardica; il bardo e ogni
+LIVELLO 14: ELUSIONE TR AINANTE
+Quando il bardo è soggetto a un effetto che gli consente
+la metà dei danni se lo fallisce. Il bardo può condividere
+
+--- PDF page 68 hits ['bardo'] ---
+LIVELLO 3 : MAGIA AMMALIANTE
+Gli incantesimi charme su persone e immagine speculare
+sono sempre considerati preparati.
+ammaliamento o illusione utilizzando uno slot incante­
+simo, il bardo può far sì che una creatura entro 18 metri
+(a scelta del bardo) per 1 minuto e ripeterà il tiro salvezza
+LIVELLO 3 : MANTO DI I SPIRAZIONE
+Il bardo può tessere la magia fatata in una canzone o in
+il bardo sceglie delle creature entro 18 metri da sé, fino
+Come azione bonus, il bardo lancia comando senza
+spendere uno slot incantesimo. Inoltre, può assumere
+dell'incantesimo, il bardo può lanciare comando come
+azione bonus senza spendere uno slot incantesimo.
+Ogni creatura affascinata dal bardo fallisce automatica­
+uno slot incantesimo di 3° livello o superiore (nessuna
+
+--- PDF page 69 hits ['bardo', 'chierico', 'mago'] ---
+LIVELLO 14: MAESTOSITÀ INVITTA
+Come azione bonus, il bardo può assumere magicamente
+indietreggia atterrita dalla maestosità del bardo.
+LIVELLO 3: COMPETENZE BONUS
+Il bardo acquisisce competenza in tre abilità a scelta.
+LIVELLO 3: PAROLE TAGLIENTI
+Il bardo impara a fare buon uso del suo ingegno per
+una creatura che il bardo è in grado di vedere situata
+prova di caratteristica o un tiro per colpire, il bardo può
+Bardica; il bardo tira il dado di Ispirazione Bardica e sot­
+LIVELLO 6: SCOPERTE MAGICHE
+Il bardo apprende due incantesimi a scelta che possono
+far parte della lista degli incantesimi del chierico, del dru­
+ido o del mago o di una loro combinazione (vedi la sezione
+di ciascuna classe per i rispettivi incantesimi). L'incante­
+per il quale il personaggio dispone di slot incantesimo,
+come indicato nella tabella Privilegi del bardo.
+Gli incantesimi scelti sono sempre considerati preparati
+e ogni volta che il personaggio ottiene un livello da bardo
+può sostituire uno degli incantesimi con un altro che
+LIVELLO 14: ABILITÀ IMPAREGGIABILE
+Quando un bardo effettua una prova di caratteristica
+
+--- PDF page 70 hits ['bardo'] ---
+LIVELLO 3 : ADDE STRA M E NTO MARZ IALE
+Il bardo ottiene competenza nelle armi da guerra, nelle
+come focus da incantatore per lanciare incantesimi dalla
+lista degli incantesimi da bardo.
+Il bardo può usare il suo ingegno per ribaltare le sorti
+di una battaglia. Una creatura a cui il bardo abbia donato
+LIVELLO 6 : ATTAC C O EXTRA
+il bardo può attaccare due volte anziché una.
+Inoltre, può lanciare uno dei suoi trucchetti con tempo
+LIVELLO 14 : MAGIA DA C OM BATT I M E NTO
+di un'azione, il bardo può effettuare un attacco con
+
+--- PDF page 72 hits ['chierico', 'incantesimi preparati'] ---
+Caratteristiche Saggezza I l chierico ottiene i seguenti privilegi d i classe quando
+Dado Vita 08 per ogni l ivel l o da chierico nella tabella Privilegi del chierico.
+Il chierico impara a lanciare incantesimi attraverso la
+nelle abilità Persuasione, Religione o Storia I regole relative al lancio degli incantesimi. Le informazioni
+sottostanti spiegano come applicarle agli incantesimi del
+chierico, elencati nella relativa lista degli incantesimi più
+Trucchetti. Il chierico conosce tre trucchetti a scelta
+tratti dalla lista degli incantesimi da chierico. Sono consi­
+iniziale di magl ia, u n o scudo, u n a mazza, Ogni volta che il personaggio ottiene un livello da chie­
+u n s i m bolo sacro, una dotazione rico, può sostituire uno dei suoi trucchetti con un altro
+d a sacerdote e 7 mo; o ( B) 1 1 0 mo trucchetto a scelta dalla lista degli incantesimi da chierico.
+Quando il personaggio raggiunge il 4° e il 10° livello da
+chierico, impara un altro trucchetto a scelta dalla lista
+degli incantesimi da chierico, come indicato nella colonna
+CHIERICI TRAGGONO IL LORO POTERE DAI REGNI Trucchetti della tabella Privilegi del chierico.
+degli dèi e lo imbrigliano per compiere miracoli. Bene­ Slot incantesimo. La tabella Privilegi del chierico mostra
+I detto da una divinità, da un pantheon o da un'altra gli slot incantesimo disponibili per i propri incantesimi di
+entità immortale, un chierico può raggiungere la magia 1° livello o superiore. Tutti gli slot incantesimo consumati
+larla per dare forza alle persone e combattere i nemici. Incantesimi preparati di 1° livello o superiore. Con questo
+Poiché il loro potere è un dono divino, i chierici si privilegio, il personaggio prepara una lista di incantesimi
+associano tipicamente a templi dedicati alla divinità o di 1° livello o superiore che può lanciare. Per iniziare,
+ad altre forze immortali da cui hanno ricevuto la magia. sceglie quattro incantesimi di 1° livello dalla lista degli
+La capacità di imbrigliare la magia divina non richiede incantesimi da chierico. Sono consigliati benedizione, cura
+apprendere preghiere e riti che li aiutano ad attingere ai Il numero di incantesimi nella lista aumenta man
+poteri dei Piani Esterni. mano che il personaggio ottiene livelli da chierico, come
+Non tutti i membri di un tempio o di un santuario sono mostrato nella colonna Incantesimi preparati della tabella
+chierici. Alcuni sacerdoti sono votati a una vita semplice Privilegi del chierico. Ogni volta che il numero cresce,
+al servizio del tempio, manifestando la propria devozione il chierico deve scegliere altri incantesimi dalla lista degli
+attraverso preghiere e sacrifici, anziché attraverso la incantesimi da chierico finché il numero di incantesimi
+dèi, ma pochi possono esercitare il potere di queste divi­ tabella. Gli incantesimi scelti devono essere di un livello
+nità come un chierico. di cui possiede degli slot incantesimo. Per esempio, nel
+caso di un chierico di 3° livello, la sua lista di incantesimi
+D I V E N TA R E UN C H I E R I C O . . . preparati può includere sei incantesimi di 1° e 2° livello
+Se un altro privilegio gli fornisce incantesimi che sono
+sempre preparati, questi non contano ai fini del numero
+chierico.
+di incantesimi preparabili con questo privilegio. Tuttavia,
+Ottiene i privilegi di 1° livello da chierico, elencati nella
+valgono comunque come incantesimi da chierico.
+tabella Privilegi del chierico.
+Cambiare gli incantesimi preparati. Quando il chierico
+incantesimi preparati, sostituendo quelli che preferisce
+Ottiene i seguenti tratti della tabella Tratti del chierico:
+con altri incantesimi da chierico di cui possiede degli slot
+Ottiene i privilegi di 1° livello da chierico, elencati nella Caratteristica da Incantatore. Saggezza è la caratteri­
+stica da incantatore usata per gli incantesimi da chierico.
+tabella Privilegi del chierico. Per determinare il numero
+Focus da incantatore. Il chierico può usare un simbolo
+di slot incantesimo disponibili, vedi le regole multiclasse
+sacro come focus da incantatore per i suoi incantesimi
+da chierico.
+
+--- PDF page 73 hits ['chierico'] ---
+-Slot incantesimo per livello
+Livello competenza Privilegi di classe divinità Trucchetti preparati 2 3 4 5 6 7 8 9
+2 +2 I ncanalare divi n ità 2 3 5 3
+3 +2 Sottoclasse del chierico 2 3 6 4 2
+4 +2 Aumento dei pu nteggi 2 4 7 4 3
+5 +3 Bruciare i non morti 2 4 9 4 3 2
+6 +3 Privi legio della sottoclasse 3 4 1 0 4 3 3
+7 +3 Colpi benedetti 3 4 1 1 4 3 3
+8 +3 Aumento dei pu nteggi 3 4 1 2 4 3 3 2
+9 +4 3 4 1 4 4 3 3 3
+1 0 +4 I ntervento divino 3 5 1 5 4 3 3 3 2
+1 1 +4 3 5 1 6 4 3 3 3 2
+1 2 +4 Aumento dei pu nteggi 3 5 1 6 4 3 3 3 2
+1 3 +5 3 5 1 7 4 3 3 3 2
+1 4 +5 Colpi benedetti migliorati 3 5 1 7 4 3 3 3 2
+1 5 +5 3 5 1 8 4 3 3 3 2
+1 6 +5 Aumento dei pu nteggi 3 5 1 8 4 3 3 3 2
+1 7 +6 Privilegio della sottoclasse 3 5 1 9 4 3 3 3 2
+1 8 +6 4 5 20 4 3 3 3 3
+1 9 +6 Dono epico 4 5 21 4 3 3 3 3 2
+20 +6 I ntervento divino su periore 4 5 22 4 3 3 3 3 2 2
+Il chierico si dedica a uno dei seguenti ruoli sacri a scelta. tabella Privilegi del chierico.
+Protettore. Addestrato a combattere, il chierico ha Se un effetto di Incanalare Divinità richiede un tiro sal­
+armature pesanti. tesimo del privilegio Incantesimi di questa classe.
+Taumaturgo. Il chierico conosce un trucchetto extra Scacciare non morti. Come azione di Magia, il chierico
+dalla lista degli incantesimi da chierico. Inoltre, la con­ brandisce il simbolo sacro e condanna le creature non
+nessione mistica con il divino gli conferisce un bonus alle morte. Ogni non morto a scelta entro 9 metri dal chierico
+LIVE LLO 2 : INCANALARE D I V I N ITÀ allontanarsi il più possibile dal chierico durante i suoi
+Il chierico può incanalare l'energia divina direttamente turni. L'effetto termina anticipatamente se la creatura
+dai Piani Esterni, usandola per alimentare gli effetti subisce danni, o se il chierico è incapacitato o morto.
+magici. Un chierico parte con due effetti: scintilla divina Scintilla divina. Come azione di Magia, il chierico punta
+superiori da chierico si ottengono opzioni di effetto gezza. Ristora i punti ferita della creatura di un numero
+Il chierico può usare Incanalare Divinità due volte. un tiro salvezza su Costituzione. Se lo fallisce, la creatura
+determinati livelli da chierico, ottiene degli usi aggiuntivi, Il personaggio tira un d8 aggiuntivo quando raggiunge
+il 7° (2d8), il 13° (3d8) e il 18° (4d8) livello da chierico.
+
+--- PDF page 74 hits ['chierico'] ---
+LIVELLO 3 : S OTTOCLASSE D E L C H I E R I C O LIVE LLO 2 0 : INTERVENTO D IVINO
+Il personaggio ottiene u n a sottoclasse del chierico a scelta. SUPERIORE
+Dopo la descrizione di questa classe, troverai una spie­ Il chierico può invocare un intervento divino ancora più
+della Vita, Dominio della Luce, Dominio dell'Inganno scegliere desiderio tra gli incantesimi. Se lo fa, non può
+da chierico. Per il resto della sua carriera, il personaggio
+ottiene tutti i privilegi della sottoclasse pari al suo livello L I STA D E GLI I N C A N T E S I M I
+da chierico attuale o a quelli inferiori.
+LIVELLO 4 : AU M E NTO DEI PUNTEGGI Questa sezione presenta la lista di incantesimi da chierico.
+DI CARATTERISTICA Gli incantesimi sono ordinati prima per livello dell'in­
+mente all'8°, al 12° e al 16° livello da chierico. trazione, R indica che è un rituale, mentre M segnala la
+LIVELLO 5 : BRUC IARE I NON MORTI
+Ogni volta che il chierico usa scacciare non morti, può TR U C C H ETTI (I N C A N T E S I M I DA C H I E R I CO
+LIVELLO 7: C OLPI B E N E DETTI Luce I nvocazione
+In battaglia, il chierico è permeato di potere divino e ottiene Parola radiosa I nvocazione
+opzioni da una sottoclasse del chierico di un manuale più
+chierico colpisce una creatura con un tiro per colpire Salvare i morenti N ecromanzia
+Incantesimi potenti. Il personaggio aggiunge il suo modi­
+trucchetto da chierico. I ncantesimo Scuola Speciale
+LIVELLO 1 0 : I NTERVENTO DIVINO Anatema Ammaliamento e
+Il chierico può invocare una divinità o un pantheon affin­ Benedizione Ammaliamento C, M
+un incantesimo da chierico qualsiasi di 5° livello o inferiore
+parte della stessa azione, il chierico lancia quell' incante­ Cura ferite Abi u razione
+simo senza spendere uno slot incantesimo o senza avere Dardo tracciante I nvocazione
+LIVELLO 14 : C OLPI B E N E DETTI M IGLIORATI Individuazio ne del magico Divinazione C, R
+Incantesimi potenti. Quando lancia un trucchetto da Infliggi ferite N ecromanzia
+chierico infliggendo danni a una creatura, il chierico può Parola guaritrice Abi u razione
+18 metri da sé, concedendo un numero di punti ferita tem­
+LIVELLO 1 9 : D ONO EPICO
+
+--- PDF page 76 hits ['chierico'] ---
+Le sottoclassi del chierico sono specializzazioni che
+conferiscono dei privilegi a determinati livelli da chierico,
+chierico prende il nome da un dominio dell'esistenza
+Forma eterea Evocazione LIVELLO 3 : C OLPO GU I DATO
+Quando il chierico o una creatura entro 9 metri da sé
+manca il bersaglio con un tiro per colpire, il chierico può
+al chierico di avere sempre pronti alcuni incantesimi.
+Incantesimo Scuola Speciale Quando il chierico raggiunge un livello specificato nella
+Aura sacra Abiurazione C, M tabella Incantesimi del Dominio della Guerra, gli incante­
+simi lì elencati sono considerati come preparati.
+Esplosione solare I nvocazione Livello da
+chierico I ncantesimi preparati
+3 Dardo tracciante, arma magica, scudo della
+Come azione bonus, il chierico può effettuare un attacco
+Resurrezione pura N ecroma nzia M con un'arma o un colpo senz'armi. Il chierico può
+
+--- PDF page 77 hits ['chierico'] ---
+LIVELLO 6 : B E N E DI Z IO N E DEL DIO DELLA
+Il chierico può spendere un utilizzo di Incanalare Divinità
+dere uno slot incantesimo. Quando lancia un incantesimo
+lanciato di nuovo, o se il chierico è incapacitato o morto.
+LIVELLO 17: AVATAR DE LLA BATTAGLIA
+Il chierico ottiene resistenza ai danni contundenti, perfo­
+LIVELLO 3 : B E N E DI Z IO N E
+Come azione di Magia, il chierico può scegliere se stesso
+(Furtività). La benedizione dura finché il chierico non
+al chierico di avere sempre pronti alcuni incantesimi.
+Quando il chierico raggiunge un livello specificato nella
+tabella Incantesimi del Dominio dell'Inganno, gli incante­
+simi lì elencati sono considerati come preparati.
+Livello da
+chierico I ncantesimi preparati
+3 Camuffare se stesso, charme su persone,
+5 Trama ipnotica e anti-individuazione
+7 Confusione e porta dimensionale
+9 Dominare persone e modificare memoria
+
+--- PDF page 78 hits ['chierico'] ---
+LIVELLO 3 : INVOCARE D UPLICATO
+Come azione bonus, il chierico può spendere un utilizzo
+patamente se il chierico la interrompe (nessuna azione
+le espressioni e i gesti del chierico. Finché permane,
+fa ottenere al chierico i seguenti benefici.
+Distrarre. Quando sia il chierico che la sua illusione
+vedere l'illusione, il chierico dispone di vantaggio ai tiri
+Lanciare incantesimi. Il chierico può lanciare incan­
+Movimento. Come azione bonus, il chierico può muo­
+Ogni volta che il chierico effettua un'azione bonus per
+Diversivo condiviso. Quando il chierico e i suoi alleati
+Illusione curativa. Quando l'illusione termina, il chierico
+recupera un numero di punti ferita pari al livello da
+chierico.
+LIVELLO 3 : BAGLIORE DI INTERDIZIONE
+Il chierico può utilizzare una reazione per imporre
+
+--- PDF page 79 hits ['chierico'] ---
+LIVELLO 3 : FULGORE DELL'ALBA
+Come azione di Magia, il chierico brandisce il suo simbolo
+del chierico in quell'area deve effettuare un tiro salvezza
+livello da chierico in caso di fallimento, o la metà in caso
+LIVELLO 3 : INCANTE S I M I DEL D OM I N IO
+al chierico di avere sempre pronti alcuni incantesimi.
+Quando il chierico raggiunge un livello specificato nella
+tabella Incantesimi del Dominio della Luce, gli incantesimi
+lì elencati sono considerati come preparati.
+Livello da
+chierico I ncantesimi preparati
+3 Mani brucianti, luminescenza, raggio rovente
+5 Luce diurna e palla di fuoco
+7 Occhio arcano e muro di fuoco
+9 Colpo infuocato e scrutare
+LIVELLO 6 : BAGLIORE DI I NTERDIZIONE
+Quando completa un riposo breve o lungo, il chierico
+Come azione d i Magia, i l chierico può emettere un'aura di
+(nessuna azione richiesta). Il chierico proietta luce intensa
+
+--- PDF page 80 hits ['chierico'] ---
+LIVELLO 17: GUARIGION E SUPREMA
+Quando il chierico sta per lanciare normalmente uno
+ferite. un chierico ne ripristina 12.
+Quando un incantesimo lanciato dal chierico con uno
+slot incantesimo ripristina i punti ferita di una creatura,
+I punti ferita aggiuntivi sono pari a 2 più il livello dello
+slot incantesimo.
+al chierico di avere sempre pronti alcuni incantesimi.
+Quando il chierico raggiunge un livello specificato
+nella tabella Incantesimi del Dominio della Vita, gli
+incantesimi lì elencati sono considerati come preparati.
+Livello da
+chierico I ncantesimi preparati
+3 Aiuto, benedizione, cura ferite e ristorare
+7 Aura di vita e interdizione alla morte
+9 Ristorare superiore e cura ferite di massa
+Come azione di Magia, il chierico brandisce il suo
+a cinque volte il suo livello da chierico. Il personaggio
+Gli incantesimi curativi che il chierico lancia sugli altri
+guariscono anche il chierico stesso. Subito dopo aver
+lanciato un incantesimo con uno slot incantesimo che
+da se stesso, il chierico recupera punti ferita pari
+a 2 più il livello dello slot incantesimo.
+
+--- PDF page 82 hits ['druido', 'incantesimi preparati'] ---
+Caratteristiche Saggezza Il druido ottiene i seguenti privilegi di classe quando rag­
+Dado Vita 08 per ogni livello d a druido tabella Privilegi del druido.
+Il druido h a imparato a lanciare incantesimi attraverso
+Arcano, I ntuizione, Medicina, N atura, capitolo 7 per le regole relative al lancio degli incantesimi.
+Competenza Armi sempl ici incantesimi del druido, elencati nella relativa lista degli
+nelle armi incantesimi più avanti nella descrizione della classe.
+Trucchetti. Un druido conosce due trucchetti a scelta
+tratti dalla lista degli incantesimi da druido. Sono consi­
+Competenza Armatu re leggere e scudi Ogni volta che il personaggio ottiene un livello da
+nelle armature druido, può sostituire uno dei suoi trucchetti con un altro
+Equipaggiamento A scelta tra A e B: (A) U n 'a rmatu ra trucchetto a scelta dalla lista degli incantesimi da druido.
+iniziale Quando il personaggio raggiunge il 4° e il 10° livello
+da druido, impara un altro trucchetto a scelta dalla lista
+degli incantesimi da druido, come indicato nella colonna
+Trucchetti della tabella Privilegi del druido.
+Slot incantesimo. La tabella Privilegi del druido mostra
+gli slot incantesimo disponibili per i propri incantesimi di
+1° livello o superiore. Tutti gli slot incantesimo consumati
+invocano le forze della natura. Imbrigliando la magia Incantesimi preparati di 1° livello o superiore. Con questo
+I degli animali, delle piante e dei quattro elementi, privilegio, il personaggio prepara una lista di incantesimi
+i druidi guariscono, si trasformano in animali e brandi­ di 1° livello o superiore che può lanciare. Per iniziare, il
+scono la distruzione elementale. personaggio sceglie quattro incantesimi di 1° livello dalla
+I druidi venerano la natura al di sopra di ogni altra cosa lista degli incantesimi da druido. Sono consigliati amicizia
+stessa, da una divinità della natura o da entrambe. Di solito Il numero di incantesimi nella lista aumenta man mano
+si riuniscono con altri druidi per celebrare riti che segnano che il personaggio ottiene livelli da druido, come mostrato
+il passaggio delle stagioni e di altri cicli naturali. nella colonna Incantesimi preparati della tabella Privilegi
+I druidi si occupano del delicato equilibrio ecologico che del druido. Ogni volta che il numero cresce, il druido deve
+sostiene la vita vegetale e animale, nonché della necessità scegliere altri incantesimi dalla lista degli incantesimi
+delle persone di vivere in armonia con la natura. Spesso da druido finché il numero di incantesimi sulla sua
+incontaminata, ma quando si presenta un grave pericolo, Gli incantesimi scelti devono essere di un livello di cui
+i druidi assumono un ruolo più attivo, partendo all'avven­ possiede degli slot incantesimo. Per esempio, nel caso di
+tura per sventare la minaccia. un druido di 3° livello, la sua lista di incantesimi preparati
+può includere sei incantesimi di 1° e 2° livello in qualsiasi
+Se un altro privilegio gli fornisce incantesimi che sono
+C O M E PERSONA GGIO DI 1 o LIVELLO
+sempre preparati, questi non contano ai fini del numero
+Ottiene tutte le caratteristiche della tabella Tratti del di incantesimi preparabili con questo privilegio. Tuttavia,
+druido. valgono comunque come incantesimi da druido.
+Ottiene i privilegi di 1° livello da druido, elencati nella Cambiare gli incantesimi preparati. Quando il druido
+tabella Privilegi del druido. completa un riposo lungo, può modificare la sua lista di
+incantesimi preparati, sostituendo quelli che preferisce
+con altri incantesimi da druido cui possiede degli slot
+Ottiene i seguenti tratti della tabella Tratti del druido:
+stica da incantatore usata per gli incantesimi da druido.
+Ottiene i privilegi di 1° livello da druido, elencati nella
+Focus da incantatore. Il druido può usare un focus
+tabella Privilegi del druido. Per determinare il numero
+druidico come focus da incantatore per i suoi incantesimi
+di slot incantesimo disponibili, vedi le regole multiclasse
+da druido.
+
+--- PDF page 83 hits ['chierico', 'druido', 'mago'] ---
+-Slot incantesimo per livello
+Livello competenza Privilegi di classe selvatica Trucchetti preparati l 2 3 4 s 6 7 8 9
+2 +2 Compagno selvatico, 2 2 5 3 - - - - - - - -
+3 +2 Sottoclasse del druido 2 2 6 4 2
+4 +2 Aumento dei pu nteggi 2 3 7 4 3
+5 +3 R i n ascita selvatica 2 3 9 4 3 2
+6 +3 Privilegio della sottoclasse 3 3 1 0 4 3 3
+7 +3 Furia elementale 3 3 1 1 4 3 3
+8 +3 Aumento dei pu nteggi 3 3 1 2 4 3 3 2
+9 +4 3 3 1 4 4 3 3 3
+1 0 +4 Privilegio della sottoclasse 3 4 1 5 4 3 3 3 2
+1 1 +4 3 4 1 6 4 3 3 3 2
+1 2 +4 Aumento dei pu nteggi 3 4 1 6 4 3 3 3 2
+1 3 +5 3 4 1 7 4 3 3 3 2
+1 4 +5 Privi legio della sottoclasse 3 4 1 7 4 3 3 3 2
+1 5 +S Furia elementale migliorata 3 4 1 8 4 3 3 3 2
+1 6 +S Aumento dei pu nteggi 3 4 1 8 4 3 3 3 2
+1 7 +6 4 4 1 9 4 3 3 3 2
+1 8 +6 I nca ntes i m i bestia l i 4 4 20 4 3 3 3 3
+1 9 +6 Dono epico 4 4 21 4 3 3 3 3 2
+20 +6 Arcid ruido 4 4 22 4 3 3 3 3 2 2
+LIVELLO l : D RU I D I C O LIVELLO 2 : C O M PAGNO SE LVATICO
+U n druido conosce il druidico, l a lingua segreta del suo Il druido può evocare in suo soccorso uno spirito della
+anche la magia della comunicazione con gli animali; Magia, il druido può spendere uno slot incantesimo o un
+Il druido può usare il druidico per lasciare messaggi Una volta lanciato l'incantesimo in questo modo,
+nascosti. Il druido e coloro che conoscono il druidico sono il famiglia evocato sarà un folletto e svanirà quando
+in grado di individuare tali messaggi automaticamente. il druido avrà completato un riposo lungo.
+ma non possono decifrarlo senza l'aiuto della magia. La forza della natura permette al druido di assumere
+la forma di un animale. Come azione bonus, il druido
+LIVELLO l : O R D I N E PRI MORDIALE assume le sembianze di una bestia di cui ha appreso la
+Il chierico si dedica a uno dei seguenti ruoli sacri a scelta. forma per questo privilegio (vedi "Forme conosciute"
+Custode. Addestrato a combattere, il druido ha acquisito di seguito). Rimane in quella forma per un numero di ore
+competenza con le armi da guerra e con le armature pari alla metà del livello da druido o finché non utilizza
+Mago. Il druido conosce un trucchetto extra dalla Il druido può anche abbandonare la forma da animale
+lista degli incantesimi da druido. Inoltre, la connessione anticipatamente come azione bonus.
+
+--- PDF page 84 hits ['druido'] ---
+Numero di utilizzi. Il druido può utilizzare Forma Selva­ fonde nella sua nuova forma o se indossarlo. L'equipag­
+druido, ottiene degli usi aggiuntivi, come mostrato nella mento del druido non cambia per adattarsi alla nuova
+colonna Forma Selvatica della tabella Privilegi del druido. forma, e ogni oggetto di equipaggiamento che la nuova
+Forme conosciute. Per questo privilegio, il druido forma non può indossare deve cadere a terra o fondersi
+conosce quattro forme bestiali scelte tra le schede delle nella nuova forma del druido. L'equipaggiamento fuso
+statistiche delle bestie con un grado di sfida massimo pari alla nuova forma non ha alcun effetto finché il druido
+LIVELLO 3 : SOTTO C LA S S E DEL D RU I D O
+un riposo lungo, il druido può sostituire una delle forme Il personaggio ottiene una sottoclasse del druido a scelta.
+druido, il numero di forme conosciute e il grado di sfida della Terra, Circolo della Luna, Circolo del Mare e Circolo
+tabella Forme bestiali. Inoltre, a partire dall'8° livello, il conferisce dei privilegi a determinati livelli da druido.
+druido può adottare una forma dotata di velocità di volo. Per il resto della sua carriera, il personaggio ottiene tutti
+Quando scegli le forme conosciute, puoi consultare il i privilegi della sottoclasse pari al suo livello da druido
+LIVELLO 4 : AUM E NTO DEI PUNTEGGI
+Livello da Forme Velocità
+druido conosciute GS max di volo nuovamente all'8°, al 12° e al 16° livello da druido.
+2 4 1 /4 N o
+LIVELLO 5 : RINASCITA SE LVATICA
+4 6 1/2 N o
+Una volta per ogni suo turno, se il druido ha consumato
+8 8 Sì tutti i suoi utilizzi di Forma Selvatica, può ripristinare un
+utilizzo spendendo uno slot incantesimo (nessuna azione
+una determinata forma, il druido mantiene la sua persona­
+(nessuna azione richiesta) per ottenere uno slot incante­
+simo di 1° livello, ma non potrà farlo di nuovo finché non
+Selvatica, il druido ottiene un numero di punti ferita
+temporanei pari al suo livello da druido. LIVELLO 7: FURIA E L E M E NTALE
+Statistiche di gioco. Le statistiche di gioco del druido La forza degli elementi scorre attraverso il druido, facen­
+il druido conserva il proprio tipo di creatura, i punti Colpo primordiale. Una volta per ogni suo turno, quando
+ferita, i Dadi Vita, i punteggi di Intelligenza, Saggezza il druido colpisce una creatura con un tiro per colpire
+suo bonus di competenza, oltre a ottenere quelle della Incantesimi potenti. Il personaggio aggiunge il suo modi­
+ficatore del tiro salvezza superiori a quelli del druido, trucchetto da druido.
+LIVELLO 1 5 : FURIA E L E M E NTALE
+Non si possono lanciare incantesimi. Il druido non può
+lanciare incantesimi, ma il mutamento della forma non L'opzione scelta per la Furia Elementale diventa più
+minata dagli arti della forma bestiale e non dai propri. Incantesimi potenti. Quando il personaggio lancia
+In più, un druido può scegliere se lasciare cadere l'equi­ un trucchetto da druido con un raggio pari o superiore
+
+--- PDF page 85 hits ['druido', 'mago'] ---
+Mentre utilizza Forma Selvatica, il druido può lanciare
+Questa sezione presenta l a lista degli incantesimi del dru­
+incantesimi in forma bestiale, fatta eccezione per gli
+ido. Gli incantesimi sono ordinati prima per livello dell'in­
+incantesimi che abbiano bisogno di componenti materiali
+LIVELLO 1 9 : D ONO EPICO
+LIVELLO 2 0 : ARC I D RU I D O I ncantesimo Scuola Speciale
+del druido, concedendogli i seguenti benefici.
+Forma selvatica sempreverde. Ogni volta che il druido Elementalismo Trasm utazione
+Mago della natura. Il druido può convertire gli utilizzi
+di Forma Selvatica in slot incantesimo (nessuna azione Luce splendente I nvocazione
+non spesi e li converte in un singolo slot incantesimo;
+ottiene uno slot incantesimo di 4° livello. Dopo aver usato Resistenza A b i u razione e
+nel druido rallenta il suo invecchiamento. Per ogni 10 anni Salvare i morenti N ecromanzia
+trascorsi, il corpo del druido invecchia soltanto di 1 anno.
+
+--- PDF page 87 hits ['druido'] ---
+Muro di pietra I nvocazione e L e sottoclassi del druido sono specializzazioni che
+Piaga degli insetti Evocazione e conferiscono dei privilegi a determinati livelli da druido,
+Bagliore solare I nvocazione e Mutevole come la luna, un druido di questo circolo
+sore. La natura selvaggia scorre nelle vene di questo druido.
+Guarigione Abiurazione LIVELLO 3 : FORM E D E L C I RC OLO
+Scopri il percorso Divinazione C , M è pari al proprio livello da druido diviso per 3 (arroton­
+
+--- PDF page 88 hits ['druido'] ---
+la CA del druido è pari a 13 più il modificatore di Saggezza
+Punti ferita temporanei. Il druido ottiene un numero
+di punti ferita temporanei pari a tre volte il proprio livello
+da druido.
+LIVELLO 3 : I NCANTE S I M I DEL C I RC OLO
+Quando il druido raggiunge un livello specificato nella
+tabella Incantesimi del Circolo della Luna, gli incantesimi
+lì elencati sono considerati come preparati.
+Inoltre, può lanciare gli incantesimi di questo privilegio
+Livello da
+druido I ncantesimi preparati
+3 Bagliore lunare, cura ferite e luce splendente
+5 Evoca animali
+7 Fonte di luce lunare
+9 Cura ferite di massa
+LIVELLO 6 : FOR M E DEL C I RC OLO
+Mentre è in Forma Selvatica, il druido ottiene i seguenti
+Il druido effettua questa scelta ogni volta che colpisce con
+Robustezza aumentata. Il druido può aggiungere il modi­
+LIVELLO 1 0 : PAS S O C H IA R D I LU NA
+Il druido si teletrasporta magicamente e riappare in mezzo
+gli utilizzi spendendo uno slot incantesimo di 2° livello
+Il potere della luna avvolge il druido e gli concede i seguenti
+Chiardiluna condiviso. Ogni volta che il druido usa
+
+--- PDF page 89 hits ['druido'] ---
+LIVELLO 3 : FURIA DEI MARI
+Come azione bonus, il druido può spendere un utilizzo di
+o generata di nuovo, o se il druido è incapacitato.
+Quando il druido genera l'emanazione, come azione
+contro la CD del tiro salvezza sull'incantesimo del druido
+druido. Per determinare i danni, il druido tira un numero
+Quando il druido raggiunge un livello specificato nella
+tabella Incantesimi del Circolo del Mare, gli incantesimi
+lì elencati sono considerati come preparati.
+Livello da
+druido I ncantesimi preparati
+3 Nube di nebbia, folata di vento, raggio
+5 Fulmine e respirare sott 'acqua
+7 Controllare acqua e tempesta di ghiaccio
+9 Evoca elementale e blocca mostri
+Inoltre, il druido ottiene una velocità di nuoto pari alla
+Mentre è in atto, la Furia dei Mari conferisce al druido
+Resistenza. Il druido dispone di resistenza ai danni
+Volo. Il druido ottiene una velocità di volo pari alla
+
+--- PDF page 90 hits ['druido'] ---
+a sé, il druido può generarla intorno a una creatura con­
+di Saggezza del druido.
+Inoltre, il druido può generare l'emanazione intorno
+LIVELLO 3 : CA RTA C E L E STE
+Il druido, nell'ambito dei suoi studi sulla volta del cielo,
+tesimi da druido; il giocatore determina l'aspetto della
+Mentre il druido impugna la mappa, gli incantesimi
+dardo tracciante e guida si considerano preparati; inoltre,
+può lanciare dardo tracciante senza spendere uno slot
+Se il druido perde la carta celeste, può compiere un
+2 U n a tavoletta d i pietra con dei picco l i fori incisi
+3 U n a pelle d i orsogufo lavorata con s i m bo l i stel lari
+4 U n a raccolta d i ca rte celesti rilegate i n ebano
+5 U n cristal l o i n ciso con forme d i costel lazioni
+6 U n d isco d i vetro i n ciso con costellazioni
+LIVELLO 3: FORMA S I D E RALE
+Come azione bonus, il druido può spendere un utilizzo
+Una volta assunta la forma siderale, il druido mantiene
+
+--- PDF page 91 hits ['druido'] ---
+La forma si dissolve prima della sua scadenza se il druido
+Il druido può scegliere la forma della costellazione da Il Circolo della Terra è composto da mistici e sapienti che
+Arciere. Sul corpo del druido compare la costellazione o monoliti, per rivelarsi in druidico i segreti primordiali
+sua durata, il druido effettua un attacco a distanza con
+incantesimo scagliando una freccia luminosa contro una LIVELLO 3 : AUSILIO DALLA TERRA
+Calice. Sul corpo del druido compare la costellazione punto appaiono fiori che donano vitalità e spine che risuc­
+del calice della vita. Ogni volta che il druido lancia un chiano la vita. Ogni creatura nella sfera a scelta del druido
+incantesimo utilizzando uno slot incantesimo per ripristi­ deve effettuare un tiro salvezza su Costituzione contro
+un numero di punti ferita pari a ld8 più il modificatore in caso di successo. Una creatura a scelta del druido in
+di Saggezza del druido. quell'area recupera 2d6 punti ferita.
+Drago. Sul corpo del druido compare la costellazione I danni e la guarigione del personaggio aumentano
+di un drago saggio. Quando il druido effettua una prova di ld6 quando raggiunge il 10° (3d6) e il 14° (4d6) livello
+di Saggezza o di Intelligenza oppure un tiro salvezza su da druido.
+Al termine di un riposo lungo, il druido sceglie un tipo
+LIVELLO 6 : P ROFE ZIA C O SMICA di terra: arida, polare, temperata o tropicale. Consulta la
+Al termine di un riposo lungo, il druido può consultare tabella qui di seguito corrispondente al tipo di terra scelto;
+la sua Carta Celeste per carpire presagi e tirare un dado. gli incantesimi elencati per il livello da druido attuale
+Fino al termine del suo prossimo riposo lungo, il druido e per i livelli inferiori si considerano preparati.
+Livello da
+druido I ncantesimi del Circolo
+5 Palla di fuoco
+di volte pari al valore del suo modificatore di Saggezza Livello da
+(minimo una volta) e recupera tutti gli utilizzi consumati druido I ncantesimi del Circolo
+3 Blocca persone, nube di nebbia, raggio di gelo
+LIVELLO 1 0 : C O STELLAZIONI S C I NTILLANTI
+5 Tempesta di nevischio
+7 Tempesta di ghiaccio
+6 metri con la possibilità di fluttuare. TE R R A T E M P E R ATA
+Inoltre, all'inizio di ogni turno, il druido che ha attivato
+Livello da
+druido I ncantesimi del Circolo
+3 Passo velato, sonno e stretta folgorante
+LIVELLO 14 : MANTO DI STELLE
+5 Fulmine
+Quando il druido attiva Forma Siderale, diventa parzial­
+7 Libertà di movimento
+
+--- PDF page 92 hits ['druido'] ---
+Livello da
+druido I ncantesimi del Circolo
+3 Fiotto acido, raggio di infermità, ragnatela
+7 Metamorfosi
+9 Piaga degli insetti
+Il druido può lanciare uno degli incantesimi di 1° livello
+o superiore che ha preparato con il privilegio Incantesimi
+del Circolo senza spendere uno slot incantesimo; deve
+slot incantesimo spesi desidera recuperare. Questi slot
+incantesimo possono avere un livello totale pari o inferiore
+alla metà del livello da druido {arrotondato per eccesso)
+e nessuno slot può essere di livello superiore al 6°.
+Per esempio, se il personaggio è un druido di 6° livello,
+può recuperare slot incantesimo per un valore totale di
+tre livelli. Il druido può recuperare uno slot incantesimo
+di 3° livello, uno slot incantesimo di 2° livello e uno di
+1° livello, o tre slot incantesimo di 1° livello. Dopo aver
+recuperato gli slot incantesimo con questo privilegio,
+il druido non può farlo di nuovo prima di aver completato
+LIVELLO 1 0 : INTERDIZIONE DE LLA NATURA
+per il privilegio Incantesimi del Circolo, come indicato
+LIVELLO 14 : R IFUGIO DE LLA NATURA
+Come azione di Magia, il druido può spendere un utilizzo
+per 1 minuto, o finché il druido non è incapacitato o morto.
+Mentre si trovano in quell'area, il druido e i suoi alleati
+Come azione bonus, il druido può muovere il cubo fino
+
+--- PDF page 97 hits ['mago'] ---
+1 punto ferita.
+magia. I loro incantesimi integrano ed estendono le loro
+LIVELLO 3 : ARMA VI N C OLATA
+Il guerriero impara a lanciare incantesimi. Consulta i l
+capitolo 7 p e r l e regole relative al lancio degli incantesimi.
+Trucchetti. Il guerriero conosce due trucchetti a scelta
+dalla lista degli incantesimi da mago (consultabile nella
+ottiene un livello da guerriero, può sostituire uno di questi
+trucchetti con un altro trucchetto a scelta dalla lista degli
+incantesimi da mago.
+Quando il guerriero raggiunge il 10° livello, può impa­
+rare un altro trucchetto da mago a scelta.
+
+--- PDF page 98 hits ['mago', 'incantesimi preparati'] ---
+Slot incantesimo. La tabella Incantesimi del Cavaliere
+Mistico mostra gli slot incantesimo disponibili per i propri
+incantesimi di 1° livello o superiore. Tutti gli slot incante-
+-Slot incantesimo per livello
+Livello I ncantesimi
+da guerriero preparati 2 3 4
+3 3 2
+4 4 3
+5 4 3
+6 4 3
+7 5 4 2
+8 6 4 2
+9 6 4 2
+1 0 7 4 3
+1 1 8 4 3
+1 2 8 4 3
+1 3 9 4 3 2
+1 4 1 0 4 3 2
+1 5 1 0 4 3 2
+1 6 1 1 4 3 3
+1 7 1 1 4 3 3
+1 8 1 1 4 3 3
+1 9 1 2 4 3 3
+20 1 3 4 3 3
+Incantesimi preparati di 1° livello o superiore. Con questo
+privilegio, il personaggio prepara una lista di incantesimi
+di 1° livello o superiore che può lanciare. Per iniziare, sce­
+glie tre incantesimi di 1° livello dalla lista degli incantesimi
+da mago. Sono consigliati mani brucianti, salto e scudo.
+Il numero di incantesimi nella lista aumenta man
+come mostrato nella colonna Incantesimi preparati della
+tabella Incantesimi del Cavaliere Mistico. Ogni volta che
+il numero cresce, il mago deve scegliere altri incantesimi
+dalla lista degli incantesimi da mago finché il numero
+di incantesimi sulla sua lista non combacia con quello
+mostrato nella tabella. Gli incantesimi scelti devono
+essere di un livello di cui possiede degli slot incantesimo.
+Per esempio, nel caso di un guerriero di 7° livello, la sua
+lista di incantesimi preparati può includere cinque incan­
+tesimi da mago di 1° e 2° livello in qualsiasi combinazione.
+Cambiare gli incantesimi preparati. Quando completa
+simo sulla propria lista con un altro incantesimo da mago
+di cui possiede degli slot.
+stica da incantatore per gli incantesimi da mago.
+arcano come focus da incantatore per i suoi incantesimi
+da mago.
+
+--- PDF page 99 hits ['mago'] ---
+LIVELLO 7: MAGIA DA GU E RRA
+dei suoi trucchetti da mago che abbia il tempo di lancio
+di resistere ai suoi incantesimi. Quando colpisce una
+LIVELLO 1 8 : M AGIA DA GU E R RA
+dei suoi incantesimi da mago di 1° e 2° livello che abbia
+Livello da
+3 D6 4
+5 D8 6
+9 D8 8
+1 1 Dl O 8
+1 3 Dl O 1 0
+1 7 Dl 2 1 2
+
+--- PDF page 111 hits ['mago', 'incantesimi preparati'] ---
+Amplifica l e tue doti furtive con incantesimi arcani
+Alcuni ladri sfruttano gli incantesimi per potenziare le
+Il ladro impara a lanciare incantesimi. Consulta i l
+Trucchetti. Il ladro conosce tre trucchetti: mano
+magica e altri due trucchetti a scelta tratti dalla lista
+degli incantesimi da mago (consultabile dalla sezione
+Ogni volta che il ladro ottiene un livello può sostituire
+uno dei suoi trucchetti, eccetto mano magica, con un altro
+trucchetto da mago a scelta.
+Quando raggiunge il livello 10, può imparare un altro
+trucchetto da mago a scelta.
+Slot incantesimo. La tabella Incantesimi del Mistifica­
+tore Arcano mostra gli slot incantesimo disponibili per
+i propri incantesimi di 1° livello o superiore. Il personag­
+gio recupera tutti gli slot incantesimo consumati quando
+Incantesimi preparati di 1° livello o superiore.
+di incantesimi di 1° livello o superiore che può lanciare.
+Per iniziare, sceglie tre incantesimi da mago di 1° livello.
+Il numero di incantesimi nella lista aumenta man
+mostrato nella colonna Incantesimi preparati della tabella
+Incantesimi del Mistificatore Arcano. Ogni volta che il
+numero cresce, il ladro deve scegliere altri incantesimi
+da mago finché il numero nella lista non combacia con
+quello mostrato nella tabella Incantesimi del Mistificatore
+Arcano. Gli incantesimi scelti devono essere di un livello
+di cui possiede degli slot incantesimo. Per esempio, nel
+caso di un ladro di 7° livello, la sua lista di incantesimi
+preparati può includere cinque incantesimi da mago di 1°
+e 2° livello in qualsiasi combinazione.
+Cambiare gli incantesimi preparati. Quando completa
+sulla propria lista con un altro incantesimo da mago di
+cui possiede degli slot.
+stica da incantatore per gli incantesimi da mago del ladro.
+
+--- PDF page 112 hits ['mago'] ---
+arcano come focus da incantatore p e r i suoi incantesimi Se il ladro è invisibile quando lancia un incantesimo
+da mago. su una creatura, questa avrà svantaggio a qualsiasi tiro
+-Slot incantesimo per livello
+LIVELLO 1 3 : INGAN NATORE VE RSAT I LE
+Livello Incantesimi Il ladro ottiene la capacità di distrarre i bersagli con mano
+da ladro preparati 2 3 4 magica. Quando usa l'opzione Inciampo del suo Colpo
+3 3 2
+4 4 3
+5 4 3 LIVELLO 17: LADRO DI I N CANTE S I M I
+6 4 3
+7 5 4 2
+8 6 4 2 Subito dopo che una creatura lancia un incantesimo
+9 6 4 2
+1 0 7 4 3 a effettuare un tiro salvezza su Intelligenza. La CD equi-
+1 1 8 4 3 vale alla CD del tiro salvezza sull'incantesimo del ladro.
+1 2 8 4 3
+1 3 9 4 3 2 di 1° livello o di un livello utilizzabile dal personaggio
+1 4 1 0 4 3 2 (non deve per forza essere un incantesimo da mago).
+1 5 1 0 4 3 2
+1 6 1 1 4 3 3
+1 7 1 1 4 3 3 Dopo aver rubato un incantesimo in questo modo,
+1 8 1 1 4 3 3
+1 9 1 2 4 3 3
+20 1 3 4 3 3
+
+--- PDF page 114 hits ['mago', 'incantesimi preparati'] ---
+Caratteristiche I ntel l i genza Ottiene il Dado Vita dalla tabella Tratti del mago.
+primarie Ottiene gli incantesimi di 1° livello del mago elencati
+nella tabella Privilegi del mago. Per determinare il
+Dado Vita 06 per ogni l ivel l o d a mago
+numero di slot incantesimo disponibili, vedi le regole
+nelle abilità I ntuizione, Medicina, N atura, I l mago ottiene i seguenti privilegi d i classe quando rag­
+Competenza Armi sempl ici tabella Privilegi del mago.
+LIVELLO l : I N C ANTE S I M I
+Competenza Nessuno In quanto studioso della magia arcana, il mago h a impa­
+rato a lanciare incantesimi. Consulta il capitolo 7 per le
+Equipaggiamento A scelta tra A e B: (A) 2 pugn a l i , regole relative al lancio degli incantesimi. Le informazioni
+incantesimi del mago, elencati nella relativa lista degli
+incantesimi più avanti nella descrizione della classe.
+Trucchetti. Il mago conosce tre trucchetti a scelta.
+MAGHI SONO NOTI PER IL LORO ESAUSTIVO STUDIO sostituire uno dei suoi trucchetti di questo privilegio con
+I incantes1m1, possono causare esplos10m d1 fuoco Dopo aver raggiunto il 4° e il 10° livello da mago,
+e dare origine a spettacolari trasformazioni. Grazie ai loro come mostrato nella colonna Trucchetti della tabella
+poteri possono chiamare a sé mostri da altri piani di esi­ Privilegi del mago.
+stenza, sbirciare nel futuro o formare barriere protettive. Libro degli incantesimi. Lo studio delle arti arcane da
+Con gli incantesimi più potenti che hanno a disposizione parte del mago ha raggiunto il suo apice con la creazione
+sono in grado di trasformare una sostanza in un'altra, far di un particolare tomo: il suo libro degli incantesimi.
+degli incantesimi nelle varie scuole di magia. Maghi famosi zione: potrebbe essere un tomo dal dorso dorato o una
+sulle proprie ricerche per inventare gli iconici incantesimi Il libro contiene gli incantesimi di 1° livello o superiore
+ormai ampiamente utilizzati in tutto il multiverso. noti al personaggio. Inizia con sei incantesimi da mago
+La cosa più vicina a una vita normale che un mago possa di 1° livello a scelta. Sono consigliati individuazione del
+negli eserciti o perseguono scopi criminali o di dominio Ogni volta che il personaggio acquisisce un livello da
+totale. mago dopo il 1°, puoi aggiungere due incantesimi da mago
+Tuttavia, il richiamo della conoscenza attira anche a scelta al libro degli incantesimi. Ognuno di essi deve
+i meno avventurosi, strappandoli alle loro biblioteche essere di un livello di cui il mago possiede degli slot incan­
+e ai loro laboratori per condurli verso antiche rovine tesimo, come indicato nella tabella Privilegi del mago.
+e città perdute. Molti maghi credono che le loro contro­ Gli incantesimi rappresentano il culmine delle ricerche
+ormai perduti da secoli e che la loro scoperta potrebbe Slot incantesimo. La tabella Privilegi del mago mostra
+aprire le porte di un potere superiore a qualsiasi magia gli slot incantesimo disponibili per i propri incantesimi di
+disponibile nell'epoca attuale. 1° livello o superiore. Tutti gli slot incantesimo consumati
+D IV E NTA R E UN MAGO . . . Incantesimi preparati di 1° livello o superiore. Con questo
+privilegio, il personaggio prepara una lista di incantesimi
+C O M E PERSONAGGIO DI 1 o LIVELLO
+di 1° livello o superiore che può lanciare. Per farlo, devi
+scegliere quattro incantesimi dal suo libro degli incante­
+del mago.
+simi. Gli incantesimi scelti devono essere di un livello di
+Ottiene gli incantesimi di 1° livello del mago elencati
+cui possiede degli slot incantesimo.
+nella tabella Privilegi del mago.
+
+--- PDF page 115 hits ['mago', 'incantesimi preparati'] ---
+-Slot incantesimo per livello
+Livello competenza Privilegi di classe Trucchetti preparati 2 3 4 5 6 7 8 9
+2 +2 Studioso 3 5 3
+3 +2 Sottoclasse del mago 3 6 4 2
+4 +2 Aumento dei pu nteggi di caratteristica 4 7 4 3
+5 +3 M e m o rizzare i n ca ntes i m i 4 9 4 3 2
+6 +3 Privilegio della sottoclasse 4 1 0 4 3 3
+7 +3 4 1 1 4 3 3
+8 +3 Aumento dei pu nteggi d i caratteristica 4 1 2 4 3 3 2
+9 +4 4 1 4 4 3 3 3
+1 0 +4 Privilegio della sottoclasse 5 1 5 4 3 3 3 2
+1 1 +4 5 1 6 4 3 3 3 2
+1 2 +4 Aumento dei pu nteggi di ca ratteristica 5 1 6 4 3 3 3 2
+1 3 +5 5 1 7 4 3 3 3 2
+1 4 + 5 Privilegio d e l l a sottoclasse 5 1 8 4 3 3 3 2
+1 5 +5 5 1 9 4 3 3 3 2
+1 6 +5 Aumento dei pu nteggi d i ca ratteristica 5 21 4 3 3 3 2
+1 7 +6 5 22 4 3 3 3 2
+1 8 +6 M aestria negli I nca ntes i m i 5 23 4 3 3 3 3
+1 9 + 6 D o n o epico 5 24 4 3 3 3 3 2
+20 +6 I nca ntesi m i perso n a l i 5 25 4 3 3 3 3 2 2
+Il numero d i incantesimi nella lista aumenta m a n mano LIVE LLO 1 : ADEPTO DEI RITUALI
+che il personaggio ottiene livelli da mago, come mostrato Il mago può lanciare qualsiasi incantesimo come rituale
+nella colonna Incantesimi preparati della tabella Privilegi se quell'incantesimo possiede il descrittore rituale ed
+del mago. Ogni volta che il numero cresce, il mago deve è presente nel suo libro degli incantesimi. Non è necessa­
+scegliere altri incantesimi finché il numero sulla lista non rio che sia preparato, ma per poterlo lanciare in questo
+mago. Gli incantesimi scelti devono essere di un livello di
+cui possiede degli slot incantesimo. Per esempio, nel caso LIVE LLO l : R E C U PERO ARCANO
+di un mago di 3° livello, la sua lista di incantesimi prepa­ Il mago può recuperare parte della sua energia magica
+rati può includere sei incantesimi di 1° e 2° livello in qual­ studiando il libro degli incantesimi. Quando completa
+siasi combinazione presi dal suo libro degli incantesimi. un riposo breve, sceglie quali slot incantesimo spesi
+Se un altro privilegio gli fornisce incantesimi che sono desidera recuperare. Gli slot incantesimo possono avere
+sempre preparati, questi non contano ai fini del numero un livello totale pari o inferiore alla metà del livello da
+di incantesimi preparabili con questo privilegio. Tuttavia, mago (arrotondato per eccesso) e nessuno slot può essere
+valgono comunque come incantesimi da mago. di livello pari o superiore al 6°. Per esempio, se il mago
+Cambiare gli incantesimi preparati. Quando il mago è di 4° livello, può recuperare un massimo di due livelli
+completa un riposo lungo, può modificare la sua lista di di slot incantesimo, ripristinando o uno slot incantesimo
+incantesimi preparati, sostituendo quelli che preferisce di 2° livello o due di 1° livello.
+con altri incantesimi inclusi nel suo libro. Dopo aver usato questo privilegio, il personaggio non
+stica da incantatore per gli incantesimi da mago. lungo.
+Focus da incantatore. Il mago può usare un focus arcano
+o il suo libro degli incantesimi come focus da incantatore LIVELLO 2 : STUD I O S O
+per i propri incantesimi da mago. Durante il suo studio della magia, il mago s i è specializzato
+Natura, Religione o Storia. Il mago possiederà maestria
+
+--- PDF page 116 hits ['mago'] ---
+G l i i n ca ntesi m i che i l mago aggi u n ge a l proprio l i bro
+sonaggio trova u n i n cantes i m o d a mago d i 1 ° l ivel l o
+tesimi se è d i u n livello che ne consente la preparazione
+e se c'è abbastanza tempo per copiarlo. Per ogn i livello
+50 mo. Dopod iché, il mago può preparare l ' i ncante­
+Copiare il libro. Il mago può copiare u n i n ca ntesimo
+Se il mago perd e il suo l i b ro degli i n ca ntes i m i , può
+LIVE LLO 3 : S OTTO CLASSE DEL MAGO
+Il personaggio ottiene una sottoclasse del mago a scelta.
+minati livelli da mago. Per il resto della sua carriera, il per­
+suo livello da mago attuale o a quelli inferiori.
+teristica (vedi capitolo 5) o un altro talento a scelta di Ogni volta che il mago completa un riposo lungo, può
+nuovamente all'8°, al 12° e al 16° livello da mago. simi con un altro pertinente dello stesso livello (preso dal
+LIVELLO 5 : M E MORIZZARE INCANTE S I M I
+Quando il mago completa u n riposo breve, può studiare LIVE LLO 1 9 : D ONO EPICO
+il proprio libro degli incantesimi e sostituire uno degli Il personaggio ottiene un Dono epico (vedi capitolo 5)
+incantesimi da mago preparati di 1° livello o superiore o un altro talento a scelta di cui possiede i prerequisiti.
+con un altro di 1° livello o superiore dal libro. È consigliato il Dono del richiamo degli incantesimi.
+LIVELLO 1 8 : MAESTRIA N E GLI INCANTE S I M I LIVE LLO 2 0 : INCANTE S I M I PERS ONALI
+Il mago raggiunge una tale padronanza nell'uso d i certi Il mago sceglie due incantesimi di 3° livello contenuti
+incantesimi da poterli lanciare a volontà. Dal suo libro nel suo libro degli incantesimi come suoi incantesimi
+degli incantesimi, scegli un incantesimo di 1° livello e uno personali. Tali incantesimi sono sempre considerati come
+di 2° livello con il tempo di lancio di un'azione. Tali incan­ preparati. Inoltre, il mago può lanciarli una volta ciascuno
+tesimi sono sempre considerati come preparati. Inoltre, al 3° livello senza spendere slot incantesimo. Quando lo
+il mago può lanciarli al loro livello più basso senza spen­ fa, non può lanciarli di nuovo in questo modo finché non
+dere slot incantesimo. Per lanciarli a un livello superiore, completa un riposo breve o lungo. Per lanciarli a un livello
+deve invece spendere uno slot incantesimo. superiore, deve invece spendere uno slot incantesimo.
+
+--- PDF page 117 hits ['mago'] ---
+LISTA DEGLI INCANTESIMI DA MAGO
+In questa sezione si trova la lista degli incantesimi del Mani brucianti Invocazione
+mago. Gli incantesimi sono ordinati prima per livello Nube di nebbia Evocazione e
+TRUCCHETTI {INCANTESIMI DA MAGO Risata incontenibile di Tasha Ammaliamento e
+DI LIVELLO O) Ritirata rapida Trasmutazione e
+INCANTESIMI DA MAGO DI LIVELLO
+INCANTESIMI DA MAGO DI 1° LIVELLO Fiamma perenne Invocazione M
+
+--- PDF page 121 hits ['mago'] ---
+Le sottoclassi del mago sono specializzazioni che confe­
+riscono dei privilegi a determinati livelli da mago, come
+Il mago studia la magia concentrandosi sugli incantesimi
+Scegli due incantesimi da mago della scuola di abiurazione
+che non siano di livello superiore al 2°, e aggiungili gratui­
+tamente al libro degli incantesimi del mago.
+a un nuovo livello di slot incantesimo in questa classe,
+tesimo da mago della scuola di abiurazione. L'incantesimo
+scelto deve essere di un livello di cui possiede degli slot
+LIVELLO 3 : INTERDIZIONE ARCANA
+Il mago è in grado di plasmare la magia intorno a sé a scopi
+con uno slot incantesimo, può allo stesso tempo utiliz­
+al doppio del livello da mago del personaggio più il suo
+inflitti danni al mago, sarà l'interdizione a subirli al posto
+a O punti ferita, sarà il mago a subire i danni rimanenti.
+Ogni volta che il mago lancia un incantesimo di abiura­
+zione con uno slot incantesimo, l'interdizione recupera un
+numero di punti ferita pari al doppio del livello dello slot.
+In alternativa, come azione bonus il mago può spendere
+uno slot incantesimo per far recuperare all'interdizione
+un numero di punti ferita pari al doppio del livello dello
+slot utilizzato.
+LIVELLO 6 : INTERDIZIONE PROIETTATA
+Se una creatura entro 9 metri dal mago e che sia nel suo
+campo visivo subisce dei danni, il mago può usare una rea­
+
+--- PDF page 122 hits ['mago'] ---
+Nel caso in cui questi danni facciano scendere l'interdi­ LIVELLO 1 0 : TE RZO O C C H I O
+zione a O punti ferita, la creatura protetta subirà quelli I poteri d i percezione del mago aumentano. Come azione
+Gli incantesimi controincantesimo e dissolvi magie sono
+Comprensione superiore. Il mago è in grado di leggere
+sempre considerati come preparati. Inoltre, il mago può
+Quando il mago lancia uno dei due incantesimi con uno
+Vedere invisibilità. Il mago può lanciare vedere invisibilità
+slot, lo slot non viene speso nel caso in cui l'incantesimo
+senza consumare uno slot incantesimo.
+LIVELLO 14 : PORTENTO SUPERIORE
+Le visioni che appaiono in sonno al mago si fanno più
+II mago dispone d i vantaggio ai tiri salvezza contro gli
+incantesimi e possiede resistenza ai danni inferti dagli
+incantesimi.
+Scegli due incantesimi da mago della scuola di Divina­
+zione che non siano di livello superiore al 2°, e aggiungili
+gratuitamente al libro degli incantesimi del mago.
+a un nuovo livello di slot incantesimo in questa classe,
+tesimo da mago della scuola di Divinazione. L'incantesimo
+scelto deve essere di un livello di cui possiede degli slot
+LIVELLO 3 : PORTENTO
+I sensi del mago vengono acuiti da sprazzi di visioni
+LIVELLO 6: DIVINAZIONE E S P E RTA
+Per il personaggio lanciare incantesimi di Divinazione
+sua energia magica. Quando il mago lancia un incantesimo
+di Divinazione usando uno slot incantesimo di 2° livello
+o superiore, recupera uno slot speso. Lo slot recuperato
+deve essere di livello inferiore a quello consumato e non
+può essere di livello superiore al 5°.
+
+--- PDF page 123 hits ['mago'] ---
+Plasma i tuoi incantesimi per architettare inganni
+Il mago si specializza in una magia in grado di confondere
+Il mago può lanciare incantesimi di Illusione senza
+Inoltre, il mago conosce il trucchetto illusione minore.
+da mago a scelta. Il trucchetto non conta rispetto al numero
+di trucchetti conosciuti dal personaggio. Attraverso un
+Scegli due incantesimi da mago della scuola di Illusione
+che non siano di livello superiore al 2°, e aggiungili gratui­
+tamente al libro degli incantesimi del mago.
+a un nuovo livello di slot incantesimo in questa classe, puoi
+da mago della scuola di Illusione. L'incantesimo scelto deve
+essere di un livello di cui possiede degli slot incantesimo.
+LIVELLO 6 : C REATURE SPETTRALI
+Gli incantesimi richiama bestia e richiama folletto sono sem­
+pre considerati come preparati. Quando vengono lanciati,
+il mago può cambiarne la scuola a Illusione, facendo sì che le
+ne consente il lancio senza spendere uno slot incantesimo,
+dimezzati. Dopo aver lanciato questi incantesimi senza uno
+slot, il personaggio deve completare un riposo lungo
+LIVELLO 1 0 : S O SIA I LLUSORIO
+Quando una creatura colpisce il mago con un tiro
+consumando uno slot incantesimo di 2° livello o supe­
+LIVELLO 14 : REALTÀ I LLUSORIA
+Il mago ha imparato a padroneggiare la magia
+di Illusione con uno slot, può scegliere un oggetto non
+1 minuto, durante il quale non può infliggere danni
+o condizioni. Per esempio, il mago può creare
+
+--- PDF page 124 hits ['mago'] ---
+Scegli due incantesimi da mago della scuola di Invoca­
+zione che non siano di livello superiore al 2°, e aggiungili
+gratuitamente al libro degli incantesimi del mago.
+a un nuovo livello di slot incantesimo in questa classe,
+tesimo da mago della scuola di Invocazione. L'incantesimo
+scelto deve essere di un livello di cui possiede degli slot
+I trucchetti del mago che infliggono danni possono
+Il mago è in grado d i creare delle sacche di relativa
+Quando il mago lancia un incantesimo di Invocazione
+il livello dell'incantesimo. Le creature scelte superano
+LIVELLO 1 0 : INVOCAZIONE POTENTE
+Quando il mago lancio un incantesimo della scuola
+LIVELLO 14 : SATU RAZIONE MAGIC A
+Il mago può aumentare il potere dei suoi incantesimi.
+Quando lancia un incantesimo con uno slot di livello
+La prima volta che lo fa, il mago non subisce alcun
+sce 2d12 danni necrotici per ogni livello dell'incantesimo
+livello dell'incantesimo aumentano di ldl2.
+
+--- PDF page 134 hits ['paladino', 'incantesimi preparati'] ---
+Caratteristiche Forza e Carisma Il paladino ottiene i seguenti privilegi di classe quando
+Dado Vita Dl O per ogn i livello d a paladino nella tabella Privilegi del paladino.
+Competenze Saggezza e Carisma LIVELLO l : I M P O S I ZIONE DELLE MAN I
+Il tocco benedetto di un paladino è in grado di guarire le
+Competenze Due a scelta tra: Atl etica, I nti m i d i re, ferite. Un paladino possiede una riserva di poteri curativi
+Competenza Armi sempl ici e d a guerra di punti ferita pari a cinque volte il proprio livello da
+nelle armi paladino.
+Come azione bonus, il paladino può toccare una
+PALADINI SONO ACCOMUNATI DAI LORO GIURA­ LIVELLO l : I NCANTE S I M I
+menti, con cui si impegnano a combattere le forze Il paladino impara a lanciare incantesimi attraverso
+pronunciato dinanzi all'altare di una divinità, in una le regole relative al lancio degli incantesimi. Le infor­
+momento di assoluta disperazione e solitudine, il giura­ agli incantesimi da paladino, elencati nella relativa
+mento di un paladino è un vincolo potente. È la fonte di lista degli incantesimi più avanti nella descrizione
+un campione benedetto. Slot incantesimo. La tabella Privilegi del paladino
+I paladini si allenano per apprendere le abilità di com­ mostra gli slot incantesimo disponibili per i propri incan­
+battimento e padroneggiare una varietà di armi e arma­ tesimi di 1° livello o superiore. Tutti gli slot incantesimo
+curare i feriti, annientare i nemici e proteggere i loro Incantesimi preparati di 1° livello o superiore. Con questo
+alleati e gli innocenti. privilegio, il personaggio prepara una lista di incantesimi
+Un paladino è sempre in prima linea nella battaglia di 1° livello o superiore che può lanciare. Per iniziare,
+cosmica contro la distruzione, e la sua vita è avventurosa sceglie due incantesimi da paladino di 1° livello. Sono
+rari negli eserciti del mondo, i paladini lo sono ancora di Il numero di incantesimi nella lista aumenta man
+più. Chiunque senta la chiamata di questo cammino sacro mano che il personaggio ottiene livelli da paladino,
+abbandona le proprie occupazioni per imbracciare le armi come mostrato nella colonna Incantesimi preparati della
+e apprendere le arti magiche. tabella Privilegi del paladino. Ogni volta che il numero
+cresce, il paladino deve scegliere altri incantesimi finché
+nella tabella Privilegi del paladino. Gli incantesimi scelti
+C O M E P E R SONAGGIO DI 1 ° LIVELLO
+devono essere di un livello di cui possiede degli slot incan­
+Ottiene tutti i tratti nella tabella Tratti del paladino. tesimo. Per esempio, nel caso di un paladino di 5° livello,
+Ottiene i privilegi del paladino di 1° livello elencati nella
+la sua lista di incantesimi preparati può includere sei
+tabella Privilegi del paladino. incantesimi da paladino di 1° 2° livello in qualsiasi
+Se un altro privilegio gli fornisce incantesimi che sono
+Ottiene i seguenti tratti dalla tabella Tratti del paladino:
+sempre preparati, questi non contano ai fini del numero
+di incantesimi preparabili con questo privilegio. Tuttavia,
+Ottiene i privilegi del paladino di 1° livello elencati nella valgono comunque come incantesimi da paladino.
+Cambiare gli incantesimi preparati. Quando completa
+tabella Privilegi del paladino. Per determinare il numero
+un riposo lungo, il paladino può sostituire un incantesimo
+di slot incantesimo disponibili, vedi le regole multiclasse
+degli slot.
+
+--- PDF page 135 hits ['chierico', 'paladino'] ---
+-Slot incantesimo per livello
+Livello competenza Privilegi di classe divinità preparati l 2 3 4 5
+2 +2 Sti le d i com battimento, P u n izione del paladino 3 2
+3 +2 I ncanalare divinità, sottoclasse del palad i n o 2 4 3
+4 +2 Aumento dei pu nteggi d i caratteristica 2 5 3
+5 +3 Attacco extra, Fido destriero 2 6 4 2
+6 +3 Aura di Protezione 2 6 4 2
+7 +3 Privilegio d e l l a sottoclasse 2 7 4 3
+8 +3 Aumento dei pu nteggi di caratteristica 2 7 4 3
+9 +4 Abiu rare nem ici 2 9 4 3 2
+1 0 +4 Aura d i coraggio 2 9 4 3 2
+1 1 +4 Colpi rad iosi 3 1 0 4 3 3
+1 2 +4 Aumento dei pu nteggi d i caratteristica 3 1 0 4 3 3
+1 3 +5 3 1 1 4 3 3
+14 +5 Tocco rigenerante 3 1 1 4 3 3
+1 5 +5 Privilegio della sottoclasse 3 1 2 4 3 3 2
+1 6 +5 Aumento dei pu nteggi d i ca ratteristica 3 1 2 4 3 3 2
+1 7 +6 3 1 4 4 3 3 3
+1 8 +6 Ampliamento d e l l ' a u ra 3 1 4 4 3 3 3
+1 9 +6 Dono epico 3 1 5 4 3 3 3 2
+20 +6 Privilegio della sottoclasse 3 1 5 4 3 3 3 2
+Caratteristica da Incantatore. Carisma è la caratteristica Guerriero Benedetto. Il paladino impara due trucchetti
+da incantatore per gli incantesimi da paladino. da chierico a scelta (consulta la sezione della classe del
+Focus da incantatore. Il paladino può usare un simbolo chierico per una lista dei suoi incantesimi). Sono consi­
+sacro come focus da incantatore per i suoi incantesimi gliati guida e fiamma sacra. I trucchetti scelti valgono come
+da paladino. incantesimi da paladino e la caratteristica da incantatore
+un livello da paladino, puoi sostituire uno dei trucchetti
+Il paladino è addestrato nell'uso delle armi, e per questo con un altro trucchetto da chierico.
+lunghe e i giavellotti. Il paladino può incanalare l'energia divina direttamente
+alle proprietà di padronanza per alabarde e mazzafrusti. Divino, descritto di seguito. Gli altri privilegi del paladino
+LIVE LLO 2 : P U N I Z I O N E DEL PALADINO
+parato. Inoltre, il paladino può lanciarlo senza consumare Il paladino può usare Incanalare Divinità due volte.
+alcuno slot incantesimo, ma deve completare un riposo Per quanto riguarda gli utilizzi consumati, ne recupera
+volta raggiunto il livello 11.
+LIVELLO 2 : STI LE DI C OM BATT I M E NTO
+Il paladino ottiene un talento Stile di Combattimento salvezza, la CD equivale alla CD del tiro salvezza sull'in­
+a tua scelta (vedi capitolo 5 per i talenti}. Tuttavia, invece cantesimo del privilegio Incantesimi di questa classe.
+di sceglierne uno tra quelli proposti, è possibile avvalersi Percezione del Divino. Come azione bonus, il paladino
+
+--- PDF page 136 hits ['paladino'] ---
+guerne la tipologia. Entro lo stesso raggio, il paladino
+LIVE LLO 3 : S OTTO CLASSE DEL PALADINO
+Il personaggio ottiene una sottoclasse del paladino
+classe del paladino i n favore d i u n ' a ltra.
+LIVELLO 1 0 : AU RA DI C O RAGGIO
+minati livelli da paladino. Per il resto della sua carriera,
+il personaggio ottiene tutti i privilegi della sottoclasse Il paladino e i suoi alleati sono immuni alla paura finché
+pari al suo livello da paladino attuale o a quelli inferiori. si trovano all'interno dell'Aura di Protezione. Se un alle­
+Il personaggio ottiene l'aumento dei punteggi di caratte­ LIVELLO 1 1 : C OLPI RADIOSI
+ristica (vedi capitolo 5) o un altro talento a scelta di cui I colpi del paladino ora possiedono poteri soprannaturali.
+mente all'8°, al 12° e al 16° livello da paladino. lizzando un'arma da mischia o un colpo senz'armi, questo
+LIVELLO 5 : ATTAC C O EXTRA
+il paladino può attaccare due volte anziché una. Quando il paladino usa Imposizione delle Mani su una
+Il paladino può richiedere l'aiuto di una cavalcatura spaventato o stordito. Per farlo, è necessario attingere
+Può lanciarlo una volta senza consumare uno slot i punti consumati non ripristinano i punti ferita della
+LIVELLO 1 8 : AMPLI A M ENTO DELL'AU RA
+LIVELLO 6 : AU RA DI PROTEZIONE L'Aura di Protezione del paladino è ora un'emanazione
+Il paladino sprigiona un'aura protettiva invisibile in una di 9 metri.
+Se è presente un altro paladino, le creature possono
+LIVELLO 9 : ABIURARE NE M I C I
+Come azione d i Magia, i l paladino può consumare uno
+
+--- PDF page 138 hits ['paladino'] ---
+L e sottoclassi del paladino sono specializzazioni che
+conferiscono dei privilegi a determinati livelli da paladino,
+presterà quello finale al livello 3, considerato come l'apice
+dell'addestramento di un paladino. Per alcuni personaggi
+con questa classe, la vera vita da paladino comincia solo
+dopo il livello 3 e il suddetto giuramento. Per altri, invece,
+Come azione di Magia, il paladino può consumare un uso
+LIVELLO 3 : INCANTE S I M I DEL GI URAMENTO
+L a magia del giuramento del paladino gli consente di
+avere sempre pronti determinati incantesimi. Una volta
+raggiunto un livello specificato nella tabella Incantesimi
+del Giuramento degli Antichi, gli incantesimi lì elencati
+saranno sempre considerati come preparati.
+Livello da
+paladino I ncantesimi
+3 Colpo intrappolante, parlare con gli animali
+5 Passo velato, bagliore lunare
+9 Crescita vegetale, protezione dall'energia
+1 3 Tempesta di ghiaccio, pelle di pietra
+1 7 Comunione con la natura, traslazione arborea
+
+--- PDF page 139 hits ['paladino'] ---
+La magia antica scorre così potente nel paladino da for­ e luce fioca per ulteriori 6 metri.
+indebolisce certi tipi di energia. Il paladino e i suoi alleati, azione richiesta). L'effetto termina se il paladino non ha
+LIVELLO 1 5 : SENTI N ELLA I M PERITURA DI D EVOZIONE
+Quando il paladino scende a O punti ferita e non viene La magia del giuramento del paladino gli consente di
+ucciso subito, può invece scendere a 1 punto ferita e otte­ avere sempre pronti determinati incantesimi. Una volta
+nerne un numero pari a tre volte il suo livello da paladino. raggiunto un livello specificato nella tabella Incantesimi
+Dopo aver usato questo privilegio, il personaggio non può del Giuramento di Devozione, gli incantesimi lì elencati
+riutilizzarlo prima di aver completato un riposo lungo. saranno sempre considerati come preparati.
+LIVELLO 2 0 : CAMPIONE DEGLI ANTIC H I
+Livello da
+Come azione bonus, il paladino può infondere l a sua
+paladino I ncantesimi
+9 Faro di speranza, dissolvi magie
+sibile ripristinarne l'uso consumando uno slot incantesimo
+di 5° livello (nessuna azione richiesta). 1 3 Libertà di movimento, guardiano della fede
+Incantesimi rapidi. Quando il paladino lancia un incan­ 1 7 Comunione, colpo infuocato
+lanciarlo come azione bonus. LIVELLO 7: AU RA DI DEVOZIONE
+Rigenerazione. All'inizio di ogni turno, il paladino recu­
+Il paladino e i suoi alleati non possono essere affascinati
+taggio ai tiri salvezza contro gli incantesimi e le opzioni
+di Incanalare Divinità del paladino.
+LIVELLO 1 5 : P U N I Z I O N E PROTETTIVA
+La punizione magica del paladino ora emana energia pro­
+Tieni fede agli ideali di giustizia e ordine tettiva. Ogni volta che utilizza punizione divina, il paladino
+Come azione bonus, il paladino può infondere la sua
+sibile ripristinarne l'uso consumando uno slot incantesimo
+di 5° livello (nessuna azione richiesta).
+Che le tue onorevoli gesta siano da esempio per gli altri. catore di Carisma più il bonus di competenza del paladino.
+LIVELLO 3 : ARMA C ON SAC RATA
+Quando il paladino effettua l 'azione di Attacco, può Sentinella sacra. Se costretto a effettuare dei tiri sal­
+consumare uno degli usi di Incanalare Divinità per infon­ vezza da un immondo o un non morto, il paladino dispone
+il paladino aggiunge il suo modificatore di Carisma ai
+13 6 CAPITOLO 3 I C L A S S I D E I P E R S O NAGGI
+
+--- PDF page 140 hits ['paladino'] ---
+LIVELLO 3 : ATLETA I M PAREGGIABILE
+Come azione bonus, il paladino può consumare un uso
+LIVELLO 3 : INCANTE S I M I DEL
+La magia del giuramento del paladino gli consente di
+avere sempre pronti determinati incantesimi. Una volta
+raggiunto un livello specificato nella tabella Incantesimi
+del Giuramento di Gloria, gli incantesimi lì elencati
+saranno sempre considerati come preparati.
+Livello da
+paladino Incantesimi
+3 Dardo tracciante, eroismo
+5 Caratteristica potenziata, arma magica
+9 Velocità, protezione dall'energia
+1 3 Compulsione, libertà di movimento
+1 7 Conoscenza delle leggende, presenza regale
+LIVELLO 3 : PUNIZIONE I S PI RATRIC E .
+Subito dopo aver lanciato punizione divina, i l paladino
+scelte, è pari a 2d8 il livello da paladino del
+LIVELLO 7: AU RA DI ALAC RITÀ
+La velocità del paladino aumenta di 3 metri.
+
+--- PDF page 141 hits ['paladino'] ---
+Il paladino può trasformare una mossa difensiva in un
+colpo repentino. Quando il paladino o una creatura nel
+Il bonus è pari al modificatore di Carisma del paladino
+di questa reazione il paladino può sferrare un attacco
+LIVELLO 2 0 : LEGGENDA VIVENTE
+Il paladino trae forza dalle leggende, vere o esagerate che
+slot incantesimo di 5° livello (nessuna azione richiesta).
+Carismatico. Il paladino è benedetto da una bellezza
+un attacco con un'arma e manca il bersaglio, il paladino
+il paladino può usare la sua reazione per ripetere il tiro
+LIVELLO 3 : I NCANTE S I M I DEL GI URAME NTO
+La magia del giuramento del paladino gli consente di
+avere sempre pronti determinati incantesimi. Una volta
+raggiunto un livello specificato nella tabella Incantesimi
+del Giuramento di Vendetta, gli incantesimi lì elencati
+saranno sempre considerati come preparati.
+
+--- PDF page 142 hits ['paladino'] ---
+Livello da
+paladino Incantesimi
+3 Anatema, marchio del cacciatore
+9 Velocità, protezione dall'energia
+1 3 Esilio, porta dimensionale
+1 7 Blocca mostri, scrutare
+Quando il paladino effettua l'azione di Attacco, può con­
+9 metri da sé (nessuna azione richiesta).
+per colpire, il paladino può effettuare una reazione per
+Come azione bonus, il paladino ottiene i benefici elencati
+ripristinarne l'uso consumando uno slot incantesimo
+di 5° livello (nessuna azione richiesta).
+Volo. Il paladino ottiene delle ali eteree sulla schiena,
+
+--- PDF page 144 hits ['ranger', 'incantesimi preparati'] ---
+TR ATTI D E L R A N G E R LIVELLO l : I NCANTE S I M I
+Caratteristiche Destrezza e Saggezza Il ranger h a imparato a incanalare l'essenza della natura
+relative al lancio degli incantesimi. Le informazioni sotto­
+stanti spiegano come applicare tali regole agli incantesimi
+Competenze Forza e Destrezza da ranger, elencati nella relativa lista degli incantesimi più
+Competenze Tre a scelta tra: Addestrare A n i m a l i , Slot incantesimo. La tabella Privilegi del ranger mostra
+nelle abilità gli slot incantesimo disponibili per i propri incantesimi di
+1° livello o superiore. Tutti gli slot incantesimo consumati
+Competenza Armi semplici e d a guerra Incantesimi preparati di 1° livello o superiore. Con questo
+privilegio, il personaggio prepara una lista di incantesimi
+Competenza Armatu re leggere e medie; scudi di 1° livello o superiore che può lanciare. Per iniziare, sce­
+nelle armature glie due incantesimi da ranger di 1° livello. Sono consigliati
+iniziale cuoio borchiato, scim itarra, spada Il numero di incantesimi nella lista aumenta man mano
+che il personaggio ottiene livelli da ranger, come mostrato
+nella colonna Incantesimi preparati della tabella Privilegi
+del ranger. Ogni volta che il numero cresce, il ranger deve
+dotazione da esploratore e 7 mo; scegliere altri incantesimi finché il numero sulla lista non
+ranger. Gli incantesimi scelti devono essere di un livello
+di cui possiede degli slot incantesimo. Per esempio, nel
+caso di un ranger di 5° livello, la sua lista di incantesimi
+verde delle foreste incontaminate e in vaste praterie, preparati può includere sei incantesimi da ranger di 1°
+L i ranger proteggono senza sosta la natura. Imparano e 2° livello in qualsiasi combinazione.
+a braccare il proprio bersaglio come farebbe un predatore, Se un altro privilegio gli fornisce incantesimi che sono
+muovendosi agilmente nelle terre selvagge e mimetizzan­ sempre preparati, questi non contano ai fini del numero
+dosi con l'ambiente circostante. di incantesimi preparabili con questo privilegio. Tuttavia,
+Grazie al loro legame con la natura, possono anche valgono comunque come incantesimi da ranger.
+lanciare incantesimi che ne incarnano i poteri primordiali. Cambiare gli incantesimi preparati. Quando completa
+I ranger affinano le proprie capacità e magie in modo da un riposo lungo, il ranger può sostituire un incantesimo
+e tiranni. degli slot.
+D I V E N TA R E UN RANGER . . . stica da incantatore usata per gli incantesimi da ranger.
+Focus da incantatore. Il ranger può usare un focus drui­
+dico per i suoi incantesimi da ranger.
+Ottiene tutti i tratti nella tabella Tratti del ranger.
+Ottiene i privilegi del ranger di 1° livello elencati nella LIVE LLO l : NE M I C O P R E S C E LTO
+tabella Privilegi del ranger. L'incantesimo marchio del cacciatore del ranger è sempre
+volte senza spendere alcuno slot incantesimo. I suoi uti­
+Ottiene i seguenti tratti dalla tabella Tratti del ranger: lizzi vengono ripristinati dopo aver completato un riposo
+ranger, oltre che competenza in armature leggere, tesimo aumenta al raggiungimento di determinati livelli
+medie e scudi. da ranger, come mostrato nella colonna Nemico Prescelto
+Ottiene i privilegi del ranger di 1° livello elencati nella della tabella Privilegi del ranger.
+tabella Privilegi del ranger. Per determinare il numero
+di slot incantesimo disponibili, vedi le regole multiclasse LIVE LLO l : PADRONANZA D'ARMI
+nel capitolo 2. Il ranger è addestrato nell'uso delle armi, e per questo
+Il ranger ottiene i seguenti privilegi di classe quando rag­
+tabella Privilegi del ranger.
+
+--- PDF page 145 hits ['druido', 'paladino', 'ranger'] ---
+-Slot incantesimo per livello
+Livello competenza Privilegi di classe prescelti preparati 2 3 4 s
+2 +2 Esploratore esperto, sti le d i com battimento 2 3 2
+3 +2 Sottoclasse del ra nger 2 4 3
+4 +2 Aumento dei pu nteggi d i ca ratteristica 2 5 3
+5 +3 Attacco extra 3 6 4 2
+6 +3 G i rovago 3 6 4 2
+7 +3 Privilegio della sottoclasse 3 7 4 3
+8 +3 Aumento dei pu nteggi di caratteristica 3 7 4 3
+9 +4 M aestria 4 9 4 3 2
+1 0 +4 I nsta ncabile 4 9 4 3 2
+1 1 +4 Privi legio d e l l a sottocl asse 4 1 0 4 3 3
+1 2 +4 Aumento dei pu nteggi d i caratteristica 4 1 0 4 3 3
+1 3 +5 Cacciatore I m placabile 5 1 1 4 3 3
+1 4 + 5 Velo d e l l a natu ra 5 1 1 4 3 3
+1 5 +5 Privi legio della sottocl asse 5 1 2 4 3 3 2
+1 6 +5 Aumento dei pu nteggi d i caratteristica 5 1 2 4 3 3 2
+1 7 +6 Precisione del cacciatore 6 1 4 4 3 3 3
+1 8 +6 Sensi feri n i 6 1 4 4 3 3 3
+1 9 + 6 D o n o epico 6 1 5 4 3 3 3 2
+20 +6 Sterminatore d i ne mici 6 1 5 4 3 3 3 2
+Grazie ai suoi tanti viaggi, il ranger ottiene i seguenti i privilegi della sottoclasse pari al suo livello da ranger
+Lingue. Il ranger conosce due lingue a scelta dal relativo
+LIVELLO 4 : AU M E NTO DEI PUNTEGGI
+Maestria. Il ranger può scegliere una delle competenze
+LIVELLO 2 : STI LE DI C OM BATT I M E NTO cui possiede i prerequisiti. Questo privilegio si ottiene
+Il ranger ottiene un talento Stile di Combattimento a scelta nuovamente all'8°, al 12° e al 16° livello da ranger.
+il paladino può attaccar.e due volte anziché una.
+Guerriero Druidico. Il ranger apprende due trucchetti
+da druido a scelta (vedi la sezione della classe del druido
+LIVELLO 6 : GIROVAGO
+per una lista dei relativi incantesimi). Sono consigliati
+La velocità del ranger aumenta di 3 metri, purché non
+guida e luce splendente. I trucchetti scelti valgono come
+incantesimi da ranger e la caratteristica da incantatore
+un livello da ranger, puoi sostituire uno dei trucchetti con LIVELLO 9 : M A E STRIA
+un altro trucchetto da druido.
+Il ranger può scegliere due delle competenze nelle abilità
+LIVE LLO 3 : S OTTO C LA S S E DEL RANGER in cui non possiede maestria, così da ottenerla.
+Il personaggio ottiene una sottoclasse del ranger a scelta. LIVELLO 1 0 : I N STANCABILE
+Le forze primordiali ora alimentano i viaggi del ranger,
+Punti ferita temporanei. Come azione di Magia, il ranger
+conferisce dei privilegi a determinati livelli da ranger.
+
+--- PDF page 146 hits ['ranger'] ---
+Diminuisci indebolimento. Quando il ranger completa
+un riposo breve, il suo livello di indebolimento, se presente,
+LIVELLO 1 3 : C AC C IATORE I MPLA CABILE
+Pur subendo danni, il ranger non interrompe la sua con­
+Il ranger invoca gli spiriti della natura per nascondersi magi­
+Il ranger ottiene vantaggio ai tiri per colpire contro
+Il legame con le forze della natura conferisce al ranger
+LIVELLO 2 0 : STE R M I NATORE DI NEM I C I Scopri trappole Divinazione
+In questa sezione si trova la lista degli incantesimi da
+ranger. Gli incantesimi sono ordinati prima per livello
+
+--- PDF page 147 hits ['ranger'] ---
+Le sottoclassi del ranger sono specializzazioni che confe­
+riscono dei privilegi a determinati livelli da ranger, come
+LIVELLO 3 : P R E DA DEL CAC C I ATORE
+Il ranger ottiene una delle seguenti opzioni di privilegio
+Sterminatore di colossi. La tenacia del ranger scoraggia
+LIVELLO 7: TATTI C H E D I F E N SIVE
+Il ranger ottiene una delle seguenti opzioni di privilegio
+Localizza creatura Divinazione e tiri per colpire effettuati contro il ranger durante il turno.
+Richiama elementale Evocazione C, M LIVELLO 1 1 : P R E DA DEL CAC C IATORE
+I N C A N T E S I M I DA R A N G E R D I 5 ° L I V E L L O Una volta per turno, quando il ranger infligge danni a una
+Faretra rapida Trasm utazione C , M LIVELLO 1 5 : D I F E SA D E L C AC C IATORE
+Traslazione arborea Evocazione e Quando il ranger subisce danni, può utilizzare una rea­
+
+--- PDF page 148 hits ['ranger'] ---
+Il ranger è ora in grado di tendere terrificanti
+ogni combattimento, la velocità del ranger
+il ranger può aggiungere il proprio modifica­
+Colpo terribile. Quando il ranger attacca
+Quando il ranger raggiunge un livello specificato nella
+tabella Incantesimi del Cacciatore delle Tenebre, gli incan­
+tesimi lì elencati sono considerati come preparati.
+Livello da ranger I ncantesimi
+3 Camuffare se stesso
+9 Paura
+1 3 Invisibilità superiore
+1 7 Sembrare
+LIVELLO 3 : VI STA D E LL' O M BRA
+18 metri. Se quando ottiene questo privilegio è già in pos­
+LIVELLO 7: M E NTE DI FERRO
+Il ranger ha perfezionato la sua capacità di resistere ai
+
+--- PDF page 149 hits ['ranger'] ---
+LIVELLO 1 1 : RAFFICA D E L CAC C IATORE
+Inoltre, quando il ranger usa l'effetto Colpo terribile del
+Colpo improvviso. Il ranger può effettuare un altro
+3 metri dal bersaglio devono superare un tiro salvezza su
+del ranger. In caso di fallimento, le creature colpite sono
+LIVELLO 1 5 : S C H I VATA DELL' O M BRA
+il ranger, questi può utilizzare una reazione per conferire
+Il ranger evoca magicamente una bestia primordiale
+Inoltre, è amichevole nei confronti del ranger e dei
+agisce durante il turno del ranger. Può muoversi e usare le
+Quando effettua l'azione di Attacco, il ranger può anche
+nell'ultima ora, come azione di Magia il ranger può toc­
+carla e consumare uno slot incantesimo. La bestia torna in
+Ogni volta che il ranger completa un riposo lungo, può
+
+--- PDF page 150 hits ['ranger'] ---
+CA 1 3 più il modificatore di Saggezza del ranger
+PF 4 + q uattro volte i l l ivel l o da ranger del personaggio
+da ranger del personaggio)
+ranger, portata d i 1 , 5 m etri Colpo: l d4 + 3 p i ù i l modifica­
+CA 1 3 più il modificatore di Saggezza del ranger
+PF 5 + ci n q u e volte i l livello d a ranger del personaggio
+d a ranger del personaggio)
+
+--- PDF page 151 hits ['ranger'] ---
+CA 1 3 più il modificatore di Saggezza del ranger Selva Fatata che lo ha trasformato, il ranger è avvolto
+PF 5 + cinque volte i l livello d a ranger del personaggio da un'aura mistica. A prescindere da come l'ha ottenuta,
+d a ranger del personaggio) mina i cuori degli oppressi e la sua abilità marziale suscita
+Il ranger può potenziare i colpi della sua arma con una
+GS Nessuno (PE O; BC pari a l bonus di com petenza del con un'arma, il ranger può infliggere ld4 danni psichici
+Quando il ranger raggiunge il livello 11, tali danni aggiun­
+Ogni volta che effettua una prova di Carisma, il ranger
+vale a l modificatore d i attacco del l ' i nca ntesi m o del ranger,
+gezza del ranger, d a n n i contu ndenti, perforanti o taglienti FATATO
+Quando il ranger raggiunge un livello specificato nella
+tabella Incantesimi del Viandante Fatato, gli incantesimi
+6 m etri i n l i nea retta verso i l bersagl io prima d i col p i rlo,
+lì elencati sono considerati come preparati.
+Livello da ranger Incantesimo
+3 Charme su persone
+LIVELLO 7: ADDE STRA M E NTO E C C E ZIONALE
+5 Passo velato
+Quando il ranger usa un'azione bonus per ordinare alla
+1 3 Porta dimensionale
+Il ranger possiede una benedizione fatata. Puoi scegliere
+LIVELLO 1 1 : FURIA B E STIALE narla casualmente.
+Quando il ranger ordina alla bestia primordiale di
+Inoltre, la prima volta che in ogni turno colpisce una M entre il ranger compie un ri poso breve o l u ngo,
+2 Al sorgere d e l l ' a l ba , fra i capel l i del ranger sboc­
+LIVELLO 1 5 : C ONDIVIDI I NCANTE S I M I
+3 I l ranger e m a n a u n leggero profu m o d i cannella,
+Quando il ranger lancia un incantesimo prendendo d i
+
+--- PDF page 152 hits ['ranger', 'stregone'] ---
+4 Quando nessuno la guard a d i retta mente, l'om bra
+del ranger i n izia a danzare.
+5 S u l l a testa del personaggio s p u ntano delle corna
+6 La pelle e i cape l l i del ra nger cambiano colore ogni
+La magia della Selva Fatata protegge la mente del ranger,
+dizioni, il ranger può usare una reazione per costringere
+del tiro salvezza sull'incantesimo del ranger. Se lo fallisce,
+il bersaglio è affascinato o spaventato (a scelta del ranger)
+Il ranger può lanciare richiama folletto senza usare una
+volta senza consumare uno slot incantesimo e recupera
+Ogni volta che lo stregone lancia l'incantesimo, può
+Il ranger può lanciare passo velato senza consumare uno
+slot incantesimo. Può lanciarlo un numero di volte pari al
+Inoltre, ogni volta che il ranger lancia passo velato, può
+del ranger.
+
+--- PDF page 154 hits ['stregone', 'incantesimi preparati'] ---
+Ottiene il Dado Vita dalla tabella Tratti dello stregone.
+Ottiene i privilegi dello stregone di 1° livello elencati
+nella tabella Privilegi dello stregone. Per determinare
+Dado Vita DG per ogni l ivel l o da stregone
+il numero di slot incantesimo disponibili, vedi le regole
+o Religione L o stregone ottiene i seguenti privilegi d i classe quando
+nelle armi nella tabella Privilegi dello stregone.
+Attingendo alla propria magia innata, l o stregone è i n
+Equipaggiamento A scelta tra A e B: (A) lancia, 2 pugnali, grado d i lanciare incantesimi. Consulta il capitolo 7 per
+iniziale focus arcano (crista l lo) , dotazione d a le regole relative al lancio degli incantesimi. Le infor-
+agli incantesimi da stregone, elencati nella relativa lista
+degli incantesimi più avanti nella descrizione della classe.
+Trucchetti. Il personaggio conosce quattro trucchetti
+da stregone a scelta. Sono consigliati luce, prestidigita-
+zione, stretta folgorante e stregoneria esplosiva. Quando lo
+stregone ottiene un livello, è possibile sostituire uno dei
+trucchetti di questo privilegio con un altro trucchetto
+Dopo aver raggiunto il 4° e il 10° livello da stregone,
+come mostrato nella colonna Trucchetti della tabella
+Privilegi dello stregone.
+Slot incantesimo. La tabella Privilegi dello stregone
+mostra gli slot incantesimo disponibili per i propri incan­
+tesimi di 1° livello o superiore. Tutti gli slot incantesimo
+Incantesimi preparati di 1° livello o superiore. Con questo
+privilegio, lo stregone prepara una lista di incantesimi di
+1° livello o superiore che può lanciare. Per iniziare, sceglie
+due incantesimi da stregone di 1° livello. Sono consigliati
+Il numero di incantesimi nella lista aumenta man
+mano che il personaggio ottiene livelli da stregone,
+come mostrato nella colonna Incantesimi preparati della
+tabella Privilegi dello stregone. Ogni volta che il numero
+cresce, lo stregone deve scegliere altri incantesimi finché
+nella tabella Privilegi dello stregone. Gli incantesimi scelti
+devono essere di un livello di cui possiede degli slot incan­
+tesimo. Per esempio, nel caso di uno stregone di 3° livello,
+la sua lista di incantesimi preparati può includere sei
+incantesimi da stregone di 1° e 2° livello in qualsiasi
+C O M E P E R SONAGGIO DI 1 ° LIVELLO combinazione.
+Ottiene tutti i tratti nella tabella Tratti dello stregone. Se un altro privilegio gli fornisce incantesimi che sono
+Ottiene i privilegi dello stregone di 1° livello elencati sempre preparati, questi non contano ai fini del numero
+nella tabella Privilegi dello stregone. di incantesimi preparabili con questo privilegio. Tuttavia,
+valgono comunque come incantesimi da stregone.
+Cambiare gli incantesimi preparati. Quando completa
+un riposo lungo, lo stregone può sostituire un incantesimo
+sulla propria lista con un altro incantesimo da stregone
+di cui possiede degli slot.
+
+--- PDF page 155 hits ['stregone'] ---
+-Slot incantesimo per livello
+Bonus di Punti Incantesimi
+Livello competenza Privilegi di classe stregoneria Trucchetti preparati l 2 3 4 5 6 7 8 9
+Stregoneria I n n ata
+2 +2 Fonte di magia, M etamagia 2 4 4 3
+3 +2 Sottoclasse d e l l o stregon e 3 4 6 4 2
+4 +2 Aumento dei pu nteggi 4 5 7 4 3
+5 +3 Ripristi no stregon esco 5 5 9 4 3 2
+6 +3 Privilegio d e l l a sottoclasse 6 5 1 0 4 3 3
+7 +3 Stregoneria incarnata 7 5 1 1 4 3 3
+8 +3 Aumento dei pu nteggi 8 5 1 2 4 3 3 2
+9 +4 9 5 1 4 4 3 3 3
+1 0 +4 M etamagia 1 0 6 1 5 4 3 3 3 2
+1 1 +4 1 1 6 1 6 4 3 3 3 2
+1 2 +4 Aumento dei pu nteggi 1 2 6 1 6 4 3 3 3 2
+1 3 +5 1 3 6 1 7 4 3 3 3 2
+1 4 +5 Privi legio della sottoclasse 1 4 6 1 7 4 3 3 3 2
+1 5 +5 1 5 6 1 8 4 3 3 3 2
+1 6 +5 Aumento dei pu nteggi 1 6 6 1 8 4 3 3 3 2
+1 7 +6 M etamagia 1 7 6 1 9 4 3 3 3 2
+1 8 +6 Privi legio della sottoclasse 1 8 6 20 4 3 3 3 3
+1 9 +6 Dono epico 1 9 6 21 4 3 3 3 3 2
+20 +6 Apoteosi a rcana 20 6 22 4 3 3 3 3 2 2
+da incantatore per gli incantesimi da stregone. magici.
+Focus du incantatore. Uno stregone può usare un focus Uno stregone parte con 2 punti stregoneria e ne ottiene
+arcano come focus da incantatore per i suoi incantesimi altri ai livelli superiori, come indicato nella colonna Punti
+da stregone. stregoneria nella tabella Privilegi dello stregone. Non può
+avere un numero di punti stregoneria superiore al numero
+LIVE LLO l: STREGONERIA I N NATA indicato nella tabella per il suo livello. Il personaggio
+Lo stregone è stato segnato in maniera indelebile da un recupera tutti i punti stregoneria spesi quando completa
+magico dormiente. Come azione bonus, può scatenarlo per È possibile sfruttare i punti stregoneria per alimentare
+1 minuto e ottenere i seguenti benefici per la sua durata: le opzioni sottostanti, oltre che altri privilegi che ne fanno
+Convertire gli slot incantesimo in punti stregoneria.
+simi da stregone aumenta di 1.
+Lo stregone può consumare uno slot incantesimo per
+Lo stregone ha vantaggio ai tiri per colpire degli incan­
+ottenere un numero di punti stregoneria pari al livello
+dello slot (nessuna azione richiesta).
+Il personaggio può utilizzare questo privilegio per due Creare slot incantesimo. Come azione bonus, lo stregone
+volte e recuperare tutti gli utilizzi spesi quando completa può trasformare i punti stregoneria non spesi in uno slot
+un riposo lungo. incantesimo. La tabella Creazione degli slot incantesimo
+indica il costo di creazione di uno slot di un determinato
+LIVELLO 2 : FONTE DI M AGIA
+livello, oltre che il livello da stregone minimo necessario
+Lo stregone può attingere alla fonte del potere magico per creare uno slot. Non è possibile creare slot incante­
+dentro di sé. Essa è rappresentata dai punti stregoneria, simo di livello superiore al 5°.
+
+--- PDF page 156 hits ['stregone'] ---
+Ogni slot incantesimo creato tramite questo privilegio Inoltre, mentre il privilegio Stregoneria Innata è attivo,
+svanisce quando lo stregone completa un riposo lungo. lo stregone può usare fino a due delle sue opzioni di Meta­
+Livello slot Costo punti Liv. stregone
+incantesimo stregoneria minimo
+2 2 È consigliato il Dono del viaggio dimensionale.
+2 3 3
+3 s s
+Quando il privilegio Stregoneria Innata è attivo, lo stre­
+4 6 7 gone può usare un'opzione di Metamagia a ogni turno
+s 7 9 senza dover consumare punti stregoneria.
+Poiché la magia è un'abilità innata dello stregone, quest'ul­ Per il privilegio di Metamagia dello stregone sono disponi­
+timo può alterare i suoi incantesimi secondo necessità, bili le seguenti opzioni, elencate in ordine alfabetico.
+zione della classe. Le opzioni selezionate possono essere Costo: 1 punto stregoneria
+utilizzate per modificare temporaneamente gli incantesimi Quando lo stregone lancia un incantesimo, può spendere
+lanciati. Per fare uso di un'opzione, è necessario consu­ 1 punto stregoneria per farlo senza utilizzare componenti
+mare il costo corrispondente in punti stregoneria. verbali, somatiche o materiali, fatta eccezione per le com­
+Lo stregone può usare soltanto un'opzione di Metama­ ponenti materiali consumate dall'incantesimo o il cui
+Ogni volta che il personaggio ottiene un livello da stre­ I NCANTE SIM O D I STANTE
+gone, è possibile sostituire una delle opzioni di Metamagia Costo: 1 punto stregoneria
+con una che ancora non conosce. Lo stregone ottiene due
+Quando lo stregone lancia un incantesimo che ha una
+ulteriori opzioni al 10° livello e altre due al 17° livello. gittata pari o superiore a 1,5 metri, può spendere 1 punto
+stregoneria per raddoppiarla. Se invece lancia un incante­
+Il personaggio ottiene u n a sottoclasse dello stregone
+stregoneria per aumentarla a 9 metri.
+Stregoneria Aberrante, Stregoneria Meccanica, Strego­
+Costo: 1 punto stregoneria
+neria Draconica e Stregoneria della Magia Selvaggia.
+Quando lo stregone lancia un incantesimo di durata pari
+o superiore a 1 minuto, può spendere 1 punto stregoneria
+dei privilegi a determinati livelli da stregone. Per il resto
+della sottoclasse pari al suo livello da stregone attuale
+LIVELLO 4 : AU M E NTO DEI PUNTEGGI
+Il personaggio ottiene l'aumento dei punteggi di caratte­ Costo: 2 punti stregoneria
+ristica (vedi capitolo 5) o un altro talento a scelta di cui Quando lo stregone lancia un incantesimo che obbliga
+mente all'8°, al 12° e al 16° livello da stregone. 2 punti stregoneria per infliggere svantaggio a un bersa­
+LIVELLO 5 : RIPRISTI NO STREGON E S C O
+Quando l o stregone completa un riposo breve, può INCANTE SIM O M I RATO
+recuperare i punti stregoneria consumati, ma non più Costo: 1 punto stregoneria
+di un numero pari a metà del proprio livello da stregone
+Se lo stregone effettua un tiro per colpire per un incante­
+simo e fallisce, può spendere 1 punto stregoneria per tirare
+Lo stregone può utilizzare Incantesimo mirato anche
+LIVELLO 7: STREGONERIA INCARNATA
+Se ha consumato tutti i suoi utilizzi di Stregoneria Innata,
+come azione bonus può spendere 2 punti stregoneria per
+
+--- PDF page 157 hits ['stregone'] ---
+Costo: 1 punto stregoneria
+Quando lo stregone tira per i danni di un incantesimo,
+può spendere 1 punto stregoneria per ripetere il tiro di
+Lo stregone può utilizzare Incantesimo potenziato
+Costo: 1 punto stregoneria
+Quando lo stregone lancia un incantesimo che obbliga
+Per farlo, spende 1 punto stregoneria e sceglie un numero
+Costo: 1 punto stregoneria
+Quando lo stregone produce un incantesimo lanciabile
+consumando uno slot di livello superiore per colpire un
+dere 1 punto stregoneria per aumentarne il livello effettivo
+Costo: 2 punti stregoneria
+Quando lo stregone lancia un incantesimo che ha un
+ha già lanciato un incantesimo di 1° livello o superiore nel
+simo di 1° livello o superiore in questo turno dopo aver
+Costo: 1 punto stregoneria
+Quando lo stregone lancia un incantesimo che infligge un
+1 punto stregoneria per cambiare il tipo di danno in un
+I n questa sezione s i trova l a lista degli incantesimi da
+stregone. Gli incantesimi sono ordinati prima per livello
+
+--- PDF page 158 hits ['stregone'] ---
+Stregoneria esplosiva I nvocazione Lama infuocata I nvocazione e
+
+--- PDF page 160 hits ['stregone', 'warlock'] ---
+L e sottoclassi dello stregone sono specializzazioni che
+conferiscono dei privilegi a determinati livelli da stregone,
+vengono descritte le seguenti sottoclassi: Stregoneria
+Aberrante, Stregoneria Meccanica, Stregoneria Draconica
+e Stregoneria della Magia Selvaggia.
+stregone, donandogli un potere psionico che può usare per
+Magari lo stregone è stato investito di Energia Psionica
+dello stregone ne è traboccante.
+Lo stregone può formare una connessione telepatica tra
+al modificatore di Carisma del warlock 1,5 (minimo di
+pari al livello da stregone e termina immediatamente se
+lo stregone è incapacitato, muore o se usa quest'abilità
+Quando lo stregone raggiunge un livello specificato nella
+tabella Incantesimi psionici, gli incantesimi lì elencati sono
+considerati come preparati.
+Livello da
+stregone I ncantesimi
+3 Braccia di Hadar, calmare emozioni,
+5 Fame di Hadar, inviare
+7 Tentacoli neri di Evard, evoca aberrazione
+9 Legame telepatico di Rary, telecinesi
+
+--- PDF page 161 hits ['stregone'] ---
+Lo stregone ottiene resistenza a i danni psichici e dispone
+LIVE LLO 6 : STREGONERIA PSIONICA
+Quando il personaggio lancia un incantesimo di 1° livello
+o superiore dalla lista del suo privilegio Incantesimi
+psionici, può farlo sia normalmente, spendendo uno slot
+incantesimo, sia spendendo un numero di punti stregone­
+ria pari al livello dell'incantesimo. Se lancia l'incantesimo
+usando punti stregoneria, questo non richiede componenti
+Lo stregone può scatenare l'orrida verità che cela dentro
+stregoneria per trasformare magicamente il proprio corpo
+per 10 minuti. Ogni punto stregoneria speso consente di
+Adattamento acquatico. Lo stregone ottiene una velocità
+Movimento invertebrato. Il corpo dello stregone, assieme
+Vedere l'invisibile. Lo stregone può vedere tutte le crea­
+Volo scintillante. Lo stregone ottiene una velocità di
+LIVELLO 1 8 : I M PLOSIONE D I STORC ENTE
+Lo stregone può scatenare un'anomalia che altera lo
+lo spazio abbandonato dallo stregone, terminando in
+stregoneria (nessuna azione richiesta).
+
+--- PDF page 162 hits ['stregone'] ---
+STREGONERIA DRACONICA LIVELLO 18: SEGUACE DRACONICO
+Lo stregone può lanciare Richiama Drago senza usare una
+La magia innata dello stregone proviene dal dono di un volta senza consumare uno slot incantesimo e recupera
+a lui o a un suo antenato, o magari l'ha assorbito da un Ogni volta che lo stregone lancia l'incantesimo, può
+LIVELLO 3: INCANTESIMI DRACONICI STREGONERIA DELLA MAGIA
+Quando lo stregone raggiunge un livello specificato nella SELVAGGIA
+tabella Incantesimi draconici, gli incantesimi lì elencati
+sono considerati come preparati. Scatena una magia caotica
+Le capacità magiche innate dello stregone provengono
+INCANTESIMI DRACONICI
+Livello da creazione. Lui o un suo antenato potrebbero essere stati
+stregone Incantesimi esposti a una forma più grezza di magia, magari tramite
+3 Alterare se stesso, globo cromatico, comando,
+5 Paura, volare essere una mera casualità senza una chiara origine. A pre­
+7 Occhio arcano, charme sui mostri scindere da come l'ha ottenuta, essa arde nel profondo
+9 Conoscenza delle leggende, evoca drago
+LIVELLO 3: IMPULSO DI MAGIA SELVAGGIA
+LIVELLO 3: RESILIENZA DRACONICA
+Gli incantesimi dello stregone possono scatenare impulsi
+La magia nel corpo dello stregone fa sì che il suo corpo improvvisi di magia incontrollata. Una volta per turno
+ferita massimi del personaggio salgono di 3 e aumentano tesimo da stregone con uno slot incantesimo. Se il risul­
+di nuovo di 1 ogni volta che acquisisce un livello da tato è 20, bisogna tirare sulla tabella Impulso di magia
+stregone. selvaggia per creare un effetto magico.
+LIVELLO 3: ONDE DI CAOS
+Lo stregone può manipolare il caos stesso per ottenere
+LIVELLO 6: AFFINITÀ ELEMENTALE
+Grazie alla sua magia draconica, lo stregone ha affinità Una volta fatto, prima di poter riutilizzare questo privile­
+con un tipo di danno associato ai draghi e può sceglierne gio deve lanciare un incantesimo da stregone con uno slot
+o veleno. Se lancia un incantesimo da Stregone con uno slot
+Lo stregone è dotato di resistenza al tipo di danno sele­ incantesimo prima di completare un riposo lungo, tira
+LIVELLO 6: PIEGARE LA FORTUNA
+Lo stregone è in grado di plasmare il fato sfruttando
+LIVELLO 14: ALI DI DRAGO
+Come azione bonus, lo stregone può far apparire delle ali suo campo visivo tira il d20 per effettuare una prova,
+draconiche sulla sua schiena per 1 ora o finché non le fa lo stregone può utilizzare una reazione e spendere 1 punto
+scomparire (nessuna azione richiesta). Per tutta la durata stregoneria per tirare ld4 e applicare il risultato come
+LIVELLO 14: CAOS CONTROLLATO
+lungo; può ignorare questo limite spendendo 3 punti Lo stregone ottiene un certo controllo sui suoi impulsi
+stregoneria (nessuna azione richiesta). di magia selvaggia. Ogni volta che effettua un tiro sulla
+
+--- PDF page 163 hits ['stregone'] ---
+LIVELLO 1 8 : I M PULSI D OMATI
+Subito dopo che lo stregone lancia un incantesimo con uno
+slot, può creare un effetto a scelta dalla tabella Impulsi
+1 m i n uto. Tira l d4 per determ i n a re i l tipo d i
+2 appare un flumph; con 3 appare un monodrone
+09-1 2 Per i l prossi m o m i n uto, lo stregone ripristi na
+5 dei suoi pu nti ferita a ogn i turno.
+1 3-1 6 Per i l prossimo m i n uto, le creatu re h a n n o
+i n ca ntesi m o lanciato d a l l o stregone che richiede
+1 7-20 Lo stregon e s u bisce un effetto della d u rata d i
+1 m i n uto, salvo d iversa mente i n d icato. Tira l d 8
+p e r d ete rm i n a re l 'effetto: c o n 1 lo stregone
+4 urla i nvece di parlare norma l mente; con 5 appa­
+25-28 Lo stregone viene trasportato s u l Piano Astrale
+
+--- PDF page 164 hits ['stregone'] ---
+5 7-60 Lo stregon e può lanciare un i ncantesi m o
+37-40 Lo stregone d iventa u n a pianta in vaso fi n o c a s u a l e . Se l ' i ncantesi m o dovesse normalmente
+45-48 Lo stregone e altre tre creatu re a scelta entro
+9 metri da sé sono i nvisi b i l i per l m i nuto.
+lo stregone d iventa u n a capra (vedi append ice B);
+
+--- PDF page 165 hits ['stregone'] ---
+non è indossato o trasportato d a u n 'altra crea­ stregone: è un potere proveniente da Mechanus o da un
+d a fuoco. perfetta efficienza meccanica. Lo stregone (o qualche
+69-72 Lo stregon e è spaventato fino a l term i n e del suo ne siano le origini, lo stregone ritiene il potere dell'ordine,
+73-76 Lo stregon e si teletrasporta di un massimo LIVELLO 3 : I NCANTE S I M I M E C CANICI
+Quando lo stregone raggiunge un livello specificato nella
+d i vedere. tabella Incantesimi meccanici, gli incantesimi lì elencati
+77-80 U n a creat u ra casuale entro 18 m etri d a l l o stre­ sono considerati come preparati.
+l uce i ntensa i n u n raggio d i 9 metri. Q u a l s i a s i Livello da
+creatura che term i n i i l suo turno entro 1 , 5 m etri stregone Incantesimi
+9 Ristorare superiore, muro di forza
+gone lancia i suoi incantesimi.
+93-96 Lo stregone e tutte le creatu re entro 9 metri da
+2 Le lancette d i u n orologio si m u ovono nei
+lo stregon e recu pera lo slot i n cantes i m o speso
+recu pera lo slot i n ca ntesi m o s peso d i live l l o più 4 Il suo corpo si ricopre d i figure geometriche
+stregoneria spesi; con 6 si attivano s i m u ltanea­ 5 Il suo focus d a incantatore ass u m e temporanea­
+6 Lo stregone e i bersagl i della sua magia sentono
+LIVELLO 3 : RIPRISTINO DELL' E QU I LI BRIO
+La connessione dello stregone con un piano di assoluto
+Quando una creatura nel raggio di 9 metri che lo stregone
+
+--- PDF page 166 hits ['stregone'] ---
+di vantaggio o svantaggio, lo stregone può usare la sua
+Lo stregone può utilizzare la grande equazione dell'esi­
+da 1 a 5 punti stregoneria per creare una barriera magica
+di punti stregoneria spesi per crearla. Quando la crea­
+La barriera dura finché lo stregone non completa
+LIVELLO 14 : TRANCE DELL' O R D I N E
+L o stregone ottiene l'abilità d i allineare l a propria
+stregoneria (nessuna azione richiesta).
+LIVELLO 1 8 : C AVALLERIA M E C CANICA
+Lo stregone evoca momentaneamente spiriti dell'ordine
+con spigolo di 9 metri originato dallo stregone. Gli spiriti
+stregone. Sono intangibili e invulnerabili, e generano
+può ignorare questo limite spendendo 7 punti stregoneria
+ferita, divisi a scelta dello stregone tra qualsiasi creatura
+Dissoluzione. Qualsiasi incantesimo di 6° livello
+stregone all'interno del cubo termina immediatamente.
+
+--- PDF page 168 hits ['warlock', 'incantesimi preparati'] ---
+TRATTI DEL WARLOCK PRIVILEGI DI CLASSE DEL WARLOCK
+Caratteristiche Carisma Il warlock ottiene i seguenti privilegi di classe quando
+Dado Vita D8 per ogni livello da warlock nella tabella Privilegi del warlock.
+Competenze Saggezza e Carisma LIVELLO l: MAGIA DEL PATTO
+Attraverso una cerimonia occulta, il warlock ha stretto un
+la capacità di lanciare incantesimi. Consulta il capitolo 7
+per le regole relative al lancio degli incantesimi. Le infor­
+Competenza Armature leggere agli incantesimi da warlock, elencati nella relativa lista
+nelle armature degli incantesimi più avanti nella descrizione della classe.
+Equipaggiamento A scelta tra A e B: (A) armatura Trucchetti. Il warlock conosce due trucchetti a scelta.
+arcano (globo), libro (scienze Quando il warlock ottiene un livello, è possibile sostituire
+uno dei trucchetti di questo privilegio con un altro truc­
+Dopo aver raggiunto il 4 ° e il 10° livello da warlock,
+mostrato nella colonna Trucchetti della tabella Privilegi
+L WARLOCK ANELANO ALLA CONOSCENZA CHE del warlock.
+giace nascosta nel tessuto del multiverso. Spesso Slot incantesimo. La tabella Privilegi del warlock
+iniziano la loro ricerca di potere magico leggendo mostra quanti slot incantesimo sono a disposizione del
+tomi proibiti o cimentandosi in evocazioni di esseri personaggio per lanciare incantesimi da warlock dal 1°
+extraplanari, o nell'esplorazione di luoghi dove costoro al 5 ° livello. La tabella mostra anche il livello di tali slot
+esercitano una forte influenza. In ogni caso, si ritrovano (tutti dello stesso livello). Il warlock recupera tutti gli slot
+come angeli, signori fatati, demoni, diavoli, megere ed Per esempio, se il warlock è di 5° livello, possiede due
+entità aliene del Reame Remoto, questi personaggi sfrut­ slot incantesimo di 3 ° livello. Per lanciare l'incantesimo
+tano i segreti arcani per amplificare le proprie capacità. di 1° livello dardo stregato, deve consumare uno di questi
+I warlock considerano i loro patroni come delle risorse slot e lanciarlo come un incantesimo di 3 ° livello.
+o un mezzo per ottenere potere magico. Alcuni rispettano, Incantesimi preparati di 1° livello o superiore. Con questo
+venerano o amano i propri patroni, mentre altri li servono privilegio, il personaggio prepara una lista di incantesimi
+con riluttanza. Altri ancora tentano invece di ostacolarli di 1 ° livello o superiore che può lanciare. Per iniziare,
+sfruttando quello stesso potere che gli è stato concesso. sceglie due incantesimi da warlock di 1° livello. Sono
+un warlock non può essere placata con il banale studio. Il numero di incantesimi nella lista aumenta man
+La maggior parte di loro trascorre i propri giorni perse­ mano che il personaggio ottiene livelli da warlock, come
+guendo un potere e una conoscenza maggiori che, in molti mostrato nella colonna Incantesimi preparati della tabella
+casi, li spinge a partire all'avventura. Privilegi del warlock. Ogni volta che il numero cresce, il
+warlock deve scegliere altri incantesimi finché il numero
+DIVENTARE UN WARLOCK ...
+Privilegi del warlock. Ognuno di questi incantesimi deve
+COME PERSONAGGIO DI 1° LIVELLO
+appartenere a un livello pari o inferiore al livello dello slot
+relativo al livello attuale del personaggio e indicato nella
+warlock.
+Ottiene i privilegi del warlock di 1 ° livello elencati nella s 6 u ° a l i t v a e b ll e o ll , a o . t P ti e e r n e e s u em n p n i u o o , v q o u a in n c d a o n i t l e w si a m r o lo d ck i u r n ag li g v iu el n lo g e d i a l l
+tabella Privilegi del warlock.
+COME PERSONAGGIO MULTICLASSE Se un altro privilegio gli fornisce incantesimi che sono
+sempre preparati, questi non contano ai fini del numero
+Ottiene i seguenti tratti dalla tabella Tratti del warlock:
+di incantesimi preparabili con questo privilegio. Tuttavia,
+Ottiene i privilegi del warlock di 1° livello elencati nella valgono comunque come incantesimi da warlock.
+Cambiare gli incantesimi preparati. Quando il warlock
+tabella Privilegi del warlock. Per determinare il numero
+ottiene un livello, può sostituire un incantesimo della lista
+di slot incantesimo disponibili, vedi le regole multiclasse
+con un altro incantesimo da warlock di livello adeguato.
+
+--- PDF page 169 hits ['warlock'] ---
+PRIVILEGI DEL WARLOCK
+Bonus di Suppliche Incantesimi Slot Livello
+Livello competenza Privilegi di classe occulte Trucchetti preparati incantesimo slot
+2 +2 Scaltrezza magica 3 2 3 2
+3 +2 Sottoclasse del warlock 3 2 4 2 2
+4 +2 Aumento dei punteggi di caratteristica 3 3 5 2 2
+5 +3 5 3 6 2 3
+6 +3 Privilegio della sottoclasse 5 3 7 2 3
+7 +3 6 3 8 2 4
+8 +3 Aumento dei punteggi di caratteristica 6 3 9 2 4
+9 +4 Contatta patrono 7 3 10 2 5
+10 +4 Privilegio della sottoclasse 7 4 10 2 5
+11 +4 Arcanum Mistico (incantesimo di 6° livello) 7 4 11 3 5
+12 +4 Aumento dei punteggi di caratteristica 8 4 11 3 5
+13 +5 Arcanum Mistico (incantesimo di 7° livello) 8 4 12 3 5
+14 +5 Privilegio della sottoclasse 8 4 12 3 5
+15 +5 Arcanum Mistico (incantesimo di 8° livello) 9 4 13 3 5
+16 +5 Aumento dei punteggi di caratteristica 9 4 13 3 5
+17 +6 Arcanum Mistico (incantesimo di 9° livello) 9 4 14 4 5
+18 +6 10 4 14 4 5
+19 +6 Dono epico 10 4 15 4 5
+20 +6 Maestro dell'occulto 10 4 15 4 5
+Caratteristica da Incantatore. La caratteristica da incan­ LIVELLO 2: SCALTREZZA MAGICA
+tatore per gli incantesimi da warlock è il Carisma. Il warlock può eseguire un rito esoterico per 1 minuto.
+Focus da incantatore. Un warlock può usare un focus Dopo che lo ha portato a termine, recupera gli slot incan­
+arcano come focus da incantatore per i suoi incantesimi tesimo spesi di Magia del Patto, ma non più di un numero
+da warlock. pari a metà del loro massimo (arrotondando per eccesso).
+LIVELLO l: SUPPLICHE OCCULTE
+Il warlock ha scoperto le Suppliche Occulte, ovvero
+frammenti di conoscenze proibite che gli conferiscono LIVELLO 3: SOTTOCLASSE DEL WARLOCK
+persistenti doti magiche o altre verità nascoste, tra cui la Il personaggio ottiene una sottoclasse del warlock a scelta.
+deve essere soddisfatto affinché venga appresa con suc­ da warlock. Per il resto della sua carriera, il personaggio
+cesso. Per esempio, se la supplica richiede un warlock di ottiene tutti i privilegi della sottoclasse pari al suo livello
+5° livello o superiore, è possibile farne uso solo una volta da warlock attuale o a quelli inferiori.
+raggiunto il livello indicato.
+Sostituire e ottenere suppliche. Quando il warlock sale LIVELLO 4: AUMENTO DEI PUNTEGGI
+di livello, è possibile sostituire una delle sue suppliche DI CARATTERISTICA
+Quando il warlock raggiunge livelli superiori, ottiene mente all'8°, al 12° e al 16° livello da warlock.
+Suppliche nella tabella Privilegi del warlock.
+
+--- PDF page 170 hits ['warlock'] ---
+LIVELLO 9 : C ONTATTA PATRONO D E F LAGRAZIONE AGO N I Z ZANTE
+In passato, il warlock contattava il proprio patrono attra­ Prerequisito: warlock di 2 ° livello o superiore, un trucchetto
+verso degli intermediari. Invece, ora è in grado di farlo da warlock che infligge danni
+Il warlock sceglie uno dei suoi trucchetti che infligge
+sempre preparato. Con questo privilegio, il warlock può
+lanciare l'incantesimo senza consumare uno slot, in modo
+LIVELLO 1 1 : ARCANUM M I STICO
+Prerequisito: warlock di 2 ° livello o superiore, un trucchetto
+Il patrono del warlock gli rivela un segreto magico noto
+da warlock che infligge danni con un tiro per colpire
+incantesimo da warlock di 6° livello a scelta. Il warlock sceglie uno dei suoi trucchetti conosciuti che
+Il warlock può lanciare l'arcanum una volta senza
+spendere alcuno slot incantesimo, ma deve completare
+Come mostrato nella tabella Privilegi del warlock, il per­
+sonaggio ottiene un altro incantesimo da warlock a scelta
+(incantesimo di 7° livello), 15 (incantesimo di 8° livello)
+e 17 (incantesimo di 9° livello). Recupera tutti gli utilizzi
+Prerequisito: warlock di 5° livello o superiore
+lungo. Il warlock può respirare sott'acqua e ottenere una velocità
+Ogni volta che il personaggio ottiene un livello da war­ di nuoto pari alla sua velocità.
+lock, è possibile sostituire uno degli incantesimi arcanum Inoltre, può lanciare respirare sott'acqua senza consu­
+con un altro incantesimo da warlock dello stesso livello. mare uno slot incantesimo. Per riutilizzare tale abilità
+LIVELLO 1 9 : D ONO E P I C O
+o un altro talento a scelta di cui possiede i prerequisiti. Prerequisito: warlock di 9° livello o superiore, supplica del
+Quando il warlock fa apparire il Libro delle Ombre, al suo
+LIVELLO 2 0 : MAE STRO DELL' O C C U LTO
+Quando il warlock usa il suo privilegio Scaltrezza Magica,
+recupera tutti gli slot incantesimo spesi di Magia del Patto.
+il modificatore di Carisma del warlock (minimo un nome).
+ARMATURA DELLE O M B R E ficio finché il warlock non completa un riposo lungo.
+Il warlock può lanciare armatura magica s u se stesso senza Come azione di Magia, il warlock può cancellare magi­
+spendere uno slot incantesimo. camente un nome dalla pagina toccandolo.
+Prerequisito: warlock di 2 ° livello o superiore Prerequisito: Warlock di 5° livello o superiore, supplica del
+Il warlock può lanciare salto su se stesso senza spendere Patto della catena
+uno slot incantesimo. Quando il warlock lancia trovafamiglio, infonde il famiglia
+Prerequisito: warlock di 2 ° livello o superiore Volo o nuoto. Il famiglia ottiene una velocità di volo
+Un'antica entità ha conferito dei frammenti di conoscenza o una velocità di nuoto (a scelta del warlock) di 12 metri.
+al warlock, consentendogli di ottenere un talento della Attacco rapido. Come azione bonus, il warlock può
+
+--- PDF page 171 hits ['warlock'] ---
+CD tiro salvezza dell'incantesimo del warlock. Se il fami­ Trucchetti e rituali. Quando il libro appare, il warlock
+glio costringe una creatura a effettuare un tiro salvezza, sceglie tre trucchetti e due incantesimi di 1° livello con
+questo usa la CD del tiro salvezza dell'incantesimo del il descrittore rituale. Gli incantesimi possono pro�enire
+warlock. dalla relativa lista di qualunque classe e devono essere
+Resistenza. Quando il famiglio subisce danni, il warlock incantesimi che il personaggio non ha già preparato.
+può usare la sua reazione per conferirgli resistenza contro Finché il libro rimarrà con il warlock, gli incantesimi scelti
+quel danno. sono considerati come preparati e valgono come incante­
+simi da warlock.
+Focus da incantatore. Il warlock può usare il libro come
+Prerequisito: warlock di 5° livello o superiore, supplica del focus da incantatore.
+Il warlock ottiene il privilegio Attacco Extra solo per
+Il warlock impara l 'incantesimo trovafamiglio e può
+lanciarlo come azione di Magia senza spendere uno slot
+Quando il warlock lancia l'incantesimo, può scegliere
+Prerequisito: warlock di 12° livello o superiore, supplica Lama speciali seguenti: Imp, pseudodrago, quasit, scheletro,
+Inoltre, quando effettua l 'azione di Attacco, il warlock
+Prerequisito: warlock di 2 ° livello o superiore, un trucchetto
+da warlock che infligge danni
+Il warlock sceglie uno dei suoi trucchetti che infligge danni PATTO DE LLA LAMA
+e ha una gittata di 3 metri o superiore. Quando l'incante­ Come azione bonus, il warlock può evocare un'arma del
+ogni livello da warlock. da guerra a scelta con cui ha un legame. In alternativa,
+diverso che ne soddisfi i prerequisiti. qualcun altro è in sintonia o già legata a un altro warlock.
+Prerequisito: warlock di 5° livello o superiore Ogni volta che attacca con l'arma con cui ha un legame,
+Il warlock può lanciare alterare se stesso senza spendere al posto di Forza o Destrezza il warlock può usare il suo
+uno slot incantesimo. modificatore di Carisma per i tiri per colpire e per i danni.
+Prerequisito: warlock di 2 ° livello o superiore Il legame termina una volta riutilizzato il privilegio
+Il warlock può lanciare camuffare se stesso senza spendere
+uno slot incantesimo.
+Il warlock dispone di vantaggio ai tiri salvezza su Costitu­
+Prerequisito: warlock di 5° livello o superiore, supplica del
+Una volta per turno, quando il warlock colpisce una
+Prerequisito: warlock di 5° livello o superiore creatura con l'arma del patto, può spendere uno slot
+Il warlock può lanciare levitazione su se stesso senza spen­ incantesimo della Magia del Patto per infliggere ld8 danni
+dere uno slot incantesimo. da forza extra al bersaglio, più ld8 aggiuntivo per ogni
+livello dello slot. Inoltre, se l'avversario è di taglia Enorme
+Mettendo insieme dei brandelli di tenebra, il warlock è in
+completato un riposo breve o lungo. Questo Libro delle Prerequisito: warlock di 5° livello o superiore
+Ombre (di cui puoi scegliere l'aspetto) contiene magia Come azione bonus, il warlock può toccare una creatura
+occulta accessibile solo al warlock e conferisce i benefici consenziente e percepire il mondo attraverso i suoi sensi
+un altro libro o se il warlock muore, il libro sparisce. atura si trova sullo stesso piano di esistenza del warlock,
+
+--- PDF page 172 hits ['warlock'] ---
+legame si interrompe. I n questa sezione si trova l a lista degli incantesimi da
+Mentre il warlock utilizza i sensi dell'altra creatura per warlock. Gli incantesimi sono ordinati prima per livello
+entro 18 metri da tale creatura, può lanciare incantesimi Speciale, C significa che l'incantesimo richiede concen­
+Prerequisito: Warlock di 9° livello o superiore, supplica del
+Una volta per turno, quando il warlock colpisce una crea­
+Prerequisito: warlock di 7° livello o superiore
+Il warlock può lanciare parlare con i morti senza spendere
+uno slot incantesimo. Rintocco dei morti N ecromanzia
+Prerequisito: warlock di 5° livello o superiore
+Mentre il warlock è in un'area di oscurità o luce fioca,
+può lanciare invisibilità su di sé senza spendere uno slot Tocco gelido N ecromanzia
+Prerequisito: warlock d i2 ° livello o superiore
+Il warlock può lanciare vita falsata su se stesso senza spen­ Anatema Ammaliamento e
+dere uno slot incantesimo. Quando l'incantesimo viene Armatura di Agathys Abi u razione
+Prerequisito: warlock di 9° livello o superiore
+Il warlock può lanciare occhio arcano senza spendere uno
+slot incantesimo. Intimorire infernale I nvocazione
+Prerequisito: warlock di 2° livello o superiore
+Il warlock può lanciare immagine silenziosa senza spendere
+uno slot incantesimo.
+Prerequisito: warlock di 2 ° livello o superiore
+Il warlock può vedere normalmente con luce fioca e oscu­
+Prerequisito: warlock di 15° livello o superiore
+Il warlock ottiene vista pura con un raggio di 9 metri. •
+
+--- PDF page 174 hits ['warlock'] ---
+Le sottoclassi del warlock sono specializzazioni che
+conferiscono dei privilegi a determinati livelli da warlock,
+Grazie al patto stretto, il warlock attinge i suoi poteri dai
+LIVELLO 3 : INCANTE S I M I C E L E STIALI
+La magia del patrono consente al warlock di avere sem­
+pre pronti determinati incantesimi. Una volta raggiunto
+un livello specificato nella tabella Incantesimi celestiali,
+gli incantesimi lì elencati saranno sempre considerati
+come preparati.
+Livello da
+warlock Incantesimi
+3 Aiuto, cura ferite, dardo tracciante,
+5 Luce diurna, rinascita
+7 Guardiano della fede, muro di fuoco
+9 Ristorare superiore, richiama celestiale
+Il warlock ottiene la capacità di incanalare energia cele­
+equivale a 1 più il livello da warlock del personaggio.
+Come azione bonus, il warlock può guarire se stesso
+ficatore di Carisma (minimo di un dado) del warlock.
+LIVELLO 6 : ANIMA RADIOSA
+Grazie al legame con il patrono, il warlock è in grado
+
+--- PDF page 175 hits ['warlock'] ---
+LIVELLO 10: RESILIENZA CELESTIALE LIVELLO 14: VENDETTA INCANDESCENTE
+Il warlock ottiene punti ferita temporanei ogni volta che Quando il warlock o un suo alleato entro 18 metri da
+corrispondono al livello da warlock del personaggio più I punti ferita della creatura verranno poi ripristinati
+vedere e far ottenere loro una quantità di punti ferita del warlock entro 9 metri da quella creatura subisce
+temporanei pari a metà del suo livello da warlock, più danni radiosi pari a 2d8 più il modificatore di Carisma
+Il warlock sceglie questa sottoclasse dopo aver stipulato
+essere del tutto indifferente all'esistenza del warlock.
+LIVELLO 3: INCANTESIMI DEL GRANDE
+La magia del patrono consente al warlock di avere sempre
+pronti determinati incantesimi. Una volta raggiunto un
+livello specificato nella tabella Incantesimi del Grande
+Antico, gli incantesimi lì elencati saranno sempre conside­
+rati come preparati.
+INCANTESIMI DEL GRANDE ANTICO
+Livello da
+warlock Incantesimi
+3 Individuazione dei pensieri, sussurri dissonanti,
+5 Chiaroveggenza.fame di Hadar
+7 Confusione, evoca aberrazione
+9 Modificare memoria, telecinesi
+LIVELLO 3: INCANTESIMI PSICHICI
+Quando il warlock lancia un incantesimo che infligge
+LIVELLO 3: MENTE RISVEGLIATA
+Il warlock può formare una connessione telepatica tra

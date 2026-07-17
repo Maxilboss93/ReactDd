@@ -1,0 +1,624 @@
+{
+  "id": "pg_004",
+  "name": "Jack, The Gull",
+  "level": 2,
+  "race": "Tiefling Ctonio",
+  "background": "Ciarlatano",
+  "alignment": "Da decidere",
+  "concept": "Pirata truffatore ispirato a Jack Sparrow",
+  "classes": [
+    {
+      "name": "Bardo",
+      "level": 1
+    },
+    {
+      "name": "Ladro",
+      "level": 1
+    }
+  ],
+  "combat": {
+    "hp": {
+      "current": 15,
+      "max": 15,
+      "temp": 0
+    },
+    "ac": 14,
+    "speed": 9,
+    "initiativeBonus": 3,
+    "hitDice": {
+      "current": 2,
+      "max": 2,
+      "type": "d8",
+      "byType": {
+        "d8": 2
+      }
+    }
+  },
+  "abilities": {
+    "str": 8,
+    "dex": 16,
+    "con": 12,
+    "int": 13,
+    "wis": 10,
+    "cha": 16
+  },
+  "savingThrows": {
+    "str": false,
+    "dex": true,
+    "con": false,
+    "int": false,
+    "wis": false,
+    "cha": true
+  },
+  "skills": [
+    {
+      "id": "acrobatics",
+      "label": "Acrobazia",
+      "ability": "dex",
+      "proficient": true
+    },
+    {
+      "id": "athletics",
+      "label": "Atletica",
+      "ability": "str",
+      "proficient": true
+    },
+    {
+      "id": "sleight",
+      "label": "Rapidita di Mano",
+      "ability": "dex",
+      "proficient": true,
+      "expertise": true
+    },
+    {
+      "id": "stealth",
+      "label": "Furtivita",
+      "ability": "dex",
+      "proficient": true
+    },
+    {
+      "id": "arcana",
+      "label": "Arcano",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "history",
+      "label": "Storia",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "investigation",
+      "label": "Indagare",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "nature",
+      "label": "Natura",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "religion",
+      "label": "Religione",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "animal",
+      "label": "Addestrare Animali",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "insight",
+      "label": "Intuizione",
+      "ability": "wis",
+      "proficient": true
+    },
+    {
+      "id": "medicine",
+      "label": "Medicina",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "perception",
+      "label": "Percezione",
+      "ability": "wis",
+      "proficient": true
+    },
+    {
+      "id": "survival",
+      "label": "Sopravvivenza",
+      "ability": "wis",
+      "proficient": true
+    },
+    {
+      "id": "deception",
+      "label": "Inganno",
+      "ability": "cha",
+      "proficient": true,
+      "expertise": true
+    },
+    {
+      "id": "intimidation",
+      "label": "Intimidire",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "performance",
+      "label": "Intrattenere",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "persuasion",
+      "label": "Persuasione",
+      "ability": "cha",
+      "proficient": true
+    }
+  ],
+  "resources": [
+    {
+      "id": "bardic_inspiration",
+      "label": "Ispirazione Bardica",
+      "current": 3,
+      "max": 3,
+      "resetOn": "long_rest",
+      "category": "class"
+    }
+  ],
+  "feats": [
+    {
+      "id": "abile",
+      "name": "Abile",
+      "source": "Background",
+      "level": 1,
+      "choices": {
+        "skills": [
+          "Furtivita",
+          "Percezione",
+          "Intuizione"
+        ]
+      }
+    }
+  ],
+  "spellcasting": {
+    "ability": "cha",
+    "spellSaveDc": 13,
+    "spellAttackBonus": 5,
+    "preparedCount": 4,
+    "slots": [
+      {
+        "id": "bard_slot_1",
+        "level": 1,
+        "label": "Slot livello 1",
+        "current": 2,
+        "max": 2,
+        "resetOn": "long_rest"
+      }
+    ],
+    "spells": [
+      {
+        "id": "beffa-crudele",
+        "name": "Beffa Crudele",
+        "level": 0,
+        "school": "Ammaliamento",
+        "source": "Bardo",
+        "concentration": false,
+        "prepared": true
+      },
+      {
+        "id": "amicizia",
+        "name": "Amicizia",
+        "level": 0,
+        "school": "Ammaliamento",
+        "source": "Bardo",
+        "concentration": true,
+        "prepared": true
+      },
+      {
+        "id": "tocco-gelido",
+        "name": "Tocco Gelido",
+        "level": 0,
+        "school": "Necromanzia",
+        "source": "Tiefling Ctonio",
+        "concentration": false,
+        "prepared": true
+      },
+      {
+        "id": "camuffare-se-stesso",
+        "name": "Camuffare Se Stesso",
+        "level": 1,
+        "school": "Illusione",
+        "source": "Bardo",
+        "concentration": false,
+        "prepared": true
+      },
+      {
+        "id": "risata-incontenibile-di-tasha",
+        "name": "Risata Incontenibile di Tasha",
+        "level": 1,
+        "school": "Ammaliamento",
+        "source": "Bardo",
+        "concentration": true,
+        "prepared": true
+      },
+      {
+        "id": "spruzzo-colorato",
+        "name": "Spruzzo Colorato",
+        "level": 1,
+        "school": "Illusione",
+        "source": "Bardo",
+        "concentration": false,
+        "prepared": true
+      },
+      {
+        "id": "sussurri-dissonanti",
+        "name": "Sussurri Dissonanti",
+        "level": 1,
+        "school": "Ammaliamento",
+        "source": "Bardo",
+        "concentration": false,
+        "prepared": true,
+        "notes": "Reflavour: Jack lascia intravedere per un istante il proprio volto da pirata scheletrico maledetto. Effetto solo narrativo, non applica Spaventato."
+      }
+    ]
+  },
+  "features": [
+    {
+      "id": "tiefling_chthonic_legacy",
+      "label": "Retaggio Ctonio",
+      "level": 1,
+      "source": "Tiefling",
+      "category": "species",
+      "kind": "trait",
+      "summary": "Scurovisione, resistenza ai danni necrotici e Tocco Gelido."
+    },
+    {
+      "id": "bardo_incantesimi",
+      "label": "Incantesimi",
+      "level": 1,
+      "source": "Bardo",
+      "category": "class",
+      "kind": "spellcasting",
+      "summary": "Incantesimi da bardo basati su Carisma."
+    },
+    {
+      "id": "bardo_ispirazione_bardica",
+      "label": "Ispirazione Bardica",
+      "level": 1,
+      "source": "Bardo",
+      "category": "class",
+      "kind": "resource",
+      "resourceId": "bardic_inspiration",
+      "summary": "3 usi, dado d6, recupero a riposo lungo."
+    },
+    {
+      "id": "ladro_attacco_furtivo",
+      "label": "Attacco Furtivo",
+      "level": 2,
+      "source": "Ladro",
+      "category": "class",
+      "kind": "combat",
+      "summary": "Aggiunge 1d6 una volta per turno se sono rispettate le condizioni."
+    },
+    {
+      "id": "ladro_gergo_ladresco",
+      "label": "Gergo Ladresco",
+      "level": 2,
+      "source": "Ladro",
+      "category": "class",
+      "kind": "utility",
+      "summary": "Gergo Ladresco e lingua aggiuntiva: Elfico."
+    },
+    {
+      "id": "ladro_maestria",
+      "label": "Maestria",
+      "level": 2,
+      "source": "Ladro",
+      "category": "class",
+      "kind": "skill",
+      "summary": "Maestrie proposte: Inganno e Rapidita di Mano."
+    },
+    {
+      "id": "ladro_padronanza_d_armi",
+      "label": "Padronanza d'armi",
+      "level": 2,
+      "source": "Ladro",
+      "category": "class",
+      "kind": "combat",
+      "summary": "Padronanze confermate: Pugnale e Balestra leggera."
+    }
+  ],
+  "powers": [
+    {
+      "id": "bardo_incantesimi"
+    },
+    {
+      "id": "bardo_ispirazione_bardica"
+    },
+    {
+      "id": "ladro_attacco_furtivo"
+    },
+    {
+      "id": "ladro_gergo_ladresco"
+    },
+    {
+      "id": "ladro_maestria"
+    },
+    {
+      "id": "ladro_padronanza_d_armi"
+    }
+  ],
+  "actions": [
+    {
+      "id": "dagger_main",
+      "name": "Pugnale",
+      "type": "attack",
+      "toHit": 5,
+      "damage": "1d4+3",
+      "notes": "Accurata, Leggera, Lancio. Con Padronanza Graffio integra l'attacco extra della proprieta Leggera nell'azione Attacco."
+    },
+    {
+      "id": "dagger_offhand",
+      "name": "Secondo pugnale",
+      "type": "attack",
+      "toHit": 5,
+      "damage": "1d4",
+      "notes": "Attacco extra della proprieta Leggera, senza modificatore DES ai danni."
+    },
+    {
+      "id": "light_crossbow",
+      "name": "Balestra leggera",
+      "type": "attack",
+      "toHit": 5,
+      "damage": "1d8+3",
+      "notes": "Gittata 24/96 m. Con Attacco Furtivo aggiunge 1d6 quando le condizioni sono soddisfatte. Padronanza: Lentezza."
+    }
+  ],
+  "proficiencies": {
+    "armor": [
+      "Armature leggere"
+    ],
+    "weapons": [
+      "Armi semplici"
+    ],
+    "tools": [
+      "Arnesi da falsario",
+      "Arnesi da scasso",
+      "Corno",
+      "Flauto",
+      "Cornamusa"
+    ],
+    "weaponMasteries": [
+      "Pugnale",
+      "Balestra leggera"
+    ],
+    "languages": [
+      "Comune",
+      "Sottocomune",
+      "Draconico",
+      "Gergo Ladresco",
+      "Elfico"
+    ]
+  },
+  "languages": [
+    "Comune",
+    "Sottocomune",
+    "Draconico",
+    "Gergo Ladresco",
+    "Elfico"
+  ],
+  "progressionPlan": {
+    "label": "Build futura da decidere",
+    "targetLevel": 5,
+    "targetClasses": [
+      {
+        "name": "Bardo",
+        "level": 3
+      },
+      {
+        "name": "Ladro",
+        "level": 2
+      }
+    ],
+    "milestones": [
+      {
+        "characterLevel": 3,
+        "class": "Bardo o Ladro",
+        "feature": "Da scegliere: Bardo 2 per Factotum/Maestria oppure Ladro 2 per Azione Scaltra."
+      }
+    ]
+  },
+  "progressionHistory": [
+    {
+      "id": "creation-jack-bard-1",
+      "type": "creation",
+      "fromLevel": 0,
+      "toLevel": 1,
+      "className": "Bardo",
+      "choices": {
+        "classReason": "Classe iniziale scelta per mantenere Destrezza e Carisma adeguati."
+      }
+    },
+    {
+      "id": "level-up-jack-rogue-1",
+      "type": "level_up",
+      "className": "Ladro",
+      "totalLevel": {
+        "from": 1,
+        "to": 2
+      },
+      "classLevel": {
+        "className": "Ladro",
+        "from": 0,
+        "to": 1
+      },
+      "hp": {
+        "mode": "average",
+        "hitDie": "d8",
+        "baseIncrease": 5,
+        "constitutionModifier": 1,
+        "totalIncrease": 6,
+        "maxHpFrom": 9,
+        "maxHpTo": 15
+      },
+      "classChoices": [
+        {
+          "id": "ladro_1_skill",
+          "label": "Competenza da Ladro multiclass",
+          "type": "skill_choice",
+          "selected": [
+            "acrobatics"
+          ],
+          "labels": [
+            "Acrobazia"
+          ]
+        },
+        {
+          "id": "ladro_1_expertise",
+          "label": "Maestrie da Ladro",
+          "type": "expertise_choice",
+          "selected": [
+            "deception",
+            "sleight"
+          ],
+          "labels": [
+            "Inganno",
+            "Rapidita di Mano"
+          ]
+        },
+        {
+          "id": "ladro_1_weapon_mastery",
+          "label": "Padronanze d'Armi da Ladro",
+          "type": "weapon_mastery_choice",
+          "selected": [
+            "dagger",
+            "light_crossbow"
+          ],
+          "labels": [
+            "Pugnale",
+            "Balestra leggera"
+          ]
+        },
+        {
+          "id": "ladro_1_language",
+          "label": "Lingua da Gergo Ladresco",
+          "type": "language_choice",
+          "selected": [
+            "elfico"
+          ],
+          "labels": [
+            "Elfico"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Fonte locale: Jack_The_Gull_scelte_confermate.md. Scelte ancora aperte: allineamento definitivo, aspetto, tratti caratteriali, strumento musicale usato come focus e conferma finale delle Maestrie.",
+  "equipment": {
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 7,
+      "pp": 0
+    },
+    "weapons": [
+      {
+        "id": "daggers",
+        "name": "Pugnali",
+        "quantity": 2,
+        "description": "Armi leggere principali.",
+        "notes": "Padronanza: Graffio.",
+        "recoverable": true
+      },
+      {
+        "id": "light_crossbow",
+        "name": "Balestra leggera",
+        "quantity": 1,
+        "description": "Reskin fantasy della pistola di Jack.",
+        "notes": "Padronanza: Lentezza."
+      },
+      {
+        "id": "bolts",
+        "name": "Quadrelli",
+        "quantity": 20,
+        "recoverable": true
+      }
+    ],
+    "armor": [
+      {
+        "id": "leather_armor",
+        "name": "Armatura di cuoio",
+        "quantity": 1,
+        "description": "CA 11 + DES = 14."
+      }
+    ],
+    "tools": [
+      {
+        "id": "forgery_kit",
+        "name": "Arnesi da falsario",
+        "quantity": 1
+      },
+      {
+        "id": "musical_instrument",
+        "name": "Strumento musicale da scegliere",
+        "quantity": 1,
+        "notes": "Possibili focus: flauto, corno o cornamusa."
+      }
+    ],
+    "adventuringGear": [
+      {
+        "id": "entertainer_pack",
+        "name": "Dotazione da intrattenitore",
+        "quantity": 1,
+        "description": "Zaino, giaciglio, campanella, lanterna, costumi, specchio, olio, razioni e otre."
+      },
+      {
+        "id": "fine_clothes",
+        "name": "Abiti pregiati",
+        "quantity": 1
+      },
+      {
+        "id": "costume",
+        "name": "Costume",
+        "quantity": 1
+      },
+      {
+        "id": "bolt_case",
+        "name": "Custodia per quadrelli",
+        "quantity": 1
+      }
+    ],
+    "magicItems": [],
+    "consumables": [],
+    "storyItems": [],
+    "wishlist": [
+      {
+        "id": "thieves_tools",
+        "name": "Arnesi da scasso",
+        "description": "Jack e competente, ma non li possiede ancora. Costo indicativo: 25 mo."
+      },
+      {
+        "id": "rapier_mastery",
+        "name": "Stocco",
+        "description": "Obiettivo futuro per una Padronanza quando avra competenza nelle armi da guerra."
+      }
+    ],
+    "notes": "Peso stimato tra 46,75 kg e 49,25 kg in base allo strumento scelto; sotto capacita di trasporto 60 kg."
+  },
+  "details": {
+    "personalityTraits": [],
+    "ideals": [],
+    "bonds": [],
+    "flaws": [],
+    "backstoryShort": "Jack e un tiefling ctonio, pirata truffatore e incantatore da palcoscenico sporco di salsedine, capace di alternare menzogne, pugnali e maledizioni sussurrate.",
+    "campaignNotes": []
+  }
+}

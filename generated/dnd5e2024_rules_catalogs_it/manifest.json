@@ -17,6 +17,8 @@
     "adventuring_gear": 82,
     "mounts": 8,
     "vehicles": 12,
-    "services": 14
+    "services": 14,
+    "starting_equipment_classes": 12,
+    "starting_equipment_options": 25
   }
 }

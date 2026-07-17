@@ -1,0 +1,4942 @@
+{
+  "id": "pg_002",
+  "name": "Imbrathil",
+  "level": 8,
+  "race": "Elfo dei boschi",
+  "background": "Viandante",
+  "alignment": "Neutrale",
+  "concept": "DPS a distanza con supporto leggero e compagna bestiale Misha",
+  "classes": [
+    {
+      "name": "Ranger",
+      "level": 8,
+      "subclass": "Signore delle Bestie"
+    }
+  ],
+  "combat": {
+    "hp": {
+      "current": 76,
+      "max": 76,
+      "temp": 0
+    },
+    "ac": 17,
+    "speed": 13.5,
+    "initiativeBonus": 4,
+    "hitDice": {
+      "current": 8,
+      "max": 8,
+      "type": "d10",
+      "byType": {
+        "d10": 3
+      }
+    },
+    "movement": {
+      "climb": 13.5,
+      "swim": 13.5
+    }
+  },
+  "abilities": {
+    "str": 10,
+    "dex": 19,
+    "con": 14,
+    "int": 8,
+    "wis": 14,
+    "cha": 10
+  },
+  "savingThrows": {
+    "str": true,
+    "dex": true,
+    "con": false,
+    "int": false,
+    "wis": false,
+    "cha": false
+  },
+  "skills": [
+    {
+      "id": "acrobatics",
+      "label": "Acrobazia",
+      "ability": "dex",
+      "proficient": false
+    },
+    {
+      "id": "athletics",
+      "label": "Atletica",
+      "ability": "str",
+      "proficient": true
+    },
+    {
+      "id": "sleight",
+      "label": "Rapidita di Mano",
+      "ability": "dex",
+      "proficient": false
+    },
+    {
+      "id": "stealth",
+      "label": "Furtivita",
+      "ability": "dex",
+      "proficient": true
+    },
+    {
+      "id": "arcana",
+      "label": "Arcano",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "history",
+      "label": "Storia",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "investigation",
+      "label": "Indagare",
+      "ability": "int",
+      "proficient": true,
+      "bonusOverride": 1
+    },
+    {
+      "id": "nature",
+      "label": "Natura",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "religion",
+      "label": "Religione",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "animal",
+      "label": "Addestrare Animali",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "insight",
+      "label": "Intuizione",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "medicine",
+      "label": "Medicina",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "perception",
+      "label": "Percezione",
+      "ability": "wis",
+      "proficient": true
+    },
+    {
+      "id": "survival",
+      "label": "Sopravvivenza",
+      "ability": "wis",
+      "proficient": true
+    },
+    {
+      "id": "deception",
+      "label": "Inganno",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "intimidation",
+      "label": "Intimidire",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "performance",
+      "label": "Intrattenere",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "persuasion",
+      "label": "Persuasione",
+      "ability": "cha",
+      "proficient": false
+    }
+  ],
+  "resources": [
+    {
+      "id": "favored_enemy",
+      "label": "Nemico Prescelto",
+      "current": 3,
+      "max": 3,
+      "resetOn": "long_rest",
+      "category": "class"
+    }
+  ],
+  "spellcasting": {
+    "ability": "wis",
+    "spellSaveDc": 13,
+    "spellAttackBonus": 5,
+    "preparedCount": 7,
+    "slots": [
+      {
+        "id": "ranger_slot_1",
+        "level": 1,
+        "label": "Slot livello 1",
+        "current": 4,
+        "max": 4,
+        "resetOn": "long_rest"
+      },
+      {
+        "id": "ranger_slot_2",
+        "level": 2,
+        "label": "Slot livello 2",
+        "current": 3,
+        "max": 3,
+        "resetOn": "long_rest"
+      }
+    ],
+    "spells": [
+      {
+        "id": "marchio-del-cacciatore",
+        "name": "Marchio del Cacciatore",
+        "level": 1,
+        "school": "Divinazione",
+        "concentration": true,
+        "prepared": true,
+        "alwaysPrepared": true
+      },
+      {
+        "id": "bacche-benefiche",
+        "name": "Bacche Benefiche",
+        "level": 1,
+        "school": "Evocazione",
+        "concentration": false,
+        "prepared": true
+      },
+      {
+        "id": "cura-ferite",
+        "name": "Cura Ferite",
+        "level": 1,
+        "school": "Abiurazione",
+        "concentration": false,
+        "prepared": true
+      },
+      {
+        "id": "passo-velato",
+        "name": "Passo Velato",
+        "level": 2,
+        "school": "Evocazione",
+        "concentration": false,
+        "prepared": true,
+        "optional": true
+      },
+      {
+        "id": "passare-senza-tracce",
+        "name": "Passare Senza Tracce",
+        "level": 2,
+        "school": "Abiurazione",
+        "concentration": true,
+        "prepared": true
+      },
+      {
+        "id": "colpo-di-zefiro",
+        "name": "Colpo di Zefiro",
+        "level": 1,
+        "school": "Trasmutazione",
+        "concentration": true,
+        "prepared": true,
+        "catalogMissing": true,
+        "notes": "Presente nelle fonti locali, ma non trovato nel catalogo incantesimi 2024 caricato."
+      },
+      {
+        "id": "cordone-di-frecce",
+        "name": "Cordone di Frecce",
+        "level": 2,
+        "source": "Ranger",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      },
+      {
+        "id": "crescita-di-spine",
+        "name": "Crescita di Spine",
+        "level": 2,
+        "source": "Ranger",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      },
+      {
+        "id": "ristorare-inferiore",
+        "name": "Ristorare Inferiore",
+        "level": 2,
+        "source": "Ranger",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      },
+      {
+        "id": "silenzio",
+        "name": "Silenzio",
+        "level": 2,
+        "source": "Ranger",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      }
+    ]
+  },
+  "features": [
+    {
+      "id": "ranger_spellcasting",
+      "label": "Incantesimi",
+      "level": 1,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "spellcasting",
+      "summary": "Incantesimi da ranger con Saggezza."
+    },
+    {
+      "id": "favored_enemy",
+      "label": "Nemico Prescelto",
+      "level": 1,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "resource",
+      "resourceId": "favored_enemy",
+      "summary": "Marchio del Cacciatore come fulcro dei danni."
+    },
+    {
+      "id": "weapon_mastery",
+      "label": "Padronanza d'armi",
+      "level": 1,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "combat",
+      "summary": "Padronanza su armi scelte, con focus sull'arco lungo."
+    },
+    {
+      "id": "deft_explorer",
+      "label": "Esploratore Esperto",
+      "level": 2,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "utility",
+      "summary": "Viaggi, competenze e presenza da esploratore del gruppo."
+    },
+    {
+      "id": "archery_style",
+      "label": "Stile di Combattimento: Tiro",
+      "level": 2,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "combat",
+      "summary": "+2 ai tiri per colpire con l'arco lungo, gia contato nel bonus +9."
+    },
+    {
+      "id": "primal_companion",
+      "label": "Compagno Primordiale",
+      "level": 3,
+      "source": "Signore delle Bestie",
+      "category": "subclass",
+      "kind": "companion",
+      "summary": "Misha, bestia della terra ruolata come orso, agisce nel turno di Imbrathil."
+    },
+    {
+      "id": "extra_attack",
+      "label": "Attacco Extra",
+      "level": 5,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "combat",
+      "summary": "Due attacchi con arco lungo usando l'azione Attacco."
+    },
+    {
+      "id": "second_level_spells",
+      "label": "Incantesimi di 2 livello",
+      "level": 5,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "spellcasting",
+      "summary": "Sblocca slot di 2 livello e magia tattica come Passare senza Tracce."
+    },
+    {
+      "id": "ranger_girovago",
+      "label": "Girovago",
+      "level": 6,
+      "source": "Ranger",
+      "category": "class",
+      "kind": "feature",
+      "summary": "Aumenti velocità e capacità di movimento/esplorazione."
+    },
+    {
+      "id": "ranger_signore_delle_bestie_addestramento_eccezionale",
+      "label": "Addestramento Eccezionale",
+      "level": 7,
+      "source": "Signore delle Bestie",
+      "category": "subclass",
+      "kind": "passive",
+      "summary": "Il compagno agisce meglio e infligge danni più efficaci."
+    }
+  ],
+  "actions": [
+    {
+      "id": "longbow",
+      "name": "Arco Lungo",
+      "type": "attack",
+      "toHit": 9,
+      "damage": "1d8+4",
+      "notes": "Con Marchio del Cacciatore aggiunge 1d6. Attacco Extra: 2 attacchi."
+    }
+  ],
+  "companions": [
+    {
+      "id": "misha",
+      "name": "Misha",
+      "kind": "Bestia della Terra",
+      "flavor": "Orso",
+      "ac": 15,
+      "hp": {
+        "current": 30,
+        "max": 30
+      },
+      "speed": 12,
+      "attack": {
+        "name": "Colpo della Bestia",
+        "toHit": 5,
+        "damage": "1d8+5"
+      },
+      "summary": "Tank leggero: protegge caster e ranger, blocca nemici e attacca tramite bonus action."
+    }
+  ],
+  "notes": "Fonti locali: Imbrathil_Level5_con_Misha.pdf e ranger_guida.txt.",
+  "equipment": {
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0
+    },
+    "weapons": [
+      {
+        "id": "longbow",
+        "name": "Arco lungo",
+        "quantity": 1,
+        "description": "Arma principale. 1d8 perforanti.",
+        "notes": "Tiro per colpire +9 già calcolato con Destrezza, competenza e Stile Tiro."
+      },
+      {
+        "id": "arrows",
+        "name": "Frecce",
+        "quantity": 20,
+        "description": "Munizioni per arco lungo.",
+        "recoverable": true
+      },
+      {
+        "id": "shortswords",
+        "name": "Spade corte",
+        "quantity": 2,
+        "description": "Opzione da mischia indicata dalla guida.",
+        "notes": "La guida ammette anche 2 pugnali come alternativa."
+      }
+    ],
+    "armor": [
+      {
+        "id": "studded_leather",
+        "name": "Armatura di cuoio borchiato",
+        "quantity": 1,
+        "description": "Base CA 12; la scheda calcola CA 17 con Destrezza e bonus elfico indicato dalla fonte."
+      }
+    ],
+    "tools": [],
+    "adventuringGear": [
+      {
+        "id": "wanderer_kit",
+        "name": "Kit da viandante",
+        "quantity": 1,
+        "description": "Equipaggiamento base indicato nella guida ranger."
+      }
+    ],
+    "magicItems": [],
+    "consumables": [],
+    "storyItems": [
+      {
+        "id": "misha_bond",
+        "name": "Legame con Misha",
+        "quantity": 1,
+        "description": "Compagna bestiale ruolata come orso; gestita anche nel blocco companions."
+      }
+    ],
+    "notes": "Fonti: Imbrathil_Level5_con_Misha.pdf e ranger_guida.txt."
+  },
+  "details": {
+    "personalityTraits": [
+      "Ranger da retrovia: mobile, prudente, sempre in riposizionamento.",
+      "Combatte insieme a Misha per creare distanza e proteggere il gruppo."
+    ],
+    "ideals": [
+      "Sopravvivenza del party prima dell'eroismo individuale.",
+      "Preparazione, posizione e controllo del campo."
+    ],
+    "bonds": [
+      "Misha, compagna bestiale ruolata come orso.",
+      "Legame da viandante con il territorio e le piste selvagge."
+    ],
+    "flaws": [
+      "Non deve restare in mischia.",
+      "Dipende dal buon uso della bonus action tra Marchio del Cacciatore e comando a Misha."
+    ],
+    "backstoryShort": "Imbrathil è un ranger elfo dei boschi di livello 5, specializzato nel combattimento a distanza e affiancato da Misha, bestia della terra ruolata come orso.",
+    "campaignNotes": []
+  },
+  "ownerId": "user_demo",
+  "feats": [
+    {
+      "id": "maestria-dei-veleni",
+      "name": "Maestria dei veleni",
+      "source": "Level up",
+      "level": 8,
+      "category": "Generale",
+      "summary": "Migliora uso, creazione e applicazione dei veleni.",
+      "choices": [
+        {
+          "id": "ability_increase",
+          "label": "Incremento dei punteggi di caratteristica",
+          "selected": [
+            "dex"
+          ],
+          "labels": [
+            "DES"
+          ]
+        }
+      ]
+    }
+  ],
+  "proficiencies": {
+    "armor": [],
+    "weapons": [],
+    "tools": [],
+    "weaponMasteries": [],
+    "languages": []
+  },
+  "languages": [],
+  "powers": [
+    {
+      "id": "ranger_girovago"
+    },
+    {
+      "id": "ranger_signore_delle_bestie_addestramento_eccezionale"
+    }
+  ],
+  "progressionHistory": [
+    {
+      "id": "level-up-6-2026-07-17T08:00:20.995Z",
+      "type": "level_up",
+      "appliedAt": "2026-07-17T08:00:20.995Z",
+      "className": "Ranger",
+      "totalLevel": {
+        "from": 5,
+        "to": 6
+      },
+      "classLevel": {
+        "className": "Ranger",
+        "from": 5,
+        "to": 6
+      },
+      "hp": {
+        "mode": "average",
+        "hitDie": "d10",
+        "baseIncrease": 6,
+        "constitutionModifier": 2,
+        "totalIncrease": 8,
+        "maxHpFrom": 52,
+        "maxHpTo": 60,
+        "warnings": []
+      },
+      "constitutionHpAdjustment": 0,
+      "asiOrFeat": null,
+      "classChoices": [
+        {
+          "id": "ranger_6_spells",
+          "label": "Incantesimi da Ranger",
+          "type": "spell_choice",
+          "selected": [
+            "cordone-di-frecce",
+            "crescita-di-spine",
+            "ristorare-inferiore"
+          ],
+          "labels": [
+            "Liv. 2 - Cordone di Frecce",
+            "Liv. 2 - Crescita di Spine",
+            "Liv. 2 - Ristorare Inferiore"
+          ],
+          "selectedOptions": [
+            {
+              "id": "cordone-di-frecce",
+              "label": "Liv. 2 - Cordone di Frecce",
+              "level": 2,
+              "spell": {
+                "id": "cordone-di-frecce",
+                "name": "Cordone di Frecce",
+                "name_upper": "CORDONE DI FRECCE",
+                "level": 2,
+                "level_label": "2° livello",
+                "school": "Trasmutazione",
+                "is_cantrip": false,
+                "classes": [
+                  "ranger"
+                ],
+                "casting_time": {
+                  "raw": "azione",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "contatto"
+                },
+                "components": {
+                  "raw": "",
+                  "verbal": false,
+                  "somatic": false,
+                  "material": false,
+                  "material_description": null,
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "",
+                  "concentration": false,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "Condizione Calmo Vento moderato Vento forte Burrasca Tempesta Componenti: V, S, M (una treccia ornamentale) Durata: 8 ore L'incantatore tocca fino a quattro frecce o dardi non magici e li conficca nel terreno nel suo spazio. Fino al termine dell'incantesimo, le munizioni non possono essere estratte fisicamente, e ogni volta che una creatura diversa dall'incantatore entra in uno spazio entro 9 metri dalle munizioni per la prima volta in un turno o se termina il suo turno entro quella distanza, una delle munizioni sfreccia in volo per colpirla. La creatura deve superare un tiro salvezza su Destrezza, altrimenti subisce 2d4 danni perforanti. La munizione viene distrutta. L'incantesimo termina quando non rimangono più munizioni nel terreno. Quando l'incantatore lancia questo incantesimo, può indicare un qualsiasi numero di creature a sua scelta che saranno ignorate dall'incantesimo.",
+                "at_higher_levels": "La quantità di munizioni che possono essere influenzate aumenta di due per ogni slot di livello superiore al 2°. Ń-",
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": "Destrezza",
+                  "damage_types": [
+                    "perforanti"
+                  ],
+                  "damage_dice": [
+                    "2d4"
+                  ],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 261
+                }
+              }
+            },
+            {
+              "id": "crescita-di-spine",
+              "label": "Liv. 2 - Crescita di Spine",
+              "level": 2,
+              "spell": {
+                "id": "crescita-di-spine",
+                "name": "Crescita di Spine",
+                "name_upper": "CRESCITA DI SPINE",
+                "level": 2,
+                "level_label": "2° livello",
+                "school": "Trasmutazione",
+                "is_cantrip": false,
+                "classes": [
+                  "druido",
+                  "ranger"
+                ],
+                "casting_time": {
+                  "raw": "azione",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "45 metri"
+                },
+                "components": {
+                  "raw": "V, S, M (sette spine)",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": true,
+                  "material_description": "sette spine",
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "concentrazione, fino a 10 minuti",
+                  "concentration": true,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "Spine e spuntoni nascono dal terreno in una sfera del raggio di 6 metri, centrata su un punto entro gittata. Per la durata dell'incantesimo, l'area diventa terreno difficile. Quando una creatura entra nell'area o si muove al suo interno, subisce 2d4 danni perforanti ogni 1,5 metri di movimento. L a trasformazione del terreno è mimetizzata in modo da sembrare naturale. Qualsiasi creatura che non stesse osservando l'area al momento del lancio dell'incantesimo deve effettuare un'azione di Ricerca e una prova di Saggezza (Percezione o Sopravvivenza) contro la CD del tiro salvezza sull'incantesimo per riconoscere la peri colosità del terreno prima di entrarvi.",
+                "at_higher_levels": null,
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [
+                    "perforanti"
+                  ],
+                  "damage_dice": [
+                    "2d4"
+                  ],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 264
+                }
+              }
+            },
+            {
+              "id": "ristorare-inferiore",
+              "label": "Liv. 2 - Ristorare Inferiore",
+              "level": 2,
+              "spell": {
+                "id": "ristorare-inferiore",
+                "name": "Ristorare Inferiore",
+                "name_upper": "RISTORARE INFERIORE",
+                "level": 2,
+                "level_label": "2° livello",
+                "school": "Abiurazione",
+                "is_cantrip": false,
+                "classes": [
+                  "bardo",
+                  "chierico",
+                  "druido",
+                  "paladino",
+                  "ranger"
+                ],
+                "casting_time": {
+                  "raw": "azione bonus",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "contatto"
+                },
+                "components": {
+                  "raw": "V, S",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": false,
+                  "material_description": null,
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "istantanea",
+                  "concentration": false,
+                  "instantaneous": true,
+                  "ritual_possible": false
+                },
+                "description": "L'incantatore tocca una creatura e pone fine a una delle condizioni che la affiigge tra: accecata, assordata, avvelenata o paralizzata.",
+                "at_higher_levels": null,
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [],
+                  "damage_dice": [],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 324
+                }
+              }
+            }
+          ],
+          "meta": {
+            "cordone-di-frecce": {
+              "id": "cordone-di-frecce",
+              "label": "Liv. 2 - Cordone di Frecce",
+              "level": 2,
+              "spell": {
+                "id": "cordone-di-frecce",
+                "name": "Cordone di Frecce",
+                "name_upper": "CORDONE DI FRECCE",
+                "level": 2,
+                "level_label": "2° livello",
+                "school": "Trasmutazione",
+                "is_cantrip": false,
+                "classes": [
+                  "ranger"
+                ],
+                "casting_time": {
+                  "raw": "azione",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "contatto"
+                },
+                "components": {
+                  "raw": "",
+                  "verbal": false,
+                  "somatic": false,
+                  "material": false,
+                  "material_description": null,
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "",
+                  "concentration": false,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "Condizione Calmo Vento moderato Vento forte Burrasca Tempesta Componenti: V, S, M (una treccia ornamentale) Durata: 8 ore L'incantatore tocca fino a quattro frecce o dardi non magici e li conficca nel terreno nel suo spazio. Fino al termine dell'incantesimo, le munizioni non possono essere estratte fisicamente, e ogni volta che una creatura diversa dall'incantatore entra in uno spazio entro 9 metri dalle munizioni per la prima volta in un turno o se termina il suo turno entro quella distanza, una delle munizioni sfreccia in volo per colpirla. La creatura deve superare un tiro salvezza su Destrezza, altrimenti subisce 2d4 danni perforanti. La munizione viene distrutta. L'incantesimo termina quando non rimangono più munizioni nel terreno. Quando l'incantatore lancia questo incantesimo, può indicare un qualsiasi numero di creature a sua scelta che saranno ignorate dall'incantesimo.",
+                "at_higher_levels": "La quantità di munizioni che possono essere influenzate aumenta di due per ogni slot di livello superiore al 2°. Ń-",
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": "Destrezza",
+                  "damage_types": [
+                    "perforanti"
+                  ],
+                  "damage_dice": [
+                    "2d4"
+                  ],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 261
+                }
+              }
+            },
+            "crescita-di-spine": {
+              "id": "crescita-di-spine",
+              "label": "Liv. 2 - Crescita di Spine",
+              "level": 2,
+              "spell": {
+                "id": "crescita-di-spine",
+                "name": "Crescita di Spine",
+                "name_upper": "CRESCITA DI SPINE",
+                "level": 2,
+                "level_label": "2° livello",
+                "school": "Trasmutazione",
+                "is_cantrip": false,
+                "classes": [
+                  "druido",
+                  "ranger"
+                ],
+                "casting_time": {
+                  "raw": "azione",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "45 metri"
+                },
+                "components": {
+                  "raw": "V, S, M (sette spine)",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": true,
+                  "material_description": "sette spine",
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "concentrazione, fino a 10 minuti",
+                  "concentration": true,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "Spine e spuntoni nascono dal terreno in una sfera del raggio di 6 metri, centrata su un punto entro gittata. Per la durata dell'incantesimo, l'area diventa terreno difficile. Quando una creatura entra nell'area o si muove al suo interno, subisce 2d4 danni perforanti ogni 1,5 metri di movimento. L a trasformazione del terreno è mimetizzata in modo da sembrare naturale. Qualsiasi creatura che non stesse osservando l'area al momento del lancio dell'incantesimo deve effettuare un'azione di Ricerca e una prova di Saggezza (Percezione o Sopravvivenza) contro la CD del tiro salvezza sull'incantesimo per riconoscere la peri colosità del terreno prima di entrarvi.",
+                "at_higher_levels": null,
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [
+                    "perforanti"
+                  ],
+                  "damage_dice": [
+                    "2d4"
+                  ],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 264
+                }
+              }
+            },
+            "ristorare-inferiore": {
+              "id": "ristorare-inferiore",
+              "label": "Liv. 2 - Ristorare Inferiore",
+              "level": 2,
+              "spell": {
+                "id": "ristorare-inferiore",
+                "name": "Ristorare Inferiore",
+                "name_upper": "RISTORARE INFERIORE",
+                "level": 2,
+                "level_label": "2° livello",
+                "school": "Abiurazione",
+                "is_cantrip": false,
+                "classes": [
+                  "bardo",
+                  "chierico",
+                  "druido",
+                  "paladino",
+                  "ranger"
+                ],
+                "casting_time": {
+                  "raw": "azione bonus",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "contatto"
+                },
+                "components": {
+                  "raw": "V, S",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": false,
+                  "material_description": null,
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "istantanea",
+                  "concentration": false,
+                  "instantaneous": true,
+                  "ritual_possible": false
+                },
+                "description": "L'incantatore tocca una creatura e pone fine a una delle condizioni che la affiigge tra: accecata, assordata, avvelenata o paralizzata.",
+                "at_higher_levels": null,
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [],
+                  "damage_dice": [],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 324
+                }
+              }
+            }
+          },
+          "warnings": []
+        }
+      ],
+      "subclassSpellChoices": [],
+      "invocationChoices": []
+    },
+    {
+      "id": "level-up-7-2026-07-17T08:20:49.698Z",
+      "type": "level_up",
+      "appliedAt": "2026-07-17T08:20:49.698Z",
+      "className": "Ranger",
+      "totalLevel": {
+        "from": 6,
+        "to": 7
+      },
+      "classLevel": {
+        "className": "Ranger",
+        "from": 6,
+        "to": 7
+      },
+      "hp": {
+        "mode": "average",
+        "hitDie": "d10",
+        "baseIncrease": 6,
+        "constitutionModifier": 2,
+        "totalIncrease": 8,
+        "maxHpFrom": 60,
+        "maxHpTo": 68,
+        "warnings": []
+      },
+      "constitutionHpAdjustment": 0,
+      "asiOrFeat": null,
+      "classChoices": [
+        {
+          "id": "ranger_7_spells",
+          "label": "Incantesimi da Ranger",
+          "type": "spell_choice",
+          "selected": [
+            "silenzio"
+          ],
+          "labels": [
+            "Liv. 2 - Silenzio"
+          ],
+          "selectedOptions": [
+            {
+              "id": "silenzio",
+              "label": "Liv. 2 - Silenzio",
+              "level": 2,
+              "spell": {
+                "id": "silenzio",
+                "name": "Silenzio",
+                "name_upper": "SILENZIO",
+                "level": 2,
+                "level_label": "2° livello",
+                "school": "Illusione",
+                "is_cantrip": false,
+                "classes": [
+                  "bardo",
+                  "chierico",
+                  "ranger"
+                ],
+                "casting_time": {
+                  "raw": "azione o rituale",
+                  "ritual": true
+                },
+                "range": {
+                  "raw": "36 metri"
+                },
+                "components": {
+                  "raw": "V, S",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": false,
+                  "material_description": null,
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "concentrazione, fino a 1 0  minuti",
+                  "concentration": true,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "L'incantatore genera una sfera del raggio di 6 metri cen trata su un punto a sua scelta situato entro gittata e, per la durata dell'incantesimo, nessun suono può essere creato all'interno di quella sfera o attraversarla. Ogni creatura o oggetto interamente all'interno della sfera è immune ai danni da tuono e ogni creatura interamente all'interno della sfera è assordata. All'interno dell'area è impossibile lanciare un incantesimo che includa una componente verbale. 329",
+                "at_higher_levels": null,
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [
+                    "tuono"
+                  ],
+                  "damage_dice": [],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": true
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 285
+                }
+              }
+            }
+          ],
+          "meta": {
+            "silenzio": {
+              "id": "silenzio",
+              "label": "Liv. 2 - Silenzio",
+              "level": 2,
+              "spell": {
+                "id": "silenzio",
+                "name": "Silenzio",
+                "name_upper": "SILENZIO",
+                "level": 2,
+                "level_label": "2° livello",
+                "school": "Illusione",
+                "is_cantrip": false,
+                "classes": [
+                  "bardo",
+                  "chierico",
+                  "ranger"
+                ],
+                "casting_time": {
+                  "raw": "azione o rituale",
+                  "ritual": true
+                },
+                "range": {
+                  "raw": "36 metri"
+                },
+                "components": {
+                  "raw": "V, S",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": false,
+                  "material_description": null,
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "concentrazione, fino a 1 0  minuti",
+                  "concentration": true,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "L'incantatore genera una sfera del raggio di 6 metri cen trata su un punto a sua scelta situato entro gittata e, per la durata dell'incantesimo, nessun suono può essere creato all'interno di quella sfera o attraversarla. Ogni creatura o oggetto interamente all'interno della sfera è immune ai danni da tuono e ogni creatura interamente all'interno della sfera è assordata. All'interno dell'area è impossibile lanciare un incantesimo che includa una componente verbale. 329",
+                "at_higher_levels": null,
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [
+                    "tuono"
+                  ],
+                  "damage_dice": [],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": true
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 285
+                }
+              }
+            }
+          },
+          "warnings": []
+        }
+      ],
+      "subclassSpellChoices": [],
+      "invocationChoices": []
+    },
+    {
+      "id": "level-up-8-2026-07-17T08:46:05.734Z",
+      "type": "level_up",
+      "appliedAt": "2026-07-17T08:46:05.734Z",
+      "className": "Ranger",
+      "totalLevel": {
+        "from": 7,
+        "to": 8
+      },
+      "classLevel": {
+        "className": "Ranger",
+        "from": 7,
+        "to": 8
+      },
+      "hp": {
+        "mode": "average",
+        "hitDie": "d10",
+        "baseIncrease": 6,
+        "constitutionModifier": 2,
+        "totalIncrease": 8,
+        "maxHpFrom": 68,
+        "maxHpTo": 76,
+        "warnings": []
+      },
+      "constitutionHpAdjustment": 0,
+      "asiOrFeat": {
+        "mode": "feat",
+        "feat": {
+          "id": "maestria-dei-veleni",
+          "name": "Maestria dei veleni",
+          "category": "Generale",
+          "summary": "Migliora uso, creazione e applicazione dei veleni.",
+          "effects": [],
+          "choices": [
+            {
+              "type": "ability_score_choice",
+              "id": "ability_increase",
+              "label": "Incremento dei punteggi di caratteristica",
+              "count": 1,
+              "amount": 1,
+              "abilities": [
+                "dex",
+                "int"
+              ],
+              "max": 20
+            }
+          ],
+          "grantedSpells": []
+        },
+        "choiceDraft": {
+          "featId": "maestria-dei-veleni",
+          "featName": "Maestria dei veleni",
+          "requirements": [
+            {
+              "type": "ability_score_choice",
+              "id": "ability_increase",
+              "label": "Incremento dei punteggi di caratteristica",
+              "count": 1,
+              "amount": 1,
+              "abilities": [
+                "dex",
+                "int"
+              ],
+              "max": 20,
+              "selected": [
+                "dex"
+              ],
+              "options": [
+                {
+                  "id": "dex",
+                  "label": "DES"
+                },
+                {
+                  "id": "int",
+                  "label": "INT"
+                }
+              ]
+            }
+          ],
+          "choices": [
+            {
+              "id": "ability_increase",
+              "label": "Incremento dei punteggi di caratteristica",
+              "type": "ability_score_choice",
+              "count": 1,
+              "amount": 1,
+              "max": 20,
+              "selected": [
+                "dex"
+              ],
+              "labels": [
+                "DES"
+              ],
+              "selectedOptions": [
+                {
+                  "id": "dex",
+                  "label": "DES"
+                }
+              ],
+              "sourceChoice": {
+                "type": "ability_score_choice",
+                "id": "ability_increase",
+                "label": "Incremento dei punteggi di caratteristica",
+                "count": 1,
+                "amount": 1,
+                "abilities": [
+                  "dex",
+                  "int"
+                ],
+                "max": 20,
+                "selected": [
+                  "dex"
+                ],
+                "options": [
+                  {
+                    "id": "dex",
+                    "label": "DES"
+                  },
+                  {
+                    "id": "int",
+                    "label": "INT"
+                  }
+                ]
+              },
+              "warnings": []
+            }
+          ],
+          "warnings": []
+        },
+        "warnings": []
+      },
+      "classChoices": [],
+      "subclassSpellChoices": [],
+      "invocationChoices": []
+    }
+  ],
+  "progressionSnapshots": [
+    {
+      "id": "snapshot-baseline-lv-5",
+      "type": "baseline",
+      "level": 5,
+      "label": "Livello 5",
+      "classSummary": "Ranger (Signore delle Bestie) 5",
+      "createdAt": "2026-07-17T08:00:21.004Z",
+      "sourceHistoryId": null,
+      "changes": [
+        "Stato iniziale registrato prima della nuova progressione."
+      ],
+      "character": {
+        "id": "pg_002",
+        "name": "Imbrathil",
+        "level": 5,
+        "race": "Elfo dei boschi",
+        "background": "Viandante",
+        "alignment": "Neutrale",
+        "concept": "DPS a distanza con supporto leggero e compagna bestiale Misha",
+        "classes": [
+          {
+            "name": "Ranger",
+            "level": 5,
+            "subclass": "Signore delle Bestie"
+          }
+        ],
+        "combat": {
+          "hp": {
+            "current": 52,
+            "max": 52,
+            "temp": 0
+          },
+          "ac": 17,
+          "speed": 10.5,
+          "initiativeBonus": 4,
+          "hitDice": {
+            "current": 5,
+            "max": 5,
+            "type": "d10"
+          }
+        },
+        "abilities": {
+          "str": 10,
+          "dex": 18,
+          "con": 14,
+          "int": 8,
+          "wis": 14,
+          "cha": 10
+        },
+        "savingThrows": {
+          "str": true,
+          "dex": true,
+          "con": false,
+          "int": false,
+          "wis": false,
+          "cha": false
+        },
+        "skills": [
+          {
+            "id": "acrobatics",
+            "label": "Acrobazia",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "athletics",
+            "label": "Atletica",
+            "ability": "str",
+            "proficient": true
+          },
+          {
+            "id": "sleight",
+            "label": "Rapidita di Mano",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "stealth",
+            "label": "Furtivita",
+            "ability": "dex",
+            "proficient": true
+          },
+          {
+            "id": "arcana",
+            "label": "Arcano",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "history",
+            "label": "Storia",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "investigation",
+            "label": "Indagare",
+            "ability": "int",
+            "proficient": true,
+            "bonusOverride": 1
+          },
+          {
+            "id": "nature",
+            "label": "Natura",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "religion",
+            "label": "Religione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "animal",
+            "label": "Addestrare Animali",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "insight",
+            "label": "Intuizione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "medicine",
+            "label": "Medicina",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "perception",
+            "label": "Percezione",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "survival",
+            "label": "Sopravvivenza",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "deception",
+            "label": "Inganno",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "intimidation",
+            "label": "Intimidire",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "performance",
+            "label": "Intrattenere",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "persuasion",
+            "label": "Persuasione",
+            "ability": "cha",
+            "proficient": false
+          }
+        ],
+        "resources": [
+          {
+            "id": "favored_enemy",
+            "label": "Nemico Prescelto",
+            "current": 3,
+            "max": 3,
+            "resetOn": "long_rest",
+            "category": "class"
+          }
+        ],
+        "spellcasting": {
+          "ability": "wis",
+          "spellSaveDc": 13,
+          "spellAttackBonus": 5,
+          "preparedCount": 6,
+          "slots": [
+            {
+              "id": "ranger_slot_1",
+              "level": 1,
+              "label": "Slot livello 1",
+              "current": 4,
+              "max": 4,
+              "resetOn": "long_rest"
+            },
+            {
+              "id": "ranger_slot_2",
+              "level": 2,
+              "label": "Slot livello 2",
+              "current": 2,
+              "max": 2,
+              "resetOn": "long_rest"
+            }
+          ],
+          "spells": [
+            {
+              "id": "marchio-del-cacciatore",
+              "name": "Marchio del Cacciatore",
+              "level": 1,
+              "school": "Divinazione",
+              "concentration": true,
+              "prepared": true,
+              "alwaysPrepared": true
+            },
+            {
+              "id": "bacche-benefiche",
+              "name": "Bacche Benefiche",
+              "level": 1,
+              "school": "Evocazione",
+              "concentration": false,
+              "prepared": true
+            },
+            {
+              "id": "cura-ferite",
+              "name": "Cura Ferite",
+              "level": 1,
+              "school": "Abiurazione",
+              "concentration": false,
+              "prepared": true
+            },
+            {
+              "id": "passo-velato",
+              "name": "Passo Velato",
+              "level": 2,
+              "school": "Evocazione",
+              "concentration": false,
+              "prepared": true,
+              "optional": true
+            },
+            {
+              "id": "passare-senza-tracce",
+              "name": "Passare Senza Tracce",
+              "level": 2,
+              "school": "Abiurazione",
+              "concentration": true,
+              "prepared": true
+            },
+            {
+              "id": "colpo-di-zefiro",
+              "name": "Colpo di Zefiro",
+              "level": 1,
+              "school": "Trasmutazione",
+              "concentration": true,
+              "prepared": true,
+              "catalogMissing": true,
+              "notes": "Presente nelle fonti locali, ma non trovato nel catalogo incantesimi 2024 caricato."
+            }
+          ]
+        },
+        "features": [
+          {
+            "id": "ranger_spellcasting",
+            "label": "Incantesimi",
+            "level": 1,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "spellcasting",
+            "summary": "Incantesimi da ranger con Saggezza."
+          },
+          {
+            "id": "favored_enemy",
+            "label": "Nemico Prescelto",
+            "level": 1,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "resource",
+            "resourceId": "favored_enemy",
+            "summary": "Marchio del Cacciatore come fulcro dei danni."
+          },
+          {
+            "id": "weapon_mastery",
+            "label": "Padronanza d'armi",
+            "level": 1,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "combat",
+            "summary": "Padronanza su armi scelte, con focus sull'arco lungo."
+          },
+          {
+            "id": "deft_explorer",
+            "label": "Esploratore Esperto",
+            "level": 2,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "utility",
+            "summary": "Viaggi, competenze e presenza da esploratore del gruppo."
+          },
+          {
+            "id": "archery_style",
+            "label": "Stile di Combattimento: Tiro",
+            "level": 2,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "combat",
+            "summary": "+2 ai tiri per colpire con l'arco lungo, gia contato nel bonus +9."
+          },
+          {
+            "id": "primal_companion",
+            "label": "Compagno Primordiale",
+            "level": 3,
+            "source": "Signore delle Bestie",
+            "category": "subclass",
+            "kind": "companion",
+            "summary": "Misha, bestia della terra ruolata come orso, agisce nel turno di Imbrathil."
+          },
+          {
+            "id": "extra_attack",
+            "label": "Attacco Extra",
+            "level": 5,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "combat",
+            "summary": "Due attacchi con arco lungo usando l'azione Attacco."
+          },
+          {
+            "id": "second_level_spells",
+            "label": "Incantesimi di 2 livello",
+            "level": 5,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "spellcasting",
+            "summary": "Sblocca slot di 2 livello e magia tattica come Passare senza Tracce."
+          }
+        ],
+        "actions": [
+          {
+            "id": "longbow",
+            "name": "Arco Lungo",
+            "type": "attack",
+            "toHit": 9,
+            "damage": "1d8+4",
+            "notes": "Con Marchio del Cacciatore aggiunge 1d6. Attacco Extra: 2 attacchi."
+          }
+        ],
+        "companions": [
+          {
+            "id": "misha",
+            "name": "Misha",
+            "kind": "Bestia della Terra",
+            "flavor": "Orso",
+            "ac": 15,
+            "hp": {
+              "current": 30,
+              "max": 30
+            },
+            "speed": 12,
+            "attack": {
+              "name": "Colpo della Bestia",
+              "toHit": 5,
+              "damage": "1d8+5"
+            },
+            "summary": "Tank leggero: protegge caster e ranger, blocca nemici e attacca tramite bonus action."
+          }
+        ],
+        "notes": "Fonti locali: Imbrathil_Level5_con_Misha.pdf e ranger_guida.txt.",
+        "equipment": {
+          "currency": {
+            "cp": 0,
+            "sp": 0,
+            "ep": 0,
+            "gp": 0,
+            "pp": 0
+          },
+          "weapons": [
+            {
+              "id": "longbow",
+              "name": "Arco lungo",
+              "quantity": 1,
+              "description": "Arma principale. 1d8 perforanti.",
+              "notes": "Tiro per colpire +9 già calcolato con Destrezza, competenza e Stile Tiro."
+            },
+            {
+              "id": "arrows",
+              "name": "Frecce",
+              "quantity": 20,
+              "description": "Munizioni per arco lungo.",
+              "recoverable": true
+            },
+            {
+              "id": "shortswords",
+              "name": "Spade corte",
+              "quantity": 2,
+              "description": "Opzione da mischia indicata dalla guida.",
+              "notes": "La guida ammette anche 2 pugnali come alternativa."
+            }
+          ],
+          "armor": [
+            {
+              "id": "studded_leather",
+              "name": "Armatura di cuoio borchiato",
+              "quantity": 1,
+              "description": "Base CA 12; la scheda calcola CA 17 con Destrezza e bonus elfico indicato dalla fonte."
+            }
+          ],
+          "tools": [],
+          "adventuringGear": [
+            {
+              "id": "wanderer_kit",
+              "name": "Kit da viandante",
+              "quantity": 1,
+              "description": "Equipaggiamento base indicato nella guida ranger."
+            }
+          ],
+          "magicItems": [],
+          "consumables": [],
+          "storyItems": [
+            {
+              "id": "misha_bond",
+              "name": "Legame con Misha",
+              "quantity": 1,
+              "description": "Compagna bestiale ruolata come orso; gestita anche nel blocco companions."
+            }
+          ],
+          "notes": "Fonti: Imbrathil_Level5_con_Misha.pdf e ranger_guida.txt."
+        },
+        "details": {
+          "personalityTraits": [
+            "Ranger da retrovia: mobile, prudente, sempre in riposizionamento.",
+            "Combatte insieme a Misha per creare distanza e proteggere il gruppo."
+          ],
+          "ideals": [
+            "Sopravvivenza del party prima dell'eroismo individuale.",
+            "Preparazione, posizione e controllo del campo."
+          ],
+          "bonds": [
+            "Misha, compagna bestiale ruolata come orso.",
+            "Legame da viandante con il territorio e le piste selvagge."
+          ],
+          "flaws": [
+            "Non deve restare in mischia.",
+            "Dipende dal buon uso della bonus action tra Marchio del Cacciatore e comando a Misha."
+          ],
+          "backstoryShort": "Imbrathil è un ranger elfo dei boschi di livello 5, specializzato nel combattimento a distanza e affiancato da Misha, bestia della terra ruolata come orso.",
+          "campaignNotes": []
+        },
+        "ownerId": "user_demo"
+      }
+    },
+    {
+      "id": "snapshot-lv-6-2026-07-17T08:00:20.995Z",
+      "type": "level_up",
+      "level": 6,
+      "label": "Livello 6",
+      "classSummary": "Ranger (Signore delle Bestie) 6",
+      "createdAt": "2026-07-17T08:00:20.995Z",
+      "sourceHistoryId": "level-up-6-2026-07-17T08:00:20.995Z",
+      "changes": [
+        "Ranger 5 -> 6",
+        "PF massimi 52 -> 60",
+        "Velocita: 10.5 -> 13.5",
+        "Movimento scalare/nuotare: Non presente -> 13.5 m",
+        "Incantesimi da Ranger: Liv. 2 - Cordone di Frecce, Liv. 2 - Crescita di Spine, Liv. 2 - Ristorare Inferiore"
+      ],
+      "character": {
+        "id": "pg_002",
+        "name": "Imbrathil",
+        "level": 6,
+        "race": "Elfo dei boschi",
+        "background": "Viandante",
+        "alignment": "Neutrale",
+        "concept": "DPS a distanza con supporto leggero e compagna bestiale Misha",
+        "classes": [
+          {
+            "name": "Ranger",
+            "level": 6,
+            "subclass": "Signore delle Bestie"
+          }
+        ],
+        "combat": {
+          "hp": {
+            "current": 60,
+            "max": 60,
+            "temp": 0
+          },
+          "ac": 17,
+          "speed": 13.5,
+          "initiativeBonus": 4,
+          "hitDice": {
+            "current": 6,
+            "max": 6,
+            "type": "d10",
+            "byType": {
+              "d10": 1
+            }
+          },
+          "movement": {
+            "climb": 13.5,
+            "swim": 13.5
+          }
+        },
+        "abilities": {
+          "str": 10,
+          "dex": 18,
+          "con": 14,
+          "int": 8,
+          "wis": 14,
+          "cha": 10
+        },
+        "savingThrows": {
+          "str": true,
+          "dex": true,
+          "con": false,
+          "int": false,
+          "wis": false,
+          "cha": false
+        },
+        "skills": [
+          {
+            "id": "acrobatics",
+            "label": "Acrobazia",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "athletics",
+            "label": "Atletica",
+            "ability": "str",
+            "proficient": true
+          },
+          {
+            "id": "sleight",
+            "label": "Rapidita di Mano",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "stealth",
+            "label": "Furtivita",
+            "ability": "dex",
+            "proficient": true
+          },
+          {
+            "id": "arcana",
+            "label": "Arcano",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "history",
+            "label": "Storia",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "investigation",
+            "label": "Indagare",
+            "ability": "int",
+            "proficient": true,
+            "bonusOverride": 1
+          },
+          {
+            "id": "nature",
+            "label": "Natura",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "religion",
+            "label": "Religione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "animal",
+            "label": "Addestrare Animali",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "insight",
+            "label": "Intuizione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "medicine",
+            "label": "Medicina",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "perception",
+            "label": "Percezione",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "survival",
+            "label": "Sopravvivenza",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "deception",
+            "label": "Inganno",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "intimidation",
+            "label": "Intimidire",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "performance",
+            "label": "Intrattenere",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "persuasion",
+            "label": "Persuasione",
+            "ability": "cha",
+            "proficient": false
+          }
+        ],
+        "resources": [
+          {
+            "id": "favored_enemy",
+            "label": "Nemico Prescelto",
+            "current": 3,
+            "max": 3,
+            "resetOn": "long_rest",
+            "category": "class"
+          }
+        ],
+        "spellcasting": {
+          "ability": "wis",
+          "spellSaveDc": 13,
+          "spellAttackBonus": 5,
+          "preparedCount": 6,
+          "slots": [
+            {
+              "id": "ranger_slot_1",
+              "level": 1,
+              "label": "Slot livello 1",
+              "current": 4,
+              "max": 4,
+              "resetOn": "long_rest"
+            },
+            {
+              "id": "ranger_slot_2",
+              "level": 2,
+              "label": "Slot livello 2",
+              "current": 2,
+              "max": 2,
+              "resetOn": "long_rest"
+            }
+          ],
+          "spells": [
+            {
+              "id": "marchio-del-cacciatore",
+              "name": "Marchio del Cacciatore",
+              "level": 1,
+              "school": "Divinazione",
+              "concentration": true,
+              "prepared": true,
+              "alwaysPrepared": true
+            },
+            {
+              "id": "bacche-benefiche",
+              "name": "Bacche Benefiche",
+              "level": 1,
+              "school": "Evocazione",
+              "concentration": false,
+              "prepared": true
+            },
+            {
+              "id": "cura-ferite",
+              "name": "Cura Ferite",
+              "level": 1,
+              "school": "Abiurazione",
+              "concentration": false,
+              "prepared": true
+            },
+            {
+              "id": "passo-velato",
+              "name": "Passo Velato",
+              "level": 2,
+              "school": "Evocazione",
+              "concentration": false,
+              "prepared": true,
+              "optional": true
+            },
+            {
+              "id": "passare-senza-tracce",
+              "name": "Passare Senza Tracce",
+              "level": 2,
+              "school": "Abiurazione",
+              "concentration": true,
+              "prepared": true
+            },
+            {
+              "id": "colpo-di-zefiro",
+              "name": "Colpo di Zefiro",
+              "level": 1,
+              "school": "Trasmutazione",
+              "concentration": true,
+              "prepared": true,
+              "catalogMissing": true,
+              "notes": "Presente nelle fonti locali, ma non trovato nel catalogo incantesimi 2024 caricato."
+            },
+            {
+              "id": "cordone-di-frecce",
+              "name": "Cordone di Frecce",
+              "level": 2,
+              "source": "Ranger",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "crescita-di-spine",
+              "name": "Crescita di Spine",
+              "level": 2,
+              "source": "Ranger",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "ristorare-inferiore",
+              "name": "Ristorare Inferiore",
+              "level": 2,
+              "source": "Ranger",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            }
+          ]
+        },
+        "features": [
+          {
+            "id": "ranger_spellcasting",
+            "label": "Incantesimi",
+            "level": 1,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "spellcasting",
+            "summary": "Incantesimi da ranger con Saggezza."
+          },
+          {
+            "id": "favored_enemy",
+            "label": "Nemico Prescelto",
+            "level": 1,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "resource",
+            "resourceId": "favored_enemy",
+            "summary": "Marchio del Cacciatore come fulcro dei danni."
+          },
+          {
+            "id": "weapon_mastery",
+            "label": "Padronanza d'armi",
+            "level": 1,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "combat",
+            "summary": "Padronanza su armi scelte, con focus sull'arco lungo."
+          },
+          {
+            "id": "deft_explorer",
+            "label": "Esploratore Esperto",
+            "level": 2,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "utility",
+            "summary": "Viaggi, competenze e presenza da esploratore del gruppo."
+          },
+          {
+            "id": "archery_style",
+            "label": "Stile di Combattimento: Tiro",
+            "level": 2,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "combat",
+            "summary": "+2 ai tiri per colpire con l'arco lungo, gia contato nel bonus +9."
+          },
+          {
+            "id": "primal_companion",
+            "label": "Compagno Primordiale",
+            "level": 3,
+            "source": "Signore delle Bestie",
+            "category": "subclass",
+            "kind": "companion",
+            "summary": "Misha, bestia della terra ruolata come orso, agisce nel turno di Imbrathil."
+          },
+          {
+            "id": "extra_attack",
+            "label": "Attacco Extra",
+            "level": 5,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "combat",
+            "summary": "Due attacchi con arco lungo usando l'azione Attacco."
+          },
+          {
+            "id": "second_level_spells",
+            "label": "Incantesimi di 2 livello",
+            "level": 5,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "spellcasting",
+            "summary": "Sblocca slot di 2 livello e magia tattica come Passare senza Tracce."
+          },
+          {
+            "id": "ranger_girovago",
+            "label": "Girovago",
+            "level": 6,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Aumenti velocità e capacità di movimento/esplorazione."
+          }
+        ],
+        "actions": [
+          {
+            "id": "longbow",
+            "name": "Arco Lungo",
+            "type": "attack",
+            "toHit": 9,
+            "damage": "1d8+4",
+            "notes": "Con Marchio del Cacciatore aggiunge 1d6. Attacco Extra: 2 attacchi."
+          }
+        ],
+        "companions": [
+          {
+            "id": "misha",
+            "name": "Misha",
+            "kind": "Bestia della Terra",
+            "flavor": "Orso",
+            "ac": 15,
+            "hp": {
+              "current": 30,
+              "max": 30
+            },
+            "speed": 12,
+            "attack": {
+              "name": "Colpo della Bestia",
+              "toHit": 5,
+              "damage": "1d8+5"
+            },
+            "summary": "Tank leggero: protegge caster e ranger, blocca nemici e attacca tramite bonus action."
+          }
+        ],
+        "notes": "Fonti locali: Imbrathil_Level5_con_Misha.pdf e ranger_guida.txt.",
+        "equipment": {
+          "currency": {
+            "cp": 0,
+            "sp": 0,
+            "ep": 0,
+            "gp": 0,
+            "pp": 0
+          },
+          "weapons": [
+            {
+              "id": "longbow",
+              "name": "Arco lungo",
+              "quantity": 1,
+              "description": "Arma principale. 1d8 perforanti.",
+              "notes": "Tiro per colpire +9 già calcolato con Destrezza, competenza e Stile Tiro."
+            },
+            {
+              "id": "arrows",
+              "name": "Frecce",
+              "quantity": 20,
+              "description": "Munizioni per arco lungo.",
+              "recoverable": true
+            },
+            {
+              "id": "shortswords",
+              "name": "Spade corte",
+              "quantity": 2,
+              "description": "Opzione da mischia indicata dalla guida.",
+              "notes": "La guida ammette anche 2 pugnali come alternativa."
+            }
+          ],
+          "armor": [
+            {
+              "id": "studded_leather",
+              "name": "Armatura di cuoio borchiato",
+              "quantity": 1,
+              "description": "Base CA 12; la scheda calcola CA 17 con Destrezza e bonus elfico indicato dalla fonte."
+            }
+          ],
+          "tools": [],
+          "adventuringGear": [
+            {
+              "id": "wanderer_kit",
+              "name": "Kit da viandante",
+              "quantity": 1,
+              "description": "Equipaggiamento base indicato nella guida ranger."
+            }
+          ],
+          "magicItems": [],
+          "consumables": [],
+          "storyItems": [
+            {
+              "id": "misha_bond",
+              "name": "Legame con Misha",
+              "quantity": 1,
+              "description": "Compagna bestiale ruolata come orso; gestita anche nel blocco companions."
+            }
+          ],
+          "notes": "Fonti: Imbrathil_Level5_con_Misha.pdf e ranger_guida.txt."
+        },
+        "details": {
+          "personalityTraits": [
+            "Ranger da retrovia: mobile, prudente, sempre in riposizionamento.",
+            "Combatte insieme a Misha per creare distanza e proteggere il gruppo."
+          ],
+          "ideals": [
+            "Sopravvivenza del party prima dell'eroismo individuale.",
+            "Preparazione, posizione e controllo del campo."
+          ],
+          "bonds": [
+            "Misha, compagna bestiale ruolata come orso.",
+            "Legame da viandante con il territorio e le piste selvagge."
+          ],
+          "flaws": [
+            "Non deve restare in mischia.",
+            "Dipende dal buon uso della bonus action tra Marchio del Cacciatore e comando a Misha."
+          ],
+          "backstoryShort": "Imbrathil è un ranger elfo dei boschi di livello 5, specializzato nel combattimento a distanza e affiancato da Misha, bestia della terra ruolata come orso.",
+          "campaignNotes": []
+        },
+        "ownerId": "user_demo",
+        "feats": [],
+        "proficiencies": {
+          "armor": [],
+          "weapons": [],
+          "tools": [],
+          "weaponMasteries": [],
+          "languages": []
+        },
+        "languages": [],
+        "powers": [
+          {
+            "id": "ranger_girovago"
+          }
+        ],
+        "progressionHistory": [
+          {
+            "id": "level-up-6-2026-07-17T08:00:20.995Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-17T08:00:20.995Z",
+            "className": "Ranger",
+            "totalLevel": {
+              "from": 5,
+              "to": 6
+            },
+            "classLevel": {
+              "className": "Ranger",
+              "from": 5,
+              "to": 6
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d10",
+              "baseIncrease": 6,
+              "constitutionModifier": 2,
+              "totalIncrease": 8,
+              "maxHpFrom": 52,
+              "maxHpTo": 60,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": null,
+            "classChoices": [
+              {
+                "id": "ranger_6_spells",
+                "label": "Incantesimi da Ranger",
+                "type": "spell_choice",
+                "selected": [
+                  "cordone-di-frecce",
+                  "crescita-di-spine",
+                  "ristorare-inferiore"
+                ],
+                "labels": [
+                  "Liv. 2 - Cordone di Frecce",
+                  "Liv. 2 - Crescita di Spine",
+                  "Liv. 2 - Ristorare Inferiore"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "cordone-di-frecce",
+                    "label": "Liv. 2 - Cordone di Frecce",
+                    "level": 2,
+                    "spell": {
+                      "id": "cordone-di-frecce",
+                      "name": "Cordone di Frecce",
+                      "name_upper": "CORDONE DI FRECCE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "",
+                        "verbal": false,
+                        "somatic": false,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Condizione Calmo Vento moderato Vento forte Burrasca Tempesta Componenti: V, S, M (una treccia ornamentale) Durata: 8 ore L'incantatore tocca fino a quattro frecce o dardi non magici e li conficca nel terreno nel suo spazio. Fino al termine dell'incantesimo, le munizioni non possono essere estratte fisicamente, e ogni volta che una creatura diversa dall'incantatore entra in uno spazio entro 9 metri dalle munizioni per la prima volta in un turno o se termina il suo turno entro quella distanza, una delle munizioni sfreccia in volo per colpirla. La creatura deve superare un tiro salvezza su Destrezza, altrimenti subisce 2d4 danni perforanti. La munizione viene distrutta. L'incantesimo termina quando non rimangono più munizioni nel terreno. Quando l'incantatore lancia questo incantesimo, può indicare un qualsiasi numero di creature a sua scelta che saranno ignorate dall'incantesimo.",
+                      "at_higher_levels": "La quantità di munizioni che possono essere influenzate aumenta di due per ogni slot di livello superiore al 2°. Ń-",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": "Destrezza",
+                        "damage_types": [
+                          "perforanti"
+                        ],
+                        "damage_dice": [
+                          "2d4"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 261
+                      }
+                    }
+                  },
+                  {
+                    "id": "crescita-di-spine",
+                    "label": "Liv. 2 - Crescita di Spine",
+                    "level": 2,
+                    "spell": {
+                      "id": "crescita-di-spine",
+                      "name": "Crescita di Spine",
+                      "name_upper": "CRESCITA DI SPINE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "45 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (sette spine)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "sette spine",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 10 minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Spine e spuntoni nascono dal terreno in una sfera del raggio di 6 metri, centrata su un punto entro gittata. Per la durata dell'incantesimo, l'area diventa terreno difficile. Quando una creatura entra nell'area o si muove al suo interno, subisce 2d4 danni perforanti ogni 1,5 metri di movimento. L a trasformazione del terreno è mimetizzata in modo da sembrare naturale. Qualsiasi creatura che non stesse osservando l'area al momento del lancio dell'incantesimo deve effettuare un'azione di Ricerca e una prova di Saggezza (Percezione o Sopravvivenza) contro la CD del tiro salvezza sull'incantesimo per riconoscere la peri colosità del terreno prima di entrarvi.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [
+                          "perforanti"
+                        ],
+                        "damage_dice": [
+                          "2d4"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 264
+                      }
+                    }
+                  },
+                  {
+                    "id": "ristorare-inferiore",
+                    "label": "Liv. 2 - Ristorare Inferiore",
+                    "level": 2,
+                    "spell": {
+                      "id": "ristorare-inferiore",
+                      "name": "Ristorare Inferiore",
+                      "name_upper": "RISTORARE INFERIORE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "druido",
+                        "paladino",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "V, S",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "istantanea",
+                        "concentration": false,
+                        "instantaneous": true,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore tocca una creatura e pone fine a una delle condizioni che la affiigge tra: accecata, assordata, avvelenata o paralizzata.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 324
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "cordone-di-frecce": {
+                    "id": "cordone-di-frecce",
+                    "label": "Liv. 2 - Cordone di Frecce",
+                    "level": 2,
+                    "spell": {
+                      "id": "cordone-di-frecce",
+                      "name": "Cordone di Frecce",
+                      "name_upper": "CORDONE DI FRECCE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "",
+                        "verbal": false,
+                        "somatic": false,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Condizione Calmo Vento moderato Vento forte Burrasca Tempesta Componenti: V, S, M (una treccia ornamentale) Durata: 8 ore L'incantatore tocca fino a quattro frecce o dardi non magici e li conficca nel terreno nel suo spazio. Fino al termine dell'incantesimo, le munizioni non possono essere estratte fisicamente, e ogni volta che una creatura diversa dall'incantatore entra in uno spazio entro 9 metri dalle munizioni per la prima volta in un turno o se termina il suo turno entro quella distanza, una delle munizioni sfreccia in volo per colpirla. La creatura deve superare un tiro salvezza su Destrezza, altrimenti subisce 2d4 danni perforanti. La munizione viene distrutta. L'incantesimo termina quando non rimangono più munizioni nel terreno. Quando l'incantatore lancia questo incantesimo, può indicare un qualsiasi numero di creature a sua scelta che saranno ignorate dall'incantesimo.",
+                      "at_higher_levels": "La quantità di munizioni che possono essere influenzate aumenta di due per ogni slot di livello superiore al 2°. Ń-",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": "Destrezza",
+                        "damage_types": [
+                          "perforanti"
+                        ],
+                        "damage_dice": [
+                          "2d4"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 261
+                      }
+                    }
+                  },
+                  "crescita-di-spine": {
+                    "id": "crescita-di-spine",
+                    "label": "Liv. 2 - Crescita di Spine",
+                    "level": 2,
+                    "spell": {
+                      "id": "crescita-di-spine",
+                      "name": "Crescita di Spine",
+                      "name_upper": "CRESCITA DI SPINE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "45 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (sette spine)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "sette spine",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 10 minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Spine e spuntoni nascono dal terreno in una sfera del raggio di 6 metri, centrata su un punto entro gittata. Per la durata dell'incantesimo, l'area diventa terreno difficile. Quando una creatura entra nell'area o si muove al suo interno, subisce 2d4 danni perforanti ogni 1,5 metri di movimento. L a trasformazione del terreno è mimetizzata in modo da sembrare naturale. Qualsiasi creatura che non stesse osservando l'area al momento del lancio dell'incantesimo deve effettuare un'azione di Ricerca e una prova di Saggezza (Percezione o Sopravvivenza) contro la CD del tiro salvezza sull'incantesimo per riconoscere la peri colosità del terreno prima di entrarvi.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [
+                          "perforanti"
+                        ],
+                        "damage_dice": [
+                          "2d4"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 264
+                      }
+                    }
+                  },
+                  "ristorare-inferiore": {
+                    "id": "ristorare-inferiore",
+                    "label": "Liv. 2 - Ristorare Inferiore",
+                    "level": 2,
+                    "spell": {
+                      "id": "ristorare-inferiore",
+                      "name": "Ristorare Inferiore",
+                      "name_upper": "RISTORARE INFERIORE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "druido",
+                        "paladino",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "V, S",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "istantanea",
+                        "concentration": false,
+                        "instantaneous": true,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore tocca una creatura e pone fine a una delle condizioni che la affiigge tra: accecata, assordata, avvelenata o paralizzata.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 324
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "snapshot-lv-7-2026-07-17T08:20:49.698Z",
+      "type": "level_up",
+      "level": 7,
+      "label": "Livello 7",
+      "classSummary": "Ranger (Signore delle Bestie) 7",
+      "createdAt": "2026-07-17T08:20:49.698Z",
+      "sourceHistoryId": "level-up-7-2026-07-17T08:20:49.698Z",
+      "changes": [
+        "Ranger 6 -> 7",
+        "PF massimi 60 -> 68",
+        "Incantesimi da Ranger: Liv. 2 - Silenzio"
+      ],
+      "character": {
+        "id": "pg_002",
+        "name": "Imbrathil",
+        "level": 7,
+        "race": "Elfo dei boschi",
+        "background": "Viandante",
+        "alignment": "Neutrale",
+        "concept": "DPS a distanza con supporto leggero e compagna bestiale Misha",
+        "classes": [
+          {
+            "name": "Ranger",
+            "level": 7,
+            "subclass": "Signore delle Bestie"
+          }
+        ],
+        "combat": {
+          "hp": {
+            "current": 68,
+            "max": 68,
+            "temp": 0
+          },
+          "ac": 17,
+          "speed": 13.5,
+          "initiativeBonus": 4,
+          "hitDice": {
+            "current": 7,
+            "max": 7,
+            "type": "d10",
+            "byType": {
+              "d10": 2
+            }
+          },
+          "movement": {
+            "climb": 13.5,
+            "swim": 13.5
+          }
+        },
+        "abilities": {
+          "str": 10,
+          "dex": 18,
+          "con": 14,
+          "int": 8,
+          "wis": 14,
+          "cha": 10
+        },
+        "savingThrows": {
+          "str": true,
+          "dex": true,
+          "con": false,
+          "int": false,
+          "wis": false,
+          "cha": false
+        },
+        "skills": [
+          {
+            "id": "acrobatics",
+            "label": "Acrobazia",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "athletics",
+            "label": "Atletica",
+            "ability": "str",
+            "proficient": true
+          },
+          {
+            "id": "sleight",
+            "label": "Rapidita di Mano",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "stealth",
+            "label": "Furtivita",
+            "ability": "dex",
+            "proficient": true
+          },
+          {
+            "id": "arcana",
+            "label": "Arcano",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "history",
+            "label": "Storia",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "investigation",
+            "label": "Indagare",
+            "ability": "int",
+            "proficient": true,
+            "bonusOverride": 1
+          },
+          {
+            "id": "nature",
+            "label": "Natura",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "religion",
+            "label": "Religione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "animal",
+            "label": "Addestrare Animali",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "insight",
+            "label": "Intuizione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "medicine",
+            "label": "Medicina",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "perception",
+            "label": "Percezione",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "survival",
+            "label": "Sopravvivenza",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "deception",
+            "label": "Inganno",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "intimidation",
+            "label": "Intimidire",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "performance",
+            "label": "Intrattenere",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "persuasion",
+            "label": "Persuasione",
+            "ability": "cha",
+            "proficient": false
+          }
+        ],
+        "resources": [
+          {
+            "id": "favored_enemy",
+            "label": "Nemico Prescelto",
+            "current": 3,
+            "max": 3,
+            "resetOn": "long_rest",
+            "category": "class"
+          }
+        ],
+        "spellcasting": {
+          "ability": "wis",
+          "spellSaveDc": 13,
+          "spellAttackBonus": 5,
+          "preparedCount": 6,
+          "slots": [
+            {
+              "id": "ranger_slot_1",
+              "level": 1,
+              "label": "Slot livello 1",
+              "current": 4,
+              "max": 4,
+              "resetOn": "long_rest"
+            },
+            {
+              "id": "ranger_slot_2",
+              "level": 2,
+              "label": "Slot livello 2",
+              "current": 3,
+              "max": 3,
+              "resetOn": "long_rest"
+            }
+          ],
+          "spells": [
+            {
+              "id": "marchio-del-cacciatore",
+              "name": "Marchio del Cacciatore",
+              "level": 1,
+              "school": "Divinazione",
+              "concentration": true,
+              "prepared": true,
+              "alwaysPrepared": true
+            },
+            {
+              "id": "bacche-benefiche",
+              "name": "Bacche Benefiche",
+              "level": 1,
+              "school": "Evocazione",
+              "concentration": false,
+              "prepared": true
+            },
+            {
+              "id": "cura-ferite",
+              "name": "Cura Ferite",
+              "level": 1,
+              "school": "Abiurazione",
+              "concentration": false,
+              "prepared": true
+            },
+            {
+              "id": "passo-velato",
+              "name": "Passo Velato",
+              "level": 2,
+              "school": "Evocazione",
+              "concentration": false,
+              "prepared": true,
+              "optional": true
+            },
+            {
+              "id": "passare-senza-tracce",
+              "name": "Passare Senza Tracce",
+              "level": 2,
+              "school": "Abiurazione",
+              "concentration": true,
+              "prepared": true
+            },
+            {
+              "id": "colpo-di-zefiro",
+              "name": "Colpo di Zefiro",
+              "level": 1,
+              "school": "Trasmutazione",
+              "concentration": true,
+              "prepared": true,
+              "catalogMissing": true,
+              "notes": "Presente nelle fonti locali, ma non trovato nel catalogo incantesimi 2024 caricato."
+            },
+            {
+              "id": "cordone-di-frecce",
+              "name": "Cordone di Frecce",
+              "level": 2,
+              "source": "Ranger",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "crescita-di-spine",
+              "name": "Crescita di Spine",
+              "level": 2,
+              "source": "Ranger",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "ristorare-inferiore",
+              "name": "Ristorare Inferiore",
+              "level": 2,
+              "source": "Ranger",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "silenzio",
+              "name": "Silenzio",
+              "level": 2,
+              "source": "Ranger",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            }
+          ]
+        },
+        "features": [
+          {
+            "id": "ranger_spellcasting",
+            "label": "Incantesimi",
+            "level": 1,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "spellcasting",
+            "summary": "Incantesimi da ranger con Saggezza."
+          },
+          {
+            "id": "favored_enemy",
+            "label": "Nemico Prescelto",
+            "level": 1,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "resource",
+            "resourceId": "favored_enemy",
+            "summary": "Marchio del Cacciatore come fulcro dei danni."
+          },
+          {
+            "id": "weapon_mastery",
+            "label": "Padronanza d'armi",
+            "level": 1,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "combat",
+            "summary": "Padronanza su armi scelte, con focus sull'arco lungo."
+          },
+          {
+            "id": "deft_explorer",
+            "label": "Esploratore Esperto",
+            "level": 2,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "utility",
+            "summary": "Viaggi, competenze e presenza da esploratore del gruppo."
+          },
+          {
+            "id": "archery_style",
+            "label": "Stile di Combattimento: Tiro",
+            "level": 2,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "combat",
+            "summary": "+2 ai tiri per colpire con l'arco lungo, gia contato nel bonus +9."
+          },
+          {
+            "id": "primal_companion",
+            "label": "Compagno Primordiale",
+            "level": 3,
+            "source": "Signore delle Bestie",
+            "category": "subclass",
+            "kind": "companion",
+            "summary": "Misha, bestia della terra ruolata come orso, agisce nel turno di Imbrathil."
+          },
+          {
+            "id": "extra_attack",
+            "label": "Attacco Extra",
+            "level": 5,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "combat",
+            "summary": "Due attacchi con arco lungo usando l'azione Attacco."
+          },
+          {
+            "id": "second_level_spells",
+            "label": "Incantesimi di 2 livello",
+            "level": 5,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "spellcasting",
+            "summary": "Sblocca slot di 2 livello e magia tattica come Passare senza Tracce."
+          },
+          {
+            "id": "ranger_girovago",
+            "label": "Girovago",
+            "level": 6,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Aumenti velocità e capacità di movimento/esplorazione."
+          },
+          {
+            "id": "ranger_signore_delle_bestie_addestramento_eccezionale",
+            "label": "Addestramento Eccezionale",
+            "level": 7,
+            "source": "Signore delle Bestie",
+            "category": "subclass",
+            "kind": "passive",
+            "summary": "Il compagno agisce meglio e infligge danni più efficaci."
+          }
+        ],
+        "actions": [
+          {
+            "id": "longbow",
+            "name": "Arco Lungo",
+            "type": "attack",
+            "toHit": 9,
+            "damage": "1d8+4",
+            "notes": "Con Marchio del Cacciatore aggiunge 1d6. Attacco Extra: 2 attacchi."
+          }
+        ],
+        "companions": [
+          {
+            "id": "misha",
+            "name": "Misha",
+            "kind": "Bestia della Terra",
+            "flavor": "Orso",
+            "ac": 15,
+            "hp": {
+              "current": 30,
+              "max": 30
+            },
+            "speed": 12,
+            "attack": {
+              "name": "Colpo della Bestia",
+              "toHit": 5,
+              "damage": "1d8+5"
+            },
+            "summary": "Tank leggero: protegge caster e ranger, blocca nemici e attacca tramite bonus action."
+          }
+        ],
+        "notes": "Fonti locali: Imbrathil_Level5_con_Misha.pdf e ranger_guida.txt.",
+        "equipment": {
+          "currency": {
+            "cp": 0,
+            "sp": 0,
+            "ep": 0,
+            "gp": 0,
+            "pp": 0
+          },
+          "weapons": [
+            {
+              "id": "longbow",
+              "name": "Arco lungo",
+              "quantity": 1,
+              "description": "Arma principale. 1d8 perforanti.",
+              "notes": "Tiro per colpire +9 già calcolato con Destrezza, competenza e Stile Tiro."
+            },
+            {
+              "id": "arrows",
+              "name": "Frecce",
+              "quantity": 20,
+              "description": "Munizioni per arco lungo.",
+              "recoverable": true
+            },
+            {
+              "id": "shortswords",
+              "name": "Spade corte",
+              "quantity": 2,
+              "description": "Opzione da mischia indicata dalla guida.",
+              "notes": "La guida ammette anche 2 pugnali come alternativa."
+            }
+          ],
+          "armor": [
+            {
+              "id": "studded_leather",
+              "name": "Armatura di cuoio borchiato",
+              "quantity": 1,
+              "description": "Base CA 12; la scheda calcola CA 17 con Destrezza e bonus elfico indicato dalla fonte."
+            }
+          ],
+          "tools": [],
+          "adventuringGear": [
+            {
+              "id": "wanderer_kit",
+              "name": "Kit da viandante",
+              "quantity": 1,
+              "description": "Equipaggiamento base indicato nella guida ranger."
+            }
+          ],
+          "magicItems": [],
+          "consumables": [],
+          "storyItems": [
+            {
+              "id": "misha_bond",
+              "name": "Legame con Misha",
+              "quantity": 1,
+              "description": "Compagna bestiale ruolata come orso; gestita anche nel blocco companions."
+            }
+          ],
+          "notes": "Fonti: Imbrathil_Level5_con_Misha.pdf e ranger_guida.txt."
+        },
+        "details": {
+          "personalityTraits": [
+            "Ranger da retrovia: mobile, prudente, sempre in riposizionamento.",
+            "Combatte insieme a Misha per creare distanza e proteggere il gruppo."
+          ],
+          "ideals": [
+            "Sopravvivenza del party prima dell'eroismo individuale.",
+            "Preparazione, posizione e controllo del campo."
+          ],
+          "bonds": [
+            "Misha, compagna bestiale ruolata come orso.",
+            "Legame da viandante con il territorio e le piste selvagge."
+          ],
+          "flaws": [
+            "Non deve restare in mischia.",
+            "Dipende dal buon uso della bonus action tra Marchio del Cacciatore e comando a Misha."
+          ],
+          "backstoryShort": "Imbrathil è un ranger elfo dei boschi di livello 5, specializzato nel combattimento a distanza e affiancato da Misha, bestia della terra ruolata come orso.",
+          "campaignNotes": []
+        },
+        "ownerId": "user_demo",
+        "feats": [],
+        "proficiencies": {
+          "armor": [],
+          "weapons": [],
+          "tools": [],
+          "weaponMasteries": [],
+          "languages": []
+        },
+        "languages": [],
+        "powers": [
+          {
+            "id": "ranger_girovago"
+          },
+          {
+            "id": "ranger_signore_delle_bestie_addestramento_eccezionale"
+          }
+        ],
+        "progressionHistory": [
+          {
+            "id": "level-up-6-2026-07-17T08:00:20.995Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-17T08:00:20.995Z",
+            "className": "Ranger",
+            "totalLevel": {
+              "from": 5,
+              "to": 6
+            },
+            "classLevel": {
+              "className": "Ranger",
+              "from": 5,
+              "to": 6
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d10",
+              "baseIncrease": 6,
+              "constitutionModifier": 2,
+              "totalIncrease": 8,
+              "maxHpFrom": 52,
+              "maxHpTo": 60,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": null,
+            "classChoices": [
+              {
+                "id": "ranger_6_spells",
+                "label": "Incantesimi da Ranger",
+                "type": "spell_choice",
+                "selected": [
+                  "cordone-di-frecce",
+                  "crescita-di-spine",
+                  "ristorare-inferiore"
+                ],
+                "labels": [
+                  "Liv. 2 - Cordone di Frecce",
+                  "Liv. 2 - Crescita di Spine",
+                  "Liv. 2 - Ristorare Inferiore"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "cordone-di-frecce",
+                    "label": "Liv. 2 - Cordone di Frecce",
+                    "level": 2,
+                    "spell": {
+                      "id": "cordone-di-frecce",
+                      "name": "Cordone di Frecce",
+                      "name_upper": "CORDONE DI FRECCE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "",
+                        "verbal": false,
+                        "somatic": false,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Condizione Calmo Vento moderato Vento forte Burrasca Tempesta Componenti: V, S, M (una treccia ornamentale) Durata: 8 ore L'incantatore tocca fino a quattro frecce o dardi non magici e li conficca nel terreno nel suo spazio. Fino al termine dell'incantesimo, le munizioni non possono essere estratte fisicamente, e ogni volta che una creatura diversa dall'incantatore entra in uno spazio entro 9 metri dalle munizioni per la prima volta in un turno o se termina il suo turno entro quella distanza, una delle munizioni sfreccia in volo per colpirla. La creatura deve superare un tiro salvezza su Destrezza, altrimenti subisce 2d4 danni perforanti. La munizione viene distrutta. L'incantesimo termina quando non rimangono più munizioni nel terreno. Quando l'incantatore lancia questo incantesimo, può indicare un qualsiasi numero di creature a sua scelta che saranno ignorate dall'incantesimo.",
+                      "at_higher_levels": "La quantità di munizioni che possono essere influenzate aumenta di due per ogni slot di livello superiore al 2°. Ń-",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": "Destrezza",
+                        "damage_types": [
+                          "perforanti"
+                        ],
+                        "damage_dice": [
+                          "2d4"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 261
+                      }
+                    }
+                  },
+                  {
+                    "id": "crescita-di-spine",
+                    "label": "Liv. 2 - Crescita di Spine",
+                    "level": 2,
+                    "spell": {
+                      "id": "crescita-di-spine",
+                      "name": "Crescita di Spine",
+                      "name_upper": "CRESCITA DI SPINE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "45 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (sette spine)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "sette spine",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 10 minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Spine e spuntoni nascono dal terreno in una sfera del raggio di 6 metri, centrata su un punto entro gittata. Per la durata dell'incantesimo, l'area diventa terreno difficile. Quando una creatura entra nell'area o si muove al suo interno, subisce 2d4 danni perforanti ogni 1,5 metri di movimento. L a trasformazione del terreno è mimetizzata in modo da sembrare naturale. Qualsiasi creatura che non stesse osservando l'area al momento del lancio dell'incantesimo deve effettuare un'azione di Ricerca e una prova di Saggezza (Percezione o Sopravvivenza) contro la CD del tiro salvezza sull'incantesimo per riconoscere la peri colosità del terreno prima di entrarvi.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [
+                          "perforanti"
+                        ],
+                        "damage_dice": [
+                          "2d4"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 264
+                      }
+                    }
+                  },
+                  {
+                    "id": "ristorare-inferiore",
+                    "label": "Liv. 2 - Ristorare Inferiore",
+                    "level": 2,
+                    "spell": {
+                      "id": "ristorare-inferiore",
+                      "name": "Ristorare Inferiore",
+                      "name_upper": "RISTORARE INFERIORE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "druido",
+                        "paladino",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "V, S",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "istantanea",
+                        "concentration": false,
+                        "instantaneous": true,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore tocca una creatura e pone fine a una delle condizioni che la affiigge tra: accecata, assordata, avvelenata o paralizzata.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 324
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "cordone-di-frecce": {
+                    "id": "cordone-di-frecce",
+                    "label": "Liv. 2 - Cordone di Frecce",
+                    "level": 2,
+                    "spell": {
+                      "id": "cordone-di-frecce",
+                      "name": "Cordone di Frecce",
+                      "name_upper": "CORDONE DI FRECCE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "",
+                        "verbal": false,
+                        "somatic": false,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Condizione Calmo Vento moderato Vento forte Burrasca Tempesta Componenti: V, S, M (una treccia ornamentale) Durata: 8 ore L'incantatore tocca fino a quattro frecce o dardi non magici e li conficca nel terreno nel suo spazio. Fino al termine dell'incantesimo, le munizioni non possono essere estratte fisicamente, e ogni volta che una creatura diversa dall'incantatore entra in uno spazio entro 9 metri dalle munizioni per la prima volta in un turno o se termina il suo turno entro quella distanza, una delle munizioni sfreccia in volo per colpirla. La creatura deve superare un tiro salvezza su Destrezza, altrimenti subisce 2d4 danni perforanti. La munizione viene distrutta. L'incantesimo termina quando non rimangono più munizioni nel terreno. Quando l'incantatore lancia questo incantesimo, può indicare un qualsiasi numero di creature a sua scelta che saranno ignorate dall'incantesimo.",
+                      "at_higher_levels": "La quantità di munizioni che possono essere influenzate aumenta di due per ogni slot di livello superiore al 2°. Ń-",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": "Destrezza",
+                        "damage_types": [
+                          "perforanti"
+                        ],
+                        "damage_dice": [
+                          "2d4"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 261
+                      }
+                    }
+                  },
+                  "crescita-di-spine": {
+                    "id": "crescita-di-spine",
+                    "label": "Liv. 2 - Crescita di Spine",
+                    "level": 2,
+                    "spell": {
+                      "id": "crescita-di-spine",
+                      "name": "Crescita di Spine",
+                      "name_upper": "CRESCITA DI SPINE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "45 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (sette spine)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "sette spine",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 10 minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Spine e spuntoni nascono dal terreno in una sfera del raggio di 6 metri, centrata su un punto entro gittata. Per la durata dell'incantesimo, l'area diventa terreno difficile. Quando una creatura entra nell'area o si muove al suo interno, subisce 2d4 danni perforanti ogni 1,5 metri di movimento. L a trasformazione del terreno è mimetizzata in modo da sembrare naturale. Qualsiasi creatura che non stesse osservando l'area al momento del lancio dell'incantesimo deve effettuare un'azione di Ricerca e una prova di Saggezza (Percezione o Sopravvivenza) contro la CD del tiro salvezza sull'incantesimo per riconoscere la peri colosità del terreno prima di entrarvi.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [
+                          "perforanti"
+                        ],
+                        "damage_dice": [
+                          "2d4"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 264
+                      }
+                    }
+                  },
+                  "ristorare-inferiore": {
+                    "id": "ristorare-inferiore",
+                    "label": "Liv. 2 - Ristorare Inferiore",
+                    "level": 2,
+                    "spell": {
+                      "id": "ristorare-inferiore",
+                      "name": "Ristorare Inferiore",
+                      "name_upper": "RISTORARE INFERIORE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "druido",
+                        "paladino",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "V, S",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "istantanea",
+                        "concentration": false,
+                        "instantaneous": true,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore tocca una creatura e pone fine a una delle condizioni che la affiigge tra: accecata, assordata, avvelenata o paralizzata.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 324
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          },
+          {
+            "id": "level-up-7-2026-07-17T08:20:49.698Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-17T08:20:49.698Z",
+            "className": "Ranger",
+            "totalLevel": {
+              "from": 6,
+              "to": 7
+            },
+            "classLevel": {
+              "className": "Ranger",
+              "from": 6,
+              "to": 7
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d10",
+              "baseIncrease": 6,
+              "constitutionModifier": 2,
+              "totalIncrease": 8,
+              "maxHpFrom": 60,
+              "maxHpTo": 68,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": null,
+            "classChoices": [
+              {
+                "id": "ranger_7_spells",
+                "label": "Incantesimi da Ranger",
+                "type": "spell_choice",
+                "selected": [
+                  "silenzio"
+                ],
+                "labels": [
+                  "Liv. 2 - Silenzio"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "silenzio",
+                    "label": "Liv. 2 - Silenzio",
+                    "level": 2,
+                    "spell": {
+                      "id": "silenzio",
+                      "name": "Silenzio",
+                      "name_upper": "SILENZIO",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Illusione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione o rituale",
+                        "ritual": true
+                      },
+                      "range": {
+                        "raw": "36 metri"
+                      },
+                      "components": {
+                        "raw": "V, S",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 1 0  minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore genera una sfera del raggio di 6 metri cen trata su un punto a sua scelta situato entro gittata e, per la durata dell'incantesimo, nessun suono può essere creato all'interno di quella sfera o attraversarla. Ogni creatura o oggetto interamente all'interno della sfera è immune ai danni da tuono e ogni creatura interamente all'interno della sfera è assordata. All'interno dell'area è impossibile lanciare un incantesimo che includa una componente verbale. 329",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [
+                          "tuono"
+                        ],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": true
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 285
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "silenzio": {
+                    "id": "silenzio",
+                    "label": "Liv. 2 - Silenzio",
+                    "level": 2,
+                    "spell": {
+                      "id": "silenzio",
+                      "name": "Silenzio",
+                      "name_upper": "SILENZIO",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Illusione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione o rituale",
+                        "ritual": true
+                      },
+                      "range": {
+                        "raw": "36 metri"
+                      },
+                      "components": {
+                        "raw": "V, S",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 1 0  minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore genera una sfera del raggio di 6 metri cen trata su un punto a sua scelta situato entro gittata e, per la durata dell'incantesimo, nessun suono può essere creato all'interno di quella sfera o attraversarla. Ogni creatura o oggetto interamente all'interno della sfera è immune ai danni da tuono e ogni creatura interamente all'interno della sfera è assordata. All'interno dell'area è impossibile lanciare un incantesimo che includa una componente verbale. 329",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [
+                          "tuono"
+                        ],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": true
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 285
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "snapshot-lv-8-2026-07-17T08:46:05.734Z",
+      "type": "level_up",
+      "level": 8,
+      "label": "Livello 8",
+      "classSummary": "Ranger (Signore delle Bestie) 8",
+      "createdAt": "2026-07-17T08:46:05.734Z",
+      "sourceHistoryId": "level-up-8-2026-07-17T08:46:05.734Z",
+      "changes": [
+        "Ranger 7 -> 8",
+        "PF massimi 68 -> 76",
+        "Talento: Maestria dei veleni"
+      ],
+      "character": {
+        "id": "pg_002",
+        "name": "Imbrathil",
+        "level": 8,
+        "race": "Elfo dei boschi",
+        "background": "Viandante",
+        "alignment": "Neutrale",
+        "concept": "DPS a distanza con supporto leggero e compagna bestiale Misha",
+        "classes": [
+          {
+            "name": "Ranger",
+            "level": 8,
+            "subclass": "Signore delle Bestie"
+          }
+        ],
+        "combat": {
+          "hp": {
+            "current": 76,
+            "max": 76,
+            "temp": 0
+          },
+          "ac": 17,
+          "speed": 13.5,
+          "initiativeBonus": 4,
+          "hitDice": {
+            "current": 8,
+            "max": 8,
+            "type": "d10",
+            "byType": {
+              "d10": 3
+            }
+          },
+          "movement": {
+            "climb": 13.5,
+            "swim": 13.5
+          }
+        },
+        "abilities": {
+          "str": 10,
+          "dex": 19,
+          "con": 14,
+          "int": 8,
+          "wis": 14,
+          "cha": 10
+        },
+        "savingThrows": {
+          "str": true,
+          "dex": true,
+          "con": false,
+          "int": false,
+          "wis": false,
+          "cha": false
+        },
+        "skills": [
+          {
+            "id": "acrobatics",
+            "label": "Acrobazia",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "athletics",
+            "label": "Atletica",
+            "ability": "str",
+            "proficient": true
+          },
+          {
+            "id": "sleight",
+            "label": "Rapidita di Mano",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "stealth",
+            "label": "Furtivita",
+            "ability": "dex",
+            "proficient": true
+          },
+          {
+            "id": "arcana",
+            "label": "Arcano",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "history",
+            "label": "Storia",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "investigation",
+            "label": "Indagare",
+            "ability": "int",
+            "proficient": true,
+            "bonusOverride": 1
+          },
+          {
+            "id": "nature",
+            "label": "Natura",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "religion",
+            "label": "Religione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "animal",
+            "label": "Addestrare Animali",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "insight",
+            "label": "Intuizione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "medicine",
+            "label": "Medicina",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "perception",
+            "label": "Percezione",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "survival",
+            "label": "Sopravvivenza",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "deception",
+            "label": "Inganno",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "intimidation",
+            "label": "Intimidire",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "performance",
+            "label": "Intrattenere",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "persuasion",
+            "label": "Persuasione",
+            "ability": "cha",
+            "proficient": false
+          }
+        ],
+        "resources": [
+          {
+            "id": "favored_enemy",
+            "label": "Nemico Prescelto",
+            "current": 3,
+            "max": 3,
+            "resetOn": "long_rest",
+            "category": "class"
+          }
+        ],
+        "spellcasting": {
+          "ability": "wis",
+          "spellSaveDc": 13,
+          "spellAttackBonus": 5,
+          "preparedCount": 7,
+          "slots": [
+            {
+              "id": "ranger_slot_1",
+              "level": 1,
+              "label": "Slot livello 1",
+              "current": 4,
+              "max": 4,
+              "resetOn": "long_rest"
+            },
+            {
+              "id": "ranger_slot_2",
+              "level": 2,
+              "label": "Slot livello 2",
+              "current": 3,
+              "max": 3,
+              "resetOn": "long_rest"
+            }
+          ],
+          "spells": [
+            {
+              "id": "marchio-del-cacciatore",
+              "name": "Marchio del Cacciatore",
+              "level": 1,
+              "school": "Divinazione",
+              "concentration": true,
+              "prepared": true,
+              "alwaysPrepared": true
+            },
+            {
+              "id": "bacche-benefiche",
+              "name": "Bacche Benefiche",
+              "level": 1,
+              "school": "Evocazione",
+              "concentration": false,
+              "prepared": true
+            },
+            {
+              "id": "cura-ferite",
+              "name": "Cura Ferite",
+              "level": 1,
+              "school": "Abiurazione",
+              "concentration": false,
+              "prepared": true
+            },
+            {
+              "id": "passo-velato",
+              "name": "Passo Velato",
+              "level": 2,
+              "school": "Evocazione",
+              "concentration": false,
+              "prepared": true,
+              "optional": true
+            },
+            {
+              "id": "passare-senza-tracce",
+              "name": "Passare Senza Tracce",
+              "level": 2,
+              "school": "Abiurazione",
+              "concentration": true,
+              "prepared": true
+            },
+            {
+              "id": "colpo-di-zefiro",
+              "name": "Colpo di Zefiro",
+              "level": 1,
+              "school": "Trasmutazione",
+              "concentration": true,
+              "prepared": true,
+              "catalogMissing": true,
+              "notes": "Presente nelle fonti locali, ma non trovato nel catalogo incantesimi 2024 caricato."
+            },
+            {
+              "id": "cordone-di-frecce",
+              "name": "Cordone di Frecce",
+              "level": 2,
+              "source": "Ranger",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "crescita-di-spine",
+              "name": "Crescita di Spine",
+              "level": 2,
+              "source": "Ranger",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "ristorare-inferiore",
+              "name": "Ristorare Inferiore",
+              "level": 2,
+              "source": "Ranger",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "silenzio",
+              "name": "Silenzio",
+              "level": 2,
+              "source": "Ranger",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            }
+          ]
+        },
+        "features": [
+          {
+            "id": "ranger_spellcasting",
+            "label": "Incantesimi",
+            "level": 1,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "spellcasting",
+            "summary": "Incantesimi da ranger con Saggezza."
+          },
+          {
+            "id": "favored_enemy",
+            "label": "Nemico Prescelto",
+            "level": 1,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "resource",
+            "resourceId": "favored_enemy",
+            "summary": "Marchio del Cacciatore come fulcro dei danni."
+          },
+          {
+            "id": "weapon_mastery",
+            "label": "Padronanza d'armi",
+            "level": 1,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "combat",
+            "summary": "Padronanza su armi scelte, con focus sull'arco lungo."
+          },
+          {
+            "id": "deft_explorer",
+            "label": "Esploratore Esperto",
+            "level": 2,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "utility",
+            "summary": "Viaggi, competenze e presenza da esploratore del gruppo."
+          },
+          {
+            "id": "archery_style",
+            "label": "Stile di Combattimento: Tiro",
+            "level": 2,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "combat",
+            "summary": "+2 ai tiri per colpire con l'arco lungo, gia contato nel bonus +9."
+          },
+          {
+            "id": "primal_companion",
+            "label": "Compagno Primordiale",
+            "level": 3,
+            "source": "Signore delle Bestie",
+            "category": "subclass",
+            "kind": "companion",
+            "summary": "Misha, bestia della terra ruolata come orso, agisce nel turno di Imbrathil."
+          },
+          {
+            "id": "extra_attack",
+            "label": "Attacco Extra",
+            "level": 5,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "combat",
+            "summary": "Due attacchi con arco lungo usando l'azione Attacco."
+          },
+          {
+            "id": "second_level_spells",
+            "label": "Incantesimi di 2 livello",
+            "level": 5,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "spellcasting",
+            "summary": "Sblocca slot di 2 livello e magia tattica come Passare senza Tracce."
+          },
+          {
+            "id": "ranger_girovago",
+            "label": "Girovago",
+            "level": 6,
+            "source": "Ranger",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Aumenti velocità e capacità di movimento/esplorazione."
+          },
+          {
+            "id": "ranger_signore_delle_bestie_addestramento_eccezionale",
+            "label": "Addestramento Eccezionale",
+            "level": 7,
+            "source": "Signore delle Bestie",
+            "category": "subclass",
+            "kind": "passive",
+            "summary": "Il compagno agisce meglio e infligge danni più efficaci."
+          }
+        ],
+        "actions": [
+          {
+            "id": "longbow",
+            "name": "Arco Lungo",
+            "type": "attack",
+            "toHit": 9,
+            "damage": "1d8+4",
+            "notes": "Con Marchio del Cacciatore aggiunge 1d6. Attacco Extra: 2 attacchi."
+          }
+        ],
+        "companions": [
+          {
+            "id": "misha",
+            "name": "Misha",
+            "kind": "Bestia della Terra",
+            "flavor": "Orso",
+            "ac": 15,
+            "hp": {
+              "current": 30,
+              "max": 30
+            },
+            "speed": 12,
+            "attack": {
+              "name": "Colpo della Bestia",
+              "toHit": 5,
+              "damage": "1d8+5"
+            },
+            "summary": "Tank leggero: protegge caster e ranger, blocca nemici e attacca tramite bonus action."
+          }
+        ],
+        "notes": "Fonti locali: Imbrathil_Level5_con_Misha.pdf e ranger_guida.txt.",
+        "equipment": {
+          "currency": {
+            "cp": 0,
+            "sp": 0,
+            "ep": 0,
+            "gp": 0,
+            "pp": 0
+          },
+          "weapons": [
+            {
+              "id": "longbow",
+              "name": "Arco lungo",
+              "quantity": 1,
+              "description": "Arma principale. 1d8 perforanti.",
+              "notes": "Tiro per colpire +9 già calcolato con Destrezza, competenza e Stile Tiro."
+            },
+            {
+              "id": "arrows",
+              "name": "Frecce",
+              "quantity": 20,
+              "description": "Munizioni per arco lungo.",
+              "recoverable": true
+            },
+            {
+              "id": "shortswords",
+              "name": "Spade corte",
+              "quantity": 2,
+              "description": "Opzione da mischia indicata dalla guida.",
+              "notes": "La guida ammette anche 2 pugnali come alternativa."
+            }
+          ],
+          "armor": [
+            {
+              "id": "studded_leather",
+              "name": "Armatura di cuoio borchiato",
+              "quantity": 1,
+              "description": "Base CA 12; la scheda calcola CA 17 con Destrezza e bonus elfico indicato dalla fonte."
+            }
+          ],
+          "tools": [],
+          "adventuringGear": [
+            {
+              "id": "wanderer_kit",
+              "name": "Kit da viandante",
+              "quantity": 1,
+              "description": "Equipaggiamento base indicato nella guida ranger."
+            }
+          ],
+          "magicItems": [],
+          "consumables": [],
+          "storyItems": [
+            {
+              "id": "misha_bond",
+              "name": "Legame con Misha",
+              "quantity": 1,
+              "description": "Compagna bestiale ruolata come orso; gestita anche nel blocco companions."
+            }
+          ],
+          "notes": "Fonti: Imbrathil_Level5_con_Misha.pdf e ranger_guida.txt."
+        },
+        "details": {
+          "personalityTraits": [
+            "Ranger da retrovia: mobile, prudente, sempre in riposizionamento.",
+            "Combatte insieme a Misha per creare distanza e proteggere il gruppo."
+          ],
+          "ideals": [
+            "Sopravvivenza del party prima dell'eroismo individuale.",
+            "Preparazione, posizione e controllo del campo."
+          ],
+          "bonds": [
+            "Misha, compagna bestiale ruolata come orso.",
+            "Legame da viandante con il territorio e le piste selvagge."
+          ],
+          "flaws": [
+            "Non deve restare in mischia.",
+            "Dipende dal buon uso della bonus action tra Marchio del Cacciatore e comando a Misha."
+          ],
+          "backstoryShort": "Imbrathil è un ranger elfo dei boschi di livello 5, specializzato nel combattimento a distanza e affiancato da Misha, bestia della terra ruolata come orso.",
+          "campaignNotes": []
+        },
+        "ownerId": "user_demo",
+        "feats": [
+          {
+            "id": "maestria-dei-veleni",
+            "name": "Maestria dei veleni",
+            "source": "Level up",
+            "level": 8,
+            "category": "Generale",
+            "summary": "Migliora uso, creazione e applicazione dei veleni.",
+            "choices": [
+              {
+                "id": "ability_increase",
+                "label": "Incremento dei punteggi di caratteristica",
+                "selected": [
+                  "dex"
+                ],
+                "labels": [
+                  "DES"
+                ]
+              }
+            ]
+          }
+        ],
+        "proficiencies": {
+          "armor": [],
+          "weapons": [],
+          "tools": [],
+          "weaponMasteries": [],
+          "languages": []
+        },
+        "languages": [],
+        "powers": [
+          {
+            "id": "ranger_girovago"
+          },
+          {
+            "id": "ranger_signore_delle_bestie_addestramento_eccezionale"
+          }
+        ],
+        "progressionHistory": [
+          {
+            "id": "level-up-6-2026-07-17T08:00:20.995Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-17T08:00:20.995Z",
+            "className": "Ranger",
+            "totalLevel": {
+              "from": 5,
+              "to": 6
+            },
+            "classLevel": {
+              "className": "Ranger",
+              "from": 5,
+              "to": 6
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d10",
+              "baseIncrease": 6,
+              "constitutionModifier": 2,
+              "totalIncrease": 8,
+              "maxHpFrom": 52,
+              "maxHpTo": 60,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": null,
+            "classChoices": [
+              {
+                "id": "ranger_6_spells",
+                "label": "Incantesimi da Ranger",
+                "type": "spell_choice",
+                "selected": [
+                  "cordone-di-frecce",
+                  "crescita-di-spine",
+                  "ristorare-inferiore"
+                ],
+                "labels": [
+                  "Liv. 2 - Cordone di Frecce",
+                  "Liv. 2 - Crescita di Spine",
+                  "Liv. 2 - Ristorare Inferiore"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "cordone-di-frecce",
+                    "label": "Liv. 2 - Cordone di Frecce",
+                    "level": 2,
+                    "spell": {
+                      "id": "cordone-di-frecce",
+                      "name": "Cordone di Frecce",
+                      "name_upper": "CORDONE DI FRECCE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "",
+                        "verbal": false,
+                        "somatic": false,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Condizione Calmo Vento moderato Vento forte Burrasca Tempesta Componenti: V, S, M (una treccia ornamentale) Durata: 8 ore L'incantatore tocca fino a quattro frecce o dardi non magici e li conficca nel terreno nel suo spazio. Fino al termine dell'incantesimo, le munizioni non possono essere estratte fisicamente, e ogni volta che una creatura diversa dall'incantatore entra in uno spazio entro 9 metri dalle munizioni per la prima volta in un turno o se termina il suo turno entro quella distanza, una delle munizioni sfreccia in volo per colpirla. La creatura deve superare un tiro salvezza su Destrezza, altrimenti subisce 2d4 danni perforanti. La munizione viene distrutta. L'incantesimo termina quando non rimangono più munizioni nel terreno. Quando l'incantatore lancia questo incantesimo, può indicare un qualsiasi numero di creature a sua scelta che saranno ignorate dall'incantesimo.",
+                      "at_higher_levels": "La quantità di munizioni che possono essere influenzate aumenta di due per ogni slot di livello superiore al 2°. Ń-",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": "Destrezza",
+                        "damage_types": [
+                          "perforanti"
+                        ],
+                        "damage_dice": [
+                          "2d4"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 261
+                      }
+                    }
+                  },
+                  {
+                    "id": "crescita-di-spine",
+                    "label": "Liv. 2 - Crescita di Spine",
+                    "level": 2,
+                    "spell": {
+                      "id": "crescita-di-spine",
+                      "name": "Crescita di Spine",
+                      "name_upper": "CRESCITA DI SPINE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "45 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (sette spine)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "sette spine",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 10 minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Spine e spuntoni nascono dal terreno in una sfera del raggio di 6 metri, centrata su un punto entro gittata. Per la durata dell'incantesimo, l'area diventa terreno difficile. Quando una creatura entra nell'area o si muove al suo interno, subisce 2d4 danni perforanti ogni 1,5 metri di movimento. L a trasformazione del terreno è mimetizzata in modo da sembrare naturale. Qualsiasi creatura che non stesse osservando l'area al momento del lancio dell'incantesimo deve effettuare un'azione di Ricerca e una prova di Saggezza (Percezione o Sopravvivenza) contro la CD del tiro salvezza sull'incantesimo per riconoscere la peri colosità del terreno prima di entrarvi.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [
+                          "perforanti"
+                        ],
+                        "damage_dice": [
+                          "2d4"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 264
+                      }
+                    }
+                  },
+                  {
+                    "id": "ristorare-inferiore",
+                    "label": "Liv. 2 - Ristorare Inferiore",
+                    "level": 2,
+                    "spell": {
+                      "id": "ristorare-inferiore",
+                      "name": "Ristorare Inferiore",
+                      "name_upper": "RISTORARE INFERIORE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "druido",
+                        "paladino",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "V, S",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "istantanea",
+                        "concentration": false,
+                        "instantaneous": true,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore tocca una creatura e pone fine a una delle condizioni che la affiigge tra: accecata, assordata, avvelenata o paralizzata.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 324
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "cordone-di-frecce": {
+                    "id": "cordone-di-frecce",
+                    "label": "Liv. 2 - Cordone di Frecce",
+                    "level": 2,
+                    "spell": {
+                      "id": "cordone-di-frecce",
+                      "name": "Cordone di Frecce",
+                      "name_upper": "CORDONE DI FRECCE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "",
+                        "verbal": false,
+                        "somatic": false,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Condizione Calmo Vento moderato Vento forte Burrasca Tempesta Componenti: V, S, M (una treccia ornamentale) Durata: 8 ore L'incantatore tocca fino a quattro frecce o dardi non magici e li conficca nel terreno nel suo spazio. Fino al termine dell'incantesimo, le munizioni non possono essere estratte fisicamente, e ogni volta che una creatura diversa dall'incantatore entra in uno spazio entro 9 metri dalle munizioni per la prima volta in un turno o se termina il suo turno entro quella distanza, una delle munizioni sfreccia in volo per colpirla. La creatura deve superare un tiro salvezza su Destrezza, altrimenti subisce 2d4 danni perforanti. La munizione viene distrutta. L'incantesimo termina quando non rimangono più munizioni nel terreno. Quando l'incantatore lancia questo incantesimo, può indicare un qualsiasi numero di creature a sua scelta che saranno ignorate dall'incantesimo.",
+                      "at_higher_levels": "La quantità di munizioni che possono essere influenzate aumenta di due per ogni slot di livello superiore al 2°. Ń-",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": "Destrezza",
+                        "damage_types": [
+                          "perforanti"
+                        ],
+                        "damage_dice": [
+                          "2d4"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 261
+                      }
+                    }
+                  },
+                  "crescita-di-spine": {
+                    "id": "crescita-di-spine",
+                    "label": "Liv. 2 - Crescita di Spine",
+                    "level": 2,
+                    "spell": {
+                      "id": "crescita-di-spine",
+                      "name": "Crescita di Spine",
+                      "name_upper": "CRESCITA DI SPINE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "45 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (sette spine)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "sette spine",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 10 minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Spine e spuntoni nascono dal terreno in una sfera del raggio di 6 metri, centrata su un punto entro gittata. Per la durata dell'incantesimo, l'area diventa terreno difficile. Quando una creatura entra nell'area o si muove al suo interno, subisce 2d4 danni perforanti ogni 1,5 metri di movimento. L a trasformazione del terreno è mimetizzata in modo da sembrare naturale. Qualsiasi creatura che non stesse osservando l'area al momento del lancio dell'incantesimo deve effettuare un'azione di Ricerca e una prova di Saggezza (Percezione o Sopravvivenza) contro la CD del tiro salvezza sull'incantesimo per riconoscere la peri colosità del terreno prima di entrarvi.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [
+                          "perforanti"
+                        ],
+                        "damage_dice": [
+                          "2d4"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 264
+                      }
+                    }
+                  },
+                  "ristorare-inferiore": {
+                    "id": "ristorare-inferiore",
+                    "label": "Liv. 2 - Ristorare Inferiore",
+                    "level": 2,
+                    "spell": {
+                      "id": "ristorare-inferiore",
+                      "name": "Ristorare Inferiore",
+                      "name_upper": "RISTORARE INFERIORE",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "druido",
+                        "paladino",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "V, S",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "istantanea",
+                        "concentration": false,
+                        "instantaneous": true,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore tocca una creatura e pone fine a una delle condizioni che la affiigge tra: accecata, assordata, avvelenata o paralizzata.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 324
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          },
+          {
+            "id": "level-up-7-2026-07-17T08:20:49.698Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-17T08:20:49.698Z",
+            "className": "Ranger",
+            "totalLevel": {
+              "from": 6,
+              "to": 7
+            },
+            "classLevel": {
+              "className": "Ranger",
+              "from": 6,
+              "to": 7
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d10",
+              "baseIncrease": 6,
+              "constitutionModifier": 2,
+              "totalIncrease": 8,
+              "maxHpFrom": 60,
+              "maxHpTo": 68,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": null,
+            "classChoices": [
+              {
+                "id": "ranger_7_spells",
+                "label": "Incantesimi da Ranger",
+                "type": "spell_choice",
+                "selected": [
+                  "silenzio"
+                ],
+                "labels": [
+                  "Liv. 2 - Silenzio"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "silenzio",
+                    "label": "Liv. 2 - Silenzio",
+                    "level": 2,
+                    "spell": {
+                      "id": "silenzio",
+                      "name": "Silenzio",
+                      "name_upper": "SILENZIO",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Illusione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione o rituale",
+                        "ritual": true
+                      },
+                      "range": {
+                        "raw": "36 metri"
+                      },
+                      "components": {
+                        "raw": "V, S",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 1 0  minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore genera una sfera del raggio di 6 metri cen trata su un punto a sua scelta situato entro gittata e, per la durata dell'incantesimo, nessun suono può essere creato all'interno di quella sfera o attraversarla. Ogni creatura o oggetto interamente all'interno della sfera è immune ai danni da tuono e ogni creatura interamente all'interno della sfera è assordata. All'interno dell'area è impossibile lanciare un incantesimo che includa una componente verbale. 329",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [
+                          "tuono"
+                        ],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": true
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 285
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "silenzio": {
+                    "id": "silenzio",
+                    "label": "Liv. 2 - Silenzio",
+                    "level": 2,
+                    "spell": {
+                      "id": "silenzio",
+                      "name": "Silenzio",
+                      "name_upper": "SILENZIO",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Illusione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione o rituale",
+                        "ritual": true
+                      },
+                      "range": {
+                        "raw": "36 metri"
+                      },
+                      "components": {
+                        "raw": "V, S",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 1 0  minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore genera una sfera del raggio di 6 metri cen trata su un punto a sua scelta situato entro gittata e, per la durata dell'incantesimo, nessun suono può essere creato all'interno di quella sfera o attraversarla. Ogni creatura o oggetto interamente all'interno della sfera è immune ai danni da tuono e ogni creatura interamente all'interno della sfera è assordata. All'interno dell'area è impossibile lanciare un incantesimo che includa una componente verbale. 329",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [
+                          "tuono"
+                        ],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": true
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 285
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          },
+          {
+            "id": "level-up-8-2026-07-17T08:46:05.734Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-17T08:46:05.734Z",
+            "className": "Ranger",
+            "totalLevel": {
+              "from": 7,
+              "to": 8
+            },
+            "classLevel": {
+              "className": "Ranger",
+              "from": 7,
+              "to": 8
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d10",
+              "baseIncrease": 6,
+              "constitutionModifier": 2,
+              "totalIncrease": 8,
+              "maxHpFrom": 68,
+              "maxHpTo": 76,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": {
+              "mode": "feat",
+              "feat": {
+                "id": "maestria-dei-veleni",
+                "name": "Maestria dei veleni",
+                "category": "Generale",
+                "summary": "Migliora uso, creazione e applicazione dei veleni.",
+                "effects": [],
+                "choices": [
+                  {
+                    "type": "ability_score_choice",
+                    "id": "ability_increase",
+                    "label": "Incremento dei punteggi di caratteristica",
+                    "count": 1,
+                    "amount": 1,
+                    "abilities": [
+                      "dex",
+                      "int"
+                    ],
+                    "max": 20
+                  }
+                ],
+                "grantedSpells": []
+              },
+              "choiceDraft": {
+                "featId": "maestria-dei-veleni",
+                "featName": "Maestria dei veleni",
+                "requirements": [
+                  {
+                    "type": "ability_score_choice",
+                    "id": "ability_increase",
+                    "label": "Incremento dei punteggi di caratteristica",
+                    "count": 1,
+                    "amount": 1,
+                    "abilities": [
+                      "dex",
+                      "int"
+                    ],
+                    "max": 20,
+                    "selected": [
+                      "dex"
+                    ],
+                    "options": [
+                      {
+                        "id": "dex",
+                        "label": "DES"
+                      },
+                      {
+                        "id": "int",
+                        "label": "INT"
+                      }
+                    ]
+                  }
+                ],
+                "choices": [
+                  {
+                    "id": "ability_increase",
+                    "label": "Incremento dei punteggi di caratteristica",
+                    "type": "ability_score_choice",
+                    "count": 1,
+                    "amount": 1,
+                    "max": 20,
+                    "selected": [
+                      "dex"
+                    ],
+                    "labels": [
+                      "DES"
+                    ],
+                    "selectedOptions": [
+                      {
+                        "id": "dex",
+                        "label": "DES"
+                      }
+                    ],
+                    "sourceChoice": {
+                      "type": "ability_score_choice",
+                      "id": "ability_increase",
+                      "label": "Incremento dei punteggi di caratteristica",
+                      "count": 1,
+                      "amount": 1,
+                      "abilities": [
+                        "dex",
+                        "int"
+                      ],
+                      "max": 20,
+                      "selected": [
+                        "dex"
+                      ],
+                      "options": [
+                        {
+                          "id": "dex",
+                          "label": "DES"
+                        },
+                        {
+                          "id": "int",
+                          "label": "INT"
+                        }
+                      ]
+                    },
+                    "warnings": []
+                  }
+                ],
+                "warnings": []
+              },
+              "warnings": []
+            },
+            "classChoices": [],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          }
+        ]
+      }
+    }
+  ]
+}
