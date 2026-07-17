@@ -21,7 +21,7 @@ import AppTopbar from '../components/layout/AppTopbar.jsx'
 
 function CharacterPage() {
   const { id } = useParams()
-  const { user, logout } = useAuth()
+  const { user } = useAuth()
   const [character, setCharacter] = useState(null)
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState('overview')
@@ -51,7 +51,6 @@ function CharacterPage() {
   const [skills, setSkills] = useState([])
   const [savingThrows, setSavingThrows] = useState({})
   const navigate = useNavigate()
-  const [menuOpen, setMenuOpen] = useState(false)
 
 
   const labelNav3 = getNavLabel(character)
@@ -272,15 +271,10 @@ function CharacterPage() {
   if (loading) {
     return (
       <div className="app">
-        <header className="topbar">
-          <button className="icon-btn" aria-label="Torna alle schede" onClick={() => navigate('/schede')}>
-            &#8592;
-          </button>
-          <div className="topbar__title">Scheda Personaggio</div>
-          <button className="icon-btn icon-btn--text" onClick={() => { logout(); navigate('/login', { replace: true }) }}>
-            Esci
-          </button>
-        </header>
+        <AppTopbar
+          title="Scheda Personaggio"
+          onBack={() => navigate('/schede')}
+        />
         <main className="screen">
           <div className="panel_content">
             <div className="list-empty">Caricamento scheda...</div>
@@ -295,32 +289,16 @@ function CharacterPage() {
       <AppTopbar
         title="Scheda Personaggio"
         onBack={() => navigate('/schede')}
-        onMenuOpen={() => setMenuOpen(true)}
       />
     )
   }
 
   return (
     <div className="app">
-      <header className="topbar">
-        <button
-          className="icon-btn"
-          aria-label="Torna alle schede"
-          onClick={() => navigate('/schede')}
-        >
-          &#8592;
-        </button>
-        <div className="topbar__title">Scheda Personaggio</div>
-        <button
-          className="icon-btn icon-btn--text"
-          onClick={() => {
-            logout()
-            navigate('/login', { replace: true })
-          }}
-        >
-          Esci
-        </button>
-      </header>
+      <AppTopbar
+        title="Scheda Personaggio"
+        onBack={() => navigate('/schede')}
+      />
 
       <main className="screen">
         <div className="panel_content">
