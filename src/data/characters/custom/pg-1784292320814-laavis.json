@@ -1,0 +1,5604 @@
+{
+  "id": "pg_1784292320814",
+  "name": "laavis",
+  "level": 4,
+  "race": "Dragonide Blu",
+  "species": {
+    "id": "dragonide",
+    "name": "Dragonide",
+    "choice": {
+      "ruleId": "draconic_ancestry",
+      "ruleLabel": "Discendenza Draconica",
+      "id": "blue",
+      "label": "Drago Blu",
+      "displayName": "Blu",
+      "featureLabel": "Discendenza Draconica: Drago Blu",
+      "summary": "Soffio e resistenza ai danni da fulmine.",
+      "spellcastingAbility": null,
+      "unlockLevel": 1,
+      "spells": []
+    }
+  },
+  "background": "Marinaio",
+  "alignment": "Caotico Buono",
+  "concept": "",
+  "classes": [
+    {
+      "name": "Druido",
+      "level": 4,
+      "subclass": "Circolo del Mare"
+    }
+  ],
+  "combat": {
+    "hp": {
+      "current": 31,
+      "max": 31,
+      "temp": 0
+    },
+    "ac": 11,
+    "speed": 9,
+    "initiativeBonus": 1,
+    "hitDice": {
+      "current": 4,
+      "max": 4,
+      "type": "d8",
+      "byType": {
+        "d8": 4
+      }
+    }
+  },
+  "abilities": {
+    "str": 9,
+    "dex": 12,
+    "con": 14,
+    "int": 13,
+    "wis": 19,
+    "cha": 10
+  },
+  "savingThrows": {
+    "str": false,
+    "dex": false,
+    "con": false,
+    "int": true,
+    "wis": true,
+    "cha": false
+  },
+  "skills": [
+    {
+      "id": "acrobatics",
+      "label": "Acrobazia",
+      "ability": "dex",
+      "proficient": true
+    },
+    {
+      "id": "athletics",
+      "label": "Atletica",
+      "ability": "str",
+      "proficient": false
+    },
+    {
+      "id": "sleight",
+      "label": "Rapidita di Mano",
+      "ability": "dex",
+      "proficient": false
+    },
+    {
+      "id": "stealth",
+      "label": "Furtivita",
+      "ability": "dex",
+      "proficient": false
+    },
+    {
+      "id": "arcana",
+      "label": "Arcano",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "history",
+      "label": "Storia",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "investigation",
+      "label": "Investigazione",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "nature",
+      "label": "Natura",
+      "ability": "int",
+      "proficient": true
+    },
+    {
+      "id": "religion",
+      "label": "Religione",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "animal",
+      "label": "Addestrare Animali",
+      "ability": "wis",
+      "proficient": true
+    },
+    {
+      "id": "insight",
+      "label": "Intuizione",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "medicine",
+      "label": "Medicina",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "perception",
+      "label": "Percezione",
+      "ability": "wis",
+      "proficient": true
+    },
+    {
+      "id": "survival",
+      "label": "Sopravvivenza",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "deception",
+      "label": "Inganno",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "intimidation",
+      "label": "Intimidire",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "performance",
+      "label": "Intrattenere",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "persuasion",
+      "label": "Persuasione",
+      "ability": "cha",
+      "proficient": false
+    }
+  ],
+  "resources": [
+    {
+      "id": "breath_weapon",
+      "label": "Soffio",
+      "current": 2,
+      "max": 2,
+      "resetOn": "long_rest",
+      "category": "species"
+    }
+  ],
+  "feats": [
+    {
+      "id": "lottatore-da-taverna",
+      "name": "Lottatore da taverna",
+      "source": "Background",
+      "level": 1,
+      "category": "Origini",
+      "summary": "Migliora colpi senz'armi, armi improvvisate e spinte.",
+      "choices": []
+    }
+  ],
+  "spellcasting": {
+    "ability": "wis",
+    "spellSaveDc": 13,
+    "spellAttackBonus": 5,
+    "preparedCount": 4,
+    "slots": [
+      {
+        "id": "druido_slot_1",
+        "level": 1,
+        "label": "Slot livello 1",
+        "current": 4,
+        "max": 4,
+        "resetOn": "long_rest"
+      },
+      {
+        "id": "slot_2",
+        "level": 2,
+        "label": "Slot livello 2",
+        "current": 3,
+        "max": 3,
+        "resetOn": "long_rest"
+      }
+    ],
+    "spells": [
+      {
+        "id": "randello-incantato",
+        "name": "Randello Incantato",
+        "level": 0,
+        "source": "Druido",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      },
+      {
+        "id": "artificio-druidico",
+        "name": "Artificio Druidico",
+        "level": 0,
+        "source": "Druido",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      },
+      {
+        "id": "nube-di-nebbia",
+        "name": "Nube di Nebbia",
+        "level": 1,
+        "source": "Druido",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      },
+      {
+        "id": "coltello-di-ghiaccio",
+        "name": "Coltello di Ghiaccio",
+        "level": 1,
+        "source": "Druido",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      },
+      {
+        "id": "cura-ferite",
+        "name": "Cura Ferite",
+        "level": 1,
+        "source": "Druido",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      },
+      {
+        "id": "intralciare",
+        "name": "Intralciare",
+        "level": 1,
+        "source": "Druido",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      },
+      {
+        "id": "saltare",
+        "name": "Saltare",
+        "level": 1,
+        "source": "Druido",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      },
+      {
+        "id": "aiuto",
+        "name": "Aiuto",
+        "level": 2,
+        "source": "Druido",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      },
+      {
+        "id": "riparare",
+        "name": "Riparare",
+        "level": 0,
+        "source": "Druido",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      },
+      {
+        "id": "lama-infuocata",
+        "name": "Lama Infuocata",
+        "level": 2,
+        "source": "Druido",
+        "ability": "wis",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      }
+    ]
+  },
+  "features": [
+    {
+      "id": "dragonide_discendenza_draconica",
+      "label": "Discendenza draconica",
+      "level": 1,
+      "source": "Dragonide",
+      "category": "species",
+      "kind": "trait",
+      "summary": "Tratto di specie: Discendenza draconica."
+    },
+    {
+      "id": "dragonide_resistenza_ai_danni",
+      "label": "Resistenza ai danni",
+      "level": 1,
+      "source": "Dragonide",
+      "category": "species",
+      "kind": "trait",
+      "summary": "Tratto di specie: Resistenza ai danni."
+    },
+    {
+      "id": "dragonide_scurovisione",
+      "label": "Scurovisione",
+      "level": 1,
+      "source": "Dragonide",
+      "category": "species",
+      "kind": "trait",
+      "summary": "Tratto di specie: Scurovisione."
+    },
+    {
+      "id": "dragonide_soffio",
+      "label": "Soffio",
+      "level": 1,
+      "source": "Dragonide",
+      "category": "species",
+      "kind": "trait",
+      "summary": "Tratto di specie: Soffio."
+    },
+    {
+      "id": "dragonide_draconic_ancestry_blue",
+      "label": "Discendenza Draconica: Drago Blu",
+      "level": 1,
+      "source": "Dragonide",
+      "category": "species",
+      "kind": "lineage",
+      "summary": "Soffio e resistenza ai danni da fulmine."
+    },
+    {
+      "id": "druido_incantesimi",
+      "label": "Incantesimi",
+      "level": 1,
+      "source": "Druido",
+      "category": "class",
+      "kind": "feature",
+      "summary": "Privilegio di classe di 1 livello: Incantesimi."
+    },
+    {
+      "id": "druido_druidico",
+      "label": "Druidico",
+      "level": 1,
+      "source": "Druido",
+      "category": "class",
+      "kind": "feature",
+      "summary": "Privilegio di classe di 1 livello: Druidico."
+    },
+    {
+      "id": "background_marinaio",
+      "label": "Marinaio",
+      "level": 1,
+      "source": "Background",
+      "category": "background",
+      "kind": "origin",
+      "summary": "Background con talento Lottatore da Taverna."
+    },
+    {
+      "id": "druido_compagno_selvatico",
+      "label": "Compagno Selvatico",
+      "level": 2,
+      "source": "Druido",
+      "category": "class",
+      "kind": "feature",
+      "summary": "Spendi Forma Selvatica per evocare o ottenere un famiglio naturale."
+    },
+    {
+      "id": "druido_forma_selvatica",
+      "label": "Forma Selvatica",
+      "level": 2,
+      "source": "Druido",
+      "category": "class",
+      "kind": "feature",
+      "summary": "Spendi un uso per trasformarti in una forma bestiale consentita."
+    },
+    {
+      "id": "druido_circolo_del_mare_furia_dei_mari",
+      "label": "Furia dei Mari",
+      "level": 3,
+      "source": "Circolo del Mare",
+      "category": "subclass",
+      "kind": "bonus_action",
+      "summary": "Crei un'aura acquatica tempestosa che danneggia e spinge."
+    },
+    {
+      "id": "druido_circolo_del_mare_incantesimi_del_circolo_del_mare",
+      "label": "Incantesimi del Circolo del Mare",
+      "level": 3,
+      "source": "Circolo del Mare",
+      "category": "subclass",
+      "kind": "passive",
+      "summary": "Aggiungi incantesimi di mare, freddo e tempesta."
+    }
+  ],
+  "powers": [
+    {
+      "id": "druido_compagno_selvatico"
+    },
+    {
+      "id": "druido_forma_selvatica"
+    },
+    {
+      "id": "druido_circolo_del_mare_furia_dei_mari"
+    },
+    {
+      "id": "druido_circolo_del_mare_incantesimi_del_circolo_del_mare"
+    }
+  ],
+  "actions": [
+    {
+      "id": "dragonborn_breath_blue",
+      "name": "Soffio Drago Blu",
+      "type": "save",
+      "damage": "1d10 fulmine",
+      "notes": "Tiro salvezza su Destrezza, CD 8 + COS + bonus competenza. Aumenta con il livello del personaggio.",
+      "source": "Dragonide Blu"
+    }
+  ],
+  "equipment": {
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 9,
+      "pp": 2
+    },
+    "startingBudget": {
+      "gp": 29,
+      "spentGp": 0,
+      "remainingGp": 29,
+      "mode": "kit",
+      "notes": "Dotazione iniziale da background e classe."
+    },
+    "weapons": [
+      {
+        "id": "background_weapons_pugnale",
+        "itemId": "pugnale",
+        "catalog": "weapons",
+        "name": "Pugnale",
+        "quantity": 1,
+        "equipped": false,
+        "description": "Background - Dotazione Marinaio",
+        "notes": "Costo: 2 mo - Peso: 0.5 kg",
+        "costCopper": 200,
+        "cost": "2 mo",
+        "weight": "0.5 kg",
+        "stats": {
+          "type": "weapon",
+          "category": "semplice",
+          "kind": "mischia",
+          "damage": "1d4 perforanti",
+          "properties": [
+            "accurata",
+            "lancio 6/18",
+            "leggera"
+          ],
+          "mastery": "Graffio"
+        },
+        "recoverable": false,
+        "consumable": false
+      },
+      {
+        "id": "class_weapons_falcetto",
+        "itemId": "falcetto",
+        "catalog": "weapons",
+        "name": "Falcetto",
+        "quantity": 1,
+        "equipped": true,
+        "description": "Classe - Equipaggiamento Druido",
+        "notes": "Costo: 1 mo - Peso: 1 kg",
+        "costCopper": 100,
+        "cost": "1 mo",
+        "weight": "1 kg",
+        "stats": {
+          "type": "weapon",
+          "category": "semplice",
+          "kind": "mischia",
+          "damage": "1d4 taglienti",
+          "properties": [
+            "leggera"
+          ],
+          "mastery": "Graffio"
+        },
+        "recoverable": false,
+        "consumable": false
+      }
+    ],
+    "armor": [
+      {
+        "id": "class_armors_armatura-di-cuoio",
+        "itemId": "armatura-di-cuoio",
+        "catalog": "armors",
+        "name": "Armatura di cuoio",
+        "quantity": 1,
+        "equipped": true,
+        "description": "Classe - Equipaggiamento Druido",
+        "notes": "Costo: 10 mo - Peso: 5 kg",
+        "costCopper": 1000,
+        "cost": "10 mo",
+        "weight": "5 kg",
+        "stats": {
+          "type": "armor",
+          "category": "leggera",
+          "armorClass": "11 + mod Des",
+          "strengthRequirement": null,
+          "stealthDisadvantage": false
+        },
+        "recoverable": false,
+        "consumable": false
+      },
+      {
+        "id": "class_shields_scudo",
+        "itemId": "scudo",
+        "catalog": "shields",
+        "name": "Scudo",
+        "quantity": 1,
+        "equipped": true,
+        "description": "Classe - Equipaggiamento Druido",
+        "notes": "Costo: 10 mo - Peso: 3 kg",
+        "costCopper": 1000,
+        "cost": "10 mo",
+        "weight": "3 kg",
+        "stats": {
+          "type": "shield",
+          "category": "scudo",
+          "armorClassBonus": 2,
+          "equipAction": "azione di Utilizzo"
+        },
+        "recoverable": false,
+        "consumable": false
+      }
+    ],
+    "tools": [
+      {
+        "id": "background_tools_strumenti-da-navigatore",
+        "itemId": "strumenti-da-navigatore",
+        "catalog": "tools",
+        "name": "Strumenti da navigatore",
+        "quantity": 1,
+        "equipped": false,
+        "description": "Background - Dotazione Marinaio",
+        "notes": "Costo: 25 mo - Peso: 1 kg",
+        "costCopper": 2500,
+        "cost": "25 mo",
+        "weight": "1 kg",
+        "stats": {
+          "type": "tool",
+          "category": "altro",
+          "ability": "Saggezza"
+        },
+        "recoverable": false,
+        "consumable": false
+      },
+      {
+        "id": "class_tools_borsa-da-erborista",
+        "itemId": "borsa-da-erborista",
+        "catalog": "tools",
+        "name": "Borsa da erborista",
+        "quantity": 1,
+        "equipped": false,
+        "description": "Classe - Equipaggiamento Druido",
+        "notes": "Costo: 5 mo - Peso: 1.5 kg",
+        "costCopper": 500,
+        "cost": "5 mo",
+        "weight": "1.5 kg",
+        "stats": {
+          "type": "tool",
+          "category": "altro",
+          "ability": "Intelligenza"
+        },
+        "recoverable": false,
+        "consumable": false
+      }
+    ],
+    "adventuringGear": [
+      {
+        "id": "background_adventuring_gear_corda",
+        "itemId": "corda",
+        "catalog": "adventuring_gear",
+        "name": "Corda",
+        "quantity": 1,
+        "equipped": false,
+        "description": "Background - Dotazione Marinaio",
+        "notes": "Costo: 1 mo - Peso: 2.5 kg",
+        "costCopper": 100,
+        "cost": "1 mo",
+        "weight": "2.5 kg",
+        "stats": {
+          "type": "gear",
+          "category": "equipaggiamento_avventura"
+        },
+        "recoverable": false,
+        "consumable": false
+      },
+      {
+        "id": "background_adventuring_gear_abiti-da-viaggiatore",
+        "itemId": "abiti-da-viaggiatore",
+        "catalog": "adventuring_gear",
+        "name": "Abiti da viaggiatore",
+        "quantity": 1,
+        "equipped": false,
+        "description": "Background - Dotazione Marinaio",
+        "notes": "Costo: 2 mo - Peso: 2 kg",
+        "costCopper": 200,
+        "cost": "2 mo",
+        "weight": "2 kg",
+        "stats": {
+          "type": "gear",
+          "category": "equipaggiamento_avventura"
+        },
+        "recoverable": false,
+        "consumable": false
+      },
+      {
+        "id": "class_adventuring_gear_focus-druidico_bastone-ferrato",
+        "itemId": "focus-druidico",
+        "catalog": "adventuring_gear",
+        "name": "Focus druidico (bastone ferrato)",
+        "quantity": 1,
+        "equipped": false,
+        "description": "Classe - Equipaggiamento Druido",
+        "notes": "Costo: variabile - Peso: variabile",
+        "costCopper": 0,
+        "cost": "variabile",
+        "weight": "variabile",
+        "stats": {
+          "type": "gear",
+          "category": "equipaggiamento_avventura"
+        },
+        "recoverable": false,
+        "consumable": false
+      },
+      {
+        "id": "class_adventuring_gear_dotazione-da-esploratore",
+        "itemId": "dotazione-da-esploratore",
+        "catalog": "adventuring_gear",
+        "name": "Dotazione da esploratore",
+        "quantity": 1,
+        "equipped": false,
+        "description": "Classe - Equipaggiamento Druido",
+        "notes": "Costo: 10 mo - Peso: 27.5 kg",
+        "costCopper": 1000,
+        "cost": "10 mo",
+        "weight": "27.5 kg",
+        "stats": {
+          "type": "gear",
+          "category": "equipaggiamento_avventura"
+        },
+        "recoverable": false,
+        "consumable": false
+      }
+    ],
+    "magicItems": [],
+    "consumables": [],
+    "storyItems": [],
+    "wishlist": []
+  },
+  "details": {
+    "personalityTraits": [],
+    "ideals": [],
+    "bonds": [],
+    "flaws": [],
+    "campaignNotes": []
+  },
+  "progressionHistory": [
+    {
+      "id": "creation-pg_1784292320814",
+      "type": "creation",
+      "appliedAt": "2026-07-17T12:45:20.815Z",
+      "fromLevel": 0,
+      "toLevel": 1,
+      "className": "Druido",
+      "choices": {
+        "name": "laavis",
+        "concept": "",
+        "startingLevel": 1,
+        "classId": "druido",
+        "speciesId": "dragonide",
+        "backgroundId": "marinaio",
+        "alignment": "Caotico Buono",
+        "abilityMethod": "standard",
+        "baseAbilities": {
+          "str": 8,
+          "dex": 12,
+          "con": 14,
+          "int": 13,
+          "wis": 15,
+          "cha": 10
+        },
+        "abilityRolls": [],
+        "backgroundIncreases": {
+          "str": 1,
+          "dex": 0,
+          "wis": 2
+        },
+        "featChoices": {
+          "lottatore-da-taverna": {}
+        },
+        "levelOneClassChoices": {
+          "druido_1_cantrips": [
+            "randello-incantato",
+            "artificio-druidico"
+          ],
+          "druido_1_spells": [
+            "nube-di-nebbia",
+            "coltello-di-ghiaccio",
+            "cura-ferite",
+            "intralciare"
+          ]
+        },
+        "speciesChoices": {
+          "dragonide": {
+            "optionId": "blue"
+          }
+        },
+        "selectedClassSkills": [
+          "animal",
+          "nature"
+        ],
+        "selectedBackgroundTools": [],
+        "selectedClassTools": [],
+        "languages": [],
+        "levelUpChoices": {},
+        "equipmentMode": "kit",
+        "backgroundEquipmentOptionId": "",
+        "classEquipmentOptionId": "",
+        "equipmentChoices": {},
+        "equipmentPurchases": []
+      }
+    },
+    {
+      "id": "level-up-2-2026-07-17T12:45:49.966Z",
+      "type": "level_up",
+      "appliedAt": "2026-07-17T12:45:49.966Z",
+      "className": "Druido",
+      "totalLevel": {
+        "from": 1,
+        "to": 2
+      },
+      "classLevel": {
+        "className": "Druido",
+        "from": 1,
+        "to": 2
+      },
+      "hp": {
+        "mode": "average",
+        "hitDie": "d8",
+        "baseIncrease": 5,
+        "constitutionModifier": 2,
+        "totalIncrease": 7,
+        "maxHpFrom": 10,
+        "maxHpTo": 17,
+        "warnings": []
+      },
+      "constitutionHpAdjustment": 0,
+      "asiOrFeat": null,
+      "classChoices": [
+        {
+          "id": "druido_2_spells",
+          "label": "Incantesimi da Druido",
+          "type": "spell_choice",
+          "selected": [
+            "saltare"
+          ],
+          "labels": [
+            "Liv. 1 - Saltare"
+          ],
+          "selectedOptions": [
+            {
+              "id": "saltare",
+              "label": "Liv. 1 - Saltare",
+              "level": 1,
+              "spell": {
+                "id": "saltare",
+                "name": "Saltare",
+                "name_upper": "SALTARE",
+                "level": 1,
+                "level_label": "1° livello",
+                "school": "Trasmutazione",
+                "is_cantrip": false,
+                "classes": [
+                  "druido",
+                  "mago",
+                  "ranger",
+                  "stregone"
+                ],
+                "casting_time": {
+                  "raw": "azione bonus",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "contatto"
+                },
+                "components": {
+                  "raw": "",
+                  "verbal": false,
+                  "somatic": false,
+                  "material": false,
+                  "material_description": null,
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "",
+                  "concentration": false,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "Componente: V, S, M (la zampa posteriore di una cavalletta) Durata: l minuto L'incantatore tocca una creatura consenziente. La crea tura, in ogni suo turno fino al termine dell'incantesimo, può saltare fino a 9 metri, usando 3 metri di movimento.",
+                "at_higher_levels": "L'incantatore può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.",
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [],
+                  "damage_dice": [],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": true
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 325
+                }
+              }
+            }
+          ],
+          "meta": {
+            "saltare": {
+              "id": "saltare",
+              "label": "Liv. 1 - Saltare",
+              "level": 1,
+              "spell": {
+                "id": "saltare",
+                "name": "Saltare",
+                "name_upper": "SALTARE",
+                "level": 1,
+                "level_label": "1° livello",
+                "school": "Trasmutazione",
+                "is_cantrip": false,
+                "classes": [
+                  "druido",
+                  "mago",
+                  "ranger",
+                  "stregone"
+                ],
+                "casting_time": {
+                  "raw": "azione bonus",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "contatto"
+                },
+                "components": {
+                  "raw": "",
+                  "verbal": false,
+                  "somatic": false,
+                  "material": false,
+                  "material_description": null,
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "",
+                  "concentration": false,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "Componente: V, S, M (la zampa posteriore di una cavalletta) Durata: l minuto L'incantatore tocca una creatura consenziente. La crea tura, in ogni suo turno fino al termine dell'incantesimo, può saltare fino a 9 metri, usando 3 metri di movimento.",
+                "at_higher_levels": "L'incantatore può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.",
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [],
+                  "damage_dice": [],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": true
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 325
+                }
+              }
+            }
+          },
+          "warnings": []
+        }
+      ],
+      "subclassSpellChoices": [],
+      "invocationChoices": []
+    },
+    {
+      "id": "level-up-3-2026-07-17T12:46:07.456Z",
+      "type": "level_up",
+      "appliedAt": "2026-07-17T12:46:07.456Z",
+      "className": "Druido",
+      "totalLevel": {
+        "from": 2,
+        "to": 3
+      },
+      "classLevel": {
+        "className": "Druido",
+        "from": 2,
+        "to": 3
+      },
+      "hp": {
+        "mode": "average",
+        "hitDie": "d8",
+        "baseIncrease": 5,
+        "constitutionModifier": 2,
+        "totalIncrease": 7,
+        "maxHpFrom": 17,
+        "maxHpTo": 24,
+        "warnings": []
+      },
+      "constitutionHpAdjustment": 0,
+      "asiOrFeat": null,
+      "classChoices": [
+        {
+          "id": "druido_3_subclass",
+          "label": "Sottoclasse",
+          "type": "subclass_choice",
+          "selected": [
+            "circolo_del_mare"
+          ],
+          "labels": [
+            "Circolo del Mare"
+          ],
+          "selectedOptions": [
+            {
+              "id": "circolo_del_mare",
+              "label": "Circolo del Mare",
+              "subclassName": "Circolo del Mare"
+            }
+          ],
+          "meta": {
+            "circolo_del_mare": {
+              "id": "circolo_del_mare",
+              "label": "Circolo del Mare",
+              "subclassName": "Circolo del Mare"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "id": "druido_3_spells",
+          "label": "Incantesimi da Druido",
+          "type": "spell_choice",
+          "selected": [
+            "aiuto"
+          ],
+          "labels": [
+            "Liv. 2 - Aiuto"
+          ],
+          "selectedOptions": [
+            {
+              "id": "aiuto",
+              "label": "Liv. 2 - Aiuto",
+              "level": 2,
+              "spell": {
+                "id": "aiuto",
+                "name": "Aiuto",
+                "name_upper": "AIUTO",
+                "level": 2,
+                "level_label": "2° livello",
+                "school": "Abiurazione",
+                "is_cantrip": false,
+                "classes": [
+                  "bardo",
+                  "chierico",
+                  "druido",
+                  "paladino",
+                  "ranger"
+                ],
+                "casting_time": {
+                  "raw": "azione",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "9 metri"
+                },
+                "components": {
+                  "raw": "V, S, M (una striscia di tessuto bianco)",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": true,
+                  "material_description": "una striscia di tessuto bianco",
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "8 ore",
+                  "concentration": false,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "L'incantatore sceglie fino a tre creature entro gittata. I punti ferita massimi e i punti ferita attuali di ogni bersa glio aumentano di 5 per la durata dell'incantesimo.",
+                "at_higher_levels": "I punti ferita di ciascun bersaglio aumentano di 5 per ogni slot incantesimo di livello superiore al 2°.",
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [],
+                  "damage_dice": [],
+                  "conditions": [],
+                  "heals_or_temp_hp": true,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 242
+                }
+              }
+            }
+          ],
+          "meta": {
+            "aiuto": {
+              "id": "aiuto",
+              "label": "Liv. 2 - Aiuto",
+              "level": 2,
+              "spell": {
+                "id": "aiuto",
+                "name": "Aiuto",
+                "name_upper": "AIUTO",
+                "level": 2,
+                "level_label": "2° livello",
+                "school": "Abiurazione",
+                "is_cantrip": false,
+                "classes": [
+                  "bardo",
+                  "chierico",
+                  "druido",
+                  "paladino",
+                  "ranger"
+                ],
+                "casting_time": {
+                  "raw": "azione",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "9 metri"
+                },
+                "components": {
+                  "raw": "V, S, M (una striscia di tessuto bianco)",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": true,
+                  "material_description": "una striscia di tessuto bianco",
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "8 ore",
+                  "concentration": false,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "L'incantatore sceglie fino a tre creature entro gittata. I punti ferita massimi e i punti ferita attuali di ogni bersa glio aumentano di 5 per la durata dell'incantesimo.",
+                "at_higher_levels": "I punti ferita di ciascun bersaglio aumentano di 5 per ogni slot incantesimo di livello superiore al 2°.",
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [],
+                  "damage_dice": [],
+                  "conditions": [],
+                  "heals_or_temp_hp": true,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 242
+                }
+              }
+            }
+          },
+          "warnings": []
+        }
+      ],
+      "subclassSpellChoices": [],
+      "invocationChoices": []
+    },
+    {
+      "id": "level-up-4-2026-07-17T12:46:31.171Z",
+      "type": "level_up",
+      "appliedAt": "2026-07-17T12:46:31.171Z",
+      "className": "Druido",
+      "totalLevel": {
+        "from": 3,
+        "to": 4
+      },
+      "classLevel": {
+        "className": "Druido",
+        "from": 3,
+        "to": 4
+      },
+      "hp": {
+        "mode": "average",
+        "hitDie": "d8",
+        "baseIncrease": 5,
+        "constitutionModifier": 2,
+        "totalIncrease": 7,
+        "maxHpFrom": 24,
+        "maxHpTo": 31,
+        "warnings": []
+      },
+      "constitutionHpAdjustment": 0,
+      "asiOrFeat": {
+        "mode": "asi",
+        "abilityIncreases": [
+          {
+            "ability": "wis",
+            "amount": 2,
+            "from": 17,
+            "to": 19
+          }
+        ],
+        "warnings": []
+      },
+      "classChoices": [
+        {
+          "id": "druido_4_cantrips",
+          "label": "Trucchetti da Druido",
+          "type": "cantrip_choice",
+          "selected": [
+            "riparare"
+          ],
+          "labels": [
+            "Riparare"
+          ],
+          "selectedOptions": [
+            {
+              "id": "riparare",
+              "label": "Riparare",
+              "level": 0,
+              "spell": {
+                "id": "riparare",
+                "name": "Riparare",
+                "name_upper": "RIPARARE",
+                "level": 0,
+                "level_label": "Trucchetto",
+                "school": "Trasmutazione",
+                "is_cantrip": true,
+                "classes": [
+                  "bardo",
+                  "chierico",
+                  "druido",
+                  "mago",
+                  "stregone"
+                ],
+                "casting_time": {
+                  "raw": "1 minuto",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "contatto"
+                },
+                "components": {
+                  "raw": "V, S, M (d ue calamite)",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": true,
+                  "material_description": "d ue calamite",
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "istantanea",
+                  "concentration": false,
+                  "instantaneous": true,
+                  "ritual_possible": false
+                },
+                "description": "Questo incantesimo ripara una singola crepa o uno squar cio in un oggetto toccato dall'incantatore, come l'anello spezzato di una catena, due metà di una chiave spezzata, un mantello strappato o un otre forato. Se le dimensioni della crepa o dello squarcio non superano i 30 centimetri, l'incantatore ripara l'oggetto senza lasciare traccia del danno precedente. Questo incantesimo può riparare un oggetto magico solo fisicamente, senza ripristinare la magia in esso contenuta.",
+                "at_higher_levels": null,
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [],
+                  "damage_dice": [],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 324
+                }
+              }
+            }
+          ],
+          "meta": {
+            "riparare": {
+              "id": "riparare",
+              "label": "Riparare",
+              "level": 0,
+              "spell": {
+                "id": "riparare",
+                "name": "Riparare",
+                "name_upper": "RIPARARE",
+                "level": 0,
+                "level_label": "Trucchetto",
+                "school": "Trasmutazione",
+                "is_cantrip": true,
+                "classes": [
+                  "bardo",
+                  "chierico",
+                  "druido",
+                  "mago",
+                  "stregone"
+                ],
+                "casting_time": {
+                  "raw": "1 minuto",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "contatto"
+                },
+                "components": {
+                  "raw": "V, S, M (d ue calamite)",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": true,
+                  "material_description": "d ue calamite",
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "istantanea",
+                  "concentration": false,
+                  "instantaneous": true,
+                  "ritual_possible": false
+                },
+                "description": "Questo incantesimo ripara una singola crepa o uno squar cio in un oggetto toccato dall'incantatore, come l'anello spezzato di una catena, due metà di una chiave spezzata, un mantello strappato o un otre forato. Se le dimensioni della crepa o dello squarcio non superano i 30 centimetri, l'incantatore ripara l'oggetto senza lasciare traccia del danno precedente. Questo incantesimo può riparare un oggetto magico solo fisicamente, senza ripristinare la magia in esso contenuta.",
+                "at_higher_levels": null,
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [],
+                  "damage_dice": [],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 324
+                }
+              }
+            }
+          },
+          "warnings": []
+        },
+        {
+          "id": "druido_4_spells",
+          "label": "Incantesimi da Druido",
+          "type": "spell_choice",
+          "selected": [
+            "lama-infuocata"
+          ],
+          "labels": [
+            "Liv. 2 - Lama Infuocata"
+          ],
+          "selectedOptions": [
+            {
+              "id": "lama-infuocata",
+              "label": "Liv. 2 - Lama Infuocata",
+              "level": 2,
+              "spell": {
+                "id": "lama-infuocata",
+                "name": "Lama Infuocata",
+                "name_upper": "LAMA INFUOCATA",
+                "level": 2,
+                "level_label": "2° livello",
+                "school": "Invocazione",
+                "is_cantrip": false,
+                "classes": [
+                  "druido",
+                  "stregone"
+                ],
+                "casting_time": {
+                  "raw": "azione bonus",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "incantatore"
+                },
+                "components": {
+                  "raw": "V, S, M (una foglia di sommacco)",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": true,
+                  "material_description": "una foglia di sommacco",
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "concentrazione, fino a 1 0  minuti",
+                  "concentration": true,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "L'incantatore evoca una lama infuocata nella sua mano libera. La lama ha forma e dimensioni simili a una scimi tarra e permane per la durata dell'incantesimo. Se l'incan tatore la lascia cadere, la lama scompare, ma può essere evocata di nuovo come azione bonus. Come azione di Magia, l'incantatore può effettuare un attacco in mischia con la lama infuocata. Se il colpo va a segno, il bersaglio subisce 3d6 danni da fuoco più il modificatore di caratteristica da incantatore dell'incantatore. La lama infuocata emana luce intensa in un raggio di 3 metri e luce fioca per ulteriori 3 metri.",
+                "at_higher_levels": "I danni aumentano di ld6 per ogni slot di livello superiore al 2°.",
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [
+                    "fuoco"
+                  ],
+                  "damage_dice": [
+                    "3d6",
+                    "ld6"
+                  ],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": true
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 290
+                }
+              }
+            }
+          ],
+          "meta": {
+            "lama-infuocata": {
+              "id": "lama-infuocata",
+              "label": "Liv. 2 - Lama Infuocata",
+              "level": 2,
+              "spell": {
+                "id": "lama-infuocata",
+                "name": "Lama Infuocata",
+                "name_upper": "LAMA INFUOCATA",
+                "level": 2,
+                "level_label": "2° livello",
+                "school": "Invocazione",
+                "is_cantrip": false,
+                "classes": [
+                  "druido",
+                  "stregone"
+                ],
+                "casting_time": {
+                  "raw": "azione bonus",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "incantatore"
+                },
+                "components": {
+                  "raw": "V, S, M (una foglia di sommacco)",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": true,
+                  "material_description": "una foglia di sommacco",
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "concentrazione, fino a 1 0  minuti",
+                  "concentration": true,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "L'incantatore evoca una lama infuocata nella sua mano libera. La lama ha forma e dimensioni simili a una scimi tarra e permane per la durata dell'incantesimo. Se l'incan tatore la lascia cadere, la lama scompare, ma può essere evocata di nuovo come azione bonus. Come azione di Magia, l'incantatore può effettuare un attacco in mischia con la lama infuocata. Se il colpo va a segno, il bersaglio subisce 3d6 danni da fuoco più il modificatore di caratteristica da incantatore dell'incantatore. La lama infuocata emana luce intensa in un raggio di 3 metri e luce fioca per ulteriori 3 metri.",
+                "at_higher_levels": "I danni aumentano di ld6 per ogni slot di livello superiore al 2°.",
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [
+                    "fuoco"
+                  ],
+                  "damage_dice": [
+                    "3d6",
+                    "ld6"
+                  ],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": true
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 290
+                }
+              }
+            }
+          },
+          "warnings": []
+        }
+      ],
+      "subclassSpellChoices": [],
+      "invocationChoices": []
+    }
+  ],
+  "notes": "Creato con flusso guidato livello 0 -> 1. Alcune scelte avanzate di classe, incantesimi ed equipaggiamento saranno dettagliate nei prossimi step.",
+  "proficiencies": {
+    "tools": [],
+    "weaponMasteries": [],
+    "armor": [],
+    "weapons": [],
+    "languages": []
+  },
+  "progressionSnapshots": [
+    {
+      "id": "snapshot-lv-1-pg_1784292320814",
+      "type": "creation",
+      "level": 1,
+      "label": "Livello 1",
+      "classSummary": "Druido 1",
+      "createdAt": "2026-07-17T12:45:20.815Z",
+      "sourceHistoryId": "creation-pg_1784292320814",
+      "changes": [
+        "Creazione come Druido"
+      ],
+      "character": {
+        "id": "pg_1784292320814",
+        "name": "laavis",
+        "level": 1,
+        "race": "Dragonide Blu",
+        "species": {
+          "id": "dragonide",
+          "name": "Dragonide",
+          "choice": {
+            "ruleId": "draconic_ancestry",
+            "ruleLabel": "Discendenza Draconica",
+            "id": "blue",
+            "label": "Drago Blu",
+            "displayName": "Blu",
+            "featureLabel": "Discendenza Draconica: Drago Blu",
+            "summary": "Soffio e resistenza ai danni da fulmine.",
+            "spellcastingAbility": null,
+            "unlockLevel": 1,
+            "spells": []
+          }
+        },
+        "background": "Marinaio",
+        "alignment": "Caotico Buono",
+        "concept": "",
+        "classes": [
+          {
+            "name": "Druido",
+            "level": 1
+          }
+        ],
+        "combat": {
+          "hp": {
+            "current": 10,
+            "max": 10,
+            "temp": 0
+          },
+          "ac": 11,
+          "speed": 9,
+          "initiativeBonus": 1,
+          "hitDice": {
+            "current": 1,
+            "max": 1,
+            "type": "d8",
+            "byType": {
+              "d8": 1
+            }
+          }
+        },
+        "abilities": {
+          "str": 9,
+          "dex": 12,
+          "con": 14,
+          "int": 13,
+          "wis": 17,
+          "cha": 10
+        },
+        "savingThrows": {
+          "str": false,
+          "dex": false,
+          "con": false,
+          "int": true,
+          "wis": true,
+          "cha": false
+        },
+        "skills": [
+          {
+            "id": "acrobatics",
+            "label": "Acrobazia",
+            "ability": "dex",
+            "proficient": true
+          },
+          {
+            "id": "athletics",
+            "label": "Atletica",
+            "ability": "str",
+            "proficient": false
+          },
+          {
+            "id": "sleight",
+            "label": "Rapidita di Mano",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "stealth",
+            "label": "Furtivita",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "arcana",
+            "label": "Arcano",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "history",
+            "label": "Storia",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "investigation",
+            "label": "Investigazione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "nature",
+            "label": "Natura",
+            "ability": "int",
+            "proficient": true
+          },
+          {
+            "id": "religion",
+            "label": "Religione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "animal",
+            "label": "Addestrare Animali",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "insight",
+            "label": "Intuizione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "medicine",
+            "label": "Medicina",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "perception",
+            "label": "Percezione",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "survival",
+            "label": "Sopravvivenza",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "deception",
+            "label": "Inganno",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "intimidation",
+            "label": "Intimidire",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "performance",
+            "label": "Intrattenere",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "persuasion",
+            "label": "Persuasione",
+            "ability": "cha",
+            "proficient": false
+          }
+        ],
+        "resources": [
+          {
+            "id": "breath_weapon",
+            "label": "Soffio",
+            "current": 2,
+            "max": 2,
+            "resetOn": "long_rest",
+            "category": "species"
+          }
+        ],
+        "feats": [
+          {
+            "id": "lottatore-da-taverna",
+            "name": "Lottatore da taverna",
+            "source": "Background",
+            "level": 1,
+            "category": "Origini",
+            "summary": "Migliora colpi senz'armi, armi improvvisate e spinte.",
+            "choices": []
+          }
+        ],
+        "spellcasting": {
+          "ability": "wis",
+          "spellSaveDc": 13,
+          "spellAttackBonus": 5,
+          "preparedCount": 4,
+          "slots": [
+            {
+              "id": "druido_slot_1",
+              "level": 1,
+              "label": "Slot livello 1",
+              "current": 2,
+              "max": 2,
+              "resetOn": "long_rest"
+            }
+          ],
+          "spells": [
+            {
+              "id": "randello-incantato",
+              "name": "Randello Incantato",
+              "level": 0,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "artificio-druidico",
+              "name": "Artificio Druidico",
+              "level": 0,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "nube-di-nebbia",
+              "name": "Nube di Nebbia",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "coltello-di-ghiaccio",
+              "name": "Coltello di Ghiaccio",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "cura-ferite",
+              "name": "Cura Ferite",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "intralciare",
+              "name": "Intralciare",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            }
+          ]
+        },
+        "features": [
+          {
+            "id": "dragonide_discendenza_draconica",
+            "label": "Discendenza draconica",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Discendenza draconica."
+          },
+          {
+            "id": "dragonide_resistenza_ai_danni",
+            "label": "Resistenza ai danni",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Resistenza ai danni."
+          },
+          {
+            "id": "dragonide_scurovisione",
+            "label": "Scurovisione",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Scurovisione."
+          },
+          {
+            "id": "dragonide_soffio",
+            "label": "Soffio",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Soffio."
+          },
+          {
+            "id": "dragonide_draconic_ancestry_blue",
+            "label": "Discendenza Draconica: Drago Blu",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "lineage",
+            "summary": "Soffio e resistenza ai danni da fulmine."
+          },
+          {
+            "id": "druido_incantesimi",
+            "label": "Incantesimi",
+            "level": 1,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Privilegio di classe di 1 livello: Incantesimi."
+          },
+          {
+            "id": "druido_druidico",
+            "label": "Druidico",
+            "level": 1,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Privilegio di classe di 1 livello: Druidico."
+          },
+          {
+            "id": "background_marinaio",
+            "label": "Marinaio",
+            "level": 1,
+            "source": "Background",
+            "category": "background",
+            "kind": "origin",
+            "summary": "Background con talento Lottatore da Taverna."
+          }
+        ],
+        "powers": [],
+        "actions": [
+          {
+            "id": "dragonborn_breath_blue",
+            "name": "Soffio Drago Blu",
+            "type": "save",
+            "damage": "1d10 fulmine",
+            "notes": "Tiro salvezza su Destrezza, CD 8 + COS + bonus competenza. Aumenta con il livello del personaggio.",
+            "source": "Dragonide Blu"
+          }
+        ],
+        "equipment": {
+          "currency": {
+            "cp": 0,
+            "sp": 0,
+            "ep": 0,
+            "gp": 9,
+            "pp": 2
+          },
+          "startingBudget": {
+            "gp": 29,
+            "spentGp": 0,
+            "remainingGp": 29,
+            "mode": "kit",
+            "notes": "Dotazione iniziale da background e classe."
+          },
+          "weapons": [
+            {
+              "id": "background_weapons_pugnale",
+              "itemId": "pugnale",
+              "catalog": "weapons",
+              "name": "Pugnale",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 2 mo - Peso: 0.5 kg",
+              "costCopper": 200,
+              "cost": "2 mo",
+              "weight": "0.5 kg",
+              "stats": {
+                "type": "weapon",
+                "category": "semplice",
+                "kind": "mischia",
+                "damage": "1d4 perforanti",
+                "properties": [
+                  "accurata",
+                  "lancio 6/18",
+                  "leggera"
+                ],
+                "mastery": "Graffio"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_weapons_falcetto",
+              "itemId": "falcetto",
+              "catalog": "weapons",
+              "name": "Falcetto",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 1 mo - Peso: 1 kg",
+              "costCopper": 100,
+              "cost": "1 mo",
+              "weight": "1 kg",
+              "stats": {
+                "type": "weapon",
+                "category": "semplice",
+                "kind": "mischia",
+                "damage": "1d4 taglienti",
+                "properties": [
+                  "leggera"
+                ],
+                "mastery": "Graffio"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "armor": [
+            {
+              "id": "class_armors_armatura-di-cuoio",
+              "itemId": "armatura-di-cuoio",
+              "catalog": "armors",
+              "name": "Armatura di cuoio",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 10 mo - Peso: 5 kg",
+              "costCopper": 1000,
+              "cost": "10 mo",
+              "weight": "5 kg",
+              "stats": {
+                "type": "armor",
+                "category": "leggera",
+                "armorClass": "11 + mod Des",
+                "strengthRequirement": null,
+                "stealthDisadvantage": false
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_shields_scudo",
+              "itemId": "scudo",
+              "catalog": "shields",
+              "name": "Scudo",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 10 mo - Peso: 3 kg",
+              "costCopper": 1000,
+              "cost": "10 mo",
+              "weight": "3 kg",
+              "stats": {
+                "type": "shield",
+                "category": "scudo",
+                "armorClassBonus": 2,
+                "equipAction": "azione di Utilizzo"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "tools": [
+            {
+              "id": "background_tools_strumenti-da-navigatore",
+              "itemId": "strumenti-da-navigatore",
+              "catalog": "tools",
+              "name": "Strumenti da navigatore",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 25 mo - Peso: 1 kg",
+              "costCopper": 2500,
+              "cost": "25 mo",
+              "weight": "1 kg",
+              "stats": {
+                "type": "tool",
+                "category": "altro",
+                "ability": "Saggezza"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_tools_borsa-da-erborista",
+              "itemId": "borsa-da-erborista",
+              "catalog": "tools",
+              "name": "Borsa da erborista",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 5 mo - Peso: 1.5 kg",
+              "costCopper": 500,
+              "cost": "5 mo",
+              "weight": "1.5 kg",
+              "stats": {
+                "type": "tool",
+                "category": "altro",
+                "ability": "Intelligenza"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "adventuringGear": [
+            {
+              "id": "background_adventuring_gear_corda",
+              "itemId": "corda",
+              "catalog": "adventuring_gear",
+              "name": "Corda",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 1 mo - Peso: 2.5 kg",
+              "costCopper": 100,
+              "cost": "1 mo",
+              "weight": "2.5 kg",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "background_adventuring_gear_abiti-da-viaggiatore",
+              "itemId": "abiti-da-viaggiatore",
+              "catalog": "adventuring_gear",
+              "name": "Abiti da viaggiatore",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 2 mo - Peso: 2 kg",
+              "costCopper": 200,
+              "cost": "2 mo",
+              "weight": "2 kg",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_adventuring_gear_focus-druidico_bastone-ferrato",
+              "itemId": "focus-druidico",
+              "catalog": "adventuring_gear",
+              "name": "Focus druidico (bastone ferrato)",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: variabile - Peso: variabile",
+              "costCopper": 0,
+              "cost": "variabile",
+              "weight": "variabile",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_adventuring_gear_dotazione-da-esploratore",
+              "itemId": "dotazione-da-esploratore",
+              "catalog": "adventuring_gear",
+              "name": "Dotazione da esploratore",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 10 mo - Peso: 27.5 kg",
+              "costCopper": 1000,
+              "cost": "10 mo",
+              "weight": "27.5 kg",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "magicItems": [],
+          "consumables": [],
+          "storyItems": [],
+          "wishlist": []
+        },
+        "details": {
+          "personalityTraits": [],
+          "ideals": [],
+          "bonds": [],
+          "flaws": [],
+          "campaignNotes": []
+        },
+        "progressionHistory": [
+          {
+            "id": "creation-pg_1784292320814",
+            "type": "creation",
+            "appliedAt": "2026-07-17T12:45:20.815Z",
+            "fromLevel": 0,
+            "toLevel": 1,
+            "className": "Druido",
+            "choices": {
+              "name": "laavis",
+              "concept": "",
+              "startingLevel": 1,
+              "classId": "druido",
+              "speciesId": "dragonide",
+              "backgroundId": "marinaio",
+              "alignment": "Caotico Buono",
+              "abilityMethod": "standard",
+              "baseAbilities": {
+                "str": 8,
+                "dex": 12,
+                "con": 14,
+                "int": 13,
+                "wis": 15,
+                "cha": 10
+              },
+              "abilityRolls": [],
+              "backgroundIncreases": {
+                "str": 1,
+                "dex": 0,
+                "wis": 2
+              },
+              "featChoices": {
+                "lottatore-da-taverna": {}
+              },
+              "levelOneClassChoices": {
+                "druido_1_cantrips": [
+                  "randello-incantato",
+                  "artificio-druidico"
+                ],
+                "druido_1_spells": [
+                  "nube-di-nebbia",
+                  "coltello-di-ghiaccio",
+                  "cura-ferite",
+                  "intralciare"
+                ]
+              },
+              "speciesChoices": {
+                "dragonide": {
+                  "optionId": "blue"
+                }
+              },
+              "selectedClassSkills": [
+                "animal",
+                "nature"
+              ],
+              "selectedBackgroundTools": [],
+              "selectedClassTools": [],
+              "languages": [],
+              "levelUpChoices": {},
+              "equipmentMode": "kit",
+              "backgroundEquipmentOptionId": "",
+              "classEquipmentOptionId": "",
+              "equipmentChoices": {},
+              "equipmentPurchases": []
+            }
+          }
+        ],
+        "notes": "Creato con flusso guidato livello 0 -> 1. Alcune scelte avanzate di classe, incantesimi ed equipaggiamento saranno dettagliate nei prossimi step.",
+        "proficiencies": {
+          "tools": [],
+          "weaponMasteries": []
+        }
+      }
+    },
+    {
+      "id": "snapshot-lv-2-2026-07-17T12:45:49.966Z",
+      "type": "level_up",
+      "level": 2,
+      "label": "Livello 2",
+      "classSummary": "Druido 2",
+      "createdAt": "2026-07-17T12:45:49.966Z",
+      "sourceHistoryId": "level-up-2-2026-07-17T12:45:49.966Z",
+      "changes": [
+        "Druido 1 -> 2",
+        "PF massimi 10 -> 17",
+        "Incantesimi da Druido: Liv. 1 - Saltare"
+      ],
+      "character": {
+        "id": "pg_1784292320814",
+        "name": "laavis",
+        "level": 2,
+        "race": "Dragonide Blu",
+        "species": {
+          "id": "dragonide",
+          "name": "Dragonide",
+          "choice": {
+            "ruleId": "draconic_ancestry",
+            "ruleLabel": "Discendenza Draconica",
+            "id": "blue",
+            "label": "Drago Blu",
+            "displayName": "Blu",
+            "featureLabel": "Discendenza Draconica: Drago Blu",
+            "summary": "Soffio e resistenza ai danni da fulmine.",
+            "spellcastingAbility": null,
+            "unlockLevel": 1,
+            "spells": []
+          }
+        },
+        "background": "Marinaio",
+        "alignment": "Caotico Buono",
+        "concept": "",
+        "classes": [
+          {
+            "name": "Druido",
+            "level": 2
+          }
+        ],
+        "combat": {
+          "hp": {
+            "current": 17,
+            "max": 17,
+            "temp": 0
+          },
+          "ac": 11,
+          "speed": 9,
+          "initiativeBonus": 1,
+          "hitDice": {
+            "current": 2,
+            "max": 2,
+            "type": "d8",
+            "byType": {
+              "d8": 2
+            }
+          }
+        },
+        "abilities": {
+          "str": 9,
+          "dex": 12,
+          "con": 14,
+          "int": 13,
+          "wis": 17,
+          "cha": 10
+        },
+        "savingThrows": {
+          "str": false,
+          "dex": false,
+          "con": false,
+          "int": true,
+          "wis": true,
+          "cha": false
+        },
+        "skills": [
+          {
+            "id": "acrobatics",
+            "label": "Acrobazia",
+            "ability": "dex",
+            "proficient": true
+          },
+          {
+            "id": "athletics",
+            "label": "Atletica",
+            "ability": "str",
+            "proficient": false
+          },
+          {
+            "id": "sleight",
+            "label": "Rapidita di Mano",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "stealth",
+            "label": "Furtivita",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "arcana",
+            "label": "Arcano",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "history",
+            "label": "Storia",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "investigation",
+            "label": "Investigazione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "nature",
+            "label": "Natura",
+            "ability": "int",
+            "proficient": true
+          },
+          {
+            "id": "religion",
+            "label": "Religione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "animal",
+            "label": "Addestrare Animali",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "insight",
+            "label": "Intuizione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "medicine",
+            "label": "Medicina",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "perception",
+            "label": "Percezione",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "survival",
+            "label": "Sopravvivenza",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "deception",
+            "label": "Inganno",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "intimidation",
+            "label": "Intimidire",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "performance",
+            "label": "Intrattenere",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "persuasion",
+            "label": "Persuasione",
+            "ability": "cha",
+            "proficient": false
+          }
+        ],
+        "resources": [
+          {
+            "id": "breath_weapon",
+            "label": "Soffio",
+            "current": 2,
+            "max": 2,
+            "resetOn": "long_rest",
+            "category": "species"
+          }
+        ],
+        "feats": [
+          {
+            "id": "lottatore-da-taverna",
+            "name": "Lottatore da taverna",
+            "source": "Background",
+            "level": 1,
+            "category": "Origini",
+            "summary": "Migliora colpi senz'armi, armi improvvisate e spinte.",
+            "choices": []
+          }
+        ],
+        "spellcasting": {
+          "ability": "wis",
+          "spellSaveDc": 13,
+          "spellAttackBonus": 5,
+          "preparedCount": 4,
+          "slots": [
+            {
+              "id": "druido_slot_1",
+              "level": 1,
+              "label": "Slot livello 1",
+              "current": 3,
+              "max": 3,
+              "resetOn": "long_rest"
+            }
+          ],
+          "spells": [
+            {
+              "id": "randello-incantato",
+              "name": "Randello Incantato",
+              "level": 0,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "artificio-druidico",
+              "name": "Artificio Druidico",
+              "level": 0,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "nube-di-nebbia",
+              "name": "Nube di Nebbia",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "coltello-di-ghiaccio",
+              "name": "Coltello di Ghiaccio",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "cura-ferite",
+              "name": "Cura Ferite",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "intralciare",
+              "name": "Intralciare",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "saltare",
+              "name": "Saltare",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            }
+          ]
+        },
+        "features": [
+          {
+            "id": "dragonide_discendenza_draconica",
+            "label": "Discendenza draconica",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Discendenza draconica."
+          },
+          {
+            "id": "dragonide_resistenza_ai_danni",
+            "label": "Resistenza ai danni",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Resistenza ai danni."
+          },
+          {
+            "id": "dragonide_scurovisione",
+            "label": "Scurovisione",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Scurovisione."
+          },
+          {
+            "id": "dragonide_soffio",
+            "label": "Soffio",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Soffio."
+          },
+          {
+            "id": "dragonide_draconic_ancestry_blue",
+            "label": "Discendenza Draconica: Drago Blu",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "lineage",
+            "summary": "Soffio e resistenza ai danni da fulmine."
+          },
+          {
+            "id": "druido_incantesimi",
+            "label": "Incantesimi",
+            "level": 1,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Privilegio di classe di 1 livello: Incantesimi."
+          },
+          {
+            "id": "druido_druidico",
+            "label": "Druidico",
+            "level": 1,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Privilegio di classe di 1 livello: Druidico."
+          },
+          {
+            "id": "background_marinaio",
+            "label": "Marinaio",
+            "level": 1,
+            "source": "Background",
+            "category": "background",
+            "kind": "origin",
+            "summary": "Background con talento Lottatore da Taverna."
+          },
+          {
+            "id": "druido_compagno_selvatico",
+            "label": "Compagno Selvatico",
+            "level": 2,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Spendi Forma Selvatica per evocare o ottenere un famiglio naturale."
+          },
+          {
+            "id": "druido_forma_selvatica",
+            "label": "Forma Selvatica",
+            "level": 2,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Spendi un uso per trasformarti in una forma bestiale consentita."
+          }
+        ],
+        "powers": [
+          {
+            "id": "druido_compagno_selvatico"
+          },
+          {
+            "id": "druido_forma_selvatica"
+          }
+        ],
+        "actions": [
+          {
+            "id": "dragonborn_breath_blue",
+            "name": "Soffio Drago Blu",
+            "type": "save",
+            "damage": "1d10 fulmine",
+            "notes": "Tiro salvezza su Destrezza, CD 8 + COS + bonus competenza. Aumenta con il livello del personaggio.",
+            "source": "Dragonide Blu"
+          }
+        ],
+        "equipment": {
+          "currency": {
+            "cp": 0,
+            "sp": 0,
+            "ep": 0,
+            "gp": 9,
+            "pp": 2
+          },
+          "startingBudget": {
+            "gp": 29,
+            "spentGp": 0,
+            "remainingGp": 29,
+            "mode": "kit",
+            "notes": "Dotazione iniziale da background e classe."
+          },
+          "weapons": [
+            {
+              "id": "background_weapons_pugnale",
+              "itemId": "pugnale",
+              "catalog": "weapons",
+              "name": "Pugnale",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 2 mo - Peso: 0.5 kg",
+              "costCopper": 200,
+              "cost": "2 mo",
+              "weight": "0.5 kg",
+              "stats": {
+                "type": "weapon",
+                "category": "semplice",
+                "kind": "mischia",
+                "damage": "1d4 perforanti",
+                "properties": [
+                  "accurata",
+                  "lancio 6/18",
+                  "leggera"
+                ],
+                "mastery": "Graffio"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_weapons_falcetto",
+              "itemId": "falcetto",
+              "catalog": "weapons",
+              "name": "Falcetto",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 1 mo - Peso: 1 kg",
+              "costCopper": 100,
+              "cost": "1 mo",
+              "weight": "1 kg",
+              "stats": {
+                "type": "weapon",
+                "category": "semplice",
+                "kind": "mischia",
+                "damage": "1d4 taglienti",
+                "properties": [
+                  "leggera"
+                ],
+                "mastery": "Graffio"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "armor": [
+            {
+              "id": "class_armors_armatura-di-cuoio",
+              "itemId": "armatura-di-cuoio",
+              "catalog": "armors",
+              "name": "Armatura di cuoio",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 10 mo - Peso: 5 kg",
+              "costCopper": 1000,
+              "cost": "10 mo",
+              "weight": "5 kg",
+              "stats": {
+                "type": "armor",
+                "category": "leggera",
+                "armorClass": "11 + mod Des",
+                "strengthRequirement": null,
+                "stealthDisadvantage": false
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_shields_scudo",
+              "itemId": "scudo",
+              "catalog": "shields",
+              "name": "Scudo",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 10 mo - Peso: 3 kg",
+              "costCopper": 1000,
+              "cost": "10 mo",
+              "weight": "3 kg",
+              "stats": {
+                "type": "shield",
+                "category": "scudo",
+                "armorClassBonus": 2,
+                "equipAction": "azione di Utilizzo"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "tools": [
+            {
+              "id": "background_tools_strumenti-da-navigatore",
+              "itemId": "strumenti-da-navigatore",
+              "catalog": "tools",
+              "name": "Strumenti da navigatore",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 25 mo - Peso: 1 kg",
+              "costCopper": 2500,
+              "cost": "25 mo",
+              "weight": "1 kg",
+              "stats": {
+                "type": "tool",
+                "category": "altro",
+                "ability": "Saggezza"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_tools_borsa-da-erborista",
+              "itemId": "borsa-da-erborista",
+              "catalog": "tools",
+              "name": "Borsa da erborista",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 5 mo - Peso: 1.5 kg",
+              "costCopper": 500,
+              "cost": "5 mo",
+              "weight": "1.5 kg",
+              "stats": {
+                "type": "tool",
+                "category": "altro",
+                "ability": "Intelligenza"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "adventuringGear": [
+            {
+              "id": "background_adventuring_gear_corda",
+              "itemId": "corda",
+              "catalog": "adventuring_gear",
+              "name": "Corda",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 1 mo - Peso: 2.5 kg",
+              "costCopper": 100,
+              "cost": "1 mo",
+              "weight": "2.5 kg",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "background_adventuring_gear_abiti-da-viaggiatore",
+              "itemId": "abiti-da-viaggiatore",
+              "catalog": "adventuring_gear",
+              "name": "Abiti da viaggiatore",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 2 mo - Peso: 2 kg",
+              "costCopper": 200,
+              "cost": "2 mo",
+              "weight": "2 kg",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_adventuring_gear_focus-druidico_bastone-ferrato",
+              "itemId": "focus-druidico",
+              "catalog": "adventuring_gear",
+              "name": "Focus druidico (bastone ferrato)",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: variabile - Peso: variabile",
+              "costCopper": 0,
+              "cost": "variabile",
+              "weight": "variabile",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_adventuring_gear_dotazione-da-esploratore",
+              "itemId": "dotazione-da-esploratore",
+              "catalog": "adventuring_gear",
+              "name": "Dotazione da esploratore",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 10 mo - Peso: 27.5 kg",
+              "costCopper": 1000,
+              "cost": "10 mo",
+              "weight": "27.5 kg",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "magicItems": [],
+          "consumables": [],
+          "storyItems": [],
+          "wishlist": []
+        },
+        "details": {
+          "personalityTraits": [],
+          "ideals": [],
+          "bonds": [],
+          "flaws": [],
+          "campaignNotes": []
+        },
+        "progressionHistory": [
+          {
+            "id": "creation-pg_1784292320814",
+            "type": "creation",
+            "appliedAt": "2026-07-17T12:45:20.815Z",
+            "fromLevel": 0,
+            "toLevel": 1,
+            "className": "Druido",
+            "choices": {
+              "name": "laavis",
+              "concept": "",
+              "startingLevel": 1,
+              "classId": "druido",
+              "speciesId": "dragonide",
+              "backgroundId": "marinaio",
+              "alignment": "Caotico Buono",
+              "abilityMethod": "standard",
+              "baseAbilities": {
+                "str": 8,
+                "dex": 12,
+                "con": 14,
+                "int": 13,
+                "wis": 15,
+                "cha": 10
+              },
+              "abilityRolls": [],
+              "backgroundIncreases": {
+                "str": 1,
+                "dex": 0,
+                "wis": 2
+              },
+              "featChoices": {
+                "lottatore-da-taverna": {}
+              },
+              "levelOneClassChoices": {
+                "druido_1_cantrips": [
+                  "randello-incantato",
+                  "artificio-druidico"
+                ],
+                "druido_1_spells": [
+                  "nube-di-nebbia",
+                  "coltello-di-ghiaccio",
+                  "cura-ferite",
+                  "intralciare"
+                ]
+              },
+              "speciesChoices": {
+                "dragonide": {
+                  "optionId": "blue"
+                }
+              },
+              "selectedClassSkills": [
+                "animal",
+                "nature"
+              ],
+              "selectedBackgroundTools": [],
+              "selectedClassTools": [],
+              "languages": [],
+              "levelUpChoices": {},
+              "equipmentMode": "kit",
+              "backgroundEquipmentOptionId": "",
+              "classEquipmentOptionId": "",
+              "equipmentChoices": {},
+              "equipmentPurchases": []
+            }
+          },
+          {
+            "id": "level-up-2-2026-07-17T12:45:49.966Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-17T12:45:49.966Z",
+            "className": "Druido",
+            "totalLevel": {
+              "from": 1,
+              "to": 2
+            },
+            "classLevel": {
+              "className": "Druido",
+              "from": 1,
+              "to": 2
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d8",
+              "baseIncrease": 5,
+              "constitutionModifier": 2,
+              "totalIncrease": 7,
+              "maxHpFrom": 10,
+              "maxHpTo": 17,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": null,
+            "classChoices": [
+              {
+                "id": "druido_2_spells",
+                "label": "Incantesimi da Druido",
+                "type": "spell_choice",
+                "selected": [
+                  "saltare"
+                ],
+                "labels": [
+                  "Liv. 1 - Saltare"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "saltare",
+                    "label": "Liv. 1 - Saltare",
+                    "level": 1,
+                    "spell": {
+                      "id": "saltare",
+                      "name": "Saltare",
+                      "name_upper": "SALTARE",
+                      "level": 1,
+                      "level_label": "1° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "mago",
+                        "ranger",
+                        "stregone"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "",
+                        "verbal": false,
+                        "somatic": false,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Componente: V, S, M (la zampa posteriore di una cavalletta) Durata: l minuto L'incantatore tocca una creatura consenziente. La crea tura, in ogni suo turno fino al termine dell'incantesimo, può saltare fino a 9 metri, usando 3 metri di movimento.",
+                      "at_higher_levels": "L'incantatore può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": true
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 325
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "saltare": {
+                    "id": "saltare",
+                    "label": "Liv. 1 - Saltare",
+                    "level": 1,
+                    "spell": {
+                      "id": "saltare",
+                      "name": "Saltare",
+                      "name_upper": "SALTARE",
+                      "level": 1,
+                      "level_label": "1° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "mago",
+                        "ranger",
+                        "stregone"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "",
+                        "verbal": false,
+                        "somatic": false,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Componente: V, S, M (la zampa posteriore di una cavalletta) Durata: l minuto L'incantatore tocca una creatura consenziente. La crea tura, in ogni suo turno fino al termine dell'incantesimo, può saltare fino a 9 metri, usando 3 metri di movimento.",
+                      "at_higher_levels": "L'incantatore può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": true
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 325
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          }
+        ],
+        "notes": "Creato con flusso guidato livello 0 -> 1. Alcune scelte avanzate di classe, incantesimi ed equipaggiamento saranno dettagliate nei prossimi step.",
+        "proficiencies": {
+          "tools": [],
+          "weaponMasteries": [],
+          "armor": [],
+          "weapons": [],
+          "languages": []
+        },
+        "ownerId": "user_demo",
+        "languages": []
+      }
+    },
+    {
+      "id": "snapshot-lv-3-2026-07-17T12:46:07.456Z",
+      "type": "level_up",
+      "level": 3,
+      "label": "Livello 3",
+      "classSummary": "Druido (Circolo del Mare) 3",
+      "createdAt": "2026-07-17T12:46:07.456Z",
+      "sourceHistoryId": "level-up-3-2026-07-17T12:46:07.456Z",
+      "changes": [
+        "Druido 2 -> 3",
+        "PF massimi 17 -> 24",
+        "Sottoclasse: Circolo del Mare",
+        "Incantesimi da Druido: Liv. 2 - Aiuto"
+      ],
+      "character": {
+        "id": "pg_1784292320814",
+        "name": "laavis",
+        "level": 3,
+        "race": "Dragonide Blu",
+        "species": {
+          "id": "dragonide",
+          "name": "Dragonide",
+          "choice": {
+            "ruleId": "draconic_ancestry",
+            "ruleLabel": "Discendenza Draconica",
+            "id": "blue",
+            "label": "Drago Blu",
+            "displayName": "Blu",
+            "featureLabel": "Discendenza Draconica: Drago Blu",
+            "summary": "Soffio e resistenza ai danni da fulmine.",
+            "spellcastingAbility": null,
+            "unlockLevel": 1,
+            "spells": []
+          }
+        },
+        "background": "Marinaio",
+        "alignment": "Caotico Buono",
+        "concept": "",
+        "classes": [
+          {
+            "name": "Druido",
+            "level": 3,
+            "subclass": "Circolo del Mare"
+          }
+        ],
+        "combat": {
+          "hp": {
+            "current": 24,
+            "max": 24,
+            "temp": 0
+          },
+          "ac": 11,
+          "speed": 9,
+          "initiativeBonus": 1,
+          "hitDice": {
+            "current": 3,
+            "max": 3,
+            "type": "d8",
+            "byType": {
+              "d8": 3
+            }
+          }
+        },
+        "abilities": {
+          "str": 9,
+          "dex": 12,
+          "con": 14,
+          "int": 13,
+          "wis": 17,
+          "cha": 10
+        },
+        "savingThrows": {
+          "str": false,
+          "dex": false,
+          "con": false,
+          "int": true,
+          "wis": true,
+          "cha": false
+        },
+        "skills": [
+          {
+            "id": "acrobatics",
+            "label": "Acrobazia",
+            "ability": "dex",
+            "proficient": true
+          },
+          {
+            "id": "athletics",
+            "label": "Atletica",
+            "ability": "str",
+            "proficient": false
+          },
+          {
+            "id": "sleight",
+            "label": "Rapidita di Mano",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "stealth",
+            "label": "Furtivita",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "arcana",
+            "label": "Arcano",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "history",
+            "label": "Storia",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "investigation",
+            "label": "Investigazione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "nature",
+            "label": "Natura",
+            "ability": "int",
+            "proficient": true
+          },
+          {
+            "id": "religion",
+            "label": "Religione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "animal",
+            "label": "Addestrare Animali",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "insight",
+            "label": "Intuizione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "medicine",
+            "label": "Medicina",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "perception",
+            "label": "Percezione",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "survival",
+            "label": "Sopravvivenza",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "deception",
+            "label": "Inganno",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "intimidation",
+            "label": "Intimidire",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "performance",
+            "label": "Intrattenere",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "persuasion",
+            "label": "Persuasione",
+            "ability": "cha",
+            "proficient": false
+          }
+        ],
+        "resources": [
+          {
+            "id": "breath_weapon",
+            "label": "Soffio",
+            "current": 2,
+            "max": 2,
+            "resetOn": "long_rest",
+            "category": "species"
+          }
+        ],
+        "feats": [
+          {
+            "id": "lottatore-da-taverna",
+            "name": "Lottatore da taverna",
+            "source": "Background",
+            "level": 1,
+            "category": "Origini",
+            "summary": "Migliora colpi senz'armi, armi improvvisate e spinte.",
+            "choices": []
+          }
+        ],
+        "spellcasting": {
+          "ability": "wis",
+          "spellSaveDc": 13,
+          "spellAttackBonus": 5,
+          "preparedCount": 4,
+          "slots": [
+            {
+              "id": "druido_slot_1",
+              "level": 1,
+              "label": "Slot livello 1",
+              "current": 4,
+              "max": 4,
+              "resetOn": "long_rest"
+            },
+            {
+              "id": "slot_2",
+              "level": 2,
+              "label": "Slot livello 2",
+              "current": 2,
+              "max": 2,
+              "resetOn": "long_rest"
+            }
+          ],
+          "spells": [
+            {
+              "id": "randello-incantato",
+              "name": "Randello Incantato",
+              "level": 0,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "artificio-druidico",
+              "name": "Artificio Druidico",
+              "level": 0,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "nube-di-nebbia",
+              "name": "Nube di Nebbia",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "coltello-di-ghiaccio",
+              "name": "Coltello di Ghiaccio",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "cura-ferite",
+              "name": "Cura Ferite",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "intralciare",
+              "name": "Intralciare",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "saltare",
+              "name": "Saltare",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "aiuto",
+              "name": "Aiuto",
+              "level": 2,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            }
+          ]
+        },
+        "features": [
+          {
+            "id": "dragonide_discendenza_draconica",
+            "label": "Discendenza draconica",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Discendenza draconica."
+          },
+          {
+            "id": "dragonide_resistenza_ai_danni",
+            "label": "Resistenza ai danni",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Resistenza ai danni."
+          },
+          {
+            "id": "dragonide_scurovisione",
+            "label": "Scurovisione",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Scurovisione."
+          },
+          {
+            "id": "dragonide_soffio",
+            "label": "Soffio",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Soffio."
+          },
+          {
+            "id": "dragonide_draconic_ancestry_blue",
+            "label": "Discendenza Draconica: Drago Blu",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "lineage",
+            "summary": "Soffio e resistenza ai danni da fulmine."
+          },
+          {
+            "id": "druido_incantesimi",
+            "label": "Incantesimi",
+            "level": 1,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Privilegio di classe di 1 livello: Incantesimi."
+          },
+          {
+            "id": "druido_druidico",
+            "label": "Druidico",
+            "level": 1,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Privilegio di classe di 1 livello: Druidico."
+          },
+          {
+            "id": "background_marinaio",
+            "label": "Marinaio",
+            "level": 1,
+            "source": "Background",
+            "category": "background",
+            "kind": "origin",
+            "summary": "Background con talento Lottatore da Taverna."
+          },
+          {
+            "id": "druido_compagno_selvatico",
+            "label": "Compagno Selvatico",
+            "level": 2,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Spendi Forma Selvatica per evocare o ottenere un famiglio naturale."
+          },
+          {
+            "id": "druido_forma_selvatica",
+            "label": "Forma Selvatica",
+            "level": 2,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Spendi un uso per trasformarti in una forma bestiale consentita."
+          },
+          {
+            "id": "druido_circolo_del_mare_furia_dei_mari",
+            "label": "Furia dei Mari",
+            "level": 3,
+            "source": "Circolo del Mare",
+            "category": "subclass",
+            "kind": "bonus_action",
+            "summary": "Crei un'aura acquatica tempestosa che danneggia e spinge."
+          },
+          {
+            "id": "druido_circolo_del_mare_incantesimi_del_circolo_del_mare",
+            "label": "Incantesimi del Circolo del Mare",
+            "level": 3,
+            "source": "Circolo del Mare",
+            "category": "subclass",
+            "kind": "passive",
+            "summary": "Aggiungi incantesimi di mare, freddo e tempesta."
+          }
+        ],
+        "powers": [
+          {
+            "id": "druido_compagno_selvatico"
+          },
+          {
+            "id": "druido_forma_selvatica"
+          },
+          {
+            "id": "druido_circolo_del_mare_furia_dei_mari"
+          },
+          {
+            "id": "druido_circolo_del_mare_incantesimi_del_circolo_del_mare"
+          }
+        ],
+        "actions": [
+          {
+            "id": "dragonborn_breath_blue",
+            "name": "Soffio Drago Blu",
+            "type": "save",
+            "damage": "1d10 fulmine",
+            "notes": "Tiro salvezza su Destrezza, CD 8 + COS + bonus competenza. Aumenta con il livello del personaggio.",
+            "source": "Dragonide Blu"
+          }
+        ],
+        "equipment": {
+          "currency": {
+            "cp": 0,
+            "sp": 0,
+            "ep": 0,
+            "gp": 9,
+            "pp": 2
+          },
+          "startingBudget": {
+            "gp": 29,
+            "spentGp": 0,
+            "remainingGp": 29,
+            "mode": "kit",
+            "notes": "Dotazione iniziale da background e classe."
+          },
+          "weapons": [
+            {
+              "id": "background_weapons_pugnale",
+              "itemId": "pugnale",
+              "catalog": "weapons",
+              "name": "Pugnale",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 2 mo - Peso: 0.5 kg",
+              "costCopper": 200,
+              "cost": "2 mo",
+              "weight": "0.5 kg",
+              "stats": {
+                "type": "weapon",
+                "category": "semplice",
+                "kind": "mischia",
+                "damage": "1d4 perforanti",
+                "properties": [
+                  "accurata",
+                  "lancio 6/18",
+                  "leggera"
+                ],
+                "mastery": "Graffio"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_weapons_falcetto",
+              "itemId": "falcetto",
+              "catalog": "weapons",
+              "name": "Falcetto",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 1 mo - Peso: 1 kg",
+              "costCopper": 100,
+              "cost": "1 mo",
+              "weight": "1 kg",
+              "stats": {
+                "type": "weapon",
+                "category": "semplice",
+                "kind": "mischia",
+                "damage": "1d4 taglienti",
+                "properties": [
+                  "leggera"
+                ],
+                "mastery": "Graffio"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "armor": [
+            {
+              "id": "class_armors_armatura-di-cuoio",
+              "itemId": "armatura-di-cuoio",
+              "catalog": "armors",
+              "name": "Armatura di cuoio",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 10 mo - Peso: 5 kg",
+              "costCopper": 1000,
+              "cost": "10 mo",
+              "weight": "5 kg",
+              "stats": {
+                "type": "armor",
+                "category": "leggera",
+                "armorClass": "11 + mod Des",
+                "strengthRequirement": null,
+                "stealthDisadvantage": false
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_shields_scudo",
+              "itemId": "scudo",
+              "catalog": "shields",
+              "name": "Scudo",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 10 mo - Peso: 3 kg",
+              "costCopper": 1000,
+              "cost": "10 mo",
+              "weight": "3 kg",
+              "stats": {
+                "type": "shield",
+                "category": "scudo",
+                "armorClassBonus": 2,
+                "equipAction": "azione di Utilizzo"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "tools": [
+            {
+              "id": "background_tools_strumenti-da-navigatore",
+              "itemId": "strumenti-da-navigatore",
+              "catalog": "tools",
+              "name": "Strumenti da navigatore",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 25 mo - Peso: 1 kg",
+              "costCopper": 2500,
+              "cost": "25 mo",
+              "weight": "1 kg",
+              "stats": {
+                "type": "tool",
+                "category": "altro",
+                "ability": "Saggezza"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_tools_borsa-da-erborista",
+              "itemId": "borsa-da-erborista",
+              "catalog": "tools",
+              "name": "Borsa da erborista",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 5 mo - Peso: 1.5 kg",
+              "costCopper": 500,
+              "cost": "5 mo",
+              "weight": "1.5 kg",
+              "stats": {
+                "type": "tool",
+                "category": "altro",
+                "ability": "Intelligenza"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "adventuringGear": [
+            {
+              "id": "background_adventuring_gear_corda",
+              "itemId": "corda",
+              "catalog": "adventuring_gear",
+              "name": "Corda",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 1 mo - Peso: 2.5 kg",
+              "costCopper": 100,
+              "cost": "1 mo",
+              "weight": "2.5 kg",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "background_adventuring_gear_abiti-da-viaggiatore",
+              "itemId": "abiti-da-viaggiatore",
+              "catalog": "adventuring_gear",
+              "name": "Abiti da viaggiatore",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 2 mo - Peso: 2 kg",
+              "costCopper": 200,
+              "cost": "2 mo",
+              "weight": "2 kg",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_adventuring_gear_focus-druidico_bastone-ferrato",
+              "itemId": "focus-druidico",
+              "catalog": "adventuring_gear",
+              "name": "Focus druidico (bastone ferrato)",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: variabile - Peso: variabile",
+              "costCopper": 0,
+              "cost": "variabile",
+              "weight": "variabile",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_adventuring_gear_dotazione-da-esploratore",
+              "itemId": "dotazione-da-esploratore",
+              "catalog": "adventuring_gear",
+              "name": "Dotazione da esploratore",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 10 mo - Peso: 27.5 kg",
+              "costCopper": 1000,
+              "cost": "10 mo",
+              "weight": "27.5 kg",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "magicItems": [],
+          "consumables": [],
+          "storyItems": [],
+          "wishlist": []
+        },
+        "details": {
+          "personalityTraits": [],
+          "ideals": [],
+          "bonds": [],
+          "flaws": [],
+          "campaignNotes": []
+        },
+        "progressionHistory": [
+          {
+            "id": "creation-pg_1784292320814",
+            "type": "creation",
+            "appliedAt": "2026-07-17T12:45:20.815Z",
+            "fromLevel": 0,
+            "toLevel": 1,
+            "className": "Druido",
+            "choices": {
+              "name": "laavis",
+              "concept": "",
+              "startingLevel": 1,
+              "classId": "druido",
+              "speciesId": "dragonide",
+              "backgroundId": "marinaio",
+              "alignment": "Caotico Buono",
+              "abilityMethod": "standard",
+              "baseAbilities": {
+                "str": 8,
+                "dex": 12,
+                "con": 14,
+                "int": 13,
+                "wis": 15,
+                "cha": 10
+              },
+              "abilityRolls": [],
+              "backgroundIncreases": {
+                "str": 1,
+                "dex": 0,
+                "wis": 2
+              },
+              "featChoices": {
+                "lottatore-da-taverna": {}
+              },
+              "levelOneClassChoices": {
+                "druido_1_cantrips": [
+                  "randello-incantato",
+                  "artificio-druidico"
+                ],
+                "druido_1_spells": [
+                  "nube-di-nebbia",
+                  "coltello-di-ghiaccio",
+                  "cura-ferite",
+                  "intralciare"
+                ]
+              },
+              "speciesChoices": {
+                "dragonide": {
+                  "optionId": "blue"
+                }
+              },
+              "selectedClassSkills": [
+                "animal",
+                "nature"
+              ],
+              "selectedBackgroundTools": [],
+              "selectedClassTools": [],
+              "languages": [],
+              "levelUpChoices": {},
+              "equipmentMode": "kit",
+              "backgroundEquipmentOptionId": "",
+              "classEquipmentOptionId": "",
+              "equipmentChoices": {},
+              "equipmentPurchases": []
+            }
+          },
+          {
+            "id": "level-up-2-2026-07-17T12:45:49.966Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-17T12:45:49.966Z",
+            "className": "Druido",
+            "totalLevel": {
+              "from": 1,
+              "to": 2
+            },
+            "classLevel": {
+              "className": "Druido",
+              "from": 1,
+              "to": 2
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d8",
+              "baseIncrease": 5,
+              "constitutionModifier": 2,
+              "totalIncrease": 7,
+              "maxHpFrom": 10,
+              "maxHpTo": 17,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": null,
+            "classChoices": [
+              {
+                "id": "druido_2_spells",
+                "label": "Incantesimi da Druido",
+                "type": "spell_choice",
+                "selected": [
+                  "saltare"
+                ],
+                "labels": [
+                  "Liv. 1 - Saltare"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "saltare",
+                    "label": "Liv. 1 - Saltare",
+                    "level": 1,
+                    "spell": {
+                      "id": "saltare",
+                      "name": "Saltare",
+                      "name_upper": "SALTARE",
+                      "level": 1,
+                      "level_label": "1° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "mago",
+                        "ranger",
+                        "stregone"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "",
+                        "verbal": false,
+                        "somatic": false,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Componente: V, S, M (la zampa posteriore di una cavalletta) Durata: l minuto L'incantatore tocca una creatura consenziente. La crea tura, in ogni suo turno fino al termine dell'incantesimo, può saltare fino a 9 metri, usando 3 metri di movimento.",
+                      "at_higher_levels": "L'incantatore può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": true
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 325
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "saltare": {
+                    "id": "saltare",
+                    "label": "Liv. 1 - Saltare",
+                    "level": 1,
+                    "spell": {
+                      "id": "saltare",
+                      "name": "Saltare",
+                      "name_upper": "SALTARE",
+                      "level": 1,
+                      "level_label": "1° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "mago",
+                        "ranger",
+                        "stregone"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "",
+                        "verbal": false,
+                        "somatic": false,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Componente: V, S, M (la zampa posteriore di una cavalletta) Durata: l minuto L'incantatore tocca una creatura consenziente. La crea tura, in ogni suo turno fino al termine dell'incantesimo, può saltare fino a 9 metri, usando 3 metri di movimento.",
+                      "at_higher_levels": "L'incantatore può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": true
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 325
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          },
+          {
+            "id": "level-up-3-2026-07-17T12:46:07.456Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-17T12:46:07.456Z",
+            "className": "Druido",
+            "totalLevel": {
+              "from": 2,
+              "to": 3
+            },
+            "classLevel": {
+              "className": "Druido",
+              "from": 2,
+              "to": 3
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d8",
+              "baseIncrease": 5,
+              "constitutionModifier": 2,
+              "totalIncrease": 7,
+              "maxHpFrom": 17,
+              "maxHpTo": 24,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": null,
+            "classChoices": [
+              {
+                "id": "druido_3_subclass",
+                "label": "Sottoclasse",
+                "type": "subclass_choice",
+                "selected": [
+                  "circolo_del_mare"
+                ],
+                "labels": [
+                  "Circolo del Mare"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "circolo_del_mare",
+                    "label": "Circolo del Mare",
+                    "subclassName": "Circolo del Mare"
+                  }
+                ],
+                "meta": {
+                  "circolo_del_mare": {
+                    "id": "circolo_del_mare",
+                    "label": "Circolo del Mare",
+                    "subclassName": "Circolo del Mare"
+                  }
+                },
+                "warnings": []
+              },
+              {
+                "id": "druido_3_spells",
+                "label": "Incantesimi da Druido",
+                "type": "spell_choice",
+                "selected": [
+                  "aiuto"
+                ],
+                "labels": [
+                  "Liv. 2 - Aiuto"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "aiuto",
+                    "label": "Liv. 2 - Aiuto",
+                    "level": 2,
+                    "spell": {
+                      "id": "aiuto",
+                      "name": "Aiuto",
+                      "name_upper": "AIUTO",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "druido",
+                        "paladino",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "9 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (una striscia di tessuto bianco)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "una striscia di tessuto bianco",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "8 ore",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore sceglie fino a tre creature entro gittata. I punti ferita massimi e i punti ferita attuali di ogni bersa glio aumentano di 5 per la durata dell'incantesimo.",
+                      "at_higher_levels": "I punti ferita di ciascun bersaglio aumentano di 5 per ogni slot incantesimo di livello superiore al 2°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": true,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 242
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "aiuto": {
+                    "id": "aiuto",
+                    "label": "Liv. 2 - Aiuto",
+                    "level": 2,
+                    "spell": {
+                      "id": "aiuto",
+                      "name": "Aiuto",
+                      "name_upper": "AIUTO",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "druido",
+                        "paladino",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "9 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (una striscia di tessuto bianco)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "una striscia di tessuto bianco",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "8 ore",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore sceglie fino a tre creature entro gittata. I punti ferita massimi e i punti ferita attuali di ogni bersa glio aumentano di 5 per la durata dell'incantesimo.",
+                      "at_higher_levels": "I punti ferita di ciascun bersaglio aumentano di 5 per ogni slot incantesimo di livello superiore al 2°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": true,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 242
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          }
+        ],
+        "notes": "Creato con flusso guidato livello 0 -> 1. Alcune scelte avanzate di classe, incantesimi ed equipaggiamento saranno dettagliate nei prossimi step.",
+        "proficiencies": {
+          "tools": [],
+          "weaponMasteries": [],
+          "armor": [],
+          "weapons": [],
+          "languages": []
+        },
+        "ownerId": "user_demo",
+        "languages": []
+      }
+    },
+    {
+      "id": "snapshot-lv-4-2026-07-17T12:46:31.171Z",
+      "type": "level_up",
+      "level": 4,
+      "label": "Livello 4",
+      "classSummary": "Druido (Circolo del Mare) 4",
+      "createdAt": "2026-07-17T12:46:31.171Z",
+      "sourceHistoryId": "level-up-4-2026-07-17T12:46:31.171Z",
+      "changes": [
+        "Druido 3 -> 4",
+        "PF massimi 24 -> 31",
+        "Trucchetti da Druido: Riparare",
+        "Incantesimi da Druido: Liv. 2 - Lama Infuocata",
+        "WIS 17 -> 19"
+      ],
+      "character": {
+        "id": "pg_1784292320814",
+        "name": "laavis",
+        "level": 4,
+        "race": "Dragonide Blu",
+        "species": {
+          "id": "dragonide",
+          "name": "Dragonide",
+          "choice": {
+            "ruleId": "draconic_ancestry",
+            "ruleLabel": "Discendenza Draconica",
+            "id": "blue",
+            "label": "Drago Blu",
+            "displayName": "Blu",
+            "featureLabel": "Discendenza Draconica: Drago Blu",
+            "summary": "Soffio e resistenza ai danni da fulmine.",
+            "spellcastingAbility": null,
+            "unlockLevel": 1,
+            "spells": []
+          }
+        },
+        "background": "Marinaio",
+        "alignment": "Caotico Buono",
+        "concept": "",
+        "classes": [
+          {
+            "name": "Druido",
+            "level": 4,
+            "subclass": "Circolo del Mare"
+          }
+        ],
+        "combat": {
+          "hp": {
+            "current": 31,
+            "max": 31,
+            "temp": 0
+          },
+          "ac": 11,
+          "speed": 9,
+          "initiativeBonus": 1,
+          "hitDice": {
+            "current": 4,
+            "max": 4,
+            "type": "d8",
+            "byType": {
+              "d8": 4
+            }
+          }
+        },
+        "abilities": {
+          "str": 9,
+          "dex": 12,
+          "con": 14,
+          "int": 13,
+          "wis": 19,
+          "cha": 10
+        },
+        "savingThrows": {
+          "str": false,
+          "dex": false,
+          "con": false,
+          "int": true,
+          "wis": true,
+          "cha": false
+        },
+        "skills": [
+          {
+            "id": "acrobatics",
+            "label": "Acrobazia",
+            "ability": "dex",
+            "proficient": true
+          },
+          {
+            "id": "athletics",
+            "label": "Atletica",
+            "ability": "str",
+            "proficient": false
+          },
+          {
+            "id": "sleight",
+            "label": "Rapidita di Mano",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "stealth",
+            "label": "Furtivita",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "arcana",
+            "label": "Arcano",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "history",
+            "label": "Storia",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "investigation",
+            "label": "Investigazione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "nature",
+            "label": "Natura",
+            "ability": "int",
+            "proficient": true
+          },
+          {
+            "id": "religion",
+            "label": "Religione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "animal",
+            "label": "Addestrare Animali",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "insight",
+            "label": "Intuizione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "medicine",
+            "label": "Medicina",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "perception",
+            "label": "Percezione",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "survival",
+            "label": "Sopravvivenza",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "deception",
+            "label": "Inganno",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "intimidation",
+            "label": "Intimidire",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "performance",
+            "label": "Intrattenere",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "persuasion",
+            "label": "Persuasione",
+            "ability": "cha",
+            "proficient": false
+          }
+        ],
+        "resources": [
+          {
+            "id": "breath_weapon",
+            "label": "Soffio",
+            "current": 2,
+            "max": 2,
+            "resetOn": "long_rest",
+            "category": "species"
+          }
+        ],
+        "feats": [
+          {
+            "id": "lottatore-da-taverna",
+            "name": "Lottatore da taverna",
+            "source": "Background",
+            "level": 1,
+            "category": "Origini",
+            "summary": "Migliora colpi senz'armi, armi improvvisate e spinte.",
+            "choices": []
+          }
+        ],
+        "spellcasting": {
+          "ability": "wis",
+          "spellSaveDc": 13,
+          "spellAttackBonus": 5,
+          "preparedCount": 4,
+          "slots": [
+            {
+              "id": "druido_slot_1",
+              "level": 1,
+              "label": "Slot livello 1",
+              "current": 4,
+              "max": 4,
+              "resetOn": "long_rest"
+            },
+            {
+              "id": "slot_2",
+              "level": 2,
+              "label": "Slot livello 2",
+              "current": 3,
+              "max": 3,
+              "resetOn": "long_rest"
+            }
+          ],
+          "spells": [
+            {
+              "id": "randello-incantato",
+              "name": "Randello Incantato",
+              "level": 0,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "artificio-druidico",
+              "name": "Artificio Druidico",
+              "level": 0,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "nube-di-nebbia",
+              "name": "Nube di Nebbia",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "coltello-di-ghiaccio",
+              "name": "Coltello di Ghiaccio",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "cura-ferite",
+              "name": "Cura Ferite",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "intralciare",
+              "name": "Intralciare",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "saltare",
+              "name": "Saltare",
+              "level": 1,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "aiuto",
+              "name": "Aiuto",
+              "level": 2,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "riparare",
+              "name": "Riparare",
+              "level": 0,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "lama-infuocata",
+              "name": "Lama Infuocata",
+              "level": 2,
+              "source": "Druido",
+              "ability": "wis",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            }
+          ]
+        },
+        "features": [
+          {
+            "id": "dragonide_discendenza_draconica",
+            "label": "Discendenza draconica",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Discendenza draconica."
+          },
+          {
+            "id": "dragonide_resistenza_ai_danni",
+            "label": "Resistenza ai danni",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Resistenza ai danni."
+          },
+          {
+            "id": "dragonide_scurovisione",
+            "label": "Scurovisione",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Scurovisione."
+          },
+          {
+            "id": "dragonide_soffio",
+            "label": "Soffio",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "trait",
+            "summary": "Tratto di specie: Soffio."
+          },
+          {
+            "id": "dragonide_draconic_ancestry_blue",
+            "label": "Discendenza Draconica: Drago Blu",
+            "level": 1,
+            "source": "Dragonide",
+            "category": "species",
+            "kind": "lineage",
+            "summary": "Soffio e resistenza ai danni da fulmine."
+          },
+          {
+            "id": "druido_incantesimi",
+            "label": "Incantesimi",
+            "level": 1,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Privilegio di classe di 1 livello: Incantesimi."
+          },
+          {
+            "id": "druido_druidico",
+            "label": "Druidico",
+            "level": 1,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Privilegio di classe di 1 livello: Druidico."
+          },
+          {
+            "id": "background_marinaio",
+            "label": "Marinaio",
+            "level": 1,
+            "source": "Background",
+            "category": "background",
+            "kind": "origin",
+            "summary": "Background con talento Lottatore da Taverna."
+          },
+          {
+            "id": "druido_compagno_selvatico",
+            "label": "Compagno Selvatico",
+            "level": 2,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Spendi Forma Selvatica per evocare o ottenere un famiglio naturale."
+          },
+          {
+            "id": "druido_forma_selvatica",
+            "label": "Forma Selvatica",
+            "level": 2,
+            "source": "Druido",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Spendi un uso per trasformarti in una forma bestiale consentita."
+          },
+          {
+            "id": "druido_circolo_del_mare_furia_dei_mari",
+            "label": "Furia dei Mari",
+            "level": 3,
+            "source": "Circolo del Mare",
+            "category": "subclass",
+            "kind": "bonus_action",
+            "summary": "Crei un'aura acquatica tempestosa che danneggia e spinge."
+          },
+          {
+            "id": "druido_circolo_del_mare_incantesimi_del_circolo_del_mare",
+            "label": "Incantesimi del Circolo del Mare",
+            "level": 3,
+            "source": "Circolo del Mare",
+            "category": "subclass",
+            "kind": "passive",
+            "summary": "Aggiungi incantesimi di mare, freddo e tempesta."
+          }
+        ],
+        "powers": [
+          {
+            "id": "druido_compagno_selvatico"
+          },
+          {
+            "id": "druido_forma_selvatica"
+          },
+          {
+            "id": "druido_circolo_del_mare_furia_dei_mari"
+          },
+          {
+            "id": "druido_circolo_del_mare_incantesimi_del_circolo_del_mare"
+          }
+        ],
+        "actions": [
+          {
+            "id": "dragonborn_breath_blue",
+            "name": "Soffio Drago Blu",
+            "type": "save",
+            "damage": "1d10 fulmine",
+            "notes": "Tiro salvezza su Destrezza, CD 8 + COS + bonus competenza. Aumenta con il livello del personaggio.",
+            "source": "Dragonide Blu"
+          }
+        ],
+        "equipment": {
+          "currency": {
+            "cp": 0,
+            "sp": 0,
+            "ep": 0,
+            "gp": 9,
+            "pp": 2
+          },
+          "startingBudget": {
+            "gp": 29,
+            "spentGp": 0,
+            "remainingGp": 29,
+            "mode": "kit",
+            "notes": "Dotazione iniziale da background e classe."
+          },
+          "weapons": [
+            {
+              "id": "background_weapons_pugnale",
+              "itemId": "pugnale",
+              "catalog": "weapons",
+              "name": "Pugnale",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 2 mo - Peso: 0.5 kg",
+              "costCopper": 200,
+              "cost": "2 mo",
+              "weight": "0.5 kg",
+              "stats": {
+                "type": "weapon",
+                "category": "semplice",
+                "kind": "mischia",
+                "damage": "1d4 perforanti",
+                "properties": [
+                  "accurata",
+                  "lancio 6/18",
+                  "leggera"
+                ],
+                "mastery": "Graffio"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_weapons_falcetto",
+              "itemId": "falcetto",
+              "catalog": "weapons",
+              "name": "Falcetto",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 1 mo - Peso: 1 kg",
+              "costCopper": 100,
+              "cost": "1 mo",
+              "weight": "1 kg",
+              "stats": {
+                "type": "weapon",
+                "category": "semplice",
+                "kind": "mischia",
+                "damage": "1d4 taglienti",
+                "properties": [
+                  "leggera"
+                ],
+                "mastery": "Graffio"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "armor": [
+            {
+              "id": "class_armors_armatura-di-cuoio",
+              "itemId": "armatura-di-cuoio",
+              "catalog": "armors",
+              "name": "Armatura di cuoio",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 10 mo - Peso: 5 kg",
+              "costCopper": 1000,
+              "cost": "10 mo",
+              "weight": "5 kg",
+              "stats": {
+                "type": "armor",
+                "category": "leggera",
+                "armorClass": "11 + mod Des",
+                "strengthRequirement": null,
+                "stealthDisadvantage": false
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_shields_scudo",
+              "itemId": "scudo",
+              "catalog": "shields",
+              "name": "Scudo",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 10 mo - Peso: 3 kg",
+              "costCopper": 1000,
+              "cost": "10 mo",
+              "weight": "3 kg",
+              "stats": {
+                "type": "shield",
+                "category": "scudo",
+                "armorClassBonus": 2,
+                "equipAction": "azione di Utilizzo"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "tools": [
+            {
+              "id": "background_tools_strumenti-da-navigatore",
+              "itemId": "strumenti-da-navigatore",
+              "catalog": "tools",
+              "name": "Strumenti da navigatore",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 25 mo - Peso: 1 kg",
+              "costCopper": 2500,
+              "cost": "25 mo",
+              "weight": "1 kg",
+              "stats": {
+                "type": "tool",
+                "category": "altro",
+                "ability": "Saggezza"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_tools_borsa-da-erborista",
+              "itemId": "borsa-da-erborista",
+              "catalog": "tools",
+              "name": "Borsa da erborista",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 5 mo - Peso: 1.5 kg",
+              "costCopper": 500,
+              "cost": "5 mo",
+              "weight": "1.5 kg",
+              "stats": {
+                "type": "tool",
+                "category": "altro",
+                "ability": "Intelligenza"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "adventuringGear": [
+            {
+              "id": "background_adventuring_gear_corda",
+              "itemId": "corda",
+              "catalog": "adventuring_gear",
+              "name": "Corda",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 1 mo - Peso: 2.5 kg",
+              "costCopper": 100,
+              "cost": "1 mo",
+              "weight": "2.5 kg",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "background_adventuring_gear_abiti-da-viaggiatore",
+              "itemId": "abiti-da-viaggiatore",
+              "catalog": "adventuring_gear",
+              "name": "Abiti da viaggiatore",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Background - Dotazione Marinaio",
+              "notes": "Costo: 2 mo - Peso: 2 kg",
+              "costCopper": 200,
+              "cost": "2 mo",
+              "weight": "2 kg",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_adventuring_gear_focus-druidico_bastone-ferrato",
+              "itemId": "focus-druidico",
+              "catalog": "adventuring_gear",
+              "name": "Focus druidico (bastone ferrato)",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: variabile - Peso: variabile",
+              "costCopper": 0,
+              "cost": "variabile",
+              "weight": "variabile",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            },
+            {
+              "id": "class_adventuring_gear_dotazione-da-esploratore",
+              "itemId": "dotazione-da-esploratore",
+              "catalog": "adventuring_gear",
+              "name": "Dotazione da esploratore",
+              "quantity": 1,
+              "equipped": false,
+              "description": "Classe - Equipaggiamento Druido",
+              "notes": "Costo: 10 mo - Peso: 27.5 kg",
+              "costCopper": 1000,
+              "cost": "10 mo",
+              "weight": "27.5 kg",
+              "stats": {
+                "type": "gear",
+                "category": "equipaggiamento_avventura"
+              },
+              "recoverable": false,
+              "consumable": false
+            }
+          ],
+          "magicItems": [],
+          "consumables": [],
+          "storyItems": [],
+          "wishlist": []
+        },
+        "details": {
+          "personalityTraits": [],
+          "ideals": [],
+          "bonds": [],
+          "flaws": [],
+          "campaignNotes": []
+        },
+        "progressionHistory": [
+          {
+            "id": "creation-pg_1784292320814",
+            "type": "creation",
+            "appliedAt": "2026-07-17T12:45:20.815Z",
+            "fromLevel": 0,
+            "toLevel": 1,
+            "className": "Druido",
+            "choices": {
+              "name": "laavis",
+              "concept": "",
+              "startingLevel": 1,
+              "classId": "druido",
+              "speciesId": "dragonide",
+              "backgroundId": "marinaio",
+              "alignment": "Caotico Buono",
+              "abilityMethod": "standard",
+              "baseAbilities": {
+                "str": 8,
+                "dex": 12,
+                "con": 14,
+                "int": 13,
+                "wis": 15,
+                "cha": 10
+              },
+              "abilityRolls": [],
+              "backgroundIncreases": {
+                "str": 1,
+                "dex": 0,
+                "wis": 2
+              },
+              "featChoices": {
+                "lottatore-da-taverna": {}
+              },
+              "levelOneClassChoices": {
+                "druido_1_cantrips": [
+                  "randello-incantato",
+                  "artificio-druidico"
+                ],
+                "druido_1_spells": [
+                  "nube-di-nebbia",
+                  "coltello-di-ghiaccio",
+                  "cura-ferite",
+                  "intralciare"
+                ]
+              },
+              "speciesChoices": {
+                "dragonide": {
+                  "optionId": "blue"
+                }
+              },
+              "selectedClassSkills": [
+                "animal",
+                "nature"
+              ],
+              "selectedBackgroundTools": [],
+              "selectedClassTools": [],
+              "languages": [],
+              "levelUpChoices": {},
+              "equipmentMode": "kit",
+              "backgroundEquipmentOptionId": "",
+              "classEquipmentOptionId": "",
+              "equipmentChoices": {},
+              "equipmentPurchases": []
+            }
+          },
+          {
+            "id": "level-up-2-2026-07-17T12:45:49.966Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-17T12:45:49.966Z",
+            "className": "Druido",
+            "totalLevel": {
+              "from": 1,
+              "to": 2
+            },
+            "classLevel": {
+              "className": "Druido",
+              "from": 1,
+              "to": 2
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d8",
+              "baseIncrease": 5,
+              "constitutionModifier": 2,
+              "totalIncrease": 7,
+              "maxHpFrom": 10,
+              "maxHpTo": 17,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": null,
+            "classChoices": [
+              {
+                "id": "druido_2_spells",
+                "label": "Incantesimi da Druido",
+                "type": "spell_choice",
+                "selected": [
+                  "saltare"
+                ],
+                "labels": [
+                  "Liv. 1 - Saltare"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "saltare",
+                    "label": "Liv. 1 - Saltare",
+                    "level": 1,
+                    "spell": {
+                      "id": "saltare",
+                      "name": "Saltare",
+                      "name_upper": "SALTARE",
+                      "level": 1,
+                      "level_label": "1° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "mago",
+                        "ranger",
+                        "stregone"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "",
+                        "verbal": false,
+                        "somatic": false,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Componente: V, S, M (la zampa posteriore di una cavalletta) Durata: l minuto L'incantatore tocca una creatura consenziente. La crea tura, in ogni suo turno fino al termine dell'incantesimo, può saltare fino a 9 metri, usando 3 metri di movimento.",
+                      "at_higher_levels": "L'incantatore può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": true
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 325
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "saltare": {
+                    "id": "saltare",
+                    "label": "Liv. 1 - Saltare",
+                    "level": 1,
+                    "spell": {
+                      "id": "saltare",
+                      "name": "Saltare",
+                      "name_upper": "SALTARE",
+                      "level": 1,
+                      "level_label": "1° livello",
+                      "school": "Trasmutazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "mago",
+                        "ranger",
+                        "stregone"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "",
+                        "verbal": false,
+                        "somatic": false,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Componente: V, S, M (la zampa posteriore di una cavalletta) Durata: l minuto L'incantatore tocca una creatura consenziente. La crea tura, in ogni suo turno fino al termine dell'incantesimo, può saltare fino a 9 metri, usando 3 metri di movimento.",
+                      "at_higher_levels": "L'incantatore può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": true
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 325
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          },
+          {
+            "id": "level-up-3-2026-07-17T12:46:07.456Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-17T12:46:07.456Z",
+            "className": "Druido",
+            "totalLevel": {
+              "from": 2,
+              "to": 3
+            },
+            "classLevel": {
+              "className": "Druido",
+              "from": 2,
+              "to": 3
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d8",
+              "baseIncrease": 5,
+              "constitutionModifier": 2,
+              "totalIncrease": 7,
+              "maxHpFrom": 17,
+              "maxHpTo": 24,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": null,
+            "classChoices": [
+              {
+                "id": "druido_3_subclass",
+                "label": "Sottoclasse",
+                "type": "subclass_choice",
+                "selected": [
+                  "circolo_del_mare"
+                ],
+                "labels": [
+                  "Circolo del Mare"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "circolo_del_mare",
+                    "label": "Circolo del Mare",
+                    "subclassName": "Circolo del Mare"
+                  }
+                ],
+                "meta": {
+                  "circolo_del_mare": {
+                    "id": "circolo_del_mare",
+                    "label": "Circolo del Mare",
+                    "subclassName": "Circolo del Mare"
+                  }
+                },
+                "warnings": []
+              },
+              {
+                "id": "druido_3_spells",
+                "label": "Incantesimi da Druido",
+                "type": "spell_choice",
+                "selected": [
+                  "aiuto"
+                ],
+                "labels": [
+                  "Liv. 2 - Aiuto"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "aiuto",
+                    "label": "Liv. 2 - Aiuto",
+                    "level": 2,
+                    "spell": {
+                      "id": "aiuto",
+                      "name": "Aiuto",
+                      "name_upper": "AIUTO",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "druido",
+                        "paladino",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "9 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (una striscia di tessuto bianco)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "una striscia di tessuto bianco",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "8 ore",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore sceglie fino a tre creature entro gittata. I punti ferita massimi e i punti ferita attuali di ogni bersa glio aumentano di 5 per la durata dell'incantesimo.",
+                      "at_higher_levels": "I punti ferita di ciascun bersaglio aumentano di 5 per ogni slot incantesimo di livello superiore al 2°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": true,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 242
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "aiuto": {
+                    "id": "aiuto",
+                    "label": "Liv. 2 - Aiuto",
+                    "level": 2,
+                    "spell": {
+                      "id": "aiuto",
+                      "name": "Aiuto",
+                      "name_upper": "AIUTO",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "druido",
+                        "paladino",
+                        "ranger"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "9 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (una striscia di tessuto bianco)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "una striscia di tessuto bianco",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "8 ore",
+                        "concentration": false,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore sceglie fino a tre creature entro gittata. I punti ferita massimi e i punti ferita attuali di ogni bersa glio aumentano di 5 per la durata dell'incantesimo.",
+                      "at_higher_levels": "I punti ferita di ciascun bersaglio aumentano di 5 per ogni slot incantesimo di livello superiore al 2°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": true,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 242
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          },
+          {
+            "id": "level-up-4-2026-07-17T12:46:31.171Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-17T12:46:31.171Z",
+            "className": "Druido",
+            "totalLevel": {
+              "from": 3,
+              "to": 4
+            },
+            "classLevel": {
+              "className": "Druido",
+              "from": 3,
+              "to": 4
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d8",
+              "baseIncrease": 5,
+              "constitutionModifier": 2,
+              "totalIncrease": 7,
+              "maxHpFrom": 24,
+              "maxHpTo": 31,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": {
+              "mode": "asi",
+              "abilityIncreases": [
+                {
+                  "ability": "wis",
+                  "amount": 2,
+                  "from": 17,
+                  "to": 19
+                }
+              ],
+              "warnings": []
+            },
+            "classChoices": [
+              {
+                "id": "druido_4_cantrips",
+                "label": "Trucchetti da Druido",
+                "type": "cantrip_choice",
+                "selected": [
+                  "riparare"
+                ],
+                "labels": [
+                  "Riparare"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "riparare",
+                    "label": "Riparare",
+                    "level": 0,
+                    "spell": {
+                      "id": "riparare",
+                      "name": "Riparare",
+                      "name_upper": "RIPARARE",
+                      "level": 0,
+                      "level_label": "Trucchetto",
+                      "school": "Trasmutazione",
+                      "is_cantrip": true,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "druido",
+                        "mago",
+                        "stregone"
+                      ],
+                      "casting_time": {
+                        "raw": "1 minuto",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "V, S, M (d ue calamite)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "d ue calamite",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "istantanea",
+                        "concentration": false,
+                        "instantaneous": true,
+                        "ritual_possible": false
+                      },
+                      "description": "Questo incantesimo ripara una singola crepa o uno squar cio in un oggetto toccato dall'incantatore, come l'anello spezzato di una catena, due metà di una chiave spezzata, un mantello strappato o un otre forato. Se le dimensioni della crepa o dello squarcio non superano i 30 centimetri, l'incantatore ripara l'oggetto senza lasciare traccia del danno precedente. Questo incantesimo può riparare un oggetto magico solo fisicamente, senza ripristinare la magia in esso contenuta.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 324
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "riparare": {
+                    "id": "riparare",
+                    "label": "Riparare",
+                    "level": 0,
+                    "spell": {
+                      "id": "riparare",
+                      "name": "Riparare",
+                      "name_upper": "RIPARARE",
+                      "level": 0,
+                      "level_label": "Trucchetto",
+                      "school": "Trasmutazione",
+                      "is_cantrip": true,
+                      "classes": [
+                        "bardo",
+                        "chierico",
+                        "druido",
+                        "mago",
+                        "stregone"
+                      ],
+                      "casting_time": {
+                        "raw": "1 minuto",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "V, S, M (d ue calamite)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "d ue calamite",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "istantanea",
+                        "concentration": false,
+                        "instantaneous": true,
+                        "ritual_possible": false
+                      },
+                      "description": "Questo incantesimo ripara una singola crepa o uno squar cio in un oggetto toccato dall'incantatore, come l'anello spezzato di una catena, due metà di una chiave spezzata, un mantello strappato o un otre forato. Se le dimensioni della crepa o dello squarcio non superano i 30 centimetri, l'incantatore ripara l'oggetto senza lasciare traccia del danno precedente. Questo incantesimo può riparare un oggetto magico solo fisicamente, senza ripristinare la magia in esso contenuta.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 324
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              },
+              {
+                "id": "druido_4_spells",
+                "label": "Incantesimi da Druido",
+                "type": "spell_choice",
+                "selected": [
+                  "lama-infuocata"
+                ],
+                "labels": [
+                  "Liv. 2 - Lama Infuocata"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "lama-infuocata",
+                    "label": "Liv. 2 - Lama Infuocata",
+                    "level": 2,
+                    "spell": {
+                      "id": "lama-infuocata",
+                      "name": "Lama Infuocata",
+                      "name_upper": "LAMA INFUOCATA",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Invocazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "stregone"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "incantatore"
+                      },
+                      "components": {
+                        "raw": "V, S, M (una foglia di sommacco)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "una foglia di sommacco",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 1 0  minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore evoca una lama infuocata nella sua mano libera. La lama ha forma e dimensioni simili a una scimi tarra e permane per la durata dell'incantesimo. Se l'incan tatore la lascia cadere, la lama scompare, ma può essere evocata di nuovo come azione bonus. Come azione di Magia, l'incantatore può effettuare un attacco in mischia con la lama infuocata. Se il colpo va a segno, il bersaglio subisce 3d6 danni da fuoco più il modificatore di caratteristica da incantatore dell'incantatore. La lama infuocata emana luce intensa in un raggio di 3 metri e luce fioca per ulteriori 3 metri.",
+                      "at_higher_levels": "I danni aumentano di ld6 per ogni slot di livello superiore al 2°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [
+                          "fuoco"
+                        ],
+                        "damage_dice": [
+                          "3d6",
+                          "ld6"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": true
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 290
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "lama-infuocata": {
+                    "id": "lama-infuocata",
+                    "label": "Liv. 2 - Lama Infuocata",
+                    "level": 2,
+                    "spell": {
+                      "id": "lama-infuocata",
+                      "name": "Lama Infuocata",
+                      "name_upper": "LAMA INFUOCATA",
+                      "level": 2,
+                      "level_label": "2° livello",
+                      "school": "Invocazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "druido",
+                        "stregone"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "incantatore"
+                      },
+                      "components": {
+                        "raw": "V, S, M (una foglia di sommacco)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "una foglia di sommacco",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 1 0  minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "L'incantatore evoca una lama infuocata nella sua mano libera. La lama ha forma e dimensioni simili a una scimi tarra e permane per la durata dell'incantesimo. Se l'incan tatore la lascia cadere, la lama scompare, ma può essere evocata di nuovo come azione bonus. Come azione di Magia, l'incantatore può effettuare un attacco in mischia con la lama infuocata. Se il colpo va a segno, il bersaglio subisce 3d6 danni da fuoco più il modificatore di caratteristica da incantatore dell'incantatore. La lama infuocata emana luce intensa in un raggio di 3 metri e luce fioca per ulteriori 3 metri.",
+                      "at_higher_levels": "I danni aumentano di ld6 per ogni slot di livello superiore al 2°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [
+                          "fuoco"
+                        ],
+                        "damage_dice": [
+                          "3d6",
+                          "ld6"
+                        ],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": true
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 290
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          }
+        ],
+        "notes": "Creato con flusso guidato livello 0 -> 1. Alcune scelte avanzate di classe, incantesimi ed equipaggiamento saranno dettagliate nei prossimi step.",
+        "proficiencies": {
+          "tools": [],
+          "weaponMasteries": [],
+          "armor": [],
+          "weapons": [],
+          "languages": []
+        },
+        "ownerId": "user_demo",
+        "languages": []
+      }
+    }
+  ],
+  "ownerId": "user_demo",
+  "languages": []
+}

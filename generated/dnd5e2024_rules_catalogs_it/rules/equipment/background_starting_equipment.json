@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "title": "D&D 5e 2024 - Equipaggiamento iniziale dei background",
+    "schema_version": 1,
+    "source": {
+      "manual": "Manuale del Giocatore",
+      "edition": "2024",
+      "language": "it",
+      "pages_pdf": [180, 181, 182, 183, 184, 185, 186, 187, 188]
+    },
+    "notes": [
+      "Ogni background offre dotazione A oppure 50 mo.",
+      "Le voci con catalog 'choice' usano lo strumento scelto dal background o una scelta filtrata dal catalogo strumenti."
+    ]
+  },
+  "background_equipment": {
+    "accolito": {
+      "backgroundName": "Accolito",
+      "startingOptions": [
+        {
+          "id": "accolito_a",
+          "label": "Dotazione Accolito",
+          "items": [
+            { "catalog": "tools", "id": "scorte-da-calligrafo", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "libro", "quantity": 1, "variant": "preghiere" },
+            { "catalog": "adventuring_gear", "id": "simbolo-sacro", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "pergamena", "quantity": 10, "variant": "fogli" },
+            { "catalog": "adventuring_gear", "id": "tunica", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 8 }
+          ]
+        },
+        { "id": "accolito_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "artigiano": {
+      "backgroundName": "Artigiano",
+      "startingOptions": [
+        {
+          "id": "artigiano_a",
+          "label": "Dotazione Artigiano",
+          "items": [
+            { "catalog": "choice", "choiceId": "artigiano_background_tool", "label": "Strumenti da artigiano scelti", "source": "backgroundToolTraining", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "borsa", "quantity": 2 },
+            { "catalog": "adventuring_gear", "id": "abiti-da-viaggiatore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 32 }
+          ]
+        },
+        { "id": "artigiano_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "ciarlatano": {
+      "backgroundName": "Ciarlatano",
+      "startingOptions": [
+        {
+          "id": "ciarlatano_a",
+          "label": "Dotazione Ciarlatano",
+          "items": [
+            { "catalog": "tools", "id": "arnesi-da-falsario", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "costume", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "abiti-eleganti", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 15 }
+          ]
+        },
+        { "id": "ciarlatano_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "contadino": {
+      "backgroundName": "Contadino",
+      "startingOptions": [
+        {
+          "id": "contadino_a",
+          "label": "Dotazione Contadino",
+          "items": [
+            { "catalog": "weapons", "id": "falcetto", "quantity": 1 },
+            { "catalog": "tools", "id": "strumenti-da-falegname", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "borsa-del-guaritore", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "pentola-di-ferro", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "pala", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "abiti-da-viaggiatore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 30 }
+          ]
+        },
+        { "id": "contadino_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "criminale": {
+      "backgroundName": "Criminale",
+      "startingOptions": [
+        {
+          "id": "criminale_a",
+          "label": "Dotazione Criminale",
+          "items": [
+            { "catalog": "weapons", "id": "pugnale", "quantity": 2 },
+            { "catalog": "tools", "id": "arnesi-da-scasso", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "piede-di-porco", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "borsa", "quantity": 2 },
+            { "catalog": "adventuring_gear", "id": "abiti-da-viaggiatore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 16 }
+          ]
+        },
+        { "id": "criminale_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "eremita": {
+      "backgroundName": "Eremita",
+      "startingOptions": [
+        {
+          "id": "eremita_a",
+          "label": "Dotazione Eremita",
+          "items": [
+            { "catalog": "weapons", "id": "bastone-ferrato", "quantity": 1 },
+            { "catalog": "tools", "id": "borsa-da-erborista", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "giaciglio", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "libro", "quantity": 1, "variant": "filosofia" },
+            { "catalog": "adventuring_gear", "id": "lampada", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "olio", "quantity": 3, "variant": "ampolle" },
+            { "catalog": "adventuring_gear", "id": "abiti-da-viaggiatore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 16 }
+          ]
+        },
+        { "id": "eremita_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "guardia": {
+      "backgroundName": "Guardia",
+      "startingOptions": [
+        {
+          "id": "guardia_a",
+          "label": "Dotazione Guardia",
+          "items": [
+            { "catalog": "weapons", "id": "lancia", "quantity": 1 },
+            { "catalog": "weapons", "id": "balestra-leggera", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "munizioni", "quantity": 20, "variant": "quadrelli" },
+            { "catalog": "choice", "choiceId": "guardia_background_game", "label": "Gioco scelto", "source": "backgroundToolTraining", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "lanterna-schermabile", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "manette", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "faretra", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "abiti-da-viaggiatore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 12 }
+          ]
+        },
+        { "id": "guardia_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "guida": {
+      "backgroundName": "Guida",
+      "startingOptions": [
+        {
+          "id": "guida_a",
+          "label": "Dotazione Guida",
+          "items": [
+            { "catalog": "weapons", "id": "arco-corto", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "munizioni", "quantity": 20, "variant": "frecce" },
+            { "catalog": "tools", "id": "strumenti-da-cartografo", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "giaciglio", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "faretra", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "tenda", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "abiti-da-viaggiatore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 3 }
+          ]
+        },
+        { "id": "guida_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "intrattenitore": {
+      "backgroundName": "Intrattenitore",
+      "startingOptions": [
+        {
+          "id": "intrattenitore_a",
+          "label": "Dotazione Intrattenitore",
+          "items": [
+            { "catalog": "choice", "choiceId": "intrattenitore_background_instrument", "label": "Strumento musicale scelto", "source": "backgroundToolTraining", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "costume", "quantity": 2 },
+            { "catalog": "adventuring_gear", "id": "specchio", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "profumo", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "abiti-da-viaggiatore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 11 }
+          ]
+        },
+        { "id": "intrattenitore_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "marinaio": {
+      "backgroundName": "Marinaio",
+      "startingOptions": [
+        {
+          "id": "marinaio_a",
+          "label": "Dotazione Marinaio",
+          "items": [
+            { "catalog": "weapons", "id": "pugnale", "quantity": 1 },
+            { "catalog": "tools", "id": "strumenti-da-navigatore", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "corda", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "abiti-da-viaggiatore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 20 }
+          ]
+        },
+        { "id": "marinaio_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "mercante": {
+      "backgroundName": "Mercante",
+      "startingOptions": [
+        {
+          "id": "mercante_a",
+          "label": "Dotazione Mercante",
+          "items": [
+            { "catalog": "tools", "id": "strumenti-da-navigatore", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "borsa", "quantity": 2 },
+            { "catalog": "adventuring_gear", "id": "abiti-da-viaggiatore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 22 }
+          ]
+        },
+        { "id": "mercante_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "nobile": {
+      "backgroundName": "Nobile",
+      "startingOptions": [
+        {
+          "id": "nobile_a",
+          "label": "Dotazione Nobile",
+          "items": [
+            { "catalog": "choice", "choiceId": "nobile_background_game", "label": "Gioco scelto", "source": "backgroundToolTraining", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "abiti-eleganti", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "profumo", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 29 }
+          ]
+        },
+        { "id": "nobile_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "sapiente": {
+      "backgroundName": "Sapiente",
+      "startingOptions": [
+        {
+          "id": "sapiente_a",
+          "label": "Dotazione Sapiente",
+          "items": [
+            { "catalog": "weapons", "id": "bastone-ferrato", "quantity": 1 },
+            { "catalog": "tools", "id": "scorte-da-calligrafo", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "libro", "quantity": 1, "variant": "storia" },
+            { "catalog": "adventuring_gear", "id": "pergamena", "quantity": 8, "variant": "fogli" },
+            { "catalog": "adventuring_gear", "id": "tunica", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 8 }
+          ]
+        },
+        { "id": "sapiente_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "scriba": {
+      "backgroundName": "Scriba",
+      "startingOptions": [
+        {
+          "id": "scriba_a",
+          "label": "Dotazione Scriba",
+          "items": [
+            { "catalog": "tools", "id": "scorte-da-calligrafo", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "abiti-eleganti", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "lampada", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "olio", "quantity": 3, "variant": "ampolle" },
+            { "catalog": "adventuring_gear", "id": "pergamena", "quantity": 12, "variant": "fogli" },
+            { "catalog": "currency", "id": "mo", "quantity": 23 }
+          ]
+        },
+        { "id": "scriba_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "soldato": {
+      "backgroundName": "Soldato",
+      "startingOptions": [
+        {
+          "id": "soldato_a",
+          "label": "Dotazione Soldato",
+          "items": [
+            { "catalog": "weapons", "id": "lancia", "quantity": 1 },
+            { "catalog": "weapons", "id": "arco-corto", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "munizioni", "quantity": 20, "variant": "frecce" },
+            { "catalog": "choice", "choiceId": "soldato_background_game", "label": "Gioco scelto", "source": "backgroundToolTraining", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "borsa-del-guaritore", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "faretra", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "abiti-da-viaggiatore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 14 }
+          ]
+        },
+        { "id": "soldato_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    },
+    "viandante": {
+      "backgroundName": "Viandante",
+      "startingOptions": [
+        {
+          "id": "viandante_a",
+          "label": "Dotazione Viandante",
+          "items": [
+            { "catalog": "weapons", "id": "pugnale", "quantity": 2 },
+            { "catalog": "tools", "id": "arnesi-da-scasso", "quantity": 1 },
+            { "catalog": "choice", "choiceId": "viandante_game", "label": "Gioco qualunque", "source": "tools", "categories": ["gioco"], "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "giaciglio", "quantity": 1 },
+            { "catalog": "adventuring_gear", "id": "borsa", "quantity": 2 },
+            { "catalog": "adventuring_gear", "id": "abiti-da-viaggiatore", "quantity": 1 },
+            { "catalog": "currency", "id": "mo", "quantity": 16 }
+          ]
+        },
+        { "id": "viandante_b", "label": "50 mo", "currency": { "mo": 50 } }
+      ]
+    }
+  }
+}

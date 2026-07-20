@@ -1,10 +1,19 @@
 import { useEffect, useRef, useState } from 'react'
-import DiceBox from '@drdreo/dice-box-threejs'
 
 import { rollDice, rollDicePool, rollDie } from '../../services/diceService.js'
 
 const DICE_OPTIONS = [4, 6, 8, 10, 12, 20, 100]
 const PHYSICS_ROLL_TIMEOUT_MS = 12000
+let diceBoxModulePromise = null
+
+function loadDiceBoxConstructor() {
+  if (!diceBoxModulePromise) {
+    diceBoxModulePromise = import('@drdreo/dice-box-threejs')
+      .then((module) => module.default ?? module.DiceBox ?? module)
+  }
+
+  return diceBoxModulePromise
+}
 
 function withTimeout(promise, timeoutMs) {
   let timeoutId
@@ -55,12 +64,37 @@ function getDiceNotation(groups) {
 }
 
 // Converte il risultato della libreria 3D nel formato che la nostra app usa già.
-function normalizePhysicsResult(physicsResult, { activeGroups, modifier, d20Mode }) {
-  const groups = physicsResult.sets.map((set, index) => ({
+function getPhysicsRollValue(roll) {
+  if (typeof roll === 'number') {
+    return roll
+  }
+
+  return Number(roll?.value ?? roll?.result ?? roll?.roll ?? 0)
+}
+
+function applyPerDieModifier(roll, modifier, minimumPerRoll) {
+  const adjustedRoll = roll + modifier
+
+  if (minimumPerRoll === null) {
+    return adjustedRoll
+  }
+
+  return Math.max(minimumPerRoll, adjustedRoll)
+}
+
+function normalizePhysicsResult(physicsResult, {
+  activeGroups,
+  modifier,
+  modifierMode,
+  minimumPerRoll,
+  d20Mode,
+}) {
+  const physicsSets = Array.isArray(physicsResult?.sets) ? physicsResult.sets : []
+  const groups = physicsSets.map((set, index) => ({
     id: activeGroups[index]?.id ?? `${set.num}d${set.sides}`,
     count: set.num,
     sides: set.sides,
-    rolls: set.rolls.map((roll) => roll.value),
+    rolls: (set.rolls ?? []).map(getPhysicsRollValue),
   }))
   const dice = groups.flatMap((group, groupIndex) =>
     group.rolls.map((value, index) => ({
@@ -70,8 +104,17 @@ function normalizePhysicsResult(physicsResult, { activeGroups, modifier, d20Mode
       value,
     }))
   )
+
+  if (dice.length === 0) {
+    throw new Error('Risultato tiro 3D vuoto')
+  }
+
   const rolls = dice.map((die) => die.value)
   const diceTotal = rolls.reduce((total, roll) => total + roll, 0)
+  const adjustedRolls = modifierMode === 'each'
+    ? rolls.map((roll) => applyPerDieModifier(roll, modifier, minimumPerRoll))
+    : rolls
+  const adjustedDiceTotal = adjustedRolls.reduce((total, roll) => total + roll, 0)
   const usesD20Mode = d20Mode !== 'normal'
   const keptRoll = usesD20Mode
     ? d20Mode === 'advantage'
@@ -85,10 +128,15 @@ function normalizePhysicsResult(physicsResult, { activeGroups, modifier, d20Mode
     rolls,
     count: usesD20Mode ? 1 : dice.length,
     modifier,
-    modifierMode: 'total',
+    modifierMode,
+    adjustedRolls,
     diceTotal,
     keptRoll,
-    total: usesD20Mode ? keptRoll + modifier : diceTotal + modifier,
+    total: usesD20Mode
+      ? keptRoll + modifier
+      : modifierMode === 'each'
+        ? adjustedDiceTotal
+        : diceTotal + modifier,
     d20Mode,
   }
 }
@@ -151,6 +199,7 @@ function DiceRoller({
 
     async function setupDiceBox() {
       try {
+        const DiceBox = await loadDiceBoxConstructor()
         const box = new DiceBox(boxElementRef.current, {
           framerate: 1 / 60,
           sounds: false,
@@ -171,7 +220,10 @@ function DiceRoller({
         diceBoxRef.current = box
         setIsPhysicsReady(true)
       } catch (error) {
+        if (cancelled) return
+
         console.error('Dice box 3D non disponibile:', error)
+        setIsPhysicsReady(false)
         setUsePhysics(false)
       }
     }
@@ -221,6 +273,8 @@ function DiceRoller({
         const result = normalizePhysicsResult(physicsResult, {
           activeGroups,
           modifier,
+          modifierMode,
+          minimumPerRoll,
           d20Mode: shouldUseD20Mode ? d20Mode : 'normal',
         })
 

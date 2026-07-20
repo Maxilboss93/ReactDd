@@ -9,6 +9,10 @@ import {
   buildFeatChoiceDraft,
 } from './featChoiceService.js'
 import { findSpellById } from './spellsCatalog.js'
+import {
+  getClassResourceEntries,
+  getClassResourceEntry,
+} from './classScalingService.js'
 import powersCatalog from '../../generated/catalogo_powers_tutte_classi_dnd2024_it.json'
 import spellsCatalog from '../../generated/dnd2024_spells_it.json'
 import startingEquipmentCatalog from '../../generated/dnd5e2024_rules_catalogs_it/rules/equipment/starting_equipment.json'
@@ -26,24 +30,6 @@ const CLASS_HIT_DICE = {
   Ranger: 'd10',
   Stregone: 'd6',
   Warlock: 'd8',
-}
-
-const CLASS_RESOURCE_RULES = {
-  Monaco: {
-    resourceId: 'ki',
-    label: 'Ki',
-    getMax: (classLevel) => classLevel,
-  },
-  Paladino: {
-    resourceId: 'lay_on_hands',
-    label: 'Imposizione delle Mani',
-    getMax: (classLevel) => classLevel * 5,
-  },
-  Stregone: {
-    resourceId: 'sorcery_points',
-    label: 'Punti Stregoneria',
-    getMax: (classLevel) => Math.max(0, classLevel),
-  },
 }
 
 const ABILITY_LABELS = {
@@ -117,6 +103,23 @@ const METAMAGIC_OPTIONS = [
   { id: 'subtle_spell', label: 'Incantesimo Celato' },
   { id: 'twinned_spell', label: 'Incantesimo Raddoppiato' },
 ]
+
+const METAMAGIC_CHOICE_POWER_IDS = {
+  careful_spell: 'stregone_incantesimo_preciso',
+  distant_spell: 'stregone_incantesimo_distante',
+  empowered_spell: 'stregone_incantesimo_potenziato',
+  extended_spell: 'stregone_incantesimo_esteso',
+  heightened_spell: 'stregone_incantesimo_intensificato',
+  quickened_spell: 'stregone_incantesimo_rapido',
+  subtle_spell: 'stregone_incantesimo_celato',
+  twinned_spell: 'stregone_incantesimo_raddoppiato',
+}
+
+const METAMAGIC_POWER_IDS = new Set([
+  ...Object.values(METAMAGIC_CHOICE_POWER_IDS),
+  'stregone_incantesimo_mirato',
+  'stregone_incantesimo_tramutato',
+])
 
 const CLASS_SPELL_LIST_IDS = {
   Bardo: 'bardo',
@@ -246,8 +249,6 @@ const SPELL_REPLACEMENT_RULES = {
   Stregone: {
     levelUp: {
       cantrips: { mode: 'up_to', count: 1 },
-    },
-    longRest: {
       preparedSpells: { mode: 'up_to', count: 1 },
     },
   },
@@ -1619,6 +1620,7 @@ function getClassFeatureChanges(className, classLevel) {
         power.kind !== 'choice'
       )
     })
+    .filter((power) => !METAMAGIC_POWER_IDS.has(power.id))
     .map((power) => ({
       id: power.id,
       label: power.name,
@@ -1705,8 +1707,7 @@ function getFeatureEffectChanges(character, className, classLevel) {
 }
 
 function getClassResourceGrantPreview(character, className, nextClassLevel) {
-  const rule = getClassRule(className)
-  const grant = rule?.resourceGrants?.[nextClassLevel]
+  const grant = getClassResourceEntry(character, className, nextClassLevel)
 
   if (!grant) {
     return null
@@ -2310,33 +2311,27 @@ export function getLevelUpOptions(character) {
  * 
  */
 function getClassResourcePreview(character, className, nextClassLevel) {
-  const rule = CLASS_RESOURCE_RULES[className]
+  const nextResource = getClassResourceEntry(character, className, nextClassLevel)
 
-  if (!rule) {
+  if (!nextResource) {
     return null
   }
 
-  const resources = character.resources ?? []
-
-  const resource = resources.find((characterResource) => {
-    return characterResource.id === rule.resourceId
+  const resource = (character.resources ?? []).find((characterResource) => {
+    return characterResource.id === nextResource.id
   })
 
-  if (!resource) {
-    return null
-  }
-
-  const newMax = rule.getMax(nextClassLevel)
-
-  if (resource.max === newMax) {
+  if (!resource || resource.max === nextResource.max) {
     return null
   }
 
   return {
-    id: `${rule.resourceId}_max`,
-    label: `${rule.label} massimo`,
+    id: `${nextResource.id}_max`,
+    label: `${nextResource.label} massimo`,
     from: resource.max,
-    to: newMax,
+    to: nextResource.max,
+    category: 'resource',
+    resource: nextResource,
   }
 }
 
@@ -3017,10 +3012,38 @@ function applyAutomaticResourceChanges(character, preview) {
 
     return {
       ...resource,
+      ...(change.resource ?? {}),
       current: Math.min(nextMax, (resource.current ?? 0) + Math.max(0, increase)),
       max: nextMax,
     }
   })
+}
+
+function syncClassResourceScaling(character, resources = character.resources ?? []) {
+  const nextResources = [...resources]
+
+  getClassResourceEntries(character).forEach((expectedResource) => {
+    const index = nextResources.findIndex((resource) => resource.id === expectedResource.id)
+
+    if (index < 0) {
+      nextResources.push(expectedResource)
+      return
+    }
+
+    const currentResource = nextResources[index]
+    const currentMax = Number(currentResource.max ?? 0)
+    const nextMax = Number(expectedResource.max ?? 0)
+    const increase = Math.max(0, nextMax - currentMax)
+
+    nextResources[index] = {
+      ...currentResource,
+      ...expectedResource,
+      current: Math.min(nextMax, Number(currentResource.current ?? 0) + increase),
+      max: nextMax,
+    }
+  })
+
+  return nextResources
 }
 
 function applyFeatureChanges(character, preview) {
@@ -3171,6 +3194,19 @@ function applyClassChoicePowerChanges(character, draft) {
           id: powerId,
           choices: invocationChoicesBySource[powerId] ?? [],
         })
+      }
+    })
+
+  ;(draft.classChoices ?? [])
+    .filter((choice) => choice.id === 'stregone_2_metamagic')
+    .flatMap((choice) => choice.selected ?? [])
+    .map((selectedId) => METAMAGIC_CHOICE_POWER_IDS[selectedId])
+    .filter(Boolean)
+    .forEach((powerId) => {
+      const exists = nextPowers.some((power) => power.id === powerId)
+
+      if (!exists) {
+        nextPowers.push({ id: powerId })
       }
     })
 
@@ -3839,6 +3875,11 @@ export function applyLevelUpDraft(character, draft) {
     ],
   }, draft.preview.totalLevel.to)
 
+  updatedCharacter = {
+    ...updatedCharacter,
+    resources: syncClassResourceScaling(updatedCharacter),
+  }
+
   if (draft.asiOrFeat?.mode === 'feat' && draft.asiOrFeat.feat) {
     updatedCharacter = applyFeatDraftToCharacter(
       updatedCharacter,
@@ -3846,6 +3887,11 @@ export function applyLevelUpDraft(character, draft) {
       draft.asiOrFeat.choiceDraft,
       { source: 'Level up', level: draft.preview.totalLevel.to }
     )
+
+    updatedCharacter = {
+      ...updatedCharacter,
+      resources: syncClassResourceScaling(updatedCharacter),
+    }
   }
 
   return {

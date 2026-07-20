@@ -19,6 +19,8 @@
     "vehicles": 12,
     "services": 14,
     "starting_equipment_classes": 12,
-    "starting_equipment_options": 25
+    "starting_equipment_options": 25,
+    "starting_equipment_backgrounds": 16,
+    "background_starting_equipment_options": 32
   }
 }

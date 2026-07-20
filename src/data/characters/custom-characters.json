@@ -1,5 +1,15 @@
 [
   {
+    "id": "pg_001",
+    "name": "Shisui",
+    "file": "pg-001-shisui.json"
+  },
+  {
+    "id": "pg_1784292320814",
+    "name": "laavis",
+    "file": "pg-1784292320814-laavis.json"
+  },
+  {
     "id": "pg_002",
     "name": "Imbrathil",
     "file": "pg-002-imbrathil.json"

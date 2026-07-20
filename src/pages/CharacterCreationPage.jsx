@@ -15,6 +15,10 @@ import {
   getWarlockInvocationSubchoiceRequirements,
 } from '../services/progressionService.js'
 import {
+  getEquipmentChoiceSelectedKey,
+  getEquipmentShopOptions,
+} from '../services/equipmentService.js'
+import {
   applyCreationDraft,
   buildCreationDraft,
   getDefaultBackgroundToolChoices,
@@ -30,6 +34,7 @@ const STEPS = [
   { id: 'background', label: 'Background' },
   { id: 'class', label: 'Classe' },
   { id: 'abilities', label: 'Valori' },
+  { id: 'equipment', label: 'Equip.' },
   { id: 'final', label: 'Fine' },
 ]
 
@@ -144,8 +149,10 @@ function CharacterCreationPage() {
   const { user } = useAuth()
   const navigate = useNavigate()
   const catalog = useMemo(() => getCreationCatalog(), [])
+  const equipmentShopOptions = useMemo(() => getEquipmentShopOptions(), [])
   const [activeStep, setActiveStep] = useState('species')
   const [choices, setChoices] = useState(() => getDefaultCreationChoices())
+  const [purchaseDraft, setPurchaseDraft] = useState({ itemKey: '', quantity: 1 })
   const [saving, setSaving] = useState(false)
   const draft = buildCreationDraft(choices)
   const preview = draft.preview
@@ -570,6 +577,9 @@ function CharacterCreationPage() {
         ),
         levelOneClassChoices: {},
         levelUpChoices: {},
+        classEquipmentOptionId: '',
+        equipmentChoices: {},
+        equipmentPurchases: [],
       }
     })
   }
@@ -680,8 +690,94 @@ function CharacterCreationPage() {
           prevChoices.selectedClassTools,
           getDefaultBackgroundToolChoices(backgroundId, prevChoices.selectedBackgroundTools)
         ),
+        backgroundEquipmentOptionId: '',
+        equipmentChoices: {},
+        equipmentPurchases: [],
       }
     })
+  }
+
+  function selectEquipmentMode(mode) {
+    setChoices((prevChoices) => ({
+      ...prevChoices,
+      equipmentMode: mode,
+      backgroundEquipmentOptionId: '',
+      classEquipmentOptionId: '',
+      equipmentChoices: {},
+      equipmentPurchases: [],
+    }))
+  }
+
+  function selectBackgroundEquipmentOption(optionId) {
+    setChoices((prevChoices) => ({
+      ...prevChoices,
+      backgroundEquipmentOptionId: optionId,
+      equipmentChoices: {},
+    }))
+  }
+
+  function selectClassEquipmentOption(optionId) {
+    setChoices((prevChoices) => ({
+      ...prevChoices,
+      classEquipmentOptionId: optionId,
+      equipmentChoices: {},
+    }))
+  }
+
+  function toggleEquipmentChoice(requirement, option) {
+    const optionKey = getEquipmentChoiceSelectedKey(option)
+
+    setChoices((prevChoices) => {
+      const selected = prevChoices.equipmentChoices?.[requirement.id] ?? []
+
+      if (selected.includes(optionKey)) {
+        return {
+          ...prevChoices,
+          equipmentChoices: {
+            ...(prevChoices.equipmentChoices ?? {}),
+            [requirement.id]: selected.filter((item) => item !== optionKey),
+          },
+        }
+      }
+
+      if (selected.length >= requirement.count) {
+        return prevChoices
+      }
+
+      return {
+        ...prevChoices,
+        equipmentChoices: {
+          ...(prevChoices.equipmentChoices ?? {}),
+          [requirement.id]: [...selected, optionKey],
+        },
+      }
+    })
+  }
+
+  function addEquipmentPurchase() {
+    if (!purchaseDraft.itemKey) return
+
+    setChoices((prevChoices) => ({
+      ...prevChoices,
+      equipmentPurchases: [
+        ...(prevChoices.equipmentPurchases ?? []),
+        {
+          id: `purchase-${Date.now()}`,
+          itemKey: purchaseDraft.itemKey,
+          quantity: Math.max(1, Number(purchaseDraft.quantity) || 1),
+        },
+      ],
+    }))
+    setPurchaseDraft({ itemKey: '', quantity: 1 })
+  }
+
+  function removeEquipmentPurchase(purchaseId) {
+    setChoices((prevChoices) => ({
+      ...prevChoices,
+      equipmentPurchases: (prevChoices.equipmentPurchases ?? []).filter((purchase) => {
+        return purchase.id !== purchaseId
+      }),
+    }))
   }
 
   async function confirmCreation() {
@@ -1283,6 +1379,218 @@ function CharacterCreationPage() {
             </>
           )}
 
+          {activeStep === 'equipment' && (
+            <>
+              <SectionCard title="Metodo equipaggiamento">
+                <div className="creation-card-grid creation-card-grid--method">
+                  <button
+                    className={`creation-option ${choices.equipmentMode === 'kit' ? 'creation-option--active' : ''}`}
+                    type="button"
+                    onClick={() => selectEquipmentMode('kit')}
+                  >
+                    <strong>Dotazione</strong>
+                    <span>Prendi pacchetto background e pacchetto classe, poi spendi le monete residue.</span>
+                  </button>
+                  <button
+                    className={`creation-option ${choices.equipmentMode === 'gold' ? 'creation-option--active' : ''}`}
+                    type="button"
+                    onClick={() => selectEquipmentMode('gold')}
+                  >
+                    <strong>Compra con monete</strong>
+                    <span>Parti dal denaro alternativo e scala ogni acquisto dal budget.</span>
+                  </button>
+                </div>
+
+                <div className="equipment-budget-grid">
+                  <div>
+                    <span>Budget</span>
+                    <strong>{preview.equipment?.budgetLabel ?? '0 mo'}</strong>
+                  </div>
+                  <div>
+                    <span>Speso</span>
+                    <strong>{preview.equipment?.spentLabel ?? '0 mo'}</strong>
+                  </div>
+                  <div>
+                    <span>Resta</span>
+                    <strong>{preview.equipment?.remainingLabel ?? '0 mo'}</strong>
+                  </div>
+                </div>
+              </SectionCard>
+
+              {choices.equipmentMode && (
+                <>
+                  <SectionCard title="Pacchetto background">
+                    <div className="creation-card-grid">
+                      {(choices.equipmentMode === 'gold'
+                        ? (preview.equipment?.backgroundOptions ?? []).filter((option) => option.currency)
+                        : (preview.equipment?.backgroundOptions ?? [])
+                      ).map((option) => (
+                        <button
+                          key={option.id}
+                          className={`creation-option ${preview.equipment?.effectiveBackgroundOptionId === option.id ? 'creation-option--active' : ''}`}
+                          type="button"
+                          onClick={() => selectBackgroundEquipmentOption(option.id)}
+                        >
+                          <strong>{option.label}</strong>
+                          <span>
+                            {option.currency
+                              ? 'Denaro alternativo del background.'
+                              : 'Dotazione del background con oggetti e monete indicate.'}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  </SectionCard>
+
+                  <SectionCard title="Pacchetto classe">
+                    <div className="creation-card-grid">
+                      {(choices.equipmentMode === 'gold'
+                        ? [preview.equipment?.currencyClassOption].filter(Boolean)
+                        : (preview.equipment?.packageClassOptions ?? [])
+                      ).map((option) => (
+                        <button
+                          key={option.id}
+                          className={`creation-option ${preview.equipment?.effectiveClassOptionId === option.id ? 'creation-option--active' : ''}`}
+                          type="button"
+                          onClick={() => selectClassEquipmentOption(option.id)}
+                        >
+                          <strong>{option.label}</strong>
+                          <span>
+                            {option.currency
+                              ? 'Denaro alternativo della classe.'
+                              : `${option.items?.filter((item) => item.catalog !== 'currency').length ?? 0} voci di equipaggiamento.`}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  </SectionCard>
+
+                  {(preview.equipment?.requirements ?? []).length > 0 && (
+                    <SectionCard title="Scelte equipaggiamento">
+                      {(preview.equipment?.requirements ?? []).map((requirement) => {
+                        const selected = choices.equipmentChoices?.[requirement.id] ?? []
+
+                        return (
+                          <div key={requirement.id} className="progression-subchoice">
+                            <h4>{requirement.label}</h4>
+                            <div className="creation-skill-choice-head">
+                              <span>{selected.length}/{requirement.count}</span>
+                            </div>
+                            <div className="creation-skill-choice-grid">
+                              {requirement.options.map((option) => {
+                                const optionKey = getEquipmentChoiceSelectedKey(option)
+                                const isSelected = selected.includes(optionKey)
+                                const isLocked = !isSelected && selected.length >= requirement.count
+
+                                return (
+                                  <button
+                                    key={optionKey}
+                                    className={`creation-skill-choice ${isSelected ? 'is-on' : ''}`}
+                                    type="button"
+                                    disabled={isLocked}
+                                    onClick={() => toggleEquipmentChoice(requirement, option)}
+                                  >
+                                    <span>{option.label}</span>
+                                    <small>{isSelected ? 'Scelta' : ''}</small>
+                                  </button>
+                                )
+                              })}
+                            </div>
+                          </div>
+                        )
+                      })}
+                    </SectionCard>
+                  )}
+
+                  <SectionCard title="Acquisti con monete">
+                    <div className="equipment-purchase-row">
+                      <label className="progression-field">
+                        <span>Oggetto</span>
+                        <select
+                          value={purchaseDraft.itemKey}
+                          onChange={(event) => setPurchaseDraft((current) => ({
+                            ...current,
+                            itemKey: event.target.value,
+                          }))}
+                        >
+                          <option value="">Scegli oggetto</option>
+                          {equipmentShopOptions.map((item) => (
+                            <option key={item.key} value={item.key}>
+                              {item.label} - {item.cost}
+                            </option>
+                          ))}
+                        </select>
+                      </label>
+
+                      <label className="progression-field">
+                        <span>Quantita</span>
+                        <input
+                          type="number"
+                          min="1"
+                          value={purchaseDraft.quantity}
+                          onChange={(event) => setPurchaseDraft((current) => ({
+                            ...current,
+                            quantity: event.target.value,
+                          }))}
+                        />
+                      </label>
+
+                      <button
+                        className="list-btn list-btn--primary"
+                        type="button"
+                        disabled={!purchaseDraft.itemKey}
+                        onClick={addEquipmentPurchase}
+                      >
+                        Aggiungi
+                      </button>
+                    </div>
+
+                    {(preview.equipment?.purchases ?? []).length > 0 && (
+                      <div className="equipment-preview-list">
+                        {preview.equipment.purchases.map((item) => (
+                          <div key={item.id} className="equipment-preview-item">
+                            <div>
+                              <strong>{item.name}</strong>
+                              <span>x{item.quantity} - {item.description}</span>
+                            </div>
+                            <button
+                              className="list-btn list-btn--danger"
+                              type="button"
+                              onClick={() => removeEquipmentPurchase(item.purchaseId)}
+                            >
+                              Rimuovi
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </SectionCard>
+
+                  <SectionCard title="Anteprima inventario">
+                    {(preview.equipment?.allItems ?? []).length === 0 ? (
+                      <div className="list-empty">Nessun oggetto selezionato.</div>
+                    ) : (
+                      <div className="equipment-preview-list">
+                        {preview.equipment.allItems.map((item) => (
+                          <div key={`${item.id}-${item.name}`} className="equipment-preview-item">
+                            <div>
+                              <strong>{item.name}</strong>
+                              <span>
+                                x{item.quantity}
+                                {item.equipped ? ' - equipaggiato' : ''}
+                                {item.description ? ` - ${item.description}` : ''}
+                              </span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </SectionCard>
+                </>
+              )}
+            </>
+          )}
+
           {activeStep === 'final' && (
             <SectionCard title="Dettagli finali">
               <div className="creation-form">
@@ -1316,18 +1624,6 @@ function CharacterCreationPage() {
                         {alignment}
                       </option>
                     ))}
-                  </select>
-                </label>
-
-                <label className="creation-field">
-                  <span>Equipaggiamento iniziale</span>
-                  <select
-                    value={choices.equipmentMode}
-                    onChange={(event) => updateChoice('equipmentMode', event.target.value)}
-                  >
-                    <option value="">Scegli equipaggiamento</option>
-                    <option value="gold">50 mo dal background</option>
-                    <option value="kit">Dotazione da dettagliare</option>
                   </select>
                 </label>
               </div>

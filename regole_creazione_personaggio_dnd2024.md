@@ -385,6 +385,39 @@ Da completare dopo il livello 7:
 - trasformare in effetti strutturati alcune feature oggi solo descrittive, per esempio Aura di Alacrita, Mente di Ferro e altri bonus numerici/competenze;
 - proseguire livello per livello con lo stesso schema: prima audit catalogo/manuale, poi scelta esplicita se il privilegio richiede decisione.
 
+Audit livello 8:
+
+- il livello 8, nelle dodici classi base, e' un livello di `Aumento dei punteggi di caratteristica`; nell'app deve quindi aprire sempre la scelta ASI oppure talento generale, come al livello 4;
+- non risultano poteri di classe o sottoclasse con `level: 8` nel catalogo poteri corrente;
+- il bonus competenza resta +3, quindi non deve comparire cambio del bonus competenza;
+- tutti ottengono PF e un Dado Vita aggiuntivo;
+- Barbaro: ASI/talento; Ira resta 4 usi, danno Ira +2, Padronanze 3;
+- Bardo: ASI/talento; Ispirazione Bardica resta d8, Maestria 3, preparati 12, slot full caster 4/3/3/2;
+- Chierico: ASI/talento; Incanalare Divinita arriva a 3 usi, trucchetti 4, preparati 12, slot full caster 4/3/3/2;
+- Druido: ASI/talento; Forma Selvatica arriva a 3 usi, trucchetti 3, preparati 12, slot full caster 4/3/3/2;
+- Guerriero: ASI/talento, come da progressione speciale del Guerriero; Recuperare Energie resta 3 usi e Padronanze 4;
+- Ladro: ASI/talento; Attacco Furtivo resta 4d6;
+- Mago: ASI/talento; trucchetti 4, preparati 12, slot full caster 4/3/3/2; aggiunge anche i normali incantesimi al libro al level-up;
+- Monaco: ASI/talento; dado Arti Marziali resta d8, Concentrazione 8, Movimento Senza Armatura resta nella fascia +4,5 m gia' raggiunta prima del livello 8;
+- Paladino: ASI/talento; preparati 7, slot half caster 4/3, Imposizione delle Mani 40;
+- Ranger: ASI/talento; preparati 7, slot half caster 4/3, Maestria 3;
+- Stregone: ASI/talento; trucchetti 5, preparati 12, slot full caster 4/3/3/2, Punti Stregoneria 8;
+- Warlock: ASI/talento; trucchetti 3, preparati 9, Suppliche 6, Magia del Patto resta 2 slot di 4 livello.
+
+Stato implementazione livello 8:
+
+- `GENERIC_ASI_LEVELS` include 8 e anche Guerriero/Ladro includono 8 nelle tabelle speciali, quindi il motore genera la scelta `asi_or_feat`;
+- le tabelle slot gia' rappresentano correttamente il passaggio full caster 7 -> 8 a 2 slot di 4 livello; half caster, third caster e pact magic non cambiano slot al livello 8;
+- le tabelle `SPELLCASTING_CHOICE_RULES` fanno crescere correttamente preparati/trucchetti dove previsto;
+- `classScalingService.js` centralizza le risorse tabellari e i derivati leggibili;
+- il motore aggiorna/genera ora Ira, Ispirazione Bardica, Incanalare Divinita, Forma Selvatica, Recuperare Energie, Ki/Concentrazione, Imposizione delle Mani e Punti Stregoneria;
+- le risorse che recuperano solo 1 uso al riposo breve usano `shortRestRecover`, mentre quelle con `resetOn: short_rest` si ricaricano del tutto;
+- dopo ASI/talenti il level-up risincronizza le risorse di classe, cosi' Ispirazione Bardica segue anche un eventuale aumento di Carisma;
+- la scheda mostra i derivati di classe leggibili in Panoramica: Dado Arti Marziali per il Monaco e Attacco Furtivo per il Ladro;
+- corretta in questa passata la regola di cambio incantesimi dello Stregone: il cambio di 1 incantesimo preparato e' al level-up, non al riposo lungo;
+- le opzioni di Metamagia sono scelte: nella sezione Capacita/Incantesimi devono apparire solo le Metamagie selezionate, non tutto il catalogo `stregone_incantesimo_*`;
+- restano da modellare in futuro le eccezioni alte/capstone e le interazioni avanzate delle risorse, per esempio usi illimitati o recuperi speciali non ancora presenti nel flusso base.
+
 ## Incantesimi
 
 Il manuale contiene una tabella generale importante: il cambio degli incantesimi preparati cambia per classe.
@@ -605,7 +638,9 @@ Stato JSON:
 - armature hanno formula CA, requisiti FOR, svantaggio furtivita';
 - strumenti e oggetti avventura presenti;
 - aggiunto `generated/dnd5e2024_rules_catalogs_it/rules/equipment/starting_equipment.json`;
+- aggiunto `generated/dnd5e2024_rules_catalogs_it/rules/equipment/background_starting_equipment.json`;
 - il nuovo JSON contiene 12 classi, 25 opzioni iniziali di classe, competenze in armature/armi/strumenti, regole base di equip e competenze multiclasse;
+- il JSON background contiene i 16 background base, ciascuno con dotazione A e opzione B da 50 mo;
 - il nuovo JSON e' registrato in `manifest.json` e `indexes/catalogs.index.json`.
 
 ### Cataloghi da usare
@@ -621,6 +656,7 @@ La UI non deve inventare oggetti a mano. Deve comporre l'inventario leggendo que
 | Strumenti | `rules/equipment/tools.json` |
 | Dotazioni, focus, munizioni, oggetti | `rules/equipment/adventuring_gear.json` |
 | Cavalcature, veicoli, servizi | `rules/equipment/mounts_vehicles_services.json` |
+| Pacchetti background | `rules/equipment/background_starting_equipment.json` |
 
 ### Competenze classe
 
@@ -700,9 +736,20 @@ Scelte interne gia' previste nel JSON:
 
 Da aggiungere in una prossima passata:
 
-- pacchetti equipaggiamento dei background come dati strutturati;
 - contenuto espanso delle dotazioni, se vogliamo far vedere ogni oggetto interno invece del pack unico;
 - scelta avanzata a livelli superiori dalla tabella "Equipaggiamento di partenza a livelli superiori".
+
+Stato implementazione creazione:
+
+- `equipmentService.js` importa i cataloghi oggetti, i pacchetti classe e i pacchetti background;
+- il flusso Nuovo PG ha un passo `Equip.` dedicato;
+- il giocatore sceglie fra:
+  - dotazione iniziale, quindi pacchetto background + pacchetto classe e monete residue;
+  - acquisto con monete, quindi 50 mo da background + denaro alternativo della classe;
+- il budget viene normalizzato in rame equivalente per scalare correttamente costi in mr/ma/me/mo/mp;
+- gli acquisti manuali vengono sottratti dal budget e il draft segnala se si supera la disponibilita';
+- l'inventario finale viene salvato nei gruppi usati dalla scheda: `weapons`, `armor`, `tools`, `adventuringGear`, `currency`;
+- gli oggetti mantengono origine, quantita', stato equipaggiato quando previsto, costo/peso e tracker recuperabile per munizioni.
 
 Regola scheda:
 
@@ -713,14 +760,52 @@ Regola scheda:
 - strumenti danno competenze e azioni contestuali;
 - consumabili devono avere quantita' e tracker.
 
+### Inventario vivo e loot di campagna
+
+La scheda non deve contenere solo l'equipaggiamento iniziale. Durante l'avventura il personaggio puo' trovare, comprare, ricevere o creare oggetti specifici concessi dal Master.
+
+La sezione equipaggiamento deve quindi supportare:
+
+- aggiunta da catalogo: scegliere categoria, cercare un oggetto ufficiale e aggiungerlo con quantita' e origine;
+- aggiunta personalizzata: creare un oggetto homebrew o specifico di campagna con nome, tipo, statistiche, note e origine;
+- modifica/rimozione di oggetti aggiunti;
+- equip/unequip persistente;
+- scelta dello slot equipaggiato: arma principale, arma secondaria, due mani, armatura, scudo, focus;
+- mantenere nell'inventario gli oggetti non equipaggiati.
+
+Esempio:
+
+```text
+Pugnale a catena
+Tipo: arma da mischia personalizzata
+Proprieta': accurata, versatile
+Bonus tiro per colpire: +1
+Bonus danno: +1
+Caratteristica: Destrezza o migliore fra Forza/Destrezza
+Slot: arma principale
+Origine: trovato in avventura / Master
+```
+
+Regola tecnica:
+
+- gli oggetti da catalogo devono conservare `catalog`, `itemId`, `stats`, costo, peso e gruppo inventario;
+- gli oggetti personalizzati devono conservare `custom: true`, `inventoryGroup`, `stats`, `notes`, bonus e proprieta';
+- l'equipaggiamento attivo deve essere salvato sull'oggetto con `equipped` e `equippedSlot`, non solo in stato locale della UI;
+- quando si equipaggia un'arma in uno slot esclusivo, le altre armi nello stesso slot devono essere disequipaggiate;
+- il prossimo passaggio dopo equip/unequip e' generare attacchi e CA leggendo gli oggetti equipaggiati.
+
+Stato implementazione scheda:
+
+- aggiunta da catalogo disponibile nella sezione `Equip.`;
+- aggiunta personalizzata disponibile con campi specifici per armi e armature/scudi;
+- rimozione persistente dall'inventario disponibile;
+- equip/unequip persistente disponibile per arma principale, arma secondaria, due mani, armatura, scudo, focus e oggetti magici;
+- gli slot armatura/scudo vengono filtrati in base al tipo reale dell'oggetto;
+- resta da aggiungere l'editing completo di un oggetto gia' creato.
+
 Da implementare:
 
-- importare `starting_equipment.json` in un nuovo `equipmentService.js`;
-- costruire `getClassEquipmentOptions(classId, mode)` per creazione e multiclasse;
-- costruire `buildStartingEquipmentDraft(character, choices)`;
-- costruire `applyStartingEquipmentDraft(character, draft)`;
-- salvare inventario strutturato con gruppi `weapons`, `armor`, `tools`, `gear`, `currency`;
-- aggiungere equip/unequip;
+- editing completo degli oggetti personalizzati;
 - calcolare CA generica da armatura/scudo/feature alternative;
 - calcolare attacchi generici da armi equipaggiate;
 - tracker munizioni/consumabili;

@@ -10,6 +10,23 @@ import {
   getPowerSourceLabel,
 } from '../../../services/powerFormatters.js'
 
+const METAMAGIC_CHOICE_POWER_IDS = {
+  careful_spell: 'stregone_incantesimo_preciso',
+  distant_spell: 'stregone_incantesimo_distante',
+  empowered_spell: 'stregone_incantesimo_potenziato',
+  extended_spell: 'stregone_incantesimo_esteso',
+  heightened_spell: 'stregone_incantesimo_intensificato',
+  quickened_spell: 'stregone_incantesimo_rapido',
+  subtle_spell: 'stregone_incantesimo_celato',
+  twinned_spell: 'stregone_incantesimo_raddoppiato',
+}
+
+const METAMAGIC_POWER_IDS = new Set([
+  ...Object.values(METAMAGIC_CHOICE_POWER_IDS),
+  'stregone_incantesimo_mirato',
+  'stregone_incantesimo_tramutato',
+])
+
 function PowerCard({ characterPower, power, character }) {
   const factLabels = getPowerFactLabels(power, character)
   const [isOpen, setIsOpen] = useState(false)
@@ -70,9 +87,35 @@ function getFallbackSpell(characterSpell) {
   }
 }
 
+function getSelectedMetamagicPowerIds(character) {
+  const selectedChoiceIds = (character?.progressionHistory ?? [])
+    .flatMap((entry) => entry.classChoices ?? [])
+    .filter((choice) => choice.id === 'stregone_2_metamagic')
+    .flatMap((choice) => choice.selected ?? [])
+
+  return new Set(
+    selectedChoiceIds
+      .map((choiceId) => METAMAGIC_CHOICE_POWER_IDS[choiceId])
+      .filter(Boolean)
+  )
+}
+
+function filterCharacterPowers(character) {
+  const characterPowers = character?.powers ?? []
+  const selectedMetamagicPowerIds = getSelectedMetamagicPowerIds(character)
+
+  if (selectedMetamagicPowerIds.size === 0) {
+    return characterPowers
+  }
+
+  return characterPowers.filter((power) => {
+    return !METAMAGIC_POWER_IDS.has(power.id) || selectedMetamagicPowerIds.has(power.id)
+  })
+}
+
 function PowersSection({ character, title }) {
   const characterSpells = character?.spellcasting?.spells ?? []
-  const characterPowers = character?.powers ?? []
+  const characterPowers = filterCharacterPowers(character)
 
   const spellEntries = characterSpells
     .map((characterSpell) => {

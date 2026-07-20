@@ -1,10 +1,17 @@
 import { useNavigate } from 'react-router-dom'
 
 import '../app/App.css'
+import { useAuth } from '../components/authentication/AuthContext.jsx'
 import AppTopbar from '../components/layout/AppTopbar.jsx'
 
 function HomePage() {
   const navigate = useNavigate()
+  const { logout } = useAuth()
+
+  function handleLogout() {
+    logout()
+    navigate('/login', { replace: true })
+  }
 
   return (
     <div className="app">
@@ -29,6 +36,15 @@ function HomePage() {
             >
               <span>Le mie campagne</span>
               <small>Organizza party, sessioni e personaggi</small>
+            </button>
+
+            <button
+              className="home-action home-action--logout"
+              type="button"
+              onClick={handleLogout}
+            >
+              <span>Esci</span>
+              <small>Chiudi la sessione e torna al login</small>
             </button>
           </div>
         </div>

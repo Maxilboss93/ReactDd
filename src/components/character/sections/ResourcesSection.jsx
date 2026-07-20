@@ -1,7 +1,18 @@
 import SectionCard from '../../general/card/SectionCard.jsx'
 import ResourceRow from '../../general/resource/ResourceRow.jsx'
 
-function ResourcesSection({ hitDice, onHitDiceChange, resources, onResourceChange }) {
+function getSpellSlotLabel(slot) {
+  return slot.label ?? `Slot livello ${slot.level}`
+}
+
+function ResourcesSection({
+  hitDice,
+  onHitDiceChange,
+  resources,
+  onResourceChange,
+  spellSlots = [],
+  onSpellSlotChange,
+}) {
   return (
     <SectionCard title="Risorse">
       <div className="resource-list">
@@ -19,7 +30,18 @@ function ResourcesSection({ hitDice, onHitDiceChange, resources, onResourceChang
             current={res.current}
             max={res.max}
             resetOn={res.resetOn}
+            shortRestRecover={res.shortRestRecover}
             onChange={(value) => onResourceChange(res.id, value)}
+          />
+        ))}
+        {spellSlots.map((slot) => (
+          <ResourceRow
+            key={slot.id ?? `spell_slot_${slot.level}`}
+            label={getSpellSlotLabel(slot)}
+            current={slot.current}
+            max={slot.max}
+            resetOn={slot.resetOn}
+            onChange={(value) => onSpellSlotChange(slot.id ?? slot.level, value)}
           />
         ))}
       </div>

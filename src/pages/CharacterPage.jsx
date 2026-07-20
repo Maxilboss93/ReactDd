@@ -5,6 +5,7 @@ import '../app/App.css'
 import OverviewSection from '../components/character/sections/OverviewSection.jsx'
 import HpSection from '../components/character/sections/HpSection.jsx'
 import KeyStatsSection from '../components/character/sections/KeyStatsSection.jsx'
+import ClassDerivedStatsSection from '../components/character/sections/ClassDerivedStatsSection.jsx'
 import AbilitiesSection from '../components/character/sections/AbilitiesSection.jsx'
 import ResourcesSection from '../components/character/sections/ResourcesSection.jsx'
 import RestSection from '../components/character/sections/RestSection.jsx'
@@ -40,6 +41,7 @@ function CharacterPage() {
   const [resources, setResources] = useState([])
   const kiResource = resources.find((r) => r.id === 'ki')
   const primaryResource = kiResource ?? resources[0] ?? null
+  const [spellcasting, setSpellcasting] = useState(null)
   const [hitDice, setHitDice] = useState({ current: 0, max: 0, type: 'd8' })
   const conMod = Math.floor(((character?.abilities?.con ?? 10) - 10) / 2)
   const [restPanel, setRestPanel] = useState(null)
@@ -99,6 +101,7 @@ function CharacterPage() {
     if (!character) return
     setHpCurrent(character.combat?.hp?.current ?? 0)
     setResources(character.resources ?? [])
+    setSpellcasting(character.spellcasting ?? null)
     setHitDice(character.combat?.hitDice ?? { current: 0, max: 0, type: 'd8' })
     setSkills(character.skills ?? [])
     setSavingThrows(character.savingThrows ?? {})
@@ -141,19 +144,68 @@ function CharacterPage() {
     )
   }
 
+  function updateSpellSlot(slotKey, newValue) {
+    setSpellcasting((prev) => {
+      if (!prev?.slots?.length) {
+        return prev
+      }
+
+      return {
+        ...prev,
+        slots: prev.slots.map((slot) => {
+          const matchesSlot = (slot.id ?? slot.level) === slotKey
+
+          if (!matchesSlot) {
+            return slot
+          }
+
+          return {
+            ...slot,
+            current: Math.max(0, Math.min(slot.max, newValue)),
+          }
+        }),
+      }
+    })
+  }
+
   function resetResources(kind) {
     setResources((prev) =>
       prev.map((res) => {
-        const shouldReset =
-          kind === 'short'
-            ? res.resetOn === 'short_rest'
-            : kind === 'long'
-              ? res.resetOn === 'short_rest' || res.resetOn === 'long_rest'
-              : false
+        if (kind === 'short' && res.shortRestRecover) {
+          return {
+            ...res,
+            current: Math.min(res.max, (res.current ?? 0) + res.shortRestRecover),
+          }
+        }
+
+        const shouldReset = kind === 'short'
+          ? res.resetOn === 'short_rest'
+          : kind === 'long'
+            ? res.resetOn === 'short_rest' || res.resetOn === 'long_rest' || Boolean(res.shortRestRecover)
+            : false
 
         return shouldReset ? { ...res, current: res.max } : res
       })
     )
+
+    setSpellcasting((prev) => {
+      if (!prev?.slots?.length) {
+        return prev
+      }
+
+      return {
+        ...prev,
+        slots: prev.slots.map((slot) => {
+          const shouldReset = kind === 'short'
+            ? slot.resetOn === 'short_rest'
+            : kind === 'long'
+              ? slot.resetOn === 'short_rest' || slot.resetOn === 'long_rest'
+              : false
+
+          return shouldReset ? { ...slot, current: slot.max } : slot
+        }),
+      }
+    })
   }
 
   function getDieSize(type) {
@@ -241,6 +293,7 @@ function CharacterPage() {
         hitDice,
       },
       resources,
+      spellcasting,
       skills,
       savingThrows,
     }
@@ -341,6 +394,7 @@ function CharacterPage() {
                     primaryResource={primaryResource}
                     proficiencyBonus={proficiencyBonus}
                   />
+                  <ClassDerivedStatsSection character={getLiveCharacterSnapshot()} />
                   <ResourcesSection
                     hitDice={hitDice}
                     onHitDiceChange={(value) =>
@@ -348,6 +402,8 @@ function CharacterPage() {
                     }
                     resources={resources}
                     onResourceChange={updateResource}
+                    spellSlots={spellcasting?.slots ?? []}
+                    onSpellSlotChange={updateSpellSlot}
                   />
                   <RestSection
                     restPanel={restPanel}
@@ -387,10 +443,13 @@ function CharacterPage() {
             </>
           )}
           {activeTab === 'spells' && (
-            <PowersSection character={character} title={labelNav3} />
+            <PowersSection character={getLiveCharacterSnapshot()} title={labelNav3} />
           )}
           {activeTab === 'equipment' && (
-            <EquipmentSection character={character} />
+            <EquipmentSection
+              character={character}
+              onCharacterChange={handleCharacterChange}
+            />
           )}
           {activeTab === 'details' && (
             <DetailsSection character={character} />

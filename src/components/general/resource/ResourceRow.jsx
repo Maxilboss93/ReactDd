@@ -1,8 +1,10 @@
 import { useState, useRef } from 'react'
 
-function ResourceRow({ label, current, max, resetOn, onChange }) {
+function ResourceRow({ label, current, max, resetOn, shortRestRecover = null, onChange }) {
+  const usesCompactControls = max > 8
   const resetLabel =
-    resetOn === 'short_rest' ? 'Riposo breve'
+    shortRestRecover ? `+${shortRestRecover} riposo breve, tutto riposo lungo`
+    : resetOn === 'short_rest' ? 'Riposo breve'
     : resetOn === 'long_rest' ? 'Riposo lungo'
     : null
   
@@ -44,6 +46,11 @@ function ResourceRow({ label, current, max, resetOn, onChange }) {
     setValueForIndex(index, true)
   }
 
+  function setCompactValue(value) {
+    const nextValue = Math.max(0, Math.min(max, Number(value) || 0))
+    onChange(nextValue)
+  }
+
 
   return (
     <div className="resource-row">
@@ -52,24 +59,54 @@ function ResourceRow({ label, current, max, resetOn, onChange }) {
         {resetLabel && <div className="resource-sub">{resetLabel}</div>}
       </div>
 
-      <div
-        className="resource-dots"
-        onPointerMove={handlePointerMove}
-        onPointerUp={() => setDragging(false)}
-        onPointerLeave={() => setDragging(false)}
-        onPointerCancel={() => setDragging(false)}
-      >
-        {Array.from({ length: max }).map((_, i) => (
-        <button
-          key={i}
-          data-index={i}
-          className={`resource-dot ${i < current ? 'is-filled' : ''}`}
-          onPointerDown={(e) => handlePointerDown(i, e)}
-          onClick={() => handleClick(i)}
-          aria-label={`Imposta ${label} a ${i + 1}`}
-        />
-        ))}
-      </div>
+      {usesCompactControls ? (
+        <div className="resource-stepper">
+          <button
+            type="button"
+            onClick={() => setCompactValue(current - 1)}
+            disabled={current <= 0}
+            aria-label={`Riduci ${label}`}
+          >
+            -
+          </button>
+          <input
+            type="number"
+            inputMode="numeric"
+            min="0"
+            max={max}
+            value={current}
+            onChange={(event) => setCompactValue(event.target.value)}
+            aria-label={label}
+          />
+          <button
+            type="button"
+            onClick={() => setCompactValue(current + 1)}
+            disabled={current >= max}
+            aria-label={`Aumenta ${label}`}
+          >
+            +
+          </button>
+        </div>
+      ) : (
+        <div
+          className="resource-dots"
+          onPointerMove={handlePointerMove}
+          onPointerUp={() => setDragging(false)}
+          onPointerLeave={() => setDragging(false)}
+          onPointerCancel={() => setDragging(false)}
+        >
+          {Array.from({ length: max }).map((_, i) => (
+          <button
+            key={i}
+            data-index={i}
+            className={`resource-dot ${i < current ? 'is-filled' : ''}`}
+            onPointerDown={(e) => handlePointerDown(i, e)}
+            onClick={() => handleClick(i)}
+            aria-label={`Imposta ${label} a ${i + 1}`}
+          />
+          ))}
+        </div>
+      )}
 
       <div className="resource-count">
         {current}/{max}

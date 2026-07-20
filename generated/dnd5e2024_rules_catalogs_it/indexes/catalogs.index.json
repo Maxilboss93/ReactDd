@@ -48,6 +48,12 @@
     "count": 12
   },
   {
+    "id": "background_starting_equipment",
+    "name": "Equipaggiamento iniziale dei background",
+    "file": "rules/equipment/background_starting_equipment.json",
+    "count": 16
+  },
+  {
     "id": "spells",
     "name": "Incantesimi",
     "file": "rules/spells/dnd2024_spells_it.json",

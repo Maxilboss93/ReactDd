@@ -11,6 +11,11 @@ import {
   applyFeatDraftToCharacter,
   buildFeatChoiceDraft,
 } from './featChoiceService.js'
+import {
+  buildStartingEquipment,
+  getCreationEquipmentPreview,
+} from './equipmentService.js'
+import { getClassResourceEntries } from './classScalingService.js'
 
 const ABILITY_LABELS = {
   str: 'FOR',
@@ -950,8 +955,14 @@ function buildFeatures(characterClass, species, background, startingLevel = 1, s
   ]
 }
 
-function buildResources(characterClass, species, background, startingLevel = 1, selectedSpeciesOption = null) {
-  const resources = []
+function buildResources(characterClass, species, background, startingLevel = 1, selectedSpeciesOption = null, abilities = {}) {
+  const baseCharacter = characterClass
+    ? {
+      classes: [{ name: characterClass.name, level: startingLevel }],
+      abilities,
+    }
+    : null
+  const resources = baseCharacter ? getClassResourceEntries(baseCharacter) : []
 
   if (background.featId === 'fortunato') {
     resources.push({
@@ -961,50 +972,6 @@ function buildResources(characterClass, species, background, startingLevel = 1, 
       max: 2,
       resetOn: 'long_rest',
       category: 'feat',
-    })
-  }
-
-  if (characterClass.id === 'paladino') {
-    resources.push({
-      id: 'lay_on_hands',
-      label: 'Imposizione delle Mani',
-      current: 5 * startingLevel,
-      max: 5 * startingLevel,
-      resetOn: 'long_rest',
-      category: 'class',
-    })
-  }
-
-  if (characterClass.id === 'monaco' && startingLevel === 1) {
-    resources.push({
-      id: 'martial_arts_die',
-      label: 'Dado arti marziali',
-      current: 1,
-      max: 1,
-      resetOn: 'none',
-      category: 'class',
-    })
-  }
-
-  if (characterClass.id === 'monaco' && startingLevel >= 2) {
-    resources.push({
-      id: 'ki',
-      label: 'Ki',
-      current: 2,
-      max: 2,
-      resetOn: 'short_rest',
-      category: 'class',
-    })
-  }
-
-  if (characterClass.id === 'stregone' && startingLevel >= 2) {
-    resources.push({
-      id: 'sorcery_points',
-      label: 'Punti Stregoneria',
-      current: 2,
-      max: 2,
-      resetOn: 'long_rest',
-      category: 'class',
     })
   }
 
@@ -1128,6 +1095,10 @@ export function getDefaultCreationChoices() {
     languages: [],
     levelUpChoices: {},
     equipmentMode: '',
+    backgroundEquipmentOptionId: '',
+    classEquipmentOptionId: '',
+    equipmentChoices: {},
+    equipmentPurchases: [],
   }
 }
 
@@ -1176,6 +1147,12 @@ export function getCreationPreview(choices) {
     ...(characterClass?.fixedTools ?? []),
     ...(choices.selectedClassTools ?? []),
   ])
+  const equipment = getCreationEquipmentPreview(choices, {
+    classId: characterClass?.id,
+    backgroundId: background?.id,
+    selectedBackgroundTools: backgroundTools,
+    selectedClassTools: classTools,
+  })
   const originFeat = background ? findFeatById(background.featId) : null
   const originFeatSelectedChoices = choices.featChoices?.[background?.featId] ?? {}
   const originFeatCharacter = characterClass && background
@@ -1294,6 +1271,7 @@ export function getCreationPreview(choices) {
       all: classTools,
       options: getToolChoiceOptions(characterClass?.toolChoices),
     },
+    equipment,
     classFit: {
       primaryScores,
       hasStrongPrimary: primaryScores.some((item) => Number(item.score) >= 15),
@@ -1333,7 +1311,14 @@ export function getCreationPreview(choices) {
 
 function buildBaseCreationCharacter(preview, choices, id) {
   const features = buildFeatures(preview.class, preview.species, preview.background, 1, preview.selectedSpeciesOption)
-  const resources = buildResources(preview.class, preview.species, preview.background, 1, preview.selectedSpeciesOption)
+  const resources = buildResources(
+    preview.class,
+    preview.species,
+    preview.background,
+    1,
+    preview.selectedSpeciesOption,
+    preview.abilities
+  )
   const spellcasting = buildSpellcasting(preview.class, preview.abilities, 1)
   const speciesSpells = getSpeciesSpells(
     preview.species,
@@ -1418,38 +1403,7 @@ function buildBaseCreationCharacter(preview, choices, id) {
     features,
     powers: [],
     actions: buildSpeciesActions(preview.species, preview.selectedSpeciesOption),
-    equipment: {
-      currency: choices.equipmentMode === 'gold'
-        ? { cp: 0, sp: 0, ep: 0, gp: 50, pp: 0 }
-        : { cp: 0, sp: 0, ep: 0, gp: 0, pp: 0 },
-      startingBudget: {
-        gp: choices.equipmentMode === 'gold' ? 50 : 0,
-        notes: choices.equipmentMode === 'gold'
-          ? 'Scelta rapida: 50 mo dal background.'
-          : 'Dotazione da background/classe da dettagliare.',
-      },
-      weapons: [],
-      armor: [],
-      tools: [
-        ...preview.backgroundTools.all.map((toolId) => ({
-          id: `background_${toolId}`,
-          name: getToolById(toolId)?.label ?? toolId,
-          quantity: 1,
-          description: 'Competenza o strumento fornito dal background.',
-        })),
-        ...preview.classTools.all.map((toolId) => ({
-          id: `class_${toolId}`,
-          name: getToolById(toolId)?.label ?? toolId,
-          quantity: 1,
-          description: 'Competenza o strumento fornito dalla classe.',
-        })),
-      ],
-      adventuringGear: [],
-      magicItems: [],
-      consumables: [],
-      storyItems: [],
-      wishlist: [],
-    },
+    equipment: buildStartingEquipment(preview.equipment),
     details: {
       personalityTraits: [],
       ideals: [],
@@ -1608,9 +1562,7 @@ export function buildCreationDraft(choices) {
     warnings.push('Scegli un allineamento.')
   }
 
-  if (!choices.equipmentMode) {
-    warnings.push('Scegli l\'equipaggiamento iniziale.')
-  }
+  warnings.push(...(preview.equipment?.warnings ?? []))
 
   if (preview.startingLevel > 1) {
     const completedLevels = levelUpFlow.filter((step) => step.draft.readyToApply).length
