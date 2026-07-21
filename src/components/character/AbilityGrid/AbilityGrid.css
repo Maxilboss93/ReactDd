@@ -6,12 +6,17 @@
 }
 
 .ability-pill {
-  background: #101823;
-  border: 1px solid var(--border);
+  background:
+    linear-gradient(180deg, rgba(15, 19, 16, 0.92), rgba(6, 8, 7, 0.96));
+  border: 1px solid rgba(112, 113, 91, 0.42);
   border-radius: var(--radius-ui);
   padding: 10px 8px;
   text-align: center;
-  box-shadow: inset 0 0 0 1px #1b2a3a;
+  box-shadow: inset 0 0 0 1px rgba(205, 190, 150, 0.035);
+}
+
+.abilities-grid--summary .ability-pill {
+  cursor: default;
 }
 
 .ability-label {

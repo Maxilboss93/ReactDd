@@ -1,9 +1,24 @@
 .section-card {
-  background: var(--panel);
-  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(90% 120% at 100% 0%, rgba(90, 86, 68, 0.1), transparent 62%),
+    linear-gradient(180deg, rgba(23, 18, 13, 0.97), rgba(7, 8, 8, 0.97));
+  border: 1px solid rgba(128, 119, 91, 0.44);
   border-radius: var(--radius-ui);
   padding: 16px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.4),
+    inset 0 0 0 1px rgba(205, 190, 150, 0.035);
+}
+
+.section-card::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(170, 156, 118, 0.13);
+  border-radius: calc(var(--radius-ui) - 3px);
+  pointer-events: none;
 }
 
 .section-card__header {
@@ -15,12 +30,13 @@
 
 .section-card__header h3 {
   margin: 0;
+  font-family: var(--font-display);
   font-size: 12px;
-  letter-spacing: 0.8px;
+  letter-spacing: 0;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--gold-soft);
   padding-bottom: 8px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(199, 155, 87, 0.25);
 }
 
 .section-card__body {
