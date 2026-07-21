@@ -2153,6 +2153,91 @@ body::before {
     linear-gradient(145deg, #6fbf6d, #2f6b3f 48%, #123524);
 }
 
+/* Menu parity and AbilityGrid override for the forest theme branch. */
+.topbar {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 58px;
+  align-items: center;
+  gap: 8px;
+  z-index: 50;
+}
+
+.topbar__title {
+  justify-self: center;
+  text-align: center;
+  line-height: 1.05;
+}
+
+.topbar > .icon-btn:first-child,
+.topbar__spacer:first-child {
+  justify-self: start;
+}
+
+.topbar > .icon-btn:last-child,
+.topbar__spacer:last-child {
+  justify-self: end;
+}
+
+.panel_nav {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: center;
+  z-index: 50;
+  padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+}
+
+.icon-btn,
+.panel_nav__item,
+.subtabs__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.panel_nav__item {
+  min-height: 42px;
+  padding: 8px 5px;
+  font-size: 10px;
+}
+
+.subtabs {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.subtabs__btn {
+  min-height: 46px;
+  font-size: clamp(9px, 2.5vw, 11px);
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+.abilities-grid .ability-pill,
+.abilities-grid .ability-card.is-open .ability-pill,
+.ability-card .skills-list,
+.ability-card .skill-row {
+  border-color: rgba(207, 232, 200, 0.24);
+  background:
+    radial-gradient(circle at 88% 0%, rgba(207, 232, 200, 0.11), transparent 9rem),
+    linear-gradient(150deg, rgba(242, 246, 233, 0.07), rgba(242, 246, 233, 0) 28%),
+    linear-gradient(180deg, rgba(18, 53, 36, 0.82), rgba(8, 28, 19, 0.82));
+  color: var(--text);
+  box-shadow:
+    inset 0 0 0 1px rgba(242, 246, 233, 0.05),
+    0 10px 22px rgba(6, 24, 16, 0.24);
+}
+
+.abilities-grid .ability-label,
+.abilities-grid .ability-mod,
+.ability-card .skill-name,
+.ability-card .skill-mod {
+  color: #f2f6e9;
+}
+
+.ability-card .skills-divider {
+  background: rgba(207, 232, 200, 0.22);
+}
+
 /* Tree and branches refinement */
 .section-card,
 .auth-card,
