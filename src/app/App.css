@@ -2153,6 +2153,234 @@ body::before {
     linear-gradient(145deg, #6fbf6d, #2f6b3f 48%, #123524);
 }
 
+/* Tree and branches refinement */
+.section-card,
+.auth-card,
+.list-card,
+.character-block,
+.progression-card,
+.feat-choice-panel,
+.rest-panel,
+.dice-roller,
+.equipment-manager,
+.equipment-item,
+.stat-pill,
+.resource-row,
+.ability-card,
+.skill-row,
+.home-action,
+.creation-option,
+.progression-option,
+.power-card__toggle,
+.spell-choice-option,
+.currency-pill,
+.details-grid div {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-card,
+.auth-card,
+.list-card,
+.character-block,
+.progression-card,
+.feat-choice-panel,
+.rest-panel,
+.dice-roller,
+.equipment-manager {
+  border-left: 3px solid rgba(77, 63, 47, 0.78);
+  border-top-color: rgba(207, 232, 200, 0.42);
+  background:
+    linear-gradient(90deg, rgba(77, 63, 47, 0.34), rgba(77, 63, 47, 0.08) 10px, transparent 28px),
+    radial-gradient(circle at 86% 0%, rgba(207, 232, 200, 0.13), transparent 9rem),
+    linear-gradient(145deg, rgba(242, 246, 233, 0.1), rgba(242, 246, 233, 0.02) 30%),
+    linear-gradient(180deg, rgba(18, 53, 36, 0.94), rgba(11, 30, 23, 0.95));
+}
+
+.section-card::before,
+.auth-card::before,
+.list-card::before,
+.character-block::before,
+.progression-card::before,
+.feat-choice-panel::before,
+.rest-panel::before,
+.dice-roller::before,
+.equipment-manager::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  pointer-events: none;
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(207, 232, 200, 0.16), rgba(77, 63, 47, 0.78) 32%, rgba(38, 76, 42, 0.86));
+  box-shadow:
+    0 0 0 1px rgba(207, 232, 200, 0.08),
+    7px 0 18px rgba(111, 191, 109, 0.08);
+}
+
+.section-card::after,
+.auth-card::after,
+.list-card::after,
+.character-block::after,
+.progression-card::after,
+.feat-choice-panel::after,
+.rest-panel::after,
+.dice-roller::after,
+.equipment-manager::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 28px;
+  width: min(42%, 150px);
+  height: 30px;
+  pointer-events: none;
+  border-top: 2px solid rgba(119, 151, 87, 0.52);
+  border-right: 1px solid rgba(207, 232, 200, 0.16);
+  border-radius: 0 22px 0 0;
+  transform: rotate(-5deg);
+  transform-origin: left top;
+  opacity: 0.68;
+  box-shadow: 0 -1px 0 rgba(49, 84, 44, 0.65);
+}
+
+.section-card__header,
+.equipment-item__header,
+.list-card__identity,
+.character-block__identity,
+.power-card__heading {
+  position: relative;
+  z-index: 1;
+}
+
+.section-card__body,
+.auth-body,
+.equipment-manager > *,
+.list-card__actions,
+.equipment-item > *:not(.equipment-item__header),
+.stat-pill > *,
+.resource-row > *,
+.ability-card > *,
+.skill-row > *,
+.home-action > *,
+.creation-option > *,
+.progression-option > *,
+.power-card__toggle > *,
+.spell-choice-option > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section-card__header h3,
+.section-card__title-with-icon {
+  padding-left: 16px;
+}
+
+.list-card__identity,
+.equipment-item__identity,
+.character-block__identity {
+  padding-left: 8px;
+}
+
+.topbar,
+.panel_nav {
+  position: sticky;
+  overflow: hidden;
+}
+
+.panel_nav {
+  position: fixed;
+  z-index: 30;
+}
+
+.topbar::after,
+.panel_nav::after {
+  content: "";
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  top: 58%;
+  height: 24px;
+  pointer-events: none;
+  border-top: 3px solid rgba(77, 63, 47, 0.55);
+  border-radius: 50%;
+  opacity: 0.72;
+  box-shadow:
+    0 -1px 0 rgba(207, 232, 200, 0.16),
+    34vw -8px 0 -10px rgba(119, 151, 87, 0.48),
+    64vw 6px 0 -10px rgba(119, 151, 87, 0.38);
+}
+
+.panel_nav::after {
+  top: 12%;
+  border-top-color: rgba(77, 63, 47, 0.5);
+}
+
+.icon-btn,
+.panel_nav__item,
+.subtabs__btn,
+.auth-tabs__button,
+.auth-submit,
+.home-action,
+.list-btn,
+.creation-step,
+.creation-option,
+.equipment-manager__tab,
+.equipment-manager__submit,
+.equipment-item__btn,
+.hp-btn,
+.rest-btn,
+.progression-card__start,
+.progression-card__confirm,
+.progression-option,
+.progression-choice,
+.power-card__toggle,
+.dice-roller__button,
+.dice-tray__die-button,
+.dice-tray__expand,
+.dice-tray__mode,
+.details-notes__save,
+.details-notes__cancel {
+  background:
+    linear-gradient(90deg, rgba(77, 63, 47, 0.34), transparent 15%, transparent 85%, rgba(77, 63, 47, 0.22)),
+    linear-gradient(180deg, rgba(207, 232, 200, 0.17), rgba(18, 53, 36, 0.04) 35%, rgba(5, 20, 13, 0.34)),
+    linear-gradient(135deg, rgba(18, 53, 36, 0.96), rgba(47, 107, 63, 0.94));
+  border-color: rgba(157, 184, 133, 0.44);
+}
+
+.panel_nav__item--active,
+.subtabs__btn--active,
+.auth-tabs__button--active,
+.creation-step--active,
+.creation-option--active,
+.equipment-manager__tab.is-active,
+.progression-choice--active,
+.progression-option--active,
+.dice-tray__die-button--selected,
+.dice-tray__mode--active {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(242, 246, 233, 0.42), transparent 32%),
+    linear-gradient(90deg, rgba(77, 63, 47, 0.26), transparent 18%, transparent 82%, rgba(77, 63, 47, 0.22)),
+    linear-gradient(135deg, #cfe8c8, #6fbf6d 58%, #2f6b3f);
+}
+
+.class-icon,
+.magic-icon,
+.action-icon,
+.stat-icon,
+.equipment-icon {
+  background:
+    linear-gradient(135deg, rgba(77, 63, 47, 0.32), transparent 44%),
+    radial-gradient(circle at 35% 22%, rgba(242, 246, 233, 0.22), transparent 40%),
+    linear-gradient(145deg, rgba(47, 107, 63, 0.94), rgba(13, 38, 25, 0.95));
+}
+
+.action-icon--xs {
+  background: transparent;
+}
+
 @media (min-width: 820px) {
   .screen {
     max-width: 760px;
