@@ -1,5 +1,10 @@
 [
   {
+    "id": "pg_003",
+    "name": "Escanor il Piccoletto",
+    "file": "pg-003-escanor-il-piccoletto.json"
+  },
+  {
     "id": "pg_001",
     "name": "Shisui",
     "file": "pg-001-shisui.json"

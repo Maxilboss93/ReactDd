@@ -13,6 +13,7 @@ import {
 } from './featChoiceService.js'
 import {
   buildStartingEquipment,
+  calculateCharacterArmorClass,
   getCreationEquipmentPreview,
 } from './equipmentService.js'
 import { getClassResourceEntries } from './classScalingService.js'
@@ -1212,6 +1213,14 @@ export function getCreationPreview(choices) {
     : levelOneHp + Math.max(0, startingLevel - 1) * getAverageHpIncrease(characterClass.hitDie, conMod)
   const dexMod = hasCompleteAbilities ? getAbilityModifier(abilityResult.abilities.dex) : null
   const speciesSpeed = selectedSpeciesOption?.speed ?? species?.speed ?? null
+  const previewEquipment = buildStartingEquipment(equipment)
+  const previewAc = hasCompleteAbilities
+    ? calculateCharacterArmorClass({
+      classes: characterClass ? [{ name: characterClass.name, level: 1 }] : [],
+      abilities: abilityResult.abilities,
+      equipment: previewEquipment,
+    })
+    : null
   const primaryScores = (characterClass?.primaryAbilities ?? []).map((ability) => ({
     ability,
     score: abilityResult.abilities[ability] ?? null,
@@ -1281,7 +1290,7 @@ export function getCreationPreview(choices) {
       level: startingLevel,
       proficiencyBonus: 2,
       hpMax,
-      ac: dexMod === null ? null : 10 + dexMod,
+      ac: previewAc ?? (dexMod === null ? null : 10 + dexMod),
       speed: speciesSpeed,
       hitDice: {
         current: startingLevel,
@@ -1327,6 +1336,12 @@ function buildBaseCreationCharacter(preview, choices, id) {
     1
   )
   const levelOneHp = getHitDieSize(preview.class.hitDie) + getAbilityModifier(preview.abilities.con)
+  const startingEquipment = buildStartingEquipment(preview.equipment)
+  const levelOneAc = calculateCharacterArmorClass({
+    classes: [{ name: preview.class.name, level: 1 }],
+    abilities: preview.abilities,
+    equipment: startingEquipment,
+  }) ?? preview.derived.ac
   const appliedAt = new Date().toISOString()
   const historyEntry = {
     id: `creation-${id}`,
@@ -1376,7 +1391,7 @@ function buildBaseCreationCharacter(preview, choices, id) {
         max: levelOneHp,
         temp: 0,
       },
-      ac: preview.derived.ac,
+      ac: levelOneAc,
       speed: preview.derived.speed,
       initiativeBonus: getAbilityModifier(preview.abilities.dex),
       hitDice: {
@@ -1403,7 +1418,7 @@ function buildBaseCreationCharacter(preview, choices, id) {
     features,
     powers: [],
     actions: buildSpeciesActions(preview.species, preview.selectedSpeciesOption),
-    equipment: buildStartingEquipment(preview.equipment),
+    equipment: startingEquipment,
     details: {
       personalityTraits: [],
       ideals: [],

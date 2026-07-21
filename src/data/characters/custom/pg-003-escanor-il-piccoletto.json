@@ -1,0 +1,3063 @@
+{
+  "id": "pg_003",
+  "name": "Escanor il Piccoletto",
+  "level": 3,
+  "race": "Goliath",
+  "background": "Mercante adattato a taverniere/birraio itinerante",
+  "alignment": "Neutrale Buono",
+  "concept": "Frontliner solare da portata, burst e presenza scenica",
+  "classes": [
+    {
+      "name": "Paladino",
+      "level": 3,
+      "subclass": "Giuramento di Vendetta"
+    }
+  ],
+  "combat": {
+    "hp": {
+      "current": 28,
+      "max": 28,
+      "temp": 0
+    },
+    "ac": 18,
+    "speed": 10.5,
+    "initiativeBonus": -1,
+    "hitDice": {
+      "current": 3,
+      "max": 3,
+      "type": "d10",
+      "byType": {
+        "d10": 2
+      }
+    }
+  },
+  "abilities": {
+    "str": 17,
+    "dex": 8,
+    "con": 14,
+    "int": 8,
+    "wis": 10,
+    "cha": 16
+  },
+  "savingThrows": {
+    "str": false,
+    "dex": false,
+    "con": false,
+    "int": false,
+    "wis": true,
+    "cha": true
+  },
+  "skills": [
+    {
+      "id": "acrobatics",
+      "label": "Acrobazia",
+      "ability": "dex",
+      "proficient": false
+    },
+    {
+      "id": "athletics",
+      "label": "Atletica",
+      "ability": "str",
+      "proficient": true
+    },
+    {
+      "id": "sleight",
+      "label": "Rapidita di Mano",
+      "ability": "dex",
+      "proficient": false
+    },
+    {
+      "id": "stealth",
+      "label": "Furtivita",
+      "ability": "dex",
+      "proficient": false,
+      "disadvantage": true
+    },
+    {
+      "id": "arcana",
+      "label": "Arcano",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "history",
+      "label": "Storia",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "investigation",
+      "label": "Indagare",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "nature",
+      "label": "Natura",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "religion",
+      "label": "Religione",
+      "ability": "int",
+      "proficient": false
+    },
+    {
+      "id": "animal",
+      "label": "Addestrare Animali",
+      "ability": "wis",
+      "proficient": true
+    },
+    {
+      "id": "insight",
+      "label": "Intuizione",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "medicine",
+      "label": "Medicina",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "perception",
+      "label": "Percezione",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "survival",
+      "label": "Sopravvivenza",
+      "ability": "wis",
+      "proficient": false
+    },
+    {
+      "id": "deception",
+      "label": "Inganno",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "intimidation",
+      "label": "Intimidire",
+      "ability": "cha",
+      "proficient": true
+    },
+    {
+      "id": "performance",
+      "label": "Intrattenere",
+      "ability": "cha",
+      "proficient": false
+    },
+    {
+      "id": "persuasion",
+      "label": "Persuasione",
+      "ability": "cha",
+      "proficient": true
+    }
+  ],
+  "resources": [
+    {
+      "id": "lay_on_hands",
+      "label": "Imposizione delle Mani",
+      "current": 15,
+      "max": 15,
+      "resetOn": "long_rest",
+      "category": "class",
+      "shortRestRecover": null,
+      "source": "Paladino"
+    },
+    {
+      "id": "burning_fire",
+      "label": "Fuoco Bruciante",
+      "current": 2,
+      "max": 2,
+      "resetOn": "long_rest",
+      "category": "species"
+    }
+  ],
+  "spellcasting": {
+    "ability": "cha",
+    "spellSaveDc": 13,
+    "spellAttackBonus": 5,
+    "preparedCount": 3,
+    "slots": [
+      {
+        "id": "paladin_slot_1",
+        "level": 1,
+        "label": "Slot livello 1",
+        "current": 3,
+        "max": 3,
+        "resetOn": "long_rest"
+      }
+    ],
+    "spells": [
+      {
+        "id": "punizione-incandescente",
+        "name": "Punizione Incandescente",
+        "level": 1,
+        "school": "Invocazione",
+        "concentration": true,
+        "prepared": true
+      },
+      {
+        "id": "duello-obbligato",
+        "name": "Duello Obbligato",
+        "level": 1,
+        "school": "Ammaliamento",
+        "concentration": true,
+        "prepared": true
+      },
+      {
+        "id": "scudo-della-fede",
+        "name": "Scudo della Fede",
+        "level": 1,
+        "source": "Paladino",
+        "ability": "cha",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      },
+      {
+        "id": "anatema",
+        "name": "Anatema",
+        "level": 1,
+        "source": "Giuramento di Vendetta",
+        "ability": "cha",
+        "prepared": true,
+        "classSpell": true,
+        "alwaysPrepared": true,
+        "freeCast": null,
+        "subclassSpell": true
+      },
+      {
+        "id": "marchio-del-cacciatore",
+        "name": "Marchio del Cacciatore",
+        "level": 1,
+        "source": "Giuramento di Vendetta",
+        "ability": "cha",
+        "prepared": true,
+        "classSpell": true,
+        "alwaysPrepared": true,
+        "freeCast": null,
+        "subclassSpell": true
+      },
+      {
+        "id": "eroismo",
+        "name": "Eroismo",
+        "level": 1,
+        "source": "Paladino",
+        "ability": "cha",
+        "prepared": true,
+        "classSpell": true,
+        "preparedByClass": true
+      }
+    ]
+  },
+  "features": [
+    {
+      "id": "goliath_powerful_build",
+      "label": "Costituzione robusta",
+      "level": 1,
+      "source": "Goliath",
+      "category": "species",
+      "kind": "passive",
+      "summary": "Fisico resistente e capacita di trasporto superiore."
+    },
+    {
+      "id": "burning_fire",
+      "label": "Fuoco Bruciante",
+      "level": 1,
+      "source": "Gigante del Fuoco",
+      "category": "species",
+      "kind": "resource",
+      "resourceId": "burning_fire",
+      "summary": "Aggiunge 1d10 fuoco quando colpisce e infligge danni."
+    },
+    {
+      "id": "lay_on_hands",
+      "label": "Imposizione delle Mani",
+      "level": 1,
+      "source": "Paladino",
+      "category": "class",
+      "kind": "resource",
+      "resourceId": "lay_on_hands",
+      "summary": "Riserva di 5 PF per riposo lungo, usata come azione bonus."
+    },
+    {
+      "id": "paladin_spellcasting",
+      "label": "Incantesimi",
+      "level": 1,
+      "source": "Paladino",
+      "category": "class",
+      "kind": "spellcasting",
+      "summary": "Incantesimi da paladino basati su Carisma."
+    },
+    {
+      "id": "weapon_mastery",
+      "label": "Padronanza d'armi",
+      "level": 1,
+      "source": "Paladino",
+      "category": "class",
+      "kind": "combat",
+      "summary": "Padronanza consigliata su Alabarda e Giavellotto."
+    },
+    {
+      "id": "paladino_punizione_divina",
+      "label": "Punizione Divina",
+      "level": 2,
+      "source": "Paladino",
+      "category": "class",
+      "kind": "feature",
+      "summary": "Dopo aver colpito, lanci Punizione Divina o usi la punizione sempre preparata per aumentare i danni."
+    },
+    {
+      "id": "paladino_stile_di_combattimento",
+      "label": "Stile di Combattimento",
+      "level": 2,
+      "source": "Paladino",
+      "category": "class",
+      "kind": "feature",
+      "summary": "Privilegio di Paladino 2."
+    },
+    {
+      "id": "paladino_2_fighting_style_defense",
+      "label": "Difesa",
+      "level": 2,
+      "source": "Paladino - Stile di Combattimento",
+      "category": "class_choice",
+      "kind": "feature"
+    },
+    {
+      "id": "paladino_incanalare_divinita",
+      "label": "Incanalare Divinità",
+      "level": 3,
+      "source": "Paladino",
+      "category": "class",
+      "kind": "feature",
+      "summary": "Ottieni usi di potere divino dati dal giuramento."
+    },
+    {
+      "id": "paladino_giuramento_di_vendetta_incantesimi_del_giuramento_di_vendetta",
+      "label": "Incantesimi del Giuramento di Vendetta",
+      "level": 3,
+      "source": "Giuramento di Vendetta",
+      "category": "subclass",
+      "kind": "passive",
+      "summary": "Aggiungi incantesimi di caccia, inseguimento e punizione."
+    },
+    {
+      "id": "paladino_giuramento_di_vendetta_voto_di_inimicizia",
+      "label": "Voto di Inimicizia",
+      "level": 3,
+      "source": "Giuramento di Vendetta",
+      "category": "subclass",
+      "kind": "active",
+      "summary": "Usa Incanalare Divinità per ottenere vantaggio contro un bersaglio scelto."
+    }
+  ],
+  "actions": [
+    {
+      "id": "halberd",
+      "name": "Alabarda",
+      "type": "attack",
+      "toHit": 5,
+      "damage": "1d10+3",
+      "notes": "Pesante, portata, due mani. Padronanza: Doppio Fendente."
+    },
+    {
+      "id": "javelin",
+      "name": "Giavellotto",
+      "type": "attack",
+      "toHit": 5,
+      "damage": "1d6+3",
+      "notes": "Opzione a distanza basata su Forza."
+    }
+  ],
+  "notes": "Fonte locale: Escanor_il_Piccoletto_scheda_Lv1-3.txt.",
+  "equipment": {
+    "currency": {
+      "cp": 0,
+      "sp": 0,
+      "ep": 0,
+      "gp": 0,
+      "pp": 0
+    },
+    "startingBudget": {
+      "gp": 150,
+      "notes": "Opzione B del Paladino: 150 mo. Residuo dopo acquisti da confermare al tavolo."
+    },
+    "weapons": [
+      {
+        "id": "halberd",
+        "name": "Alabarda",
+        "quantity": 1,
+        "description": "Arma principale. 1d10 taglienti, pesante, portata, due mani.",
+        "notes": "Padronanza: Doppio Fendente."
+      },
+      {
+        "id": "javelins",
+        "name": "Giavellotti",
+        "quantity": 5,
+        "description": "Opzione a distanza basata su Forza.",
+        "notes": "Quantità iniziale pratica da confermare se il DM traccia i singoli giavellotti.",
+        "recoverable": true
+      }
+    ],
+    "armor": [
+      {
+        "id": "manual_shields_scudo_1784621712984",
+        "itemId": "scudo",
+        "catalog": "shields",
+        "inventoryGroup": "armor",
+        "name": "Scudo",
+        "quantity": 1,
+        "equipped": true,
+        "description": "Trovato in avventura",
+        "notes": "Costo: 10 mo - Peso: 3 kg",
+        "costCopper": 1000,
+        "cost": "10 mo",
+        "weight": "3 kg",
+        "stats": {
+          "type": "shield",
+          "category": "scudo",
+          "armorClassBonus": 2,
+          "equipAction": "azione di Utilizzo"
+        },
+        "recoverable": false,
+        "consumable": false,
+        "equippedSlot": "shield"
+      },
+      {
+        "id": "manual_armors_cotta-di-maglia_1784621733947",
+        "itemId": "cotta-di-maglia",
+        "catalog": "armors",
+        "inventoryGroup": "armor",
+        "name": "Cotta di maglia",
+        "quantity": 1,
+        "equipped": true,
+        "description": "Trovato in avventura",
+        "notes": "Costo: 75 mo - Peso: 27.5 kg",
+        "costCopper": 7500,
+        "cost": "75 mo",
+        "weight": "27.5 kg",
+        "stats": {
+          "type": "armor",
+          "category": "pesante",
+          "armorClass": "16",
+          "strengthRequirement": "For 13",
+          "stealthDisadvantage": true
+        },
+        "recoverable": false,
+        "consumable": false,
+        "equippedSlot": "armor"
+      }
+    ],
+    "tools": [
+      {
+        "id": "navigators_tools",
+        "name": "Strumenti da navigatore",
+        "quantity": 1,
+        "description": "Competenza base del background Mercante."
+      },
+      {
+        "id": "brewers_supplies",
+        "name": "Scorte da birraio",
+        "quantity": 1,
+        "description": "Adattamento narrativo da taverniere/birraio itinerante.",
+        "notes": "Da confermare col DM come sostituzione o aggiunta."
+      }
+    ],
+    "adventuringGear": [
+      {
+        "id": "holy_symbol",
+        "name": "Simbolo sacro",
+        "quantity": 1
+      },
+      {
+        "id": "backpack",
+        "name": "Zaino",
+        "quantity": 1
+      },
+      {
+        "id": "bedroll",
+        "name": "Giaciglio",
+        "quantity": 1
+      },
+      {
+        "id": "waterskin",
+        "name": "Otre",
+        "quantity": 1
+      },
+      {
+        "id": "tinderbox",
+        "name": "Acciarino",
+        "quantity": 1
+      },
+      {
+        "id": "rope",
+        "name": "Corda",
+        "quantity": 1
+      },
+      {
+        "id": "traveler_clothes",
+        "name": "Abiti da viaggiatore",
+        "quantity": 1
+      }
+    ],
+    "magicItems": [],
+    "consumables": [
+      {
+        "id": "rations",
+        "name": "Razioni",
+        "quantity": 5,
+        "consumable": true
+      },
+      {
+        "id": "torches",
+        "name": "Torce",
+        "quantity": 10,
+        "consumable": true
+      }
+    ],
+    "storyItems": [],
+    "wishlist": [
+      {
+        "id": "plate_armor",
+        "name": "Armatura a piastre",
+        "description": "Obiettivo futuro di campagna: CA 18, richiede Forza 15, costosa."
+      }
+    ],
+    "notes": "Fonte: Escanor_il_Piccoletto_scheda_Lv1-3.txt."
+  },
+  "details": {
+    "personalityTraits": [
+      "Fuori dal combattimento parla con voce quasi stridula e sembra piegato dal peso della corazza.",
+      "Quando viene tirata l'iniziativa, Escanor sorge: postura, voce e presenza cambiano."
+    ],
+    "ideals": [
+      "Tornare tra i suoi come eroe amato e rispettato.",
+      "Dimostrare che il Sole Interiore vale più del giudizio della stirpe."
+    ],
+    "bonds": [
+      "La sua identità da mercante, taverniere e birraio itinerante.",
+      "Il desiderio di riscattarsi agli occhi dei Goliath."
+    ],
+    "flaws": [
+      "Iniziativa bassa.",
+      "Furtività pessima in armatura.",
+      "Tende a vivere ogni scontro come prova di gloria."
+    ],
+    "catchphrase": "Non attendo mezzogiorno. Mezzogiorno attende me.",
+    "backstoryShort": "Escanor è un Goliath considerato piccolo e inadatto dalla sua gente. Viaggia come mercante e birraio itinerante, cercando la luce che in patria nessuno vedeva in lui.",
+    "campaignNotes": []
+  },
+  "ownerId": "user_demo",
+  "feats": [],
+  "proficiencies": {
+    "armor": [],
+    "weapons": [],
+    "tools": [],
+    "weaponMasteries": [],
+    "languages": []
+  },
+  "languages": [],
+  "powers": [
+    {
+      "id": "paladino_punizione_divina"
+    },
+    {
+      "id": "paladino_stile_di_combattimento"
+    },
+    {
+      "id": "paladino_incanalare_divinita"
+    },
+    {
+      "id": "paladino_giuramento_di_vendetta_incantesimi_del_giuramento_di_vendetta"
+    },
+    {
+      "id": "paladino_giuramento_di_vendetta_voto_di_inimicizia"
+    }
+  ],
+  "progressionHistory": [
+    {
+      "id": "level-up-2-2026-07-21T08:14:52.358Z",
+      "type": "level_up",
+      "appliedAt": "2026-07-21T08:14:52.358Z",
+      "className": "Paladino",
+      "totalLevel": {
+        "from": 1,
+        "to": 2
+      },
+      "classLevel": {
+        "className": "Paladino",
+        "from": 1,
+        "to": 2
+      },
+      "hp": {
+        "mode": "average",
+        "hitDie": "d10",
+        "baseIncrease": 6,
+        "constitutionModifier": 2,
+        "totalIncrease": 8,
+        "maxHpFrom": 12,
+        "maxHpTo": 20,
+        "warnings": []
+      },
+      "constitutionHpAdjustment": 0,
+      "asiOrFeat": null,
+      "classChoices": [
+        {
+          "id": "paladino_2_fighting_style",
+          "label": "Stile di Combattimento",
+          "type": "simple_choice",
+          "selected": [
+            "defense"
+          ],
+          "labels": [
+            "Difesa"
+          ],
+          "selectedOptions": [
+            {
+              "id": "defense",
+              "label": "Difesa"
+            }
+          ],
+          "meta": {
+            "defense": {
+              "id": "defense",
+              "label": "Difesa"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "id": "paladino_2_spells",
+          "label": "Incantesimi da Paladino",
+          "type": "spell_choice",
+          "selected": [
+            "scudo-della-fede"
+          ],
+          "labels": [
+            "Liv. 1 - Scudo della Fede"
+          ],
+          "selectedOptions": [
+            {
+              "id": "scudo-della-fede",
+              "label": "Liv. 1 - Scudo della Fede",
+              "level": 1,
+              "spell": {
+                "id": "scudo-della-fede",
+                "name": "Scudo della Fede",
+                "name_upper": "SCUDO DELLA FEDE",
+                "level": 1,
+                "level_label": "1° livello",
+                "school": "Abiurazione",
+                "is_cantrip": false,
+                "classes": [
+                  "chierico",
+                  "paladino"
+                ],
+                "casting_time": {
+                  "raw": "azione bonus",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "18 metri"
+                },
+                "components": {
+                  "raw": "V, S, M (una pergamena con una preghiera)",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": true,
+                  "material_description": "una pergamena con una preghiera",
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "concentrazione, fino a 1 0  minuti",
+                  "concentration": true,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "Un campo di energia scintillante avvolge una creatura scelta dall'incantatore entro gittata, conferendole un bonus di +2 alla CA per la durata dell'incantesimo.",
+                "at_higher_levels": null,
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [],
+                  "damage_dice": [],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 329
+                }
+              }
+            }
+          ],
+          "meta": {
+            "scudo-della-fede": {
+              "id": "scudo-della-fede",
+              "label": "Liv. 1 - Scudo della Fede",
+              "level": 1,
+              "spell": {
+                "id": "scudo-della-fede",
+                "name": "Scudo della Fede",
+                "name_upper": "SCUDO DELLA FEDE",
+                "level": 1,
+                "level_label": "1° livello",
+                "school": "Abiurazione",
+                "is_cantrip": false,
+                "classes": [
+                  "chierico",
+                  "paladino"
+                ],
+                "casting_time": {
+                  "raw": "azione bonus",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "18 metri"
+                },
+                "components": {
+                  "raw": "V, S, M (una pergamena con una preghiera)",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": true,
+                  "material_description": "una pergamena con una preghiera",
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "concentrazione, fino a 1 0  minuti",
+                  "concentration": true,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "Un campo di energia scintillante avvolge una creatura scelta dall'incantatore entro gittata, conferendole un bonus di +2 alla CA per la durata dell'incantesimo.",
+                "at_higher_levels": null,
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [],
+                  "damage_dice": [],
+                  "conditions": [],
+                  "heals_or_temp_hp": false,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 329
+                }
+              }
+            }
+          },
+          "warnings": []
+        },
+        {
+          "id": "paladino_stile_di_combattimento_acknowledge",
+          "label": "Stile di Combattimento",
+          "type": "acknowledge",
+          "sourcePowerId": "paladino_stile_di_combattimento",
+          "selected": [
+            "acknowledged"
+          ],
+          "labels": [
+            "acknowledged"
+          ],
+          "warnings": []
+        }
+      ],
+      "subclassSpellChoices": [],
+      "invocationChoices": []
+    },
+    {
+      "id": "level-up-3-2026-07-21T08:16:35.533Z",
+      "type": "level_up",
+      "appliedAt": "2026-07-21T08:16:35.533Z",
+      "className": "Paladino",
+      "totalLevel": {
+        "from": 2,
+        "to": 3
+      },
+      "classLevel": {
+        "className": "Paladino",
+        "from": 2,
+        "to": 3
+      },
+      "hp": {
+        "mode": "average",
+        "hitDie": "d10",
+        "baseIncrease": 6,
+        "constitutionModifier": 2,
+        "totalIncrease": 8,
+        "maxHpFrom": 20,
+        "maxHpTo": 28,
+        "warnings": []
+      },
+      "constitutionHpAdjustment": 0,
+      "asiOrFeat": null,
+      "classChoices": [
+        {
+          "id": "paladino_3_subclass",
+          "label": "Sottoclasse",
+          "type": "subclass_choice",
+          "selected": [
+            "giuramento_di_vendetta"
+          ],
+          "labels": [
+            "Giuramento di Vendetta"
+          ],
+          "selectedOptions": [
+            {
+              "id": "giuramento_di_vendetta",
+              "label": "Giuramento di Vendetta",
+              "subclassName": "Giuramento di Vendetta"
+            }
+          ],
+          "meta": {
+            "giuramento_di_vendetta": {
+              "id": "giuramento_di_vendetta",
+              "label": "Giuramento di Vendetta",
+              "subclassName": "Giuramento di Vendetta"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "id": "paladino_3_spells",
+          "label": "Incantesimi da Paladino",
+          "type": "spell_choice",
+          "selected": [
+            "eroismo"
+          ],
+          "labels": [
+            "Liv. 1 - Eroismo"
+          ],
+          "selectedOptions": [
+            {
+              "id": "eroismo",
+              "label": "Liv. 1 - Eroismo",
+              "level": 1,
+              "spell": {
+                "id": "eroismo",
+                "name": "Eroismo",
+                "name_upper": "EROISMO",
+                "level": 1,
+                "level_label": "1° livello",
+                "school": "Ammaliamento",
+                "is_cantrip": false,
+                "classes": [
+                  "bardo",
+                  "paladino"
+                ],
+                "casting_time": {
+                  "raw": "azione",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "contatto"
+                },
+                "components": {
+                  "raw": "V, S",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": false,
+                  "material_description": null,
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "concentrazione, fino a 1 minuto",
+                  "concentration": true,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "Una creatura consenziente toccata dall'incantatore è animata da grande coraggio. Fino al termine dell'incan tesimo, la creatura è immune alla condizione spaventato e all'inizio di ogni suo turno ottiene una quantità di punti ferita temporanei pari al modificatore di caratteristica da incantatore dell'incantatore.",
+                "at_higher_levels": "L'incantatore può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.",
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [],
+                  "damage_dice": [],
+                  "conditions": [
+                    "spaventato"
+                  ],
+                  "heals_or_temp_hp": true,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 272
+                }
+              }
+            }
+          ],
+          "meta": {
+            "eroismo": {
+              "id": "eroismo",
+              "label": "Liv. 1 - Eroismo",
+              "level": 1,
+              "spell": {
+                "id": "eroismo",
+                "name": "Eroismo",
+                "name_upper": "EROISMO",
+                "level": 1,
+                "level_label": "1° livello",
+                "school": "Ammaliamento",
+                "is_cantrip": false,
+                "classes": [
+                  "bardo",
+                  "paladino"
+                ],
+                "casting_time": {
+                  "raw": "azione",
+                  "ritual": false
+                },
+                "range": {
+                  "raw": "contatto"
+                },
+                "components": {
+                  "raw": "V, S",
+                  "verbal": true,
+                  "somatic": true,
+                  "material": false,
+                  "material_description": null,
+                  "consumed": false
+                },
+                "duration": {
+                  "raw": "concentrazione, fino a 1 minuto",
+                  "concentration": true,
+                  "instantaneous": false,
+                  "ritual_possible": false
+                },
+                "description": "Una creatura consenziente toccata dall'incantatore è animata da grande coraggio. Fino al termine dell'incan tesimo, la creatura è immune alla condizione spaventato e all'inizio di ogni suo turno ottiene una quantità di punti ferita temporanei pari al modificatore di caratteristica da incantatore dell'incantatore.",
+                "at_higher_levels": "L'incantatore può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.",
+                "mechanics": {
+                  "attack_type": null,
+                  "save_ability": null,
+                  "damage_types": [],
+                  "damage_dice": [],
+                  "conditions": [
+                    "spaventato"
+                  ],
+                  "heals_or_temp_hp": true,
+                  "summons_or_creates": false
+                },
+                "source": {
+                  "book": "Manuale del Giocatore 5e 2024 (IT)",
+                  "chapter": 7,
+                  "page_start": 272
+                }
+              }
+            }
+          },
+          "warnings": []
+        }
+      ],
+      "subclassSpellChoices": [],
+      "invocationChoices": []
+    }
+  ],
+  "progressionSnapshots": [
+    {
+      "id": "snapshot-baseline-lv-1",
+      "type": "baseline",
+      "level": 1,
+      "label": "Livello 1",
+      "classSummary": "Paladino (Giuramento di Gloria previsto al livello 3) 1",
+      "createdAt": "2026-07-21T08:14:52.360Z",
+      "sourceHistoryId": null,
+      "changes": [
+        "Stato iniziale registrato prima della nuova progressione."
+      ],
+      "character": {
+        "id": "pg_003",
+        "name": "Escanor il Piccoletto",
+        "level": 1,
+        "race": "Goliath",
+        "background": "Mercante adattato a taverniere/birraio itinerante",
+        "alignment": "Neutrale Buono",
+        "concept": "Frontliner solare da portata, burst e presenza scenica",
+        "classes": [
+          {
+            "name": "Paladino",
+            "level": 1,
+            "subclass": "Giuramento di Gloria previsto al livello 3"
+          }
+        ],
+        "combat": {
+          "hp": {
+            "current": 12,
+            "max": 12,
+            "temp": 0
+          },
+          "ac": 16,
+          "speed": 10.5,
+          "initiativeBonus": -1,
+          "hitDice": {
+            "current": 1,
+            "max": 1,
+            "type": "d10"
+          }
+        },
+        "abilities": {
+          "str": 17,
+          "dex": 8,
+          "con": 14,
+          "int": 8,
+          "wis": 10,
+          "cha": 16
+        },
+        "savingThrows": {
+          "str": false,
+          "dex": false,
+          "con": false,
+          "int": false,
+          "wis": true,
+          "cha": true
+        },
+        "skills": [
+          {
+            "id": "acrobatics",
+            "label": "Acrobazia",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "athletics",
+            "label": "Atletica",
+            "ability": "str",
+            "proficient": true
+          },
+          {
+            "id": "sleight",
+            "label": "Rapidita di Mano",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "stealth",
+            "label": "Furtivita",
+            "ability": "dex",
+            "proficient": false,
+            "disadvantage": true
+          },
+          {
+            "id": "arcana",
+            "label": "Arcano",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "history",
+            "label": "Storia",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "investigation",
+            "label": "Indagare",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "nature",
+            "label": "Natura",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "religion",
+            "label": "Religione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "animal",
+            "label": "Addestrare Animali",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "insight",
+            "label": "Intuizione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "medicine",
+            "label": "Medicina",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "perception",
+            "label": "Percezione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "survival",
+            "label": "Sopravvivenza",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "deception",
+            "label": "Inganno",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "intimidation",
+            "label": "Intimidire",
+            "ability": "cha",
+            "proficient": true
+          },
+          {
+            "id": "performance",
+            "label": "Intrattenere",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "persuasion",
+            "label": "Persuasione",
+            "ability": "cha",
+            "proficient": true
+          }
+        ],
+        "resources": [
+          {
+            "id": "lay_on_hands",
+            "label": "Imposizione delle Mani",
+            "current": 5,
+            "max": 5,
+            "resetOn": "long_rest",
+            "category": "class"
+          },
+          {
+            "id": "burning_fire",
+            "label": "Fuoco Bruciante",
+            "current": 2,
+            "max": 2,
+            "resetOn": "long_rest",
+            "category": "species"
+          }
+        ],
+        "spellcasting": {
+          "ability": "cha",
+          "spellSaveDc": 13,
+          "spellAttackBonus": 5,
+          "preparedCount": 2,
+          "slots": [
+            {
+              "id": "paladin_slot_1",
+              "level": 1,
+              "label": "Slot livello 1",
+              "current": 2,
+              "max": 2,
+              "resetOn": "long_rest"
+            }
+          ],
+          "spells": [
+            {
+              "id": "punizione-incandescente",
+              "name": "Punizione Incandescente",
+              "level": 1,
+              "school": "Invocazione",
+              "concentration": true,
+              "prepared": true
+            },
+            {
+              "id": "duello-obbligato",
+              "name": "Duello Obbligato",
+              "level": 1,
+              "school": "Ammaliamento",
+              "concentration": true,
+              "prepared": true
+            }
+          ]
+        },
+        "features": [
+          {
+            "id": "goliath_powerful_build",
+            "label": "Costituzione robusta",
+            "level": 1,
+            "source": "Goliath",
+            "category": "species",
+            "kind": "passive",
+            "summary": "Fisico resistente e capacita di trasporto superiore."
+          },
+          {
+            "id": "burning_fire",
+            "label": "Fuoco Bruciante",
+            "level": 1,
+            "source": "Gigante del Fuoco",
+            "category": "species",
+            "kind": "resource",
+            "resourceId": "burning_fire",
+            "summary": "Aggiunge 1d10 fuoco quando colpisce e infligge danni."
+          },
+          {
+            "id": "lay_on_hands",
+            "label": "Imposizione delle Mani",
+            "level": 1,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "resource",
+            "resourceId": "lay_on_hands",
+            "summary": "Riserva di 5 PF per riposo lungo, usata come azione bonus."
+          },
+          {
+            "id": "paladin_spellcasting",
+            "label": "Incantesimi",
+            "level": 1,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "spellcasting",
+            "summary": "Incantesimi da paladino basati su Carisma."
+          },
+          {
+            "id": "weapon_mastery",
+            "label": "Padronanza d'armi",
+            "level": 1,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "combat",
+            "summary": "Padronanza consigliata su Alabarda e Giavellotto."
+          }
+        ],
+        "actions": [
+          {
+            "id": "halberd",
+            "name": "Alabarda",
+            "type": "attack",
+            "toHit": 5,
+            "damage": "1d10+3",
+            "notes": "Pesante, portata, due mani. Padronanza: Doppio Fendente."
+          },
+          {
+            "id": "javelin",
+            "name": "Giavellotto",
+            "type": "attack",
+            "toHit": 5,
+            "damage": "1d6+3",
+            "notes": "Opzione a distanza basata su Forza."
+          }
+        ],
+        "notes": "Fonte locale: Escanor_il_Piccoletto_scheda_Lv1-3.txt.",
+        "equipment": {
+          "currency": {
+            "cp": 0,
+            "sp": 0,
+            "ep": 0,
+            "gp": 0,
+            "pp": 0
+          },
+          "startingBudget": {
+            "gp": 150,
+            "notes": "Opzione B del Paladino: 150 mo. Residuo dopo acquisti da confermare al tavolo."
+          },
+          "weapons": [
+            {
+              "id": "halberd",
+              "name": "Alabarda",
+              "quantity": 1,
+              "description": "Arma principale. 1d10 taglienti, pesante, portata, due mani.",
+              "notes": "Padronanza: Doppio Fendente."
+            },
+            {
+              "id": "javelins",
+              "name": "Giavellotti",
+              "quantity": 5,
+              "description": "Opzione a distanza basata su Forza.",
+              "notes": "Quantità iniziale pratica da confermare se il DM traccia i singoli giavellotti.",
+              "recoverable": true
+            }
+          ],
+          "armor": [
+            {
+              "id": "chain_mail",
+              "name": "Cotta di maglia",
+              "quantity": 1,
+              "description": "CA 16, richiede Forza 13, svantaggio a Furtività."
+            }
+          ],
+          "tools": [
+            {
+              "id": "navigators_tools",
+              "name": "Strumenti da navigatore",
+              "quantity": 1,
+              "description": "Competenza base del background Mercante."
+            },
+            {
+              "id": "brewers_supplies",
+              "name": "Scorte da birraio",
+              "quantity": 1,
+              "description": "Adattamento narrativo da taverniere/birraio itinerante.",
+              "notes": "Da confermare col DM come sostituzione o aggiunta."
+            }
+          ],
+          "adventuringGear": [
+            {
+              "id": "holy_symbol",
+              "name": "Simbolo sacro",
+              "quantity": 1
+            },
+            {
+              "id": "backpack",
+              "name": "Zaino",
+              "quantity": 1
+            },
+            {
+              "id": "bedroll",
+              "name": "Giaciglio",
+              "quantity": 1
+            },
+            {
+              "id": "waterskin",
+              "name": "Otre",
+              "quantity": 1
+            },
+            {
+              "id": "tinderbox",
+              "name": "Acciarino",
+              "quantity": 1
+            },
+            {
+              "id": "rope",
+              "name": "Corda",
+              "quantity": 1
+            },
+            {
+              "id": "traveler_clothes",
+              "name": "Abiti da viaggiatore",
+              "quantity": 1
+            }
+          ],
+          "magicItems": [],
+          "consumables": [
+            {
+              "id": "rations",
+              "name": "Razioni",
+              "quantity": 5,
+              "consumable": true
+            },
+            {
+              "id": "torches",
+              "name": "Torce",
+              "quantity": 10,
+              "consumable": true
+            }
+          ],
+          "storyItems": [],
+          "wishlist": [
+            {
+              "id": "plate_armor",
+              "name": "Armatura a piastre",
+              "description": "Obiettivo futuro di campagna: CA 18, richiede Forza 15, costosa."
+            }
+          ],
+          "notes": "Fonte: Escanor_il_Piccoletto_scheda_Lv1-3.txt."
+        },
+        "details": {
+          "personalityTraits": [
+            "Fuori dal combattimento parla con voce quasi stridula e sembra piegato dal peso della corazza.",
+            "Quando viene tirata l'iniziativa, Escanor sorge: postura, voce e presenza cambiano."
+          ],
+          "ideals": [
+            "Tornare tra i suoi come eroe amato e rispettato.",
+            "Dimostrare che il Sole Interiore vale più del giudizio della stirpe."
+          ],
+          "bonds": [
+            "La sua identità da mercante, taverniere e birraio itinerante.",
+            "Il desiderio di riscattarsi agli occhi dei Goliath."
+          ],
+          "flaws": [
+            "Iniziativa bassa.",
+            "Furtività pessima in armatura.",
+            "Tende a vivere ogni scontro come prova di gloria."
+          ],
+          "catchphrase": "Non attendo mezzogiorno. Mezzogiorno attende me.",
+          "backstoryShort": "Escanor è un Goliath considerato piccolo e inadatto dalla sua gente. Viaggia come mercante e birraio itinerante, cercando la luce che in patria nessuno vedeva in lui.",
+          "campaignNotes": []
+        },
+        "ownerId": "user_demo"
+      }
+    },
+    {
+      "id": "snapshot-lv-2-2026-07-21T08:14:52.358Z",
+      "type": "level_up",
+      "level": 2,
+      "label": "Livello 2",
+      "classSummary": "Paladino (Giuramento di Gloria previsto al livello 3) 2",
+      "createdAt": "2026-07-21T08:14:52.358Z",
+      "sourceHistoryId": "level-up-2-2026-07-21T08:14:52.358Z",
+      "changes": [
+        "Paladino 1 -> 2",
+        "PF massimi 12 -> 20",
+        "Stile di Combattimento: Difesa",
+        "Incantesimi da Paladino: Liv. 1 - Scudo della Fede",
+        "Stile di Combattimento: acknowledged"
+      ],
+      "character": {
+        "id": "pg_003",
+        "name": "Escanor il Piccoletto",
+        "level": 2,
+        "race": "Goliath",
+        "background": "Mercante adattato a taverniere/birraio itinerante",
+        "alignment": "Neutrale Buono",
+        "concept": "Frontliner solare da portata, burst e presenza scenica",
+        "classes": [
+          {
+            "name": "Paladino",
+            "level": 2,
+            "subclass": "Giuramento di Gloria previsto al livello 3"
+          }
+        ],
+        "combat": {
+          "hp": {
+            "current": 20,
+            "max": 20,
+            "temp": 0
+          },
+          "ac": 16,
+          "speed": 10.5,
+          "initiativeBonus": -1,
+          "hitDice": {
+            "current": 2,
+            "max": 2,
+            "type": "d10",
+            "byType": {
+              "d10": 1
+            }
+          }
+        },
+        "abilities": {
+          "str": 17,
+          "dex": 8,
+          "con": 14,
+          "int": 8,
+          "wis": 10,
+          "cha": 16
+        },
+        "savingThrows": {
+          "str": false,
+          "dex": false,
+          "con": false,
+          "int": false,
+          "wis": true,
+          "cha": true
+        },
+        "skills": [
+          {
+            "id": "acrobatics",
+            "label": "Acrobazia",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "athletics",
+            "label": "Atletica",
+            "ability": "str",
+            "proficient": true
+          },
+          {
+            "id": "sleight",
+            "label": "Rapidita di Mano",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "stealth",
+            "label": "Furtivita",
+            "ability": "dex",
+            "proficient": false,
+            "disadvantage": true
+          },
+          {
+            "id": "arcana",
+            "label": "Arcano",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "history",
+            "label": "Storia",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "investigation",
+            "label": "Indagare",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "nature",
+            "label": "Natura",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "religion",
+            "label": "Religione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "animal",
+            "label": "Addestrare Animali",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "insight",
+            "label": "Intuizione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "medicine",
+            "label": "Medicina",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "perception",
+            "label": "Percezione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "survival",
+            "label": "Sopravvivenza",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "deception",
+            "label": "Inganno",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "intimidation",
+            "label": "Intimidire",
+            "ability": "cha",
+            "proficient": true
+          },
+          {
+            "id": "performance",
+            "label": "Intrattenere",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "persuasion",
+            "label": "Persuasione",
+            "ability": "cha",
+            "proficient": true
+          }
+        ],
+        "resources": [
+          {
+            "id": "lay_on_hands",
+            "label": "Imposizione delle Mani",
+            "current": 10,
+            "max": 10,
+            "resetOn": "long_rest",
+            "category": "class",
+            "shortRestRecover": null,
+            "source": "Paladino"
+          },
+          {
+            "id": "burning_fire",
+            "label": "Fuoco Bruciante",
+            "current": 2,
+            "max": 2,
+            "resetOn": "long_rest",
+            "category": "species"
+          }
+        ],
+        "spellcasting": {
+          "ability": "cha",
+          "spellSaveDc": 13,
+          "spellAttackBonus": 5,
+          "preparedCount": 2,
+          "slots": [
+            {
+              "id": "paladin_slot_1",
+              "level": 1,
+              "label": "Slot livello 1",
+              "current": 2,
+              "max": 2,
+              "resetOn": "long_rest"
+            }
+          ],
+          "spells": [
+            {
+              "id": "punizione-incandescente",
+              "name": "Punizione Incandescente",
+              "level": 1,
+              "school": "Invocazione",
+              "concentration": true,
+              "prepared": true
+            },
+            {
+              "id": "duello-obbligato",
+              "name": "Duello Obbligato",
+              "level": 1,
+              "school": "Ammaliamento",
+              "concentration": true,
+              "prepared": true
+            },
+            {
+              "id": "scudo-della-fede",
+              "name": "Scudo della Fede",
+              "level": 1,
+              "source": "Paladino",
+              "ability": "cha",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            }
+          ]
+        },
+        "features": [
+          {
+            "id": "goliath_powerful_build",
+            "label": "Costituzione robusta",
+            "level": 1,
+            "source": "Goliath",
+            "category": "species",
+            "kind": "passive",
+            "summary": "Fisico resistente e capacita di trasporto superiore."
+          },
+          {
+            "id": "burning_fire",
+            "label": "Fuoco Bruciante",
+            "level": 1,
+            "source": "Gigante del Fuoco",
+            "category": "species",
+            "kind": "resource",
+            "resourceId": "burning_fire",
+            "summary": "Aggiunge 1d10 fuoco quando colpisce e infligge danni."
+          },
+          {
+            "id": "lay_on_hands",
+            "label": "Imposizione delle Mani",
+            "level": 1,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "resource",
+            "resourceId": "lay_on_hands",
+            "summary": "Riserva di 5 PF per riposo lungo, usata come azione bonus."
+          },
+          {
+            "id": "paladin_spellcasting",
+            "label": "Incantesimi",
+            "level": 1,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "spellcasting",
+            "summary": "Incantesimi da paladino basati su Carisma."
+          },
+          {
+            "id": "weapon_mastery",
+            "label": "Padronanza d'armi",
+            "level": 1,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "combat",
+            "summary": "Padronanza consigliata su Alabarda e Giavellotto."
+          },
+          {
+            "id": "paladino_punizione_divina",
+            "label": "Punizione Divina",
+            "level": 2,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Dopo aver colpito, lanci Punizione Divina o usi la punizione sempre preparata per aumentare i danni."
+          },
+          {
+            "id": "paladino_stile_di_combattimento",
+            "label": "Stile di Combattimento",
+            "level": 2,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Privilegio di Paladino 2."
+          },
+          {
+            "id": "paladino_2_fighting_style_defense",
+            "label": "Difesa",
+            "level": 2,
+            "source": "Paladino - Stile di Combattimento",
+            "category": "class_choice",
+            "kind": "feature"
+          }
+        ],
+        "actions": [
+          {
+            "id": "halberd",
+            "name": "Alabarda",
+            "type": "attack",
+            "toHit": 5,
+            "damage": "1d10+3",
+            "notes": "Pesante, portata, due mani. Padronanza: Doppio Fendente."
+          },
+          {
+            "id": "javelin",
+            "name": "Giavellotto",
+            "type": "attack",
+            "toHit": 5,
+            "damage": "1d6+3",
+            "notes": "Opzione a distanza basata su Forza."
+          }
+        ],
+        "notes": "Fonte locale: Escanor_il_Piccoletto_scheda_Lv1-3.txt.",
+        "equipment": {
+          "currency": {
+            "cp": 0,
+            "sp": 0,
+            "ep": 0,
+            "gp": 0,
+            "pp": 0
+          },
+          "startingBudget": {
+            "gp": 150,
+            "notes": "Opzione B del Paladino: 150 mo. Residuo dopo acquisti da confermare al tavolo."
+          },
+          "weapons": [
+            {
+              "id": "halberd",
+              "name": "Alabarda",
+              "quantity": 1,
+              "description": "Arma principale. 1d10 taglienti, pesante, portata, due mani.",
+              "notes": "Padronanza: Doppio Fendente."
+            },
+            {
+              "id": "javelins",
+              "name": "Giavellotti",
+              "quantity": 5,
+              "description": "Opzione a distanza basata su Forza.",
+              "notes": "Quantità iniziale pratica da confermare se il DM traccia i singoli giavellotti.",
+              "recoverable": true
+            }
+          ],
+          "armor": [
+            {
+              "id": "chain_mail",
+              "name": "Cotta di maglia",
+              "quantity": 1,
+              "description": "CA 16, richiede Forza 13, svantaggio a Furtività."
+            }
+          ],
+          "tools": [
+            {
+              "id": "navigators_tools",
+              "name": "Strumenti da navigatore",
+              "quantity": 1,
+              "description": "Competenza base del background Mercante."
+            },
+            {
+              "id": "brewers_supplies",
+              "name": "Scorte da birraio",
+              "quantity": 1,
+              "description": "Adattamento narrativo da taverniere/birraio itinerante.",
+              "notes": "Da confermare col DM come sostituzione o aggiunta."
+            }
+          ],
+          "adventuringGear": [
+            {
+              "id": "holy_symbol",
+              "name": "Simbolo sacro",
+              "quantity": 1
+            },
+            {
+              "id": "backpack",
+              "name": "Zaino",
+              "quantity": 1
+            },
+            {
+              "id": "bedroll",
+              "name": "Giaciglio",
+              "quantity": 1
+            },
+            {
+              "id": "waterskin",
+              "name": "Otre",
+              "quantity": 1
+            },
+            {
+              "id": "tinderbox",
+              "name": "Acciarino",
+              "quantity": 1
+            },
+            {
+              "id": "rope",
+              "name": "Corda",
+              "quantity": 1
+            },
+            {
+              "id": "traveler_clothes",
+              "name": "Abiti da viaggiatore",
+              "quantity": 1
+            }
+          ],
+          "magicItems": [],
+          "consumables": [
+            {
+              "id": "rations",
+              "name": "Razioni",
+              "quantity": 5,
+              "consumable": true
+            },
+            {
+              "id": "torches",
+              "name": "Torce",
+              "quantity": 10,
+              "consumable": true
+            }
+          ],
+          "storyItems": [],
+          "wishlist": [
+            {
+              "id": "plate_armor",
+              "name": "Armatura a piastre",
+              "description": "Obiettivo futuro di campagna: CA 18, richiede Forza 15, costosa."
+            }
+          ],
+          "notes": "Fonte: Escanor_il_Piccoletto_scheda_Lv1-3.txt."
+        },
+        "details": {
+          "personalityTraits": [
+            "Fuori dal combattimento parla con voce quasi stridula e sembra piegato dal peso della corazza.",
+            "Quando viene tirata l'iniziativa, Escanor sorge: postura, voce e presenza cambiano."
+          ],
+          "ideals": [
+            "Tornare tra i suoi come eroe amato e rispettato.",
+            "Dimostrare che il Sole Interiore vale più del giudizio della stirpe."
+          ],
+          "bonds": [
+            "La sua identità da mercante, taverniere e birraio itinerante.",
+            "Il desiderio di riscattarsi agli occhi dei Goliath."
+          ],
+          "flaws": [
+            "Iniziativa bassa.",
+            "Furtività pessima in armatura.",
+            "Tende a vivere ogni scontro come prova di gloria."
+          ],
+          "catchphrase": "Non attendo mezzogiorno. Mezzogiorno attende me.",
+          "backstoryShort": "Escanor è un Goliath considerato piccolo e inadatto dalla sua gente. Viaggia come mercante e birraio itinerante, cercando la luce che in patria nessuno vedeva in lui.",
+          "campaignNotes": []
+        },
+        "ownerId": "user_demo",
+        "feats": [],
+        "proficiencies": {
+          "armor": [],
+          "weapons": [],
+          "tools": [],
+          "weaponMasteries": [],
+          "languages": []
+        },
+        "languages": [],
+        "powers": [
+          {
+            "id": "paladino_punizione_divina"
+          },
+          {
+            "id": "paladino_stile_di_combattimento"
+          }
+        ],
+        "progressionHistory": [
+          {
+            "id": "level-up-2-2026-07-21T08:14:52.358Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-21T08:14:52.358Z",
+            "className": "Paladino",
+            "totalLevel": {
+              "from": 1,
+              "to": 2
+            },
+            "classLevel": {
+              "className": "Paladino",
+              "from": 1,
+              "to": 2
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d10",
+              "baseIncrease": 6,
+              "constitutionModifier": 2,
+              "totalIncrease": 8,
+              "maxHpFrom": 12,
+              "maxHpTo": 20,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": null,
+            "classChoices": [
+              {
+                "id": "paladino_2_fighting_style",
+                "label": "Stile di Combattimento",
+                "type": "simple_choice",
+                "selected": [
+                  "defense"
+                ],
+                "labels": [
+                  "Difesa"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "defense",
+                    "label": "Difesa"
+                  }
+                ],
+                "meta": {
+                  "defense": {
+                    "id": "defense",
+                    "label": "Difesa"
+                  }
+                },
+                "warnings": []
+              },
+              {
+                "id": "paladino_2_spells",
+                "label": "Incantesimi da Paladino",
+                "type": "spell_choice",
+                "selected": [
+                  "scudo-della-fede"
+                ],
+                "labels": [
+                  "Liv. 1 - Scudo della Fede"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "scudo-della-fede",
+                    "label": "Liv. 1 - Scudo della Fede",
+                    "level": 1,
+                    "spell": {
+                      "id": "scudo-della-fede",
+                      "name": "Scudo della Fede",
+                      "name_upper": "SCUDO DELLA FEDE",
+                      "level": 1,
+                      "level_label": "1° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "chierico",
+                        "paladino"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "18 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (una pergamena con una preghiera)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "una pergamena con una preghiera",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 1 0  minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Un campo di energia scintillante avvolge una creatura scelta dall'incantatore entro gittata, conferendole un bonus di +2 alla CA per la durata dell'incantesimo.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 329
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "scudo-della-fede": {
+                    "id": "scudo-della-fede",
+                    "label": "Liv. 1 - Scudo della Fede",
+                    "level": 1,
+                    "spell": {
+                      "id": "scudo-della-fede",
+                      "name": "Scudo della Fede",
+                      "name_upper": "SCUDO DELLA FEDE",
+                      "level": 1,
+                      "level_label": "1° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "chierico",
+                        "paladino"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "18 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (una pergamena con una preghiera)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "una pergamena con una preghiera",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 1 0  minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Un campo di energia scintillante avvolge una creatura scelta dall'incantatore entro gittata, conferendole un bonus di +2 alla CA per la durata dell'incantesimo.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 329
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              },
+              {
+                "id": "paladino_stile_di_combattimento_acknowledge",
+                "label": "Stile di Combattimento",
+                "type": "acknowledge",
+                "sourcePowerId": "paladino_stile_di_combattimento",
+                "selected": [
+                  "acknowledged"
+                ],
+                "labels": [
+                  "acknowledged"
+                ],
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "snapshot-lv-3-2026-07-21T08:16:35.533Z",
+      "type": "level_up",
+      "level": 3,
+      "label": "Livello 3",
+      "classSummary": "Paladino (Giuramento di Vendetta) 3",
+      "createdAt": "2026-07-21T08:16:35.533Z",
+      "sourceHistoryId": "level-up-3-2026-07-21T08:16:35.533Z",
+      "changes": [
+        "Paladino 2 -> 3",
+        "PF massimi 20 -> 28",
+        "Sottoclasse: Giuramento di Vendetta",
+        "Incantesimi da Paladino: Liv. 1 - Eroismo"
+      ],
+      "character": {
+        "id": "pg_003",
+        "name": "Escanor il Piccoletto",
+        "level": 3,
+        "race": "Goliath",
+        "background": "Mercante adattato a taverniere/birraio itinerante",
+        "alignment": "Neutrale Buono",
+        "concept": "Frontliner solare da portata, burst e presenza scenica",
+        "classes": [
+          {
+            "name": "Paladino",
+            "level": 3,
+            "subclass": "Giuramento di Vendetta"
+          }
+        ],
+        "combat": {
+          "hp": {
+            "current": 28,
+            "max": 28,
+            "temp": 0
+          },
+          "ac": 18,
+          "speed": 10.5,
+          "initiativeBonus": -1,
+          "hitDice": {
+            "current": 3,
+            "max": 3,
+            "type": "d10",
+            "byType": {
+              "d10": 2
+            }
+          }
+        },
+        "abilities": {
+          "str": 17,
+          "dex": 8,
+          "con": 14,
+          "int": 8,
+          "wis": 10,
+          "cha": 16
+        },
+        "savingThrows": {
+          "str": false,
+          "dex": false,
+          "con": false,
+          "int": false,
+          "wis": true,
+          "cha": true
+        },
+        "skills": [
+          {
+            "id": "acrobatics",
+            "label": "Acrobazia",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "athletics",
+            "label": "Atletica",
+            "ability": "str",
+            "proficient": true
+          },
+          {
+            "id": "sleight",
+            "label": "Rapidita di Mano",
+            "ability": "dex",
+            "proficient": false
+          },
+          {
+            "id": "stealth",
+            "label": "Furtivita",
+            "ability": "dex",
+            "proficient": false,
+            "disadvantage": true
+          },
+          {
+            "id": "arcana",
+            "label": "Arcano",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "history",
+            "label": "Storia",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "investigation",
+            "label": "Indagare",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "nature",
+            "label": "Natura",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "religion",
+            "label": "Religione",
+            "ability": "int",
+            "proficient": false
+          },
+          {
+            "id": "animal",
+            "label": "Addestrare Animali",
+            "ability": "wis",
+            "proficient": true
+          },
+          {
+            "id": "insight",
+            "label": "Intuizione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "medicine",
+            "label": "Medicina",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "perception",
+            "label": "Percezione",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "survival",
+            "label": "Sopravvivenza",
+            "ability": "wis",
+            "proficient": false
+          },
+          {
+            "id": "deception",
+            "label": "Inganno",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "intimidation",
+            "label": "Intimidire",
+            "ability": "cha",
+            "proficient": true
+          },
+          {
+            "id": "performance",
+            "label": "Intrattenere",
+            "ability": "cha",
+            "proficient": false
+          },
+          {
+            "id": "persuasion",
+            "label": "Persuasione",
+            "ability": "cha",
+            "proficient": true
+          }
+        ],
+        "resources": [
+          {
+            "id": "lay_on_hands",
+            "label": "Imposizione delle Mani",
+            "current": 15,
+            "max": 15,
+            "resetOn": "long_rest",
+            "category": "class",
+            "shortRestRecover": null,
+            "source": "Paladino"
+          },
+          {
+            "id": "burning_fire",
+            "label": "Fuoco Bruciante",
+            "current": 2,
+            "max": 2,
+            "resetOn": "long_rest",
+            "category": "species"
+          }
+        ],
+        "spellcasting": {
+          "ability": "cha",
+          "spellSaveDc": 13,
+          "spellAttackBonus": 5,
+          "preparedCount": 3,
+          "slots": [
+            {
+              "id": "paladin_slot_1",
+              "level": 1,
+              "label": "Slot livello 1",
+              "current": 3,
+              "max": 3,
+              "resetOn": "long_rest"
+            }
+          ],
+          "spells": [
+            {
+              "id": "punizione-incandescente",
+              "name": "Punizione Incandescente",
+              "level": 1,
+              "school": "Invocazione",
+              "concentration": true,
+              "prepared": true
+            },
+            {
+              "id": "duello-obbligato",
+              "name": "Duello Obbligato",
+              "level": 1,
+              "school": "Ammaliamento",
+              "concentration": true,
+              "prepared": true
+            },
+            {
+              "id": "scudo-della-fede",
+              "name": "Scudo della Fede",
+              "level": 1,
+              "source": "Paladino",
+              "ability": "cha",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            },
+            {
+              "id": "anatema",
+              "name": "Anatema",
+              "level": 1,
+              "source": "Giuramento di Vendetta",
+              "ability": "cha",
+              "prepared": true,
+              "classSpell": true,
+              "alwaysPrepared": true,
+              "freeCast": null,
+              "subclassSpell": true
+            },
+            {
+              "id": "marchio-del-cacciatore",
+              "name": "Marchio del Cacciatore",
+              "level": 1,
+              "source": "Giuramento di Vendetta",
+              "ability": "cha",
+              "prepared": true,
+              "classSpell": true,
+              "alwaysPrepared": true,
+              "freeCast": null,
+              "subclassSpell": true
+            },
+            {
+              "id": "eroismo",
+              "name": "Eroismo",
+              "level": 1,
+              "source": "Paladino",
+              "ability": "cha",
+              "prepared": true,
+              "classSpell": true,
+              "preparedByClass": true
+            }
+          ]
+        },
+        "features": [
+          {
+            "id": "goliath_powerful_build",
+            "label": "Costituzione robusta",
+            "level": 1,
+            "source": "Goliath",
+            "category": "species",
+            "kind": "passive",
+            "summary": "Fisico resistente e capacita di trasporto superiore."
+          },
+          {
+            "id": "burning_fire",
+            "label": "Fuoco Bruciante",
+            "level": 1,
+            "source": "Gigante del Fuoco",
+            "category": "species",
+            "kind": "resource",
+            "resourceId": "burning_fire",
+            "summary": "Aggiunge 1d10 fuoco quando colpisce e infligge danni."
+          },
+          {
+            "id": "lay_on_hands",
+            "label": "Imposizione delle Mani",
+            "level": 1,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "resource",
+            "resourceId": "lay_on_hands",
+            "summary": "Riserva di 5 PF per riposo lungo, usata come azione bonus."
+          },
+          {
+            "id": "paladin_spellcasting",
+            "label": "Incantesimi",
+            "level": 1,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "spellcasting",
+            "summary": "Incantesimi da paladino basati su Carisma."
+          },
+          {
+            "id": "weapon_mastery",
+            "label": "Padronanza d'armi",
+            "level": 1,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "combat",
+            "summary": "Padronanza consigliata su Alabarda e Giavellotto."
+          },
+          {
+            "id": "paladino_punizione_divina",
+            "label": "Punizione Divina",
+            "level": 2,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Dopo aver colpito, lanci Punizione Divina o usi la punizione sempre preparata per aumentare i danni."
+          },
+          {
+            "id": "paladino_stile_di_combattimento",
+            "label": "Stile di Combattimento",
+            "level": 2,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Privilegio di Paladino 2."
+          },
+          {
+            "id": "paladino_2_fighting_style_defense",
+            "label": "Difesa",
+            "level": 2,
+            "source": "Paladino - Stile di Combattimento",
+            "category": "class_choice",
+            "kind": "feature"
+          },
+          {
+            "id": "paladino_incanalare_divinita",
+            "label": "Incanalare Divinità",
+            "level": 3,
+            "source": "Paladino",
+            "category": "class",
+            "kind": "feature",
+            "summary": "Ottieni usi di potere divino dati dal giuramento."
+          },
+          {
+            "id": "paladino_giuramento_di_vendetta_incantesimi_del_giuramento_di_vendetta",
+            "label": "Incantesimi del Giuramento di Vendetta",
+            "level": 3,
+            "source": "Giuramento di Vendetta",
+            "category": "subclass",
+            "kind": "passive",
+            "summary": "Aggiungi incantesimi di caccia, inseguimento e punizione."
+          },
+          {
+            "id": "paladino_giuramento_di_vendetta_voto_di_inimicizia",
+            "label": "Voto di Inimicizia",
+            "level": 3,
+            "source": "Giuramento di Vendetta",
+            "category": "subclass",
+            "kind": "active",
+            "summary": "Usa Incanalare Divinità per ottenere vantaggio contro un bersaglio scelto."
+          }
+        ],
+        "actions": [
+          {
+            "id": "halberd",
+            "name": "Alabarda",
+            "type": "attack",
+            "toHit": 5,
+            "damage": "1d10+3",
+            "notes": "Pesante, portata, due mani. Padronanza: Doppio Fendente."
+          },
+          {
+            "id": "javelin",
+            "name": "Giavellotto",
+            "type": "attack",
+            "toHit": 5,
+            "damage": "1d6+3",
+            "notes": "Opzione a distanza basata su Forza."
+          }
+        ],
+        "notes": "Fonte locale: Escanor_il_Piccoletto_scheda_Lv1-3.txt.",
+        "equipment": {
+          "currency": {
+            "cp": 0,
+            "sp": 0,
+            "ep": 0,
+            "gp": 0,
+            "pp": 0
+          },
+          "startingBudget": {
+            "gp": 150,
+            "notes": "Opzione B del Paladino: 150 mo. Residuo dopo acquisti da confermare al tavolo."
+          },
+          "weapons": [
+            {
+              "id": "halberd",
+              "name": "Alabarda",
+              "quantity": 1,
+              "description": "Arma principale. 1d10 taglienti, pesante, portata, due mani.",
+              "notes": "Padronanza: Doppio Fendente."
+            },
+            {
+              "id": "javelins",
+              "name": "Giavellotti",
+              "quantity": 5,
+              "description": "Opzione a distanza basata su Forza.",
+              "notes": "Quantità iniziale pratica da confermare se il DM traccia i singoli giavellotti.",
+              "recoverable": true
+            }
+          ],
+          "armor": [
+            {
+              "id": "manual_shields_scudo_1784621712984",
+              "itemId": "scudo",
+              "catalog": "shields",
+              "inventoryGroup": "armor",
+              "name": "Scudo",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Trovato in avventura",
+              "notes": "Costo: 10 mo - Peso: 3 kg",
+              "costCopper": 1000,
+              "cost": "10 mo",
+              "weight": "3 kg",
+              "stats": {
+                "type": "shield",
+                "category": "scudo",
+                "armorClassBonus": 2,
+                "equipAction": "azione di Utilizzo"
+              },
+              "recoverable": false,
+              "consumable": false,
+              "equippedSlot": "shield"
+            },
+            {
+              "id": "manual_armors_cotta-di-maglia_1784621733947",
+              "itemId": "cotta-di-maglia",
+              "catalog": "armors",
+              "inventoryGroup": "armor",
+              "name": "Cotta di maglia",
+              "quantity": 1,
+              "equipped": true,
+              "description": "Trovato in avventura",
+              "notes": "Costo: 75 mo - Peso: 27.5 kg",
+              "costCopper": 7500,
+              "cost": "75 mo",
+              "weight": "27.5 kg",
+              "stats": {
+                "type": "armor",
+                "category": "pesante",
+                "armorClass": "16",
+                "strengthRequirement": "For 13",
+                "stealthDisadvantage": true
+              },
+              "recoverable": false,
+              "consumable": false,
+              "equippedSlot": "armor"
+            }
+          ],
+          "tools": [
+            {
+              "id": "navigators_tools",
+              "name": "Strumenti da navigatore",
+              "quantity": 1,
+              "description": "Competenza base del background Mercante."
+            },
+            {
+              "id": "brewers_supplies",
+              "name": "Scorte da birraio",
+              "quantity": 1,
+              "description": "Adattamento narrativo da taverniere/birraio itinerante.",
+              "notes": "Da confermare col DM come sostituzione o aggiunta."
+            }
+          ],
+          "adventuringGear": [
+            {
+              "id": "holy_symbol",
+              "name": "Simbolo sacro",
+              "quantity": 1
+            },
+            {
+              "id": "backpack",
+              "name": "Zaino",
+              "quantity": 1
+            },
+            {
+              "id": "bedroll",
+              "name": "Giaciglio",
+              "quantity": 1
+            },
+            {
+              "id": "waterskin",
+              "name": "Otre",
+              "quantity": 1
+            },
+            {
+              "id": "tinderbox",
+              "name": "Acciarino",
+              "quantity": 1
+            },
+            {
+              "id": "rope",
+              "name": "Corda",
+              "quantity": 1
+            },
+            {
+              "id": "traveler_clothes",
+              "name": "Abiti da viaggiatore",
+              "quantity": 1
+            }
+          ],
+          "magicItems": [],
+          "consumables": [
+            {
+              "id": "rations",
+              "name": "Razioni",
+              "quantity": 5,
+              "consumable": true
+            },
+            {
+              "id": "torches",
+              "name": "Torce",
+              "quantity": 10,
+              "consumable": true
+            }
+          ],
+          "storyItems": [],
+          "wishlist": [
+            {
+              "id": "plate_armor",
+              "name": "Armatura a piastre",
+              "description": "Obiettivo futuro di campagna: CA 18, richiede Forza 15, costosa."
+            }
+          ],
+          "notes": "Fonte: Escanor_il_Piccoletto_scheda_Lv1-3.txt."
+        },
+        "details": {
+          "personalityTraits": [
+            "Fuori dal combattimento parla con voce quasi stridula e sembra piegato dal peso della corazza.",
+            "Quando viene tirata l'iniziativa, Escanor sorge: postura, voce e presenza cambiano."
+          ],
+          "ideals": [
+            "Tornare tra i suoi come eroe amato e rispettato.",
+            "Dimostrare che il Sole Interiore vale più del giudizio della stirpe."
+          ],
+          "bonds": [
+            "La sua identità da mercante, taverniere e birraio itinerante.",
+            "Il desiderio di riscattarsi agli occhi dei Goliath."
+          ],
+          "flaws": [
+            "Iniziativa bassa.",
+            "Furtività pessima in armatura.",
+            "Tende a vivere ogni scontro come prova di gloria."
+          ],
+          "catchphrase": "Non attendo mezzogiorno. Mezzogiorno attende me.",
+          "backstoryShort": "Escanor è un Goliath considerato piccolo e inadatto dalla sua gente. Viaggia come mercante e birraio itinerante, cercando la luce che in patria nessuno vedeva in lui.",
+          "campaignNotes": []
+        },
+        "ownerId": "user_demo",
+        "feats": [],
+        "proficiencies": {
+          "armor": [],
+          "weapons": [],
+          "tools": [],
+          "weaponMasteries": [],
+          "languages": []
+        },
+        "languages": [],
+        "powers": [
+          {
+            "id": "paladino_punizione_divina"
+          },
+          {
+            "id": "paladino_stile_di_combattimento"
+          },
+          {
+            "id": "paladino_incanalare_divinita"
+          },
+          {
+            "id": "paladino_giuramento_di_vendetta_incantesimi_del_giuramento_di_vendetta"
+          },
+          {
+            "id": "paladino_giuramento_di_vendetta_voto_di_inimicizia"
+          }
+        ],
+        "progressionHistory": [
+          {
+            "id": "level-up-2-2026-07-21T08:14:52.358Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-21T08:14:52.358Z",
+            "className": "Paladino",
+            "totalLevel": {
+              "from": 1,
+              "to": 2
+            },
+            "classLevel": {
+              "className": "Paladino",
+              "from": 1,
+              "to": 2
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d10",
+              "baseIncrease": 6,
+              "constitutionModifier": 2,
+              "totalIncrease": 8,
+              "maxHpFrom": 12,
+              "maxHpTo": 20,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": null,
+            "classChoices": [
+              {
+                "id": "paladino_2_fighting_style",
+                "label": "Stile di Combattimento",
+                "type": "simple_choice",
+                "selected": [
+                  "defense"
+                ],
+                "labels": [
+                  "Difesa"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "defense",
+                    "label": "Difesa"
+                  }
+                ],
+                "meta": {
+                  "defense": {
+                    "id": "defense",
+                    "label": "Difesa"
+                  }
+                },
+                "warnings": []
+              },
+              {
+                "id": "paladino_2_spells",
+                "label": "Incantesimi da Paladino",
+                "type": "spell_choice",
+                "selected": [
+                  "scudo-della-fede"
+                ],
+                "labels": [
+                  "Liv. 1 - Scudo della Fede"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "scudo-della-fede",
+                    "label": "Liv. 1 - Scudo della Fede",
+                    "level": 1,
+                    "spell": {
+                      "id": "scudo-della-fede",
+                      "name": "Scudo della Fede",
+                      "name_upper": "SCUDO DELLA FEDE",
+                      "level": 1,
+                      "level_label": "1° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "chierico",
+                        "paladino"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "18 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (una pergamena con una preghiera)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "una pergamena con una preghiera",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 1 0  minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Un campo di energia scintillante avvolge una creatura scelta dall'incantatore entro gittata, conferendole un bonus di +2 alla CA per la durata dell'incantesimo.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 329
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "scudo-della-fede": {
+                    "id": "scudo-della-fede",
+                    "label": "Liv. 1 - Scudo della Fede",
+                    "level": 1,
+                    "spell": {
+                      "id": "scudo-della-fede",
+                      "name": "Scudo della Fede",
+                      "name_upper": "SCUDO DELLA FEDE",
+                      "level": 1,
+                      "level_label": "1° livello",
+                      "school": "Abiurazione",
+                      "is_cantrip": false,
+                      "classes": [
+                        "chierico",
+                        "paladino"
+                      ],
+                      "casting_time": {
+                        "raw": "azione bonus",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "18 metri"
+                      },
+                      "components": {
+                        "raw": "V, S, M (una pergamena con una preghiera)",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": true,
+                        "material_description": "una pergamena con una preghiera",
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 1 0  minuti",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Un campo di energia scintillante avvolge una creatura scelta dall'incantatore entro gittata, conferendole un bonus di +2 alla CA per la durata dell'incantesimo.",
+                      "at_higher_levels": null,
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [],
+                        "heals_or_temp_hp": false,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 329
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              },
+              {
+                "id": "paladino_stile_di_combattimento_acknowledge",
+                "label": "Stile di Combattimento",
+                "type": "acknowledge",
+                "sourcePowerId": "paladino_stile_di_combattimento",
+                "selected": [
+                  "acknowledged"
+                ],
+                "labels": [
+                  "acknowledged"
+                ],
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          },
+          {
+            "id": "level-up-3-2026-07-21T08:16:35.533Z",
+            "type": "level_up",
+            "appliedAt": "2026-07-21T08:16:35.533Z",
+            "className": "Paladino",
+            "totalLevel": {
+              "from": 2,
+              "to": 3
+            },
+            "classLevel": {
+              "className": "Paladino",
+              "from": 2,
+              "to": 3
+            },
+            "hp": {
+              "mode": "average",
+              "hitDie": "d10",
+              "baseIncrease": 6,
+              "constitutionModifier": 2,
+              "totalIncrease": 8,
+              "maxHpFrom": 20,
+              "maxHpTo": 28,
+              "warnings": []
+            },
+            "constitutionHpAdjustment": 0,
+            "asiOrFeat": null,
+            "classChoices": [
+              {
+                "id": "paladino_3_subclass",
+                "label": "Sottoclasse",
+                "type": "subclass_choice",
+                "selected": [
+                  "giuramento_di_vendetta"
+                ],
+                "labels": [
+                  "Giuramento di Vendetta"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "giuramento_di_vendetta",
+                    "label": "Giuramento di Vendetta",
+                    "subclassName": "Giuramento di Vendetta"
+                  }
+                ],
+                "meta": {
+                  "giuramento_di_vendetta": {
+                    "id": "giuramento_di_vendetta",
+                    "label": "Giuramento di Vendetta",
+                    "subclassName": "Giuramento di Vendetta"
+                  }
+                },
+                "warnings": []
+              },
+              {
+                "id": "paladino_3_spells",
+                "label": "Incantesimi da Paladino",
+                "type": "spell_choice",
+                "selected": [
+                  "eroismo"
+                ],
+                "labels": [
+                  "Liv. 1 - Eroismo"
+                ],
+                "selectedOptions": [
+                  {
+                    "id": "eroismo",
+                    "label": "Liv. 1 - Eroismo",
+                    "level": 1,
+                    "spell": {
+                      "id": "eroismo",
+                      "name": "Eroismo",
+                      "name_upper": "EROISMO",
+                      "level": 1,
+                      "level_label": "1° livello",
+                      "school": "Ammaliamento",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "paladino"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "V, S",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 1 minuto",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Una creatura consenziente toccata dall'incantatore è animata da grande coraggio. Fino al termine dell'incan tesimo, la creatura è immune alla condizione spaventato e all'inizio di ogni suo turno ottiene una quantità di punti ferita temporanei pari al modificatore di caratteristica da incantatore dell'incantatore.",
+                      "at_higher_levels": "L'incantatore può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [
+                          "spaventato"
+                        ],
+                        "heals_or_temp_hp": true,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 272
+                      }
+                    }
+                  }
+                ],
+                "meta": {
+                  "eroismo": {
+                    "id": "eroismo",
+                    "label": "Liv. 1 - Eroismo",
+                    "level": 1,
+                    "spell": {
+                      "id": "eroismo",
+                      "name": "Eroismo",
+                      "name_upper": "EROISMO",
+                      "level": 1,
+                      "level_label": "1° livello",
+                      "school": "Ammaliamento",
+                      "is_cantrip": false,
+                      "classes": [
+                        "bardo",
+                        "paladino"
+                      ],
+                      "casting_time": {
+                        "raw": "azione",
+                        "ritual": false
+                      },
+                      "range": {
+                        "raw": "contatto"
+                      },
+                      "components": {
+                        "raw": "V, S",
+                        "verbal": true,
+                        "somatic": true,
+                        "material": false,
+                        "material_description": null,
+                        "consumed": false
+                      },
+                      "duration": {
+                        "raw": "concentrazione, fino a 1 minuto",
+                        "concentration": true,
+                        "instantaneous": false,
+                        "ritual_possible": false
+                      },
+                      "description": "Una creatura consenziente toccata dall'incantatore è animata da grande coraggio. Fino al termine dell'incan tesimo, la creatura è immune alla condizione spaventato e all'inizio di ogni suo turno ottiene una quantità di punti ferita temporanei pari al modificatore di caratteristica da incantatore dell'incantatore.",
+                      "at_higher_levels": "L'incantatore può bersagliare una creatura aggiuntiva per ogni slot di livello superiore al 1°.",
+                      "mechanics": {
+                        "attack_type": null,
+                        "save_ability": null,
+                        "damage_types": [],
+                        "damage_dice": [],
+                        "conditions": [
+                          "spaventato"
+                        ],
+                        "heals_or_temp_hp": true,
+                        "summons_or_creates": false
+                      },
+                      "source": {
+                        "book": "Manuale del Giocatore 5e 2024 (IT)",
+                        "chapter": 7,
+                        "page_start": 272
+                      }
+                    }
+                  }
+                },
+                "warnings": []
+              }
+            ],
+            "subclassSpellChoices": [],
+            "invocationChoices": []
+          }
+        ]
+      }
+    }
+  ]
+}

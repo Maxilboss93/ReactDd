@@ -260,38 +260,646 @@ const SPELL_REPLACEMENT_RULES = {
   },
 }
 
+const spell = (id, name, level) => ({ id, name, level })
+
 const SUBCLASS_GRANTED_SPELLS = {
-  Stregone: {
-    'Stregoneria Aberrante': [
+  Chierico: {
+    'Dominio della Guerra': [
       {
         minLevel: 3,
         spells: [
-          { id: 'braccia-di-hadar', name: 'Braccia di Hadar', level: 1 },
-          { id: 'calmare-emozioni', name: 'Calmare Emozioni', level: 2 },
-          { id: 'individuazione-dei-pensieri', name: 'Individuazione dei Pensieri', level: 2 },
-          { id: 'sussurri-dissonanti', name: 'Sussurri Dissonanti', level: 1 },
-          { id: 'scheggia-della-mente', name: 'Scheggia della Mente', level: 0 },
+          spell('dardo-tracciante', 'Dardo Tracciante', 1),
+          spell('arma-magica', 'Arma Magica', 2),
+          spell('scudo-della-fede', 'Scudo della Fede', 1),
+          spell('arma-spirituale', 'Arma Spirituale', 2),
         ],
       },
       {
         minLevel: 5,
         spells: [
-          { id: 'fame-di-hadar', name: 'Fame di Hadar', level: 3 },
-          { id: 'inviare', name: 'Inviare', level: 3 },
+          spell('manto-del-crociato', 'Manto del Crociato', 3),
+          spell('guardiani-spirituali', 'Guardiani Spirituali', 3),
         ],
       },
       {
         minLevel: 7,
         spells: [
-          { id: 'tentacoli-neri-di-evard', name: 'Tentacoli Neri di Evard', level: 4 },
-          { id: 'richiama-aberrazione', name: 'Richiama Aberrazione', level: 4 },
+          spell('scudo-di-fuoco', 'Scudo di Fuoco', 4),
+          spell('liberta-di-movimento', 'Liberta di Movimento', 4),
         ],
       },
       {
         minLevel: 9,
         spells: [
-          { id: 'legame-telepatico-di-rary', name: 'Legame Telepatico di Rary', level: 5 },
-          { id: 'telecinesi', name: 'Telecinesi', level: 5 },
+          spell('blocca-mostri', 'Blocca Mostri', 5),
+          spell('colpo-del-vento-d-acciaio', "Colpo del Vento d'Acciaio", 5),
+        ],
+      },
+    ],
+    "Dominio dell'Inganno": [
+      {
+        minLevel: 3,
+        spells: [
+          spell('charme-su-persone', 'Charme su Persone', 1),
+          spell('camuffare-se-stesso', 'Camuffare Se Stesso', 1),
+          spell('invisibilita', 'Invisibilita', 2),
+          spell('passare-senza-tracce', 'Passare Senza Tracce', 2),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('trama-ipnotica', 'Trama Ipnotica', 3),
+          spell('anti-individuazione', 'Anti-Individuazione', 3),
+        ],
+      },
+      {
+        minLevel: 7,
+        spells: [
+          spell('confusione', 'Confusione', 4),
+          spell('porta-dimensionale', 'Porta Dimensionale', 4),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('dominare-persone', 'Dominare Persone', 5),
+          spell('modificare-memoria', 'Modificare Memoria', 5),
+        ],
+      },
+    ],
+    'Dominio della Luce': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('mani-brucianti', 'Mani Brucianti', 1),
+          spell('luminescenza', 'Luminescenza', 1),
+          spell('raggio-rovente', 'Raggio Rovente', 2),
+          spell('vedere-invisibilita', 'Vedere Invisibilita', 2),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('luce-diurna', 'Luce Diurna', 3),
+          spell('palla-di-fuoco', 'Palla di Fuoco', 3),
+        ],
+      },
+      {
+        minLevel: 7,
+        spells: [
+          spell('occhio-arcano', 'Occhio Arcano', 4),
+          spell('muro-di-fuoco', 'Muro di Fuoco', 4),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('colpo-infuocato', 'Colpo Infuocato', 5),
+          spell('scrutare', 'Scrutare', 5),
+        ],
+      },
+    ],
+    'Dominio della Vita': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('aiuto', 'Aiuto', 2),
+          spell('benedizione', 'Benedizione', 1),
+          spell('cura-ferite', 'Cura Ferite', 1),
+          spell('ristorare-inferiore', 'Ristorare Inferiore', 2),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('parola-guaritrice-di-massa', 'Parola Guaritrice di Massa', 3),
+          spell('revivify', 'Revivify', 3),
+        ],
+      },
+      {
+        minLevel: 7,
+        spells: [
+          spell('aura-di-vita', 'Aura di Vita', 4),
+          spell('interdizione-alla-morte', 'Interdizione alla Morte', 4),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('ristorare-superiore', 'Ristorare Superiore', 5),
+          spell('cura-ferite-di-massa', 'Cura Ferite di Massa', 5),
+        ],
+      },
+    ],
+  },
+  Druido: {
+    'Circolo della Luna': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('cura-ferite', 'Cura Ferite', 1),
+          spell('bagliore-lunare', 'Bagliore Lunare', 2),
+          spell('luce-splendente', 'Luce Splendente', 0),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('evoca-animali', 'Evoca Animali', 3),
+        ],
+      },
+      {
+        minLevel: 7,
+        spells: [
+          spell('fonte-di-luce-lunare', 'Fonte di Luce Lunare', 4),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('cura-ferite-di-massa', 'Cura Ferite di Massa', 5),
+        ],
+      },
+    ],
+    'Circolo del Mare': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('nube-di-nebbia', 'Nube di Nebbia', 1),
+          spell('folata-di-vento', 'Folata di Vento', 2),
+          spell('raggio-di-gelo', 'Raggio di Gelo', 0),
+          spell('frant-umare', 'Frantumare', 2),
+          spell('onda-tonante', 'Onda Tonante', 1),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('fulmine', 'Fulmine', 3),
+          spell('respirare-sott-acqua', "Respirare Sott'acqua", 3),
+        ],
+      },
+      {
+        minLevel: 7,
+        spells: [
+          spell('controllare-acqua', 'Controllare Acqua', 4),
+          spell('tempesta-di-ghiaccio', 'Tempesta di Ghiaccio', 4),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('evoca-elementale', 'Evoca Elementale', 5),
+          spell('blocca-mostri', 'Blocca Mostri', 5),
+        ],
+      },
+    ],
+  },
+  Paladino: {
+    'Giuramento degli Antichi': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('colpo-intrappolante', 'Colpo Intrappolante', 1),
+          spell('parlare-con-gli-animali', 'Parlare con Gli Animali', 1),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('passo-velato', 'Passo Velato', 2),
+          spell('bagliore-lunare', 'Bagliore Lunare', 2),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('crescita-vegetale', 'Crescita Vegetale', 3),
+          spell('protezione-dall-energia', "Protezione Dall'energia", 3),
+        ],
+      },
+      {
+        minLevel: 13,
+        spells: [
+          spell('tempesta-di-ghiaccio', 'Tempesta di Ghiaccio', 4),
+          spell('pelle-di-pietra', 'Pelle di Pietra', 4),
+        ],
+      },
+      {
+        minLevel: 17,
+        spells: [
+          spell('comunione-con-la-natura', 'Comunione con la Natura', 5),
+          spell('traslazione-arborea', 'Traslazione Arborea', 5),
+        ],
+      },
+    ],
+    'Giuramento di Devozione': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('protezione-dal-bene-e-dal-male', 'Protezione dal Bene e dal Male', 1),
+          spell('scudo-della-fede', 'Scudo della Fede', 1),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('aiuto', 'Aiuto', 2),
+          spell('zona-di-verita', 'Zona di Verita', 2),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('faro-di-speranza', 'Faro di Speranza', 3),
+          spell('dissolvi-magie', 'Dissolvi Magie', 3),
+        ],
+      },
+      {
+        minLevel: 13,
+        spells: [
+          spell('liberta-di-movimento', 'Liberta di Movimento', 4),
+          spell('guardiano-della-fede', 'Guardiano della Fede', 4),
+        ],
+      },
+      {
+        minLevel: 17,
+        spells: [
+          spell('comunione', 'Comunione', 5),
+          spell('colpo-infuocato', 'Colpo Infuocato', 5),
+        ],
+      },
+    ],
+    'Giuramento di Gloria': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('dardo-tracciante', 'Dardo Tracciante', 1),
+          spell('eroismo', 'Eroismo', 1),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('caratteristica-potenziata', 'Caratteristica Potenziata', 2),
+          spell('arma-magica', 'Arma Magica', 2),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('velocita', 'Velocita', 3),
+          spell('protezione-dall-energia', "Protezione Dall'energia", 3),
+        ],
+      },
+      {
+        minLevel: 13,
+        spells: [
+          spell('compulsione', 'Compulsione', 4),
+          spell('liberta-di-movimento', 'Liberta di Movimento', 4),
+        ],
+      },
+      {
+        minLevel: 17,
+        spells: [
+          spell('conoscenza-delle-leggende', 'Conoscenza delle Leggende', 5),
+          spell('presenza-regale-di-yolande', 'Presenza Regale di Yolande', 5),
+        ],
+      },
+    ],
+    'Giuramento di Vendetta': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('anatema', 'Anatema', 1),
+          spell('marchio-del-cacciatore', 'Marchio del Cacciatore', 1),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('blocca-persone', 'Blocca Persone', 2),
+          spell('passo-velato', 'Passo Velato', 2),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('velocita', 'Velocita', 3),
+          spell('protezione-dall-energia', "Protezione Dall'energia", 3),
+        ],
+      },
+      {
+        minLevel: 13,
+        spells: [
+          spell('esilio', 'Esilio', 4),
+          spell('porta-dimensionale', 'Porta Dimensionale', 4),
+        ],
+      },
+      {
+        minLevel: 17,
+        spells: [
+          spell('blocca-mostri', 'Blocca Mostri', 5),
+          spell('scrutare', 'Scrutare', 5),
+        ],
+      },
+    ],
+  },
+  Ranger: {
+    'Cacciatore delle Tenebre': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('camuffare-se-stesso', 'Camuffare Se Stesso', 1),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('trucco-della-corda', 'Trucco della Corda', 2),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('paura', 'Paura', 3),
+        ],
+      },
+      {
+        minLevel: 13,
+        spells: [
+          spell('invisibilita-superiore', 'Invisibilita Superiore', 4),
+        ],
+      },
+      {
+        minLevel: 17,
+        spells: [
+          spell('sembrare', 'Sembrare', 5),
+        ],
+      },
+    ],
+    'Viandante Fatato': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('charme-su-persone', 'Charme su Persone', 1),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('passo-velato', 'Passo Velato', 2),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('richiama-folletto', 'Richiama Folletto', 3),
+        ],
+      },
+      {
+        minLevel: 13,
+        spells: [
+          spell('porta-dimensionale', 'Porta Dimensionale', 4),
+        ],
+      },
+      {
+        minLevel: 17,
+        spells: [
+          spell('fuorviare', 'Fuorviare', 5),
+        ],
+      },
+    ],
+  },
+  Stregone: {
+    'Stregoneria Aberrante': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('braccia-di-hadar', 'Braccia di Hadar', 1),
+          spell('calmare-emozioni', 'Calmare Emozioni', 2),
+          spell('individuazione-dei-pensieri', 'Individuazione dei Pensieri', 2),
+          spell('sussurri-dissonanti', 'Sussurri Dissonanti', 1),
+          spell('scheggia-della-mente', 'Scheggia della Mente', 0),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('fame-di-hadar', 'Fame di Hadar', 3),
+          spell('inviare', 'Inviare', 3),
+        ],
+      },
+      {
+        minLevel: 7,
+        spells: [
+          spell('tentacoli-neri-di-evard', 'Tentacoli Neri di Evard', 4),
+          spell('richiama-aberrazione', 'Richiama Aberrazione', 4),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('legame-telepatico-di-rary', 'Legame Telepatico di Rary', 5),
+          spell('telecinesi', 'Telecinesi', 5),
+        ],
+      },
+    ],
+    'Stregoneria Draconica': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('alterare-se-stesso', 'Alterare Se Stesso', 2),
+          spell('globo-cromatico', 'Globo Cromatico', 1),
+          spell('comando', 'Comando', 1),
+          spell('soffio-del-drago', 'Soffio del Drago', 2),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('paura', 'Paura', 3),
+          spell('volare', 'Volare', 3),
+        ],
+      },
+      {
+        minLevel: 7,
+        spells: [
+          spell('occhio-arcano', 'Occhio Arcano', 4),
+          spell('charme-sui-mostri', 'Charme sui Mostri', 4),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('conoscenza-delle-leggende', 'Conoscenza delle Leggende', 5),
+          spell('richiama-drago', 'Richiama Drago', 5),
+        ],
+      },
+    ],
+    'Stregoneria Meccanica': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('aiuto', 'Aiuto', 2),
+          spell('allarme', 'Allarme', 1),
+          spell('ristorare-inferiore', 'Ristorare Inferiore', 2),
+          spell('protezione-dal-bene-e-dal-male', 'Protezione dal Bene e dal Male', 1),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('dissolvi-magie', 'Dissolvi Magie', 3),
+          spell('protezione-dall-energia', "Protezione Dall'energia", 3),
+        ],
+      },
+      {
+        minLevel: 7,
+        spells: [
+          spell('liberta-di-movimento', 'Liberta di Movimento', 4),
+          spell('richiama-costrutto', 'Richiama Costrutto', 4),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('ristorare-superiore', 'Ristorare Superiore', 5),
+          spell('muro-di-forza', 'Muro di Forza', 5),
+        ],
+      },
+    ],
+  },
+  Warlock: {
+    'Patrono Celestiale': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('aiuto', 'Aiuto', 2),
+          spell('cura-ferite', 'Cura Ferite', 1),
+          spell('dardo-tracciante', 'Dardo Tracciante', 1),
+          spell('ristorare-inferiore', 'Ristorare Inferiore', 2),
+          spell('luce', 'Luce', 0),
+          spell('fiamma-sacra', 'Fiamma Sacra', 0),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('luce-diurna', 'Luce Diurna', 3),
+          spell('revivify', 'Revivify', 3),
+        ],
+      },
+      {
+        minLevel: 7,
+        spells: [
+          spell('guardiano-della-fede', 'Guardiano della Fede', 4),
+          spell('muro-di-fuoco', 'Muro di Fuoco', 4),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('ristorare-superiore', 'Ristorare Superiore', 5),
+          spell('richiama-celestiale', 'Richiama Celestiale', 5),
+        ],
+      },
+    ],
+    'Patrono Grande Antico': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('individuazione-dei-pensieri', 'Individuazione dei Pensieri', 2),
+          spell('sussurri-dissonanti', 'Sussurri Dissonanti', 1),
+          spell('allucinazione-di-forza', 'Allucinazione di Forza', 2),
+          spell('risata-incontenibile-di-tasha', 'Risata Incontenibile di Tasha', 1),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('chiaroveggenza', 'Chiaroveggenza', 3),
+          spell('fame-di-hadar', 'Fame di Hadar', 3),
+        ],
+      },
+      {
+        minLevel: 7,
+        spells: [
+          spell('confusione', 'Confusione', 4),
+          spell('richiama-aberrazione', 'Richiama Aberrazione', 4),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('modificare-memoria', 'Modificare Memoria', 5),
+          spell('telecinesi', 'Telecinesi', 5),
+        ],
+      },
+    ],
+    'Patrono Immondo': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('mani-brucianti', 'Mani Brucianti', 1),
+          spell('comando', 'Comando', 1),
+          spell('raggio-rovente', 'Raggio Rovente', 2),
+          spell('suggestione', 'Suggestione', 2),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('palla-di-fuoco', 'Palla di Fuoco', 3),
+          spell('nube-maleodorante', 'Nube Maleodorante', 3),
+        ],
+      },
+      {
+        minLevel: 7,
+        spells: [
+          spell('scudo-di-fuoco', 'Scudo di Fuoco', 4),
+          spell('muro-di-fuoco', 'Muro di Fuoco', 4),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('costrizione', 'Costrizione', 5),
+          spell('piaga-degli-insetti', 'Piaga degli Insetti', 5),
+        ],
+      },
+    ],
+    'Patrono Signore Fatato': [
+      {
+        minLevel: 3,
+        spells: [
+          spell('calmare-emozioni', 'Calmare Emozioni', 2),
+          spell('luminescenza', 'Luminescenza', 1),
+          spell('passo-velato', 'Passo Velato', 2),
+          spell('allucinazione-di-forza', 'Allucinazione di Forza', 2),
+          spell('sonno', 'Sonno', 1),
+        ],
+      },
+      {
+        minLevel: 5,
+        spells: [
+          spell('intermittenza', 'Intermittenza', 3),
+          spell('crescita-vegetale', 'Crescita Vegetale', 3),
+        ],
+      },
+      {
+        minLevel: 7,
+        spells: [
+          spell('dominare-bestie', 'Dominare Bestie', 4),
+          spell('invisibilita-superiore', 'Invisibilita Superiore', 4),
+        ],
+      },
+      {
+        minLevel: 9,
+        spells: [
+          spell('dominare-persone', 'Dominare Persone', 5),
+          spell('sembrare', 'Sembrare', 5),
         ],
       },
     ],
@@ -3360,6 +3968,7 @@ function buildClassGrantedSpellEntry(spellLike, className, ability) {
     classSpell: true,
     alwaysPrepared: spellLike.alwaysPrepared ?? true,
     freeCast: spellLike.freeCast ?? null,
+    subclassSpell: spellLike.subclassSpell ?? false,
   }
 }
 
@@ -3442,6 +4051,7 @@ function getSubclassGrantedSpells(character, draft) {
     .map((spell) => buildClassGrantedSpellEntry({
       ...spell,
       alwaysPrepared: true,
+      subclassSpell: true,
     }, subclassName, spellAbility))
 }
 
@@ -3736,6 +4346,7 @@ export function repairSubclassGrantedSpells(character) {
       .map((spell) => buildClassGrantedSpellEntry({
         ...spell,
         alwaysPrepared: true,
+        subclassSpell: true,
       }, subclassName, spellAbility))
   })
   const preparedTargets = classes

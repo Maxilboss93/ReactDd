@@ -6,6 +6,7 @@ import {
   createCustomInventoryItem,
   createInventoryItemFromCatalog,
   getInventoryCatalogOptions,
+  syncCharacterEquipmentDerivedStats,
 } from '../../../services/equipmentService.js'
 
 const EQUIPMENT_GROUPS = [
@@ -678,10 +679,10 @@ function EquipmentSection({ character, onCharacterChange }) {
   }, [storageKey, tracker])
 
   function updateEquipment(nextEquipment) {
-    onCharacterChange?.({
+    onCharacterChange?.(syncCharacterEquipmentDerivedStats({
       ...character,
       equipment: nextEquipment,
-    })
+    }, { force: true }))
   }
 
   function updateGroup(groupId, updater) {

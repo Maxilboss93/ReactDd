@@ -425,6 +425,241 @@ function getItemStats(catalog, item) {
   }
 }
 
+function getAbilityModifier(score) {
+  if (score === null || score === undefined || score === '') {
+    return null
+  }
+
+  const number = Number(score)
+
+  return Number.isFinite(number) ? Math.floor((number - 10) / 2) : null
+}
+
+function normalizeRuleText(value) {
+  return String(value ?? '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+}
+
+function slugifyLoose(value) {
+  return normalizeRuleText(value)
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+}
+
+function findCatalogItemByLooseIdentity(catalog, item) {
+  const candidates = [
+    item?.itemId,
+    item?.id,
+    item?.name,
+  ].filter(Boolean).map(slugifyLoose)
+
+  return (CATALOGS[catalog] ?? []).find((catalogItem) => {
+    const catalogCandidates = [
+      catalogItem.id,
+      catalogItem.name,
+    ].filter(Boolean).map(slugifyLoose)
+
+    return candidates.some((candidate) => catalogCandidates.includes(candidate))
+  }) ?? null
+}
+
+function parseLegacyArmorStats(item) {
+  const text = [item?.description, item?.notes].filter(Boolean).join(' ')
+  const acMatch = normalizeRuleText(text).match(/\bca\s*([+-]?\d+)/)
+
+  if (!acMatch) {
+    return null
+  }
+
+  return {
+    type: 'armor',
+    category: '',
+    armorClass: acMatch[1],
+    strengthRequirement: null,
+    stealthDisadvantage: normalizeRuleText(text).includes('svantaggio'),
+  }
+}
+
+function getEffectiveItemStats(item) {
+  if (item?.stats?.type) {
+    return item.stats
+  }
+
+  if (item?.catalog && item?.itemId) {
+    const catalogItem = findCatalogItem(item.catalog, item.itemId)
+
+    if (catalogItem) {
+      return getItemStats(item.catalog, catalogItem)
+    }
+  }
+
+  const armorCatalogItem = findCatalogItemByLooseIdentity('armors', item)
+
+  if (armorCatalogItem) {
+    return getItemStats('armors', armorCatalogItem)
+  }
+
+  const shieldCatalogItem = findCatalogItemByLooseIdentity('shields', item)
+
+  if (shieldCatalogItem) {
+    return getItemStats('shields', shieldCatalogItem)
+  }
+
+  return parseLegacyArmorStats(item)
+}
+
+function getEquippedArmorItems(equipment = {}) {
+  return (equipment.armor ?? [])
+    .filter((item) => item?.equipped)
+    .map((item) => ({
+      ...item,
+      stats: getEffectiveItemStats(item) ?? item.stats,
+    }))
+}
+
+function parseArmorClassFormula(armorClass, dexMod) {
+  const formula = String(armorClass ?? '').trim()
+  const baseMatch = formula.match(/\d+/)
+
+  if (!baseMatch) {
+    return null
+  }
+
+  const baseAc = Number(baseMatch[0])
+
+  if (!Number.isFinite(baseAc)) {
+    return null
+  }
+
+  const normalized = normalizeRuleText(formula)
+
+  if (!normalized.includes('mod des') && !normalized.includes('dex')) {
+    return baseAc
+  }
+
+  const effectiveDexMod = Number.isFinite(dexMod) ? dexMod : 0
+  const dexCapMatch = normalized.match(/max\s*(\d+)/)
+  const cappedDexMod = dexCapMatch
+    ? Math.min(effectiveDexMod, Number(dexCapMatch[1]))
+    : effectiveDexMod
+
+  return baseAc + cappedDexMod
+}
+
+function getCharacterClassNames(character) {
+  return (character?.classes ?? []).map((characterClass) => {
+    return normalizeRuleText(characterClass?.name)
+  })
+}
+
+function hasFeatureText(character, patterns) {
+  return (character?.features ?? []).some((feature) => {
+    const text = normalizeRuleText([
+      feature?.id,
+      feature?.label,
+      feature?.name,
+      feature?.source,
+      feature?.summary,
+    ].filter(Boolean).join(' '))
+
+    return patterns.some((pattern) => text.includes(pattern))
+  })
+}
+
+function hasMonkUnarmoredDefense(character) {
+  const classNames = getCharacterClassNames(character)
+
+  return classNames.includes('monaco') ||
+    classNames.includes('monk') ||
+    hasFeatureText(character, ['monk_unarmored_defense', 'difesa senza armatura monaco'])
+}
+
+function hasBarbarianUnarmoredDefense(character) {
+  const classNames = getCharacterClassNames(character)
+
+  return classNames.includes('barbaro') ||
+    classNames.includes('barbarian') ||
+    hasFeatureText(character, ['barbaro_difesa_senza_armatura'])
+}
+
+function getEquippedShieldBonus(equippedItems) {
+  const bonuses = equippedItems
+    .filter((item) => item.stats?.type === 'shield')
+    .map((item) => Number(item.stats?.armorClassBonus) || 0)
+
+  return bonuses.length > 0 ? Math.max(...bonuses) : 0
+}
+
+function hasStructuredAcEquipment(equipment = {}) {
+  return getEquippedArmorItems(equipment).some((item) => {
+    return (
+      item.stats?.type === 'armor' &&
+      parseArmorClassFormula(item.stats?.armorClass, 0) !== null
+    ) || (
+      item.stats?.type === 'shield' &&
+      Number(item.stats?.armorClassBonus) !== 0
+    )
+  })
+}
+
+export function calculateCharacterArmorClass(character, equipment = character?.equipment) {
+  const dexMod = getAbilityModifier(character?.abilities?.dex)
+
+  if (dexMod === null) {
+    return null
+  }
+
+  const conMod = getAbilityModifier(character?.abilities?.con) ?? 0
+  const wisMod = getAbilityModifier(character?.abilities?.wis) ?? 0
+  const equippedItems = getEquippedArmorItems(equipment)
+  const armorValues = equippedItems
+    .filter((item) => item.stats?.type === 'armor')
+    .map((item) => parseArmorClassFormula(item.stats?.armorClass, dexMod))
+    .filter((value) => value !== null)
+  const hasArmor = armorValues.length > 0
+  const shieldBonus = getEquippedShieldBonus(equippedItems)
+  const baseCandidates = [
+    10 + dexMod,
+    ...armorValues,
+  ]
+
+  if (!hasArmor && hasBarbarianUnarmoredDefense(character)) {
+    baseCandidates.push(10 + dexMod + conMod)
+  }
+
+  if (!hasArmor && shieldBonus === 0 && hasMonkUnarmoredDefense(character)) {
+    baseCandidates.push(10 + dexMod + wisMod)
+  }
+
+  return Math.max(...baseCandidates) + shieldBonus
+}
+
+export function syncCharacterEquipmentDerivedStats(character, { force = false } = {}) {
+  if (!character) {
+    return character
+  }
+
+  if (!force && !hasStructuredAcEquipment(character.equipment)) {
+    return character
+  }
+
+  const ac = calculateCharacterArmorClass(character)
+
+  if (ac === null || ac === character.combat?.ac) {
+    return character
+  }
+
+  return {
+    ...character,
+    combat: {
+      ...(character.combat ?? {}),
+      ac,
+    },
+  }
+}
+
 function mergeInventoryItems(items) {
   const byKey = new Map()
 

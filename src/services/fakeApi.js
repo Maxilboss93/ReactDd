@@ -4,6 +4,7 @@ import escanor from '../data/characters/escanor.json'
 import jackTheGull from '../data/characters/jack-the-gull.json'
 import { repairFeatGrantedSpells } from './featChoiceService.js'
 import { repairSubclassGrantedSpells } from './progressionService.js'
+import { syncCharacterEquipmentDerivedStats } from './equipmentService.js'
 
 const fakeUsers = [
   {
@@ -44,7 +45,9 @@ function mergeCharacters(...characterLists) {
 }
 
 function hydrateCharacter(character) {
-  return repairSubclassGrantedSpells(repairFeatGrantedSpells(character))
+  return syncCharacterEquipmentDerivedStats(
+    repairSubclassGrantedSpells(repairFeatGrantedSpells(character))
+  )
 }
 
 function getDeletedCharacterIds() {
