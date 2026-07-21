@@ -1,4 +1,5 @@
 /* Vintage fantasy doodle theme for 210726_grafica4 */
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Merienda:wght@400;600;700;800&display=swap");
 :root {
   --bg: #2b2118;
   --panel: #f2e6c9;
@@ -817,4 +818,212 @@ body::before {
   background:
     radial-gradient(circle at 35% 28%, rgba(255, 244, 215, 0.88), transparent 36%),
     linear-gradient(145deg, #fff4d7, #caa66f 54%, #6b4629);
+}
+
+/* Handwritten book pass: alignment and script-like typography */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Kalam", "Segoe Print", "Bradley Hand ITC", cursive;
+  letter-spacing: 0;
+}
+
+html body,
+html body button,
+html body input,
+html body select,
+html body textarea {
+  font-family: "Kalam", "Segoe Print", "Bradley Hand ITC", cursive;
+}
+
+button,
+input,
+select,
+textarea {
+  line-height: 1.15;
+}
+
+.topbar__title,
+.auth-title,
+.character-name,
+.list-name,
+.section-card__header h3,
+.section-card__title-with-icon,
+.auth-section-title,
+.spell-level__title,
+.progression-block h4 {
+  font-family: "Merienda", "Segoe Print", "Bradley Hand ITC", cursive;
+  letter-spacing: 0;
+}
+
+.topbar {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 58px;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+}
+
+.topbar__title {
+  justify-self: center;
+  text-align: center;
+  line-height: 1.05;
+}
+
+.topbar > .icon-btn:first-child,
+.topbar__spacer:first-child {
+  justify-self: start;
+}
+
+.topbar > .icon-btn:last-child,
+.topbar__spacer:last-child {
+  justify-self: end;
+}
+
+.icon-btn,
+.hp-btn,
+.list-btn,
+.subtabs__btn,
+.auth-tabs__button,
+.auth-submit,
+.home-action,
+.panel_nav__item,
+.creation-step,
+.creation-roll-btn,
+.creation-pointbuy-controls button,
+.equipment-manager__tab,
+.equipment-manager__submit,
+.equipment-item__btn,
+.equipment-item__delete,
+.rest-btn,
+.rest-option,
+.progression-card__start,
+.progression-card__confirm,
+.dice-roller__button,
+.dice-tray__die-button,
+.dice-tray__die-minus,
+.dice-tray__clear-pool,
+.dice-tray__expand,
+.dice-tray__mode,
+.dice-tray__clear,
+.details-notes__save,
+.details-notes__cancel,
+.details-note__actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.icon-btn {
+  flex: 0 0 auto;
+}
+
+.icon-btn--text {
+  min-width: 50px;
+}
+
+.subtabs__btn {
+  min-height: 48px;
+  font-size: clamp(12px, 3.3vw, 14px);
+  font-weight: 700;
+  overflow-wrap: normal;
+  white-space: nowrap;
+  text-transform: none;
+}
+
+.panel_nav {
+  align-items: center;
+}
+
+.panel_nav__item {
+  min-height: 42px;
+  padding: 8px 5px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.list-card__identity,
+.character-block__identity,
+.equipment-item__identity,
+.resource-name,
+.section-card__title-with-icon {
+  display: flex;
+  align-items: center;
+}
+
+.list-card__identity,
+.character-block__identity,
+.equipment-item__identity {
+  gap: 10px;
+}
+
+.list-card__identity > div,
+.character-block__identity > div,
+.equipment-item__identity > div {
+  min-width: 0;
+}
+
+.list-card__actions {
+  align-items: center;
+}
+
+.list-btn {
+  min-height: 36px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.class-icon,
+.magic-icon,
+.action-icon,
+.stat-icon,
+.equipment-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.stat-pill {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-height: 116px;
+}
+
+.stat-pill .stat-icon {
+  margin: 0 0 8px;
+}
+
+.stat-label,
+.resource-sub,
+.spell-choice-level h5,
+.creation-ability span,
+.creation-summary span,
+.creation-grants span {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.hp-row {
+  align-items: center;
+}
+
+.hp-value {
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.resource-row {
+  align-items: center;
+}
+
+.resource-dots {
+  align-items: center;
 }
