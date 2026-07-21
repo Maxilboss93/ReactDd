@@ -3028,3 +3028,466 @@
   font-size: 12px;
 }
 
+/* Stronghold Legends inspired graphic test */
+:root {
+  --bg: #07090b;
+  --panel: #17191a;
+  --text: #f4f0e6;
+  --muted: #b7ad9c;
+  --accent: #d2b067;
+  --border: #766f63;
+  --radius-ui: 6px;
+  --metal-dark: #090b0d;
+  --metal-mid: #252a2c;
+  --metal-light: #a9a49a;
+  --banner-blue: #071b3d;
+  --banner-blue-lit: #12356e;
+  --banner-shadow: #020713;
+  --ember: #7d1d16;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at 84% 18%, rgba(157, 158, 143, 0.14), transparent 28rem),
+    radial-gradient(circle at 22% 0%, rgba(87, 92, 95, 0.2), transparent 24rem),
+    linear-gradient(135deg, #111518 0%, #050607 48%, #141515 100%);
+  color: var(--text);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    linear-gradient(112deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 130px),
+    linear-gradient(72deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 170px),
+    radial-gradient(circle at 72% 22%, rgba(45, 76, 55, 0.2), transparent 22rem),
+    radial-gradient(circle at 18% 70%, rgba(113, 113, 107, 0.18), transparent 18rem);
+  mix-blend-mode: screen;
+  opacity: 0.68;
+}
+
+.app,
+.auth-shell {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.28) 42%, rgba(0, 0, 0, 0.58)),
+    radial-gradient(circle at 74% 20%, rgba(57, 72, 56, 0.35), transparent 23rem),
+    radial-gradient(circle at 18% 9%, rgba(138, 137, 127, 0.19), transparent 20rem),
+    linear-gradient(140deg, #141719 0%, #070809 52%, #171717 100%);
+}
+
+.screen {
+  max-width: 560px;
+}
+
+.topbar {
+  padding: 13px 16px;
+  background:
+    linear-gradient(180deg, rgba(195, 190, 174, 0.16), rgba(0, 0, 0, 0)),
+    linear-gradient(90deg, rgba(9, 11, 12, 0.98), rgba(31, 35, 36, 0.95), rgba(8, 9, 10, 0.98));
+  border-bottom: 2px solid #998f7c;
+  box-shadow:
+    inset 0 -1px 0 #050607,
+    0 8px 22px rgba(0, 0, 0, 0.48);
+}
+
+.topbar::before,
+.panel_nav::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  pointer-events: none;
+  border: 1px solid rgba(238, 231, 210, 0.28);
+}
+
+.topbar__title,
+.auth-title,
+.character-name,
+.list-name {
+  color: #fbf7eb;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-shadow:
+    0 1px 0 #000,
+    0 0 10px rgba(197, 174, 105, 0.18);
+}
+
+.topbar__title {
+  color: #e7d091;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.panel_nav {
+  background:
+    linear-gradient(180deg, rgba(160, 154, 140, 0.18), rgba(0, 0, 0, 0)),
+    linear-gradient(180deg, #202425, #090b0d);
+  border-top: 2px solid #9b927d;
+  box-shadow: 0 -10px 24px rgba(0, 0, 0, 0.55);
+}
+
+.section-card,
+.auth-card,
+.list-card,
+.character-block,
+.progression-card,
+.feat-choice-panel,
+.rest-panel,
+.dice-roller,
+.equipment-manager {
+  position: relative;
+  border: 1px solid #7f786a;
+  border-radius: 4px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0) 28%),
+    linear-gradient(180deg, #202426, #111314 42%, #090a0b);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.11),
+    inset 0 -18px 24px rgba(0, 0, 0, 0.22),
+    0 12px 28px rgba(0, 0, 0, 0.48);
+}
+
+.section-card::before,
+.auth-card::before,
+.list-card::before,
+.character-block::before,
+.progression-card::before,
+.feat-choice-panel::before,
+.rest-panel::before,
+.dice-roller::before,
+.equipment-manager::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  pointer-events: none;
+  border: 1px solid rgba(233, 225, 202, 0.16);
+}
+
+.section-card__header h3,
+.auth-section-title,
+.spell-level__title,
+.progression-block h4 {
+  color: #d9c087;
+  border-bottom-color: rgba(200, 190, 160, 0.35);
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.8px;
+  text-shadow: 0 1px 0 #000;
+}
+
+.list-meta,
+.character-line,
+.stat-label,
+.stat-note,
+.resource-sub,
+.power-card__source,
+.spell-level__meta,
+.details-grid span,
+.details-text,
+.equipment-manager__hint,
+.creation-field span,
+.progression-field span,
+.rest-label,
+.dice-tray__field span,
+.dice-roller__meta span,
+.dice-roller__select span {
+  color: var(--muted);
+}
+
+.icon-btn,
+.panel_nav__item,
+.subtabs__btn,
+.auth-tabs__button,
+.auth-submit,
+.home-action,
+.list-btn,
+.creation-step,
+.creation-option,
+.creation-roll-btn,
+.creation-pointbuy-controls button,
+.creation-skill-choice,
+.spell-choice-option,
+.equipment-manager__tab,
+.equipment-manager__submit,
+.equipment-item__btn,
+.equipment-item__delete,
+.hp-btn,
+.rest-btn,
+.rest-option,
+.progression-card__start,
+.progression-card__confirm,
+.progression-option,
+.progression-choice,
+.power-card__toggle,
+.dice-roller__button,
+.dice-tray__die-button,
+.dice-tray__die-minus,
+.dice-tray__clear-pool,
+.dice-tray__expand,
+.dice-tray__mode,
+.dice-tray__clear,
+.details-notes__save,
+.details-notes__cancel,
+.details-note__actions button {
+  border: 1px solid #8a8374;
+  border-radius: 3px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.02) 24%, rgba(0, 0, 0, 0.35)),
+    linear-gradient(90deg, var(--banner-shadow), var(--banner-blue) 18%, var(--banner-blue-lit) 50%, var(--banner-blue) 82%, var(--banner-shadow));
+  color: #f7f3e9;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18),
+    inset 0 -8px 12px rgba(0, 0, 0, 0.34),
+    0 2px 0 #030407,
+    0 8px 18px rgba(0, 0, 0, 0.34);
+  text-shadow: 0 1px 1px #000;
+}
+
+.list-btn,
+.equipment-item__btn,
+.details-note__actions button {
+  min-width: 78px;
+  padding-inline: 14px;
+}
+
+.panel_nav__item,
+.subtabs__btn,
+.auth-tabs__button,
+.progression-card__start,
+.progression-card__confirm,
+.dice-tray__mode {
+  padding-inline: 10px;
+}
+
+.panel_nav__item,
+.subtabs__btn,
+.auth-tabs__button,
+.list-btn,
+.creation-step,
+.creation-roll-btn,
+.equipment-manager__tab,
+.equipment-manager__submit,
+.equipment-item__btn,
+.hp-btn,
+.rest-btn,
+.progression-card__start,
+.progression-card__confirm,
+.dice-roller__button,
+.dice-tray__expand,
+.details-notes__save,
+.details-notes__cancel {
+  clip-path: polygon(7px 0, calc(100% - 7px) 0, 100% 50%, calc(100% - 7px) 100%, 7px 100%, 0 50%);
+}
+
+.panel_nav__item--active,
+.subtabs__btn--active,
+.auth-tabs__button--active,
+.creation-step--active,
+.creation-option--active,
+.creation-skill-choice.is-on,
+.creation-skill-choice.is-background,
+.spell-choice-selected,
+.spell-choice-option:hover,
+.equipment-manager__tab.is-active,
+.progression-choice--active,
+.progression-option--active,
+.dice-tray__die-button--selected,
+.dice-tray__mode--active {
+  border-color: #d6c18a;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.03) 28%, rgba(0, 0, 0, 0.34)),
+    linear-gradient(90deg, #34100d, #7d1d16 18%, #b57b34 50%, #7d1d16 82%, #34100d);
+  color: #fff8e8;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 236, 178, 0.28),
+    inset 0 -10px 16px rgba(0, 0, 0, 0.35),
+    0 0 18px rgba(190, 125, 48, 0.18);
+}
+
+.home-action,
+.creation-option,
+.progression-option,
+.power-card__toggle,
+.spell-choice-option,
+.equipment-item,
+.ability-card,
+.stat-pill,
+.resource-row,
+.skill-row,
+.details-grid div,
+.details-pill-list span,
+.currency-pill,
+.creation-ability,
+.creation-summary div,
+.creation-grants div,
+.creation-roll-item,
+.creation-pointbuy,
+.creation-pointbuy-score,
+.creation-locked-score,
+.equipment-budget-grid div,
+.equipment-preview-item,
+.progression-report__item,
+.progression-subchoice,
+.progression-change,
+.dice-tray__summary,
+.dice-tray__history-item,
+.dice-roller__tray,
+.dice-roller__physics-box,
+.dice-roller__die,
+.dice-roller__result {
+  border-color: #5f594e;
+  border-radius: 4px;
+  background:
+    linear-gradient(150deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 25%),
+    linear-gradient(180deg, #191d1f, #0c0e10);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.07),
+    0 8px 18px rgba(0, 0, 0, 0.28);
+}
+
+.auth-input,
+.creation-field input,
+.creation-field select,
+.creation-field textarea,
+.equipment-field input,
+.equipment-field select,
+.equipment-field textarea,
+.rest-field input,
+.details-notes textarea,
+.progression-field input,
+.progression-field select,
+.dice-tray__field input,
+.dice-tray__field select,
+.dice-roller__select select,
+.resource-stepper button,
+.resource-stepper input {
+  border: 1px solid #635d53;
+  border-radius: 3px;
+  background:
+    linear-gradient(180deg, #080b0d, #121518);
+  color: var(--text);
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.8),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.class-icon,
+.magic-icon,
+.action-icon,
+.stat-icon {
+  border-color: #a9a198;
+  border-radius: 4px;
+  background:
+    radial-gradient(circle at 32% 20%, rgba(255, 255, 255, 0.22), transparent 42%),
+    linear-gradient(145deg, #454a49, #111416 48%, #0a0b0c);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.16),
+    inset 0 -8px 14px rgba(0, 0, 0, 0.42),
+    0 5px 13px rgba(0, 0, 0, 0.35);
+}
+
+.action-icon--xs {
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+}
+
+.stat-value,
+.hp-value,
+.resource-count,
+.dice-roller__result strong,
+.dice-tray__history-item b,
+.equipment-item__facts strong,
+.details-grid strong,
+.currency-pill strong,
+.progression-card__summary strong {
+  color: #f4df9d;
+  text-shadow: 0 1px 0 #000;
+}
+
+.hp-value .stat-icon {
+  margin-right: 2px;
+}
+
+.list-message,
+.progression-success,
+.rest-result {
+  border-color: #7e724e;
+  background:
+    linear-gradient(180deg, rgba(54, 66, 45, 0.9), rgba(21, 26, 19, 0.96));
+  color: #e9ddb3;
+}
+
+.auth-error,
+.progression-warnings,
+.list-btn--danger,
+.home-action--logout,
+.equipment-item__delete {
+  border-color: #8f473d;
+  background:
+    linear-gradient(180deg, rgba(126, 43, 35, 0.88), rgba(45, 14, 13, 0.96));
+  color: #ffd6ca;
+}
+
+.list-btn--primary,
+.progression-card__start,
+.equipment-manager__submit,
+.auth-submit {
+  border-color: #c9b06f;
+}
+
+.resource-dot {
+  border-color: #827869;
+  background: #090b0d;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+.resource-dot.is-filled::after {
+  background:
+    radial-gradient(circle at 35% 28%, #fff1bf, #d8ae54 42%, #875f20 100%);
+  box-shadow: 0 0 9px rgba(213, 173, 84, 0.52);
+}
+
+.ability-pill,
+.skill-dot,
+.creation-ability-meta .creation-save-dot {
+  border-color: #7e7565;
+  background: #0d1012;
+}
+
+.skill-dot.is-on,
+.creation-ability-meta .creation-save-dot.is-on {
+  background: #d0aa58;
+  border-color: #f2d48d;
+  box-shadow: 0 0 9px rgba(208, 170, 88, 0.42);
+}
+
+.power-card__facts span,
+.equipment-item__facts span,
+.spell-choice-chip,
+.details-pill-list span {
+  border-color: #695f50;
+  background: rgba(5, 8, 11, 0.56);
+  color: #e8ddc7;
+}
+
+.dice-roller__die[data-sides='4'],
+.dice-roller__die[data-sides='8'],
+.dice-roller__die[data-sides='10'],
+.dice-roller__die[data-sides='12'],
+.dice-roller__die[data-sides='20'] {
+  background:
+    radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.2), transparent 34%),
+    linear-gradient(145deg, #6b6254, #1b1e1f 48%, #090a0b);
+}
+
+@media (min-width: 820px) {
+  .screen {
+    max-width: 760px;
+    padding-top: 18px;
+  }
+}
+
