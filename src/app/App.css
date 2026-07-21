@@ -3467,6 +3467,102 @@ body::before {
   border-color: #c9b06f;
 }
 
+/* Menu parity and AbilityGrid override for the Stronghold theme branch. */
+.topbar {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 58px;
+  align-items: center;
+  gap: 8px;
+  z-index: 50;
+}
+
+.topbar__title {
+  justify-self: center;
+  text-align: center;
+  line-height: 1.05;
+}
+
+.topbar > .icon-btn:first-child,
+.topbar__spacer:first-child {
+  justify-self: start;
+}
+
+.topbar > .icon-btn:last-child,
+.topbar__spacer:last-child {
+  justify-self: end;
+}
+
+.panel_nav {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: center;
+  z-index: 50;
+  padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+}
+
+.icon-btn,
+.panel_nav__item,
+.subtabs__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.panel_nav__item {
+  min-height: 42px;
+  padding: 8px 5px;
+  font-size: 10px;
+}
+
+.subtabs {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.subtabs__btn {
+  min-height: 46px;
+  font-size: clamp(9px, 2.5vw, 11px);
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+.equipment-icon {
+  border-color: #a9a198;
+  border-radius: 4px;
+  background:
+    radial-gradient(circle at 32% 20%, rgba(255, 255, 255, 0.22), transparent 42%),
+    linear-gradient(145deg, #454a49, #111416 48%, #0a0b0c);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.16),
+    inset 0 -8px 14px rgba(0, 0, 0, 0.42),
+    0 5px 13px rgba(0, 0, 0, 0.35);
+}
+
+.abilities-grid .ability-pill,
+.abilities-grid .ability-card.is-open .ability-pill,
+.ability-card .skills-list,
+.ability-card .skill-row {
+  border-color: #5f594e;
+  background:
+    linear-gradient(150deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0) 25%),
+    linear-gradient(180deg, #191d1f, #0c0e10);
+  color: var(--text);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.07),
+    0 8px 18px rgba(0, 0, 0, 0.28);
+}
+
+.abilities-grid .ability-label,
+.abilities-grid .ability-mod,
+.ability-card .skill-name,
+.ability-card .skill-mod {
+  color: var(--text);
+}
+
+.ability-card .skills-divider {
+  background: rgba(200, 190, 160, 0.35);
+}
+
 .resource-dot {
   border-color: #827869;
   background: #090b0d;
