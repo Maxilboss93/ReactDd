@@ -5,6 +5,7 @@ import AppTopbar from '../components/layout/AppTopbar.jsx'
 import ClassIcon from '../components/character/ClassIcon.jsx'
 import { deleteCharacter, fetchCharacters } from '../services/fakeApi.js'
 import '../app/App.css'
+import '../app/VintageDoodle.css'
 
 function CharacterListPage() {
   const { user } = useAuth()

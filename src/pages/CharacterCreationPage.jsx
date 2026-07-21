@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import '../app/App.css'
+import '../app/VintageDoodle.css'
 import AppTopbar from '../components/layout/AppTopbar.jsx'
 import ClassIcon from '../components/character/ClassIcon.jsx'
 import SectionCard from '../components/general/card/SectionCard.jsx'

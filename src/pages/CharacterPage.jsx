@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 
 import '../app/App.css'
+import '../app/VintageDoodle.css'
 import OverviewSection from '../components/character/sections/OverviewSection.jsx'
 import HpSection from '../components/character/sections/HpSection.jsx'
 import KeyStatsSection from '../components/character/sections/KeyStatsSection.jsx'

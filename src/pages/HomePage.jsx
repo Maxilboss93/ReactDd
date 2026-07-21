@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 
 import '../app/App.css'
+import '../app/VintageDoodle.css'
 import { useAuth } from '../components/authentication/AuthContext.jsx'
 import AppTopbar from '../components/layout/AppTopbar.jsx'
 

@@ -2,6 +2,7 @@ import { useState } from "react"
 import LoginForm from "./LoginForm.jsx"
 import RegisterForm from "./RegisterForm.jsx"
 import '../../app/App.css'
+import '../../app/VintageDoodle.css'
 
 function AuthPage() {
     const [mode, setMode] = useState('login')

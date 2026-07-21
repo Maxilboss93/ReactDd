@@ -1,0 +1,457 @@
+/* Vintage fantasy doodle theme for 210726_grafica4 */
+:root {
+  --bg: #2b2118;
+  --panel: #f2e6c9;
+  --text: #17120d;
+  --muted: #5f5142;
+  --accent: #8a5a32;
+  --border: #17120d;
+  --radius-ui: 7px;
+  --radius-pill: 999px;
+  --paper: #f2e6c9;
+  --paper-light: #fffaf0;
+  --paper-aged: #d8bd8c;
+  --coffee: #5a3b26;
+  --coffee-dark: #24180f;
+  --ink: #17120d;
+}
+
+body,
+.app,
+.auth-shell {
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 78% 8%, rgba(255, 250, 240, 0.76), transparent 22rem),
+    radial-gradient(circle at 18% 18%, rgba(216, 189, 140, 0.52), transparent 21rem),
+    radial-gradient(circle at 28% 82%, rgba(90, 59, 38, 0.42), transparent 24rem),
+    linear-gradient(135deg, #5a3b26 0%, #d8bd8c 42%, #f2e6c9 70%, #2b2118 100%);
+}
+
+body::before {
+  background:
+    linear-gradient(0deg, rgba(23, 18, 13, 0.045) 0 1px, transparent 1px 13px),
+    linear-gradient(90deg, rgba(23, 18, 13, 0.035) 0 1px, transparent 1px 17px),
+    radial-gradient(circle at 22% 34%, rgba(23, 18, 13, 0.08), transparent 0.28rem),
+    radial-gradient(circle at 76% 64%, rgba(23, 18, 13, 0.07), transparent 0.22rem);
+  opacity: 0.7;
+}
+
+.screen {
+  max-width: 560px;
+}
+
+.topbar,
+.panel_nav {
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.84), rgba(216, 189, 140, 0.94)),
+    linear-gradient(90deg, #5a3b26, #f2e6c9 48%, #5a3b26);
+  border-color: var(--ink);
+  box-shadow:
+    0 8px 22px rgba(36, 24, 15, 0.25),
+    inset 0 -1px 0 rgba(23, 18, 13, 0.28);
+  overflow: hidden;
+}
+
+.panel_nav {
+  z-index: 40;
+}
+
+.topbar::before,
+.panel_nav::before {
+  border-color: rgba(23, 18, 13, 0.38);
+  border-radius: 11px 7px 13px 6px;
+}
+
+.topbar::after,
+.panel_nav::after {
+  border-top-color: rgba(23, 18, 13, 0.42);
+  opacity: 0.52;
+}
+
+.topbar__title,
+.auth-title,
+.character-name,
+.list-name {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 800;
+  text-shadow: 1px 1px 0 rgba(255, 250, 240, 0.68);
+}
+
+.section-card,
+.auth-card,
+.list-card,
+.character-block,
+.progression-card,
+.feat-choice-panel,
+.rest-panel,
+.dice-roller,
+.equipment-manager {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  border-radius: 10px 7px 12px 8px;
+  background:
+    radial-gradient(circle at 86% 0%, rgba(255, 250, 240, 0.62), transparent 9rem),
+    linear-gradient(0deg, rgba(23, 18, 13, 0.035) 0 1px, transparent 1px 12px),
+    linear-gradient(90deg, rgba(23, 18, 13, 0.025) 0 1px, transparent 1px 16px),
+    linear-gradient(180deg, rgba(255, 250, 240, 0.96), rgba(242, 230, 201, 0.95) 52%, rgba(216, 189, 140, 0.92));
+  box-shadow:
+    4px 5px 0 rgba(36, 24, 15, 0.3),
+    inset 0 0 0 1px rgba(255, 250, 240, 0.68);
+}
+
+.section-card::before,
+.auth-card::before,
+.list-card::before,
+.character-block::before,
+.progression-card::before,
+.feat-choice-panel::before,
+.rest-panel::before,
+.dice-roller::before,
+.equipment-manager::before {
+  inset: 6px;
+  left: 6px;
+  top: 6px;
+  bottom: 6px;
+  width: auto;
+  border: 1px solid rgba(23, 18, 13, 0.38);
+  border-radius: 7px 12px 8px 13px;
+  background: transparent;
+  box-shadow: none;
+  z-index: 0;
+}
+
+.section-card::after,
+.auth-card::after,
+.list-card::after,
+.character-block::after,
+.progression-card::after,
+.feat-choice-panel::after,
+.rest-panel::after,
+.dice-roller::after,
+.equipment-manager::after {
+  right: 12px;
+  left: auto;
+  top: 12px;
+  width: 42px;
+  height: 42px;
+  border-top: 2px solid rgba(23, 18, 13, 0.46);
+  border-right: 2px solid rgba(23, 18, 13, 0.3);
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 50%;
+  transform: rotate(10deg);
+  opacity: 0.46;
+  box-shadow:
+    -22px 18px 0 -18px rgba(23, 18, 13, 0.55),
+    -40px -2px 0 -19px rgba(23, 18, 13, 0.4);
+  z-index: 0;
+}
+
+.character-block::before,
+.character-block::after {
+  display: none;
+}
+
+.section-card__header,
+.section-card__body,
+.auth-body,
+.equipment-manager > *,
+.list-card__identity,
+.list-card__actions,
+.character-block__identity,
+.equipment-item > *,
+.stat-pill > *,
+.resource-row > *,
+.ability-card > *,
+.skill-row > *,
+.home-action > *,
+.creation-option > *,
+.progression-option > *,
+.power-card__toggle > *,
+.spell-choice-option > * {
+  position: relative;
+  z-index: 1;
+}
+
+.character-block > *,
+.list-card > *,
+.equipment-item > *,
+.stat-pill > *,
+.currency-pill > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section-card__header h3,
+.section-card__title-with-icon,
+.auth-section-title,
+.spell-level__title,
+.progression-block h4 {
+  padding-left: 0;
+  color: var(--ink);
+  border-bottom-color: rgba(23, 18, 13, 0.5);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 800;
+  text-shadow: 1px 1px 0 rgba(255, 250, 240, 0.7);
+}
+
+.list-card__identity,
+.equipment-item__identity,
+.character-block__identity {
+  padding-left: 0;
+}
+
+.list-meta,
+.character-line,
+.stat-label,
+.stat-note,
+.resource-sub,
+.power-card__source,
+.spell-level__meta,
+.details-grid span,
+.details-text,
+.equipment-manager__hint,
+.creation-field span,
+.progression-field span,
+.rest-label,
+.dice-tray__field span,
+.dice-roller__meta span,
+.dice-roller__select span,
+.equipment-item__notes,
+.equipment-item__text,
+.equipment-item__status span {
+  color: var(--muted);
+}
+
+.icon-btn,
+.panel_nav__item,
+.subtabs__btn,
+.auth-tabs__button,
+.auth-submit,
+.home-action,
+.list-btn,
+.creation-step,
+.creation-option,
+.creation-roll-btn,
+.creation-pointbuy-controls button,
+.creation-skill-choice,
+.spell-choice-option,
+.equipment-manager__tab,
+.equipment-manager__submit,
+.equipment-item__btn,
+.equipment-item__delete,
+.hp-btn,
+.rest-btn,
+.rest-option,
+.progression-card__start,
+.progression-card__confirm,
+.progression-option,
+.progression-choice,
+.power-card__toggle,
+.dice-roller__button,
+.dice-tray__die-button,
+.dice-tray__die-minus,
+.dice-tray__clear-pool,
+.dice-tray__expand,
+.dice-tray__mode,
+.dice-tray__clear,
+.details-notes__save,
+.details-notes__cancel,
+.details-note__actions button {
+  border: 2px solid var(--ink);
+  border-radius: 10px 6px 11px 7px;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 250, 240, 0.7), transparent 2.8rem),
+    linear-gradient(0deg, rgba(23, 18, 13, 0.04) 0 1px, transparent 1px 8px),
+    linear-gradient(180deg, #fffaf0, #f2e6c9 58%, #d8bd8c);
+  color: var(--ink);
+  box-shadow:
+    2px 3px 0 rgba(36, 24, 15, 0.28),
+    inset 0 0 0 1px rgba(255, 250, 240, 0.58);
+  text-shadow: 1px 1px 0 rgba(255, 250, 240, 0.78);
+  clip-path: none;
+}
+
+.panel_nav__item--active,
+.subtabs__btn--active,
+.auth-tabs__button--active,
+.creation-step--active,
+.creation-option--active,
+.creation-skill-choice.is-on,
+.creation-skill-choice.is-background,
+.spell-choice-selected,
+.spell-choice-option:hover,
+.equipment-manager__tab.is-active,
+.progression-choice--active,
+.progression-option--active,
+.dice-tray__die-button--selected,
+.dice-tray__mode--active {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 250, 240, 0.74), transparent 2.6rem),
+    linear-gradient(135deg, #f2e6c9, #d8bd8c 58%, #8a5a32);
+  color: var(--ink);
+}
+
+.home-action,
+.creation-option,
+.progression-option,
+.power-card__toggle,
+.spell-choice-option,
+.equipment-item,
+.ability-card,
+.stat-pill,
+.resource-row,
+.skill-row,
+.details-grid div,
+.details-pill-list span,
+.currency-pill,
+.creation-ability,
+.creation-summary div,
+.creation-grants div,
+.creation-roll-item,
+.creation-pointbuy,
+.creation-pointbuy-score,
+.creation-locked-score,
+.equipment-budget-grid div,
+.equipment-preview-item,
+.progression-report__item,
+.progression-subchoice,
+.progression-change,
+.dice-tray__summary,
+.dice-tray__history-item,
+.dice-roller__tray,
+.dice-roller__physics-box,
+.dice-roller__die,
+.dice-roller__result,
+.power-card__facts span,
+.equipment-item__facts span,
+.spell-choice-chip {
+  border: 1px solid rgba(23, 18, 13, 0.62);
+  border-radius: 9px 6px 10px 7px;
+  background:
+    radial-gradient(circle at 92% 4%, rgba(255, 250, 240, 0.46), transparent 4rem),
+    linear-gradient(0deg, rgba(23, 18, 13, 0.035) 0 1px, transparent 1px 9px),
+    linear-gradient(180deg, rgba(255, 250, 240, 0.72), rgba(242, 230, 201, 0.66));
+  box-shadow:
+    2px 2px 0 rgba(36, 24, 15, 0.16),
+    inset 0 0 0 1px rgba(255, 250, 240, 0.34);
+}
+
+.auth-input,
+.creation-field input,
+.creation-field select,
+.creation-field textarea,
+.equipment-field input,
+.equipment-field select,
+.equipment-field textarea,
+.rest-field input,
+.details-notes textarea,
+.progression-field input,
+.progression-field select,
+.dice-tray__field input,
+.dice-tray__field select,
+.dice-roller__select select,
+.resource-stepper button,
+.resource-stepper input {
+  border: 2px solid rgba(23, 18, 13, 0.78);
+  border-radius: 8px 5px 9px 6px;
+  background:
+    linear-gradient(0deg, rgba(23, 18, 13, 0.025) 0 1px, transparent 1px 9px),
+    #fffaf0;
+  color: var(--ink);
+  box-shadow: inset 1px 1px 0 rgba(36, 24, 15, 0.16);
+}
+
+.class-icon,
+.magic-icon,
+.action-icon,
+.stat-icon,
+.equipment-icon {
+  border: 2px solid var(--ink);
+  border-radius: 11px 7px 12px 8px;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 250, 240, 0.9), transparent 45%),
+    linear-gradient(180deg, #fffaf0, #d8bd8c);
+  box-shadow:
+    2px 2px 0 rgba(36, 24, 15, 0.24),
+    inset 0 0 0 1px rgba(255, 250, 240, 0.58);
+}
+
+.class-icon img,
+.magic-icon img,
+.action-icon img,
+.stat-icon img,
+.equipment-icon img {
+  filter: brightness(0) saturate(0);
+  opacity: 0.88;
+}
+
+.action-icon--xs {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.stat-value,
+.hp-value,
+.resource-count,
+.dice-roller__result strong,
+.dice-tray__history-item b,
+.equipment-item__facts strong,
+.details-grid strong,
+.currency-pill strong,
+.progression-card__summary strong,
+.equipment-item__name,
+.resource-name {
+  color: var(--ink);
+}
+
+.list-message,
+.progression-success,
+.rest-result {
+  border-color: var(--ink);
+  background:
+    linear-gradient(180deg, #fffaf0, #d8bd8c);
+  color: var(--ink);
+}
+
+.auth-error,
+.progression-warnings,
+.list-btn--danger,
+.home-action--logout,
+.equipment-item__delete {
+  border-color: var(--ink);
+  background:
+    linear-gradient(180deg, #fffaf0, #c99576);
+  color: #31140f;
+}
+
+.resource-dot,
+.ability-pill,
+.skill-dot,
+.creation-ability-meta .creation-save-dot {
+  border-color: var(--ink);
+  background: #fffaf0;
+  box-shadow: inset 1px 1px 0 rgba(36, 24, 15, 0.22);
+}
+
+.resource-dot.is-filled::after,
+.skill-dot.is-on,
+.creation-ability-meta .creation-save-dot.is-on {
+  background: var(--ink);
+  border-color: var(--ink);
+  box-shadow: none;
+}
+
+.dice-roller__die[data-sides='4'],
+.dice-roller__die[data-sides='8'],
+.dice-roller__die[data-sides='10'],
+.dice-roller__die[data-sides='12'],
+.dice-roller__die[data-sides='20'] {
+  background:
+    radial-gradient(circle at 35% 28%, rgba(255, 250, 240, 0.88), transparent 36%),
+    linear-gradient(145deg, #fffaf0, #d8bd8c 54%, #8a5a32);
+}
