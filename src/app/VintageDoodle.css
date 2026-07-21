@@ -1282,3 +1282,30 @@ textarea {
 .resource-stepper input {
   min-height: 34px;
 }
+
+/* Characteristics section: override the dedicated AbilityGrid stylesheet too. */
+.abilities-grid .ability-pill,
+.abilities-grid .ability-card.is-open .ability-pill,
+.ability-card .skills-list,
+.ability-card .skill-row {
+  border-color: var(--ink);
+  background:
+    radial-gradient(circle at 92% 4%, rgba(255, 244, 215, 0.55), transparent 4.4rem),
+    linear-gradient(0deg, rgba(42, 33, 24, 0.03) 0 1px, transparent 1px 9px),
+    linear-gradient(180deg, rgba(255, 244, 215, 0.84), rgba(234, 216, 173, 0.76));
+  color: var(--ink);
+  box-shadow:
+    2px 2px 0 rgba(32, 20, 13, 0.16),
+    inset 0 0 0 1px rgba(255, 244, 215, 0.36);
+}
+
+.abilities-grid .ability-label,
+.abilities-grid .ability-mod,
+.ability-card .skill-name,
+.ability-card .skill-mod {
+  color: var(--ink);
+}
+
+.ability-card .skills-divider {
+  background: rgba(42, 33, 24, 0.5);
+}
