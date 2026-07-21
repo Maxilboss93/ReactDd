@@ -216,6 +216,7 @@ body::before {
 .equipment-manager__hint,
 .creation-field span,
 .progression-field span,
+.equipment-field span,
 .rest-label,
 .dice-tray__field span,
 .dice-roller__meta span,
@@ -224,6 +225,14 @@ body::before {
 .equipment-item__text,
 .equipment-item__status span {
   color: var(--muted);
+}
+
+.equipment-field span,
+.creation-field span,
+.progression-field span,
+.dice-tray__field span {
+  color: var(--ink-soft);
+  font-weight: 700;
 }
 
 .icon-btn,
@@ -454,4 +463,358 @@ body::before {
   background:
     radial-gradient(circle at 35% 28%, rgba(255, 250, 240, 0.88), transparent 36%),
     linear-gradient(145deg, #fffaf0, #d8bd8c 54%, #8a5a32);
+}
+
+/* Palette refinement: sepia ink, coffee shadows, aged book paper */
+:root {
+  --bg: #2a1d13;
+  --panel: #ead8ad;
+  --text: #2a2118;
+  --muted: #6b5845;
+  --accent: #8f5d35;
+  --border: #2a2118;
+  --paper: #ead8ad;
+  --paper-light: #fff4d7;
+  --paper-aged: #caa66f;
+  --paper-shadow: #b28a56;
+  --coffee: #5b3821;
+  --coffee-dark: #20140d;
+  --ink: #2a2118;
+  --ink-soft: #4b3929;
+  --ink-faded: rgba(42, 33, 24, 0.62);
+  --copper: #9b6237;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+}
+
+body,
+.app,
+.auth-shell {
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 73% 8%, rgba(255, 244, 215, 0.82), transparent 19rem),
+    radial-gradient(circle at 18% 13%, rgba(234, 216, 173, 0.54), transparent 20rem),
+    radial-gradient(circle at 20% 86%, rgba(91, 56, 33, 0.5), transparent 22rem),
+    linear-gradient(135deg, #2a1d13 0%, #5b3821 24%, #caa66f 52%, #ead8ad 74%, #2a1d13 100%);
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 12% 24%, rgba(42, 33, 24, 0.09), transparent 0.24rem),
+    radial-gradient(circle at 86% 64%, rgba(42, 33, 24, 0.07), transparent 0.2rem),
+    linear-gradient(0deg, rgba(42, 33, 24, 0.04) 0 1px, transparent 1px 12px),
+    linear-gradient(90deg, rgba(42, 33, 24, 0.032) 0 1px, transparent 1px 18px);
+  opacity: 0.76;
+}
+
+.topbar,
+.panel_nav {
+  color: var(--paper-light);
+  background:
+    radial-gradient(circle at 50% -30%, rgba(255, 244, 215, 0.3), transparent 9rem),
+    linear-gradient(180deg, #6b4629, #2a1d13 72%);
+  border-color: var(--ink);
+  box-shadow:
+    0 8px 22px rgba(32, 20, 13, 0.34),
+    inset 0 1px 0 rgba(255, 244, 215, 0.22),
+    inset 0 -1px 0 rgba(32, 20, 13, 0.82);
+}
+
+.topbar__title {
+  color: var(--paper-light);
+  text-shadow: 0 1px 0 #000;
+}
+
+.section-card,
+.auth-card,
+.list-card,
+.character-block,
+.progression-card,
+.feat-choice-panel,
+.rest-panel,
+.dice-roller,
+.equipment-manager {
+  border-color: var(--ink);
+  background:
+    radial-gradient(circle at 84% 4%, rgba(255, 244, 215, 0.74), transparent 8rem),
+    radial-gradient(circle at 8% 100%, rgba(178, 138, 86, 0.24), transparent 8rem),
+    linear-gradient(0deg, rgba(42, 33, 24, 0.028) 0 1px, transparent 1px 12px),
+    linear-gradient(90deg, rgba(42, 33, 24, 0.024) 0 1px, transparent 1px 17px),
+    linear-gradient(180deg, #fff4d7 0%, #ead8ad 58%, #d6b77d 100%);
+  box-shadow:
+    4px 5px 0 rgba(32, 20, 13, 0.34),
+    inset 0 0 0 1px rgba(255, 244, 215, 0.74);
+}
+
+.section-card::before,
+.auth-card::before,
+.list-card::before,
+.character-block::before,
+.progression-card::before,
+.feat-choice-panel::before,
+.rest-panel::before,
+.dice-roller::before,
+.equipment-manager::before {
+  border-color: rgba(42, 33, 24, 0.34);
+}
+
+.section-card::after,
+.auth-card::after,
+.list-card::after,
+.progression-card::after,
+.feat-choice-panel::after,
+.rest-panel::after,
+.dice-roller::after,
+.equipment-manager::after {
+  border-top-color: rgba(75, 57, 41, 0.36);
+  border-right-color: rgba(75, 57, 41, 0.24);
+  opacity: 0.34;
+  box-shadow:
+    -22px 18px 0 -18px rgba(75, 57, 41, 0.42),
+    -40px -2px 0 -19px rgba(75, 57, 41, 0.32);
+}
+
+.auth-title,
+.character-name,
+.list-name,
+.section-card__header h3,
+.section-card__title-with-icon,
+.auth-section-title,
+.spell-level__title,
+.progression-block h4 {
+  color: var(--ink);
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  letter-spacing: 0;
+  text-shadow: 1px 1px 0 rgba(255, 244, 215, 0.72);
+}
+
+.list-meta,
+.character-line,
+.stat-label,
+.stat-note,
+.resource-sub,
+.power-card__source,
+.spell-level__meta,
+.details-grid span,
+.details-text,
+.equipment-manager__hint,
+.creation-field span,
+.progression-field span,
+.rest-label,
+.dice-tray__field span,
+.dice-roller__meta span,
+.dice-roller__select span,
+.equipment-item__notes,
+.equipment-item__text,
+.equipment-item__status span {
+  color: var(--muted);
+}
+
+.icon-btn,
+.panel_nav__item,
+.subtabs__btn,
+.auth-tabs__button,
+.auth-submit,
+.home-action,
+.list-btn,
+.creation-step,
+.creation-option,
+.creation-roll-btn,
+.creation-pointbuy-controls button,
+.creation-skill-choice,
+.spell-choice-option,
+.equipment-manager__tab,
+.equipment-manager__submit,
+.equipment-item__btn,
+.equipment-item__delete,
+.hp-btn,
+.rest-btn,
+.rest-option,
+.progression-card__start,
+.progression-card__confirm,
+.progression-option,
+.progression-choice,
+.power-card__toggle,
+.dice-roller__button,
+.dice-tray__die-button,
+.dice-tray__die-minus,
+.dice-tray__clear-pool,
+.dice-tray__expand,
+.dice-tray__mode,
+.dice-tray__clear,
+.details-notes__save,
+.details-notes__cancel,
+.details-note__actions button {
+  border-color: var(--ink);
+  background:
+    radial-gradient(circle at 80% 12%, rgba(255, 244, 215, 0.76), transparent 2.6rem),
+    linear-gradient(0deg, rgba(42, 33, 24, 0.035) 0 1px, transparent 1px 8px),
+    linear-gradient(180deg, #fff4d7 0%, #ead8ad 62%, #caa66f 100%);
+  color: var(--ink);
+  box-shadow:
+    2px 3px 0 rgba(32, 20, 13, 0.3),
+    inset 0 0 0 1px rgba(255, 244, 215, 0.62);
+  text-shadow: 1px 1px 0 rgba(255, 244, 215, 0.82);
+}
+
+.panel_nav__item {
+  color: var(--paper-light);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 244, 215, 0.18), transparent 2.8rem),
+    linear-gradient(180deg, #5b3821, #2a1d13);
+}
+
+.panel_nav__item--active,
+.subtabs__btn--active,
+.auth-tabs__button--active,
+.creation-step--active,
+.creation-option--active,
+.creation-skill-choice.is-on,
+.creation-skill-choice.is-background,
+.spell-choice-selected,
+.spell-choice-option:hover,
+.equipment-manager__tab.is-active,
+.progression-choice--active,
+.progression-option--active,
+.dice-tray__die-button--selected,
+.dice-tray__mode--active {
+  background:
+    radial-gradient(circle at 22% 18%, rgba(255, 244, 215, 0.72), transparent 2.8rem),
+    linear-gradient(180deg, #d6b77d 0%, #c08c53 58%, #6b4629 100%);
+  color: var(--ink);
+}
+
+.home-action,
+.creation-option,
+.progression-option,
+.power-card__toggle,
+.spell-choice-option,
+.equipment-item,
+.ability-card,
+.stat-pill,
+.resource-row,
+.skill-row,
+.details-grid div,
+.details-pill-list span,
+.currency-pill,
+.creation-ability,
+.creation-summary div,
+.creation-grants div,
+.creation-roll-item,
+.creation-pointbuy,
+.creation-pointbuy-score,
+.creation-locked-score,
+.equipment-budget-grid div,
+.equipment-preview-item,
+.progression-report__item,
+.progression-subchoice,
+.progression-change,
+.dice-tray__summary,
+.dice-tray__history-item,
+.dice-roller__tray,
+.dice-roller__physics-box,
+.dice-roller__die,
+.dice-roller__result,
+.power-card__facts span,
+.equipment-item__facts span,
+.spell-choice-chip {
+  border-color: rgba(42, 33, 24, 0.58);
+  background:
+    radial-gradient(circle at 96% 0%, rgba(255, 244, 215, 0.52), transparent 4.5rem),
+    linear-gradient(0deg, rgba(42, 33, 24, 0.03) 0 1px, transparent 1px 9px),
+    linear-gradient(180deg, rgba(255, 244, 215, 0.78), rgba(234, 216, 173, 0.72));
+}
+
+.auth-input,
+.creation-field input,
+.creation-field select,
+.creation-field textarea,
+.equipment-field input,
+.equipment-field select,
+.equipment-field textarea,
+.rest-field input,
+.details-notes textarea,
+.progression-field input,
+.progression-field select,
+.dice-tray__field input,
+.dice-tray__field select,
+.dice-roller__select select,
+.resource-stepper button,
+.resource-stepper input {
+  border-color: rgba(42, 33, 24, 0.76);
+  background:
+    linear-gradient(0deg, rgba(42, 33, 24, 0.025) 0 1px, transparent 1px 9px),
+    #fff4d7;
+  color: var(--ink);
+}
+
+.class-icon,
+.magic-icon,
+.action-icon,
+.stat-icon,
+.equipment-icon {
+  border-color: var(--ink);
+  background:
+    radial-gradient(circle at 32% 18%, rgba(255, 244, 215, 0.92), transparent 45%),
+    linear-gradient(180deg, #fff4d7, #caa66f);
+}
+
+.class-icon img,
+.magic-icon img,
+.action-icon img,
+.stat-icon img,
+.equipment-icon img {
+  filter: sepia(1) saturate(0.9) hue-rotate(345deg) brightness(0.36) contrast(1.32);
+  opacity: 0.94;
+}
+
+.action-icon--xs {
+  background: transparent;
+}
+
+.stat-value,
+.hp-value,
+.resource-count,
+.dice-roller__result strong,
+.dice-tray__history-item b,
+.equipment-item__facts strong,
+.details-grid strong,
+.currency-pill strong,
+.progression-card__summary strong,
+.equipment-item__name,
+.resource-name {
+  color: var(--ink);
+}
+
+.auth-error,
+.progression-warnings,
+.list-btn--danger,
+.home-action--logout,
+.equipment-item__delete {
+  background:
+    radial-gradient(circle at 82% 10%, rgba(255, 244, 215, 0.56), transparent 2.5rem),
+    linear-gradient(180deg, #d6b77d, #9a5b3c);
+  color: #2a120d;
+}
+
+.resource-dot.is-filled::after,
+.skill-dot.is-on,
+.creation-ability-meta .creation-save-dot.is-on {
+  background: var(--ink-soft);
+}
+
+.dice-roller__die[data-sides='4'],
+.dice-roller__die[data-sides='8'],
+.dice-roller__die[data-sides='10'],
+.dice-roller__die[data-sides='12'],
+.dice-roller__die[data-sides='20'] {
+  background:
+    radial-gradient(circle at 35% 28%, rgba(255, 244, 215, 0.88), transparent 36%),
+    linear-gradient(145deg, #fff4d7, #caa66f 54%, #6b4629);
 }
