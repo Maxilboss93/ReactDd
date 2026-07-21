@@ -937,6 +937,8 @@ textarea {
 
 .panel_nav {
   align-items: center;
+  z-index: 50;
+  padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
 }
 
 .panel_nav__item {
