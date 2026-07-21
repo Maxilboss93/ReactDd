@@ -17,6 +17,7 @@ function ResourcesSection({
     <SectionCard title="Risorse">
       <div className="resource-list">
         <ResourceRow
+          iconKey="hit_dice"
           label={`Dadi Vita (${hitDice.type})`}
           current={hitDice.current}
           max={hitDice.max}
@@ -26,6 +27,7 @@ function ResourcesSection({
         {resources.map((res) => (
           <ResourceRow
             key={res.id}
+            iconKey={res.id}
             label={res.label}
             current={res.current}
             max={res.max}

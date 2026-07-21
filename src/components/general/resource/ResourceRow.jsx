@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react'
 
-function ResourceRow({ label, current, max, resetOn, shortRestRecover = null, onChange }) {
+import StatIcon from '../../character/StatIcon.jsx'
+
+function ResourceRow({ iconKey = null, label, current, max, resetOn, shortRestRecover = null, onChange }) {
   const usesCompactControls = max > 8
   const resetLabel =
     shortRestRecover ? `+${shortRestRecover} riposo breve, tutto riposo lungo`
@@ -55,7 +57,10 @@ function ResourceRow({ label, current, max, resetOn, shortRestRecover = null, on
   return (
     <div className="resource-row">
       <div className="resource-info">
-        <div className="resource-name">{label}</div>
+        <div className="resource-name">
+          <StatIcon statKey={iconKey} size="sm" />
+          <span>{label}</span>
+        </div>
         {resetLabel && <div className="resource-sub">{resetLabel}</div>}
       </div>
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../components/authentication/AuthContext.jsx'
 import AppTopbar from '../components/layout/AppTopbar.jsx'
+import ClassIcon from '../components/character/ClassIcon.jsx'
 import { deleteCharacter, fetchCharacters } from '../services/fakeApi.js'
 import '../app/App.css'
 
@@ -85,43 +86,52 @@ function CharacterListPage() {
 
           {!loading && items.length > 0 && (
             <div className="list-grid">
-              {items.map((c) => (
-                <div key={c.id} className="list-card">
-                  <div className="list-name">{c.name}</div>
-                  <div className="list-meta">
-                    {c.race} - {(c.classes ?? [])
-                      .map((characterClass) => `${characterClass.name} ${characterClass.level}`)
-                      .join(' / ')}
+              {items.map((c) => {
+                const mainClass = c.classes?.[0] ?? null
+
+                return (
+                  <div key={c.id} className="list-card">
+                    <div className="list-card__identity">
+                      <ClassIcon classLabel={mainClass?.name} size="lg" />
+                      <div>
+                        <div className="list-name">{c.name}</div>
+                        <div className="list-meta">
+                          {c.race} - {(c.classes ?? [])
+                            .map((characterClass) => `${characterClass.name} ${characterClass.level}`)
+                            .join(' / ')}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="list-card__actions">
+                      <button
+                        className="list-btn"
+                        type="button"
+                        onClick={() => navigate(`/scheda/${c.id}`)}
+                      >
+                        Apri
+                      </button>
+
+                      <button
+                        className="list-btn"
+                        type="button"
+                        onClick={() => alert(`Duplica ${c.name}`)}
+                      >
+                        Duplica
+                      </button>
+
+                      <button
+                        className="list-btn list-btn--danger"
+                        type="button"
+                        disabled={deletingId === c.id}
+                        onClick={() => handleDelete(c)}
+                      >
+                        {deletingId === c.id ? 'Elimino...' : 'Elimina'}
+                      </button>
+                    </div>
+
                   </div>
-                  <div className="list-card__actions">
-                    <button
-                      className="list-btn"
-                      type="button"
-                      onClick={() => navigate(`/scheda/${c.id}`)}
-                    >
-                      Apri
-                    </button>
-
-                    <button
-                      className="list-btn"
-                      type="button"
-                      onClick={() => alert(`Duplica ${c.name}`)}
-                    >
-                      Duplica
-                    </button>
-
-                    <button
-                      className="list-btn list-btn--danger"
-                      type="button"
-                      disabled={deletingId === c.id}
-                      onClick={() => handleDelete(c)}
-                    >
-                      {deletingId === c.id ? 'Elimino...' : 'Elimina'}
-                    </button>
-                  </div>
-
-                </div>
-              ))}
+                )
+              })}
             </div>
           )}
         </div>

@@ -1,4 +1,5 @@
 import SectionCard from '../../general/card/SectionCard.jsx'
+import StatIcon from '../StatIcon.jsx'
 
 function HpSection({ hpCurrent, hpMax, onDec, onInc }) {
   return (
@@ -9,6 +10,7 @@ function HpSection({ hpCurrent, hpMax, onDec, onInc }) {
         </button>
 
         <div className="hp-value">
+          <StatIcon statKey="hp" size="lg" />
           {hpCurrent} / {hpMax}
         </div>
 

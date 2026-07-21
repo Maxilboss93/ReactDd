@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import SectionCard from '../../general/card/SectionCard.jsx'
 import DiceRoller from '../../dice/DiceRoller.jsx'
 import FeatChoicesPanel from '../FeatChoicesPanel.jsx'
+import ClassIcon from '../ClassIcon.jsx'
 import {
   applyLevelUpDraft,
   buildLevelUpDraft,
@@ -429,7 +430,8 @@ function ProgressionSection({ character, onCharacterChange, onCharacterExtract }
                 type="button"
                 onClick={() => startLevelUp(option.className)}
               >
-                {option.label}
+                <ClassIcon classLabel={option.className} size="sm" />
+                <span>{option.label}</span>
               </button>
             ))}
           </div>
@@ -458,7 +460,10 @@ function ProgressionSection({ character, onCharacterChange, onCharacterExtract }
                       type="button"
                       onClick={() => startLevelUp(option.className)}
                     >
-                      <strong>{option.label}</strong>
+                      <span className="progression-option__head">
+                        <ClassIcon classLabel={option.className} size="md" />
+                        <strong>{option.label}</strong>
+                      </span>
                       <span>
                         {option.prerequisiteItems
                           .map((item) => item.label)

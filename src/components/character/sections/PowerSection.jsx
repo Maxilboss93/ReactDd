@@ -2,6 +2,8 @@ import { useState } from 'react'
 
 import SectionCard from '../../general/card/SectionCard.jsx'
 import SpellSection from './SpellSection.jsx'
+import ActionIcon from '../ActionIcon.jsx'
+import ClassIcon from '../ClassIcon.jsx'
 
 import { findSpellById } from '../../../services/spellsCatalog.js'
 import { findPowerById } from '../../../services/powersCatalog.js'
@@ -39,11 +41,15 @@ function PowerCard({ characterPower, power, character }) {
         aria-expanded={isOpen}
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        <div>
+        <div className="power-card__heading">
+          <ClassIcon power={power} size="md" />
           <strong className="power-card__title">{power.name}</strong>
         </div>
 
-        <span className="power-card__action">{power.action_type}</span>
+        <span className="power-card__action">
+          <ActionIcon actionType={power.action_type} size="xs" />
+          <span>{power.action_type}</span>
+        </span>
       </button>
 
       {isOpen && (

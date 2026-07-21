@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 import '../app/App.css'
 import AppTopbar from '../components/layout/AppTopbar.jsx'
+import ClassIcon from '../components/character/ClassIcon.jsx'
 import SectionCard from '../components/general/card/SectionCard.jsx'
 import FeatChoicesPanel from '../components/character/FeatChoicesPanel.jsx'
 import { useAuth } from '../components/authentication/AuthContext.jsx'
@@ -1270,7 +1271,10 @@ function CharacterCreationPage() {
                         type="button"
                         onClick={() => selectClass(characterClass.id)}
                       >
-                        <strong>{characterClass.name}</strong>
+                        <span className="creation-option__head">
+                          <ClassIcon classLabel={characterClass.name} size="md" />
+                          <strong>{characterClass.name}</strong>
+                        </span>
                         <span>{characterClass.hitDie}, primaria {primarySummary}</span>
                       </button>
                     )

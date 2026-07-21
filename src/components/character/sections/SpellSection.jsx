@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import MagicIcon from '../MagicIcon.jsx'
+
 function groupSpellEntriesByLevel(spellEntries) {
   return spellEntries.reduce((groups, entry) => {
     const level = entry.spell.level ?? 0
@@ -47,7 +49,8 @@ function SpellCard({ characterSpell, spell }) {
         aria-expanded={isOpen}
         onClick={() => setIsOpen((prev) => !prev)}
       >
-        <div>
+        <div className="power-card__heading">
+          <MagicIcon damageTypes={spell.mechanics?.damage_types ?? []} spell={spell} size="md" />
           <strong className="power-card__title">{spell.name}</strong>
         </div>
 
@@ -61,6 +64,7 @@ function SpellCard({ characterSpell, spell }) {
           </div>
 
           <div className="power-card__facts">
+            {spell.school && <span>Scuola: {spell.school}</span>}
             <span>Tempo: {spell.casting_time.raw}</span>
             <span>Gittata: {spell.range.raw}</span>
             <span>Componenti: {spell.components.raw}</span>
