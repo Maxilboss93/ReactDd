@@ -3056,3 +3056,139 @@
   font-size: 12px;
 }
 
+/* Shared menu and control layout parity. */
+.topbar {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 58px;
+  align-items: center;
+  gap: 8px;
+  z-index: 50;
+}
+
+.topbar__title {
+  justify-self: center;
+  text-align: center;
+  line-height: 1.05;
+}
+
+.topbar > .icon-btn:first-child,
+.topbar__spacer:first-child {
+  justify-self: start;
+}
+
+.topbar > .icon-btn:last-child,
+.topbar__spacer:last-child {
+  justify-self: end;
+}
+
+.panel_nav {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: center;
+  z-index: 50;
+  padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+}
+
+.icon-btn,
+.panel_nav__item,
+.subtabs__btn,
+.list-btn,
+.creation-step,
+.home-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.home-action {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.panel_nav__item {
+  min-height: 42px;
+  padding: 8px 5px;
+}
+
+.subtabs {
+  grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+}
+
+.subtabs__btn {
+  min-height: 46px;
+  overflow-wrap: normal;
+}
+
+.resource-list {
+  gap: 14px;
+}
+
+.resource-row {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 9px 14px;
+  align-items: start;
+  padding: 13px 14px 14px;
+}
+
+.resource-info {
+  gap: 4px;
+  align-self: start;
+}
+
+.resource-name {
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 1.16;
+}
+
+.resource-name .stat-icon {
+  margin-top: -1px;
+}
+
+.resource-sub {
+  margin-top: 1px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.resource-row:has(.resource-name .stat-icon) .resource-sub,
+.resource-row:has(.resource-name .stat-icon) .resource-dots,
+.resource-row:has(.resource-name .stat-icon) .resource-stepper {
+  padding-left: 36px;
+}
+
+.resource-count {
+  min-width: 38px;
+  margin-top: 1px;
+  padding: 2px 7px;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.resource-dots {
+  gap: 7px 8px;
+  padding-top: 2px;
+}
+
+.resource-dot {
+  flex-basis: 26px;
+  width: 26px;
+  height: 26px;
+}
+
+.resource-dot::after {
+  inset: 5px;
+}
+
+.resource-stepper {
+  gap: 7px;
+  padding-top: 2px;
+}
+
+.resource-stepper button,
+.resource-stepper input {
+  min-height: 34px;
+}
+
