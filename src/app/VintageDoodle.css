@@ -1027,3 +1027,180 @@ textarea {
 .resource-dots {
   align-items: center;
 }
+
+/* Blue base purge: every inner surface must stay paper/coffee in this theme. */
+.auth-input,
+.creation-step,
+.creation-option,
+.creation-summary div,
+.creation-grants div,
+.creation-ability,
+.creation-pointbuy,
+.creation-pointbuy-score,
+.creation-locked-score,
+.creation-skill-choice,
+.creation-confirm,
+.creation-confirm:disabled,
+.spell-choice-chip,
+.spell-choice-option,
+.feat-choice-panel,
+.section-card--summary,
+.section-card--summary .creation-summary div,
+.section-card--summary .creation-grants div,
+.ability-card,
+.ability-card.is-open .ability-pill,
+.ability-pill,
+.skills-list,
+.resource-stepper button,
+.resource-stepper input,
+.rest-panel,
+.rest-option,
+.rest-result,
+.equipment-manager__tab,
+.equipment-manager__tab.is-active,
+.equipment-manager__submit,
+.equipment-manager__submit:disabled,
+.equipment-field input,
+.equipment-field select,
+.equipment-field textarea,
+.equipment-item,
+.equipment-item__facts span,
+.equipment-item__status span,
+.equipment-item__btn,
+.currency-pill,
+.details-grid div,
+.details-pill-list span,
+.details-notes textarea,
+.details-notes__save,
+.details-notes__cancel,
+.details-note,
+.details-note__actions button,
+.progression-card__summary,
+.progression-card__start,
+.progression-card__confirm,
+.progression-report__item,
+.progression-report__stats,
+.progression-block,
+.progression-option,
+.progression-choice,
+.progression-choice--active,
+.progression-field input,
+.progression-field select,
+.progression-success,
+.progression-subchoice,
+.progression-change,
+.power-card,
+.power-card__facts span,
+.power-card__toggle,
+.dice-roller,
+.dice-roller__select select,
+.dice-roller__button,
+.dice-roller__tray,
+.dice-roller__die,
+.dice-roller__result span,
+.dice-roller__result strong,
+.dice-tray__expanded-bar,
+.dice-tray__expanded-bar button,
+.dice-tray__die-button,
+.dice-tray__die-button--selected,
+.dice-tray__die-minus,
+.dice-tray__clear-pool,
+.dice-tray__summary,
+.dice-tray__expand,
+.dice-tray__field input,
+.dice-tray__field select,
+.dice-tray__mode,
+.dice-tray__mode--active,
+.dice-tray__history-item,
+.dice-tray__clear {
+  border-color: var(--ink);
+  background:
+    radial-gradient(circle at 92% 4%, rgba(255, 244, 215, 0.55), transparent 4.4rem),
+    linear-gradient(0deg, rgba(42, 33, 24, 0.03) 0 1px, transparent 1px 9px),
+    linear-gradient(180deg, rgba(255, 244, 215, 0.84), rgba(234, 216, 173, 0.76));
+  color: var(--ink);
+  box-shadow:
+    2px 2px 0 rgba(32, 20, 13, 0.16),
+    inset 0 0 0 1px rgba(255, 244, 215, 0.36);
+}
+
+.icon-btn:active,
+.home-action:active,
+.subtabs__btn--active,
+.auth-tabs__button--active,
+.creation-step--active,
+.creation-option--active,
+.creation-skill-choice.is-on,
+.creation-skill-choice.is-background,
+.spell-choice-selected,
+.spell-choice-option:hover,
+.equipment-manager__tab.is-active,
+.progression-choice--active,
+.progression-option--active,
+.dice-tray__die-button--selected,
+.dice-tray__mode--active {
+  border-color: var(--ink);
+  background:
+    radial-gradient(circle at 22% 18%, rgba(255, 244, 215, 0.72), transparent 2.8rem),
+    linear-gradient(180deg, #d6b77d 0%, #c08c53 58%, #6b4629 100%);
+  color: var(--ink);
+  box-shadow:
+    2px 3px 0 rgba(32, 20, 13, 0.3),
+    inset 0 0 0 1px rgba(255, 244, 215, 0.62);
+}
+
+.dice-tray--expanded {
+  background:
+    radial-gradient(circle at 78% 8%, rgba(255, 244, 215, 0.82), transparent 19rem),
+    radial-gradient(circle at 18% 13%, rgba(234, 216, 173, 0.54), transparent 20rem),
+    linear-gradient(135deg, #2a1d13 0%, #5b3821 32%, #caa66f 68%, #2a1d13 100%);
+}
+
+.dice-roller__tray {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 244, 215, 0.72), transparent 12rem),
+    linear-gradient(0deg, rgba(42, 33, 24, 0.035) 0 1px, transparent 1px 12px),
+    linear-gradient(135deg, rgba(202, 166, 111, 0.86), rgba(91, 56, 33, 0.62));
+}
+
+.resource-dot::after,
+.skill-dot,
+.creation-ability-meta .creation-save-dot {
+  border-color: var(--ink);
+  background: #fff4d7;
+}
+
+.resource-dot.is-filled::after,
+.skill-dot.is-on,
+.creation-ability-meta .creation-save-dot.is-on {
+  border-color: var(--ink);
+  background: var(--ink-soft);
+  box-shadow: none;
+}
+
+.progression-success {
+  background:
+    radial-gradient(circle at 92% 4%, rgba(255, 244, 215, 0.56), transparent 4rem),
+    linear-gradient(180deg, #fff4d7, #d8bd8c);
+  color: var(--ink);
+}
+
+.progression-warnings,
+.auth-error,
+.list-btn--danger,
+.home-action--logout,
+.equipment-item__delete {
+  border-color: var(--ink);
+  background:
+    radial-gradient(circle at 82% 10%, rgba(255, 244, 215, 0.56), transparent 2.5rem),
+    linear-gradient(180deg, #d6b77d, #9a5b3c);
+  color: #2a120d;
+}
+
+.section-card--summary .section-card__header h3,
+.section-card--summary .creation-summary strong,
+.section-card--summary .creation-grants strong,
+.section-card--summary .creation-summary span,
+.section-card--summary .creation-grants span {
+  color: var(--ink);
+}
