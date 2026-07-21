@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 
 import SectionCard from '../../general/card/SectionCard.jsx'
+import EquipmentIcon from '../EquipmentIcon.jsx'
 import {
   INVENTORY_GROUP_OPTIONS,
   createCustomInventoryItem,
@@ -10,14 +11,14 @@ import {
 } from '../../../services/equipmentService.js'
 
 const EQUIPMENT_GROUPS = [
-  { id: 'weapons', title: 'Armi' },
-  { id: 'armor', title: 'Armature e scudi' },
-  { id: 'tools', title: 'Strumenti' },
-  { id: 'adventuringGear', title: 'Equipaggiamento' },
-  { id: 'magicItems', title: 'Oggetti magici' },
-  { id: 'consumables', title: 'Consumabili' },
-  { id: 'storyItems', title: 'Oggetti di storia' },
-  { id: 'wishlist', title: 'Da trovare / comprare' },
+  { id: 'weapons', title: 'Armi', iconGroup: 'weapons' },
+  { id: 'armor', title: 'Armature e scudi', iconGroup: 'armor' },
+  { id: 'tools', title: 'Strumenti', iconGroup: 'tools' },
+  { id: 'adventuringGear', title: 'Equipaggiamento', iconGroup: 'adventuringGear' },
+  { id: 'magicItems', title: 'Oggetti magici', iconGroup: 'magicItems' },
+  { id: 'consumables', title: 'Consumabili', iconGroup: 'consumables' },
+  { id: 'storyItems', title: 'Oggetti di storia', iconGroup: 'storyItems' },
+  { id: 'wishlist', title: 'Da trovare / comprare', iconGroup: 'wishlist' },
 ]
 
 const EQUIP_SLOTS = {
@@ -180,6 +181,15 @@ function getSlotLabel(slot) {
     .find((option) => option.id === slot)?.label ?? slot
 }
 
+function EquipmentSectionTitle({ title, groupId }) {
+  return (
+    <span className="section-card__title-with-icon">
+      <EquipmentIcon groupId={groupId} size="sm" />
+      <span>{title}</span>
+    </span>
+  )
+}
+
 function getSlotsForItem(groupId, item) {
   const slots = EQUIP_SLOTS[groupId] ?? []
   const statsType = item.stats?.type
@@ -239,7 +249,10 @@ function EquipmentItem({
   return (
     <article className={`equipment-item ${isTrackable && available === 0 ? 'equipment-item--empty' : ''}`}>
       <div className="equipment-item__header">
-        <strong className="equipment-item__name">{item.name}</strong>
+        <div className="equipment-item__identity">
+          <EquipmentIcon groupId={groupId} item={item} size="md" />
+          <strong className="equipment-item__name">{item.name}</strong>
+        </div>
 
         <div className="equipment-item__badges">
           {item.custom && (
@@ -371,6 +384,7 @@ function CurrencyRow({ currency }) {
     <div className="currency-row">
       {coins.map((coin) => (
         <div key={coin.id} className="currency-pill">
+          <EquipmentIcon groupId="currency" size="sm" />
           <span>{coin.label}</span>
           <strong>{currency?.[coin.id] ?? 0}</strong>
         </div>
@@ -393,7 +407,7 @@ function InventoryManager({
   const selectedCatalogItem = catalogOptions.find((item) => item.key === catalogForm.itemKey)
 
   return (
-    <SectionCard title="Gestione inventario">
+    <SectionCard title={<EquipmentSectionTitle title="Gestione inventario" groupId="adventuringGear" />}>
       <div className="equipment-manager">
         <div className="equipment-manager__tabs">
           <button
@@ -820,7 +834,7 @@ function EquipmentSection({ character, onCharacterChange }) {
         onAddCustom={addCustomItem}
       />
 
-      <SectionCard title="Monete">
+      <SectionCard title={<EquipmentSectionTitle title="Monete" groupId="currency" />}>
         <CurrencyRow currency={currency} />
       </SectionCard>
 
@@ -832,7 +846,10 @@ function EquipmentSection({ character, onCharacterChange }) {
         }
 
         return (
-          <SectionCard key={group.id} title={group.title}>
+          <SectionCard
+            key={group.id}
+            title={<EquipmentSectionTitle title={group.title} groupId={group.iconGroup} />}
+          >
             <div className="equipment-list">
               {items.map((item) => (
                 <EquipmentItem
@@ -854,7 +871,7 @@ function EquipmentSection({ character, onCharacterChange }) {
       })}
 
       {!hasAnyItems && (
-        <SectionCard title="Inventario">
+        <SectionCard title={<EquipmentSectionTitle title="Inventario" groupId="adventuringGear" />}>
           <div className="list-empty">
             Nessun equipaggiamento registrato.
           </div>
