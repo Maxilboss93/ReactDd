@@ -1,5 +1,4 @@
 import SectionCard from '../../general/card/SectionCard.jsx'
-import ClassIcon from '../ClassIcon.jsx'
 
 function OverviewSection({ character, mainClass }) {
   const classSummary = (character.classes ?? [])
@@ -9,22 +8,23 @@ function OverviewSection({ character, mainClass }) {
     .map((characterClass) => characterClass.subclass)
     .filter(Boolean)
     .join(' / ')
+  const portraitUrl = character.portraitUrl ?? character.image ?? character.avatarUrl ?? null
 
   return (
     <SectionCard title="Panoramica">
-      <div className="character-block">
-        <div className="character-block__identity">
-          <ClassIcon classLabel={mainClass?.name} size="xl" />
-          <div>
-            <div className="character-name">{character.name}</div>
-            <div className="character-line">
-              {character.race} - {classSummary || `${mainClass.name} Livello ${mainClass.level}`}
-            </div>
-          </div>
+      <div className="character-block character-block--portrait">
+        <div className="character-portrait" aria-hidden={!portraitUrl}>
+          {portraitUrl && <img src={portraitUrl} alt="" />}
         </div>
-        {subclassSummary && (
-          <div className="character-line">{subclassSummary}</div>
-        )}
+        <div className="character-block__text">
+          <div className="character-name">{character.name}</div>
+          <div className="character-line">
+            {character.race} - {classSummary || `${mainClass.name} Livello ${mainClass.level}`}
+          </div>
+          {subclassSummary && (
+            <div className="character-line">{subclassSummary}</div>
+          )}
+        </div>
       </div>
     </SectionCard>
   )

@@ -1,35 +1,44 @@
 import SectionCard from '../../general/card/SectionCard.jsx'
 import StatIcon from '../StatIcon.jsx'
 
-function KeyStatsSection({ ac, speed, dexModLabel, primaryResource, proficiencyBonus }) {
+function KeyStatsSection({
+  ac,
+  speed,
+  dexModLabel,
+  primaryResource,
+  proficiencyBonus,
+  derivedStats = [],
+}) {
+  const stats = [
+    { id: 'ac', icon: 'ac', label: 'CA', value: ac },
+    { id: 'speed', icon: 'speed', label: 'Vel.', value: `${speed} mt` },
+    { id: 'initiative', icon: 'initiative', label: 'Iniz.', value: dexModLabel },
+    {
+      id: primaryResource ? primaryResource.id : 'proficiency',
+      icon: primaryResource ? primaryResource.id : 'proficiency',
+      label: primaryResource?.label ?? 'Comp.',
+      value: primaryResource ? `${primaryResource.current}/${primaryResource.max}` : `+${proficiencyBonus}`,
+    },
+    ...derivedStats.slice(0, 2).map((stat) => ({
+      id: stat.id,
+      icon: stat.id,
+      label: stat.label,
+      value: stat.value,
+      note: stat.source,
+    })),
+  ]
+
   return (
     <SectionCard title="Statistiche Chiave">
       <div className="stats-grid">
-        <div className="stat-pill">
-          <StatIcon statKey="ac" size="md" />
-          <div className="stat-label">CA</div>
-          <div className="stat-value">{ac}</div>
-        </div>
-
-        <div className="stat-pill">
-          <StatIcon statKey="speed" size="md" />
-          <div className="stat-label">Vel.</div>
-          <div className="stat-value">{speed} mt</div>
-        </div>
-
-        <div className="stat-pill">
-          <StatIcon statKey="initiative" size="md" />
-          <div className="stat-label">Iniz.</div>
-          <div className="stat-value">{dexModLabel}</div>
-        </div>
-
-        <div className="stat-pill">
-          <StatIcon statKey={primaryResource ? primaryResource.id : 'proficiency'} size="md" />
-          <div className="stat-label">{primaryResource?.label ?? 'Comp.'}</div>
-          <div className="stat-value">
-            {primaryResource ? `${primaryResource.current}/${primaryResource.max}` : `+${proficiencyBonus}`}
+        {stats.map((stat) => (
+          <div key={stat.id} className="stat-pill">
+            <StatIcon statKey={stat.icon} size="md" />
+            <div className="stat-label">{stat.label}</div>
+            <div className="stat-value">{stat.value}</div>
+            {stat.note && <div className="stat-note">{stat.note}</div>}
           </div>
-        </div>
+        ))}
       </div>
     </SectionCard>
   )

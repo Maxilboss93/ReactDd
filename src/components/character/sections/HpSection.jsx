@@ -10,8 +10,8 @@ function HpSection({ hpCurrent, hpMax, onDec, onInc }) {
         </button>
 
         <div className="hp-value">
-          <StatIcon statKey="hp" size="lg" />
-          {hpCurrent} / {hpMax}
+          <StatIcon statKey="hp" size="xl" />
+          <strong>{hpCurrent} / {hpMax}</strong>
         </div>
 
         <button className="hp-btn" onClick={onInc}>

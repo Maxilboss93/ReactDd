@@ -4158,3 +4158,281 @@
   background: rgba(205, 190, 150, 0.26);
 }
 
+/* Panoramica, HP and resources refinement for grafica5. */
+.character-block--portrait {
+  grid-template-columns: minmax(96px, 30%) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 14px;
+}
+
+.character-portrait {
+  position: relative;
+  min-height: 118px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 1px solid rgba(128, 119, 91, 0.62);
+  border-radius: var(--radius-ui);
+  background:
+    radial-gradient(circle at 50% 28%, rgba(214, 196, 135, 0.09), transparent 40%),
+    linear-gradient(180deg, rgba(18, 21, 16, 0.88), rgba(5, 7, 6, 0.96)),
+    var(--asset-wood-texture);
+  background-size: auto, auto, 320px 320px;
+  box-shadow:
+    inset 0 0 0 1px rgba(205, 190, 150, 0.045),
+    inset 0 -18px 28px rgba(0, 0, 0, 0.32);
+}
+
+.character-portrait::before,
+.character-portrait::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.character-portrait::before {
+  inset: 7px;
+  border: 1px dashed rgba(205, 190, 150, 0.18);
+  border-radius: calc(var(--radius-ui) - 3px);
+}
+
+.character-portrait::after {
+  inset: 0;
+  background:
+    var(--asset-rivet) 8px 8px / 9px 9px no-repeat,
+    var(--asset-rivet) calc(100% - 17px) 8px / 9px 9px no-repeat,
+    var(--asset-rivet) 8px calc(100% - 17px) / 9px 9px no-repeat,
+    var(--asset-rivet) calc(100% - 17px) calc(100% - 17px) / 9px 9px no-repeat;
+  opacity: 0.52;
+}
+
+.character-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.character-block--portrait .character-block__text {
+  display: grid;
+  align-content: center;
+  gap: 5px;
+}
+
+.hp-row {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) 46px;
+  align-items: center;
+  gap: 12px;
+}
+
+.hp-value {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  min-width: 0;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.hp-value .stat-icon {
+  width: 46px;
+  height: 46px;
+  flex-basis: 46px;
+}
+
+.hp-value strong {
+  font: inherit;
+  font-weight: 700;
+}
+
+.stats-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.stat-pill {
+  min-height: 104px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 4px;
+  padding: 10px 8px;
+}
+
+.stat-pill .stat-icon {
+  margin-bottom: 0;
+}
+
+.stat-value {
+  margin-top: 0;
+}
+
+.stat-note {
+  margin-top: 0;
+  line-height: 1.15;
+}
+
+.resource-list {
+  gap: 12px;
+}
+
+.resource-row {
+  position: relative;
+  overflow: hidden;
+  grid-template-areas:
+    "info count"
+    "controls controls";
+  border: 1px solid rgba(124, 116, 94, 0.62);
+  border-radius: var(--radius-ui);
+  background:
+    linear-gradient(180deg, rgba(4, 4, 4, 0.08), rgba(4, 4, 4, 0.28)),
+    var(--asset-wood-button);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 238, 196, 0.08),
+    inset 0 -12px 20px rgba(0, 0, 0, 0.22),
+    0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.resource-row::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    var(--asset-rivet) 8px 50% / 9px 9px no-repeat,
+    var(--asset-rivet) calc(100% - 17px) 50% / 9px 9px no-repeat;
+  opacity: 0.52;
+}
+
+.resource-info,
+.resource-count,
+.resource-dots,
+.resource-stepper {
+  position: relative;
+  z-index: 1;
+}
+
+.resource-name {
+  display: flex;
+  align-items: center;
+}
+
+.resource-count {
+  border: 1px solid rgba(205, 190, 150, 0.22);
+  border-radius: var(--radius-pill);
+  background: rgba(4, 5, 4, 0.46);
+  color: var(--gold-soft);
+  font-weight: 700;
+}
+
+.resource-dots,
+.resource-stepper {
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.resource-dot {
+  flex-basis: 25px;
+  width: 25px;
+  height: 25px;
+}
+
+.resource-dot::after {
+  inset: 5px;
+  border-color: rgba(205, 190, 150, 0.34);
+  background:
+    radial-gradient(circle at 50% 42%, rgba(0, 0, 0, 0.24), transparent 45%),
+    rgba(6, 7, 6, 0.74);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.52);
+}
+
+.resource-dot.is-filled::after {
+  background:
+    radial-gradient(circle at 38% 32%, #fff2c8 0%, var(--gold-soft) 32%, #9a6a35 100%);
+  border-color: var(--gold-soft);
+}
+
+.resource-stepper button,
+.resource-stepper input {
+  border-color: rgba(205, 190, 150, 0.34);
+  background: rgba(5, 6, 5, 0.56);
+}
+
+@media (min-width: 560px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 360px) {
+  .character-block--portrait {
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .character-portrait {
+    min-height: 108px;
+  }
+}
+
+/* Resource rows need the button language without the large plank artwork competing with content. */
+.resource-row {
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "info count"
+    "controls controls";
+  gap: 10px 12px;
+  padding: 13px 42px 14px 14px;
+  background:
+    radial-gradient(110% 90% at 8% 0%, rgba(214, 196, 135, 0.08), transparent 46%),
+    linear-gradient(180deg, rgba(31, 24, 16, 0.92), rgba(7, 8, 7, 0.95)),
+    var(--asset-wood-texture);
+  background-size: auto, auto, 340px 340px;
+}
+
+.resource-row::after {
+  background:
+    var(--asset-rivet) 9px 12px / 9px 9px no-repeat,
+    var(--asset-rivet) calc(100% - 18px) 12px / 9px 9px no-repeat,
+    var(--asset-rivet) 9px calc(100% - 21px) / 9px 9px no-repeat,
+    var(--asset-rivet) calc(100% - 18px) calc(100% - 21px) / 9px 9px no-repeat;
+  opacity: 0.46;
+}
+
+.resource-name {
+  gap: 8px;
+  font-size: 15px;
+}
+
+.resource-sub {
+  color: rgba(255, 242, 214, 0.72);
+}
+
+.resource-row:has(.resource-name .stat-icon) .resource-sub,
+.resource-row:has(.resource-name .stat-icon) .resource-dots,
+.resource-row:has(.resource-name .stat-icon) .resource-stepper {
+  padding-left: 34px;
+}
+
+.resource-count {
+  align-self: start;
+  min-width: 42px;
+  margin-right: -28px;
+  padding: 3px 8px;
+}
+
+.resource-dots {
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+  padding-top: 1px;
+}
+
+.resource-stepper {
+  justify-content: flex-start;
+  padding-top: 1px;
+}
+

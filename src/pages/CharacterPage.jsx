@@ -5,7 +5,6 @@ import '../app/App.css'
 import OverviewSection from '../components/character/sections/OverviewSection.jsx'
 import HpSection from '../components/character/sections/HpSection.jsx'
 import KeyStatsSection from '../components/character/sections/KeyStatsSection.jsx'
-import ClassDerivedStatsSection from '../components/character/sections/ClassDerivedStatsSection.jsx'
 import AbilitiesSection from '../components/character/sections/AbilitiesSection.jsx'
 import ResourcesSection from '../components/character/sections/ResourcesSection.jsx'
 import RestSection from '../components/character/sections/RestSection.jsx'
@@ -17,6 +16,7 @@ import { createCharacter, fetchCharacterById, updateCharacter } from '../service
 import { useAuth } from '../components/authentication/AuthContext.jsx'
 import PowersSection from '../components/character/sections/PowerSection.jsx'
 import { rollDice } from '../services/diceService.js'
+import { getClassDerivedStats } from '../services/classScalingService.js'
 import AppTopbar from '../components/layout/AppTopbar.jsx'
 
 
@@ -393,8 +393,8 @@ function CharacterPage() {
                     dexModLabel={dexModLabel ?? dexMod}
                     primaryResource={primaryResource}
                     proficiencyBonus={proficiencyBonus}
+                    derivedStats={getClassDerivedStats(getLiveCharacterSnapshot())}
                   />
-                  <ClassDerivedStatsSection character={getLiveCharacterSnapshot()} />
                   <ResourcesSection
                     hitDice={hitDice}
                     onHitDiceChange={(value) =>
