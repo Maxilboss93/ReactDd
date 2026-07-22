@@ -3,7 +3,14 @@ import { useState, useRef } from 'react'
 import StatIcon from '../../character/StatIcon.jsx'
 
 function ResourceRow({ iconKey = null, label, current, max, resetOn, shortRestRecover = null, onChange }) {
-  const usesCompactControls = max > 8
+  const safeMax = Math.max(0, Number(max) || 0)
+  const safeCurrent = Math.max(0, Math.min(safeMax, Number(current) || 0))
+  const usesCompactControls = safeMax > 8
+  const rowClassName = `resource-row ${usesCompactControls ? 'resource-row--stepper' : 'resource-row--dots'}`
+  const dotTrackStyle = {
+    '--resource-dot-count': Math.max(1, safeMax),
+    '--resource-dots-width': `${Math.max(1, safeMax) * 32 + Math.max(0, safeMax - 1) * 6}px`,
+  }
   const resetLabel =
     shortRestRecover ? `+${shortRestRecover} riposo breve, tutto riposo lungo`
     : resetOn === 'short_rest' ? 'Riposo breve'
@@ -16,7 +23,7 @@ function ResourceRow({ iconKey = null, label, current, max, resetOn, shortRestRe
 
   function setValueForIndex(index, allowToggle) {
     const value = index + 1
-    const next = allowToggle && current === value ? 0 : value
+    const next = allowToggle && safeCurrent === value ? 0 : value
     onChange(next)
   }
   
@@ -49,13 +56,13 @@ function ResourceRow({ iconKey = null, label, current, max, resetOn, shortRestRe
   }
 
   function setCompactValue(value) {
-    const nextValue = Math.max(0, Math.min(max, Number(value) || 0))
+    const nextValue = Math.max(0, Math.min(safeMax, Number(value) || 0))
     onChange(nextValue)
   }
 
 
   return (
-    <div className="resource-row">
+    <div className={rowClassName}>
       <div className="resource-info">
         <div className="resource-name">
           <StatIcon statKey={iconKey} size="sm" />
@@ -68,8 +75,8 @@ function ResourceRow({ iconKey = null, label, current, max, resetOn, shortRestRe
         <div className="resource-stepper">
           <button
             type="button"
-            onClick={() => setCompactValue(current - 1)}
-            disabled={current <= 0}
+            onClick={() => setCompactValue(safeCurrent - 1)}
+            disabled={safeCurrent <= 0}
             aria-label={`Riduci ${label}`}
           >
             -
@@ -78,15 +85,15 @@ function ResourceRow({ iconKey = null, label, current, max, resetOn, shortRestRe
             type="number"
             inputMode="numeric"
             min="0"
-            max={max}
-            value={current}
+            max={safeMax}
+            value={safeCurrent}
             onChange={(event) => setCompactValue(event.target.value)}
             aria-label={label}
           />
           <button
             type="button"
-            onClick={() => setCompactValue(current + 1)}
-            disabled={current >= max}
+            onClick={() => setCompactValue(safeCurrent + 1)}
+            disabled={safeCurrent >= safeMax}
             aria-label={`Aumenta ${label}`}
           >
             +
@@ -95,16 +102,17 @@ function ResourceRow({ iconKey = null, label, current, max, resetOn, shortRestRe
       ) : (
         <div
           className="resource-dots"
+          style={dotTrackStyle}
           onPointerMove={handlePointerMove}
           onPointerUp={() => setDragging(false)}
           onPointerLeave={() => setDragging(false)}
           onPointerCancel={() => setDragging(false)}
         >
-          {Array.from({ length: max }).map((_, i) => (
+          {Array.from({ length: safeMax }).map((_, i) => (
           <button
             key={i}
             data-index={i}
-            className={`resource-dot ${i < current ? 'is-filled' : ''}`}
+            className={`resource-dot ${i < safeCurrent ? 'is-filled' : ''}`}
             onPointerDown={(e) => handlePointerDown(i, e)}
             onClick={() => handleClick(i)}
             aria-label={`Imposta ${label} a ${i + 1}`}
@@ -114,7 +122,7 @@ function ResourceRow({ iconKey = null, label, current, max, resetOn, shortRestRe
       )}
 
       <div className="resource-count">
-        {current}/{max}
+        {safeCurrent}/{safeMax}
       </div>
     </div>
   )

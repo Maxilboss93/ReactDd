@@ -4424,7 +4424,7 @@
     "info count"
     "controls controls";
   gap: 10px 12px;
-  padding: 13px 42px 14px 14px;
+  padding: 13px 16px 14px;
   background:
     radial-gradient(110% 90% at 8% 0%, rgba(214, 196, 135, 0.08), transparent 46%),
     linear-gradient(180deg, rgba(31, 24, 16, 0.92), rgba(7, 8, 7, 0.95)),
@@ -4459,19 +4459,72 @@
 .resource-count {
   align-self: start;
   min-width: 42px;
-  margin-right: -28px;
+  justify-self: end;
+  margin-right: 0;
   padding: 3px 8px;
 }
 
 .resource-dots {
+  display: grid;
+  grid-template-columns: repeat(var(--resource-dot-count), minmax(24px, 1fr));
   align-items: center;
+  justify-items: center;
   justify-content: flex-start;
-  gap: 7px;
-  padding-top: 1px;
+  gap: 6px;
+  width: min(100%, var(--resource-dots-width));
+  max-width: 100%;
+  padding-top: 2px;
 }
 
 .resource-stepper {
   justify-content: flex-start;
   padding-top: 1px;
+}
+
+.resource-row--dots:has(.resource-name .stat-icon) .resource-dots {
+  padding-left: 0;
+}
+
+.resource-row--dots .resource-dot {
+  flex-basis: auto;
+  width: 100%;
+  min-width: 24px;
+  height: 34px;
+}
+
+.resource-row--dots .resource-dot::after {
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  inset: auto;
+  transform: translate(-50%, -50%);
+}
+
+.resource-row--dots .resource-dot.is-filled::after {
+  box-shadow:
+    0 0 8px rgba(241, 210, 138, 0.45),
+    inset 0 1px 3px rgba(255, 255, 255, 0.22);
+}
+
+@media (max-width: 380px) {
+  .resource-row {
+    gap: 9px 10px;
+    padding-inline: 12px;
+  }
+
+  .resource-dots {
+    gap: 4px;
+  }
+
+  .resource-row--dots .resource-dot {
+    min-width: 22px;
+    height: 32px;
+  }
+
+  .resource-row--dots .resource-dot::after {
+    width: 14px;
+    height: 14px;
+  }
 }
 
